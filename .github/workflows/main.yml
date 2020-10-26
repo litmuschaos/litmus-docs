@@ -1,0 +1,46 @@
+name: LitmusDocs-CI
+on:
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+
+jobs:
+  embedmd:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{steps.getcommit.outputs.sha}} 
+
+      - uses: actions/setup-go@v2
+        with:
+          stable: 'false'
+          go-version: '1.14.0'
+
+      - name: Installing and Running embedmed
+        run: |
+          sudo apt install boxes
+          go get github.com/campoy/embedmd
+          cd docs
+          embedmd -w $(find *.md)
+        continue-on-error: true  
+        
+      - name: embedmd check
+        run: | 
+          export TERM=xterm-256color
+          count=$(git status -s| wc -l)
+          if [ "$count" -ne "0" ]
+          then
+            tput setaf 1; echo "Error: embedmd check failed"
+            tput setaf 4; echo "Please check the following files need an embedmd run:"
+            output=$(git status -s)
+            echo "$output" | boxes -d stone -p a2v1
+            tput setaf 3; echo "Please follow the instructions to run embedmd:"
+            tput setaf 3; echo "cd docs"
+            tput setaf 3; echo "embedmd -w \$(find *.md)"
+            tput setaf 6; echo "For more info visit https://github.com/litmuschaos/litmus-docs/blob/master/CONTRIBUTING.md"
+            exit 1
+          else
+            tput setaf 2; echo "Nothing to embed"
+          fi
+        shell: sh

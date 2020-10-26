@@ -1,0 +1,35 @@
+/* your custom css */
+@media only screen and (max-width: 735px) {
+  .nav-footer .sitemap > div {
+    padding-right: 32px;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 735px) {
+  .nav-footer .sitemap > div {
+    padding: 0 32px;
+  }
+}
+
+.fixedHeaderContainer {
+  background: #23232a;
+}
+
+/* .fixedHeaderContainer header .headerTitleWithLogo { */
+/* font-size: 2em; */
+/* font-weight: 100; */
+/* } */
+
+.footerText {
+  text-align: left;
+  color: white;
+}
+
+.nav-footer .sitemap div:first-child {
+  flex-grow: 4;
+}
+
+.nav-footer .sitemap div:last-child {
+  padding-left: 0;
+}

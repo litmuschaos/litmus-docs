@@ -1,0 +1,131 @@
+
+{
+  "docs": {
+    "Getting Started": [
+      "getstarted",
+      "chaoshub",
+      "plugins",
+      "architecture",
+      "resources",
+      "community",
+      "devguide"
+    ],
+    "Litmus Demo": [
+      "litmus-demo"
+    ],
+    "Concepts": [
+      "chaosengine",
+      "chaosexperiment",
+      "chaosschedule",
+      "chaosresult",
+      "litmus-probe"
+    ],
+    "Platforms": [
+      {
+        "type": "subcategory",
+        "label": "OpenShift",
+        "ids" : [
+          "openshift-litmus"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Rancher",
+        "ids" : [
+          "rancher-litmus"
+        ]
+      }
+    ],
+    "Experiments": [
+      {
+        "type": "subcategory",
+        "label": "Generic",
+        "ids": [
+          "pod-delete",
+          "container-kill",
+          "pod-network-latency",
+          "pod-network-loss",
+          "pod-network-corruption",
+          "pod-cpu-hog",
+          "pod-memory-hog",
+          "disk-fill",
+          "disk-loss",
+          "node-cpu-hog",
+          "node-memory-hog",
+          "node-drain",
+          "kubelet-service-kill",
+          "pod-network-duplication",
+          "node-taint",
+          "docker-service-kill",
+          "pod-autoscaler",
+          "Kubernetes-Chaostoolkit-Application",
+          "Kubernetes-Chaostoolkit-Service",
+          "Kubernetes-Chaostoolkit-Cluster-Kiam",
+          "pod-io-stress",
+          "node-io-stress"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Kube-AWS",
+        "ids": [
+          "Kubernetes-Chaostoolkit-AWS"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OpenEBS",
+        "ids": [
+          "openebs-target-container-failure",
+          "openebs-target-network-delay",
+          "openebs-target-network-loss",
+          "openebs-target-pod-failure",
+          "openebs-pool-pod-failure",
+          "openebs-pool-container-failure",
+          "openebs-pool-network-delay",
+          "openebs-pool-network-loss",
+          "openebs-control-plane-chaos",
+          "cStor-pool-chaos",
+          "openebs-pool-disk-loss",
+          "openebs-nfs-provisioner-kill"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Kafka",
+        "ids": [
+          "kafka-broker-pod-failure",
+	        "kafka-broker-disk-failure"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "CoreDns",
+        "ids": [
+           "coredns-pod-delete"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Cassandra",
+        "ids": [
+           "cassandra-pod-delete"
+        ]
+      }
+    ],
+    "Scheduler": [
+      "scheduling"
+    ],
+    "Chaos Workflow": [
+      "chaos-workflows"
+    ],
+    "Litmus FAQs": [
+      "faq-general",
+      "faq-troubleshooting"
+    ],
+    "Advanced": [
+      "admin-mode",
+      "namespaced-mode"
+    ]
+  }
+}
