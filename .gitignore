@@ -14,3 +14,18 @@ website/yarn.lock
 website/node_modules
 website/i18n/*
 *.log
+
+# Generated files
+website/.docusaurus
+website/.cache-loader
+
+# Misc
+.DS_Store
+website/.env.local
+website/.env.development.local
+website/.env.test.local
+website/.env.production.local
+
+website/npm-debug.log*
+website/yarn-debug.log*
+website/yarn-error.log*
