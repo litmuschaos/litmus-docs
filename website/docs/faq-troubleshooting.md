@@ -1,7 +1,7 @@
 ---
-id: "faq-troubleshooting"
-title: "Troubleshooting Litmus"
-sidebar_label: "Troubleshooting"
+id: faq-troubleshooting
+title: Troubleshooting Litmus
+sidebar_label: Troubleshooting
 ---
 
 ---
@@ -131,7 +131,7 @@ perform the following checks:
   kubectl describe chaosengine <chaosengine-name> -n <namespace>
   ```
 
-  Look for the event with reason _Summary_ with message _{"<"}experiment-name{">"} experiment has been failed_
+  Look for the event with reason _Summary_ with message _&lt;experiment-name&gt; experiment has been failed_
 
 - Check the logs of the chaos-experiment pod.
 

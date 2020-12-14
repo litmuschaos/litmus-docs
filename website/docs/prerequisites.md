@@ -1,7 +1,7 @@
 ---
-id: "prerequisites"
-title: "Litmus Pre-Requisites"
-sidebar_label: "Pre-Requisites"
+id: prerequisites
+title: Litmus Pre-Requisites
+sidebar_label: Pre-Requisites
 ---
 
 ---

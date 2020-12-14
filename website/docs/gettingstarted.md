@@ -1,7 +1,7 @@
 ---
-id: "gettingstarted"
-title: "Setting Up Litmus"
-sidebar_label: "Getting Started"
+id: gettingstarted
+title: Setting Up Litmus
+sidebar_label: Getting Started
 ---
 
 ---

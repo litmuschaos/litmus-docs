@@ -195,7 +195,7 @@ This section describes the fields in the ChaosExperiment spec and the possible v
 </tr>
 <tr>
   <th>Range</th>
-  <td><i>user-defined</i> (type: {"{"}name: string, value: string{"}"})</td>
+  <td><i>user-defined</i> (type: {'{'}name: string, value: string{'}'})</td>
 </tr>
 <tr>
   <th>Default</th>

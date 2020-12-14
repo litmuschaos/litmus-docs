@@ -1,7 +1,7 @@
 ---
-id: "plugins"
-title: "Using other chaos libraries as plugins"
-sidebar_label: "Plugins"
+id: plugins
+title: Using other chaos libraries as plugins
+sidebar_label: Plugins
 ---
 
 ---

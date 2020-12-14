@@ -1,7 +1,7 @@
 ---
-id: "faq-general"
-title: "The What, Why & How of Litmus"
-sidebar_label: "General"
+id: faq-general
+title: The What, Why & How of Litmus
+sidebar_label: General
 ---
 
 ---

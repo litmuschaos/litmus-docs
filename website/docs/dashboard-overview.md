@@ -1,7 +1,7 @@
 ---
-id: "dashboard-overview"
-title: "CI/E2E Result Visualization Portal"
-sidebar_label: "Overview"
+id: dashboard-overview
+title: CI/E2E Result Visualization Portal
+sidebar_label: Overview
 ---
 
 ---

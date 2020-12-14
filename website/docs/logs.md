@@ -1,7 +1,7 @@
 ---
-id: "logs"
-title: "Capturing & Viewing Logs"
-sidebar_label: "Log Collection & Analysis"
+id: logs
+title: Capturing & Viewing Logs
+sidebar_label: Log Collection & Analysis
 ---
 
 ---

@@ -1,7 +1,7 @@
 ---
-id: "openshift-litmus"
-title: "Installation of LitmusChaos on OpenShift"
-sidebar_label: "Install Litmus"
+id: openshift-litmus
+title: Installation of LitmusChaos on OpenShift
+sidebar_label: Install Litmus
 ---
 
 ---
@@ -33,7 +33,7 @@ Running chaos on your application involves the following steps:
 ### Install Litmus
 
 ```
-oc apply -f https://litmuschaos.github.io/litmus/litmus-operator-v1.9.0.yaml
+oc apply -f https://litmuschaos.github.io/litmus/litmus-operator-v1.10.0.yaml
 ```
 
 The above command install all the CRDs, required service account configuration, and chaos-operator. Before you start running a chaos experiment, verify if Litmus is installed correctly.
@@ -94,13 +94,13 @@ Expected output:
 ### Install Chaos Experiments
 
 Chaos experiments contain the actual chaos details. These experiments are installed on your cluster as OpenShift CRs.
-The Chaos Experiments are grouped as Chaos Charts and are published on <a href="https://hub.litmuschaos.io" target="_blank">ChaosHub</a>..
+The Chaos Experiments are grouped as Chaos Charts and are published on <a href="https://hub.litmuschaos.io" target="_blank">Chaos Hub</a>.
 
 The generic chaos experiments such as `pod-delete`, `container-kill`,` pod-network-latency` are available under Generic Chaos Chart.
 This is the first chart you are recommended to install.
 
 ```
-oc apply -f https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/generic/experiments.yaml -n nginx
+oc apply -f https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/experiments.yaml -n nginx
 ```
 
 Verify if the chaos experiments are installed.
@@ -119,7 +119,7 @@ has just enough permissions needed to run the pod-delete chaos experiment.
 
 - For rbac samples corresponding to other experiments such as, say, container-kill, please refer the respective experiment folder in the [chaos-charts](https://github.com/litmuschaos/chaos-charts/tree/master/charts/generic/container-kill) repository.
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-delete/rbac_nginx_getstarted.yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/pod-delete/rbac_nginx_getstarted.yaml"
 
 ```yaml
 ---
@@ -245,7 +245,7 @@ oc apply -f chaosengine.yaml
 
 Describe the ChaosResult CR to know the status of each experiment. The `spec.verdict` is set to `Awaited` when the experiment is in progress, eventually changing to either `Pass` or `Fail`.
 
-<strong> NOTE:</strong> ChaosResult CR name will be {"`<chaos-engine-name>-<chaos-experiment-name>`"}
+<strong> NOTE:</strong> ChaosResult CR name will be `&lt;chaos-engine-name&gt;-&lt;chaos-experiment-name&gt;`
 
 ```console
 oc describe chaosresult nginx-chaos-container-kill -n nginx
@@ -256,7 +256,7 @@ oc describe chaosresult nginx-chaos-container-kill -n nginx
 You can uninstall Litmus by deleting the namespace.
 
 ```console
-oc delete -f https://litmuschaos.github.io/litmus/litmus-operator-v1.9.0.yaml
+oc delete -f https://litmuschaos.github.io/litmus/litmus-operator-v1.10.0.yaml
 ```
 
 ## More Chaos Experiments

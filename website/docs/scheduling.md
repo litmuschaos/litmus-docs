@@ -1,7 +1,7 @@
 ---
-id: "scheduling"
-title: "Scheduler Usage"
-sidebar_label: "Scheduling"
+id: scheduling
+title: Scheduler Usage
+sidebar_label: Scheduling
 ---
 
 ---

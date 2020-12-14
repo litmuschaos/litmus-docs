@@ -1,7 +1,7 @@
 ---
-id: "pod-network-loss"
-title: "Pod Network Loss Experiment Details"
-sidebar_label: "Pod Network Loss"
+id: pod-network-loss
+title: Pod Network Loss Experiment Details
+sidebar_label: Pod Network Loss
 ---
 
 ---
@@ -24,7 +24,7 @@ sidebar_label: "Pod Network Loss"
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `pod-network-loss` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/generic/pod-network-loss/experiment.yaml)
+- Ensure that the `pod-network-loss` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/pod-network-loss/experiment.yaml)
   <div class="danger">
     <strong>NOTE</strong>: 
         Experiment is supported only on Docker Runtime. Support for containerd/CRIO runtimes will be added in subsequent releases.
@@ -56,7 +56,7 @@ sidebar_label: "Pod Network Loss"
 
 #### Sample Rbac Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-network-loss/rbac.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/pod-network-loss/rbac.yaml yaml"
 
 ```yaml
 apiVersion: v1
@@ -109,6 +109,8 @@ subjects:
     namespace: default
 ```
 
+**_Note:_** In case of restricted systems/setup, create a PodSecurityPolicy(psp) with the required permissions. The `chaosServiceAccount` can subscribe to work around the respective limitations. An example of a standard psp that can be used for litmus chaos experiments can be found [here](https://docs.litmuschaos.io/docs/next/litmus-psp/).
+
 ### Prepare ChaosEngine
 
 - Provide the application info in `spec.appinfo`
@@ -149,23 +151,22 @@ subjects:
     <td> Default (60s) </td>
   </tr>
   <tr>
-    <td> TARGET_POD </td>
-    <td> Name of the application pod subjected to pod network loss chaos</td>
+    <td> TARGET_PODS </td>
+    <td> Comma separated list of application pod name subjected to pod network loss chaos</td>
     <td> Optional </td>
-    <td> If not provided it will select from the appLabel provided</td>
-    <td> If not provided it will select from the app label provided</td>
+    <td> If not provided, it will select target pods randomly based on provided appLabels</td>
   </tr>  
   <tr>
-    <td> TARGET_IPs </td>
-    <td> Destination ips for network chaos </td>
+    <td> DESTINATION_IPS </td>
+    <td> IP addresses of the services or pods, the accessibility to which, is impacted </td>
     <td> Optional </td>
     <td> if not provided, it will induce network chaos for all ips/destinations</td>
   </tr>  
   <tr>
-    <td> TARGET_HOSTS </td>
-    <td> Destination hosts for network chaos </td>
+    <td> DESTINATION_HOSTS </td>
+    <td> DNS Names/FQDN names of the services, the accessibility to which, is impacted </td>
     <td> Optional </td>
-    <td> if not provided, it will induce network chaos for all ips/destinations or TARGET_IPs if already defined</td>
+    <td> if not provided, it will induce network chaos for all ips/destinations or DESTINATION_IPS if already defined</td>
   </tr>      
   <tr>
     <td> PODS_AFFECTED_PERC </td>
@@ -219,14 +220,14 @@ subjects:
     <td> INSTANCE_ID </td>
     <td> A user-defined string that holds metadata/info about current run/instance of chaos. Ex: 04-05-2020-9-00. This string is appended as suffix in the chaosresult CR name.</td>
     <td> Optional  </td>
-    <td> Ensure that the overall length of the chaosresult CR is still {"<"} 64 characters </td>
+    <td> Ensure that the overall length of the chaosresult CR is still &lt; 64 characters </td>
   </tr>
 
 </table>
 
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-network-loss/engine.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/pod-network-loss/engine.yaml yaml"
 
 ```yaml
 # chaosengine.yaml
@@ -261,7 +262,7 @@ spec:
               value: "nginx"
 
             - name: LIB_IMAGE
-              value: "litmuschaos/go-runner:latest"
+              value: "litmuschaos/go-runner:1.10.0"
 
             #Network interface inside target container
             - name: NETWORK_INTERFACE

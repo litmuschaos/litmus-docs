@@ -1,7 +1,7 @@
 ---
-id: pod-autoscaler
-title: Scale the application replicas and test the node autoscaling on cluster
-sidebar_label: Pod Autoscaler
+id: node-restart
+title: Node Restart Experiment Details
+sidebar_label: Node Restart
 ---
 
 ---
@@ -11,39 +11,51 @@ sidebar_label: Pod Autoscaler
 <table>
   <tr>
     <th> Type </th>
-    <th> Description </th>
+    <th>  Description  </th>
     <th> Tested K8s Platform </th>
   </tr>
   <tr>
     <td> Generic </td>
-    <td> Scale the application replicas and test the node autoscaling on cluster </td>
-    <td> GKE, EKS, Minikube, AKS </td>
+    <td> Restart the target node </td>
+    <td> GKE, EKS </td>
   </tr>
 </table>
 
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `pod-autoscaler` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/pod-autoscaler/experiment.yaml)
+- Ensure that the `node-restart` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/node-restart/experiment.yaml)
+- Create a Kubernetes secret having the private SSH key for `SSH_USER` used to connect to `TARGET_NODE`. The name of secret should be `id-rsa` along with private SSH key data, named `ssh-privatekey`. A sample secret example is given below:
 
-## Entry Criteria
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: id-rsa
+type: Opaque
+stringData:
+  ssh-privatekey: |-
+    # Add the private key for ssh here
+```
 
-- Application pods are healthy on the respective Nodes before chaos injection
+## Entry-Criteria
 
-## Exit Criteria
+- Application pods should be healthy before chaos injection.
+- Target Nodes should be in Ready state before chaos injection.
 
-- Application pods will be healthy post chaos injection
+## Exit-Criteria
+
+- Application pods should be healthy after chaos injection.
+- Target Nodes should be in Ready state after chaos injection.
 
 ## Details
 
-- The experiment aims to check the ability of nodes to accommodate the number of replicas a given application pod.
-
-- This experiment can be used for other scenarios as well, such as for checking the Node auto-scaling feature. For example, check if the pods are successfully rescheduled within a specified period in cases where the existing nodes are already running at the specified limits.
+- Causes chaos to disrupt state of node by restarting it.
+- Tests deployment sanity (replica availability & uninterrupted service) and recovery workflows of the application pod
 
 ## Integrations
 
-- Pod Autoscaler can be effected using the chaos library: `litmus`
-- The desired chaos library can be selected by setting `litmus` as value for the env variable `LIB`
+- Node Restart can be effected using the chaos library: `litmus`.
 
 ## Steps to Execute the Chaos Experiment
 
@@ -57,40 +69,41 @@ sidebar_label: Pod Autoscaler
 
 #### Sample Rbac Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/pod-autoscaler/rbac.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/node-restart/rbac.yaml yaml"
 
 ```yaml
 ---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: pod-autoscaler-sa
+  name: node-restart-sa
   namespace: default
   labels:
-    name: pod-autoscaler-sa
+    name: node-restart-sa
     app.kubernetes.io/part-of: litmus
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: pod-autoscaler-sa
+  name: node-restart-sa
   labels:
-    name: pod-autoscaler-sa
+    name: node-restart-sa
     app.kubernetes.io/part-of: litmus
 rules:
   - apiGroups: ["", "litmuschaos.io", "batch", "apps"]
     resources:
       [
         "pods",
-        "deployments",
         "jobs",
+        "secrets",
         "events",
         "chaosengines",
         "pods/log",
         "chaosexperiments",
         "chaosresults",
       ]
-    verbs: ["create", "list", "get", "patch", "update", "delete"]
+    verbs:
+      ["create", "list", "get", "patch", "update", "delete", "deletecollection"]
   - apiGroups: [""]
     resources: ["nodes"]
     verbs: ["get", "list"]
@@ -98,17 +111,17 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: pod-autoscaler-sa
+  name: node-restart-sa
   labels:
-    name: pod-autoscaler-sa
+    name: node-restart-sa
     app.kubernetes.io/part-of: litmus
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: pod-autoscaler-sa
+  name: node-restart-sa
 subjects:
   - kind: ServiceAccount
-    name: pod-autoscaler-sa
+    name: node-restart-sa
     namespace: default
 ```
 
@@ -126,33 +139,63 @@ subjects:
 <table>
   <tr>
     <th> Variables </th>
-    <th> Description  </th>
+    <th> Description </th>
     <th> Specify In ChaosEngine </th>
     <th> Notes </th>
   </tr>
   <tr>
-    <td> REPLICA_COUNT  </td>
-    <td> Number of replicas upto which we want to scale </td>
-    <td> Mandatory  </td>
-    <td> <code>nil</code> </td>
+    <td> LIB_IMAGE  </td>
+    <td> The image used to restart the node </td>
+    <td> Optional </td>
+    <td> Defaults to `litmuschaos/go-runner:latest` </td>
+  </tr>
+  <tr>
+    <td> SSH_USER  </td>
+    <td> name of ssh user </td>
+    <td> Mandatory </td>
+    <td> Defaults to `root` </td>
+  </tr>
+  <tr>
+    <td> TARGET_NODE </td>
+    <td> name of target node, subjected to chaos </td>
+    <td> Mandatory </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td> TARGET_NODE_IP </td>
+    <td> ip of the target node, subjected to chaos </td>
+    <td> Mandatory </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td> REBOOT_COMMAND  </td>
+    <td> Command used for reboot </td>
+    <td> Mandatory </td>
+    <td> Defaults to `sudo systemctl reboot` </td>
   </tr>
   <tr>
     <td> TOTAL_CHAOS_DURATION </td>
-    <td> The timeout for the chaos experiment (in seconds) </td>
+    <td> The time duration for chaos insertion (sec) </td>
     <td> Optional </td>
-    <td> Defaults to 60 </td>
+    <td> Defaults to 30s </td>
+  </tr>
+  <tr>
+    <td> RAMP_TIME </td>
+    <td> Period to wait before injection of chaos in sec </td>
+    <td> Optional  </td>
+    <td> </td>
   </tr>
   <tr>
     <td> LIB  </td>
     <td> The chaos lib used to inject the chaos </td>
     <td> Optional </td>
-    <td> Defaults to `litmus` </td>
+    <td> Defaults to `litmus` supported litmus only </td>
   </tr>
   <tr>
-    <td> RAMP_TIME </td>
-    <td> Period to wait before and after injection of chaos in sec </td>
-    <td> Optional  </td>
-    <td> </td>
+    <td> LIB_IMAGE  </td>
+    <td> The image used to restart the node </td>
+    <td> Optional </td>
+    <td> Defaults to `litmuschaos/go-runner:latest` </td>
   </tr>
   <tr>
     <td> INSTANCE_ID </td>
@@ -160,11 +203,12 @@ subjects:
     <td> Optional </td>
     <td> Ensure that the overall length of the chaosresult CR is still &lt; 64 characters </td>
   </tr>
+
 </table>
 
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/pod-autoscaler/engine.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/node-restart/engine.yaml yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1
@@ -183,22 +227,29 @@ spec:
     appns: "default"
     applabel: "app=nginx"
     appkind: "deployment"
-  chaosServiceAccount: pod-autoscaler-sa
+  chaosServiceAccount: node-restart-sa
   monitoring: false
   # It can be delete/retain
   jobCleanUpPolicy: "delete"
   experiments:
-    - name: pod-autoscaler
+    - name: node-restart
       spec:
         components:
+          nodeSelector:
+            # provide the node labels
+            kubernetes.io/hostname: "node02"
           env:
-            # set chaos duration (in sec) as desired
-            - name: TOTAL_CHAOS_DURATION
-              value: "60"
+            # ENTER THE TARGET NODE NAME
+            - name: TARGET_NODE
+              value: "node01"
 
-            # number of replicas to scale
-            - name: REPLICA_COUNT
-              value: "5"
+            # ENTER THE TARGET NODE IP
+            - name: TARGET_NODE_IP
+              value: ""
+
+              # ENTER THE USER TO BE USED FOR SSH AUTH
+            - name: SSH_USER
+              value: ""
 ```
 
 ### Create the ChaosEngine Resource
@@ -212,16 +263,16 @@ spec:
 
 ### Watch Chaos progress
 
-- Setting up a watch of the number of repicas scaling and its state in the Kubernetes Cluster
+- View the status of the nodes as they are subjected to node restart.
 
-  `watch kubectl get pods -n <namespace>`
+  `watch -n 1 kubectl get nodes`
 
 ### Check Chaos Experiment Result
 
-- Check whether the nodes can accomodate the application pods in the given timeout(Total Chaos Duration) , once the experiment (job) is completed. The ChaosResult resource name is derived like this: `<ChaosEngine-Name>-<ChaosExperiment-Name>`.
+- Check whether the application is resilient to the node restart, once the experiment (job) is completed. The ChaosResult resource name is derived like this: `<ChaosEngine-Name>-<ChaosExperiment-Name>`.
 
-  `kubectl describe chaosresult nginx-chaos-pod-autoscaler -n <application-namespace>`
+  `kubectl describe chaosresult nginx-chaos-node-restart -n <application-namespace>`
 
-## Pod Autoscaler Experiment Demo
+### Node Restart Experiment Demo
 
-- A sample recording of this experiment execution will be provided soon.
+- A sample recording of this experiment execution will be added soon.

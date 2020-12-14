@@ -4,6 +4,8 @@ title: Getting Started with Litmus
 sidebar_label: Introduction
 ---
 
+---
+
 ## Pre-requisites
 
 Kubernetes 1.11 or later.
@@ -33,7 +35,7 @@ Running chaos on your application involves the following steps:
 Apply the LitmusChaos Operator manifest:
 
 ```
-kubectl apply -f https://litmuschaos.github.io/litmus/litmus-operator-v1.9.0.yaml
+kubectl apply -f https://litmuschaos.github.io/litmus/litmus-operator-v1.10.0.yaml
 ```
 
 The above command installs all the CRDs, required service account configuration, and chaos-operator.
@@ -109,10 +111,10 @@ Expected output:
 **NOTE**:
 
 - In this guide, we shall describe the steps to inject pod-delete chaos on an nginx application already deployed in the
-  nginx namespace. It is a mandatory requirement to ensure that the chaos custom resources (chaosexperiment and chaosengine)
-  and the experiment specific serviceaccount are created in the same namespace (typically, the same as the namespace of the
-  application under test (AUT), in this case nginx). This is done to ensure that the developers/users of the experiment isolate
-  the chaos to their respective work-namespaces in shared environments.
+  nginx namespace. If you don't have this setup you can easily create one by running these two commands:
+
+  - Create nginx namespace `kubectl create ns nginx`.
+  - Create nginx deployment in nginx namespace `kubectl create deployment nginx --image nginx -n nginx`.
 
 - In all subsequent steps, please follow these instructions by replacing the nginx namespace and labels with that of your
   application.
@@ -125,13 +127,13 @@ Expected output:
 ### Install Chaos Experiments
 
 Chaos experiments contain the actual chaos details. These experiments are installed on your cluster as Kubernetes CRs.
-The Chaos Experiments are grouped as Chaos Charts and are published on <a href="https://hub.litmuschaos.io" target="_blank">ChaosHub</a>..
+The Chaos Experiments are grouped as Chaos Charts and are published on <a href="https://hub.litmuschaos.io" target="_blank">Chaos Hub</a>.
 
 The generic chaos experiments such as `pod-delete`, `container-kill`,` pod-network-latency` are available under Generic Chaos Chart.
 This is the first chart you are recommended to install.
 
 ```
-kubectl apply -f https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/generic/experiments.yaml -n nginx
+kubectl apply -f https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/experiments.yaml -n nginx
 ```
 
 Verify if the chaos experiments are installed.
@@ -150,7 +152,7 @@ into a `rbac.yaml` manifest and run `kubectl apply -f rbac.yaml` to create one s
 - For rbac samples corresponding to other experiments such as, say, container-kill, please refer the respective experiment folder in
   the [chaos-charts](https://github.com/litmuschaos/chaos-charts/tree/master/charts/generic/container-kill) repository.
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-delete/rbac_nginx_getstarted.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/pod-delete/rbac_nginx_getstarted.yaml yaml"
 
 ```yaml
 ---
@@ -226,7 +228,7 @@ Change the `chaosServiceAccount` to the name of service account created in above
 
 <strong> NOTE:</strong> To learn more about the various fields in the ChaosEngine spec and their supported values, refer to [Constructing ChaosEngine](https://docs.litmuschaos.io/docs/chaosengine/)
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-delete/engine_nginx_getstarted.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/pod-delete/engine_nginx_getstarted.yaml yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1
@@ -297,7 +299,7 @@ kubectl apply -f chaosengine.yaml
 
 Describe the ChaosResult CR to know the status of each experiment. The `status.verdict` is set to `Awaited` when the experiment is in progress, eventually changing to either `Pass` or `Fail`.
 
-<strong> NOTE:</strong> ChaosResult CR name will be `{"<"}chaos-engine-name{">"}-{"<"}chaos-experiment-name{">"}`
+<strong> NOTE:</strong> ChaosResult CR name will be `&lt;chaos-engine-name&gt;-&lt;chaos-experiment-name&gt;`
 
 ```console
 kubectl describe chaosresult nginx-chaos-pod-delete -n nginx
@@ -312,7 +314,7 @@ kubectl delete chaosengine --all -n <namespace>
 ```
 
 ```console
-kubectl delete -f https://litmuschaos.github.io/litmus/litmus-operator-v1.9.0.yaml
+kubectl delete -f https://litmuschaos.github.io/litmus/litmus-operator-v1.10.0.yaml
 ```
 
 **NOTE**

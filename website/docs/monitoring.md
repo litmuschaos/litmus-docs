@@ -1,7 +1,7 @@
 ---
-id: "monitoring"
-title: "Monitoring"
-sidebar_label: "Monitoring"
+id: monitoring
+title: Monitoring
+sidebar_label: Monitoring
 ---
 
 ---

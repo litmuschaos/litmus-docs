@@ -66,7 +66,7 @@ namespaces. Ensure that you have the right permission to be able to create the s
 - Apply the LitmusChaos Operator manifest:
 
   ```
-  kubectl apply -f https://litmuschaos.github.io/litmus/litmus-operator-v1.9.0.yaml
+  kubectl apply -f https://litmuschaos.github.io/litmus/litmus-operator-v1.10.0.yaml
   ```
 
 - Install the litmus-admin service account to be used by the chaos-operator while executing the experiment (this example
@@ -86,7 +86,7 @@ kubectl apply -f https://hub.litmuschaos.io/api/chaos/master?file=charts/generic
 
 - **Note**: If you are interested in using chaostoolkit to perform the pod-delete, instead of the native litmus lib, you can apply
   this [rbac](https://github.com/litmuschaos/chaos-charts/tree/master/charts/generic/k8-pod-delete/Cluster/rbac-admin.yaml)
-  & [experiment](https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/generic/k8-pod-delete/experiment.yaml) manifests instead
+  & [experiment](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/k8-pod-delete/experiment.yaml) manifests instead
   of the ones described above.
 
 - Create the service account and associated RBAC, which will be used by the Argo workflow controller to execute the

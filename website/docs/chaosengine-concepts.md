@@ -114,7 +114,7 @@ This section describes the fields in the ChaosEngine spec and the possible value
 </tr>
 <tr>
   <th>Range</th>
-  <td><code>deployment</code>, <code>statefulset</code>, <code>daemonset</code></td>
+  <td><code>deployment</code>, <code>statefulset</code>, <code>daemonset</code>, <code>deploymentconfig</code>, <code>rollout</code></td>
 </tr>
 <tr>
   <th>Default</th>
@@ -446,7 +446,7 @@ This section describes the fields in the ChaosEngine spec and the possible value
 </tr>
 <tr>
   <th>Range</th>
-<i>user-defined</i> (type: {"{"}name: string, mountPath: string{"}"})
+<td><i>user-defined</i> (type: {'{'}name: string, mountPath: string{'}'})</td>
 </tr>
 <tr>
   <th>Default</th>
@@ -473,7 +473,7 @@ This section describes the fields in the ChaosEngine spec and the possible value
 </tr>
 <tr>
   <th>Range</th>
-<i>user-defined</i> (type: {"{"}name: string, mountPath: string{"}"})
+<td><i>user-defined</i> (type: {'{'}name: string, mountPath: string{'}'})</td>
 </tr>
 <tr>
   <th>Default</th>
@@ -482,6 +482,60 @@ This section describes the fields in the ChaosEngine spec and the possible value
 <tr>
   <th>Notes</th>
   <td>The <code>.spec.components.runner.secrets</code> provides for a means to push secrets (typically project ids, access credentials etc.,) into the chaos runner pod. These are especially useful in case of platform-level/infra-level chaos experiments. </td>
+</tr>
+</table>
+
+<table>
+<tr>
+  <th>Field</th>
+  <td><code>.spec.components.runner.nodeSelector</code></td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>Node selectors for the runner pod</td>
+</tr>
+<tr>
+  <th>Type</th>
+  <td>Optional</td>
+</tr>
+<tr>
+  <th>Range</th>
+<td>Labels in the from of label key=value</td>
+</tr>
+<tr>
+  <th>Default</th>
+  <td><i>n/a</i></td>
+</tr>
+<tr>
+  <th>Notes</th>
+  <td>The <code>.spec.components.runner.nodeSelector</code> The nodeselector contains labels of the node on which runner pod should be scheduled. Typically used in case of infra/node level chaos.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+  <th>Field</th>
+  <td><code>.spec.components.runner.tolerations</code></td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>Toleration for the runner pod</td>
+</tr>
+<tr>
+  <th>Type</th>
+  <td>Optional</td>
+</tr>
+<tr>
+  <th>Range</th>
+<td><i>user-defined</i> (type: []corev1.Toleration)</td>
+</tr>
+<tr>
+  <th>Default</th>
+  <td><i>n/a</i></td>
+</tr>
+<tr>
+  <th>Notes</th>
+  <td>The <code>.spec.components.runner.tolerations</code> Provides tolerations for the runner pod so that it can be scheduled on the respective tainted node. Typically used in case of infra/node level chaos.</td>
 </tr>
 </table>
 
@@ -529,7 +583,7 @@ This section describes the fields in the ChaosEngine spec and the possible value
 </tr>
 <tr>
   <th>Range</th>
-<i>user-defined</i> (type: {"{"}name: string, mountPath: string{"}"})
+<td><i>user-defined</i> (type: {'{'}name: string, value: string{'}'})</td>
 </tr>
 <tr>
   <th>Default</th>
@@ -556,7 +610,7 @@ This section describes the fields in the ChaosEngine spec and the possible value
 </tr>
 <tr>
   <th>Range</th>
-<i>user-defined</i> (type: {"{"}name: string, mountPath: string{"}"})
+<td><i>user-defined</i> (type: {'{'}name: string, mountPath: string{'}'})</td>
 </tr>
 <tr>
   <th>Default</th>
@@ -583,7 +637,7 @@ This section describes the fields in the ChaosEngine spec and the possible value
 </tr>
 <tr>
   <th>Range</th>
-<i>user-defined</i> (type: {"{"}name: string, mountPath: string{"}"})
+<td><i>user-defined</i> (type: {'{'}name: string, mountPath: string{'}'})</td>
 </tr>
 <tr>
   <th>Default</th>
@@ -691,7 +745,7 @@ This section describes the fields in the ChaosEngine spec and the possible value
 </tr>
 <tr>
   <th>Range</th>
-<td><i> It contains values in the form {"{"}delay: int, timeout: int{"}"} </i></td>
+<td><i> It contains values in the form {'{'}delay: int, timeout: int{'}'} </i></td>
 </tr>
 <tr>
   <th>Default</th>
@@ -733,7 +787,7 @@ This section describes the fields in the ChaosEngine spec and the possible value
 <table>
 <tr>
   <th>Field</th>
-  <td><code>.spec.components.runner.experimentannotation</code></td>
+  <td><code>.spec.experiments[].spec.components.experimentannotation</code></td>
 </tr>
 <tr>
   <th>Description</th>
@@ -753,7 +807,34 @@ This section describes the fields in the ChaosEngine spec and the possible value
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>.components.runner.experimentannotation</code> allows developers to specify the custom annotations for the experiment pod.</td>
+  <td>The <code>.spec.components.experimentannotation</code> allows developers to specify the custom annotations for the experiment pod.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+  <th>Field</th>
+  <td><code>.spec.experiments[].spec.components.tolerations</code></td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>Toleration for the experiment pod</td>
+</tr>
+<tr>
+  <th>Type</th>
+  <td>Optional</td>
+</tr>
+<tr>
+  <th>Range</th>
+<td><i>user-defined</i> (type: []corev1.Toleration)</td>
+</tr>
+<tr>
+  <th>Default</th>
+  <td><i>n/a</i></td>
+</tr>
+<tr>
+  <th>Notes</th>
+  <td>The <code>.spec.components.tolerations</code>Tolerations for the experiment pod so that it can be scheduled on the respective tainted node. Typically used in case of infra/node level chaos.</td>
 </tr>
 </table>
 
@@ -780,6 +861,6 @@ This section describes the fields in the ChaosEngine spec and the possible value
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>.probe</code> allows developers to specify the chaos hypothesis. It supports three types: <code>cmdProbe</code>, <code>k8sProbe</code>, <code>httpProbe</code></td>
+  <td>The <code>.probe</code> allows developers to specify the chaos hypothesis. It supports three types: <code>cmdProbe</code>, <code>k8sProbe</code>, <code>httpProbe</code>. For more details <a href="https://docs.litmuschaos.io/docs/litmus-probe/">refer</a></td>
 </tr>
 </table>

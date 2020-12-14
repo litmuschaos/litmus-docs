@@ -1,7 +1,7 @@
 ---
-id: "node-drain"
-title: "Node Drain Experiment Details"
-sidebar_label: "Node Drain"
+id: node-drain
+title: Node Drain Experiment Details
+sidebar_label: Node Drain
 ---
 
 ---
@@ -24,8 +24,8 @@ sidebar_label: "Node Drain"
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `node-drain` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/generic/node-drain/experiment.yaml)
-- Ensure that the node specified in the experiment ENV variable `APP_NODE` (the node which will be drained) should be cordoned before execution of the chaos experiment (before applying the chaosengine manifest) to ensure that the litmus experiment runner pods are not scheduled on it / subjected to eviction. This can be achieved with the following steps:
+- Ensure that the `node-drain` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/node-drain/experiment.yaml)
+- Ensure that the node specified in the experiment ENV variable `TARGET_NODE` (the node which will be drained) should be cordoned before execution of the chaos experiment (before applying the chaosengine manifest) to ensure that the litmus experiment runner pods are not scheduled on it / subjected to eviction. This can be achieved with the following steps:
 
   - Get node names against the applications pods: `kubectl get pods -o wide`
   - Cordon the node `kubectl cordon <nodename>`
@@ -60,7 +60,7 @@ Use this sample RBAC manifest to create a chaosServiceAccount in the desired (ap
 
 #### Sample Rbac Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/node-drain/rbac.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/node-drain/rbac.yaml yaml"
 
 ```yaml
 ---
@@ -116,6 +116,8 @@ subjects:
     namespace: default
 ```
 
+**_Note:_** In case of restricted systems/setup, create a PodSecurityPolicy(psp) with the required permissions. The `chaosServiceAccount` can subscribe to work around the respective limitations. An example of a standard psp that can be used for litmus chaos experiments can be found [here](https://docs.litmuschaos.io/docs/next/litmus-psp/).
+
 ### Prepare ChaosEngine
 
 - Provide the application info in `spec.appinfo`
@@ -133,8 +135,8 @@ subjects:
     <th> Notes </th>
   </tr>
   <tr>
-    <td> APP_NODE </td>
-    <td> Name of the node to drain  </td>
+    <td> TARGET_NODE </td>
+    <td> Name of the node to drain </td>
     <td> Mandatory  </td>
     <td> </td>
   </tr>
@@ -160,14 +162,14 @@ subjects:
     <td> INSTANCE_ID </td>
     <td> A user-defined string that holds metadata/info about current run/instance of chaos. Ex: 04-05-2020-9-00. This string is appended as suffix in the chaosresult CR name.</td>
     <td> Optional </td>
-    <td> Ensure that the overall length of the chaosresult CR is still {"<"} 64 characters </td>
+    <td> Ensure that the overall length of the chaosresult CR is still &lt; 64 characters </td>
   </tr>
 
 </table>
                       
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/node-drain/engine.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/node-drain/engine.yaml yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1
@@ -198,8 +200,8 @@ spec:
             # provide the node labels
             kubernetes.io/hostname: "node02"
           env:
-            # set node name
-            - name: APP_NODE
+            # enter the target node name
+            - name: TARGET_NODE
               value: "node-01"
 ```
 

@@ -1,7 +1,7 @@
 ---
-id: "rancher-litmus"
-title: "Installation and Troubleshooting of LitmusChaos on Rancher"
-sidebar_label: "Install and Troubleshoot Litmus"
+id: rancher-litmus
+title: Installation and Troubleshooting of LitmusChaos on Rancher
+sidebar_label: Install and Troubleshoot Litmus
 ---
 
 ---
@@ -69,7 +69,7 @@ The nginx default web site should be available now.
 
 Followed the steps in the [Getting Started Guide](https://docs.litmuschaos.io/docs/getstarted/)\* to install litmus in a `nginx` namespace with an nginx application.
 
-Download `litmus-operator-v1.9.0.yaml` from https://litmuschaos.github.io/litmus/litmus-operator-v1.9.0.yaml.
+Download `litmus-operator-v1.10.0.yaml` from https://litmuschaos.github.io/litmus/litmus-operator-v1.10.0.yaml.
 Modify it to use the `nginx` namespace in three places (at lines 10, 41, and 47 approximately).
 Install the litmus-operator in `nginx` application namespace using kubectl.
 
@@ -143,13 +143,13 @@ chaosresults                                   litmuschaos.io                 tr
 ### Install Chaos Experiments
 
 Chaos experiments contain the actual chaos details. These experiments are installed on your cluster as Kubernetes Custom Resources (CRs).
-The Chaos Experiments are grouped as Chaos Charts and are published on <a href="https://hub.litmuschaos.io" target="_blank">ChaosHub</a>..
+The Chaos Experiments are grouped as Chaos Charts and are published on <a href="https://hub.litmuschaos.io" target="_blank">Chaos Hub</a>.
 
 The generic chaos experiments such as `pod-delete`, `container-kill`,` pod-network-latency` are available under Generic Chaos Chart.
 This is the first chart you are recommended to install.
 
 ```
-$ kubectl apply -f https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/generic/experiments.yaml -n nginx
+$ kubectl apply -f https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/experiments.yaml -n nginx
 ```
 
 Expected output:
@@ -206,7 +206,7 @@ has just enough permissions needed to run the container-kill chaos experiment.
 - For rbac samples corresponding to other experiments such as, say, pod-delete, please refer the respective experiment folder in
   the [chaos-charts](https://github.com/litmuschaos/chaos-charts/tree/master/charts/generic/pod-delete) repository.
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/container-kill/rbac_nginx_getstarted.yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/container-kill/rbac_nginx_getstarted.yaml"
 
 ```yaml
 ---
@@ -288,7 +288,7 @@ ChaosEngine connects the application instance to a Chaos Experiment. Copy the fo
 **NOTE:** You may update the values of `applabel` , `appns`, `appkind` and `experiments` as per your deployment and choices.
 Change the `chaosServiceAccount` to the name of service account created in above previous steps if you modified the `rbac.yaml`.
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/container-kill/engine_nginx_getstarted.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/container-kill/engine_nginx_getstarted.yaml yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1
@@ -329,7 +329,7 @@ spec:
               value: "20"
 
             - name: LIB_IMAGE
-              value: "litmuschaos/go-runner:latest"
+              value: "litmuschaos/go-runner:1.10.0"
 
             # provide the name of container runtime
             # it supports docker, containerd, crio
@@ -415,7 +415,7 @@ You can uninstall Litmus by deleting the namespace.
 ```console
 kubectl delete -f chaosengine.yaml -n nginx
 kubectl delete -f rbac.yaml -n nginx
-kubectl delete -f https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/generic/experiments.yaml -n nginx
+kubectl delete -f https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/experiments.yaml -n nginx
 kubectl delete -f litmus-operator.yaml -n nginx
 
 ```

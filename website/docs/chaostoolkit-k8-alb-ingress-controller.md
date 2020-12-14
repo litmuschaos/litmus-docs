@@ -1,7 +1,7 @@
 ---
-id: Kubernetes-Chaostoolkit-Application
-title: ChaosToolKit Pod Delete Experiment Details
-sidebar_label: Service Pod - Application
+id: Kubernetes-Chaostoolkit-Cluster-alb-ingress-controller
+title: ChaosToolKit Cluster Level Pod Delete Experiment Details in kube-system
+sidebar_label: Cluster Pod - alb-ingress-controller
 ---
 
 ---
@@ -16,7 +16,7 @@ sidebar_label: Service Pod - Application
   </tr>
   <tr>
     <td> ChaosToolKit </td>
-    <td> ChaosToolKit pod delete experiment </td>
+    <td> ChaosToolKit Cluster Level Pod delete experiment </td>
     <td> Kubeadm, Minikube </td>
   </tr>
 </table>
@@ -24,13 +24,14 @@ sidebar_label: Service Pod - Application
 ## Prerequisites
 
 - Ensure that the Litmus ChaosOperator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `k8-pod-delete` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/k8-pod-delete/experiment.yaml)
+- Ensure that the `k8-pod-delete` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/kube-components/k8-alb-ingress-controller/experiment.yaml)
 - Ensure you have nginx default application setup on default namespace ( if you are using specific namespace please execute below on that namespace)
 
 ## Entry Criteria
 
 - Application replicas are healthy before chaos injection
 - Service resolution works successfully as determined by deploying a sample nginx application and a custom liveness app querying the nginx application health end point
+- This application we are executing against kube-system type namespace
 
 ## Exit Criteria
 
@@ -39,9 +40,9 @@ sidebar_label: Service Pod - Application
 
 ## Details
 
-- Causes graceful pod failure of application replicas using ChaosToolKit based on provided namespace and Label while doing health checks against the endpoint
-- Tests deployment sanity with steady state hypothesis executed pre and post pod failures
-- Service resolution will fail if application replicas are not present.
+- Causes graceful pod failure of an ChaosToolKit replicas bases on provided namespace and Label with endpoint
+- Tests deployment sanity check with Steady state hypothesis pre and post pod failures
+- Service resolution will failed if Application replicas are not present.
 
 ### Use Cases for executing the experiment
 
@@ -55,38 +56,14 @@ sidebar_label: Service Pod - Application
   <tr>
     <td> ChaosToolKit </td>
     <td> ChaosToolKit single, random pod delete experiment with count </td>
-    <td> Executing via label name app=&lt;&gt; </td>
-    <td> pod-app-kill-count.json</td>
+    <td> Executing via label name k8s-app=&lt;&gt; </td>
+    <td> pod-custom-kill-health.json</td>
   </tr>
   <tr>
-    <td> ChaosToolKit </td>
-    <td> ChaosToolKit single, random pod delete experiment </td>
-    <td> Executing via label name app=&lt;&gt; </td>
-    <td> pod-app-kill-health.json </td>
-  </tr>
-  <tr>
-    <td> ChaosToolKit </td>
-    <td> ChaosToolKit single, random pod delete experiment with count </td>
-    <td> Executing via Custom label name &lt;custom&gt;=&lt;&gt; </td>
-    <td> pod-app-kill-count.json</td>
-  </tr>
-  <tr>
-    <td> ChaosToolKit </td>
-    <td> ChaosToolKit single, random pod delete experiment </td>
-    <td> Executing via Custom label name &lt;custom&gt;=&lt;&gt; </td>
-    <td> pod-app-kill-health.json </td>
-  </tr>
-  <tr>
-    <td> ChaosToolKit </td>
-    <td> ChaosToolKit All pod delete experiment with health validation </td>
-    <td> Executing via Custom label name app=&lt;&gt; </td>
-    <td> pod-app-kill-all.json </td>
-  </tr>
-  <tr>
-    <td> ChaosToolKit </td>
-    <td> ChaosToolKit All pod delete experiment with health validation</td>
-    <td> Executing via Custom label name &lt;custom&gt;=&lt;&gt; </td>
-    <td> pod-custom-kill-all.json </td>
+    <td> TEST_NAMESPACE </td>
+    <td> Place holder from where the chaos experiment is executed</td>
+    <td> Optional  </td>
+    <td> Defaults to is `default` </td>
   </tr>
 </table>
 
@@ -102,33 +79,28 @@ sidebar_label: Service Pod - Application
 
 ## Prepare chaosServiceAccount
 
-- Based on your use case pick one of the choice from here `https://github.com/sumitnagal/chaos-charts/tree/testing/charts/chaostoolkit/k8-pod-delete`
+- Based on your use case pick one of the choice from here `https://hub.litmuschaos.io/kube-components/k8-alb-ingress-controller`
   - Service owner use case
-    - Install the rbac for cluster in namespace from where you are executing the experiments `kubectl apply Service/rbac.yaml`
+    - Install the rbac for cluster in namespace from where you are executing the experiments `kubectl apply rbac-admin.yaml`
 
-### Sample Rbac Manifest for Service Owner use case
+### Sample Rbac Manifest for Cluster Owner use case
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/k8-pod-delete/Service/rbac.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/kube-components/k8-alb-ingress-controller/rbac-admin.yaml yaml"
 
 ```yaml
----
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: k8-pod-delete-sa
-  namespace: default
+  name: chaos-admin
   labels:
-    name: k8-pod-delete-sa
-    app.kubernetes.io/part-of: litmus
+    name: chaos-admin
 ---
 apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
+kind: ClusterRole
 metadata:
-  name: k8-pod-delete-sa
-  namespace: default
+  name: chaos-admin
   labels:
-    name: k8-pod-delete-sa
-    app.kubernetes.io/part-of: litmus
+    name: chaos-admin
 rules:
   - apiGroups: ["", "apps", "batch"]
     resources: ["jobs", "deployments", "daemonsets"]
@@ -152,20 +124,18 @@ rules:
     verbs: ["get", "list"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
+kind: ClusterRoleBinding
 metadata:
-  name: k8-pod-delete-sa
-  namespace: default
+  name: chaos-admin
   labels:
-    name: k8-pod-delete-sa
-    app.kubernetes.io/part-of: litmus
+    name: chaos-admin
 roleRef:
   apiGroup: rbac.authorization.k8s.io
-  kind: Role
-  name: k8-pod-delete-sa
+  kind: ClusterRole
+  name: chaos-admin
 subjects:
   - kind: ServiceAccount
-    name: k8-pod-delete-sa
+    name: chaos-admin
     namespace: default
 ```
 
@@ -177,7 +147,7 @@ subjects:
     ```
       appinfo:
         appns: default
-        applabel: 'app=nginx'
+        applabel: 'app=alb-ingress-controller'
         appkind: deployment
     ```
 
@@ -197,31 +167,31 @@ subjects:
     <td> NAME_SPACE </td>
     <td> This is chaos namespace which will create all infra chaos resources in that namespace </td>
     <td> Mandatory </td>
-    <td> Default to default </td>
+    <td> Default to kube-system </td>
   </tr>
   <tr>
     <td> LABEL_NAME </td>
     <td> The default name of the label </td>
     <td> Mandatory </td>
-    <td> Defaults to nginx </td>
+    <td> Defaults to `app=alb-ingress-controller`</td>
   </tr>
   <tr>
     <td> APP_ENDPOINT </td>
-    <td> Endpoint where ChaosToolKit will make a call and ensure the application is healthy </td>
+    <td> Endpoint where ChaosToolKit will make a call and ensure the application endpoint is healthy </td>
     <td> Mandatory </td>
     <td> Defaults to localhost </td>
   </tr>
   <tr>
     <td> FILE </td>
-    <td> Type of pod-delete chaos (in terms of steady state checks performed) we want to execute, represented by the ChaosToolKit json file</td>
+    <td> Type of chaos experiments we want to execute </td>
     <td> Mandatory  </td>
-    <td> Default to `pod-app-kill-health.json` </td>
+    <td> Default to `pod-custom-kill-health.json` </td>
   </tr>
   <tr>
     <td> REPORT  </td>
     <td> The Report of execution coming in json format </td>
     <td> Optional  </td>
-    <td> Defaults to is `true` </td>
+    <td> Defaults to is `false` </td>
   </tr>
   <tr>
     <td> REPORT_ENDPOINT </td>
@@ -229,32 +199,27 @@ subjects:
     <td> Optional  </td>
     <td> Default to setup for Kafka topic for chaos, but can support any reporting database </td>
   </tr>
-  <tr>
-    <td> TEST_NAMESPACE </td>
-    <td> Place holder from where the chaos experiment is executed</td>
-    <td> Optional  </td>
-    <td> Defaults to is `default` </td>
-  </tr>
+
 </table>
 
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/k8-pod-delete/engine.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/kube-components/k8-alb-ingress-controller/engine.yaml yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1
 kind: ChaosEngine
 metadata:
-  name: nginx-chaos-app-health
+  name: k8-alb-ingress-controller
   namespace: default
 spec:
   appinfo:
     appns: "default"
-    applabel: "app=nginx"
-    appkind: "deployment"
-  annotationCheck: "true"
+    applabel: "app=alb-ingress-controller"
+    appkind: deployment
+  annotationCheck: "false"
   engineState: "active"
-  chaosServiceAccount: k8-pod-delete-sa
+  chaosServiceAccount: chaos-admin
   monitoring: false
   jobCleanUpPolicy: "retain"
   experiments:
@@ -264,15 +229,15 @@ spec:
           env:
             # set chaos namespace
             - name: NAME_SPACE
-              value: "default"
+              value: addon-alb-ingress-controller-ns
             # set chaos label name
             - name: LABEL_NAME
-              value: "nginx"
+              value: app=alb-ingress-controller
             # pod endpoint
             - name: APP_ENDPOINT
               value: "localhost"
             - name: FILE
-              value: "pod-app-kill-health.json"
+              value: "pod-custom-kill-health.json"
             - name: REPORT
               value: "true"
             - name: REPORT_ENDPOINT
@@ -289,9 +254,9 @@ spec:
 
 ### Watch Chaos progress
 
-- View application pod termination & recovery by setting up a watch on the pods in the application namespace
+- View ChaosToolKit pod terminations & recovery by setting up a watch on the ChaosToolKit pods in the application namespace
 
-  `watch kubectl get pods`
+  `watch kubectl get pods -n kube-system`
 
 ### Check ChaosExperiment Result
 

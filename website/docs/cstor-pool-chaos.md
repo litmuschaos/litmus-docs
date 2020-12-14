@@ -1,7 +1,7 @@
 ---
-id: "cStor-pool-chaos"
-title: "cStor Pool Chaos Experiment Details"
-sidebar_label: "cStor Pool Chaos"
+id: cStor-pool-chaos
+title: cStor Pool Chaos Experiment Details
+sidebar_label: cStor Pool Chaos
 ---
 
 ---
@@ -24,7 +24,7 @@ sidebar_label: "cStor Pool Chaos"
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`).If not, install from [here](https://litmuschaos.github.io/litmus/litmus-operator-latest.yaml)
-- Ensure that the `openebs-pool-pod-failure` experiment resource is available in the cluster by executing `kubectl get chaosexperiments -n openebs` in the openebs namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/openebs/openebs-pool-pod-failure/experiment.yaml)
+- Ensure that the `openebs-pool-pod-failure` experiment resource is available in the cluster by executing `kubectl get chaosexperiments -n openebs` in the openebs namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/openebs/openebs-pool-pod-failure/experiment.yaml)
 
 ## Entry Criteria
 
@@ -137,7 +137,7 @@ subjects:
     <td> INSTANCE_ID </td>
     <td> A user-defined string that holds metadata/info about current run/instance of chaos. Ex: 04-05-2020-9-00. This string is appended as suffix in the chaosresult CR name.</td>
     <td> Optional  </td>
-    <td> Ensure that the overall length of the chaosresult CR is still {"<"} 64 characters </td>
+    <td> Ensure that the overall length of the chaosresult CR is still &lt; 64 characters </td>
   </tr>
 
 </table>

@@ -4,7 +4,7 @@ title: Litmus Architecture
 sidebar_label: Architecture
 ---
 
-<hr></hr>
+<hr/>
 
 <img src={require('./assets/litmus-schematic.png').default} width="800" />
 
@@ -24,7 +24,7 @@ During installation, the following three CRDs are installed on the Kubernetes cl
 
 **Chaos-Experiments**
 
-Chaos Experiment is a CR and are available as YAML files on <a href="https://hub.litmuschaos.io" target="_blank">ChaosHub</a>.. For more details visit Chaos Hub [documentation](chaoshub.md).
+Chaos Experiment is a CR and are available as YAML files on <a href="https://hub.litmuschaos.io" target="_blank">Chaos Hub</a>. For more details visit Chaos Hub [documentation](chaoshub.md).
 
 **Chaos-Engine**
 

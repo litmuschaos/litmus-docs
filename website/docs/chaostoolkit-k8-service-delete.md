@@ -25,7 +25,7 @@ sidebar_label: Application Service
 ## Prerequisites
 
 - Ensure that the Litmus ChaosOperator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `k8-pod-delete` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/k8-service-kill/experiment.yaml)
+- Ensure that the `k8-pod-delete` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/k8-service-kill/experiment.yaml)
 - Ensure you have nginx default application setup on default namespace ( if you are using specific namespace please execute below on that namespace)
 
 ## Entry Criteria
@@ -56,13 +56,13 @@ sidebar_label: Application Service
   <tr>
     <td> ChaosToolKit </td>
     <td> ChaosToolKit Micro Service delete with count validation </td>
-    <td> Executing via Custom label name app={"<>"} </td>
+    <td> Executing via Custom label name app=&lt;&gt; </td>
     <td> service-app-kill-count.json </td>
   </tr>
   <tr>
     <td> ChaosToolKit </td>
     <td> ChaosToolKit Micro Service delete with health validation</td>
-    <td> Executing via Custom label name {"<"}custom{">"}={"<"}custom{">"} </td>
+    <td> Executing via Custom label name &lt;custom&gt;=&lt;&gt; </td>
     <td> service-app-kill-health.json </td>
   </tr>
 </table>
@@ -85,7 +85,7 @@ sidebar_label: Application Service
 
 ### Sample Rbac Manifest for Service Owner use case
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/k8-pod-delete/Service/rbac.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/k8-pod-delete/Service/rbac.yaml yaml"
 
 ```yaml
 ---
@@ -96,6 +96,7 @@ metadata:
   namespace: default
   labels:
     name: k8-pod-delete-sa
+    app.kubernetes.io/part-of: litmus
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -104,19 +105,25 @@ metadata:
   namespace: default
   labels:
     name: k8-pod-delete-sa
+    app.kubernetes.io/part-of: litmus
 rules:
-  - apiGroups: ["", "litmuschaos.io", "batch", "apps"]
+  - apiGroups: ["", "apps", "batch"]
+    resources: ["jobs", "deployments", "daemonsets"]
+    verbs: ["create", "list", "get", "patch", "delete"]
+  - apiGroups: ["", "litmuschaos.io"]
     resources:
       [
         "pods",
-        "deployments",
-        "jobs",
         "configmaps",
+        "events",
+        "services",
         "chaosengines",
         "chaosexperiments",
         "chaosresults",
+        "deployments",
+        "jobs",
       ]
-    verbs: ["create", "list", "get", "patch", "update", "delete"]
+    verbs: ["get", "create", "update", "patch", "delete", "list"]
   - apiGroups: [""]
     resources: ["nodes"]
     verbs: ["get", "list"]
@@ -128,6 +135,7 @@ metadata:
   namespace: default
   labels:
     name: k8-pod-delete-sa
+    app.kubernetes.io/part-of: litmus
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -208,7 +216,7 @@ subjects:
 
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/k8-pod-delete/Service/engine-custom-health.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/k8-pod-delete/Service/engine-custom-health.yaml yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1

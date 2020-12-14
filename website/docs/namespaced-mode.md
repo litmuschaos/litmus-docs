@@ -1,7 +1,7 @@
 ---
-id: "namespaced-mode"
-title: "Namespaced Mode"
-sidebar_label: "Namespaced Mode"
+id: namespaced-mode
+title: Namespaced Mode
+sidebar_label: Namespaced Mode
 ---
 
 ---

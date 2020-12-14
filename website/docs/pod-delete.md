@@ -1,7 +1,7 @@
 ---
-id: "pod-delete"
-title: "Pod Delete Experiment Details"
-sidebar_label: "Pod Delete"
+id: pod-delete
+title: Pod Delete Experiment Details
+sidebar_label: Pod Delete
 ---
 
 ---
@@ -17,14 +17,14 @@ sidebar_label: "Pod Delete"
   <tr>
     <td> Generic </td>
     <td> Fail the application pod </td>
-    <td> GKE, Konvoy(AWS), Packet(Kubeadm), Minikube, EKS, AKS </td>
+    <td> GKE, Konvoy(AWS), Packet(Kubeadm), Minikube, EKS, AKS, TKGi(VMware) </td>
   </tr>
 </table>
 
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`).If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `pod-delete` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/generic/pod-delete/experiment.yaml)
+- Ensure that the `pod-delete` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/pod-delete/experiment.yaml)
 
 ## Entry Criteria
 
@@ -58,7 +58,7 @@ sidebar_label: "Pod Delete"
 
 #### Sample Rbac Manifest for litmus LIB
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-delete/rbac.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/pod-delete/rbac.yaml yaml"
 
 ```yaml
 ---
@@ -115,7 +115,7 @@ subjects:
 
 #### Sample Rbac Manifest for powerfulseal LIB
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-delete/powerfulseal_rbac.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/pod-delete/powerfulseal_rbac.yaml yaml"
 
 ```yaml
 ---
@@ -168,6 +168,8 @@ subjects:
     namespace: default
 ```
 
+**_Note:_** In case of restricted systems/setup, create a PodSecurityPolicy(psp) with the required permissions. The `chaosServiceAccount` can subscribe to work around the respective limitations. An example of a standard psp that can be used for litmus chaos experiments can be found [here](https://docs.litmuschaos.io/docs/next/litmus-psp/).
+
 ### Prepare ChaosEngine
 
 - Provide the application info in `spec.appinfo`
@@ -208,11 +210,11 @@ subjects:
     <td> Default to `true`, With `terminationGracePeriodSeconds=0`  </td>
   </tr>
   <tr>
-    <td> TARGET_POD </td>
-    <td> Name of the application pod subjected to pod delete chaos</td>
+    <td> TARGET_PODS </td>
+    <td> Comma separated list of application pod name subjected to pod delete chaos</td>
     <td> Optional </td>
-    <td> If not provided it will select from the appLabel provided</td>
-  </tr>  
+    <td> If not provided, it will select target pods randomly based on provided appLabels</td>
+  </tr> 
   <tr>
     <td> PODS_AFFECTED_PERC </td>
     <td> The Percentage of total pods to target  </td>
@@ -235,13 +237,13 @@ subjects:
     <td> INSTANCE_ID </td>
     <td> A user-defined string that holds metadata/info about current run/instance of chaos. Ex: 04-05-2020-9-00. This string is appended as suffix in the chaosresult CR name.</td>
     <td> Optional  </td>
-    <td> Ensure that the overall length of the chaosresult CR is still {"<"} 64 characters </td>
+    <td> Ensure that the overall length of the chaosresult CR is still &lt; 64 characters </td>
   </tr>
 </table>
 
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-delete/engine.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/pod-delete/engine.yaml yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1

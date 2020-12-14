@@ -43,8 +43,8 @@ module.exports = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   favicon: "img/favicon.ico",
-  organizationName: "litmuschaos", // Usually your GitHub org/user name.
-  projectName: "litmus", // Usually your repo name.
+  organizationName: "litmuschaos",
+  projectName: "litmus",
   themeConfig: {
     navbar: {
       title: "Litmus Docs",
@@ -96,8 +96,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl: "https://github.com/litmuschaos/litmus",
+          editUrl: "https://github.com/litmuschaos/litmus-docs/edit/staging/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),

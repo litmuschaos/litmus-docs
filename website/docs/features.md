@@ -1,7 +1,7 @@
 ---
-id: "features"
-title: "Litmus Features"
-sidebar_label: "Features"
+id: features
+title: Litmus Features
+sidebar_label: Features
 ---
 
 ---
