@@ -1,3 +1,4 @@
+const versions = require("./versions.json");
 const communities = [
   {
     label: "Slack",
@@ -55,6 +56,27 @@ module.exports = {
       },
       items: [
         {
+          activeBasePath: "docs",
+          label: "Docs",
+          position: "left",
+          items: [
+            // adding items will create a dropdown
+            {
+              label: versions[0],
+              to: "docs/getstarted",
+              activeBaseRegex: `docs/(?!${versions.join("|")}|next)`,
+            },
+            ...versions.slice(1).map((version) => ({
+              label: version,
+              to: `docs/${version}/getstarted`,
+            })),
+            {
+              label: "Master/Unreleased",
+              to: "docs/next/getstarted",
+            },
+          ],
+        },
+        {
           href: "https://github.com/litmuschaos/litmus",
           label: "GitHub",
           position: "right",
@@ -95,8 +117,10 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
+          routeBasePath: "docs",
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/litmuschaos/litmus-docs/edit/staging/",
+          showLastUpdateTime: true,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),

@@ -6,27 +6,38 @@ module.exports = {
       "plugins",
       "architecture",
       "resources",
-      "community",
       "devguide",
+      {
+        Platforms: [
+          {
+            type: "category",
+            label: "OpenShift",
+            items: ["openshift-litmus"],
+          },
+          {
+            type: "category",
+            label: "Rancher",
+            items: ["rancher-litmus"],
+          },
+        ],
+      },
     ],
     "Litmus Demo": ["litmus-demo"],
     Concepts: [
-      "chaosengine",
-      "chaosexperiment",
-      "chaosschedule",
-      "chaosresult",
-      "litmus-probe",
-    ],
-    Platforms: [
       {
         type: "category",
-        label: "OpenShift",
-        items: ["openshift-litmus"],
+        label: "Custom Resources",
+        items: [
+          "chaosengine",
+          "chaosexperiment",
+          "chaosschedule",
+          "chaosresult",
+        ],
       },
       {
         type: "category",
-        label: "Rancher",
-        items: ["rancher-litmus"],
+        label: "Hypothesis",
+        items: ["litmus-probe"],
       },
     ],
     Experiments: [
@@ -114,7 +125,8 @@ module.exports = {
     ],
     Scheduler: ["scheduling"],
     "Chaos Workflow": ["chaos-workflows"],
-    "Litmus FAQs": ["faq-general", "faq-troubleshooting"],
+    FAQs: ["faq-general"],
+    Troubleshooting: ["faq-troubleshooting"],
     Advanced: ["admin-mode", "namespaced-mode", "litmus-psp"],
   },
 };
