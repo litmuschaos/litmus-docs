@@ -24,7 +24,7 @@ sidebar_label: Node Taint
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `node-taint` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/node-taint/experiment.yaml)
+- Ensure that the `node-taint` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/node-taint/experiment.yaml)
 - Ensure that the node specified in the experiment ENV variable `TARGET_NODE` (the node which will be tainted) should be cordoned before execution of the chaos experiment (before applying the chaosengine manifest) to ensure that the litmus experiment runner pods are not scheduled on it / subjected to eviction. This can be achieved with the following steps:
 
   - Get node names against the applications pods: `kubectl get pods -o wide`
@@ -62,7 +62,7 @@ Use this sample RBAC manifest to create a chaosServiceAccount in the desired (ap
 
 #### Sample Rbac Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/node-taint/rbac.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/node-taint/rbac.yaml yaml"
 
 ```yaml
 ---
@@ -91,6 +91,7 @@ rules:
         "events",
         "chaosengines",
         "pods/log",
+        "pods/exec",
         "daemonsets",
         "pods/eviction",
         "chaosexperiments",
@@ -177,7 +178,7 @@ subjects:
                       
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/node-taint/engine.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/node-taint/engine.yaml yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1

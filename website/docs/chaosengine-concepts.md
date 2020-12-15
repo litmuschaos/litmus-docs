@@ -56,7 +56,7 @@ This section describes the fields in the ChaosEngine spec and the possible value
 </tr>
 <tr>
   <th>Type</th>
-  <td>Mandatory</td>
+  <td>Optional</td>
 </tr>
 <tr>
   <th>Range</th>
@@ -68,7 +68,7 @@ This section describes the fields in the ChaosEngine spec and the possible value
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>appns</code> in the spec specifies the namespace of the AUT. Usually provided as a quoted string.</td>
+  <td>The <code>appns</code> in the spec specifies the namespace of the AUT. Usually provided as a quoted string. It is optional for the infra chaos.</td>
 </tr>
 </table>
 
@@ -83,7 +83,7 @@ This section describes the fields in the ChaosEngine spec and the possible value
 </tr>
 <tr>
   <th>Type</th>
-  <td>Mandatory</td>
+  <td>Optional</td>
 </tr>
 <tr>
   <th>Range</th>
@@ -95,7 +95,7 @@ This section describes the fields in the ChaosEngine spec and the possible value
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>applabel</code> in the spec specifies a unique label of the AUT. Usually provided as a quoted string of pattern key=value. Note that if multiple applications share the same label within a given namespace, the AUT is filtered based on the presence of the chaos annotation <code>litmuschaos.io/chaos: "true"</code>. If, however, the <code>annotationCheck</code> is disabled, then a random application (pod) sharing the specified label is selected for chaos.</td>
+  <td>The <code>applabel</code> in the spec specifies a unique label of the AUT. Usually provided as a quoted string of pattern key=value. Note that if multiple applications share the same label within a given namespace, the AUT is filtered based on the presence of the chaos annotation <code>litmuschaos.io/chaos: "true"</code>. If, however, the <code>annotationCheck</code> is disabled, then a random application (pod) sharing the specified label is selected for chaos. It is optional for the infra chaos.</td>
 </tr>
 </table>
 
@@ -110,7 +110,7 @@ This section describes the fields in the ChaosEngine spec and the possible value
 </tr>
 <tr>
   <th>Type</th>
-  <td>Mandatory</td>
+  <td>Optional</td>
 </tr>
 <tr>
   <th>Range</th>
@@ -122,7 +122,7 @@ This section describes the fields in the ChaosEngine spec and the possible value
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>appkind</code> in the spec specifies the Kubernetes resource type of the app deployment. The Litmus ChaosOperator supports chaos on deployments, statefulsets and daemonsets. Application health check routines are dependent on the resource types, in case of some experiments.</td>
+  <td>The <code>appkind</code> in the spec specifies the Kubernetes resource type of the app deployment. The Litmus ChaosOperator supports chaos on deployments, statefulsets and daemonsets. Application health check routines are dependent on the resource types, in case of some experiments. It is optional for the infra chaos</td>
 </tr>
 </table>
 
@@ -515,6 +515,33 @@ This section describes the fields in the ChaosEngine spec and the possible value
 <table>
 <tr>
   <th>Field</th>
+  <td><code>.spec.components.runner.resources</code></td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>Specify the resource requirements for the ChaosRunner pod</td>
+</tr>
+<tr>
+  <th>Type</th>
+  <td>Optional</td>
+</tr>
+<tr>
+  <th>Range</th>
+<td><i>user-defined</i> (type: corev1.ResourceRequirements)</td>
+</tr>
+<tr>
+  <th>Default</th>
+  <td><i>n/a</i></td>
+</tr>
+<tr>
+  <th>Notes</th>
+  <td>The <code>.spec.components.runner.resources</code> contains the resource requirements for the ChaosRunner Pod, where we can provide resource requests and limits for the pod.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+  <th>Field</th>
   <td><code>.spec.components.runner.tolerations</code></td>
 </tr>
 <tr>
@@ -861,6 +888,6 @@ This section describes the fields in the ChaosEngine spec and the possible value
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>.probe</code> allows developers to specify the chaos hypothesis. It supports three types: <code>cmdProbe</code>, <code>k8sProbe</code>, <code>httpProbe</code>. For more details <a href="https://docs.litmuschaos.io/docs/litmus-probe/">refer</a></td>
+  <td>The <code>.probe</code> allows developers to specify the chaos hypothesis. It supports four types: <code>cmdProbe</code>, <code>k8sProbe</code>, <code>httpProbe</code>, <code>promProbe</code>. For more details <a href="https://docs.litmuschaos.io/docs/litmus-probe/">refer</a></td>
 </tr>
 </table>

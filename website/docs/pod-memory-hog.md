@@ -24,7 +24,7 @@ sidebar_label: Pod Memory Hog
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `pod-memory-hog` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/pod-memory-hog/experiment.yaml)
+- Ensure that the `pod-memory-hog` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/pod-memory-hog/experiment.yaml)
 - Cluster must run docker container runtime
 
 ## Entry Criteria
@@ -56,7 +56,7 @@ Use this sample RBAC manifest to create a chaosServiceAccount in the desired (ap
 
 #### Sample Rbac Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/pod-memory-hog/rbac.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-memory-hog/rbac.yaml yaml"
 
 ```yaml
 ---
@@ -175,7 +175,7 @@ subjects:
     <td> PODS_AFFECTED_PERC </td>
     <td> The Percentage of total pods to target  </td>
     <td> Optional </td>
-    <td> Defaults to 0% (corresponds to 1 replica) </td>
+    <td> Defaults to 0 (corresponds to 1 replica), provide numeric value only </td>
   </tr>  
   <tr>
     <td> RAMP_TIME </td>
@@ -200,7 +200,7 @@ subjects:
 
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/pod-memory-hog/engine.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-memory-hog/engine.yaml yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1
@@ -213,8 +213,6 @@ spec:
   annotationCheck: "true"
   # It can be active/stop
   engineState: "active"
-  #ex. values: ns1:name=percona,ns2:run=nginx
-  auxiliaryAppInfo: ""
   appinfo:
     appns: "default"
     applabel: "app=nginx"

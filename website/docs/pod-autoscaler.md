@@ -24,7 +24,7 @@ sidebar_label: Pod Autoscaler
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `pod-autoscaler` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/pod-autoscaler/experiment.yaml)
+- Ensure that the `pod-autoscaler` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/pod-autoscaler/experiment.yaml)
 
 ## Entry Criteria
 
@@ -57,7 +57,7 @@ sidebar_label: Pod Autoscaler
 
 #### Sample Rbac Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/pod-autoscaler/rbac.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-autoscaler/rbac.yaml yaml"
 
 ```yaml
 ---
@@ -87,6 +87,7 @@ rules:
         "events",
         "chaosengines",
         "pods/log",
+        "pods/exec",
         "chaosexperiments",
         "chaosresults",
       ]
@@ -164,7 +165,7 @@ subjects:
 
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/pod-autoscaler/engine.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-autoscaler/engine.yaml yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1

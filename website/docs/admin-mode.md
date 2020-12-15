@@ -24,7 +24,7 @@ Provide this ServiceAccount in ChaosEngine's .spec.chaosServiceAccount.
 - Select Chaos Experiment from [hub.litmuschaos.io](https://hub.litmuschaos.io/) and click on `INSTALL EXPERIMENT` button.
 
 ```bash
-kubectl apply -f https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/pod-delete/experiment.yaml -n litmus
+kubectl apply -f https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/pod-delete/experiment.yaml -n litmus
 ```
 
 #### Prepare RBAC Manifest

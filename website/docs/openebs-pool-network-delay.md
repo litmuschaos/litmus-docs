@@ -29,7 +29,7 @@ sidebar_label: Pool Network Latency
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
 
-- - Ensure that the `openebs-pool-network-delay` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the specificed namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/openebs/openebs-pool-network-delay/experiment.yaml)
+- - Ensure that the `openebs-pool-network-delay` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the specificed namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/openebs/openebs-pool-network-delay/experiment.yaml)
 
 - The DATA_PERSISTENCE can be enabled by provide the application's info in a configmap volume so that the experiment can perform necessary checks. Currently, LitmusChaos supports data consistency checks only for `MySQL` and `Busybox`.
 
@@ -104,7 +104,7 @@ Use this sample RBAC manifest to create a chaosServiceAccount in the desired (ap
 
 #### Sample Rbac Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/openebs/openebs-pool-network-delay/rbac.yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/openebs/openebs-pool-network-delay/rbac.yaml"
 
 ```yaml
 apiVersion: v1
@@ -175,7 +175,7 @@ subjects:
 - Provide the application info in `spec.appinfo`
 - Provide the auxiliary applications info (ns & labels) in `spec.auxiliaryAppInfo`
 - Override the experiment tunables if desired in `experiments.spec.components.env`
-- Provide the configMaps and secrets in `experiments.spec.components.configMaps/secrets`, For more info refer [Sample ChaosEngine](https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/openebs/sample_openebs_engine_with_data_persistency_enabled.yaml)
+- Provide the configMaps and secrets in `experiments.spec.components.configMaps/secrets`, For more info refer [Sample ChaosEngine](https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/openebs/sample_openebs_engine_with_data_persistency_enabled.yaml)
 - To understand the values to provided in a ChaosEngine specification, refer [ChaosEngine Concepts](chaosengine-concepts.md)
 
 #### Supported Experiment Tunables
@@ -234,7 +234,7 @@ subjects:
 
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/openebs/openebs-pool-network-delay/engine.yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/openebs/openebs-pool-network-delay/engine.yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1

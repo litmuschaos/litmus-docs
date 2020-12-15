@@ -173,10 +173,7 @@ This section describes the fields in the ChaosSchedule spec and the possible val
 </tr>
 <tr>
   <th>Notes</th>
-  <td> The <code>includedDays</code> in the spec specifies a (comma-separated) list
-  of days of the week at which chaos is allowed to take place. {'{'}day_name{'}'} is to
-  be specified with the first 3 letters of the name of day such as
-  <code>Mon</code>, <code>Tue</code> etc.</td>
+  <td> The <code>includedDays</code> in the spec specifies a (comma-separated) list of days of the week at which chaos is allowed to take place. {'{'}day_name{'}'} is to be specified with the first 3 letters of the name of day such as <code>Mon</code>, <code>Tue</code> etc.</td>
 </tr>
 </table>
 

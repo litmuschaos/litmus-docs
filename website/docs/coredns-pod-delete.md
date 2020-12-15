@@ -24,7 +24,7 @@ sidebar_label: CoreDNS Pod Delete
 ## Prerequisites
 
 - Ensure that the Litmus ChaosOperator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `coredns-pod-delete` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/coredns/coredns-pod-delete/experiment.yaml)
+- Ensure that the `coredns-pod-delete` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/coredns/coredns-pod-delete/experiment.yaml)
 
 ## Entry Criteria
 
@@ -58,7 +58,7 @@ sidebar_label: CoreDNS Pod Delete
 
 ### Sample Rbac Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/coredns/coredns-pod-delete/rbac.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/coredns/coredns-pod-delete/rbac.yaml yaml"
 
 ```yaml
 apiVersion: v1
@@ -174,7 +174,7 @@ subjects:
 
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/coredns/coredns-pod-delete/engine.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/coredns/coredns-pod-delete/engine.yaml yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1

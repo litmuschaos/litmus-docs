@@ -24,7 +24,7 @@ sidebar_label: ChaosToolKit AWS EC2 Terminate
 ## Prerequisites
 
 - Ensure that the Litmus ChaosOperator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `aws-ec2-terminate` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/kube-aws/k8-aws-ec2-terminate/experiment.yaml)
+- Ensure that the `aws-ec2-terminate` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/kube-aws/k8-aws-ec2-terminate/experiment.yaml)
 - Ensure you have nginx default application setup on default namespace ( if you are using specific namespace please execute below on that namespace)
 
 ## Entry Criteria
@@ -78,7 +78,7 @@ sidebar_label: ChaosToolKit AWS EC2 Terminate
 
 ### Sample Rbac Manifest for Service Owner use case
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/kube-aws/k8-aws-ec2-terminate/rbac.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/kube-aws/k8-aws-ec2-terminate/rbac.yaml yaml"
 
 ```yaml
 apiVersion: v1
@@ -275,7 +275,7 @@ subjects:
 
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/kube-aws/k8-aws-ec2-terminate/engine.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/kube-aws/k8-aws-ec2-terminate/engine.yaml yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1

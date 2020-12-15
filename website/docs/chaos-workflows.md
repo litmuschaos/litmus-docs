@@ -86,7 +86,7 @@ kubectl apply -f https://hub.litmuschaos.io/api/chaos/master?file=charts/generic
 
 - **Note**: If you are interested in using chaostoolkit to perform the pod-delete, instead of the native litmus lib, you can apply
   this [rbac](https://github.com/litmuschaos/chaos-charts/tree/master/charts/generic/k8-pod-delete/Cluster/rbac-admin.yaml)
-  & [experiment](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/k8-pod-delete/experiment.yaml) manifests instead
+  & [experiment](https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/k8-pod-delete/experiment.yaml) manifests instead
   of the ones described above.
 
 - Create the service account and associated RBAC, which will be used by the Argo workflow controller to execute the

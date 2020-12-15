@@ -33,7 +33,7 @@ sidebar_label: Broker Disk Failure
 
   Zookeeper uses this to construct a path in which kafka cluster data is stored.
 
-- Ensure that the kafka-broker-disk failure experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/kafka/kafka-broker-disk-failure/experiment.yaml)
+- Ensure that the kafka-broker-disk failure experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/kafka/kafka-broker-disk-failure/experiment.yaml)
 
 - Create a secret with the gcloud serviceaccount key (placed in a file `cloud_config.yml`) named `kafka-broker-disk-failure` in the namespace where the experiment CRs are created. This is necessary to perform the disk-detach steps from the litmus experiment container.
 
@@ -71,7 +71,7 @@ sidebar_label: Broker Disk Failure
 
 #### Sample Rbac Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/kafka/kafka-broker-disk-failure/rbac.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/kafka/kafka-broker-disk-failure/rbac.yaml yaml"
 
 ```yaml
 ---
@@ -271,7 +271,7 @@ subjects:
 
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/kafka/kafka-broker-disk-failure/engine.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/kafka/kafka-broker-disk-failure/engine.yaml yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1

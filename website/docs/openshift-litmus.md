@@ -100,7 +100,7 @@ The generic chaos experiments such as `pod-delete`, `container-kill`,` pod-netwo
 This is the first chart you are recommended to install.
 
 ```
-oc apply -f https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/experiments.yaml -n nginx
+oc apply -f https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/experiments.yaml -n nginx
 ```
 
 Verify if the chaos experiments are installed.
@@ -119,7 +119,7 @@ has just enough permissions needed to run the pod-delete chaos experiment.
 
 - For rbac samples corresponding to other experiments such as, say, container-kill, please refer the respective experiment folder in the [chaos-charts](https://github.com/litmuschaos/chaos-charts/tree/master/charts/generic/container-kill) repository.
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/pod-delete/rbac_nginx_getstarted.yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-delete/rbac_nginx_getstarted.yaml"
 
 ```yaml
 ---
@@ -145,6 +145,7 @@ rules:
         "pods",
         "deployments",
         "pods/log",
+        "pods/exec",
         "events",
         "jobs",
         "chaosengines",

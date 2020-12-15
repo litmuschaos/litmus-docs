@@ -24,7 +24,7 @@ sidebar_label: Container Kill
 ## Prerequisites
 
 - Ensure that the Litmus ChaosOperator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `container-kill` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/container-kill/experiment.yaml)
+- Ensure that the `container-kill` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/container-kill/experiment.yaml)
 
 ## Entry Criteria
 
@@ -36,20 +36,22 @@ sidebar_label: Container Kill
 
 ## Details
 
-- litmus lib in docker runtime details
-  - It can kill the container of multiple pods in parallel (can be tuned by `PODS_AFFECTED_PERC` env). It kill the container by sending SIGKILL termination signal to its docker socket (hence docker runtime is required)
+- litmus LIB Details:
+  - It supports docker, containerd and crio container runtime.
+  - It can kill the container of multiple pods in parallel (can be tuned by `PODS_AFFECTED_PERC` env).
+  - Containers are killed using the `docker kill` in docker runtime and `crictl stop` command in containerd or crio runtime.
+  - container-kill is run as a pod on the application node. It have ability to kill the application containers multiple times. Which can be varied by `TOTAL_CHAOS_DURATION` and `CHAOS_INTERVAL`.
+- pumba LIB Details:
+  - It support only docker container runtime.
+  - It can kill the container of multiple pods in parallel (can be tuned by `PODS_AFFECTED_PERC` env). It kill the container by sending SIGKILL termination signal to its docker socket (hence docker runtime is required).
   - Containers are killed using the `kill` command provided by [pumba](https://github.com/alexei-led/pumba)
   - Pumba is run as a pod on the application node. It have ability to kill the application containers multiple times. Which can be varied by `TOTAL_CHAOS_DURATION` and `CHAOS_INTERVAL`.
-- litmus chaoslib in containerd and crio runtime codetails
-  - It can kill the container of multiple pods in parallel (can be tuned by `PODS_AFFECTED_PERC` env).
-  - Containers are killed using the `crictl stop` command.
-  - container-kill is run as a pod on the application node. It have ability to kill the application containers multiple times. Which can be varied by `TOTAL_CHAOS_DURATION` and `CHAOS_INTERVAL`.
 - Tests deployment sanity (replica availability & uninterrupted service) and recovery workflow of the application
 - Good for testing recovery of pods having side-car containers
 
 ## Integrations
 
-- Container kill is achieved using the `litmus` chaos library
+- Container kill supports `litmus` and `pumba` LIB.
 - The container runtime can be choose via setting `CONTAINER_RUNTIME` env. supported values: `docker`, `containerd`, `crio`
 - The desired pumba and litmus image can be configured in the env variable `LIB_IMAGE`.
 
@@ -65,7 +67,7 @@ sidebar_label: Container Kill
 
 #### Sample RBAC Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/container-kill/rbac.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/container-kill/rbac.yaml yaml"
 
 ```yaml
 ---
@@ -161,7 +163,7 @@ subjects:
     <td> PODS_AFFECTED_PERC </td>
     <td> The Percentage of total pods to target  </td>
     <td> Optional </td>
-    <td> Defaults to 0% (corresponds to 1 replica) </td>
+    <td> Defaults to 0 (corresponds to 1 replica), provide numeric value only </td>
   </tr>  
   <tr>
     <td> TARGET_PODS </td>
@@ -179,7 +181,7 @@ subjects:
     <td> LIB  </td>
     <td> The category of lib use to inject chaos </td>
     <td> Optional  </td>
-    <td> Default value: litmus, only litmus supported </td>
+    <td> Default value: litmus, supported values: pumba and litmus </td>
   </tr>
   <tr>
     <td> RAMP_TIME </td>
@@ -195,15 +197,15 @@ subjects:
   </tr>
   <tr>
     <td> SOCKET_PATH </td>
-    <td> Path of the containerd/crio socket file </td>
+    <td> Path of the containerd/crio/docker socket file </td>
     <td> Optional  </td>
-    <td> Defaults to `/run/containerd/containerd.sock` </td>
+    <td> Defaults to `/var/run/docker.sock` </td>
   </tr>
   <tr>
     <td> CONTAINER_RUNTIME  </td>
     <td> container runtime interface for the cluster</td>
     <td> Optional </td>
-    <td>  Defaults to docker, supported values: docker, containerd, crio </td>
+    <td>  Defaults to docker, supported values: docker, containerd and crio for litmus and only docker for pumba LIB </td>
   </tr>
   <tr>
     <td> INSTANCE_ID </td>
@@ -215,7 +217,7 @@ subjects:
 
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/container-kill/engine.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/container-kill/engine.yaml yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1
@@ -228,8 +230,6 @@ spec:
   annotationCheck: "true"
   # It can be active/stop
   engineState: "active"
-  #ex. values: ns1:name=percona,ns2:run=nginx
-  auxiliaryAppInfo: ""
   appinfo:
     appns: "default"
     applabel: "app=nginx"
@@ -243,10 +243,6 @@ spec:
       spec:
         components:
           env:
-            # specify the name of the container to be killed
-            - name: TARGET_CONTAINER
-              value: "nginx"
-
             # provide the chaos interval
             - name: CHAOS_INTERVAL
               value: "10"
@@ -256,15 +252,14 @@ spec:
               value: "20"
 
             # provide the name of container runtime
-            # it supports docker, containerd, crio
-            # default to docker
+            # for litmus LIB, it supports docker, containerd, crio
+            # for pumba LIB, it supports docker only
             - name: CONTAINER_RUNTIME
               value: "docker"
 
             # provide the socket file path
-            # applicable only for containerd runtime
             - name: SOCKET_PATH
-              value: "/run/containerd/containerd.sock"
+              value: "/var/run/docker.sock"
 ```
 
 ### Create the ChaosEngine Resource

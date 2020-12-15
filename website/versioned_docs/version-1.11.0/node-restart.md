@@ -25,7 +25,7 @@ original_id: node-restart
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `node-restart` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/node-restart/experiment.yaml)
+- Ensure that the `node-restart` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.11.0?file=charts/generic/node-restart/experiment.yaml)
 - Create a Kubernetes secret having the private SSH key for `SSH_USER` used to connect to `TARGET_NODE`. The name of secret should be `id-rsa` along with private SSH key data, named `ssh-privatekey`. A sample secret example is given below:
 
 ```yaml
@@ -70,7 +70,7 @@ stringData:
 
 #### Sample Rbac Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/node-restart/rbac.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.11.x/charts/generic/node-restart/rbac.yaml yaml"
 
 ```yaml
 ---
@@ -100,6 +100,7 @@ rules:
         "events",
         "chaosengines",
         "pods/log",
+        "pods/exec",
         "chaosexperiments",
         "chaosresults",
       ]
@@ -126,6 +127,8 @@ subjects:
     namespace: default
 ```
 
+**_Note:_** In case of restricted systems/setup, create a PodSecurityPolicy(psp) with the required permissions. The `chaosServiceAccount` can subscribe to work around the respective limitations. An example of a standard psp that can be used for litmus chaos experiments can be found [here](https://docs.litmuschaos.io/docs/next/litmus-psp/).
+
 ### Prepare ChaosEngine
 
 - Provide the application info in `spec.appinfo`
@@ -146,7 +149,7 @@ subjects:
     <td> LIB_IMAGE  </td>
     <td> The image used to restart the node </td>
     <td> Optional </td>
-    <td> Defaults to `litmuschaos/go-runner:latest` </td>
+    <td> Defaults to `litmuschaos/go-runner:1.11.0` </td>
   </tr>
   <tr>
     <td> SSH_USER  </td>
@@ -194,7 +197,7 @@ subjects:
     <td> LIB_IMAGE  </td>
     <td> The image used to restart the node </td>
     <td> Optional </td>
-    <td> Defaults to `litmuschaos/go-runner:latest` </td>
+    <td> Defaults to `litmuschaos/go-runner:1.11.0` </td>
   </tr>
   <tr>
     <td> INSTANCE_ID </td>
@@ -207,7 +210,7 @@ subjects:
 
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/node-restart/engine.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.11.x/charts/generic/node-restart/engine.yaml yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1

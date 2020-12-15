@@ -25,7 +25,7 @@ sidebar_label: Control Plane Chaos
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
 
-- Ensure that the `openebs-control-plane-chaos` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the `openebs` namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/openebs/openebs-control-plane-chaos/experiment.yaml)
+- Ensure that the `openebs-control-plane-chaos` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the `openebs` namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/openebs/openebs-control-plane-chaos/experiment.yaml)
 
 ## Entry Criteria
 
@@ -64,7 +64,7 @@ Use this sample RBAC manifest to create a chaosServiceAccount in the desired (op
 
 #### Sample Rbac Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/openebs/openebs-control-plane-chaos/rbac.yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/openebs/openebs-control-plane-chaos/rbac.yaml"
 
 ```yaml
 ---
@@ -154,7 +154,7 @@ subjects:
 
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/openebs/openebs-control-plane-chaos/engine.yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/openebs/openebs-control-plane-chaos/engine.yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1

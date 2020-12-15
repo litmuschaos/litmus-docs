@@ -24,13 +24,8 @@ sidebar_label: Pod Network Corruption
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `pod-network-corruption` experiment resource is available in the cluster by `kubectl get chaosexperiments` command. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/generic/pod-network-corruption/experiment.yaml)
+- Ensure that the `pod-network-corruption` experiment resource is available in the cluster by `kubectl get chaosexperiments` command. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/pod-network-corruption/experiment.yaml)
 - Cluster must run docker container runtime
-
-<div class="danger">
-    <strong>NOTE</strong>: 
-        Experiment is supported only on Docker Runtime. Support for containerd/CRIO runtimes will be added in subsequent releases.
-</div>
 
 ## Entry Criteria
 
@@ -59,7 +54,7 @@ sidebar_label: Pod Network Corruption
 
 #### Sample Rbac Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/pod-network-corruption/rbac.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-network-corruption/rbac.yaml yaml"
 
 ```yaml
 ---
@@ -88,6 +83,7 @@ rules:
         "jobs",
         "events",
         "pods/log",
+        "pods/exec",
         "chaosengines",
         "chaosexperiments",
         "chaosresults",
@@ -152,13 +148,13 @@ subjects:
     <td> CONTAINER_RUNTIME  </td>
     <td> container runtime interface for the cluster</td>
     <td> Optional </td>
-    <td>  Defaults to docker, supported values: docker, containerd, crio </td>
+    <td> Defaults to docker, supported values: docker, containerd and crio for litmus and only docker for pumba LIB </td>
   </tr>
   <tr>
     <td> SOCKET_PATH </td>
-    <td> Path of the containerd/crio socket file </td>
+    <td> Path of the containerd/crio/docker socket file </td>
     <td> Optional  </td>
-    <td> Defaults to `/run/containerd/containerd.sock` </td>
+    <td> Defaults to `/var/run/docker.sock` </td>
   </tr>
   <tr>
     <td> TOTAL_CHAOS_DURATION </td>
@@ -188,13 +184,13 @@ subjects:
     <td> PODS_AFFECTED_PERC </td>
     <td> The Percentage of total pods to target  </td>
     <td> Optional </td>
-    <td> Defaults to 0% (corresponds to 1 replica) </td>
+    <td> Defaults to 0 (corresponds to 1 replica), provide numeric value only </td>
   </tr> 
  <tr>
     <td> LIB </td>
     <td> The chaos lib used to inject the chaos </td>
     <td> Optional  </td>
-    <td> Defaults to litmus, only litmus supported </td>
+    <td> Default value: litmus, supported values: pumba and litmus </td>
   </tr>
   <tr>
     <td> TC_IMAGE </td>
@@ -231,7 +227,7 @@ subjects:
 
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/pod-network-corruption/engine.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-network-corruption/engine.yaml yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1
@@ -246,8 +242,6 @@ spec:
   annotationCheck: "true"
   # It can be active/stop
   engineState: "active"
-  #ex. values: ns1:name=percona,ns2:run=nginx
-  auxiliaryAppInfo: ""
   monitoring: false
   appinfo:
     appns: "default"
@@ -260,13 +254,6 @@ spec:
       spec:
         components:
           env:
-            #Container name where chaos has to be injected
-            - name: TARGET_CONTAINER
-              value: "nginx"
-
-            - name: LIB_IMAGE
-              value: "litmuschaos/go-runner:1.10.0"
-
             #Network interface inside target container
             - name: NETWORK_INTERFACE
               value: "eth0"
@@ -275,15 +262,14 @@ spec:
               value: "60" # in seconds
 
             # provide the name of container runtime
-            # it supports docker, containerd, crio
-            # default to docker
+            # for litmus LIB, it supports docker, containerd, crio
+            # for pumba LIB, it supports docker only
             - name: CONTAINER_RUNTIME
               value: "docker"
 
             # provide the socket file path
-            # applicable only for containerd and crio runtime
             - name: SOCKET_PATH
-              value: "/run/containerd/containerd.sock"
+              value: "/var/run/docker.sock"
 ```
 
 ### Create the ChaosEngine Resource

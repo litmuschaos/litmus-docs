@@ -24,7 +24,7 @@ sidebar_label: Broker Pod Failure
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `kafka-broker-pod-failure` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/kafka/kafka-broker-pod-failure/experiment.yaml)
+- Ensure that the `kafka-broker-pod-failure` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/kafka/kafka-broker-pod-failure/experiment.yaml)
 - Ensure that Kafka & Zookeeper are deployed as Statefulsets
 - If Confluent/Kudo Operators have been used to deploy Kafka, note the instance name, which will be
   used as the value of `KAFKA_INSTANCE_NAME` experiment environment variable
@@ -34,7 +34,7 @@ sidebar_label: Broker Pod Failure
 
   Zookeeper uses this to construct a path in which kafka cluster data is stored.
 
-- Ensure that the kafka-broker-disk failure experiment resource is available in the cluster. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.10.0?file=charts/kafka/kafka-broker-pod-failure/experiment.yaml)
+- Ensure that the kafka-broker-disk failure experiment resource is available in the cluster. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/kafka/kafka-broker-pod-failure/experiment.yaml)
 
 ## Entry Criteria
 
@@ -69,7 +69,7 @@ sidebar_label: Broker Pod Failure
 
 #### Sample Rbac Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/kafka/kafka-broker-pod-failure/rbac.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/kafka/kafka-broker-pod-failure/rbac.yaml yaml"
 
 ```yaml
 apiVersion: v1
@@ -266,7 +266,7 @@ subjects:
 
 #### Sample ChaosEngine Manifest
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/kafka/kafka-broker-pod-failure/engine.yaml yaml"
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/kafka/kafka-broker-pod-failure/engine.yaml yaml"
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1

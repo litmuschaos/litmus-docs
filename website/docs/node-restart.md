@@ -99,6 +99,7 @@ rules:
         "events",
         "chaosengines",
         "pods/log",
+        "pods/exec",
         "chaosexperiments",
         "chaosresults",
       ]
