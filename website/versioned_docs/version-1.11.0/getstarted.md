@@ -37,7 +37,7 @@ Running chaos on your application involves the following steps:
 Apply the LitmusChaos Operator manifest:
 
 ```
-kubectl apply -f https://litmuschaos.github.io/litmus/litmus-operator-v1.10.0.yaml
+kubectl apply -f https://litmuschaos.github.io/litmus/litmus-operator-v1.11.0.yaml
 ```
 
 The above command installs all the CRDs, required service account configuration, and chaos-operator.
@@ -317,7 +317,7 @@ kubectl delete chaosengine --all -n <namespace>
 ```
 
 ```console
-kubectl delete -f https://litmuschaos.github.io/litmus/litmus-operator-v1.10.0.yaml
+kubectl delete -f https://litmuschaos.github.io/litmus/litmus-operator-v1.11.0.yaml
 ```
 
 **NOTE**

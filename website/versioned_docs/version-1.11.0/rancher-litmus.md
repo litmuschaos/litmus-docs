@@ -70,7 +70,7 @@ The nginx default web site should be available now.
 
 Followed the steps in the [Getting Started Guide](https://docs.litmuschaos.io/docs/getstarted/)\* to install litmus in a `nginx` namespace with an nginx application.
 
-Download `litmus-operator-v1.10.0.yaml` from https://litmuschaos.github.io/litmus/litmus-operator-v1.10.0.yaml.
+Download `litmus-operator-v1.11.0.yaml` from https://litmuschaos.github.io/litmus/litmus-operator-v1.11.0.yaml.
 Modify it to use the `nginx` namespace in three places (at lines 10, 41, and 47 approximately).
 Install the litmus-operator in `nginx` application namespace using kubectl.
 

@@ -18,7 +18,7 @@ original_id: node-restart
   <tr>
     <td> Generic </td>
     <td> Restart the target node </td>
-    <td> GKE, EKS </td>
+    <td> Kubevirt VMs </td>
   </tr>
 </table>
 

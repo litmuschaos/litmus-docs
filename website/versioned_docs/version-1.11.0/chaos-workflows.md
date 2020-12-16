@@ -67,7 +67,7 @@ namespaces. Ensure that you have the right permission to be able to create the s
 - Apply the LitmusChaos Operator manifest:
 
   ```
-  kubectl apply -f https://litmuschaos.github.io/litmus/litmus-operator-v1.10.0.yaml
+  kubectl apply -f https://litmuschaos.github.io/litmus/litmus-operator-v1.11.0.yaml
   ```
 
 - Install the litmus-admin service account to be used by the chaos-operator while executing the experiment (this example
