@@ -39,6 +39,16 @@ module.exports = {
         label: "Hypothesis",
         items: ["litmus-probe"],
       },
+      {
+        type: "category",
+        label: "Operational Modes",
+        items: ["admin-mode", "namespaced-mode"],
+      },
+      {
+        type: "category",
+        label: "Security",
+        items: ["litmus-psp"],
+      },
     ],
     Experiments: [
       {
@@ -127,17 +137,5 @@ module.exports = {
     "Chaos Workflow": ["chaos-workflows"],
     FAQs: ["faq-general"],
     Troubleshooting: ["faq-troubleshooting"],
-    Advanced: [
-      {
-        type: "category",
-        label: "Operational Modes",
-        items: ["admin-mode", "namespaced-mode"],
-      },
-      {
-        type: "category",
-        label: "Security",
-        items: ["litmus-psp"],
-      },
-    ],
   },
 };

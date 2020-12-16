@@ -44,6 +44,14 @@
         "type": "category",
         "label": "Hypothesis",
         "items": ["version-1.10.0/litmus-probe"]
+      },
+      {
+        "type": "category",
+        "label": "Operational Modes",
+        "items": [
+          "version-1.10.0/admin-mode",
+      "version-1.10.0/namespaced-mode"
+        ]
       }
     ],
     "Experiments": [
@@ -148,16 +156,6 @@
     "FAQs": [
       "version-1.10.0/faq-general"
     ],
-    "Troubleshooting":["version-1.10.0/faq-troubleshooting"],
-    "Advanced": [
-      {
-        "type": "category",
-        "label": "Operational Modes",
-        "items": [
-          "version-1.10.0/admin-mode",
-      "version-1.10.0/namespaced-mode"
-        ]
-      }
-    ]
+    "Troubleshooting":["version-1.10.0/faq-troubleshooting"]
   }
 }

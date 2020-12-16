@@ -44,7 +44,20 @@
         "type": "category",
         "label": "Hypothesis",
         "items": ["version-1.11.0/litmus-probe"]
-      }
+      },
+      {
+        "type": "category",
+        "label": "Operational Modes",
+        "items": [
+          "version-1.11.0/admin-mode",
+          "version-1.11.0/namespaced-mode"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Security",
+        "items": ["version-1.11.0/litmus-psp"]
+      }    
     ],
     "Experiments": [
       {
@@ -152,21 +165,6 @@
     "FAQs": [
       "version-1.11.0/faq-general"
     ],
-    "Troubleshooting":["version-1.11.0/faq-troubleshooting"],
-    "Advanced": [
-      {
-        "type": "category",
-        "label": "Operational Modes",
-        "items": [
-          "version-1.11.0/admin-mode",
-          "version-1.11.0/namespaced-mode"
-        ]
-      },
-      {
-        "type": "category",
-        "label": "Security",
-        "items": ["version-1.11.0/litmus-psp"]
-      }    
-    ]
+    "Troubleshooting":["version-1.11.0/faq-troubleshooting"]
   }
 }
