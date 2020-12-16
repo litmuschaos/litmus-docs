@@ -123,7 +123,7 @@ module.exports = {
         docs: {
           routeBasePath: "docs",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/litmuschaos/litmus-docs/edit/staging/",
+          editUrl: "https://github.com/litmuschaos/litmus-docs-beta/edit/staging/",
           showLastUpdateTime: true,
         },
         theme: {

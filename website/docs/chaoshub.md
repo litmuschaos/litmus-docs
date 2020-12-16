@@ -73,8 +73,6 @@ Chaos experiments that inject chaos into the platform resources of Kubernetes ar
 
 Following Platform Chaos experiments are available on ChaosHub
 
-| Platform | Description                                 | Chaos Experiments |
-| -------- | ------------------------------------------- | ----------------- |
-| AWS      | Amazon Web Services platform. Includes EKS. | None              |
-| GCP      | Google Cloud Platform. Includes GKE.        | None              |
-| Azure    | Microsoft Azure platform. Includes AKS.     | None              |
+| Platform | Description                                 | Chaos Experiments                                                           |
+| -------- | ------------------------------------------- | --------------------------------------------------------------------------- |
+| AWS      | Amazon Web Services platform. Includes EKS. | [ec2-terminate](chaostoolkit-aws-ec2-terminate.md), [ebs-loss](ebs-loss.md) |

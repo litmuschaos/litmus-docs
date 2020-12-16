@@ -35,3 +35,15 @@
   height: 200px;
   width: 200px;
 }
+
+.main {
+  padding: 12px;
+}
+
+.heading {
+  font-weight: bold;
+}
+
+.contents {
+  color: #ccc;
+}
