@@ -1,7 +1,7 @@
 ---
-id: "disk-fill"
-title: "Disk Fill Experiment Details"
-sidebar_label: "Disk Fill"
+id: disk-fill
+title: Disk Fill Experiment Details
+sidebar_label: Disk Fill
 ---
 
 ---
@@ -25,7 +25,7 @@ sidebar_label: "Disk Fill"
 
 - Ensure that Kubernetes Version > 1.13
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `disk-fill` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/generic/disk-fill/experiment.yaml)
+- Ensure that the `disk-fill` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/disk-fill/experiment.yaml)
 - Cluster must run docker container runtime
 - Appropriate Ephemeral Storage Requests and Limits should be set for the application before running the experiment.
   An example specification is shown below:
@@ -142,6 +142,8 @@ subjects:
     namespace: default
 ```
 
+**_Note:_** In case of restricted systems/setup, create a PodSecurityPolicy(psp) with the required permissions. The `chaosServiceAccount` can subscribe to work around the respective limitations. An example of a standard psp that can be used for litmus chaos experiments can be found [here](https://docs.litmuschaos.io/docs/next/litmus-psp/).
+
 ### Prepare ChaosEngine
 
 - Provide the application info in `spec.appinfo`
@@ -183,16 +185,16 @@ subjects:
     <td> Defaults to 60s </td>
   </tr>
   <tr>
-    <td> TARGET_POD </td>
-    <td> Name of the application pod subjected to disk fill chaos</td>
+    <td> TARGET_PODS </td>
+    <td> Comma separated list of application pod name subjected to disk fill chaos</td>
     <td> Optional </td>
-    <td> If not provided it will select from the appLabel provided</td>
+    <td> If not provided, it will select target pods randomly based on provided appLabels</td>
   </tr> 
   <tr>
     <td> PODS_AFFECTED_PERC </td>
     <td> The Percentage of total pods to target  </td>
     <td> Optional </td>
-    <td> Defaults to 0% (corresponds to 1 replica) </td>
+    <td> Defaults to 0 (corresponds to 1 replica), provide numeric value only </td>
   </tr> 
   <tr>
     <td> LIB  </td>
@@ -222,7 +224,7 @@ subjects:
     <td> INSTANCE_ID </td>
     <td> A user-defined string that holds metadata/info about current run/instance of chaos. Ex: 04-05-2020-9-00. This string is appended as suffix in the chaosresult CR name.</td>
     <td> Optional </td>
-    <td> Ensure that the overall length of the chaosresult CR is still {"<"} 64 characters </td>
+    <td> Ensure that the overall length of the chaosresult CR is still &lt; 64 characters </td>
   </tr>
 
 </table>

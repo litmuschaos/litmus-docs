@@ -1,7 +1,7 @@
 ---
-id: "litmus-probe"
-title: "Declarative Approach to Chaos Hypothesis using Litmus Probes"
-sidebar_label: "Litmus Probe"
+id: litmus-probe
+title: Declarative Approach to Chaos Hypothesis using Litmus Probes
+sidebar_label: Litmus Probe
 ---
 
 ---
@@ -10,13 +10,14 @@ sidebar_label: "Litmus Probe"
 
 Litmus probes are pluggable checks that can be defined within the ChaosEngine for any chaos experiment. The experiment pods execute these checks based on the mode they are defined in & factor their success as necessary conditions in determining the verdict of the experiment (along with the standard “in-built” checks).
 
-Litmus currently supports three types of probes:
+Litmus currently supports four types of probes:
 
 - **httpProbe:** To query health/downstream URIs
 - **cmdProbe:** To execute any user-desired health-check function implemented as a shell command
 - **k8sProbe:** To perform CRUD operations against native & custom Kubernetes resources
+- **promProbe:** To execute promql queries and match prometheus metrics for specific criteria
 
-These probes can be used in isolation or in several combinations to achieve the desired checks. While the `httpProbe` & `k8sProbe` are fully declarative in the way they are conceived, the `cmdProbe` expects the user to provide a shell command to implement checks that are highly specific to the application use case.
+These probes can be used in isolation or in several combinations to achieve the desired checks. While the `httpProbe` & `k8sProbe` are fully declarative in the way they are conceived, the `cmdProbe` expects the user to provide a shell command to implement checks that are highly specific to the application use case. `promProbe` expects the user to provide a promql query along with Prometheus service endpoints to check for specific criteria.
 
 The probes can be set up to run in different modes:
 
@@ -24,6 +25,7 @@ The probes can be set up to run in different modes:
 - **EoT:** Executed at the End of Test as a post-chaos check
 - **Edge:** Executed both, before and after the chaos
 - **Continuous:** The probe is executed continuously, with a specified polling interval during the chaos injection.
+- **OnChaos:** The probe is executed continuously, with a specified polling interval strictly for chaos duration of chaos
 
 All probes share some common attributes:
 
@@ -31,6 +33,7 @@ All probes share some common attributes:
 - **retry:** The number of times a check is re-run upon failure in the first attempt before declaring the probe status as failed.
 - **interval:** The period between subsequent retries
 - **probePollingInterval:** The time interval for which continuous probe should be sleep after each iteration
+- **initialDelaySeconds:** Represents the initial waiting time interval for the probes.
 
 ## Types of Litmus Probes
 
@@ -67,13 +70,17 @@ probe:
     type: "cmdProbe"
     cmdProbe/inputs:
       command: "<command>"
-      expectedResult: "<expected-result>"
+      comparator:
+        type: "string" # supports: string, int, float
+        criteria: "contains" #supports >=,<=,>,<,==,!= for int and contains,equal,notEqual,matches,notMatches for string values
+        value: "<value-for-criteria-match>"
       source: "<repo>/<tag>" # it can be “inline” or any image
     mode: "Edge"
     runProperties:
       probeTimeout: 5
       interval: 5
       retry: 1
+      initialDelaySeconds: 5
 ```
 
 ### k8sProbe
@@ -100,7 +107,32 @@ probe:
         fieldSelector: "metadata.name=<appResourceName>,status.phase=Running"
         labelSelector: "<app-labels>"
     operation: "present" # it can be present, absent, create, delete
-    mode: "EoT"
+    mode: "EOT"
+    runProperties:
+      probeTimeout: 5
+      interval: 5
+      retry: 1
+```
+
+### promProbe
+
+The `promProbe` allows users to run Prometheus queries and match the resulting output against specific conditions. The intent behind this probe is to allow users to define metrics-based SLOs in a declarative way and determine the experiment verdict based on its success. The probe runs the query on a Prometheus server defined by the `endpoint`, and checks whether the output satisfies the specified `criteria`.
+
+The promql query can be provided in the `query` field. In the case of complex queries that span multiple lines, the `queryPath` attribute can be used to provide the link to a file consisting of the query. This file can be made available in the experiment pod via a ConfigMap resource, with the ConfigMap being passed in the [ChaosEngine](https://docs.litmuschaos.io/docs/chaosengine/#experiment-specification) OR the [ChaosExperiment](https://docs.litmuschaos.io/docs/chaosexperiment/#configuration-specification) CR.
+
+<strong>NOTE:</strong> `query` and `queryPath` are mutually exclusive.
+
+```yaml
+probe:
+  - name: "check-probe-success"
+    type: "promProbe"
+    promProbe/inputs:
+      endpoint: "<prometheus-endpoint>"
+      query: "<promql-query>"
+      comparator:
+        criteria: "==" #supports >=,<=,>,<,==,!= comparision
+        value: "<value-for-criteria-match>"
+    mode: "Edge"
     runProperties:
       probeTimeout: 5
       interval: 5
@@ -173,7 +205,10 @@ probe:
     type: "cmdProbe"
     cmdProbe/inputs:
       command: "<command>"
-      expectedResult: "<expected-result>"
+      comparator:
+        type: "string"
+        criteria: "equals"
+        value: "<value-for-criteria-match>"
       source: "inline"
     mode: "SOT"
     runProperties:
@@ -185,7 +220,10 @@ probe:
     cmdProbe/inputs:
       ## probe1's result being used as one of the args in probe2
       command: "<commmand> {{ .probe1.ProbeArtifacts.Register }} <arg2>"
-      expectedResult: "<expected-result>"
+      comparator:
+        type: "string"
+        criteria: "equals"
+        value: "<value-for-criteria-match>"
       source: "inline"
     mode: "SOT"
     runProperties:

@@ -1,7 +1,7 @@
 ---
-id: "openebs-pool-container-failure"
-title: "OpenEBS Pool Container Failure Experiment Details"
-sidebar_label: "Pool Container Failure"
+id: openebs-pool-container-failure
+title: OpenEBS Pool Container Failure Experiment Details
+sidebar_label: Pool Container Failure
 ---
 
 ---
@@ -23,7 +23,7 @@ sidebar_label: "Pool Container Failure"
     <td> INSTANCE_ID </td>
     <td> A user-defined string that holds metadata/info about current run/instance of chaos. Ex: 04-05-2020-9-00. This string is appended as suffix in the chaosresult CR name.</td>
     <td> Optional  </td>
-    <td> Ensure that the overall length of the chaosresult CR is still {"<"} 64 characters </td>
+    <td> Ensure that the overall length of the chaosresult CR is still &lt; 64 characters </td>
   </tr>
 
 </table>
@@ -33,7 +33,7 @@ sidebar_label: "Pool Container Failure"
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `openebs-pool-container-failure` experiment resource is available in the cluster. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/openebs/openebs-pool-container-failure/experiment.yaml)
+- Ensure that the `openebs-pool-container-failure` experiment resource is available in the cluster. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/openebs/openebs-pool-container-failure/experiment.yaml)
 - The DATA_PERSISTENCE can be enabled by provide the application's info in a configmap volume so that the experiment can perform necessary checks. Currently, LitmusChaos supports data consistency checks only for MySQL and Busybox.
 
   - For MYSQL data persistence check create a configmap as shown below in the application namespace (replace with actual credentials):
@@ -227,7 +227,7 @@ subjects:
     <td> INSTANCE_ID </td>
     <td> A user-defined string that holds metadata/info about current run/instance of chaos. Ex: 04-05-2020-9-00. This string is appended as suffix in the chaosresult CR name.</td>
     <td> Optional  </td>
-    <td> Ensure that the overall length of the chaosresult CR is still {"<"} 64 characters </td>
+    <td> Ensure that the overall length of the chaosresult CR is still &lt; 64 characters </td>
   </tr>
 
 </table>

@@ -1,7 +1,7 @@
 ---
-id: "pod-cpu-hog"
-title: "Pod CPU Hog Details"
-sidebar_label: "Pod CPU Hog"
+id: pod-cpu-hog
+title: Pod CPU Hog Details
+sidebar_label: Pod CPU Hog
 ---
 
 ---
@@ -24,7 +24,7 @@ sidebar_label: "Pod CPU Hog"
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `pod-cpu-hog` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/generic/pod-cpu-hog/experiment.yaml)
+- Ensure that the `pod-cpu-hog` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/pod-cpu-hog/experiment.yaml)
 
 ## Entry Criteria
 
@@ -111,6 +111,8 @@ subjects:
     namespace: default
 ```
 
+**_Note:_** In case of restricted systems/setup, create a PodSecurityPolicy(psp) with the required permissions. The `chaosServiceAccount` can subscribe to work around the respective limitations. An example of a standard psp that can be used for litmus chaos experiments can be found [here](https://docs.litmuschaos.io/docs/next/litmus-psp/).
+
 ### Prepare ChaosEngine
 
 - Provide the application info in `spec.appinfo`
@@ -158,16 +160,16 @@ subjects:
     <td> Default to <code>gaiaadm/pumba</code> </td>
   </tr>
   <tr>
-    <td> TARGET_POD </td>
-    <td> Name of the application pod subjected to pod cpu hog chaos</td>
+    <td> TARGET_PODS </td>
+    <td> Comma separated list of application pod name subjected to pod cpu hog chaos</td>
     <td> Optional </td>
-    <td> If not provided it will select from the appLabel provided</td>
-  </tr>    
+    <td> If not provided, it will select target pods randomly based on provided appLabels</td>
+  </tr>  
   <tr>
     <td> PODS_AFFECTED_PERC </td>
     <td> The Percentage of total pods to target  </td>
     <td> Optional </td>
-    <td> Default to 0% (corresponds to 1 replica) </td>
+    <td> Defaults to 0 (corresponds to 1 replica), provide numeric value only </td>
   </tr>
   <tr>
     <td> CHAOS_INJECT_COMMAND </td>
@@ -179,7 +181,7 @@ subjects:
     <td> CHAOS_KILL_COMMAND </td>
     <td> The command to kill the chaos process</td>
     <td> Optional </td>
-    <td> Default to <code>kill {"$(find /proc -name exe -lname '*/md5sum' 2>&1 | grep -v 'Permission denied' | awk -F/ '{print $(NF-1)}' |  head -n 1"}</code> </td>
+    <td> Default to <code>kill $(find /proc -name exe -lname '*/md5sum' 2&gt;&amp;1 | grep -v 'Permission denied' | awk -F/ '{'{'}print $(NF-1){'}'}' |  head -n 1</code> </td>
   </tr>   
   <tr>
     <td> RAMP_TIME </td>
@@ -197,7 +199,7 @@ subjects:
     <td> INSTANCE_ID </td>
     <td> A user-defined string that holds metadata/info about current run/instance of chaos. Ex: 04-05-2020-9-00. This string is appended as suffix in the chaosresult CR name. </td>
     <td> Optional  </td>
-    <td> Ensure that the overall length of the chaosresult CR is still {"<"} 64 characters </td>
+    <td> Ensure that the overall length of the chaosresult CR is still &lt; 64 characters </td>
   </tr>
 
 </table>
@@ -217,8 +219,6 @@ spec:
   annotationCheck: "true"
   # It can be active/stop
   engineState: "active"
-  #ex. values: ns1:name=percona,ns2:run=nginx
-  auxiliaryAppInfo: ""
   appinfo:
     appns: "default"
     applabel: "app=nginx"
@@ -244,6 +244,12 @@ spec:
 
             - name: TOTAL_CHAOS_DURATION
               value: "60" # in seconds
+
+            - name: CHAOS_INJECT_COMMAND
+              value: "md5sum /dev/zero"
+
+            - name: CHAOS_KILL_COMMAND
+              value: "kill -9 $(ps afx | grep \"[md5sum] /dev/zero\" | awk '{print$1}' | tr '\n' ' ')"
 ```
 
 ### Create the ChaosEngine Resource

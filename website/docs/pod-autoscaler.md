@@ -1,7 +1,7 @@
 ---
-id: "pod-autoscaler"
-title: "Scale the application replicas and test the node autoscaling on cluster"
-sidebar_label: "Pod Autoscaler"
+id: pod-autoscaler
+title: Scale the application replicas and test the node autoscaling on cluster
+sidebar_label: Pod Autoscaler
 ---
 
 ---
@@ -24,7 +24,7 @@ sidebar_label: "Pod Autoscaler"
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `pod-autoscaler` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/generic/pod-autoscaler/experiment.yaml)
+- Ensure that the `pod-autoscaler` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/pod-autoscaler/experiment.yaml)
 
 ## Entry Criteria
 
@@ -87,6 +87,7 @@ rules:
         "events",
         "chaosengines",
         "pods/log",
+        "pods/exec",
         "chaosexperiments",
         "chaosresults",
       ]
@@ -111,6 +112,8 @@ subjects:
     name: pod-autoscaler-sa
     namespace: default
 ```
+
+**_Note:_** In case of restricted systems/setup, create a PodSecurityPolicy(psp) with the required permissions. The `chaosServiceAccount` can subscribe to work around the respective limitations. An example of a standard psp that can be used for litmus chaos experiments can be found [here](https://docs.litmuschaos.io/docs/next/litmus-psp/).
 
 ### Prepare ChaosEngine
 
@@ -156,7 +159,7 @@ subjects:
     <td> INSTANCE_ID </td>
     <td> A user-defined string that holds metadata/info about current run/instance of chaos. Ex: 04-05-2020-9-00. This string is appended as suffix in the chaosresult CR name.</td>
     <td> Optional </td>
-    <td> Ensure that the overall length of the chaosresult CR is still {"<"} 64 characters </td>
+    <td> Ensure that the overall length of the chaosresult CR is still &lt; 64 characters </td>
   </tr>
 </table>
 

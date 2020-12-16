@@ -1,7 +1,7 @@
 ---
-id: "kafka-broker-pod-failure"
-title: "Kafka Broker Pod Failure Experiment Details"
-sidebar_label: "Broker Pod Failure"
+id: kafka-broker-pod-failure
+title: Kafka Broker Pod Failure Experiment Details
+sidebar_label: Broker Pod Failure
 ---
 
 ## Experiment Metadata
@@ -24,7 +24,7 @@ sidebar_label: "Broker Pod Failure"
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `kafka-broker-pod-failure` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/kafka/kafka-broker-pod-failure/experiment.yaml)
+- Ensure that the `kafka-broker-pod-failure` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/kafka/kafka-broker-pod-failure/experiment.yaml)
 - Ensure that Kafka & Zookeeper are deployed as Statefulsets
 - If Confluent/Kudo Operators have been used to deploy Kafka, note the instance name, which will be
   used as the value of `KAFKA_INSTANCE_NAME` experiment environment variable
@@ -34,7 +34,7 @@ sidebar_label: "Broker Pod Failure"
 
   Zookeeper uses this to construct a path in which kafka cluster data is stored.
 
-- Ensure that the kafka-broker-disk failure experiment resource is available in the cluster. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/kafka/kafka-broker-pod-failure/experiment.yaml)
+- Ensure that the kafka-broker-disk failure experiment resource is available in the cluster. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/kafka/kafka-broker-pod-failure/experiment.yaml)
 
 ## Entry Criteria
 
@@ -211,7 +211,7 @@ subjects:
     <td> KAFKA_LIVENESS_IMAGE </td>
     <td> Image used for liveness message stream </td>
     <td> Optional </td>
-    <td> Image as {`<registry_url>/<repository>/<image>:<tag>`} </td>
+    <td> Image as `&lt;registry_url&gt;/&lt;repository&gt;/&lt;image&gt;:&lt;tag&gt;` </td>
   </tr>
   <tr>
     <td> KAFKA_REPLICATION_FACTOR </td>
@@ -259,7 +259,7 @@ subjects:
     <td> INSTANCE_ID </td>
     <td> A user-defined string that holds metadata/info about current run/instance of chaos. Ex: 04-05-2020-9-00. This string is appended as suffix in the chaosresult CR name.</td>
     <td> Optional  </td>
-    <td> Ensure that the overall length of the chaosresult CR is still {"<"} 64 characters </td>
+    <td> Ensure that the overall length of the chaosresult CR is still &lt; 64 characters </td>
   </tr>
 
 </table>

@@ -1,7 +1,7 @@
 ---
-id: "kubelet-service-kill"
-title: "Kubelet Service Kill Experiment Details"
-sidebar_label: "Kubelet Service Kill"
+id: kubelet-service-kill
+title: Kubelet Service Kill Experiment Details
+sidebar_label: Kubelet Service Kill
 ---
 
 ---
@@ -24,8 +24,8 @@ sidebar_label: "Kubelet Service Kill"
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `kubelet-service-kill` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/generic/kubelet-service-kill/experiment.yaml)
-- Ensure that the node specified in the experiment ENV variable `APP_NODE` (the node for which kubelet service need to be killed) should be cordoned before execution of the chaos experiment (before applying the chaosengine manifest) to ensure that the litmus experiment runner pods are not scheduled on it / subjected to eviction. This can be achieved with the following steps:
+- Ensure that the `kubelet-service-kill` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/kubelet-service-kill/experiment.yaml)
+- Ensure that the node specified in the experiment ENV variable `TARGET_NODE` (the node for which kubelet service need to be killed) should be cordoned before execution of the chaos experiment (before applying the chaosengine manifest) to ensure that the litmus experiment runner pods are not scheduled on it / subjected to eviction. This can be achieved with the following steps:
 
   - Get node names against the applications pods: `kubectl get pods -o wide`
   - Cordon the node `kubectl cordon <nodename>`
@@ -90,6 +90,7 @@ rules:
         "pods",
         "jobs",
         "pods/log",
+        "pods/exec",
         "events",
         "chaosengines",
         "chaosexperiments",
@@ -117,6 +118,8 @@ subjects:
     namespace: default
 ```
 
+**_Note:_** In case of restricted systems/setup, create a PodSecurityPolicy(psp) with the required permissions. The `chaosServiceAccount` can subscribe to work around the respective limitations. An example of a standard psp that can be used for litmus chaos experiments can be found [here](https://docs.litmuschaos.io/docs/next/litmus-psp/).
+
 ### Prepare ChaosEngine
 
 - Provide the application info in `spec.appinfo`
@@ -134,7 +137,7 @@ subjects:
     <th> Notes </th>
   </tr>
   <tr>
-    <td> APP_NODE </td>
+    <td> TARGET_NODE </td>
     <td> Name of the node, to which kubelet service need to be killed </td>
     <td> Mandatory  </td>
     <td> </td>
@@ -167,7 +170,7 @@ subjects:
     <td> INSTANCE_ID </td>
     <td> A user-defined string that holds metadata/info about current run/instance of chaos. Ex: 04-05-2020-9-00. This string is appended as suffix in the chaosresult CR name.</td>
     <td> Optional </td>
-    <td> Ensure that the overall length of the chaosresult CR is still {"<"} 64 characters </td>
+    <td> Ensure that the overall length of the chaosresult CR is still &lt; 64 characters </td>
   </tr>
 
 </table>
@@ -208,8 +211,8 @@ spec:
             - name: TOTAL_CHAOS_DURATION
               value: "90" # in seconds
 
-              # provide the actual name of node under test
-            - name: APP_NODE
+              # provide the target node name
+            - name: TARGET_NODE
               value: "node-01"
 ```
 

@@ -1,7 +1,7 @@
 ---
 id: Kubernetes-Chaostoolkit-AWS
 title: ChaosToolKit AWS EC2 Experiment Details
-sidebar_label: EC2 Terminate
+sidebar_label: ChaosToolKit AWS EC2 Terminate
 ---
 
 ---
@@ -57,7 +57,7 @@ sidebar_label: EC2 Terminate
   <tr>
     <td> ChaosToolKit </td>
     <td> ChaosToolKit single, random EC2 terminate experiment with Application uptime </td>
-    <td> Executing via label name app={"<"}{">"} </td>
+    <td> Executing via label name app=&lt;&gt;</td>
     <td> ec2-delete.json</td>
   </tr>
 </table>
@@ -74,7 +74,7 @@ sidebar_label: EC2 Terminate
 
 ## Prepare chaosServiceAccount
 
-- Based on your use case pick one of the choice from here `https://github.com/litmuschaos/chaos-charts/tree/master/charts/generic/k8-aws-ec2-terminate`
+- Based on your use case pick one of the choice from here `https://github.com/litmuschaos/chaos-charts/tree/v1.10.x/charts/kube-aws/k8-aws-ec2-terminate`
 
 ### Sample Rbac Manifest for Service Owner use case
 
@@ -340,18 +340,18 @@ spec:
 
 ### Watch Chaos progress
 
-- View application pod termination & recovery by setting up a watch on the pods in the application namespace
+- View aws ec2 instance termination & recovery by setting up a watch on the nodes/verify in AWS console
 
   `watch kubectl get pods`
 
 ### Check ChaosExperiment Result
 
-- Check whether the application is resilient to the ChaosToolKit pod failure, once the experiment (job) is completed. The ChaosResult resource name is derived like this: `<ChaosEngine-Name>-<ChaosExperiment-Name>`.
+- Check whether the application is resilient to the ChaosToolKit aws ec2 termination, once the experiment (job) is completed. The ChaosResult resource name is derived like this: `<ChaosEngine-Name>-<ChaosExperiment-Name>`.
 
-  `kubectl describe chaosresult k8-pod-delete -n <chaos-namespace>`
+  `kubectl describe chaosresult k8-aws-ec2-terminate-k8-aws-ec2-terminate -n <chaos-namespace>`
 
 ### Check ChaosExperiment logs
 
 - Check the log and result for existing experiment
 
-  `kubectl log -f k8-pod-delete-<> -n <chaos-namespace>`
+  `kubectl log -f k8-aws-ec2-terminate-<hax-value> -n <chaos-namespace>`

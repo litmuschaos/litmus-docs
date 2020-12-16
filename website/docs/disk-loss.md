@@ -1,7 +1,7 @@
 ---
-id: "disk-loss"
-title: "Disk Loss Experiment Details"
-sidebar_label: "Disk Loss"
+id: disk-loss
+title: Disk Loss Experiment Details
+sidebar_label: Disk Loss
 ---
 
 ---
@@ -24,7 +24,7 @@ sidebar_label: "Disk Loss"
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `disk-loss` experiment resource is available in the cluster by `kubectl get chaosexperiments` in the desired namespace. If not, install from <a href="https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/generic/disk-loss/experiment.yaml" target="_blank">here</a>
+- Ensure that the `disk-loss` experiment resource is available in the cluster by `kubectl get chaosexperiments` in the desired namespace. If not, install from <a href="https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/disk-loss/experiment.yaml" target="_blank">here</a>
 - Ensure to create a Kubernetes secret having the gcloud/aws access configuration(key) in the namespace of `CHAOS_NAMESPACE`.
 - There should be administrative access to the platform on which the cluster is hosted, as the recovery of the affected node could be manual. Example gcloud access to the project
 
@@ -198,7 +198,7 @@ subjects:
     <td> INSTANCE_ID </td>
     <td> A user-defined string that holds metadata/info about current run/instance of chaos. Ex: 04-05-2020-9-00. This string is appended as suffix in the chaosresult CR name.</td>
     <td> Optional </td>
-    <td> Ensure that the overall length of the chaosresult CR is still {"<"} 64 characters </td>
+    <td> Ensure that the overall length of the chaosresult CR is still &lt; 64 characters </td>
   </tr>
 
 </table>
@@ -284,7 +284,7 @@ spec:
 
 ## Check Chaos Experiment Result
 
-- Check whether the application is resilient to the disk loss, once the experiment (job) is completed. The ChaosResult resource name is derived like this: {"<"}ChaosEngine-Name{">"}-{"<"}ChaosExperiment-Name{">"}.
+- Check whether the application is resilient to the disk loss, once the experiment (job) is completed. The ChaosResult resource name is derived like this: &lt;ChaosEngine-Name&gt;-&lt;ChaosExperiment-Name&gt;.
 
 `kubectl describe chaosresult nginx-chaos-disk-loss -n <CHAOS_NAMESPACE>`
 

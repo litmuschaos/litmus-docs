@@ -1,7 +1,7 @@
 ---
-id: "node-memory-hog"
-title: "Node Memory Hog Experiment Details"
-sidebar_label: "Node Memory Hog"
+id: node-memory-hog
+title: Node Memory Hog Experiment Details
+sidebar_label: Node Memory Hog
 ---
 
 ---
@@ -24,7 +24,7 @@ sidebar_label: "Node Memory Hog"
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `node-memory-hog` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/generic/node-memory-hog/experiment.yaml)
+- Ensure that the `node-memory-hog` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/node-memory-hog/experiment.yaml)
 - There should be administrative access to the platform on which the Kubernetes cluster is hosted, as the recovery of the affected node could be manual. For example, gcloud access to the GKE project
 
 ## Entry Criteria
@@ -86,12 +86,14 @@ rules:
         "pods",
         "jobs",
         "pods/log",
+        "pods/exec",
         "events",
         "chaosengines",
         "chaosexperiments",
         "chaosresults",
       ]
-    verbs: ["create", "list", "get", "patch", "update", "delete"]
+    verbs:
+      ["create", "list", "get", "patch", "update", "delete", "deletecollection"]
   - apiGroups: [""]
     resources: ["nodes"]
     verbs: ["get", "list"]
@@ -113,6 +115,8 @@ subjects:
     namespace: default
 ```
 
+**_Note:_** In case of restricted systems/setup, create a PodSecurityPolicy(psp) with the required permissions. The `chaosServiceAccount` can subscribe to work around the respective limitations. An example of a standard psp that can be used for litmus chaos experiments can be found [here](https://docs.litmuschaos.io/docs/next/litmus-psp/).
+
 ### Prepare ChaosEngine
 
 - Provide the application info in `spec.appinfo`
@@ -129,9 +133,9 @@ subjects:
     <th> Specify In ChaosEngine </th>
     <th> Notes </th>
   </tr>
-  <tr>
-    <td> APP_NODE </td>
-    <td> Name of the node subjected to memory hog  </td>
+   <tr>
+    <td> TARGET_NODES </td>
+    <td> Comma separated list of nodes, subjected to node memory hog</td>
     <td> Mandatory  </td>
     <td> </td>
   </tr>
@@ -165,11 +169,23 @@ subjects:
     <td> Optional  </td>
     <td> </td>
   </tr>
+   <tr>
+    <td> NODES_AFFECTED_PERC </td>
+    <td> The Percentage of total nodes to target  </td>
+    <td> Optional </td>
+    <td> Defaults to 0 (corresponds to 1 node), provide numeric value only </td>
+  </tr> 
+   <tr>
+    <td> SEQUENCE </td>
+    <td> It defines sequence of chaos execution for multiple target nodes </td>
+    <td> Optional </td>
+    <td> Default value: parallel. Supported: serial, parallel </td>
+  </tr>
   <tr>
     <td> INSTANCE_ID </td>
     <td> A user-defined string that holds metadata/info about current run/instance of chaos. Ex: 04-05-2020-9-00. This string is appended as suffix in the chaosresult CR name.</td>
     <td> Optional </td>
-    <td> Ensure that the overall length of the chaosresult CR is still {"<"} 64 characters </td>
+    <td> Ensure that the overall length of the chaosresult CR is still &lt; 64 characters </td>
   </tr>
 
 </table>
@@ -213,8 +229,8 @@ spec:
             - name: MEMORY_PERCENTAGE
               value: "90"
 
-              # ENTER THE NAME OF THE APPLICATION NODE
-            - name: APP_NODE
+            # ENTER THE COMMA SEPARATED TARGET NODES NAME
+            - name: TARGET_NODES
               value: ""
 ```
 

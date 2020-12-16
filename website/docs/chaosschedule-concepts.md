@@ -138,7 +138,7 @@ This section describes the fields in the ChaosSchedule spec and the possible val
 </tr>
 <tr>
   <th>Range</th>
-  <td><i>user-defined</i> (type: string)(pattern: {"{"}number{"}"}m", {"{"}number{"}"}h").</td>
+  <td><i>user-defined</i> (type: string)(pattern: "{'{'}number{'}'}m", "{'{'}number{'}'}h").</td>
 </tr>
 <tr>
   <th>Default</th>
@@ -165,7 +165,7 @@ This section describes the fields in the ChaosSchedule spec and the possible val
 </tr>
 <tr>
   <th>Range</th>
-  <td><i>user-defined</i> (type: string)(pattern: [{"{"}day_name{"}"},{"{"}day_name{"}"}...]).</td>
+  <td><i>user-defined</i> (type: string)(pattern: [{'{'}day_name{'}'},{'{'}day_name{'}'}...]).</td>
 </tr>
 <tr>
   <th>Default</th>
@@ -173,7 +173,7 @@ This section describes the fields in the ChaosSchedule spec and the possible val
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>includedDays</code> in the spec specifies a (comma-separated) list of days of the week at which chaos is allowed to take place. {"{"}day_name{"}"} is to be specified with the first 3 letters of the name of day such as <code>Mon</code>, <code>Tue</code> etc.</td>
+  <td> The <code>includedDays</code> in the spec specifies a (comma-separated) list of days of the week at which chaos is allowed to take place. {'{'}day_name{'}'} is to be specified with the first 3 letters of the name of day such as <code>Mon</code>, <code>Tue</code> etc.</td>
 </tr>
 </table>
 
@@ -192,7 +192,7 @@ This section describes the fields in the ChaosSchedule spec and the possible val
 </tr>
 <tr>
   <th>Range</th>
-  <td><i>{"{"}hour_number{"}"} will range from 0 to 23</i> (type: string)(pattern: {"{"}hour_number{"}"}-{"{"}hour_number{"}"}).</td>
+  <td><i>{'{'}hour_number{'}'} will range from 0 to 23</i> (type: string)(pattern: {'{'}hour_number{'}'}-{'{'}hour_number{'}'}).</td>
 </tr>
 <tr>
   <th>Default</th>

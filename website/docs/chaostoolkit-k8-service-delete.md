@@ -56,13 +56,13 @@ sidebar_label: Application Service
   <tr>
     <td> ChaosToolKit </td>
     <td> ChaosToolKit Micro Service delete with count validation </td>
-    <td> Executing via Custom label name app={"<>"} </td>
+    <td> Executing via Custom label name app=&lt;&gt; </td>
     <td> service-app-kill-count.json </td>
   </tr>
   <tr>
     <td> ChaosToolKit </td>
     <td> ChaosToolKit Micro Service delete with health validation</td>
-    <td> Executing via Custom label name {"<"}custom{">"}={"<"}custom{">"} </td>
+    <td> Executing via Custom label name &lt;custom&gt;=&lt;&gt; </td>
     <td> service-app-kill-health.json </td>
   </tr>
 </table>
@@ -96,6 +96,7 @@ metadata:
   namespace: default
   labels:
     name: k8-pod-delete-sa
+    app.kubernetes.io/part-of: litmus
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -104,19 +105,25 @@ metadata:
   namespace: default
   labels:
     name: k8-pod-delete-sa
+    app.kubernetes.io/part-of: litmus
 rules:
-  - apiGroups: ["", "litmuschaos.io", "batch", "apps"]
+  - apiGroups: ["", "apps", "batch"]
+    resources: ["jobs", "deployments", "daemonsets"]
+    verbs: ["create", "list", "get", "patch", "delete"]
+  - apiGroups: ["", "litmuschaos.io"]
     resources:
       [
         "pods",
-        "deployments",
-        "jobs",
         "configmaps",
+        "events",
+        "services",
         "chaosengines",
         "chaosexperiments",
         "chaosresults",
+        "deployments",
+        "jobs",
       ]
-    verbs: ["create", "list", "get", "patch", "update", "delete"]
+    verbs: ["get", "create", "update", "patch", "delete", "list"]
   - apiGroups: [""]
     resources: ["nodes"]
     verbs: ["get", "list"]
@@ -128,6 +135,7 @@ metadata:
   namespace: default
   labels:
     name: k8-pod-delete-sa
+    app.kubernetes.io/part-of: litmus
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role

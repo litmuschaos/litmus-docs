@@ -1,7 +1,7 @@
 ---
-id: "pod-io-stress"
-title: "Pod IO Stress Details"
-sidebar_label: "Pod IO Stress"
+id: pod-io-stress
+title: Pod IO Stress Details
+sidebar_label: Pod IO Stress
 ---
 
 ---
@@ -24,7 +24,7 @@ sidebar_label: "Pod IO Stress"
 ## Prerequisites
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `pod-io-stress` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/generic/pod-io-stress/experiment.yaml)
+- Ensure that the `pod-io-stress` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/pod-io-stress/experiment.yaml)
 - Cluster must run docker container runtime
 
 ## Entry Criteria
@@ -110,6 +110,8 @@ subjects:
     namespace: default
 ```
 
+**_Note:_** In case of restricted systems/setup, create a PodSecurityPolicy(psp) with the required permissions. The `chaosServiceAccount` can subscribe to work around the respective limitations. An example of a standard psp that can be used for litmus chaos experiments can be found [here](https://docs.litmuschaos.io/docs/next/litmus-psp/).
+
 ### Prepare ChaosEngine
 
 - Provide the application info in `spec.appinfo`
@@ -145,17 +147,17 @@ subjects:
     <td> Default to 4 </td>
   </tr> 
   <tr>
-    <td> TARGET_POD </td>
-    <td> Name of the application pod subjected to IO stress chaos</td>
-    <td> Optional </td>
-    <td> If not provided it will select from the appLabel provided</td>
-  </tr>   
-  <tr>
     <td> TOTAL_CHAOS_DURATION </td>
     <td> The time duration for chaos (seconds)  </td>
     <td> Optional </td>
     <td> Default to 120s </td>
   </tr>
+  <tr>
+    <td> VOLUME_MOUNT_PATH </td>
+    <td> Fill the given volume mount path</td>
+    <td> Optional </td>
+    <td>  </td>
+  </tr>  
   <tr>
     <td> LIB  </td>
     <td> The chaos lib used to inject the chaos </td>
@@ -169,16 +171,16 @@ subjects:
     <td> Default to <code>gaiaadm/pumba</code> </td>
   </tr>  
   <tr>
-    <td> TARGET_POD </td>
-    <td> Name of the application pod subjected to pod io stress chaos</td>
+    <td> TARGET_PODS </td>
+    <td> Comma separated list of application pod name subjected to pod io stress chaos</td>
     <td> Optional </td>
-    <td> If not provided it will select from the appLabel provided</td>
+    <td> If not provided, it will select target pods randomly based on provided appLabels</td>
   </tr>  
   <tr>
     <td> PODS_AFFECTED_PERC </td>
     <td> The Percentage of total pods to target  </td>
     <td> Optional </td>
-    <td> Default to 0% (corresponds to 1 replica) </td>
+    <td> Defaults to 0 (corresponds to 1 replica), provide numeric value only </td>
   </tr> 
   <tr>
     <td> RAMP_TIME </td>
@@ -196,7 +198,7 @@ subjects:
     <td> INSTANCE_ID </td>
     <td> A user-defined string that holds metadata/info about current run/instance of chaos. Ex: 04-05-2020-9-00. This string is appended as suffix in the chaosresult CR name. </td>
     <td> Optional  </td>
-    <td> Ensure that the overall length of the chaosresult CR is still {"<"} 64 characters </td>
+    <td> Ensure that the overall length of the chaosresult CR is still &lt; 64 characters </td>
   </tr>
 
 </table>
@@ -216,8 +218,6 @@ spec:
   annotationCheck: "true"
   # It can be active/stop
   engineState: "active"
-  #ex. values: ns1:name=percona,ns2:run=nginx
-  auxiliaryAppInfo: ""
   appinfo:
     appns: "default"
     applabel: "app=nginx"

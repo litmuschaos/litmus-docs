@@ -24,7 +24,7 @@ sidebar_label: Service Pod - Application
 ## Prerequisites
 
 - Ensure that the Litmus ChaosOperator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
-- Ensure that the `k8-pod-delete` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/generic/k8-pod-delete/experiment.yaml)
+- Ensure that the `k8-pod-delete` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the desired namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/k8-pod-delete/experiment.yaml)
 - Ensure you have nginx default application setup on default namespace ( if you are using specific namespace please execute below on that namespace)
 
 ## Entry Criteria
@@ -55,37 +55,37 @@ sidebar_label: Service Pod - Application
   <tr>
     <td> ChaosToolKit </td>
     <td> ChaosToolKit single, random pod delete experiment with count </td>
-    <td> Executing via label name app={"<>"} </td>
+    <td> Executing via label name app=&lt;&gt; </td>
     <td> pod-app-kill-count.json</td>
   </tr>
   <tr>
     <td> ChaosToolKit </td>
     <td> ChaosToolKit single, random pod delete experiment </td>
-    <td> Executing via label name app={"<>"}</td>
+    <td> Executing via label name app=&lt;&gt; </td>
     <td> pod-app-kill-health.json </td>
   </tr>
   <tr>
     <td> ChaosToolKit </td>
     <td> ChaosToolKit single, random pod delete experiment with count </td>
-    <td> Executing via Custom label name {"<"}custom{">"}={"<>"} </td>
+    <td> Executing via Custom label name &lt;custom&gt;=&lt;&gt; </td>
     <td> pod-app-kill-count.json</td>
   </tr>
   <tr>
     <td> ChaosToolKit </td>
     <td> ChaosToolKit single, random pod delete experiment </td>
-    <td> Executing via Custom label name {"<"}custom{">"}={"<>"} </td>
+    <td> Executing via Custom label name &lt;custom&gt;=&lt;&gt; </td>
     <td> pod-app-kill-health.json </td>
   </tr>
   <tr>
     <td> ChaosToolKit </td>
     <td> ChaosToolKit All pod delete experiment with health validation </td>
-    <td> Executing via Custom label name app={"<>"} </td>
+    <td> Executing via Custom label name app=&lt;&gt; </td>
     <td> pod-app-kill-all.json </td>
   </tr>
   <tr>
     <td> ChaosToolKit </td>
     <td> ChaosToolKit All pod delete experiment with health validation</td>
-    <td> Executing via Custom label name {"<"}custom{">"}={"<>"} </td>
+    <td> Executing via Custom label name &lt;custom&gt;=&lt;&gt; </td>
     <td> pod-custom-kill-all.json </td>
   </tr>
 </table>
@@ -119,6 +119,7 @@ metadata:
   namespace: default
   labels:
     name: k8-pod-delete-sa
+    app.kubernetes.io/part-of: litmus
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -127,19 +128,25 @@ metadata:
   namespace: default
   labels:
     name: k8-pod-delete-sa
+    app.kubernetes.io/part-of: litmus
 rules:
-  - apiGroups: ["", "litmuschaos.io", "batch", "apps"]
+  - apiGroups: ["", "apps", "batch"]
+    resources: ["jobs", "deployments", "daemonsets"]
+    verbs: ["create", "list", "get", "patch", "delete"]
+  - apiGroups: ["", "litmuschaos.io"]
     resources:
       [
         "pods",
-        "deployments",
-        "jobs",
         "configmaps",
+        "events",
+        "services",
         "chaosengines",
         "chaosexperiments",
         "chaosresults",
+        "deployments",
+        "jobs",
       ]
-    verbs: ["create", "list", "get", "patch", "update", "delete"]
+    verbs: ["get", "create", "update", "patch", "delete", "list"]
   - apiGroups: [""]
     resources: ["nodes"]
     verbs: ["get", "list"]
@@ -151,6 +158,7 @@ metadata:
   namespace: default
   labels:
     name: k8-pod-delete-sa
+    app.kubernetes.io/part-of: litmus
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role

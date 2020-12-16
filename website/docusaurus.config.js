@@ -1,3 +1,4 @@
+const versions = require("./versions.json");
 const communities = [
   {
     label: "Slack",
@@ -41,10 +42,10 @@ module.exports = {
   tagline: "A website for testing",
   url: "https://docs.litmuschaos.io",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "ignore",
   favicon: "img/favicon.ico",
-  organizationName: "litmuschaos", // Usually your GitHub org/user name.
-  projectName: "litmus", // Usually your repo name.
+  organizationName: "litmuschaos",
+  projectName: "litmus",
   themeConfig: {
     navbar: {
       title: "Litmus Docs",
@@ -54,6 +55,31 @@ module.exports = {
         src: "img/litmus-light-icon.svg",
       },
       items: [
+        {
+          type: "docsVersion",
+          position: "right",
+        },
+        {
+          activeBasePath: "Version",
+          label: "Versions",
+          position: "left",
+          items: [
+            // adding items will create a dropdown
+            {
+              label: versions[0],
+              to: "docs/",
+              activeBaseRegex: `docs/(?!${versions.join("|")}|next)`,
+            },
+            ...versions.slice(1).map((version) => ({
+              label: version,
+              to: `docs/${version}/`,
+            })),
+            {
+              label: "Master/Unreleased",
+              to: "docs/next/",
+            },
+          ],
+        },
         {
           href: "https://github.com/litmuschaos/litmus",
           label: "GitHub",
@@ -95,9 +121,10 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
+          routeBasePath: "docs",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl: "https://github.com/litmuschaos/litmus",
+          editUrl: "https://github.com/litmuschaos/litmus-docs-beta/edit/staging/",
+          showLastUpdateTime: true,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),

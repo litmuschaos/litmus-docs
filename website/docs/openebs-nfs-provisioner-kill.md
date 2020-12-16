@@ -1,7 +1,7 @@
 ---
-id: "openebs-nfs-provisioner-kill"
-title: "OpenEBS NFS Provisioner Kill Chaos Experiment Details"
-sidebar_label: "NFS Provisioner Kill"
+id: openebs-nfs-provisioner-kill
+title: OpenEBS NFS Provisioner Kill Chaos Experiment Details
+sidebar_label: NFS Provisioner Kill
 ---
 
 ---
@@ -25,7 +25,7 @@ sidebar_label: "NFS Provisioner Kill"
 
 - Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://docs.litmuschaos.io/docs/getstarted/#install-litmus)
 
-- Ensure that the `openebs-nfs-provisioner-kill` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the `openebs` namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/openebs/openebs-nfs-provisioner-kill/experiment.yaml)
+- Ensure that the `openebs-nfs-provisioner-kill` experiment resource is available in the cluster by executing `kubectl get chaosexperiments` in the `openebs` namespace. If not, install from [here](https://hub.litmuschaos.io/api/chaos/master?file=charts/openebs/openebs-nfs-provisioner-kill/experiment.yaml)
 
 - The "DATA_PERSISTENCE" env variable takes effect only if the "EXTERNAL_APP_CHECK" is enabled. A stateful busybox deployment is used to create and validate data persistence on the RMW NFS persistent volumes.
 
@@ -177,7 +177,7 @@ subjects:
     <td> INSTANCE_ID </td>
     <td> A user-defined string that holds metadata/info about current run/instance of chaos. Ex: 04-05-2020-9-00. This string is appended as suffix in the chaosresult CR name.</td>
     <td> Optional  </td>
-    <td> Ensure that the overall length of the chaosresult CR is still {"<"} 64 characters </td>
+    <td> Ensure that the overall length of the chaosresult CR is still &lt; 64 characters </td>
   </tr>
 
 </table>

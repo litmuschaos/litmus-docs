@@ -24,14 +24,14 @@ Provide this ServiceAccount in ChaosEngine's .spec.chaosServiceAccount.
 - Select Chaos Experiment from [hub.litmuschaos.io](https://hub.litmuschaos.io/) and click on `INSTALL EXPERIMENT` button.
 
 ```bash
-kubectl apply -f https://hub.litmuschaos.io/api/chaos/1.9.0?file=charts/generic/pod-delete/experiment.yaml -n litmus
+kubectl apply -f https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/pod-delete/experiment.yaml -n litmus
 ```
 
 #### Prepare RBAC Manifest
 
 Here is an RBAC definition, which in essence is a superset of individual experiments RBAC that has the permissions to run all chaos experiments across different namespaces.
 
-[embedmd] : # "https://litmuschaos.github.io/litmus/litmus-admin-rbac.yaml"
+[embedmd]: # "https://litmuschaos.github.io/litmus/litmus-admin-rbac.yaml"
 
 ```yaml
 apiVersion: v1
@@ -64,7 +64,8 @@ rules:
       ]
     verbs:
       ["create", "delete", "get", "list", "patch", "update", "deletecollection"]
-  - apiGroups: ["", "apps", "litmuschaos.io"]
+  - apiGroups:
+      ["", "apps", "litmuschaos.io", "apps.openshift.io", "argoproj.io"]
     resources:
       [
         "configmaps",
@@ -75,6 +76,8 @@ rules:
         "replicasets",
         "deployments",
         "statefulsets",
+        "deploymentconfigs",
+        "rollouts",
         "services",
       ]
     verbs: ["get", "list", "patch", "update"]
