@@ -127,6 +127,17 @@ module.exports = {
     "Chaos Workflow": ["chaos-workflows"],
     FAQs: ["faq-general"],
     Troubleshooting: ["faq-troubleshooting"],
-    Advanced: ["admin-mode", "namespaced-mode", "litmus-psp"],
+    Advanced: [
+      {
+        type: "category",
+        label: "Operational Modes",
+        items: ["admin-mode", "namespaced-mode"],
+      },
+      {
+        type: "category",
+        label: "Security",
+        items: ["litmus-psp"],
+      },
+    ],
   },
 };

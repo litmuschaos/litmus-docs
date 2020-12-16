@@ -42,7 +42,7 @@ module.exports = {
   tagline: "A website for testing",
   url: "https://docs.litmuschaos.io",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "ignore",
   favicon: "img/favicon.ico",
   organizationName: "litmuschaos",
   projectName: "litmus",
@@ -56,23 +56,27 @@ module.exports = {
       },
       items: [
         {
-          activeBasePath: "docs",
-          label: "Docs",
+          type: "docsVersion",
+          position: "right",
+        },
+        {
+          activeBasePath: "Version",
+          label: "Versions",
           position: "left",
           items: [
             // adding items will create a dropdown
             {
               label: versions[0],
-              to: "docs/getstarted",
+              to: "docs/",
               activeBaseRegex: `docs/(?!${versions.join("|")}|next)`,
             },
             ...versions.slice(1).map((version) => ({
               label: version,
-              to: `docs/${version}/getstarted`,
+              to: `docs/${version}/`,
             })),
             {
               label: "Master/Unreleased",
-              to: "docs/next/getstarted",
+              to: "docs/next/",
             },
           ],
         },

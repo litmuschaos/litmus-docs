@@ -154,9 +154,19 @@
     ],
     "Troubleshooting":["version-1.11.0/faq-troubleshooting"],
     "Advanced": [
-      "version-1.11.0/admin-mode",
-      "version-1.11.0/namespaced-mode",
-      "version-1.11.0/litmus-psp"
+      {
+        "type": "category",
+        "label": "Operational Modes",
+        "items": [
+          "version-1.11.0/admin-mode",
+          "version-1.11.0/namespaced-mode"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Security",
+        "items": ["version-1.11.0/litmus-psp"]
+      }    
     ]
   }
 }

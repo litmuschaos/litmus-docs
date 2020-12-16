@@ -150,8 +150,14 @@
     ],
     "Troubleshooting":["version-1.10.0/faq-troubleshooting"],
     "Advanced": [
-      "version-1.10.0/admin-mode",
+      {
+        "type": "category",
+        "label": "Operational Modes",
+        "items": [
+          "version-1.10.0/admin-mode",
       "version-1.10.0/namespaced-mode"
+        ]
+      }
     ]
   }
 }

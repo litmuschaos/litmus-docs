@@ -6,9 +6,7 @@ sidebar_label: Architecture
 
 <hr/>
 
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-<img src={useBaseUrl('docs/assets/litmus-schematic.png')} width="800" />
+<img src={require('./assets/litmus-schematic.png').default} width="800" />
 
 **Chaos-Operator**
 
