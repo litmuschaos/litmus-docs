@@ -1,0 +1,130 @@
+{
+  "version-1.9.0/docs": {
+    "Getting Started": [
+      "version-1.9.0/getstarted",
+      "version-1.9.0/chaoshub",
+      "version-1.9.0/plugins",
+      "version-1.9.0/architecture",
+      "version-1.9.0/resources",
+      "version-1.9.0/community",
+      "version-1.9.0/devguide"
+    ],
+    "Litmus Demo": [
+      "version-1.9.0/litmus-demo"
+    ],
+    "Concepts": [
+      "version-1.9.0/chaosengine",
+      "version-1.9.0/chaosexperiment",
+      "version-1.9.0/chaosschedule",
+      "version-1.9.0/chaosresult",
+      "version-1.9.0/litmus-probe"
+    ],
+    "Platforms": [
+      {
+        "type": "category",
+        "label": "OpenShift",
+        "items": [
+          "version-1.9.0/openshift-litmus"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Rancher",
+        "items": [
+          "version-1.9.0/rancher-litmus"
+        ]
+      }
+    ],
+    "Experiments": [
+      {
+        "type": "category",
+        "label": "Generic",
+        "items": [
+          "version-1.9.0/pod-delete",
+          "version-1.9.0/container-kill",
+          "version-1.9.0/pod-network-latency",
+          "version-1.9.0/pod-network-loss",
+          "version-1.9.0/pod-network-corruption",
+          "version-1.9.0/pod-cpu-hog",
+          "version-1.9.0/pod-memory-hog",
+          "version-1.9.0/disk-fill",
+          "version-1.9.0/disk-loss",
+          "version-1.9.0/node-cpu-hog",
+          "version-1.9.0/node-memory-hog",
+          "version-1.9.0/node-drain",
+          "version-1.9.0/kubelet-service-kill",
+          "version-1.9.0/pod-network-duplication",
+          "version-1.9.0/node-taint",
+          "version-1.9.0/docker-service-kill",
+          "version-1.9.0/pod-autoscaler",
+          "version-1.9.0/Kubernetes-Chaostoolkit-Application",
+          "version-1.9.0/Kubernetes-Chaostoolkit-Service",
+          "version-1.9.0/Kubernetes-Chaostoolkit-Cluster-Kiam",
+          "version-1.9.0/pod-io-stress",
+          "version-1.9.0/node-io-stress"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Kube-AWS",
+        "items": [
+          "version-1.9.0/Kubernetes-Chaostoolkit-AWS"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "OpenEBS",
+        "items": [
+          "version-1.9.0/openebs-target-container-failure",
+          "version-1.9.0/openebs-target-network-delay",
+          "version-1.9.0/openebs-target-network-loss",
+          "version-1.9.0/openebs-target-pod-failure",
+          "version-1.9.0/openebs-pool-pod-failure",
+          "version-1.9.0/openebs-pool-container-failure",
+          "version-1.9.0/openebs-pool-network-delay",
+          "version-1.9.0/openebs-pool-network-loss",
+          "version-1.9.0/openebs-control-plane-chaos",
+          "version-1.9.0/cStor-pool-chaos",
+          "version-1.9.0/openebs-pool-disk-loss",
+          "version-1.9.0/openebs-nfs-provisioner-kill"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Kafka",
+        "items": [
+          "version-1.9.0/kafka-broker-pod-failure",
+          "version-1.9.0/kafka-broker-disk-failure"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "CoreDns",
+        "items": [
+          "version-1.9.0/coredns-pod-delete"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Cassandra",
+        "items": [
+          "version-1.9.0/cassandra-pod-delete"
+        ]
+      }
+    ],
+    "Scheduler": [
+      "version-1.9.0/scheduling"
+    ],
+    "Chaos Workflow": [
+      "version-1.9.0/chaos-workflows"
+    ],
+    "Litmus FAQs": [
+      "version-1.9.0/faq-general",
+      "version-1.9.0/faq-troubleshooting"
+    ],
+    "Advanced": [
+      "version-1.9.0/admin-mode",
+      "version-1.9.0/namespaced-mode"
+    ]
+  }
+}

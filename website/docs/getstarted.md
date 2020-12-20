@@ -1,7 +1,6 @@
 ---
 id: getstarted
 title: Getting Started with Litmus
-slug: "/"
 sidebar_label: Introduction
 ---
 

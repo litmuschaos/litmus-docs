@@ -42,7 +42,7 @@ module.exports = {
   tagline: "A website for testing",
   url: "https://docs.litmuschaos.io",
   baseUrl: "/",
-  onBrokenLinks: "ignore",
+  onBrokenLinks: "throw",
   favicon: "img/favicon.ico",
   organizationName: "litmuschaos",
   projectName: "litmus",
@@ -72,11 +72,11 @@ module.exports = {
             },
             ...versions.slice(1).map((version) => ({
               label: version,
-              to: `docs/${version}/`,
+              to: `docs/${version}/getstarted`,
             })),
             {
               label: "Master/Unreleased",
-              to: "docs/next/",
+              to: "docs/next/getstarted",
             },
           ],
         },
@@ -121,9 +121,9 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          routeBasePath: "docs",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/litmuschaos/litmus-docs-beta/edit/staging/",
+          editUrl:
+            "https://github.com/litmuschaos/litmus-docs-beta/edit/staging/",
           showLastUpdateTime: true,
         },
         theme: {

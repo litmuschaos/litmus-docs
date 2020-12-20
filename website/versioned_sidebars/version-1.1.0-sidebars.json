@@ -1,0 +1,66 @@
+{
+  "version-1.1.0-docs": {
+    "Getting Started": [
+      "version-1.1.0/getstarted",
+      "version-1.1.0/chaoshub",
+      "version-1.1.0/plugins",
+      "version-1.1.0/architecture",
+      "version-1.1.0/resources",
+      "version-1.1.0/community",
+      "version-1.1.0/devguide"
+    ],
+    "Experiments": [
+      {
+        "type": "category",
+        "label": "Generic",
+        "items": [
+          "version-1.1.0/pod-delete",
+          "version-1.1.0/container-kill",
+          "version-1.1.0/pod-network-latency",
+          "version-1.1.0/pod-network-loss",
+          "version-1.1.0/pod-network-corruption",
+          "version-1.1.0/pod-cpu-hog",
+          "version-1.1.0/disk-fill",
+          "version-1.1.0/disk-loss",
+          "version-1.1.0/node-cpu-hog",
+          "version-1.1.0/node-drain"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "OpenEBS",
+        "items": [
+          "version-1.1.0/openebs-target-container-failure",
+          "version-1.1.0/openebs-target-network-delay",
+          "version-1.1.0/openebs-target-network-loss",
+          "version-1.1.0/openebs-target-pod-failure",
+          "version-1.1.0/openebs-pool-pod-failure",
+          "version-1.1.0/openebs-pool-container-failure",
+          "version-1.1.0/openebs-pool-network-delay",
+          "version-1.1.0/openebs-pool-network-loss",
+          "version-1.1.0/openebs-control-plane-chaos",
+          "version-1.1.0/cStor-pool-chaos"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Kafka",
+        "items": [
+          "version-1.1.0/kafka-broker-pod-failure",
+          "version-1.1.0/kafka-broker-disk-failure"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "CoreDns",
+        "items": [
+          "version-1.1.0/coredns-pod-delete"
+        ]
+      }
+    ],
+    "Litmus FAQs": [
+      "version-1.1.0/faq-general",
+      "version-1.1.0/faq-troubleshooting"
+    ]
+  }
+}

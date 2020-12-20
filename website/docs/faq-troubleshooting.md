@@ -1,6 +1,6 @@
 ---
 id: faq-troubleshooting
-title: Troubleshooting Litmus
+title: "Troubleshooting Litmus"
 sidebar_label: Troubleshooting
 ---
 

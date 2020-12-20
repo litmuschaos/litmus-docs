@@ -1,0 +1,312 @@
+---
+id: disk-loss
+title: Disk Loss Experiment Details
+sidebar_label: Disk Loss
+original_id: disk-loss
+---
+
+---
+
+## Experiment Metadata
+
+<table>
+  <tr>
+    <th> Type </th>
+    <th> Description  </th>
+    <th> Tested K8s Platform </th>
+  </tr>
+  <tr>
+    <td> Generic </td>
+    <td> External disk loss from the node </td>
+    <td> GKE, AWS(KOPS) </td>
+  </tr>
+</table>
+
+## Prerequisites
+
+- Ensure that the Litmus Chaos Operator is running by executing `kubectl get pods` in operator namespace (typically, `litmus`). If not, install from [here](https://raw.githubusercontent.com/litmuschaos/pages/master/docs/litmus-operator-latest.yaml)
+- Ensure that the `disk-loss` experiment resource is available in the cluster by `kubectl get chaosexperiments` in the desired namespace. If not, install from <a href="https://hub.litmuschaos.io/charts/generic/experiments/disk-loss" target="_blank">here</a>
+- Ensure to create a Kubernetes secret having the gcloud/aws access configuration(key) in the namespace of `CHAOS_NAMESPACE`.
+- There should be administrative access to the platform on which the cluster is hosted, as the recovery of the affected node could be manual. Example gcloud access to the project
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: cloud-secret
+type: Opaque
+stringData:
+  cloud_config.yml: |-
+  # Add the cloud AWS credentials or GCP service account respectively
+```
+
+## Entry-Criteria
+
+- The disk is healthy before chaos injection
+
+## Exit-Criteria
+
+- The disk is healthy post chaos injection
+- If `APP_CHECK` is true, the application pod health is checked post chaos injection
+
+## Details
+
+- In this experiment, the external disk is detached from the node for a period equal to the `TOTAL_CHAOS_DURATION`.
+- This chaos experiment is supported on GKE and AWS platforms.
+- If the disk is created as part of dynamic persistent volume, it is expected to re-attach automatically. The experiment re-attaches the disk if it is not already attached.
+
+<b>Note:</b> Especially with mounted disk. The remount of disk is a manual step that the user has to perform.
+
+## Integrations
+
+- Disk loss is effected using the litmus chaoslib that internally makes use of the aws/gcloud commands
+
+## Steps to Execute the Chaos Experiment
+
+- This Chaos Experiment can be triggered by creating a ChaosEngine resource on the cluster. To understand the values to provide in a ChaosEngine specification, refer [Getting Started](getstarted.md/#prepare-chaosengine)
+
+- Follow the steps in the sections below to create the chaosServiceAccount, prepare the ChaosEngine & execute the experiment.
+
+### Prepare chaosServiceAccount
+
+- Use this sample RBAC manifest to create a chaosServiceAccount in the desired (app) namespace. This example consists of the minimum necessary role permissions to execute the experiment.
+
+#### Sample Rbac Manifest
+
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/disk-loss/rbac.yaml yaml"
+
+```yaml
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: nginx-sa
+  namespace: default
+  labels:
+    name: nginx-sa
+---
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRole
+metadata:
+  name: nginx-sa
+  labels:
+    name: nginx-sa
+rules:
+  - apiGroups: ["", "litmuschaos.io", "batch"]
+    resources:
+      [
+        "pods",
+        "jobs",
+        "secrets",
+        "chaosengines",
+        "chaosexperiments",
+        "chaosresults",
+      ]
+    verbs: ["create", "list", "get", "patch", "update", "delete"]
+---
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: nginx-sa
+  labels:
+    name: nginx-sa
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: nginx-sa
+subjects:
+  - kind: ServiceAccount
+    name: nginx-sa
+    namespace: default
+```
+
+### Prepare ChaosEngine
+
+- Provide the application info in `spec.appinfo`
+- Provide the auxiliary applications info (ns & labels) in `spec.auxiliaryAppInfo`
+- Override the experiment tunables if desired
+
+### Supported Experiment Tunables for application
+
+<table>
+  <tr>
+    <th> Parameter </th>
+    <th> Description  </th>
+    <th> Type </th>
+    <th> Notes </th>
+  </tr>
+  <tr>
+    <td> CHAOS_NAMESPACE </td>
+    <td> This is a chaos namespace which will create all infra chaos resources in that namespace </td>
+    <td> Mandatory </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td> CLOUD_PLATFORM </td>
+    <td> Cloud Platform name </td>
+    <td> Mandatory </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td> PROJECT_ID </td>
+    <td> GCP project ID, leave blank if it's AWS </td>
+    <td> Mandatory </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td> NODE_NAME </td>
+    <td> Node name of the cluster </td>
+    <td> Mandatory </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td> DISK_NAME </td>
+    <td> Disk Name of the node, it must be an external disk. </td>
+    <td> Mandatory </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td> DEVICE_NAME </td>
+    <td> Enter the device name which you wanted to mount only for AWS. </td>
+    <td> Mandatory </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td> ZONE_NAME </td>
+    <td> Zone Name for GCP and region name for AWS </td>
+    <td> Mandatory </td>
+    <td> Note: Use REGION_NAME for AWS </td>
+  </tr>
+  <tr>
+    <td> CHAOSENGINE </td>
+    <td> ChaosEngine CR name associated with the experiment instance </td>
+    <td> Mandatory </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td> CHAOS_SERVICE_ACCOUNT </td>
+    <td> Service account used by the litmus </td>
+    <td> Mandatory </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td> TOTAL_CHAOS_DURATION </td>
+    <td> The time duration for chaos insertion (sec) </td>
+    <td> Optional </td>
+    <td> Defaults to 15s </td>
+  </tr>
+  <tr>
+    <td> APP_CHECK </td>
+    <td> If it checks to true, the experiment will check the status of the application. </td>
+    <td> Optional </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td> APP_NAMESPACE </td>
+    <td> Namespace in which application pods are deployed </td>
+    <td> Optional </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td> APP_LABEL </td>
+    <td> Unique Labels in `key=value` format of application deployment </td>
+    <td> Optional </td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td> RAMP_TIME </td>
+    <td> Period to wait before injection of chaos in sec </td>
+    <td> Optional  </td>
+    <td> </td>
+  </tr>
+</table>
+
+## Sample ChaosEngine Manifest
+
+[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/disk-loss/engine.yaml yaml"
+
+```yaml
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+  name: nginx-chaos
+  namespace: default
+spec:
+  # It can be true/false
+  annotationCheck: "false"
+  #ex. values: ns1:name=percona,ns2:run=nginx
+  auxiliaryAppInfo: ""
+  appinfo:
+    appns: "default"
+    applabel: "app=nginx"
+    appkind: "deployment"
+  chaosServiceAccount: nginx-sa
+  monitoring: false
+  components:
+    runner:
+      image: "litmuschaos/chaos-executor:1.0.0"
+      type: "go"
+  # It can be retain/delete
+  jobCleanUpPolicy: "delete"
+  experiments:
+    - name: disk-loss
+      spec:
+        components:
+          env:
+            # set chaos duration (in sec) as desired
+            - name: TOTAL_CHAOS_DURATION
+              value: "60"
+            # set cloud platform name
+            - name: CLOUD_PLATFORM
+              value: "GCP"
+            # set app_check to check application state
+            - name: APP_CHECK
+              value: "true"
+            # This is a chaos namespace into which all infra chaos resources are created
+            - name: CHAOS_NAMESPACE
+              value: "default"
+            # GCP project ID
+            - name: PROJECT_ID
+              value: "litmus-demo-123"
+            # Node name of the cluster
+            - name: NODE_NAME
+              value: "demo-node-123"
+            # Disk Name of the node, it must be an external disk.
+            - name: DISK_NAME
+              value: "demo-disk-123"
+            # Enter the device name which you wanted to mount only for AWS.
+            - name: DEVICE_NAME
+              value: "/dev/sdb"
+            # Name of Zone in which node is present (GCP)
+            # Use Region Name when running with AWS (ex: us-central1)
+            - name: ZONE_NAME
+              value: "us-central1-a"
+            # ChaosEngine CR name associated with the experiment instance
+            - name: CHAOSENGINE
+              value: ""
+            # Service account used by the litmus
+            - name: CHAOS_SERVICE_ACCOUNT
+              value: ""
+```
+
+## Create the ChaosEngine Resource
+
+- Create the ChaosEngine manifest prepared in the previous step to trigger the Chaos.
+
+`kubectl apply -f chaosengine.yml`
+
+## Watch Chaos progress
+
+- Setting up a watch of the app which is using the disk in the Kubernetes Cluster
+
+`watch -n 1 kubectl get pods`
+
+## Check Chaos Experiment Result
+
+- Check whether the application is resilient to the disk loss, once the experiment (job) is completed. The ChaosResult resource name is derived like this: `{"<ChaosEngine-Name>-<ChaosExperiment-Name>"}`.
+
+`kubectl describe chaosresult nginx-chaos-disk-loss -n <CHAOS_NAMESPACE>`
+
+## Disk Loss Experiment Demo [TODO]
+
+- A sample recording of this experiment execution is provided here.

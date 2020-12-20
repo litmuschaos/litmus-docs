@@ -2,6 +2,7 @@
 id: chaosresult
 title: Constructing the ChaosResult
 sidebar_label: ChaosResult
+original_id: chaosresult
 ---
 
 ---
