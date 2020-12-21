@@ -2,6 +2,9 @@ name: LitmusDocs-CI
 on:
   pull_request:
     types: [ opened, synchronize, reopened ]
+    paths:
+      - '.github/workflows/dockerbuild.yml'
+      - 'website/**'
 
 jobs:
   embedmd:
@@ -21,7 +24,7 @@ jobs:
         run: |
           sudo apt install boxes
           go get github.com/campoy/embedmd
-          cd docs
+          cd website/docs
           embedmd -w $(find *.md)
         continue-on-error: true  
         
@@ -36,7 +39,7 @@ jobs:
             output=$(git status -s)
             echo "$output" | boxes -d stone -p a2v1
             tput setaf 3; echo "Please follow the instructions to run embedmd:"
-            tput setaf 3; echo "cd docs"
+            tput setaf 3; echo "cd website/docs"
             tput setaf 3; echo "embedmd -w \$(find *.md)"
             tput setaf 6; echo "For more info visit https://github.com/litmuschaos/litmus-docs/blob/master/CONTRIBUTING.md"
             exit 1
@@ -44,3 +47,31 @@ jobs:
             tput setaf 2; echo "Nothing to embed"
           fi
         shell: sh
+        
+  ci:
+    runs-on: ubuntu-18.04
+    defaults:
+      run:
+        working-directory: website
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: '12.x'
+
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-website-
+
+      - run: yarn install --frozen-lockfile
+      - run: yarn build

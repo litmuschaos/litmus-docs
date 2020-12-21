@@ -1,5 +1,6 @@
+<img src="https://camo.githubusercontent.com/953211f24c1c246f7017703f67b9779e4589bf76/68747470733a2f2f6c616e6473636170652e636e63662e696f2f6c6f676f732f6c69746d75732e737667"  width="160" align="left">
 
-Documentation pour le projet Litmus
+# Documentation for the Litmus Project
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Flitmuschaos%2Flitmus-docs.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Flitmuschaos%2Flitmus-docs?ref=badge_shield)
 [![Slack Channel](https://img.shields.io/badge/Slack-Join-purple)](https://slack.litmuschaos.io)
@@ -14,67 +15,70 @@ Documentation pour le projet Litmus
 ![GitHub top language](https://img.shields.io/github/languages/top/litmuschaos/litmus-docs)
 
 
-Une description détaillée de projet Docusaurus est disponible
- [ici](https://docusaurus.io/docs/en/installation.html).
+#### *Read this in [other languages](translations/TRANSLATIONS.md).*
 
-## Pour les développeurs
+[FR](translations/README-fr.md)
 
-### Cloner le répertoire litmus-docs
+Additional details on the Docusaurus project can be found [here](https://docusaurus.io/docs/en/installation.html).
+#
+## For Developers
+
+### Clone litmus-docs repository
 
 ```bash
 git clone https://github.com/litmuschaos/litmus-docs.git
 cd litmus-docs
 ```
 
-Le serveur de site web documentaire peut être configuré manuellement ou en utilisant docker  compose
+The docs website server can be setup manually or through docker compose
 
-## Utiliser les commandes embedmd avant de commiter les changements
+## Use embedmd command before commiting changes
 
-Le code incorporé sera extrait du fichier à `URL`, qui peut être un chemin relatif vers un autre dans le fichier de système local( en utilisant les barres obliques comme spérateur de répertoire) ou une URL commençant par  `http://` ou `https://.`
+The embedded code will be extracted from the file at `URL`, which can either be a relative path to a file in the local file system (using forward slashes as directory separator) or a URL starting with `http://` or `https://.`
 
 _Installation:_
 
-- Il faut bien vérfier que [golang](https://github.com/golang/go) est installé. On a juste besoin d'exécuter la commande ci-dessous pour installer embedmd.
+- Make sure you have [golang](https://github.com/golang/go) installed. We just need to run the following command to install embedmd.
 
 ```bash
 go get github.com/campoy/embedmd
 ```
 
-_Exécution embedmd (doît être faite avant de commiter les modifications):_
+_Run embedmd (needs to be done before commiting the changes):_
 
-- Suivez les étapes ci-dessous(à partir de répertoire root) pour exécuter embedmd:
+- Follow the steps (from root directory) to run embedmd:
 
 ```bash
 cd docs
 embedmd -w $(find *.md)
 ```
-_Vérifier la différence:_
+_Check the difference:_
 
-- L'exécution de cette commmande `embedmd -d docs-name.md` révelera la différence entre le contenu de docs-name.md et le résultat de embedmd docs-name.md.
+- Executing `embedmd -d docs-name.md` will display the difference between the contents of docs-name.md and the output of embedmd docs-name.md.
 
 
-## La configuration manuelle
+## Manual Setup
 
-### Installer Node.js
+### Install Node.js
 
 ```bash
 sudo apt-get install software-properties-common
 curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
 ```
 
-### Télécharger la dérniére version Node.js 
+### Get the latest Node.js package
 
 ```bash
 sudo apt-get install -y nodejs
 ```
 
-### Installer Yarn
+### Install Yarn
 
 ```bash
 npm install -g yarn
 ```
 
-### Démarrer le serveur 
+### Start the server
 
 ```bash
 cd website
@@ -82,25 +86,24 @@ yarn install
 yarn start
 ```
 
-## La configuration via Docker compose
+## Using Docker compose
 
-### Installer docker compose
+### Install docker compose
 
 ```bash
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-### Démarrer le serveur
+### Run the server
 
 ```bash
 docker-compose up
 ```
 
 
-## Parcourir la documentation locale
+## Browse local documentation
 http://localhost:3000/docs/next/getstarted.html
-
 
 ## License
 
