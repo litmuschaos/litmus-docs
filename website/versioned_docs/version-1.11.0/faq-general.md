@@ -2,6 +2,7 @@
 id: faq-general
 title: The What, Why & How of Litmus
 sidebar_label: General
+original_id: faq-general
 ---
 
 ---

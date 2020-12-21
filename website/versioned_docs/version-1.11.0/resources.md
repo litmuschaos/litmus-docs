@@ -2,6 +2,7 @@
 id: resources
 title: Resources related to Chaos Engineering on Kubernetes
 sidebar_label: Resources
+original_id: resources
 ---
 
 ---

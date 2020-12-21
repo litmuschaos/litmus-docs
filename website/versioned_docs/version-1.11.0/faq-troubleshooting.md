@@ -2,6 +2,7 @@
 id: faq-troubleshooting
 title: Troubleshooting Litmus
 sidebar_label: Troubleshooting
+original_id: faq-troubleshooting
 ---
 
 ---

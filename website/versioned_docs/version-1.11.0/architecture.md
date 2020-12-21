@@ -1,12 +1,13 @@
 ---
 id: architecture
+original_id: architecture
 title: Litmus Architecture
 sidebar_label: Architecture
 ---
 
 <hr/>
 
-<img src={require('./assets/litmus-schematic.png').default} width="800" />
+<img src={require("./assets/litmus-schematic.png").default} width="800" />
 
 **Chaos-Operator**
 
