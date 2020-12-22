@@ -1,13 +1,14 @@
 name: LitmusDocs-CI
 on:
   pull_request:
-    types: [ opened, synchronize, reopened ]
+    types: [ opened, synchronize, reopened, edited ]
     paths:
       - '.github/workflows/dockerbuild.yml'
+      - '.github/workflows/Pull_Request.yml'
       - 'website/**'
 
 jobs:
-  embedmd:
+  embedmdCheck_and_linksVerification:
     runs-on: ubuntu-latest
     steps:
 
@@ -19,6 +20,11 @@ jobs:
         with:
           stable: 'false'
           go-version: '1.14.0'
+
+      - name: Links Verification
+        run: |
+          go get -u -v github.com/bmuschko/link-verifier
+          link-verifier --dirs website,README.md --fail=false
 
       - name: Installing and Running embedmed
         run: |
@@ -54,4 +60,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build
-        run: docker build -t docusaurusdocs .
+        run: docker build -t $GITHUB_REPOSITORY .

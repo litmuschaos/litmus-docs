@@ -6,13 +6,14 @@ on:
       - master
     paths:
       - '.github/workflows/dockerbuild.yml'
+      - '.github/workflows/Pull_Request.yml'
       - 'website/**'
 
 jobs:
   cd:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Declare some variables
         id: vars
         shell: bash
@@ -21,12 +22,9 @@ jobs:
           echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
       - name: Docker login
         run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USER }} --password-stdin
-      - name: Build
-        run: docker build -t docusaurusdocs .
-      - name: Tags
+      - name: Build and Push the Docker Image
         run: |
-          docker tag docusaurusdocs jonsy13/docusaurusdocs:${{ steps.vars.outputs.branch }}-${{ steps.vars.outputs.sha_short }}
-      - name: Push
-        run: |
-          docker push jonsy13/docusaurusdocs:${{ steps.vars.outputs.branch }}-${{ steps.vars.outputs.sha_short }}
+          docker build -t ${GITHUB_REPOSITORY}:${{ steps.vars.outputs.branch }}-${{ steps.vars.outputs.sha_short }} .
+          docker push ${GITHUB_REPOSITORY}:${{ steps.vars.outputs.branch }}-${{ steps.vars.outputs.sha_short }}
+          
 
