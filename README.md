@@ -10,17 +10,18 @@
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/litmuschaos/litmus-docs?logo=git)](https://github.com/litmuschaos/litmus-docs/pulls)
 [![Twitter Follow](https://img.shields.io/twitter/follow/litmuschaos?style=social)](https://twitter.com/LitmusChaos)
 [![YouTube Channel](https://img.shields.io/badge/YouTube-Subscribe-red)](https://www.youtube.com/channel/UCa57PMqmz_j0wnteRa9nCaw)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/litmuschaos/litmus-docs/pulls) 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/litmuschaos/litmus-docs/pulls)
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/litmuschaos/litmus-docs)
 ![GitHub top language](https://img.shields.io/github/languages/top/litmuschaos/litmus-docs)
 
-
-#### *Read this in [other languages](translations/TRANSLATIONS.md).*
+#### _Read this in [other languages](translations/TRANSLATIONS.md)._
 
 [FR](translations/README-fr.md)
 
 Additional details on the Docusaurus project can be found [here](https://docusaurus.io/docs/en/installation.html).
+
 #
+
 ## For Developers
 
 ### Clone litmus-docs repository
@@ -49,13 +50,13 @@ _Run embedmd (needs to be done before commiting the changes):_
 - Follow the steps (from root directory) to run embedmd:
 
 ```bash
-cd docs
+cd website/docs
 embedmd -w $(find *.md)
 ```
+
 _Check the difference:_
 
 - Executing `embedmd -d docs-name.md` will display the difference between the contents of docs-name.md and the output of embedmd docs-name.md.
-
 
 ## Manual Setup
 
@@ -101,8 +102,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose up
 ```
 
-
 ## Browse local documentation
+
 http://localhost:3000/docs/next/getstarted.html
 
 ## License
