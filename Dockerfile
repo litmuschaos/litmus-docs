@@ -3,7 +3,7 @@ FROM node:14.15.0 AS build-env
 WORKDIR /app/website
 
 EXPOSE 3000 35729
-COPY ./website /app/website
+COPY . /app/
 RUN npm install
 RUN npm run build
 CMD ["npm", "start"]
