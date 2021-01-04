@@ -31,6 +31,7 @@ npm run docusaurus docs:version <VERSION>
 ```
 
 This command will tag a new version from master docs.
+It will copy the docs/ folder contents into a new versioned_docs/version-`<version>`/ folder, create a versioned sidebars file based from your current sidebar configuration (if it exists) - saved as versioned_sidebars/version-`<version>`-sidebars.json and append the new version number to versions.json.
 
 ## Deployment
 
