@@ -1,0 +1,453 @@
+{
+  "version-2.0-beta-0/docs": [
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Introduction",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.0-beta-0/introduction"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Getting Started",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.0-beta-0/getstarted"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.0-beta-0/chaoshub"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.0-beta-0/plugins"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.0-beta-0/architecture"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.0-beta-0/resources"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.0-beta-0/devguide"
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Platforms",
+          "items": [
+            {
+              "collapsed": true,
+              "type": "category",
+              "label": "OpenShift",
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "version-2.0-beta-0/openshift-litmus"
+                }
+              ]
+            },
+            {
+              "collapsed": true,
+              "type": "category",
+              "label": "Rancher",
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "version-2.0-beta-0/rancher-litmus"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Litmus Demo",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.0-beta-0/litmus-demo"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Concepts",
+      "items": [
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Custom Resources",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/chaosengine"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/chaosexperiment"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/chaosschedule"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/chaosresult"
+            }
+          ]
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Hypothesis",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/litmus-probe"
+            }
+          ]
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Operational Modes",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/admin-mode"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/namespaced-mode"
+            }
+          ]
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Security",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/litmus-psp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Experiments",
+      "items": [
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Generic",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/pod-delete"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/container-kill"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/pod-network-latency"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/pod-network-loss"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/pod-network-corruption"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/pod-cpu-hog"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/pod-memory-hog"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/disk-fill"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/disk-loss"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/node-cpu-hog"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/node-memory-hog"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/node-drain"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/kubelet-service-kill"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/pod-network-duplication"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/node-taint"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/docker-service-kill"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/pod-autoscaler"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/Kubernetes-Chaostoolkit-Application"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/Kubernetes-Chaostoolkit-Service"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/pod-io-stress"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/node-io-stress"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/node-restart"
+            }
+          ]
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Kube-AWS",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/Kubernetes-Chaostoolkit-AWS"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/ebs-loss"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/ec2-terminate"
+            }
+          ]
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "OpenEBS",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/openebs-target-container-failure"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/openebs-target-network-delay"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/openebs-target-network-loss"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/openebs-target-pod-failure"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/openebs-pool-pod-failure"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/openebs-pool-container-failure"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/openebs-pool-network-delay"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/openebs-pool-network-loss"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/openebs-control-plane-chaos"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/cStor-pool-chaos"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/openebs-pool-disk-loss"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/openebs-nfs-provisioner-kill"
+            }
+          ]
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Kafka",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/kafka-broker-pod-failure"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/kafka-broker-disk-failure"
+            }
+          ]
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "CoreDns",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/coredns-pod-delete"
+            }
+          ]
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Cassandra",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/cassandra-pod-delete"
+            }
+          ]
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Kube-Components",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/Kubernetes-Chaostoolkit-Cluster-Kiam"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/Kubernetes-Chaostoolkit-Cluster-active-monitor-controller"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/Kubernetes-Chaostoolkit-Cluster-alb-ingress-controller"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/Kubernetes-Chaostoolkit-Cluster-kube-proxy"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/Kubernetes-Chaostoolkit-Cluster-prometheus-k8s-prometheus"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/Kubernetes-Chaostoolkit-Cluster-prometheus-pushgateway"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/Kubernetes-Chaostoolkit-Cluster-prometheus-operator"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/Kubernetes-Chaostoolkit-Cluster-Calico-Node"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0-beta-0/Kubernetes-Chaostoolkit-Cluster-Wavefront"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Scheduler",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.0-beta-0/scheduling"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Chaos Workflow",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.0-beta-0/chaos-workflows"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "FAQs",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.0-beta-0/faq-general"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Troubleshooting",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.0-beta-0/faq-troubleshooting"
+        }
+      ]
+    }
+  ]
+}
