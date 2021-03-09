@@ -76,7 +76,7 @@ module.exports = {
             })),
             {
               label: "Master/Unreleased",
-              to: "docs/next/getstarted",
+              to: "docs/next/introduction",
             },
           ],
         },
@@ -115,6 +115,7 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} LitmusChaos Authors. All rights reserved.`,
     },
+    hideableSidebar: true,
   },
   presets: [
     [
