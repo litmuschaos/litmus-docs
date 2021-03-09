@@ -13,7 +13,7 @@ Service downtimes are always expensive, and they are very difficult to predict a
 
 Litmus is a complete framework to practice chaos engineering in a cloud-native way. Litmus helps both Developers and SREs in automating the chaos experiments at different stages of DevOps such as during development, in CI pipelines, during CD and in production. A chaos experiment is a fundamental unit in Litmus architecture. Users use readily available chaos experiments or create new experiments to construct a required chaos workflow. A chaos workflow is much more than a simple chaos experiment, it provides support to the user interms of defining the expected result, observing the result, analysing the overall system behaviour and finally in making a decision if the system has to be tuned for increasing the resilience. 
 
-Litmus provides necessary infrastructure to develop, use and manage chaos workflows for a typical development or operations team. Teaming and GitOps features of Litmus help greatly to collaborate the chaos workflows management withing the teams or software organisations. 
+Litmus provides necessary infrastructure to develop, use and manage chaos workflows for a typical development or operations team. Teaming and GitOps features of Litmus help greatly to collaborate the chaos workflows management within the teams or software organisations. 
 
 ## Litmus 2.0 Prologue
 The goal of Litmus project is to create a complete platform to practice chaos engineering at scale in a Kubernetes way. Of course this had to be done incrementally, first create a toolset for chaos injection and then add additional features to make it a platform. Litmus 1.x achieved the goal of keeping it completely open source, creating a ChaosHub and creating the required CRDs, Operators and Schedulers. With Litmus 1.x, users have a working chaos engineering toolset aligned with the original goals. Over time, the monthly cadence releases added the following features.
@@ -28,7 +28,7 @@ The goal of Litmus project is to create a complete platform to practice chaos en
 
   *Note:* Litmus itself is composed of microservices. For 2.0, more microservices are added and the the existing ones will continue to work. Litmus 2.0 is completely backward compatible. No features are deprecated. Migration path is about constructing new artifacts such as ChaosWorkflows that include the current chaos experiments in use by the users.
 
-A high level comparison between Litmux 1.x and Ltimus 2.0 providing a holistic view of the feature addition you get  in Litmus 2.0.
+A high level comparison between Litmus 1.x and Litmus 2.0 providing a holistic view of the feature addition you get  in Litmus 2.0.
 
 | Litmus 1.x            | Litmus 2.0                            |
 | --------------------- | ------------------------------------- |
