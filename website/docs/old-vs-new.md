@@ -1,7 +1,7 @@
 ---
-id: introduction
-title: LitmusChaos Documentation
-sidebar_label: Introduction
+id: old-vs-new
+title: 1.x with 2.0 Comparison
+sidebar_label: 1.x VS 2.0
 ---
 
 ---
@@ -51,10 +51,3 @@ A high level comparison between Litmus 1.x and Litmus 2.0 providing a holistic v
 ### Litmus features
 
 ### Access Litmus API [here](https://litmuschaos.github.io/litmus/api.html) 
-
-
-
-
-
-
-

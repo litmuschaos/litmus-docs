@@ -1,15 +1,26 @@
 module.exports = {
   docs: {
     Introduction: [
-      "introduction",
-      // "diagram",
+      "old-vs-new",
+      "diagram",
       // "feature-definition"
     ],
     "Getting Started": [
-      "prerequisite",
-      // "installation",
-      // "how-to",
-      // "unistallation",
+      "prerequisite",      
+      {
+        "Installation": [
+          "litmus-install",
+          "agent-install"          
+        ],
+      },
+      {
+        "How To": [
+          "create",
+          "schedule",
+          "observe",
+        ],
+      },
+      "uninstall",
     ],
     Features: [
       "gitops",
