@@ -1,36 +1,36 @@
 module.exports = {
   docs: {
     Introduction: [
-      "Introduction/Comparison/old-vs-new",
-      "Introduction/Diagram/diagram",
+      "old-vs-new",
+      "diagram",
       // "feature-definition"
     ],
     "Getting Started": [
-      "GettingStarted/Prerequisite/prerequisite",      
+      "prerequisite",      
       {
         "Installation": [
-          "GettingStarted/Installation/litmus-install",
-          "GettingStarted/Installation/agent-install"          
+          "litmus-install",
+          "agent-install"          
         ],
       },
       {
         "How To": [
-          "GettingStarted/HowTo/create",
-          "GettingStarted/HowTo/schedule",
-          "GettingStarted/HowTo/observe",
+          "create",
+          "schedule",
+          "observe",
         ],
       },
-      "GettingStarted/Uninstall/uninstall",
+      "uninstall",
     ],
     Features: [
-      "Features/gitops",
+      "gitops",
       // "settings",
       // "analytics",
       // "myhub",
       // "external-agents"
     ],
     Concepts: [
-      "Concepts/workflow",
+      "workflow",
       //   "probes",
       //   "cross-cloud-control",
       //   "litmusctl",
@@ -39,7 +39,7 @@ module.exports = {
       //   "service-acounts",
     ],
     "Advanced Concepts": [
-      "AdvancedConcepts/admin-mode",
+      "admin-mode",
       // "namespace-scope",
       // "security"
     ],
