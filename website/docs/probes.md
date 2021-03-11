@@ -5,7 +5,6 @@ sidebar_label: Probes
 ---
 
 ---
----
 ## Litmus Probes
 
 Litmus probes are pluggable checks that can be defined within the ChaosEngine for any chaos experiment. The experiment pods execute these checks based on the mode they are defined in & factor their success as necessary conditions in determining the verdict of the experiment (along with the standard “in-built” checks).
