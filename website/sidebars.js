@@ -24,6 +24,7 @@ module.exports = {
     ],
     Features: [
       "gitops",
+      "myhub",
       // "settings",
       // "analytics",
       // "myhub",
