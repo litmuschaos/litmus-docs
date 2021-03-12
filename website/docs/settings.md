@@ -5,6 +5,13 @@ sidebar_label: Settings
 ---
 
 ---
+Settings section allows a user to manage user related information and settings. At highlevel the settings section can be classified into the following
+
+1. My Account
+2. Team
+3. User Management
+4. GitOps
+
 
 ## My Account
 
@@ -12,7 +19,7 @@ Here you can edit your personal details such as full Name, email-id, and passwor
 
 **Note:** Edit Avatar feature will be available in the upcoming releases.
 
-## Teaming
+## Team
 
 Teaming is based on the following principles and each user can have one of the 3 user roles:
 1. Owner
@@ -25,7 +32,7 @@ Teaming is based on the following principles and each user can have one of the 3
     - Editor: Can make changes to the project, like view, edit, delete and create the workflow schedules
 
 - Settings page will not be visible to the user if he/she is browsing someone else’s project. The user can view the settings page if the user is the project owner.
- 
+
 - On the teaming tab, owner can view the list of team members with other details including their role in the project, email-id, date-time of joining the team of the project. Owner can view/send/accept an invitation. Owner can remove a member from his/her project. User can also exit a project of which he/she is a part of.
 
 ## User Management

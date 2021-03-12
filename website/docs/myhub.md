@@ -1,11 +1,11 @@
 ---
 id: myhub
-title: My Hub
-sidebar_label: My Hub
+title: MyHub
+sidebar_label: MyHub
 ---
 
 ---
-My Hub allows a user to orchestrate workflows from the Public **[ChaosHub](http://hub.litmuschaos.io/)** or an alternate source for the Experiments (basically, a **[fork](https://github.com/litmuschaos/chaos-charts)** of the public source with custom experiments).
+MyHub allows a user to orchestrate workflows from the Public **[ChaosHub](http://hub.litmuschaos.io/)** or an alternate source for the Experiments (basically, a **[fork](https://github.com/litmuschaos/chaos-charts)** of the public source with custom experiments).
 
 With this feature, a user can construct workflows by selecting, tuning and sequencing different experiments from their connected My Hubs.
 
@@ -30,13 +30,13 @@ Personal Access Tokens are used as an alternative to the password for authentica
 Just like the Access Token , SSH keys are used for the authentication. These keys come in pairs, a public key that is shared with the Git Services and a private key that is stored with the user. 
 SSH link of the repository should be provided if the user selects this method.
 
-## Syncing a My Hub 
-If some changes are made into the git repository, the user can reflect those changes in the hub by selecting the **Refresh Hub** option from the My Hub card.
+## Syncing a MyHub 
+If some changes are made into the git repository, the user can reflect those changes in the hub by selecting the **Refresh Hub** option from the MyHub card.
 
-## Editing a My Hub
-To make changes in a hub like changing the name, branch, access token etc, the user can select the **Edit Hub** option from the My Hub card.
+## Editing a MyHub
+To make changes in a hub like changing the name, branch, access token etc, the user can select the **Edit Hub** option from the MyHub card.
 
-## Experiments in a My Hub
+## Experiments in a MyHub
 ### 1. View the chart
 After connecting a hub, the user can view the different charts and the experiment. The charts are sorted according to different categories like generic, cassandra, kube-components etc.
 
@@ -46,5 +46,5 @@ The experiment page consists of all the important details like the description o
 The user can also find experiment yaml link, RBAC link and the Chaos Engine yaml link of the experiment.
 These yaml links are required for the creation of Custom Chaos Workflows.
 
-## Disconnect a My Hub
-To remove a My Hub from a project, the user can select the **Disconnect Hub** option from the My Hub card. 
+## Disconnect a MyHub
+To remove a MyHub from a project, the user can select the **Disconnect Hub** option from the MyHub card. 
