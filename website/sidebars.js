@@ -31,7 +31,7 @@ module.exports = {
     ],
     Concepts: [
       "workflow",
-      //   "probes",
+      "probes",
       //   "cross-cloud-control",
       //   "litmusctl",
       //   "crds",
