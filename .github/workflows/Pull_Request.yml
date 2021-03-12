@@ -61,3 +61,15 @@ jobs:
 
       - name: Build
         run: docker build -t $GITHUB_REPOSITORY .
+
+  Spellcheck:
+    runs-on: ubuntu-latest
+    steps:
+    # The checkout step
+    - uses: actions/checkout@master
+    - uses: rojopolis/spellcheck-github-actions@0.11.0
+      name: Spellcheck
+      with:
+        source_files: 'website/docs/*.md'
+        task_name: Markdown
+      
