@@ -1,8 +1,8 @@
 module.exports = {
   docs: {
     Introduction: [
-      "old-vs-new",
-      "diagram",
+      "introduction",
+      "architecture",
       // "feature-definition"
     ],
     "Getting Started": [
@@ -18,13 +18,15 @@ module.exports = {
     Features: [
       "gitops",
       "settings",
+      "myhub",
+      // "settings",
       // "analytics",
       // "myhub",
       // "external-agents"
     ],
     Concepts: [
       "workflow",
-      //   "probes",
+      "probes",
       //   "cross-cloud-control",
       //   "litmusctl",
       //   "crds",
