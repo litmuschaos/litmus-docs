@@ -76,7 +76,7 @@ module.exports = {
             })),
             {
               label: "Master/Unreleased",
-              to: "docs/next/old-vs-new",
+              to: "docs/next/introduction",
             },
           ],
         },

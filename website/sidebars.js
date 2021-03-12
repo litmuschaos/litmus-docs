@@ -1,8 +1,8 @@
 module.exports = {
   docs: {
     Introduction: [
-      "old-vs-new",
-      "diagram",
+      "introduction",
+      "architecture",
       // "feature-definition"
     ],
     "Getting Started": [
