@@ -51,3 +51,5 @@ This section lets you choose where to store the workflow configuration. You can 
 1. You need to first create an empty repo, then enter the Git URL and branch name in the given fields in which you want to push the workflow configuration.
 2. Then you can either choose to provide the access token which can be generated from your GitProvider by going to `Developer Settings` &rightarrow; `Personal Access token` &rightarrow; `Generate New token` or you can choose the SSH method, here you need to copy the generated key and add it to your repo by going to `Settings(of the repo)` &rightarrow;`Deploy Keys` &rightarrow; `Add deploy keys`. Make sure you check the `Allow write access` checkbox.
 3. Once the Step 2 is done, click on the `connect` button to link it to your repo. Now every time you run a workflow, the configurations will get pushed to your repo.
+
+***Note*** On selecting GitOps, only new workflows will be synced to git repository. Any existing or active workflows saved locally will not be synced into the git repository. 
