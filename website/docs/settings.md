@@ -53,10 +53,13 @@ This section displays a list of users created by the Admin along with other deta
 
 ## GitOps
 
-This section lets you choose where to store the workflow configuration. You can either store it locally in Litmus or in a Git repository. If you want to store it in litmus, you can just choose the first option(by default the first option is selected). Else if you want to store it in a repo, you can do the following steps:
+This section lets you choose where to store the workflow configuration. You can either store it locally in Litmus or in a Git repository. If you want to store it in litmus, you can just choose the first option(by default the first option is selected). Else if you want to store it in a git repository, you can do the following steps:
 
-1. You need to first create an empty repo, then enter the Git URL and branch name in the given fields in which you want to push the workflow configuration.
-2. Then you can either choose to provide the access token which can be generated from your GitProvider by going to `Developer Settings` &rightarrow; `Personal Access token` &rightarrow; `Generate New token` or you can choose the SSH method, here you need to copy the generated key and add it to your repo by going to `Settings(of the repo)` &rightarrow;`Deploy Keys` &rightarrow; `Add deploy keys`. Make sure you check the `Allow write access` checkbox.
-3. Once the Step 2 is done, click on the `connect` button to link it to your repo. Now every time you run a workflow, the configurations will get pushed to your repo.
+1. You need to have an access to a repository or create an empty repository, then enter the Git URL and branch name in the given fields in which you want to push the workflow configuration.
+2. Then you can either choose to provide by either of the following methods
+   - **Access token**-  User needs to provide the access token here, which can be generated from your Git provider by going to `Developer Settings` &rightarrow; `Personal Access token` &rightarrow; `Generate New token`. Make sure you have write access.
+   - **SSH** - User needs to copy the generated key and add it to your repository by going to `Settings(of the repo)` &rightarrow;`Deploy Keys` &rightarrow; `Add deploy keys`. Make sure you check the `Allow write access` checkbox.
+3. Once the Step 2 is done, click on the `connect` button to link it to your repository. Now every time you run a workflow, the configurations will get pushed to your repository.
 
 ***Note*** On selecting GitOps, only new workflows will be synced to git repository. Any existing or active workflows saved locally will not be synced into the git repository. 
+
