@@ -1,17 +1,17 @@
 ---
 id: myhub
-title: MyHub
-sidebar_label: MyHub
+title: MyHubs
+sidebar_label: MyHubs
 ---
 
 ---
-MyHub allows a user to orchestrate workflows from the Public **[ChaosHub](http://hub.litmuschaos.io/)** or an alternate source for the Experiments (basically, a **[fork](https://github.com/litmuschaos/chaos-charts)** of the public source with custom experiments).
+MyHubs allows a user to orchestrate workflows from the Public **[ChaosHub](http://hub.litmuschaos.io/)** or an alternate source for the Experiments (basically, a **[fork](https://github.com/litmuschaos/chaos-charts)** of the public source with custom experiments).
 
 With this feature, a user can construct workflows by selecting, tuning and sequencing different experiments from their connected My Hubs.
 
 The user can make changes in their forked repositories and sync it with the Portal to get the latest changes from the fork.
 
-## Connecting a Git repository using MyHub
+## Connecting a Git repository using MyHubs
 ### 1. Connect a Public Git Repository
 
 The user can connect to a public Git repository by simply providing the following details:
