@@ -6,25 +6,18 @@ module.exports = {
       // "feature-definition"
     ],
     "Getting Started": [
-      "prerequisite",      
+      "prerequisite",
       {
-        "Installation": [
-          "litmus-install",
-          "agent-install"          
-        ],
+        Installation: ["litmus-install", "agent-install"],
       },
       {
-        "How To": [
-          "create",
-          "schedule",
-          "observe",
-        ],
+        "How To": ["create", "schedule", "observe"],
       },
       "uninstall",
     ],
     Features: [
       "gitops",
-      // "settings",
+      "settings",
       // "analytics",
       // "myhub",
       // "external-agents"
