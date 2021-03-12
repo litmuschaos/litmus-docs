@@ -278,6 +278,8 @@ github
 Github
 githubusercontent
 Gitlab
+GitOps
+gitops
 gke
 GKE
 gprasath
@@ -297,6 +299,7 @@ http
 httpProbe
 HTTPProbe
 https
+highlevel
 iam
 iconColor
 IfNotPresent
@@ -635,6 +638,7 @@ VMs
 VMware
 volumeMount
 WithError
+WebUI
 wordpress
 workDays
 workHours
