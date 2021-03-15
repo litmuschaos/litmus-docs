@@ -24,7 +24,7 @@ The disable workflow option adds a label **suspend: true** that disables any sch
 This option is only available if the workflow is a Cron Worklfow i.e a recurring workflow.
 
 ### 3. Delete Schedule
-This option allows the user to delete a scheduled workflow. This is an irreversible proccess and once the delete option is selected, all the workflow configuration and the schedules are deleted from the portal.
+This option allows the user to delete a scheduled workflow. This is an irreversible process and once the delete option is selected, all the workflow configuration and the schedules are deleted from the portal.
 
 ### 4. Download Manifest
 This option allows the user to download the manifest of the workflow. The manifest consists of all the configurations that the user has added while workflow creation. The user can then alter changes in this manifest and upload it with the portal to schedule a new workflow.
