@@ -45,8 +45,6 @@ A high level comparison between Litmus 1.x and Litmus 2.0 providing a holistic v
 
 ## Litmus quick access links
 
-### [Getting started with Litmus](prerequisite)
-
 ### [Litmus features](gitops)
 
 ### [Access Litmus API](https://litmuschaos.github.io/litmus/api.html)
