@@ -1,0 +1,94 @@
+{
+  "version-2.0.0-Beta-1/docs": [
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Introduction",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.0.0-Beta-1/introduction"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.0.0-Beta-1/architecture"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Getting Started",
+      "items": [
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Installation",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-1/litmus-install"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-1/agent-install"
+            }
+          ]
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "How To",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-1/create"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-1/schedule"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-1/observe"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-1/update"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Features",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.0.0-Beta-1/gitops"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.0.0-Beta-1/settings"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.0.0-Beta-1/myhub"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Concepts",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.0.0-Beta-1/probes"
+        }
+      ]
+    }
+  ]
+}
