@@ -67,36 +67,6 @@ chaos-litmus-portal-server-5ffbccbfff-dknv8    2/2     Running   0          2m6s
 
 <br />
 
-**Verify if chaos CRDs are installed**
-
-```bash
-kubectl get crds | grep chaos
-```
-
-<span style={{color: 'green'}}><b>Expected Output</b></span>
-
-```bash
-chaosengines.litmuschaos.io            2021-03-15T12:57:27Z
-chaosexperiments.litmuschaos.io        2021-03-15T12:57:27Z
-chaosresults.litmuschaos.io            2021-03-15T12:57:27Z
-```
-
-<br />
-
-**Verify if the chaos api resources are successfully created in the desired (application) namespace.**
-
-```bash
-kubectl api-resources | grep chaos
-```
-
-<span style={{color: 'green'}}><b>Expected Output</b></span>
-
-```bash
-chaosengines                   litmuschaos.io          true         ChaosEngine
-chaosexperiments               litmuschaos.io          true         ChaosExperiment
-chaosresults                   litmuschaos.io          true         ChaosResult
-```
-
 ### **Setup the Portal**
 
 To setup and login to Litmus Portal expand the available services just created and copy the `PORT` of the `litmusportal-frontend-service` service
