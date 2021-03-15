@@ -7,6 +7,16 @@ sidebar_label: Litmus
 ---
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rOrKegj5ePI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+### Pre-requisites
+
+- Kubernetes 1.15 or later.
+​
+- Persistent volume of 20GB
+​
+  Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purpose as well. This PV is used as a persistent storage to store the chaos config and chaos-metrics in the Portal. By default litmus install would use the default storage class to allocate the PV. Provide this value 
+
+- Helm3 or Kubectl 
+
 ### **Create a Litmus namespace in Kubernetes**
 
 ```bash
@@ -26,7 +36,7 @@ helm repo add litmuschaos https://litmuschaos.github.io/litmus-helm/
 The helm chart will install all the CRDs, required service account configuration, and chaos-operator required both for the core services as well as the portal to run.
 
 ```bash
-helm install chaos litmuschaos/litmus-2.0 --namespace litmus
+helm install chaos litmuschaos/litmus-2.0.0-Beta --namespace litmus
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
