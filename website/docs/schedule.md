@@ -15,7 +15,7 @@ After selecting the reliability scores for the tests, the user can now schedule 
 - Every Hours
 - Every Day
 - Every Week
-- Every Monthl
+- Every Month
 
 ### 2. Verify and Commit
 
