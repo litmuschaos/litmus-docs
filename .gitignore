@@ -9,7 +9,6 @@ lib/core/MetadataBlog.js
 docs/embedmd-command.sh
 
 website/translated_docs
-website/build/
 website/yarn.lock
 website/node_modules
 website/i18n/*
