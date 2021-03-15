@@ -159,6 +159,7 @@ cp
 cpu
 Cpu
 cr
+CronWorkflow
 CrashLoopBackOff
 crd
 CRD
@@ -224,6 +225,7 @@ ENVs
 EoT
 EOT
 errored
+else's
 et
 eth
 ethernet
@@ -400,6 +402,9 @@ msg
 MustRunAs
 mv
 myhtop
+MyHub
+MyHubs
+myhub
 mysql
 namespace
 namespaced
@@ -510,6 +515,7 @@ ResourceRequirements
 responseCode
 restorecon
 rlt
+rightarrow
 RMW
 RoleBinding
 roleRef
@@ -639,6 +645,7 @@ VMware
 volumeMount
 WithError
 WebUI
+weightage
 wordpress
 workDays
 workHours
