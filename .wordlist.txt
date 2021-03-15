@@ -57,6 +57,7 @@ aws
 awsregion
 ba
 backOff
+Backend
 baremetal
 Baremetal
 bd
@@ -74,6 +75,7 @@ cassandra
 cd
 cde
 ce
+cfdd
 Centric
 chaoexperiment
 ChaosChart
@@ -178,6 +180,7 @@ cstorvolumereplicas
 customresourcedefinition
 Customresourcedefinition
 da
+dknv
 daemonset
 daemonsets
 datasource
@@ -250,6 +253,7 @@ failstep
 faq
 Fdocker
 fff
+ffbccbfff
 fieldPath
 fieldRef
 fieldSelector
@@ -371,11 +375,13 @@ LitmusChaos
 litmuslib
 LitmusLib
 litmusresults
+litmusportal
 liveness
 LIVENESS
 livenss
 lname
 LoadBalancer
+LoadBalancerIP
 localhost
 LocalObjectReference
 localpv
@@ -398,6 +404,7 @@ minChaosInterval
 Minikube
 minio
 mountPath
+mongo
 msg
 MustRunAs
 mv
@@ -416,6 +423,7 @@ nfs
 NFS
 ng
 nginx
+NodeIP
 nodename
 nodeName
 nodeport
@@ -515,6 +523,7 @@ ResourceRequirements
 responseCode
 restorecon
 rlt
+rl
 rightarrow
 RMW
 RoleBinding
