@@ -6,7 +6,7 @@ sidebar_label: Agent
 
 # Litmusctl
 
-Litmusctl is a command line interface to manage LitmusPortal services.
+Litmusctl is a command-line interface to manage LitmusPortal services.
 
 # Notes
 
@@ -23,7 +23,7 @@ The litmusctl CLI requires the following things:
 
 **Linux**
 
-To install the latest version of litmusctl follow the below steps:
+To install the latest version of litmusctl follows the below steps:
 
 - Download the latest litmusctl binary from -
 
@@ -104,7 +104,7 @@ Next, select the installation mode. In case the selected mode was a Cluster ther
 
 👉 Select Mode [cluster]: 1
 
-🏃 Running prerequisites check....
+🏃 Running prerequisites check...
 🔑  clusterrole - ✅
 🔑  clusterrolebinding - ✅
 
@@ -118,7 +118,7 @@ Fields to filled in:
 
 **Agent Description:** Fill in details about the agent.
 
-**Platform Name:** Enter the platform name on which this agent is hosted. For example, AWS, GCP, Rancher etc.
+**Platform Name:** Enter the platform name on which this agent is hosted. For example, AWS, GCP, Rancher, etc.
 
 **Enter the namespace:** You can either enter an existing namespace or enter a new namespace. In cases where the namespace does not exist, LimtusPortal creates it for you.
 
