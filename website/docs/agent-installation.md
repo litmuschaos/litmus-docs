@@ -4,14 +4,20 @@ title: Agent Install
 sidebar_label: Agent
 ---
 
-# Litmusctl
+In Litmus the Agents can be classified as two types
+
+- Self Agent
+- External Agent
+
+As part of Litmus installation by default, a self cluster would be registered as Agent in the Portal. From Portal you induce chaos into self cluster and observe the results from the Portal.
+
+As you are aware by now, Portal is a Cross Cloud Chaos Control plane. That is you can connect mutliple external kubernetes agents to this portal. Once connected you can manage the chaos from the Portal that is you can induce chaos into this agent from the Portal and observe the results from the Portal. Using the command line utility *litmusctl* you can connect the external agents to the Portal.
+
+
+## Litmusctl
 
 Litmusctl is a command-line interface to manage LitmusPortal services.
 
-# Notes
-
-- Currently, Litmusctl is used to install external agents.
-- External agents will install by default if the SELF_CLUSTER environment variable is set to `TRUE`
 
 ## Requirements
 
