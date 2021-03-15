@@ -25,10 +25,10 @@ kubectl create ns litmus
 
 ### **Add the Litmus Helm Chart**
 
-To get started you need to add the **litmuschaos** helm repo
+To get started you need to clone the **litmuschaos** helm repo
 
 ```bash
-helm repo add litmuschaos https://litmuschaos.github.io/litmus-helm/
+git clone https://litmuschaos.github.io/litmus-helm/
 ```
 
 ### **Install Litmus**
