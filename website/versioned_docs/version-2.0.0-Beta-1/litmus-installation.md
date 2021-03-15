@@ -36,7 +36,7 @@ helm repo add litmuschaos https://litmuschaos.github.io/litmus-helm/
 The helm chart will install all the CRDs, required service account configuration, and chaos-operator required both for the core services as well as the portal to run.
 
 ```bash
-helm install chaos litmuschaos/litmus-2.0.0-Beta --namespace litmus
+helm install chaos litmuschaos/litmus-2-0-0-beta --namespace litmus
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
