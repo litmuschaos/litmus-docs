@@ -11,7 +11,7 @@ module.exports = {
         Installation: ["litmus-install", "agent-install"],
       },
       {
-        "How To": ["create", "schedule", "observe"],
+        "How To": ["create", "schedule", "observe", "update"],
       },
       "uninstall",
     ],
