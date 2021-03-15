@@ -11,17 +11,17 @@ Besides the sync feature GitOps in Litmus provides a way of using Event-Driven C
 
 The event driven chaos injection allows Litmus to be integrated with traditional GitOps flow that involves automated deployment of applications or workloads, for example users can now automatically trigger chaos workflows whenever a new release is created for their application and is deployed by a continuous delivery system.
 
-GitOps is by default disabled for the projects created in Litmus, but it can be enabled and configured in from the **GitOps** tab in Litmus portal **Settings**
+GitOps is by default disabled for the projects created in Litmus, but it can be enabled and configured from the **GitOps** tab in Litmus portal **Settings**
 
 ## Configuring a Git repository for GitOps
 
-To configure a git repo a user must provide the Git URL of the repository and the Branch name and the authentication credentials which are of two types:
+To configure a git repo the user must provide the Git URL of the repository and the Branch name and the authentication credentials which are of two types:
 
 #### a. Access Token
 Personal Access Tokens are used as an alternative to the password for authentication to Git services. 
 
 #### b. SSH Key
-Just like the Access Token , SSH keys are used for the authentication. These keys come in pairs, a public key that is shared with the Git Services and a private key that is stored with the user. 
+Just like the Access Token, SSH keys are used for the authentication. These keys come in pairs, a public key that is shared with the Git Services and a private key that is stored in the server. 
 SSH link of the repository should be provided if the user selects this method.
 
 Once GitOps is enabled, any new workflows created will be stored in the configured repo in the path `litmus/<project-id>/<workflow-name>.yaml`.
