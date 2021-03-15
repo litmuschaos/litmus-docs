@@ -29,7 +29,7 @@ module.exports = {
       "probes",
       //   "cross-cloud-control",
       //   "litmusctl",
-      //   "crds",
+      // "crds",
       //   "rbac",
       //   "service-acounts",
     ],
