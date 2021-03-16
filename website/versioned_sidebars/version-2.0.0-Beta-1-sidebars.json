@@ -20,6 +20,10 @@
       "type": "category",
       "label": "Getting Started",
       "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-1/getstarted"
+	    },
         {
           "collapsed": true,
           "type": "category",

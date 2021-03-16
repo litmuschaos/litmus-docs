@@ -6,6 +6,7 @@ module.exports = {
       // "feature-definition"
     ],
     "Getting Started": [
+      "getstarted",
       {
         Installation: ["litmus-install", "agent-install"],
       },
