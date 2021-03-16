@@ -27,8 +27,8 @@ Additional details on the Docusaurus project can be found [here](https://docusau
 ### Clone litmus-docs repository
 
 ```bash
-git clone https://github.com/litmuschaos/litmus-docs.git
-cd litmus-docs
+git clone https://github.com/litmuschaos/litmus-docs-beta.git
+cd litmus-docs-beta
 ```
 
 The docs website server can be setup manually or through docker compose

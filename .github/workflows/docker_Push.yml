@@ -5,8 +5,6 @@ on:
     branches:
       - master
     paths:
-      - '.github/workflows/dockerbuild.yml'
-      - '.github/workflows/Pull_Request.yml'
       - 'website/**'
 
 jobs:
@@ -26,5 +24,27 @@ jobs:
         run: |
           docker build -t ${GITHUB_REPOSITORY}:${{ steps.vars.outputs.branch }}-${{ steps.vars.outputs.sha_short }} .
           docker push ${GITHUB_REPOSITORY}:${{ steps.vars.outputs.branch }}-${{ steps.vars.outputs.sha_short }}
+  
+  netlify-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      # Run npm install and build on our code
+      - run: | 
+          cd website
+          npm install
+          npm run build
+      # Deploy to Netlify using our production secrets
+      - uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          args: deploy --dir=website/build --prod
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
           
 

@@ -3,8 +3,6 @@ on:
   pull_request:
     types: [ opened, synchronize, reopened ]
     paths:
-      - '.github/workflows/dockerbuild.yml'
-      - '.github/workflows/Pull_Request.yml'
       - 'website/**'
 
 jobs:
