@@ -6,7 +6,6 @@ sidebar_label: Litmus
 
 ---
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rOrKegj5ePI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ### Pre-requisites
 
 - Kubernetes 1.15 or later.
@@ -28,7 +27,8 @@ kubectl create ns litmus
 To get started you need to clone the **litmuschaos** helm repo
 
 ```bash
-git clone https://litmuschaos.github.io/litmus-helm/
+git clone https://github.com/litmuschaos/litmus-helm
+cd litmus-helm
 ```
 
 ### **Install Litmus**
@@ -36,7 +36,7 @@ git clone https://litmuschaos.github.io/litmus-helm/
 The helm chart will install all the CRDs, required service account configuration, and chaos-operator required both for the core services as well as the portal to run.
 
 ```bash
-helm install chaos litmuschaos/litmus-2-0-0-beta --namespace litmus
+helm install litmuschaos  --namespace litmus ./charts/litmus-2-0-0-beta/
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -49,7 +49,7 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 NOTES:
-Thank you for installing litmus-portal 😀
+Thank you for installing litmus-2-0-0-beta 😀
 
 Your release is named chaos and its installed to namespace: litmus.
 
