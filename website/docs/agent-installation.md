@@ -13,11 +13,9 @@ As part of Litmus installation by default, a self cluster would be registered as
 
 As you are aware by now, Portal is a Cross Cloud Chaos Control plane. That is you can connect mutliple external kubernetes agents to this portal. Once connected you can manage the chaos from the Portal that is you can induce chaos into this agent from the Portal and observe the results from the Portal. Using the command line utility *litmusctl* you can connect the external agents to the Portal.
 
-
 ## Litmusctl
 
 Litmusctl is a command-line interface to manage LitmusPortal services.
-
 
 ## Requirements
 
@@ -34,7 +32,7 @@ To install the latest version of litmusctl follows the below steps:
 - Download the latest litmusctl binary from -
 
 | Platforms             | Download Link                                                                                               |
-|-----------------------|-------------------------------------------------------------------------------------------------------------|
+| --------------------- | ----------------------------------------------------------------------------------------------------------- |
 | litmusctl-linux-amd64 | [Click here](https://github.com/litmuschaos/litmusctl/blob/master/platforms/litmusctl-linux-amd64?raw=true) |
 | litmusctl-linux-arm   | [Click here](https://github.com/litmuschaos/litmusctl/blob/master/platforms/litmusctl-linux-arm?raw=true)   |
 | litmusctl-linux-arm64 | [Click here](https://github.com/litmuschaos/litmusctl/blob/master/platforms/litmusctl-linux-arm64?raw=true) |
@@ -68,6 +66,7 @@ $ litmusctl version
 ```
 
 ### Registering an agent
+
 To register Litmus Chaos agent:
 
 ```shell
@@ -88,7 +87,7 @@ Example, http://172.17.0.2:31696/
 📶 Please enter LitmusChaos details --
 👉 Host URL where litmus is installed: http://172.17.0.2:31696/
 🤔 Username [admin]: admin
-🙈 Password: 
+🙈 Password:
 ✅ Login Successful!
 ```
 
