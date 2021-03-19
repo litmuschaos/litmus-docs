@@ -1,5 +1,6 @@
 accomodate
 accomodated
+abc
 ada
 addon
 Adminstator
@@ -372,9 +373,12 @@ linux
 litmusbooks
 litmuschaos
 LitmusChaos
+litmusctl
+Litmusctl
 litmuslib
 LitmusLib
 litmusresults
+LitmusPortal
 litmusportal
 liveness
 LIVENESS
@@ -595,6 +599,7 @@ stoppedRuns
 storageclasses
 stringData
 sts
+subcommand
 sudo
 sumitnagal
 superset
