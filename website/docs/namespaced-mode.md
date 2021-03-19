@@ -21,7 +21,7 @@ In order to use Namespaced Mode, you just have to install the namespace-scoped l
 
 - Install the chaos CRDs separately via an admin account
 
-  ```
+  ```bash
   kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/docs/litmus-namespaced-scope/litmus-namespaced-crds.yaml
   ```
 
@@ -33,7 +33,7 @@ In order to use Namespaced Mode, you just have to install the namespace-scoped l
 
   - Apply the modified operator manifest
 
-  ```
+  ```bash
   kubectl apply -f <namespace-scoped-operator.yaml>
   ```
 
@@ -94,23 +94,31 @@ spec:
 
 - Create the ChaosEngine manifest prepared in the previous step to trigger the Chaos.
 
-  `kubectl apply -f chaosengine.yml`
+  ```bash
+  kubectl apply -f chaosengine.yml
+  ```
 
 ### Watch Chaos Engine
 
 - Describe Chaos Engine for chaos steps. Append your respective namespace to this command.
 
-  `kubectl describe chaosengine nginx-chaos`
+  ```bash
+  kubectl describe chaosengine nginx-chaos
+  ```
 
 ### Watch Chaos progress
 
 - View pod terminations & recovery by setting up a watch on the pods in the application namespace
 
-  `watch -n 1 kubectl get pods`
+  ```bash
+  watch -n 1 kubectl get pods
+  ```
 
 ### Check Chaos Experiment Result
 
 - Check whether the application is resilient to the chaos injected, once the experiment (job) is completed. The ChaosResult resource
   name is derived like this: `<ChaosEngine-Name>-<ChaosExperiment-Name>`. Append your respective namespace to this command.
 
-  `kubectl describe chaosresult nginx-chaos-pod-delete`
+  ```bash
+  kubectl describe chaosresult nginx-chaos-pod-delete
+  ```

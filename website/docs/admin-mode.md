@@ -144,22 +144,30 @@ spec:
 
 - Create the ChaosEngine manifest prepared in the previous step to trigger the Chaos.
 
-  `kubectl apply -f chaosengine.yml`
+  ```bash
+  kubectl apply -f chaosengine.yml
+  ```
 
 ### Watch Chaos Engine
 
 - Describe Chaos Engine for chaos steps.
 
-  `kubectl describe chaosengine nginx-chaos -n litmus`
+  ```bash
+  kubectl describe chaosengine nginx-chaos -n litmus
+  ```
 
 ### Watch Chaos progress
 
 - View pod terminations & recovery by setting up a watch on the pods in the application namespace
 
-  `watch -n 1 kubectl get pods -n default`
+  ```bash
+  watch -n 1 kubectl get pods -n default
+  ```
 
 ### Check Chaos Experiment Result
 
 - Check whether the application is resilient to the pod failure, once the experiment (job) is completed. The ChaosResult resource name is derived like this: `<ChaosEngine-Name>-<ChaosExperiment-Name>`.
 
-  `kubectl describe chaosresult nginx-chaos-pod-delete -n litmus`
+  ```bash
+  kubectl describe chaosresult nginx-chaos-pod-delete -n litmus
+  ```
