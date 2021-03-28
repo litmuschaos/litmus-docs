@@ -13,11 +13,9 @@ As part of Litmus installation by default, a self cluster would be registered as
 
 As you are aware by now, Portal is a Cross Cloud Chaos Control plane. That is you can connect mutliple external kubernetes agents to this portal. Once connected you can manage the chaos from the Portal that is you can induce chaos into this agent from the Portal and observe the results from the Portal. Using the command line utility *litmusctl* you can connect the external agents to the Portal.
 
+# Litmusctl
 
-## Litmusctl
-
-Litmusctl is a command-line interface to manage LitmusPortal services.
-
+Litmusctl is a command line interface to manage LitmusPortal services.
 
 ## Requirements
 
@@ -27,30 +25,55 @@ The litmusctl CLI requires the following things:
 
 ## Installation
 
-**Linux**
+To install the latest version of litmusctl follow the below steps:
 
-To install the latest version of litmusctl follows the below steps:
+- Download the stable litmusctl(v0.1.0) binary from:
 
-- Download the latest litmusctl binary from -
+| Platforms                      | Download Link                                                                                                 |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| litmusctl-darwin-386 (MacOS)   | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-darwin-386-v0.1.0.tar.gz)    |
+| litmusctl-darwin-amd64 (MacOS) | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-darwin-amd64-v0.1.0.tar.gz)  |
+| litmusctl-linux-386            | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-386-v0.1.0.tar.gz)     |
+| litmusctl-linux-amd64          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-amd64-v0.1.0.tar.gz)   |
+| litmusctl-linux-arm            | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-arm-v0.1.0.tar.gz)     |
+| litmusctl-linux-arm64          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-arm64-v0.1.0.tar.gz)   |
+| litmusctl-windows-386          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-386-v0.1.0.tar.gz)   |
+| litmusctl-windows-amd64        | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-amd64-v0.1.0.tar.gz) |
+| litmusctl-windows-arm          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-arm-v0.1.0.tar.gz)   |
 
-| Platforms             | Download Link                                                                                               |
-|-----------------------|-------------------------------------------------------------------------------------------------------------|
-| litmusctl-linux-amd64 | [Click here](https://github.com/litmuschaos/litmusctl/blob/master/platforms/litmusctl-linux-amd64?raw=true) |
-| litmusctl-linux-arm   | [Click here](https://github.com/litmuschaos/litmusctl/blob/master/platforms/litmusctl-linux-arm?raw=true)   |
-| litmusctl-linux-arm64 | [Click here](https://github.com/litmuschaos/litmusctl/blob/master/platforms/litmusctl-linux-arm64?raw=true) |
+<br>
 
-<br />
+- Download the latest litmusctl(master) binary from:
+
+| Platforms                      | Download Link                                                                                                 |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| litmusctl-darwin-386 (MacOS)   | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-darwin-386-master.tar.gz)    |
+| litmusctl-darwin-amd64 (MacOS) | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-darwin-amd64-master.tar.gz)  |
+| litmusctl-linux-386            | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-386-master.tar.gz)     |
+| litmusctl-linux-amd64          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-amd64-master.tar.gz)   |
+| litmusctl-linux-arm            | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-arm-master.tar.gz)     |
+| litmusctl-linux-arm64          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-arm64-master.tar.gz)   |
+| litmusctl-windows-386          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-386-master.tar.gz)   |
+| litmusctl-windows-amd64        | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-amd64-master.tar.gz) |
+| litmusctl-windows-arm          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-arm-master.tar.gz)   |
+
+<br>
+
+- Extract the binary
+```shell
+$ tar -zxvf litmusctl-<OS>-<ARCH>-<VERSION>.tar.gz
+``` 
 
 - Provide necessary permissions
 
 ```shell
-$ chmod +x <filename>
+$ chmod +x litmusctl
 ```
 
 - Move the litmusctl binary to /usr/local/bin/litmusctl
 
 ```shell
-$ sudo mv <filename> /usr/local/bin/litmusctl
+$ sudo mv litmusctl /usr/local/bin/litmusctl
 ```
 
 ## Basic Commands
@@ -68,6 +91,7 @@ $ litmusctl version
 ```
 
 ### Registering an agent
+
 To register Litmus Chaos agent:
 
 ```shell
@@ -88,7 +112,7 @@ Example, http://172.17.0.2:31696/
 📶 Please enter LitmusChaos details --
 👉 Host URL where litmus is installed: http://172.17.0.2:31696/
 🤔 Username [admin]: admin
-🙈 Password: 
+🙈 Password:
 ✅ Login Successful!
 ```
 
@@ -110,7 +134,7 @@ Next, select the installation mode. In case the selected mode was a Cluster ther
 
 👉 Select Mode [cluster]: 1
 
-🏃 Running prerequisites check...
+🏃 Running prerequisites check....
 🔑  clusterrole - ✅
 🔑  clusterrolebinding - ✅
 
@@ -124,7 +148,7 @@ Fields to filled in:
 
 **Agent Description:** Fill in details about the agent.
 
-**Platform Name:** Enter the platform name on which this agent is hosted. For example, AWS, GCP, Rancher, etc.
+**Platform Name:** Enter the platform name on which this agent is hosted. For example, AWS, GCP, Rancher etc.
 
 **Enter the namespace:** You can either enter an existing namespace or enter a new namespace. In cases where the namespace does not exist, LimtusPortal creates it for you.
 
