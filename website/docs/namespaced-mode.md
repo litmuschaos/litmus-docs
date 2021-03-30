@@ -9,7 +9,7 @@ original_id: namespaced-mode
 
 ### What is Namespaced Mode?
 
-Namespaced mode is the other end of the orchestration spectrum & is an antithesis of the admin-mode of operation. Here, the ChaosOperator as well as the chaos resources (chaosexperiment, chaosengine, chaosresult CRs and the experiment pods) are run in the same namespace where the application under test (AUT) resides. This mode serves the use-cases where the developers/users don't typically have much autonomy over cluster usage and operate strictly within a specific allotted namespace. However, in this case, too, the cluster-admin or an equivalent user with the right permissions are required to install them CRDs upfront.
+Namespaced mode is the other end of the orchestration spectrum & is an antithesis of the admin-mode of operation. Here, the ChaosOperator as well as the chaos resources (chaosexperiment, chaosengine, chaosresult CRs, the experiment pods and chaos workflows) are run in the same namespace where the application under test (AUT) resides. This mode serves the use-cases where the developers/users don't typically have much autonomy over cluster usage and operate strictly within a specific allotted namespace. However, in this case, too, the cluster-admin or an equivalent user with the right permissions are required to install them CRDs upfront.
 
 Note that this mode of operation restricts the scope of chaos experiments to those at the pod-level, as the node/infra level experiments need cluster-wide access.
 
@@ -166,7 +166,7 @@ service/hello-world created
   mongo-service                   ClusterIP   10.100.226.179  <none>      27017/TCP                     7m6s
   ```
 
-#### Access the frontend service and create a project on the portal
+#### Access the Litmus portal frontend service.
 
 To access the frontend we need to access the `litmusportal-frontend-service` mentioned above. We can either access the frontend using `NodePort` service (by Default) or change the service to `LoadBalancer` and use it. We access the frontend using `NodePort` service (Node IP and port from frontend service)
 
@@ -199,7 +199,7 @@ subscriber-676fd59f59-xcvc2             1/1   Running   0         3m30s
 workflow-controller-7dbc97dc75-7c6b9    1/1   Running   0         3m27s
 ```
 
-You’ll find that some new deployment is shown which includes litmus infra component like Chaos Operator and Chaos exporter to generate litmus metrics. Also, some new service accounts have been created to run a chaos.
+You’ll find that some new deployment is shown which includes litmus infra components like ChaosOperator and monitoring component ChaosExporter to generate chaos metrics. Also, some new service accounts have been created to run chaos.
 
 ```bash
 $ kubectl get sa -n litmus

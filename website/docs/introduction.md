@@ -20,7 +20,7 @@ Chaos Experiments are fundamental units within the LitmusChaos architecture. Use
 
 - What is a Chaos Workflow?
 
-A chaos workflow is much more than a simple chaos experiment. It supports ths user in defining the expected result, observing the result, analysing the overall system behaviour, and in the decision-making process if the system needs to be tuned for improving the resilience.
+A chaos workflow is much more than a simple chaos experiment. It supports the user in defining the expected result, observing the result, analysing the overall system behaviour, and in the decision-making process if the system needs to be tuned for improving the resilience.
 LitmusChaos provides necessary infrastructure to develop, use, and manage chaos workflows for a typical development or operations team. Teaming and GitOps features of Litmus help greatly to collaborate the chaos workflows management within the teams or software organisations.
 
 ## Litmus 2.0 Prologue
