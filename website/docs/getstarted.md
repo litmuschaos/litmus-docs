@@ -14,6 +14,8 @@ sidebar_label: Pre-requisites
 
   Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purpose as well. This PV is used as a persistent storage to store the chaos config and chaos-metrics in the Portal. By default litmus install would use the default storage class to allocate the PV. Provide this value 
 
+- Helm3 or Kubectl
+
 
 ## Getting Started
 
@@ -21,11 +23,9 @@ Running chaos on your application involves the following steps:
 
 [Install Litmus](litmus-install)
 
-[How to Create a Workflow](create)
+[How to Create and Run a Workflow](create-workflow)
 
-[Run Chaos](observe)
-
-[Observe ChaosResults](observe)
+[Observe ChaosResults](observe-workflow)
 
 <hr/>
 

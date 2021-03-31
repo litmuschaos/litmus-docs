@@ -1,11 +1,12 @@
 ---
 id: litmus-install
-title: How to install Litmus
-sidebar_label: Litmus
+title: Litmus Chaos Control Plane
+sidebar_label: Control Plane
 ---
 
 ---
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rOrKegj5ePI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Pre-requisites
 
 - Kubernetes 1.15 or later.
