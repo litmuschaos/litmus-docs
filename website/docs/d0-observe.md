@@ -11,7 +11,7 @@ sidebar_label: Observe Workflow
 After scheduling a workflow, the user can track the status of the workflow from the Browse Workflow section. The status that are currently displayed are :
 - Failed
 - Running
-- Succeeded
+- Completed
 
 ### 1. Workflow Analysis
 
