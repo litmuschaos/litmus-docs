@@ -19,7 +19,7 @@ Here the user can view several options like:
 This option allows the user to re-run a workflow with the same configuration as earlier. This option is only available when the workflow is scheduled once.
 
 ### 2. Edit Schedule
-This option allows the user to edit the schedule configuration of the workflow. The user can either disable the workflow or change the Cron Syntax by changing the schedule timings.
+This option allows the user to edit the schedule configuration of the workflow. The user can either disable the workflow or change the Cron Syntax by changing the scheduled timings.
 The disable workflow option adds a label **suspend: true** that disables any scheduled workflow.
 This option is only available if the workflow is a Cron Workflow i.e a recurring workflow.
 

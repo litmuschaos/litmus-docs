@@ -12,7 +12,7 @@ sidebar_label: Pre-requisites
 
 - Persistent volume of 20GB
 
-  Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purpose as well. This PV is used as a persistent storage to store the chaos config and chaos-metrics in the Portal. By default litmus install would use the default storage class to allocate the PV. Provide this value 
+  Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purposes as well. This PV is used as persistent storage to store the chaos config and chaos-metrics in the Portal. By default, litmus install would use the default storage class to allocate the PV. Provide this value 
 
 - Helm3 or Kubectl
 

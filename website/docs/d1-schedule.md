@@ -12,7 +12,7 @@ sidebar_label: Schedule workflow
 
 After selecting the reliability scores for the tests, the user can now schedule the workflows. The default option in this screen is **Schedule Now**. With this option the user can run a workflow immediately once the workflow creation is completed. The second option available to the user is **Schedule Later**. With this option, the user can schedule the workflow at any time in the future. When this option is selected , the kind of the workflow changes from **Workflow** to **CronWorkflow** with a Cron syntax added in the workflow manifest. The following options are available to the user for scheduling a workflow later:
 
-- Every Hours
+- Every Hour
 - Every Day
 - Every Week
 - Every Month

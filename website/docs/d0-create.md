@@ -32,7 +32,7 @@ Next, you need to choose/design the workflow, you will be given a collection of 
 - **Custom Workflow**: If you are using a Custom workflow you would be given the option to select an experiment, and customize the same. In this section, if you can also **upload** a custom workflow manifest or construct a new one using **experiments from MyHub** with the following steps.
   Create the workflow by selecting your hub, followed by selecting the experiment and giving the namespace where the workflow has to be scheduled.
   You can also tune the chaos engine for the experiment by adding new env variables and click add experiment.
-  You can add more experiments and after that, you can also alter the sequence by dragging the selected experiment. Once done, click on **Finish adding experiments** which generates a custom workflow manifest with all the changes that the you have added.
+  You can add more experiments and after that, you can also alter the sequence by dragging the selected experiment. Once done, click on **Finish adding experiments** which generates a custom workflow manifest with all the changes that you have added.
 
 ### 3. Tune Workflow
 
