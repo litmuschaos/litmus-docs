@@ -21,7 +21,7 @@ This option allows the user to re-run a workflow with the same configuration as 
 ### 2. Edit Schedule
 This option allows the user to edit the schedule configuration of the workflow. The user can either disable the workflow or change the Cron Syntax by changing the schedule timings.
 The disable workflow option adds a label **suspend: true** that disables any scheduled workflow.
-This option is only available if the workflow is a Cron Worklfow i.e a recurring workflow.
+This option is only available if the workflow is a Cron Workflow i.e a recurring workflow.
 
 ### 3. Delete Schedule
 This option allows the user to delete a scheduled workflow. This is an irreversible process and once the delete option is selected, all the workflow configuration and the schedules are deleted from the portal.

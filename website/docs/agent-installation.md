@@ -11,7 +11,7 @@ In Litmus the Agents can be classified as two types
 
 As part of Litmus installation by default, a self cluster would be registered as Agent in the Portal. From Portal you induce chaos into self cluster and observe the results from the Portal.
 
-As you are aware by now, Portal is a Cross Cloud Chaos Control plane. That is you can connect mutliple external kubernetes agents to this portal. Once connected you can manage the chaos from the Portal that is you can induce chaos into this agent from the Portal and observe the results from the Portal. Using the command line utility *litmusctl* you can connect the external agents to the Portal.
+As you are aware by now, Portal is a Cross Cloud Chaos Control plane. That is you can connect multiple external kubernetes agents to this portal. Once connected you can manage the chaos from the Portal that is you can induce chaos into this agent from the Portal and observe the results from the Portal. Using the command line utility *litmusctl* you can connect the external agents to the Portal.
 
 
 ## Litmusctl
@@ -76,7 +76,7 @@ $ litmusctl agent register
 
 Next, you need to enter LitmusPortal details to login into your LitmusPortal account. Fields to be filled in:
 
-**LimtusPortal UI URL:** Enter the URL used to access the Litmus Portal UI.
+**LitmusPortal UI URL:** Enter the URL used to access the Litmus Portal UI.
 Example, http://172.17.0.2:31696/
 
 **Username:** Enter your LitmusPortal username.
@@ -126,7 +126,7 @@ Fields to filled in:
 
 **Platform Name:** Enter the platform name on which this agent is hosted. For example, AWS, GCP, Rancher, etc.
 
-**Enter the namespace:** You can either enter an existing namespace or enter a new namespace. In cases where the namespace does not exist, LimtusPortal creates it for you.
+**Enter the namespace:** You can either enter an existing namespace or enter a new namespace. In cases where the namespace does not exist, LitmusPortal creates it for you.
 
 **Enter service account:** Enter a name for your service account.
 

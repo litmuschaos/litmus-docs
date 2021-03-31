@@ -31,5 +31,6 @@ module.exports = {
       //   "rbac",
       //   "service-acounts",
     ],
+    Advanced: ["admin-mode", "namespaced-mode", "litmus-psp"],
   },
 };
