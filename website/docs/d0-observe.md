@@ -1,7 +1,7 @@
 ---
-id: observe
+id: d0-observe
 title: How to Observe/Track a Workflow
-sidebar_label: Observe
+sidebar_label: Observe Workflow
 ---
 
 ## Observe a Workflow
