@@ -1,4 +1,3 @@
-
 ---
 id: litmus-with-ingress
 title: Install LitmusPortal with Ingress
