@@ -5,17 +5,18 @@ sidebar_label: Control Plane
 ---
 
 ---
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rOrKegj5ePI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Pre-requisites
 
 - Kubernetes 1.15 or later.
-​
+  ​
 - Persistent volume of 20GB
-​
-  Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purposes as well. This PV is used as persistent storage to store the chaos config and chaos-metrics in the Portal. By default litmus install would use the default storage class to allocate the PV. Provide this value 
+  ​
+  Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purposes as well. This PV is used as persistent storage to store the chaos config and chaos-metrics in the Portal. By default litmus install would use the default storage class to allocate the PV. Provide this value
 
-- Helm3 or Kubectl 
+- Helm3 or Kubectl
 
 ### **Create a Litmus namespace in Kubernetes**
 
@@ -56,7 +57,6 @@ Your release is named chaos and its installed to namespace: litmus.
 
 Visit https://docs.litmuschaos.io/docs/getstarted/ to find more info.
 ```
-
 
 > **Note:** Litmus uses Kubernetes CRDs to define chaos intent. Helm3 handles CRDs better than Helm2. Before you start running a chaos experiment, verify if Litmus is installed correctly.
 
@@ -106,6 +106,7 @@ For example:
 ```yaml
 http://172.17.0.3:30385/
 ```
+
 > Where `172.17.0.3` is my NodeIP and `30385` is the frontend service PORT. You can also use a LoadBalancer if not NodePort, the only change would be to provide a `<LoadBalancerIP>:<PORT>`
 
 You should be able to see the Login Page of Litmus. The **default credentials** are
@@ -115,4 +116,4 @@ Username: admin
 Password: litmus
 ```
 
-![Login](https://i.ibb.co/x7jzYDz/Login.png)
+<img src={require('./assets/login.png').default} width="800" />

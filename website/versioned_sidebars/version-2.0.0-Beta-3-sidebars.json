@@ -36,6 +36,10 @@
             {
               "type": "doc",
               "id": "version-2.0.0-Beta-3/agent-install"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-3/litmus-with-ingress"
             }
           ]
         },
