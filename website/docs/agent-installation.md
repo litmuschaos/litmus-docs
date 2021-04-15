@@ -11,13 +11,12 @@ In Litmus the Agents can be classified as two types
 
 As part of Litmus installation by default, a self cluster would be registered as Agent in the Portal. From Portal you induce chaos into self cluster and observe the results from the Portal.
 
-As you are aware by now, Portal is a Cross Cloud Chaos Control plane. That is you can connect multiple external kubernetes agents to this portal. Once connected you can manage the chaos from the Portal that is you can induce chaos into this agent from the Portal and observe the results from the Portal. Using the command line utility *litmusctl* you can connect the external agents to the Portal.
+As you are aware by now, Portal is a Cross Cloud Chaos Control plane. That is you can connect multiple external kubernetes agents to this portal. Once connected you can manage the chaos from the Portal that is you can induce chaos into this agent from the Portal and observe the results from the Portal. Using the command line utility _litmusctl_ you can connect the external agents to the Portal.
 
 
-## Litmusctl
+# Litmusctl
 
-Litmusctl is a command-line interface to manage LitmusPortal services.
-
+Litmusctl is a command line interface to manage LitmusPortal services.
 
 ## Requirements
 
@@ -27,30 +26,56 @@ The litmusctl CLI requires the following things:
 
 ## Installation
 
-**Linux**
+To install the latest version of litmusctl follow the below steps:
 
-To install the latest version of litmusctl follows the below steps:
+- Download the stable litmusctl(v0.1.0) binary from:
 
-- Download the latest litmusctl binary from -
-
-| Platforms             | Download Link                                                                                               |
-|-----------------------|-------------------------------------------------------------------------------------------------------------|
-| litmusctl-linux-amd64 | [Click here](https://github.com/litmuschaos/litmusctl/blob/master/platforms/litmusctl-linux-amd64?raw=true) |
-| litmusctl-linux-arm   | [Click here](https://github.com/litmuschaos/litmusctl/blob/master/platforms/litmusctl-linux-arm?raw=true)   |
-| litmusctl-linux-arm64 | [Click here](https://github.com/litmuschaos/litmusctl/blob/master/platforms/litmusctl-linux-arm64?raw=true) |
+| Platforms                      | Download Link                                                                                           |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| litmusctl-darwin-386 (MacOS)   | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-darwin-386-v0.1.0.tar.gz)    |
+| litmusctl-darwin-amd64 (MacOS) | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-darwin-amd64-v0.1.0.tar.gz)  |
+| litmusctl-linux-386            | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-386-v0.1.0.tar.gz)     |
+| litmusctl-linux-amd64          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-amd64-v0.1.0.tar.gz)   |
+| litmusctl-linux-arm            | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-arm-v0.1.0.tar.gz)     |
+| litmusctl-linux-arm64          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-arm64-v0.1.0.tar.gz)   |
+| litmusctl-windows-386          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-386-v0.1.0.tar.gz)   |
+| litmusctl-windows-amd64        | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-amd64-v0.1.0.tar.gz) |
+| litmusctl-windows-arm          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-arm-v0.1.0.tar.gz)   |
 
 <br />
+
+- Download the latest litmusctl(master) binary from:
+
+| Platforms                      | Download Link                                                                                           |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| litmusctl-darwin-386 (MacOS)   | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-darwin-386-master.tar.gz)    |
+| litmusctl-darwin-amd64 (MacOS) | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-darwin-amd64-master.tar.gz)  |
+| litmusctl-linux-386            | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-386-master.tar.gz)     |
+| litmusctl-linux-amd64          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-amd64-master.tar.gz)   |
+| litmusctl-linux-arm            | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-arm-master.tar.gz)     |
+| litmusctl-linux-arm64          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-arm64-master.tar.gz)   |
+| litmusctl-windows-386          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-386-master.tar.gz)   |
+| litmusctl-windows-amd64        | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-amd64-master.tar.gz) |
+| litmusctl-windows-arm          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-arm-master.tar.gz)   |
+
+<br />
+
+- Extract the binary
+
+```shell
+$ tar -zxvf litmusctl-<OS>-<ARCH>-<VERSION>.tar.gz
+```
 
 - Provide necessary permissions
 
 ```shell
-$ chmod +x <filename>
+$ chmod +x litmusctl
 ```
 
 - Move the litmusctl binary to /usr/local/bin/litmusctl
 
 ```shell
-$ sudo mv <filename> /usr/local/bin/litmusctl
+$ sudo mv litmusctl /usr/local/bin/litmusctl
 ```
 
 ## Basic Commands
@@ -67,11 +92,12 @@ To get the version of the litmusctl CLI:
 $ litmusctl version
 ```
 
-### Registering an agent
-To register Litmus Chaos agent:
+### Connecting an agent
+
+To connect Litmus Chaos agent:
 
 ```shell
-$ litmusctl agent register
+$ litmusctl agent connect
 ```
 
 Next, you need to enter LitmusPortal details to login into your LitmusPortal account. Fields to be filled in:
@@ -83,12 +109,12 @@ Example, http://172.17.0.2:31696/
 **Password:** Enter your LitmusPortal password.
 
 ```shell
-🔥 Registering LitmusChaos agent
+🔥 Connecting LitmusChaos agent
 
 📶 Please enter LitmusChaos details --
 👉 Host URL where litmus is installed: http://172.17.0.2:31696/
 🤔 Username [admin]: admin
-🙈 Password: 
+🙈 Password:
 ✅ Login Successful!
 ```
 
@@ -110,11 +136,11 @@ Next, select the installation mode. In case the selected mode was a Cluster ther
 
 👉 Select Mode [cluster]: 1
 
-🏃 Running prerequisites check...
+🏃 Running prerequisites check....
 🔑  clusterrole - ✅
 🔑  clusterrolebinding - ✅
 
-🌟 Sufficient permissions. Registering Agent
+🌟 Sufficient permissions. Connecting Agent
 ```
 
 Next, enter the details of the new agent.
@@ -124,7 +150,7 @@ Fields to filled in:
 
 **Agent Description:** Fill in details about the agent.
 
-**Platform Name:** Enter the platform name on which this agent is hosted. For example, AWS, GCP, Rancher, etc.
+**Platform Name:** Enter the platform name on which this agent is hosted. For example, AWS, GCP, Rancher etc.
 
 **Enter the namespace:** You can either enter an existing namespace or enter a new namespace. In cases where the namespace does not exist, LitmusPortal creates it for you.
 
@@ -146,7 +172,7 @@ Fields to filled in:
 ```
 
 Once, all these steps are implemented you will be able to see a summary of all the entered fields.
-After verification of these details, you can proceed with the registration of the agent by entering Y. The process of registration might take up to a few seconds.
+After verification of these details, you can proceed with the connection of the agent by entering Y. The process of connection might take up to a few seconds.
 
 ```shell
 📌 Summary --------------------------
@@ -164,8 +190,8 @@ Installation Mode:  cluster
 
 💡 Connecting agent to Litmus Portal.
 🏃 Agents running!!
-🚀 Agent Registration Successful!! 🎉
+🚀 Agent Connection Successful!! 🎉
 👉 Litmus agents can be accessed here: http://172.17.0.2:31696/targets
 ```
 
-To verify, if the registration process was successful you can view the list of connected agents from the Targets section on your LitmusPortal and ensure that the connected agent is in Active State.
+To verify, if the connection process was successful you can view the list of connected agents from the Targets section on your LitmusPortal and ensure that the connected agent is in Active State.
