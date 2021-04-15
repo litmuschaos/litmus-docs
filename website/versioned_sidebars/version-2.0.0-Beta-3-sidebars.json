@@ -1,0 +1,151 @@
+{
+  "version-2.0.0-Beta-3/docs": [
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Introduction",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.0.0-Beta-3/introduction"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.0.0-Beta-3/architecture"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Getting Started",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.0.0-Beta-3/getstarted"
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Installation",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-3/litmus-install"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-3/agent-install"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-3/litmus-with-ingress"
+            }
+          ]
+        },
+        {
+          "type": "doc",
+          "id": "version-2.0.0-Beta-3/create-workflow"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.0.0-Beta-3/observe-workflow"
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Uninstallation",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-3/agent-uninstall"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-3/litmus-uninstall"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "User Guide",
+      "items": [
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Day 0",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-3/d0-create"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-3/d0-observe"
+            }
+          ]
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Day 1",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-3/d1-schedule"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-3/d1-update"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-3/settings"
+            }
+          ]
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Day 2",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-3/myhub"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-3/gitops"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0-Beta-3/probes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Advanced",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.0.0-Beta-3/admin-mode"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.0.0-Beta-3/namespaced-mode"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.0.0-Beta-3/litmus-psp"
+        }
+      ]
+    }
+  ]
+}
