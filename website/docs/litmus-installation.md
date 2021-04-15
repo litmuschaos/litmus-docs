@@ -8,7 +8,7 @@ sidebar_label: Control Plane
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rOrKegj5ePI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Pre-requisites
+## Pre-requisites
 
 - Kubernetes 1.15 or later.
   ​
@@ -18,13 +18,21 @@ sidebar_label: Control Plane
 
 - Helm3 or Kubectl
 
-### **Create a Litmus namespace in Kubernetes**
+## Installation 
+
+Installation of Litmus can be done using either of below methods
+-  [Helm3](#helm_install) chart or 
+-  [Kubectl](#kubectl_install) yaml spec file
+
+### <a name="helm_install"> </a>**Install Litmus using Helm **
+
+#### **Create a Litmus namespace in Kubernetes**
 
 ```bash
 kubectl create ns litmus
 ```
 
-### **Add the Litmus Helm Chart**
+#### **Add the Litmus Helm Chart**
 
 To get started you need to clone the **litmuschaos** helm repo
 
@@ -33,7 +41,7 @@ git clone https://github.com/litmuschaos/litmus-helm
 cd litmus-helm
 ```
 
-### **Install Litmus**
+#### **Install Litmus**
 
 The helm chart will install all the CRDs, required service account configuration, and chaos-operator required both for the core services as well as the portal to run.
 
@@ -60,7 +68,21 @@ Visit https://docs.litmuschaos.io/docs/getstarted/ to find more info.
 
 > **Note:** Litmus uses Kubernetes CRDs to define chaos intent. Helm3 handles CRDs better than Helm2. Before you start running a chaos experiment, verify if Litmus is installed correctly.
 
-### **Verify your installation**
+### <a name="kubectl_install"> </a>**Install Litmus using kubectl **
+
+#### **Create a Litmus namespace  in Kubernetes**
+
+```bash
+kubectl create ns litmus
+```
+#### **Install Litmus**
+
+Applying the manifest file will install all the CRDs, required service account configuration, and chaos-operator required both for the core services as well as the portal to run.
+```bash
+kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Beta.yaml
+```
+
+## **Verify your installation**
 
 **Verify if the Frontend, Backend and Database Pods are running**
 
@@ -78,7 +100,7 @@ chaos-litmus-portal-server-5ffbccbfff-dknv8    2/2     Running   0          2m6s
 
 <br />
 
-### **Setup the Portal**
+## **Setup the Portal**
 
 To setup and login to Litmus Portal expand the available services just created and copy the `PORT` of the `litmusportal-frontend-service` service
 
