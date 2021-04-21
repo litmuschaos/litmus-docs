@@ -21,7 +21,7 @@ kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Be
 
 ```bash
 kubectl edit svc litmusportal-frontend-service -n litmus
-kubectl edit svc litmusportal-frontend-service -n litmus
+kubectl edit svc litmusportal-server-service -n litmus
 ```
 
 3. Install Nginx Ingress Controller along with Kubernetes RBAC roles and bindings
@@ -87,6 +87,10 @@ spec:
               servicePort: 9002
             path: /backend/(.*)
             pathType: ImplementationSpecific
+```
+
+```bash
+kubectl apply -f <litmus_ingress_manifest> -n litmus
 ```
 
 #### With HTTPS
