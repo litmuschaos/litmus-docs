@@ -5,34 +5,66 @@ sidebar_label: Litmus with Ingress
 ---
 
 ---
+
 ### Install LitmusPortal with Ingress
 
 With Litmus-2.0.0-Beta3, LitmusPortal can be installed with ingress.
-In the following doc, we will use the Nginx ingress controller for ingress setup. 
-
+In the following doc, we will use the Nginx ingress controller for ingress setup.
 
 1. Install LitmusPortal in ClusterMode
+
 ```bash
 kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Beta.yaml
 ```
 
-2. By default, the service type is NodePort. We have to patch it to ClusterIP
+2. By default, the service type is NodePort. We have to edit the service types to ClusterIP as given below
 
 ```bash
-kubectl patch svc litmusportal-frontend -n litmus -p '{"spec": {"type": "ClusterIP"}}'
-kubectl patch svc litmusportal-server -n litmus -p '{"spec": {"type": "ClusterIP"}}'
+kubectl edit svc litmusportal-frontend-service -n litmus
+kubectl edit svc litmusportal-frontend-service -n litmus
 ```
 
-3. Install Nginx Ingress Controller
+3. Install Nginx Ingress Controller along with Kubernetes RBAC roles and bindings
+
 ```bash
-kubectl create ns nginx
-helm repo add nginx-stable https://helm.nginx.com/stable
-helm install nginx-ingress nginx-stable/nginx-ingress -n nginx
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/mandatory.yaml
+```
+
+4. create the ingress-nginx ingress controller service as a load balancer service
+
+Sample service manifest
+
+```yaml
+kind: Service
+apiVersion: v1
+metadata:
+  name: ingress-nginx
+  namespace: ingress-nginx
+  labels:
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/part-of: ingress-nginx
+spec:
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/part-of: ingress-nginx
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+    - name: https
+      port: 443
+      targetPort: https
+```
+
+```bash
+kubectl apply -f ingress-controller-svc.yaml
 ```
 
 #### With HTTP
 
-4. Sample litmus ingress manifest With HTTP
+5. Sample litmus ingress manifest With HTTP
+
 ```yaml
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -57,10 +89,10 @@ spec:
             pathType: ImplementationSpecific
 ```
 
-
 #### With HTTPS
 
 5. Install CertManager
+
 ```bash
 kubectl create namespace cert-manager
 helm repo add jetstack https://charts.jetstack.io
@@ -102,21 +134,21 @@ metadata:
   namespace: litmus
 spec:
   rules:
-  - host: "<HOST-NAME>"
-    http:
-      paths:
-      - backend:
-          serviceName: litmusportal-frontend-service
-          servicePort: 9091
-        path: /(.*)
-        pathType: ImplementationSpecific
-      - backend:
-          serviceName: litmusportal-server-service
-          servicePort: 9002
-        path: /backend/(.*)
-        pathType: ImplementationSpecific
+    - host: "<HOST-NAME>"
+      http:
+        paths:
+          - backend:
+              serviceName: litmusportal-frontend-service
+              servicePort: 9091
+            path: /(.*)
+            pathType: ImplementationSpecific
+          - backend:
+              serviceName: litmusportal-server-service
+              servicePort: 9002
+            path: /backend/(.*)
+            pathType: ImplementationSpecific
   tls:
-  - hosts:
-    - "<HOST-NAME>"
-    secretName: litmuspreview-tls-secret
+    - hosts:
+        - "<HOST-NAME>"
+      secretName: litmuspreview-tls-secret
 ```
