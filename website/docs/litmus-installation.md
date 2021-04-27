@@ -26,7 +26,7 @@ Installation of Litmus can be done using either of below methods
 
 ### Installation Steps
 
-The helm chart will install all the CRDs, required service account configuration, and chaos-operator required both for the core services as well as the portal to run.
+The helm chart will install all the CRDs, required service account configuration, and chaos control plane required both for the core services as well as the portal to run.
 
 The following steps will help you install litmus via helm.
 
@@ -47,14 +47,14 @@ litmuschaos     https://litmuschaos.github.io/litmus-helm/
 
 - The litmus infra components will be placed in this namespace.
 
-**Note**: The chaos operator can be placed in any namespace, though it is typically placed in "litmus".
+**Note**: The chaos control plane can be placed in any namespace, though it is typically placed in "litmus".
 
 ```bash
 root@demo:~# kubectl create ns litmus
 namespace/litmus created
 ```
 
-#### Step-3: Install the litmus chaos operator and CRDs
+#### Step-3: Install the litmus chaos control plane and CRDs
 
 ```bash
 root@demo:~# helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=litmus --devel
@@ -94,7 +94,7 @@ kubectl create ns litmus
 ```
 #### **Install Litmus**
 
-Applying the manifest file will install all the CRDs, required service account configuration, and chaos-operator required both for the core services as well as the portal to run.
+Applying the manifest file will install all the CRDs, required service account configuration, and chaos control plane required both for the core services as well as the portal to run.
 ```bash
 kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Beta.yaml
 ```
