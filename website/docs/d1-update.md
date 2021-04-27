@@ -1,7 +1,7 @@
 ---
-id: update
+id: d1-update
 title: How to Update a Workflow
-sidebar_label: Update
+sidebar_label: Update Workflow
 ---
 
 ## Update a Workflow

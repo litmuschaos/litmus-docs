@@ -1,10 +1,8 @@
 ---
-id: create
-title: How to Create a Workflow
-sidebar_label: Create
+id: d0-create
+title: How to create the workflow
+sidebar_label: Create Workflow
 ---
-
-## Workflow Creation
 
 ---
 

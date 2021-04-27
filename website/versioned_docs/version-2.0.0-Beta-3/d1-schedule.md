@@ -1,7 +1,7 @@
 ---
-id: schedule
+id: d1-schedule
 title: How to Schedule a Workflow
-sidebar_label: Schedule
+sidebar_label: Schedule workflow
 ---
 
 ## Workflow Scheduling
