@@ -11,20 +11,20 @@ sidebar_label: Litmus with Ingress
 With Litmus-2.0.0-Beta3, LitmusPortal can be installed with ingress.
 In the following doc, we will use the Nginx ingress controller for ingress setup.
 
-1. Install LitmusPortal in ClusterMode
+1. Install the litmus chaos control plane
 
 ```bash
 kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Beta.yaml
 ```
 
-2. By default, the service type is NodePort. We have to edit the service types to ClusterIP as given below
+2. By default, the service type is NodePort. For Ingress, we need to change the service type to ClusterIP in the following services.
+* litmusportal-frontend-service
+* litmusportal-server-service
 
-```bash
-kubectl edit svc litmusportal-frontend-service -n litmus
-kubectl edit svc litmusportal-server-service -n litmus
-```
 
-3. Install Nginx Ingress Controller along with Kubernetes RBAC roles and bindings, please refer [here](https://kubernetes.github.io/ingress-nginx/deploy/#network-load-balancer-nlb)
+3. Install Nginx Ingress Controller along with Kubernetes RBAC roles and bindings, please refer [here](https://kubernetes.github.io/ingress-nginx/deploy/#installation-guide)
+
+**Note:** If you're changing ingress name from **litmus-ingress** to a different name, make sure to update the **INGRESS_NAME** environment variable in the litmusportal-server deployment
 
 #### With HTTP
 
@@ -40,7 +40,8 @@ metadata:
   name: litmus-ingress
 spec:
   rules:
-    - http:
+    - host: "<HOST-NAME>"
+      http:
         paths:
           - backend:
               serviceName: litmusportal-frontend-service
@@ -55,7 +56,7 @@ spec:
 ```
 
 ```bash
-kubectl apply -f <litmus_ingress_manifest> -n litmus
+kubectl apply -f <litmus_ingress_manifest> -n <PORTAL_NAMESPACE>
 ```
 
 #### With HTTPS
@@ -120,4 +121,7 @@ spec:
     - hosts:
         - "<HOST-NAME>"
       secretName: litmuspreview-tls-secret
+```
+```bash
+kubectl apply -f <litmus_ingress_manifest> -n <PORTAL_NAMESPACE>
 ```
