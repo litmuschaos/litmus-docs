@@ -24,7 +24,9 @@ kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Be
 
 3. Install Nginx Ingress Controller along with Kubernetes RBAC roles and bindings, please refer [here](https://kubernetes.github.io/ingress-nginx/deploy/#installation-guide)
 
-**Note:** If you're changing ingress name from **litmus-ingress** to a different name, make sure to update the **INGRESS_NAME** environment variable in the litmusportal-server deployment
+**Note:** 
+* If you're changing ingress name from **litmus-ingress** to a different name, make sure to update the **INGRESS_NAME** environment variable in the litmusportal-server deployment
+* Set the environment variable **INGRESS** as true in the litmusportal-server deployment.
 
 #### With HTTP
 
