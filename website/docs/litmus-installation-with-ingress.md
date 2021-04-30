@@ -1,7 +1,7 @@
 ---
-id: litmus-with-nginx
-title: Install LitmusPortal with Nginx
-sidebar_label: Litmus with Nginx
+id: litmus-with-ingress
+title: Install LitmusPortal with Ingress
+sidebar_label: Litmus with Ingress
 ---
 
 ---
