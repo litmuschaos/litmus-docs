@@ -24,46 +24,11 @@ kubectl edit svc litmusportal-frontend-service -n litmus
 kubectl edit svc litmusportal-server-service -n litmus
 ```
 
-3. Install Nginx Ingress Controller along with Kubernetes RBAC roles and bindings
-
-```bash
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/mandatory.yaml
-```
-
-4. create the ingress-nginx ingress controller service as a load balancer service
-
-Sample service manifest
-
-```yaml
-kind: Service
-apiVersion: v1
-metadata:
-  name: ingress-nginx
-  namespace: ingress-nginx
-  labels:
-    app.kubernetes.io/name: ingress-nginx
-    app.kubernetes.io/part-of: ingress-nginx
-spec:
-  type: LoadBalancer
-  selector:
-    app.kubernetes.io/name: ingress-nginx
-    app.kubernetes.io/part-of: ingress-nginx
-  ports:
-    - name: http
-      port: 80
-      targetPort: http
-    - name: https
-      port: 443
-      targetPort: https
-```
-
-```bash
-kubectl apply -f ingress-controller-svc.yaml
-```
+3. Install Nginx Ingress Controller along with Kubernetes RBAC roles and bindings, please refer [here](https://kubernetes.github.io/ingress-nginx/deploy/#network-load-balancer-nlb)
 
 #### With HTTP
 
-5. Sample litmus ingress manifest With HTTP
+4. Sample litmus ingress manifest With HTTP
 
 ```yaml
 apiVersion: extensions/v1beta1
@@ -95,7 +60,7 @@ kubectl apply -f <litmus_ingress_manifest> -n litmus
 
 #### With HTTPS
 
-5. Install CertManager
+4. Install CertManager
 
 ```bash
 kubectl create namespace cert-manager
@@ -103,7 +68,7 @@ helm repo add jetstack https://charts.jetstack.io
 helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --version v1.3.0 --set installCRDs=true
 ```
 
-6. Install LetsEncrypt Cluster Issuer
+5. Install LetsEncrypt Cluster Issuer
 
 ```yaml
 apiVersion: cert-manager.io/v1alpha2
@@ -122,7 +87,7 @@ spec:
         class: nginx
 ```
 
-7. Sample Litmus Portal Ingress Manifest with HTTPS
+6. Sample Litmus Portal Ingress Manifest with HTTPS
 
 ```yaml
 apiVersion: extensions/v1beta1
