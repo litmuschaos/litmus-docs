@@ -8,7 +8,7 @@ module.exports = {
     "Getting Started": [
       "getstarted",
       {
-	      "Installation" : [ "litmus-install", "agent-install", "litmus-with-ingress"],
+	      "Installation" : [ "litmus-install", "agent-install", "litmus-with-nginx"],
       },
       "create-workflow",
       "observe-workflow",
