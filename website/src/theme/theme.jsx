@@ -16,12 +16,12 @@ export default {
     xxxxl: 1800,
   },
   fontSize: {
-    heading: { lg: "2.2rem", md: "1.75rem" },
-    subHeading: { lg: "1.5rem", md: "1.125rem" },
-    paragraph: { lg: "1rem", md: "0.875rem" },
-    subText: { lg: "1.25rem", md: "1.125rem" },
-    button: "1.125rem",
-    small: { lg: "0.875rem", md: "0.75rem" },
+    heading: { lg: "2rem", md: "1.5rem" },
+    subHeading: { lg: "1.3rem", md: "1.1rem" },
+    paragraph: { lg: "0.9rem", md: "0.7rem" },
+    subText: { lg: "1.1rem", md: "0.9rem" },
+    button: "1rem",
+    small: { lg: "0.7rem", md: "0.6rem" },
   },
   colors: {
     backgroundLight: "#F9FAFC",

@@ -1,10 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SectionLight } from '../../layout'
-import { exploreLitmusData, advancedLitmusData } from './data'
+import { advancedLitmusData, exploreLitmusData } from './data'
 
 const ExploreLitmusDiv = styled.div`
-	width: 400px;
 	height: 130px;
 	margin-bottom: 60px;
 `
@@ -20,14 +18,14 @@ const Description = styled.div`
 `
 const Grid = styled.div`
 	display: grid;
-	grid-template-columns: ${(props) => (props.theme.screens.sm ? '1fr 1fr' : '1fr 1fr 1fr')};
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 	grid-gap: 5rem;
 	row-gap: 2rem;
 `
 
 const ExploreLitmus = ({ type }) => {
 	return (
-		<SectionLight>
+		<>
 			{type === 'basic' ? (
 				<>
 					<h2 style={{ marginBottom: '60px' }}>Explore using Litmus</h2>
@@ -57,7 +55,7 @@ const ExploreLitmus = ({ type }) => {
 			) : (
 				<></>
 			)}
-		</SectionLight>
+		</>
 	)
 }
 
