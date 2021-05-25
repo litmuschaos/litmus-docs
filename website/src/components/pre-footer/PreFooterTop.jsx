@@ -21,9 +21,7 @@ const CNCFText = styled.div`
 			  `
 			: css`
 					width: 20rem;
-					margin: 0 auto;
-					margin-top: ${(props) =>
-						props.theme.screens.xxxl ? "-7rem" : "-8rem"};
+					margin: 0 auto;					
 			  `}
 `;
 
