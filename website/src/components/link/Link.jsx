@@ -1,4 +1,4 @@
-import { Link as GatsbyLink } from "gatsby";
+import { Link as GatsbyLink } from "react-router-dom";
 import styled from "styled-components";
 
 const Link = styled(GatsbyLink)`

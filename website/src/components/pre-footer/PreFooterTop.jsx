@@ -1,8 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { useTheme } from "../../styles";
+import { useTheme } from "../../theme";
 import { Button } from "../button";
-import { CNCFLogo } from "../image-fetch/CNCFLogo";
 import {
   BoundedContainer,
   Center,

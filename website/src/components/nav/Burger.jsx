@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useTheme } from "../../styles";
+import { useTheme } from "../../theme";
 import { OutlinedButton } from "../button";
 import { Link } from "../link/index";
 

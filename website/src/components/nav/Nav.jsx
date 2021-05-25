@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { useTheme } from "../../styles";
+import { useTheme } from "../../theme";
 import { OutlinedButton } from "../button/index";
-import { GithubIcon } from "../image-fetch/GithubIcon";
 import { Center } from "../layout";
 import { Link } from "../link/index";
 import { SmallText } from "../texts";

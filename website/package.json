@@ -15,9 +15,12 @@
     "@docusaurus/preset-classic": "2.0.0-alpha.70",
     "@mdx-js/react": "^1.5.8",
     "clsx": "^1.1.1",
+    "modern-css-reset": "^1.4.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "styled-components": "^5.3.0"
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.3.0",
+    "use-media": "^1.4.0"
   },
   "browserslist": {
     "production": [
