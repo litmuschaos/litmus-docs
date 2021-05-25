@@ -1,14 +1,9 @@
-import React from "react";
-import styled, { css } from "styled-components";
-import { useTheme } from "../../theme";
-import { Button } from "../button";
-import {
-	BoundedContainer,
-	Center,
-	ResponsiveRow,
-	SectionDark,
-} from "../layout";
-import { Heading, Paragraph, PurpleText } from "../texts";
+import React from 'react'
+import styled, { css } from 'styled-components'
+import { useTheme } from '../../theme'
+import { Button } from '../button'
+import { BoundedContainer, Center, ResponsiveRow, SectionDark } from '../layout'
+import { Heading, Paragraph, PurpleText } from '../texts'
 
 const CNCFText = styled.div`
 	position: relative;
@@ -21,9 +16,9 @@ const CNCFText = styled.div`
 			  `
 			: css`
 					width: 20rem;
-					margin: 0 auto;					
+					margin: 0 auto;
 			  `}
-`;
+`
 
 const CNCFLogoDiv = styled.div`
 	background: white;
@@ -34,12 +29,12 @@ const CNCFLogoDiv = styled.div`
 
 	img {
 		margin: 0 auto;
-		width: ${(props) => (props.theme.screens.sm ? "90%" : "60%")};
+		width: ${(props) => (props.theme.screens.sm ? '90%' : '60%')};
 	}
-`;
+`
 
 const PreFooterTop = () => {
-	const { lg } = useTheme().screens;
+	const { lg } = useTheme().screens
 	return (
 		<SectionDark>
 			<ResponsiveRow breakpoint="lg">
@@ -47,17 +42,13 @@ const PreFooterTop = () => {
 					<Center>
 						<div>
 							<Heading>Create, Manage and Monitor Chaos on Kubernetes</Heading>
-							<Paragraph style={{ margin: "1rem 0" }}>
-								Litmus is highly extensible and integrates with other tools to
-								enable the creation of custom experiments. Kubernetes developers
-								& SREs use Litmus to manage chaos in a declarative manner and
-								find weaknesses in their applications and infrastructure
+							<Paragraph style={{ margin: '1rem 0' }}>
+								Litmus is highly extensible and integrates with other tools to enable the creation of custom
+								experiments. Kubernetes developers & SREs use Litmus to manage chaos in a declarative manner and find
+								weaknesses in their applications and infrastructure
 							</Paragraph>
 							<br />
-							<a
-								rel="noopener noreferrer"
-								target="_blank"
-								href="https://docs.litmuschaos.io/docs/getstarted/">
+							<a rel="noopener noreferrer" target="_blank" href="https://docs.litmuschaos.io/docs/getstarted/">
 								<Button gradientColor="purple">Get started with Litmus</Button>
 							</a>
 						</div>
@@ -75,17 +66,11 @@ const PreFooterTop = () => {
 					)}
 					<CNCFText>
 						<Paragraph textAlign="center">
-							We are a{" "}
-							<a
-								rel="noopener noreferrer"
-								target="_blank"
-								href="https://www.cncf.io/">
-								<PurpleText
-									fontSize="paragraph"
-									fontWeight={400}
-									style={{ display: "inline" }}>
+							We are a{' '}
+							<a rel="noopener noreferrer" target="_blank" href="https://www.cncf.io/">
+								<PurpleText fontSize="paragraph" fontWeight={400} style={{ display: 'inline' }}>
 									Cloud Native Computing Foundation
-								</PurpleText>{" "}
+								</PurpleText>{' '}
 							</a>
 							sandbox project
 						</Paragraph>
@@ -93,7 +78,7 @@ const PreFooterTop = () => {
 				</BoundedContainer>
 			</ResponsiveRow>
 		</SectionDark>
-	);
-};
+	)
+}
 
-export { PreFooterTop };
+export { PreFooterTop }

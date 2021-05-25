@@ -1,9 +1,7 @@
-import React from "react";
-import { PreFooterTop } from "./PreFooterTop";
+import React from 'react'
+import { PreFooterTop } from './PreFooterTop'
 
 const PreFooter = () => {
-  return (    
-      <PreFooterTop />
-  );
-};
-export { PreFooter };
+	return <PreFooterTop />
+}
+export { PreFooter }
