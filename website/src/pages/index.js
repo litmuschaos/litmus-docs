@@ -10,6 +10,7 @@ const Home = () => {
 				<Header />
 				<br />
 				<ExploreLitmus type={'basic'} />
+				<br />
 				<ExploreLitmus type={'advance'} />
 			</SectionLight>
 		</Layout>

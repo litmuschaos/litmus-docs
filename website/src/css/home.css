@@ -1,0 +1,44 @@
+.left {
+  width: 45%;
+}
+
+.purple {
+  color: #5B44BA;
+}
+
+.headerImage {
+  width: 55%;
+}
+
+.spacing {
+  margin: 1rem 0;
+}
+
+@media (min-width: 2000px) {
+  .left {
+    width: 30%;
+  }
+  .headerImage {
+    widtH: 35%;
+  }
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 5rem;
+  row-gap: 2rem;
+}
+
+.exploreLitmusDiv {
+  height: 130px;
+  margin: 2rem 0;
+}
+
+.subHeading {
+  color: #5B44BA;
+  padding: 0.5rem 0;
+}
+/*# sourceMappingURL=home.css.map */

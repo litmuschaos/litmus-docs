@@ -1,0 +1,46 @@
+@import '../theme';
+@import '../mixin';
+
+// Header
+
+.left {
+    width: 45%;
+}
+
+.purple {
+    color: map-get($colors, textSecondary);
+}
+
+.headerImage {
+    width: 55%;
+}
+
+.spacing {
+    margin: 1rem 0;
+}
+
+@media (min-width: 2000px) {
+    .left {
+        width: 30%;
+    }
+
+    .headerImage {
+        widtH: 35%;
+    }
+}
+
+// Explore Litmus
+
+.grid {
+    @include grid();
+}
+
+.exploreLitmusDiv {
+    height: 130px;
+    margin: 2rem 0;    
+}
+
+.subHeading {
+    color: map-get($colors, textSecondary);
+    padding: 0.5rem 0;
+}
