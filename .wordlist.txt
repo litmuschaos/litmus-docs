@@ -1,6 +1,8 @@
 accomodate
 accomodated
+abc
 ada
+devel
 addon
 Adminstator
 afx
@@ -71,6 +73,7 @@ BringYourOwnChaos
 busybox
 Busybox
 BYOC
+bdfd
 cassandra
 cd
 cde
@@ -93,6 +96,7 @@ chaosexperiment
 ChaosExperiment
 chaosexperiments
 ChaosExperiments
+ChaosExporter
 chaoshub
 ChaosHub
 ChaosInject
@@ -179,6 +183,10 @@ cstorpools
 cstorvolumereplicas
 customresourcedefinition
 Customresourcedefinition
+clusterworkflowtemplates
+cronworkflows
+cfbfc
+dbc
 da
 dknv
 daemonset
@@ -201,6 +209,7 @@ devguide
 devops
 DevOps
 dns
+devs
 DNS
 downtimes
 downwardAPI
@@ -248,6 +257,9 @@ experimentstatus
 Experimentstatus
 experimet
 expr
+envsubst
+fbd
+fd
 failedRuns
 failstep
 faq
@@ -292,6 +304,7 @@ gprasath
 grafana
 Grafana
 GVR
+gshql
 hax
 heptio
 hostFileVolumes
@@ -362,6 +375,8 @@ kubespray
 Kubevirt
 Kudo
 KUDO
+kk
+kqkbz
 labelSelector
 labelselectors
 latencies
@@ -372,9 +387,12 @@ linux
 litmusbooks
 litmuschaos
 LitmusChaos
+litmusctl
+Litmusctl
 litmuslib
 LitmusLib
 litmusresults
+LitmusPortal
 litmusportal
 liveness
 LIVENESS
@@ -408,6 +426,7 @@ mongo
 msg
 MustRunAs
 mv
+mx
 myhtop
 MyHub
 MyHubs
@@ -449,6 +468,7 @@ openshift
 OpenShift
 opensource
 overlayed
+okteto
 params
 passedRuns
 pathPrefix
@@ -506,6 +526,8 @@ py
 PyYaml
 queryPath
 rbac
+rolebinding
+rb
 rdx
 reaccessable
 readOnlyRootFilesystem
@@ -595,6 +617,7 @@ stoppedRuns
 storageclasses
 stringData
 sts
+subcommand
 sudo
 sumitnagal
 superset
@@ -652,12 +675,15 @@ valueFrom
 VMs
 VMware
 volumeMount
+vw
 WithError
 WebUI
 weightage
 wordpress
 workDays
 workHours
+workflowtemplates
+xcvc
 wp
 yaml
 yml
@@ -673,3 +699,23 @@ abc
 litmusctl
 subcommand
 Litmusctl
+gz
+zxvf
+MacOS
+darwin
+ImplementationSpecific
+backend
+letsencrypt
+litmuspreview
+pathType
+secretName
+serviceName
+servicePort
+tls
+ClusterIssuer
+privateKeySecretRef
+CertManager
+installCRDs
+jetstack
+ClusterMode
+LetsEncrypt

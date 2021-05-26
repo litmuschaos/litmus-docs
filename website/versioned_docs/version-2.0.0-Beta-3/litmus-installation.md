@@ -14,56 +14,39 @@ sidebar_label: Control Plane
   ​
 - Persistent volume of 20GB
   ​
-  Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purposes as well. This PV is used as persistent storage to store the chaos config and chaos-metrics in the Portal. By default, litmus install would use the default storage class to allocate the PV. Provide this value
+  Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purposes as well. This PV is used as persistent storage to store the chaos config and chaos-metrics in the Portal. By default litmus install would use the default storage class to allocate the PV. Provide this value
 
 - Helm3 or Kubectl
 
 ## Installation 
 
-Installation of Litmus can be done using either of the below methods
+Installation of Litmus can be done using either of below methods
 -  [Helm3](#helm_install) chart or 
 -  [Kubectl](#kubectl_install) yaml spec file
 
-### Installation Steps
+### <a name="helm_install"> </a>**Install Litmus using Helm **
 
-The helm chart will install all the required service account configuration and chaos control plane.
-
-The following steps will help you install litmus via helm.
-
-#### Step-1: Add the litmus helm repository
+#### **Create a Litmus namespace in Kubernetes**
 
 ```bash
-root@demo:~# helm repo add litmuschaos https://litmuschaos.github.io/litmus-helm/
-"litmuschaos" has been added to your repositories
+kubectl create ns litmus
 ```
 
+#### **Add the Litmus Helm Chart**
+
+To get started you need to clone the **litmuschaos** helm repo
+
 ```bash
-root@demo:~# helm repo list
-NAME            URL
-litmuschaos     https://litmuschaos.github.io/litmus-helm/
+git clone https://github.com/litmuschaos/litmus-helm
+cd litmus-helm
 ```
 
-#### Step-2: Create the litmus namespace
+#### **Install Litmus**
 
-- The litmus infra components will be placed in this namespace.
-
-**Note**: The chaos control plane can be placed in any namespace, though it is typically placed in "litmus".
+The helm chart will install all the CRDs, required service account configuration, and chaos-operator required both for the core services as well as the portal to run.
 
 ```bash
-root@demo:~# kubectl create ns litmus
-namespace/litmus created
-```
-
-#### Step-3: Install the litmus chaos control plane
-
-```bash
-root@demo:~# helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=litmus --devel
-NAME: chaos
-LAST DEPLOYED: Fri Sep  29 06:19:50 2020
-NAMESPACE: litmus
-STATUS: deployed
-REVISION: 1
-TEST SUITE: None
+helm install litmuschaos  --namespace litmus ./charts/litmus-2-0-0-beta/
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -94,14 +77,14 @@ kubectl create ns litmus
 ```
 #### **Install Litmus**
 
-Applying the manifest file will install all the required service account configuration and chaos control plane.
+Applying the manifest file will install all the CRDs, required service account configuration, and chaos-operator required both for the core services as well as the portal to run.
 ```bash
 kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Beta.yaml
 ```
 
 ## **Verify your installation**
 
-**Verify if the frontend, backend, and database Pods are running**
+**Verify if the Frontend, Backend and Database Pods are running**
 
 ```bash
 kubectl get pods -n litmus
@@ -134,7 +117,7 @@ litmusportal-frontend-service   NodePort    10.101.81.70     <none>        9091:
 litmusportal-server-service     NodePort    10.108.151.79    <none>        9002:32456/TCP,9003:31160/TCP   2m
 ```
 
-> **Note**: In this case, the PORT for `litmusportal-frontend-service` is `30385`. Yours will be different.
+> **Note**: In this case the PORT for `litmusportal-frontend-service` is `30385`. Yours will be different.
 
 ### **Accessing the Portal**
 

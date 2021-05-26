@@ -11,20 +11,17 @@ In Litmus the Agents can be classified as two types
 
 As part of Litmus installation by default, a self cluster would be registered as Agent in the Portal. From Portal you induce chaos into self cluster and observe the results from the Portal.
 
-<<<<<<< HEAD
-As you are aware by now, Portal is a Cross Cloud Chaos Control plane. That is you can connect multiple external kubernetes agents to this portal. Once connected you can manage the chaos from the Portal that is you can induce chaos into this agent from the Portal and observe the results from the Portal. Using the command line utility _litmusctl_ you can connect the external agents to the Portal.
-=======
-As you are aware by now, Portal is a Cross Cloud Chaos Control plane. That is you can connect multiple external kubernetes agents to this portal. Once connected you can manage the chaos from the Portal that is you can induce chaos into this agent from the Portal and observe the results from the Portal. Using the command line utility _litmusctl_ you can connect the external agents to the Portal.
+As you are aware by now, Portal is a Cross Cloud Chaos Control plane. That is you can connect multiple external Kubernetes agents to this portal. Once connected you can manage the chaos from the Portal that is you can induce chaos into this agent from the Portal and observe the results from the Portal. Using the command line utility _litmusctl_ you can connect the external agents to the Portal.
 
-> > > > > > > master
+**Note: Ensure that proper service type is selected for the `litmusportal-server` service.**
+
+> When portalScope is `cluster` - To connect an agent for another _Kubernetes_ cluster on the same subnet, the `litmusportal-server-service` type should be NodePort or LoadBalancer, if not then LoadBalancer should be the type.
+
+> When portalScope is `namespace` - To connect an external agent edit the environment variable `PORTAL_ENDPOINT` for the `litmusportal-server` deployment's `graphql-server` container to provide a publicly accessible server URI which can preferably be a LoadBalancer type service endpoint for the`litmusportal-server-service` restarting the server before using _litmusctl_ to connect the agent.
 
 # Litmusctl
 
-# <<<<<<< HEAD
-
 Litmusctl is a command line interface to manage LitmusPortal services.
-
-> > > > > > > master
 
 ## Requirements
 
@@ -100,17 +97,9 @@ To get the version of the litmusctl CLI:
 $ litmusctl version
 ```
 
-<<<<<<< HEAD
-
-### Registering an agent
-
-# To register Litmus Chaos agent:
-
 ### Connecting an agent
 
 To connect Litmus Chaos agent:
-
-> > > > > > > master
 
 ```shell
 $ litmusctl agent connect
