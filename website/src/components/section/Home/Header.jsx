@@ -1,5 +1,5 @@
 import React from "react";
-import '../../../css/home/home.css';
+import '../../../css/home.css';
 import { ResponsiveRow } from "../../layout";
 import { Heading, Paragraph, SubText } from "../../texts";
 
