@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { useTheme } from "../../theme";
-import { OutlinedButton } from "../button/index";
 import { Center } from "../layout";
 import { Link } from "../link/index";
 import { SmallText } from "../texts";
@@ -115,18 +114,7 @@ const Nav = () => {
 
 				<li>
 					<Link to="/community">Community</Link>
-				</li>
-
-				<OutlinedNavButton>
-					<a
-						rel="noopener noreferrer"
-						target="_blank"
-						href="https://www.katacoda.com/litmusbot/scenarios/getting-started-with-litmus">
-						<OutlinedButton backgroundColor="black">
-							Interactive Tutorial
-						</OutlinedButton>
-					</a>
-				</OutlinedNavButton>
+				</li>				
 			</Ul>
 		</NavBar>
 	);
