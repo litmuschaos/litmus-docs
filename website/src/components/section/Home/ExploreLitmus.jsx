@@ -1,7 +1,7 @@
-import React from 'react';
-import { Paragraph, SubHeading } from '../../../components/texts';
-import '../../../css/home.css';
-import { advancedLitmusData, exploreLitmusData } from './data';
+import React from 'react'
+import { Paragraph, SubHeading } from '../../../components/texts'
+import '../../../css/home.css'
+import { advancedLitmusData, exploreLitmusData } from './data'
 
 const ExploreLitmus = ({ type }) => {
 	return (
@@ -13,7 +13,11 @@ const ExploreLitmus = ({ type }) => {
 						{exploreLitmusData.map((exploreData) => (
 							<div className="exploreLitmusDiv">
 								<img src={exploreData.icon} alt={exploreData.icon} />
-								<div className="subHeading">{exploreData.heading}</div>
+								<div className="subHeading">
+									<a href={exploreData.url} className="subHeadingText">
+										{exploreData.heading}
+									</a>
+								</div>
 								<Paragraph>{exploreData.description}</Paragraph>
 							</div>
 						))}
@@ -26,7 +30,11 @@ const ExploreLitmus = ({ type }) => {
 						{advancedLitmusData.map((exploreData) => (
 							<div className="exploreLitmusDiv">
 								<img src={exploreData.icon} alt={exploreData.icon} />
-								<div className="subHeading">{exploreData.heading}</div>
+								<div className="subHeading">
+									<a href={exploreData.url} className="subHeadingText">
+										{exploreData.heading}
+									</a>
+								</div>
 								<Paragraph>{exploreData.description}</Paragraph>
 							</div>
 						))}
@@ -37,5 +45,4 @@ const ExploreLitmus = ({ type }) => {
 	)
 }
 
-export { ExploreLitmus };
-
+export { ExploreLitmus }

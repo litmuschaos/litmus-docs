@@ -3,7 +3,7 @@
 }
 
 .purple {
-  color: #5B44BA;
+  color: #5b44ba;
 }
 
 .headerImage {
@@ -19,26 +19,95 @@
     width: 30%;
   }
   .headerImage {
-    widtH: 35%;
+    width: 35%;
+  }
+}
+
+.homeMainContent {
+  margin-bottom: 3rem;
+}
+
+.right {
+  width: 50%;
+  margin-top: 3rem;
+}
+
+.getStartedImage {
+  width: 40%;
+}
+
+@media (min-width: 2000px) {
+  .right {
+    width: 35%;
+  }
+  .getStartedImage {
+    width: 30%;
   }
 }
 
 .grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-gap: 2rem;
   row-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .exploreLitmusDiv {
-  height: 130px;
+  height: 80px;
   margin: 2rem 0;
 }
 
 .subHeading {
-  color: #5B44BA;
   padding: 0.5rem 0;
+}
+
+.subHeadingText {
+  color: #5b44ba;
+}
+
+.footerDiv {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 20%;
+}
+
+.cncfDiv {
+  margin-top: 30px;
+}
+
+.cncfText {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+  color: #1c1438;
+}
+
+.cncfLink {
+  color: #5b44ba;
+}
+
+.preFooterRight {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.preFooterButton {
+  height: 3rem;
+  min-width: 10rem;
+  width: 18rem;
+  border: none;
+  background: linear-gradient(133.06deg, #7c6ac8 1.78%, #5b44ba 64.41%);
+  color: white;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.preFooterButton :disabled {
+  background: lightgray;
 }
 /*# sourceMappingURL=home.css.map */

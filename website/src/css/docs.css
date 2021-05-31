@@ -1,33 +1,19 @@
 .code {
   border-radius: 5px;
   margin-bottom: 8em;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .code .titleGroup {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
   color: #777288;
   background: #16102d;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   padding: 0.75em 1.25em;
   line-height: 0;
 }
@@ -40,8 +26,7 @@
 }
 
 .code .titleGroup .copyBtn {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   justify-self: flex-end;
   background: #16102d;
   border: none;
@@ -94,9 +79,6 @@
   /* works for line-numbers below 1000 lines */
   letter-spacing: -1px;
   border-right: 1px solid #999;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 

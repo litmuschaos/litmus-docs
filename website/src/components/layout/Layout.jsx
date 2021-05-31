@@ -6,20 +6,12 @@ import { theme } from '../../theme'
 import { Nav } from '../nav'
 import { PreFooter } from '../pre-footer'
 
-const Container = styled.div`
-	position: relative;
-	z-index: ${(props) => props.theme.zIndex.content};
-`
-
 const Layout = ({ children }) => {
 	return (
 		<ThemeProvider theme={theme()}>
-			<Container>
-				<Nav />
-				<main>{children}</main>
-				<PreFooter />
-				{/* <Footer /> */}
-			</Container>
+			<Nav />
+			<main>{children}</main>
+			<PreFooter />
 		</ThemeProvider>
 	)
 }
