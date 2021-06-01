@@ -3,10 +3,11 @@ import styled from "styled-components";
 
 const Link = styled(GatsbyLink)`
   display: block;
-  color: black;
+  color: ${props => props.color ?? 'black'};
   text-decoration: none;
   :hover {
-    color: black;
+    color: ${props => props.color ?? 'black'};
+    text-decoration: none;
   }
 `;
 

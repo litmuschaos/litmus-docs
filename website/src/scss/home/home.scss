@@ -1,6 +1,20 @@
 @import '../theme';
 @import '../mixin';
 
+// Global
+
+.spacing {
+	margin: 1rem 0;
+}
+
+.grid {
+	@include grid();
+}
+
+.subHeading {
+	padding: 0.5rem 0;
+}
+
 // Header
 
 .left {
@@ -13,10 +27,6 @@
 
 .headerImage {
 	width: 55%;
-}
-
-.spacing {
-	margin: 1rem 0;
 }
 
 @media (min-width: 2000px) {
@@ -57,22 +67,9 @@
 
 // Explore Litmus
 
-.grid {
-	@include grid();
-	grid-template-columns: repeat(3, 1fr);
-}
-
 .exploreLitmusDiv {
-	height: 80px;
-	margin: 2rem 0;
-}
-
-.subHeading {
-	padding: 0.5rem 0;
-}
-
-.subHeadingText {
-	color: map-get($colors, textSecondary);
+	height: 100%;
+	margin: 1rem 0;
 }
 
 // footer

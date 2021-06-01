@@ -1,3 +1,20 @@
+.spacing {
+  margin: 1rem 0;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+  row-gap: 1rem;
+}
+
+.subHeading {
+  padding: 0.5rem 0;
+}
+
 .left {
   width: 45%;
 }
@@ -8,10 +25,6 @@
 
 .headerImage {
   width: 55%;
-}
-
-.spacing {
-  margin: 1rem 0;
 }
 
 @media (min-width: 2000px) {
@@ -45,30 +58,18 @@
   }
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-gap: 2rem;
-  row-gap: 2rem;
-  grid-template-columns: repeat(3, 1fr);
-}
-
 .exploreLitmusDiv {
-  height: 80px;
-  margin: 2rem 0;
-}
-
-.subHeading {
-  padding: 0.5rem 0;
-}
-
-.subHeadingText {
-  color: #5b44ba;
+  height: 100%;
+  margin: 1rem 0;
 }
 
 .footerDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 2% 20%;
 }
 
@@ -89,8 +90,12 @@
 
 .preFooterRight {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .preFooterButton {
@@ -102,8 +107,12 @@
   color: white;
   border-radius: 0.25rem;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 10px;
 }
 

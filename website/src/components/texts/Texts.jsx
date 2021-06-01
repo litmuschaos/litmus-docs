@@ -10,8 +10,7 @@ const Heading = styled.h1`
       : props.theme.fontSize.heading.lg};
 `;
 
-const SubHeading = styled.p`
-  line-height: 170%;
+const SubHeading = styled.p`  
   font-weight: 600;
   text-align: ${(props) => props.textAlign ?? "left"};
   font-size: ${(props) =>
