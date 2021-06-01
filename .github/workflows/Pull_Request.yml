@@ -1,23 +1,22 @@
 name: LitmusDocs-CI
 on:
   pull_request:
-    types: [ opened, synchronize, reopened ]
+    types: [opened, synchronize, reopened]
     paths:
-      - 'website/**'
+      - "website/**"
 
 jobs:
   embedmdCheck_and_linksVerification:
     runs-on: ubuntu-latest
     steps:
-
       - uses: actions/checkout@v2
         with:
-          ref: ${{steps.getcommit.outputs.sha}} 
+          ref: ${{steps.getcommit.outputs.sha}}
 
       - uses: actions/setup-go@v2
         with:
-          stable: 'false'
-          go-version: '1.14.0'
+          stable: "false"
+          go-version: "1.14.0"
 
       - name: Links Verification
         run: |
@@ -30,10 +29,10 @@ jobs:
           go get github.com/campoy/embedmd
           cd website/docs
           embedmd -w $(find *.md)
-        continue-on-error: true  
-        
+        continue-on-error: true
+
       - name: embedmd check
-        run: | 
+        run: |
           export TERM=xterm-256color
           count=$(git status -s| wc -l)
           if [ "$count" -ne "0" ]
@@ -51,7 +50,7 @@ jobs:
             tput setaf 2; echo "Nothing to embed"
           fi
         shell: sh
-        
+
   ci:
     runs-on: ubuntu-18.04
     steps:
@@ -63,13 +62,13 @@ jobs:
   Spellcheck:
     runs-on: ubuntu-latest
     steps:
-    # The checkout step
-    - uses: actions/checkout@master
-    - uses: rojopolis/spellcheck-github-actions@0.11.0
-      name: Spellcheck
-      with:
-        source_files: 'website/docs/*.md'
-        task_name: Markdown
+      # The checkout step
+      - uses: actions/checkout@master
+      - uses: rojopolis/spellcheck-github-actions@0.11.0
+        name: Spellcheck
+        with:
+          source_files: "website/docs/*.md"
+          task_name: Markdown
 
   NetlifyPreview:
     runs-on: ubuntu-latest
@@ -80,7 +79,7 @@ jobs:
         with:
           node-version: 12.x
       # Run npm install and build on our code
-      - run: | 
+      - run: |
           cd website
           npm install
           npm run build
@@ -99,7 +98,7 @@ jobs:
         id: previewComment
         with:
           issue-number: ${{ github.event.pull_request.number }}
-          comment-author: 'github-actions[bot]'
+          comment-author: "github-actions[bot]"
           body-includes: "Netlify-Preview Details :"
 
       - name: Comments the links for preview if build passed successfully
@@ -110,11 +109,8 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             **Netlify-Preview Details :**
-            
-            **Preview Link** - ${{ steps.preview.outputs.NETLIFY_URL }}
-            **Netlify Logs Link** - ${{ steps.preview.outputs.NETLIFY_LOGS_URL }}
+
+            **🚀 Preview Link** - ${{ steps.preview.outputs.NETLIFY_URL }}
+            **💻 Netlify Logs Link** - ${{ steps.preview.outputs.NETLIFY_LOGS_URL }}
           edit-mode: replace
           reactions: rocket, hooray
-
-
-      
