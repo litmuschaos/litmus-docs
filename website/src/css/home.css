@@ -3,10 +3,8 @@
 }
 
 .grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-gap: 2rem;
   row-gap: 1rem;
 }
@@ -64,12 +62,8 @@
 }
 
 .footerDiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 2% 20%;
 }
 
@@ -90,12 +84,8 @@
 
 .preFooterRight {
   width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .preFooterButton {
@@ -107,16 +97,57 @@
   color: white;
   border-radius: 0.25rem;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 10px;
 }
 
 .preFooterButton :disabled {
   background: lightgray;
+}
+
+.tutorialCardDiv {
+  width: 350px;
+  margin: 20px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.tutorialLink {
+  text-decoration: none;
+}
+
+.cardContent {
+  padding: 20px;
+}
+
+.cardHeading {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.cardDescription {
+  color: #777288;
+}
+
+.tutorialAvailable {
+  padding: 6px 12px;
+  border-radius: 26px;
+  background-color: rgba(143, 150, 224, 0.25);
+  width: 100px;
+  margin-top: 11px;
+}
+
+.comingSoon {
+  font-size: 12px;
+  color: #5b44ba;
+}
+
+.tutorialContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 /*# sourceMappingURL=home.css.map */

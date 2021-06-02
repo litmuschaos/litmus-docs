@@ -9,7 +9,7 @@ export const exploreLitmusData = [
 		icon: 'img/tutorials.svg',
 		heading: 'Tutorials',
 		description: 'Get hands on learning to use Litmus with Katkoda and Codelabs',
-		url: '/docs/'
+		url: '/docs/next/tutorials'
 	},
 	{
 		icon: 'img/chaos-hub.svg',
