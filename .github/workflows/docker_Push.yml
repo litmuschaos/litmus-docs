@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'website/**'
+      - "website/**"
 
 jobs:
   cd:
@@ -24,8 +24,8 @@ jobs:
         run: |
           docker build -t ${GITHUB_REPOSITORY}:${{ steps.vars.outputs.branch }}-${{ steps.vars.outputs.sha_short }} .
           docker push ${GITHUB_REPOSITORY}:${{ steps.vars.outputs.branch }}-${{ steps.vars.outputs.sha_short }}
-  
-  netlify-build:
+
+  netlify-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: 12.x
       # Run npm install and build on our code
-      - run: | 
+      - run: |
           cd website
           npm install
           npm run build
@@ -45,6 +45,3 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
           args: deploy --dir=website/build --prod
-          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
-          
-

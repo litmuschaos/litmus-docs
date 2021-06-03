@@ -24,7 +24,7 @@ Additional details on the Docusaurus project can be found [here](https://docusau
 
 ## For Developers
 
-### Clone litmus-docs repository
+### Clone litmus-docs-beta repository
 
 ```bash
 git clone https://github.com/litmuschaos/litmus-docs-beta.git
