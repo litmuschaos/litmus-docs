@@ -150,4 +150,38 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.chaosHubHeader {
+  font-size: 24px;
+  color: #777288;
+}
+
+.chaosHubDiv {
+  margin-top: 60px;
+  display: flex;
+}
+
+.chaosHubInfo {
+  margin: auto;
+}
+
+.chaosHubDescription {
+  max-width: 600px;
+  margin-top: 20px;
+  color: #777288;
+}
+
+.chaosHubExplore {
+  display: flex;
+  margin-top: 20px;
+}
+
+.chaosHubExploreText {
+  color: #5b44ba;
+}
+
+.chaosHubImage {
+  margin-left: 5px;
+  margin-top: 5px;
+}
 /*# sourceMappingURL=home.css.map */

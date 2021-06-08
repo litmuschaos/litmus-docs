@@ -15,7 +15,7 @@ export const exploreLitmusData = [
 		icon: 'img/chaos-hub.svg',
 		heading: 'Chaos Hub',
 		description: 'GA shop for thousands of pre defined workflows and experiements to be used.',
-		url: 'http://hub.litmuschaos.io/'
+		url: '/docs/next/chaos-hub'
 	},
 	{
 		icon: 'img/advantages.svg',

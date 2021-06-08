@@ -1,6 +1,6 @@
 module.exports = {
 	docs: {
-		Introduction: ['introduction', 'architecture', 'tutorials'],
+		Introduction: ['introduction', 'architecture', 'tutorials', 'chaos-hub'],
 		'Getting Started': [
 			'getstarted',
 			{
