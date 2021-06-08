@@ -9,7 +9,7 @@ original_id: k8s-support
 
 ### Control Plane Resource Requirements
 
-The Resource requests and limits provided here have been calculated using data gathered by manually using a command `kubectl top` and Vertical-Pod-Autoscaler & also through recomendation by a great utility Goldilocks.The resources are getting monitored contineously and the information below will be updated as the metrics changes.
+The Resource requests and limits provided here have been calculated using data gathered by manually using a command `kubectl top` and Vertical-Pod-Autoscaler & also through recommendation by a great utility Goldilocks.The resources are getting monitored continuously and the information below will be updated as the metrics changes.
 
 <table>
    <tr>
