@@ -27,7 +27,7 @@ The Resource requests and limits provided here have been calculated using data g
    <tr>
    <td>litmusportal-server</td>
    <td>auth-server</td>
-   <td>23m</td>
+   <td>12m</td>
    <td>132M</td>
    </tr>
    <tr>
