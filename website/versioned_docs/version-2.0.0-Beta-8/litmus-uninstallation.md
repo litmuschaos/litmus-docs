@@ -14,12 +14,11 @@ The helm chart uninstall the control plane components
 helm uninstall litmuschaos  --namespace litmus
 kubectl delete ns litmus
 ```
-                    
-----
+
+---
 
 ### **Uninstallation of Litmus Control Plane using kubectl**
 
 ```bash
 kubectl delete ns litmus
 ```
-       
