@@ -101,7 +101,7 @@ $ litmusctl agent connect
 
 Next, you need to enter LitmusPortal details to login into your LitmusPortal account. Fields to be filled in:
 
-**LimtusPortal UI URL:** Enter the URL used to access the Litmus Portal UI.
+**LitmusPortal UI URL:** Enter the URL used to access the Litmus Portal UI.
 Example, http://172.17.0.2:31696/
 
 **Username:** Enter your LitmusPortal username.
@@ -151,7 +151,7 @@ Fields to filled in:
 
 **Platform Name:** Enter the platform name on which this agent is hosted. For example, AWS, GCP, Rancher etc.
 
-**Enter the namespace:** You can either enter an existing namespace or enter a new namespace. In cases where the namespace does not exist, LimtusPortal creates it for you.
+**Enter the namespace:** You can either enter an existing namespace or enter a new namespace. In cases where the namespace does not exist, LitmusPortal creates it for you.
 
 **Enter service account:** Enter a name for your service account.
 
