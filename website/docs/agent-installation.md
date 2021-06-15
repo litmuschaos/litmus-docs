@@ -41,7 +41,7 @@ To install the latest version of litmusctl follow the below steps:
 | litmusctl-windows-amd64        | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-amd64-master.tar.gz) |
 | litmusctl-windows-arm          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-arm-master.tar.gz)   |
 
-<br>
+<br />
 
 - Download the litmusctl(v0.2.0) binary from:
 
@@ -57,7 +57,7 @@ To install the latest version of litmusctl follow the below steps:
 | litmusctl-windows-amd64        | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-amd64-v0.2.0.tar.gz) |
 | litmusctl-windows-arm          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-arm-v0.2.0.tar.gz)   |
 
-<br>
+<br />
 
 - Extract the binary
 

@@ -12,17 +12,16 @@ sidebar_label: Control Plane (Namespace Mode)
 
 - Kubernetes 1.15 or later.
   ​
-- Persistent volume of 20GB
-  ​
-  Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purposes as well. This PV is used as persistent storage to store the chaos config and chaos-metrics in the Portal. By default, litmus install would use the default storage class to allocate the PV. Provide this value
+- Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purposes as well. This PV is used as persistent storage to store the chaos config and chaos-metrics in the Portal. By default, litmus would use the default storage class to allocate the PV.
 
 - Helm3 or Kubectl
 
-## Installation 
+## Installation
 
 Installation of Litmus can be done using either of the below methods
--  [Helm3](#helm_install) chart or 
--  [Kubectl](#kubectl_install) yaml spec file
+
+- [Helm3](#helm_install) chart or
+- [Kubectl](#kubectl_install) yaml spec file
 
 ### <a name="kubectl_install"> </a>**Install Litmus using Helm **
 
@@ -58,10 +57,11 @@ namespace/litmus created
 
 ```bash
 root@demo:~# helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=litmus --devel --set portalScope=namespace
+```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
 
-```
+```bash
 NAME: chaos
 LAST DEPLOYED: Tue Jun 15 19:20:09 2021
 NAMESPACE: litmus
@@ -74,6 +74,7 @@ Thank you for installing litmus-2-0-0-beta 😀
 Your release is named chaos and its installed to namespace: litmus.
 
 Visit https://docs.litmuschaos.io/docs/getstarted/ to find more info.
+
 ```
 
 > **Note:** Litmus uses Kubernetes CRDs to define chaos intent. Helm3 handles CRDs better than Helm2. Before you start running a chaos experiment, verify if Litmus is installed correctly.
@@ -97,13 +98,12 @@ customresourcedefinition.apiextensions.k8s.io/chaosresults.litmuschaos.io create
 customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.litmuschaos.io created
 ```
 
-                                ---
-
 ### <a name="kubectl_install"> </a>**Install Litmus using kubectl **
 
 #### **Install Litmus**
 
 - Set the namespace on which you want to install litmus.
+
 ```bash
 export LITMUS_PORTAL_NAMESPACE="<namespace>"
 kubectl get ns ${LITMUS_PORTAL_NAMESPACE}
@@ -135,15 +135,10 @@ customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.
 
 ```bash
 export LITMUS_PORTAL_NAMESPACE="<namespace>"
-curl
-https://raw.githubusercontent.com/litmuschaos/litmus/master/docs/2
-.0.0-Beta/litmus-namespaced-2.0.0-Beta.yaml --output
-litmus-portal-namespaced-K8s-template.yml
+curl https://raw.githubusercontent.com/litmuschaos/litmus/master/docs/2.0.0-Beta/litmus-namespaced-2.0.0-Beta.yaml --output litmus-portal-namespaced-K8s-template.yml
 envsubst < litmus-portal-namespaced-K8s-template.yml >
 ${LITMUS_PORTAL_NAMESPACE}-ns-scoped-litmus-portal-manifest.yml
-kubectl apply -f
-${LITMUS_PORTAL_NAMESPACE}-ns-scoped-litmus-portal-manifest.yml -n
-${LITMUS_PORTAL_NAMESPACE}
+kubectl apply -f ${LITMUS_PORTAL_NAMESPACE}-ns-scoped-litmus-portal-manifest.yml -n ${LITMUS_PORTAL_NAMESPACE}
 ```
 
 Output:
@@ -197,7 +192,6 @@ service/mongo-service created
   litmusportal-server-service     NodePort    10.100.150.175  <none>      9002:30479/TCP,9003:31949/TCP 7m8s
   mongo-service                   ClusterIP   10.100.226.179  <none>      27017/TCP                     7m6s
   ```
-
 
 <br />
 
