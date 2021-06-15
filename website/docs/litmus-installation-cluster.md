@@ -1,7 +1,7 @@
 ---
-id: litmus-install
-title: Litmus Chaos Control Plane
-sidebar_label: Control Plane
+id: litmus-install-cluster-mode
+title: Litmus Chaos Control Plane (Cluster Mode)
+sidebar_label: Control Plane (Cluster Mode)
 ---
 
 ---
@@ -12,17 +12,16 @@ sidebar_label: Control Plane
 
 - Kubernetes 1.15 or later.
   ​
-- Persistent volume of 20GB
-  ​
-  Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purposes as well. This PV is used as persistent storage to store the chaos config and chaos-metrics in the Portal. By default, litmus install would use the default storage class to allocate the PV. Provide this value
+- Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purposes as well. This PV is used as persistent storage to store the chaos config and chaos-metrics in the Portal. By default, litmus would use the default storage class to allocate the PV.
 
 - Helm3 or Kubectl
 
-## Installation 
+## Installation
 
 Installation of Litmus can be done using either of the below methods
--  [Helm3](#helm_install) chart or 
--  [Kubectl](#kubectl_install) yaml spec file
+
+- [Helm3](#helm_install) chart or
+- [Kubectl](#kubectl_install) yaml spec file
 
 ### Installation Steps
 
@@ -58,19 +57,13 @@ namespace/litmus created
 
 ```bash
 root@demo:~# helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=litmus --devel
-NAME: chaos
-LAST DEPLOYED: Fri Sep  29 06:19:50 2020
-NAMESPACE: litmus
-STATUS: deployed
-REVISION: 1
-TEST SUITE: None
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
 
 ```
 NAME: chaos
-LAST DEPLOYED: Mon Mar 15 18:27:42 2021
+LAST DEPLOYED: Tue Jun 15 19:20:09 2021
 NAMESPACE: litmus
 STATUS: deployed
 REVISION: 1
@@ -81,27 +74,30 @@ Thank you for installing litmus-2-0-0-beta 😀
 Your release is named chaos and its installed to namespace: litmus.
 
 Visit https://docs.litmuschaos.io/docs/getstarted/ to find more info.
+
 ```
 
 > **Note:** Litmus uses Kubernetes CRDs to define chaos intent. Helm3 handles CRDs better than Helm2. Before you start running a chaos experiment, verify if Litmus is installed correctly.
 
 ### <a name="kubectl_install"> </a>**Install Litmus using kubectl **
 
-#### **Create a Litmus namespace  in Kubernetes**
+#### **Create a Litmus namespace in Kubernetes**
 
 ```bash
 kubectl create ns litmus
 ```
+
 #### **Install Litmus**
 
 Applying the manifest file will install all the required service account configuration and chaos control plane.
+
 ```bash
 kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Beta.yaml
 ```
 
 ## **Verify your installation**
 
-**Verify if the frontend, backend, and database Pods are running**
+**Verify if the frontend, server, and database pod are running**
 
 ```bash
 kubectl get pods -n litmus
@@ -114,8 +110,6 @@ chaos-litmus-portal-frontend-ff8b554dc-q5rl4   1/1     Running   0          2m6s
 chaos-litmus-portal-mongo-6764cfdd59-c9r56     1/1     Running   0          2m6s
 chaos-litmus-portal-server-5ffbccbfff-dknv8    2/2     Running   0          2m6s
 ```
-
-<br />
 
 ## **Setup the Portal**
 

@@ -8,11 +8,7 @@ module.exports = {
     "Getting Started": [
       "getstarted",
       {
-        Installation: [
-          "litmus-install",
-          "agent-install",
-          "litmus-with-ingress",
-        ],
+	      "Installation" : [ "litmus-install-cluster-mode", "litmus-install-namespace-mode", "agent-install", "litmus-with-ingress"],
       },
       "create-workflow",
       "observe-workflow",
@@ -41,13 +37,13 @@ module.exports = {
     // "external-agents"
     //],
     //Concepts: [
-    //"probes",
-    //   "cross-cloud-control",
-    //   "litmusctl",
-    // "crds",
-    //   "rbac",
-    //   "service-acounts",
-    // ],
-    Advanced: ["admin-mode", "namespaced-mode", "litmus-psp", "k8s-support"],
+      //"probes",
+      //   "cross-cloud-control",
+      //   "litmusctl",
+      // "crds",
+      //   "rbac",
+      //   "service-acounts",
+   // ],
+    Advanced: ["litmus-psp", "k8s-support"],
   },
 };
