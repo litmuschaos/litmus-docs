@@ -8,12 +8,16 @@ module.exports = {
     "Getting Started": [
       "getstarted",
       {
-	      "Installation" : [ "litmus-install", "agent-install", "litmus-with-ingress"],
+        Installation: [
+          "litmus-install",
+          "agent-install",
+          "litmus-with-ingress",
+        ],
       },
       "create-workflow",
       "observe-workflow",
       {
-	      "Uninstallation" : [ "agent-uninstall", "litmus-uninstall" ],
+        Uninstallation: ["agent-uninstall", "litmus-uninstall"],
       },
     ],
     "User Guide": [
@@ -27,23 +31,23 @@ module.exports = {
         "Day 2": ["myhub", "gitops", "probes"],
       },
     ],
-//    Features: [
-  //    "gitops",
+    //    Features: [
+    //    "gitops",
     //  "settings",
-     // "myhub",
-      // "settings",
-      // "analytics",
-      // "myhub",
-      // "external-agents"
+    // "myhub",
+    // "settings",
+    // "analytics",
+    // "myhub",
+    // "external-agents"
     //],
     //Concepts: [
-      //"probes",
-      //   "cross-cloud-control",
-      //   "litmusctl",
-      // "crds",
-      //   "rbac",
-      //   "service-acounts",
-   // ],
-    Advanced: ["admin-mode", "namespaced-mode", "litmus-psp"],
+    //"probes",
+    //   "cross-cloud-control",
+    //   "litmusctl",
+    // "crds",
+    //   "rbac",
+    //   "service-acounts",
+    // ],
+    Advanced: ["admin-mode", "namespaced-mode", "litmus-psp", "k8s-support"],
   },
 };
