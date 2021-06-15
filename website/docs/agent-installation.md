@@ -27,22 +27,6 @@ The litmusctl CLI requires the following things:
 
 To install the latest version of litmusctl follow the below steps:
 
-- Download the stable litmusctl(v0.1.0) binary from:
-
-| Platforms                      | Download Link                                                                                           |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------- |
-| litmusctl-darwin-386 (MacOS)   | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-darwin-386-v0.1.0.tar.gz)    |
-| litmusctl-darwin-amd64 (MacOS) | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-darwin-amd64-v0.1.0.tar.gz)  |
-| litmusctl-linux-386            | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-386-v0.1.0.tar.gz)     |
-| litmusctl-linux-amd64          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-amd64-v0.1.0.tar.gz)   |
-| litmusctl-linux-arm            | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-arm-v0.1.0.tar.gz)     |
-| litmusctl-linux-arm64          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-arm64-v0.1.0.tar.gz)   |
-| litmusctl-windows-386          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-386-v0.1.0.tar.gz)   |
-| litmusctl-windows-amd64        | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-amd64-v0.1.0.tar.gz) |
-| litmusctl-windows-arm          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-arm-v0.1.0.tar.gz)   |
-
-<br />
-
 - Download the latest litmusctl(master) binary from:
 
 | Platforms                      | Download Link                                                                                           |
@@ -57,7 +41,23 @@ To install the latest version of litmusctl follow the below steps:
 | litmusctl-windows-amd64        | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-amd64-master.tar.gz) |
 | litmusctl-windows-arm          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-arm-master.tar.gz)   |
 
-<br />
+<br>
+
+- Download the litmusctl(v0.2.0) binary from:
+
+| Platforms                      | Download Link                                                                                           |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| litmusctl-darwin-386 (MacOS)   | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-darwin-386-v0.2.0.tar.gz)    |
+| litmusctl-darwin-amd64 (MacOS) | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-darwin-amd64-v0.2.0.tar.gz)  |
+| litmusctl-linux-386            | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-386-v0.2.0.tar.gz)     |
+| litmusctl-linux-amd64          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-amd64-v0.2.0.tar.gz)   |
+| litmusctl-linux-arm            | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-arm-v0.2.0.tar.gz)     |
+| litmusctl-linux-arm64          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-linux-arm64-v0.2.0.tar.gz)   |
+| litmusctl-windows-386          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-386-v0.2.0.tar.gz)   |
+| litmusctl-windows-amd64        | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-amd64-v0.2.0.tar.gz) |
+| litmusctl-windows-arm          | [Click here](https://litmusctl-bucket.s3-eu-west-1.amazonaws.com/litmusctl-windows-arm-v0.2.0.tar.gz)   |
+
+<br>
 
 - Extract the binary
 
@@ -101,7 +101,7 @@ $ litmusctl agent connect
 
 Next, you need to enter LitmusPortal details to login into your LitmusPortal account. Fields to be filled in:
 
-**LitmusPortal UI URL:** Enter the URL used to access the Litmus Portal UI.
+**LimtusPortal UI URL:** Enter the URL used to access the Litmus Portal UI.
 Example, http://172.17.0.2:31696/
 
 **Username:** Enter your LitmusPortal username.
@@ -151,7 +151,7 @@ Fields to filled in:
 
 **Platform Name:** Enter the platform name on which this agent is hosted. For example, AWS, GCP, Rancher etc.
 
-**Enter the namespace:** You can either enter an existing namespace or enter a new namespace. In cases where the namespace does not exist, LitmusPortal creates it for you.
+**Enter the namespace:** You can either enter an existing namespace or enter a new namespace. In cases where the namespace does not exist, LimtusPortal creates it for you.
 
 **Enter service account:** Enter a name for your service account.
 

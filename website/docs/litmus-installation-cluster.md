@@ -1,7 +1,7 @@
 ---
 id: litmus-install
-title: Litmus Chaos Control Plane
-sidebar_label: Control Plane
+title: Litmus Chaos Control Plane (Cluster Mode)
+sidebar_label: Control Plane (Namespace Mode)
 ---
 
 ---
@@ -58,19 +58,12 @@ namespace/litmus created
 
 ```bash
 root@demo:~# helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=litmus --devel
-NAME: chaos
-LAST DEPLOYED: Fri Sep  29 06:19:50 2020
-NAMESPACE: litmus
-STATUS: deployed
-REVISION: 1
-TEST SUITE: None
-```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
 
 ```
 NAME: chaos
-LAST DEPLOYED: Mon Mar 15 18:27:42 2021
+LAST DEPLOYED: Tue Jun 15 19:20:09 2021
 NAMESPACE: litmus
 STATUS: deployed
 REVISION: 1
@@ -87,6 +80,8 @@ Visit https://docs.litmuschaos.io/docs/getstarted/ to find more info.
 
 ### <a name="kubectl_install"> </a>**Install Litmus using kubectl **
 
+                                ---
+
 #### **Create a Litmus namespace  in Kubernetes**
 
 ```bash
@@ -101,7 +96,7 @@ kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Be
 
 ## **Verify your installation**
 
-**Verify if the frontend, backend, and database Pods are running**
+**Verify if the frontend, server, and database pod are running**
 
 ```bash
 kubectl get pods -n litmus
