@@ -1,4 +1,8 @@
 mongodb
+eventtracker
+eventtrackerpolicies
+portalScope
+LitmusCRDs
 graphql
 accomodate
 accomodated
