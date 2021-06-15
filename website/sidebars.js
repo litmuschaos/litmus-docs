@@ -13,7 +13,7 @@ module.exports = {
       "create-workflow",
       "observe-workflow",
       {
-	      "Uninstallation" : [ "agent-uninstall", "litmus-uninstall" ],
+        Uninstallation: ["agent-uninstall", "litmus-uninstall"],
       },
     ],
     "User Guide": [
@@ -27,14 +27,14 @@ module.exports = {
         "Day 2": ["myhub", "gitops", "probes"],
       },
     ],
-//    Features: [
-  //    "gitops",
+    //    Features: [
+    //    "gitops",
     //  "settings",
-     // "myhub",
-      // "settings",
-      // "analytics",
-      // "myhub",
-      // "external-agents"
+    // "myhub",
+    // "settings",
+    // "analytics",
+    // "myhub",
+    // "external-agents"
     //],
     //Concepts: [
       //"probes",
@@ -44,6 +44,6 @@ module.exports = {
       //   "rbac",
       //   "service-acounts",
    // ],
-    Advanced: ["litmus-psp"],
+    Advanced: ["litmus-psp", "k8s-support"],
   },
 };

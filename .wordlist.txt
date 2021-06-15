@@ -1,3 +1,5 @@
+mongodb
+graphql
 accomodate
 accomodated
 abc
