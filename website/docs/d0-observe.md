@@ -55,9 +55,9 @@ A Resilience Score is the measure of how resilient your workflow is considering 
 Giving a weightage to your experiment is a way of signifying/attaching the importance/priority of that experiment in your workflow. The higher the weight, the more importance it holds.
 
 The weight priority is generally divided into three sections:
-* <span style="color:#CA2C2C">0-3: Low Priority</span>
-* <span style="color:#DBA017">4-6: Medium Priority</span>
-* <span style="color:#109B67">7-10: High Priority</span>
+* **0-3:** Low Priority
+* **4-6:** Medium Priority
+* **7-10:** High Priority
 
 #### **The Calculation**
 
