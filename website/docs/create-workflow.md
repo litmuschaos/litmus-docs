@@ -26,7 +26,7 @@ In this step, you can create a workflow from different methods, these include:
 
 - **Create a new workflow from one of the pre-defined chaos experiment** : With this option, you can select a pre-defined workflow which is available in the connected ChaosHub. The default ChaosHub consists of 2 pre-defined workflows `podtato-head` and `sock-shop`.
 
-- **Create a new workflow by cloning and existing workflow** : With this option, you can create a new workflow from an existing one. You an save an existing workflow as a template from the schedules tab present in the Browse Workflow section. You can provide a `worflow name` and `workflow description` to the template. After successfully saving the templates, you can view them here.
+- **Create a new workflow by cloning and existing workflow** : With this option, you can create a new workflow from an existing one. You an save an existing workflow as a template from the schedules tab present in the Browse Workflow section. You can provide a `workflow name` and `workflow description` to the template. After successfully saving the templates, you can view them here.
 
 - **Create a new workflow using experiments from MyHub** : With this option, you can create custom workflows from the connected ChaosHubs.
 
@@ -73,4 +73,4 @@ In this step, you can schedule the workflow in 2 ways:
 
 ### 7. Verify and Commit
 
-This is the final step in workflow creation process. In this step, you can validate all the changes related to the workflow like the workflow name, the experiment weights, workflow description, worflow manifest etc. Once you have verified all the changes, you can click the **Finish** button to start the schedule.
+This is the final step in workflow creation process. In this step, you can validate all the changes related to the workflow like the workflow name, the experiment weights, workflow description, workflow manifest etc. Once you have verified all the changes, you can click the **Finish** button to start the schedule.
