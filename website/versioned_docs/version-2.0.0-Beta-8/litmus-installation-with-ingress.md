@@ -88,7 +88,7 @@ spec:
       name: letsencrypt
     solvers:
     - http01:
-     	  ingress:
+     	ingress:
           class: nginx
 ```
 
