@@ -32,14 +32,8 @@ The following steps will help you install litmus via helm.
 #### Step-1: Add the litmus helm repository
 
 ```bash
-root@demo:~# helm repo add litmuschaos https://litmuschaos.github.io/litmus-helm/
-"litmuschaos" has been added to your repositories
-```
-
-```bash
-root@demo:~# helm repo list
-NAME            URL
-litmuschaos     https://litmuschaos.github.io/litmus-helm/
+helm repo add litmuschaos https://litmuschaos.github.io/litmus-helm/
+helm repo list
 ```
 
 #### Step-2: Create the litmus namespace
@@ -49,14 +43,13 @@ litmuschaos     https://litmuschaos.github.io/litmus-helm/
 **Note**: The chaos control plane can be placed in any namespace, though it is typically placed in "litmus".
 
 ```bash
-root@demo:~# kubectl create ns litmus
-namespace/litmus created
+kubectl create ns litmus
 ```
 
 #### Step-3: Install the litmus chaos control plane
 
 ```bash
-root@demo:~# helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=litmus --devel --set portalScope=namespace
+helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=litmus --devel --set portalScope=namespace
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -85,7 +78,7 @@ Visit https://docs.litmuschaos.io/docs/getstarted/ to find more info.
 kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/litmus-portal-crds.yml
 ```
 
-Output:
+<span style={{color: 'green'}}><b>Expected Output</b></span>
 
 ```bash
 customresourcedefinition.apiextensions.k8s.io/clusterworkflowtemplates.argoproj.io created
@@ -118,7 +111,7 @@ kubectl create ns ${LITMUS_PORTAL_NAMESPACE}
 kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/litmus-portal-crds.yml
 ```
 
-Output:
+<span style={{color: 'green'}}><b>Expected Output</b></span>
 
 ```bash
 customresourcedefinition.apiextensions.k8s.io/clusterworkflowtemplates.argoproj.io created
@@ -141,7 +134,7 @@ ${LITMUS_PORTAL_NAMESPACE}-ns-scoped-litmus-portal-manifest.yml
 kubectl apply -f ${LITMUS_PORTAL_NAMESPACE}-ns-scoped-litmus-portal-manifest.yml -n ${LITMUS_PORTAL_NAMESPACE}
 ```
 
-Output:
+<span style={{color: 'green'}}><b>Expected Output</b></span>
 
 ```bash
 configmap/litmus-portal-admin-config created
@@ -160,22 +153,15 @@ service/mongo-service created
 
 **Verify if the frontend, server, and database pods are running**
 
-- Check the litmus CRDs:
-
-  ```bash
-  $ kubectl get crds | grep litmus
-  chaosengines.litmuschaos.io                        2021-03-24T06:52:54Z
-  chaosexperiments.litmuschaos.io                    2021-03-24T06:52:54Z
-  chaosresults.litmuschaos.io                        2021-03-24T06:52:55Z
-  eventtrackerpolicies.eventtracker.litmuschaos.io   2021-03-24T06:52:55Z
-
-  ```
-
 - Check the pods in litmus namespace:
 
   ```bash
-  $ kubectl get pods -n litmus
+  kubectl get pods -n litmus
+  ```
 
+  <span style={{color: 'green'}}><b>Expected Output</b></span>
+  
+  ```bash
   NAME                                    READY   STATUS  RESTARTS  AGE
   litmusportal-frontend-97c8bf86b-mx89w   1/1     Running 2         6m24s
   litmusportal-server-5cfbfc88cc-m6c5j    2/2     Running 2         6m19s
@@ -185,8 +171,12 @@ service/mongo-service created
 - Check the services running in litmus namespace:
 
   ```bash
-  $ kubectl get svc -n litmus
+  kubectl get svc -n litmus
+  ```
 
+  <span style={{color: 'green'}}><b>Expected Output</b></span>
+
+  ```bash
   NAME                            TYPE        CLUSTER-IP      EXTERNAL-IP PORT(S)                       AGE
   litmusportal-frontend-service   NodePort    10.100.105.154  <none>      9091:30229/TCP                7m14s
   litmusportal-server-service     NodePort    10.100.150.175  <none>      9002:30479/TCP,9003:31949/TCP 7m8s

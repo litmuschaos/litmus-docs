@@ -61,42 +61,42 @@ To install the latest version of litmusctl follow the below steps:
 
 - Extract the binary
 
-```shell
-$ tar -zxvf litmusctl-<OS>-<ARCH>-<VERSION>.tar.gz
+```bash
+tar -zxvf litmusctl-<OS>-<ARCH>-<VERSION>.tar.gz
 ```
 
 - Provide necessary permissions
 
-```shell
-$ chmod +x litmusctl
+```bash
+chmod +x litmusctl
 ```
 
 - Move the litmusctl binary to /usr/local/bin/litmusctl
 
-```shell
-$ sudo mv litmusctl /usr/local/bin/litmusctl
+```bash
+sudo mv litmusctl /usr/local/bin/litmusctl
 ```
 
 ## Basic Commands
 
 litmusctl CLI command has the following structure:
 
-```shell
-$ litmusctl <command> <subcommand> <subcommand> [options and parameters]
+```bash
+litmusctl <command> <subcommand> <subcommand> [options and parameters]
 ```
 
 To get the version of the litmusctl CLI:
 
-```shell
-$ litmusctl version
+```bash
+litmusctl version
 ```
 
 ### Connecting an agent
 
 To connect Litmus Chaos agent:
 
-```shell
-$ litmusctl agent connect
+```bash
+litmusctl agent connect
 ```
 
 Next, you need to enter LitmusPortal details to login into your LitmusPortal account. Fields to be filled in:
@@ -107,7 +107,7 @@ Example, http://172.17.0.2:31696/
 **Username:** Enter your LitmusPortal username.
 **Password:** Enter your LitmusPortal password.
 
-```shell
+```bash
 🔥 Connecting LitmusChaos agent
 
 📶 Please enter LitmusChaos details --
@@ -119,7 +119,7 @@ Example, http://172.17.0.2:31696/
 
 Upon successful login, there will be a list of exiting projects displayed on the terminal. Select the desired project by entering the sequence number indicated against it.
 
-```shell
+```bash
 ✨ Projects List:
 1.  abc
 
