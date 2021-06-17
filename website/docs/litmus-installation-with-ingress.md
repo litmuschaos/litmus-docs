@@ -8,7 +8,7 @@ sidebar_label: Litmus with Ingress
 
 ### Install LitmusPortal with Ingress
 
-With Litmus-2.0.0-Beta3, LitmusPortal can be installed with ingress.
+With Litmus-2.0.0-Beta8, LitmusPortal can be installed with ingress.
 In the following doc, we will use the Nginx ingress controller for ingress setup.
 
 1. Install the litmus chaos control plane
@@ -18,15 +18,16 @@ kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Be
 ```
 
 2. By default, the service type is NodePort. For Ingress, we need to change the service type to ClusterIP in the following services.
-* litmusportal-frontend-service
-* litmusportal-server-service
 
+- litmusportal-frontend-service
+- litmusportal-server-service
 
 3. Install Nginx Ingress Controller along with Kubernetes RBAC roles and bindings, please refer [here](https://kubernetes.github.io/ingress-nginx/deploy/#installation-guide)
 
-**Note:** 
-* If you're changing ingress name from **litmus-ingress** to a different name, make sure to update the **INGRESS_NAME** environment variable in the litmusportal-server deployment
-* Set the environment variable **INGRESS** as true in the litmusportal-server deployment.
+**Note:**
+
+- If you're changing ingress name from **litmus-ingress** to a different name, make sure to update the **INGRESS_NAME** environment variable in the litmusportal-server deployment
+- Set the environment variable **INGRESS** as true in the litmusportal-server deployment.
 
 #### With HTTP
 
@@ -39,11 +40,12 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /$1
-  name: litmus-ingress
+  labels:
+    component: litmusportal-frontend
+  name: litmusportal-ingress
 spec:
   rules:
-    - host: "<HOST-NAME>"
-      http:
+    - http:
         paths:
           - backend:
               serviceName: litmusportal-frontend-service
@@ -86,8 +88,8 @@ spec:
       name: letsencrypt
     solvers:
     - http01:
-     	ingress:
-        class: nginx
+     	  ingress:
+          class: nginx
 ```
 
 6. Sample Litmus Portal Ingress Manifest with HTTPS
@@ -103,7 +105,6 @@ metadata:
   labels:
     component: litmusportal-frontend
   name: litmusportal-ingress
-  namespace: litmus
 spec:
   rules:
     - host: "<HOST-NAME>"
@@ -124,6 +125,7 @@ spec:
         - "<HOST-NAME>"
       secretName: litmuspreview-tls-secret
 ```
+
 ```bash
 kubectl apply -f <litmus_ingress_manifest> -n <PORTAL_NAMESPACE>
 ```
