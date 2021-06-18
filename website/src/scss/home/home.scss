@@ -39,6 +39,16 @@
 	}
 }
 
+@media (max-width: 890px) {
+	.left {
+		width: 100%;		
+	}
+
+	.headerImage {
+		width: 100%;
+	}
+}
+
 // Homepage main content
 .homeMainContent {
 	margin-bottom: 3rem;

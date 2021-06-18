@@ -5,7 +5,7 @@ import { Heading, Paragraph, SubText } from '../../texts'
 
 const Header = () => {
 	return (
-		<ResponsiveRow breakpoint="lg" justifyContent="space-between">
+		<ResponsiveRow>
 			<div className="left">
 				<Heading>
 					What is <span className="purple">Litmus Chaos</span> ?

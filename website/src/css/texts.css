@@ -1,0 +1,13 @@
+.heading {
+  line-height: 130%;
+  text-align: left;
+  font-size: 2rem;
+}
+
+@media (max-width: 890px) {
+  .heading {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+/*# sourceMappingURL=texts.css.map */

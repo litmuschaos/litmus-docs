@@ -1,14 +1,8 @@
 import React from "react";
 import styled, { useTheme } from "styled-components";
+import '../../css/texts.css';
 
-const Heading = styled.h1`
-  line-height: 130%;
-  text-align: ${(props) => props.textAlign ?? "left"};
-  font-size: ${(props) =>
-    props.theme.screens.md
-      ? props.theme.fontSize.heading.md
-      : props.theme.fontSize.heading.lg};
-`;
+const Heading = ({children}) => <p className="heading">{children}</p>
 
 const SubHeading = styled.p`  
   font-weight: 600;

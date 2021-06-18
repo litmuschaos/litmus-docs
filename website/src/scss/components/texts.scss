@@ -1,0 +1,14 @@
+@import '../theme';
+
+.heading {
+    line-height: 130%;
+    text-align: left;
+    font-size: map-get(map-get($fontSize, heading), lg);
+}
+
+@media (max-width: map-get($screens, mmd)) {
+    .heading {
+        text-align: center;
+        font-size: map-get(map-get($fontSize, heading), md);
+    }
+}   

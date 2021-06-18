@@ -5,7 +5,7 @@ import { Paragraph, SubHeading } from '../../texts'
 
 const GetStartedHeader = () => {
 	return (
-		<ResponsiveRow breakpoint="lg" justifyContent="space-between">
+		<ResponsiveRow>
 			<img className="getStartedImage" src="../../../static/img/header-2.png" alt="Get_Started Image" />
 			<div className="right">
 				<SubHeading>Getting Started</SubHeading>

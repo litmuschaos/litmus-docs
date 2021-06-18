@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,QAAQ,CAAC;EACL,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,IAAI;EAChB,SAAS,ECSL,IAAI;CDRX;;AAED,MAAM,EAAE,SAAS,EAAE,KAAK;EACpB,AAAA,QAAQ,CAAC;IACL,UAAU,EAAE,MAAM;IAClB,SAAS,ECIT,MAAM;GDHT",
+    "sources": [
+        "../scss/components/texts.scss",
+        "../scss/_theme.scss"
+    ],
+    "names": [],
+    "file": "texts.css"
+}
