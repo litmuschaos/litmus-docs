@@ -68,7 +68,7 @@ Total Resilience for one single experiment = (Weight Given to that experiment * 
 ```
 > If an experiment doesn't have a probe in it, the probe success percentage returned can either be 0 or 100 based on the experiment verdict. If the experiment passed then it returns 100 else 0.
 
-The Final Resilience Score is calculated by dividing the sum of all the weights provided by the total test result of all the experiments combined in a single workflow.
+The Final Resilience Score is calculated by dividing the total test result by the sum of all the weights of all the experiments combined in a single workflow.
 
 For example, if we consider two experiments in a workflow, here is what the calculation would look like.
 > Considering Probe Success Percentage is 100
