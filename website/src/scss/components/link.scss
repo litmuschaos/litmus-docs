@@ -1,0 +1,12 @@
+@import '../theme';
+
+.link {
+    display: block;
+    color: map-get($colors, textSecondary);
+    text-decoration: none;
+    cursor: pointer;
+    :hover {        
+        color: map-get($colors, textPrimary);
+        text-decoration: none;
+    }
+}

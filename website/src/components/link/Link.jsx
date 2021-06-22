@@ -1,14 +1,6 @@
-import { Link as GatsbyLink } from "react-router-dom";
-import styled from "styled-components";
+import React from 'react';
+import '../../css/link.css';
 
-const Link = styled(GatsbyLink)`
-  display: block;
-  color: ${props => props.color ?? 'black'};
-  text-decoration: none;
-  :hover {
-    color: ${props => props.color ?? 'black'};
-    text-decoration: none;
-  }
-`;
+const Link = ({children}) => <a className="link">{children}</a>;
 
 export { Link };

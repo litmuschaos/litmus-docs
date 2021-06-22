@@ -67,6 +67,15 @@
   }
 }
 
+@media (max-width: 890px) {
+  .right {
+    width: 100%;
+  }
+  .getStartedImage {
+    width: 100%;
+  }
+}
+
 .exploreLitmusDiv {
   height: 100%;
   margin: 1rem 0;

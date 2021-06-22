@@ -1,3 +1,4 @@
+import useBaseUrl from '@docusaurus/useBaseUrl'
 import React from 'react'
 import '../../../css/home.css'
 import { ResponsiveRow } from '../../layout'
@@ -19,7 +20,7 @@ const Header = () => {
 					chaos engineering principles while providing autonomy and extensibility to the users.
 				</Paragraph>
 			</div>
-			<img className="headerImage" src="../../../static/img/header.png" alt="Header Image" />
+			<img className="headerImage" src={useBaseUrl("/img/header.png")} alt="Header Image" />
 		</ResponsiveRow>
 	)
 }
