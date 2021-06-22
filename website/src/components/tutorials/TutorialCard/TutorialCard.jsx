@@ -1,3 +1,4 @@
+import useBaseUrl from '@docusaurus/useBaseUrl'
 import React from 'react'
 import '../../../css/home.css'
 
@@ -5,7 +6,7 @@ const TutorialCard = ({ props }) => {
 	return (
 		<div className="tutorialCardDiv">
 			<a href={props.link} className="tutorialLink">
-				<img src={props.image} />
+				<img src={useBaseUrl(props.image)} />
 				<div className="cardContent">
 					<p className="cardHeading">{props.heading}</p>
 					<p className="cardDescription">{props.description}</p>

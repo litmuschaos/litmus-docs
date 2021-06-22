@@ -7,6 +7,7 @@
 
 .link :hover {
   color: #042a2b;
-  text-decoration: none;
+  text-decoration: none !important;
+  list-style: none;
 }
 /*# sourceMappingURL=link.css.map */

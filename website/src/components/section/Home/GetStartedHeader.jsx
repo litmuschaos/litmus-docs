@@ -13,7 +13,7 @@ const GetStartedContent = () => (
 			itself. Find everything that you need for creating and running chaos workflows on and around Kubernetes.
 		</Paragraph>
 		<div style={{display: 'flex'}}>
-			<Link>Get Started with Litmus</Link>
+			<Link to={'/docs/'}>Get Started with Litmus</Link>
 			<img src={useBaseUrl("/img/arrow.png")} alt="Arrow" />
 		</div>
 	</div>
@@ -23,16 +23,8 @@ const GetStartedContent = () => (
 const GetStartedHeader = () => {
 	return (
 		<ResponsiveRow>			
-			{window.screen.width > 890 ? 
-			<>
-				<img className="getStartedImage" src={useBaseUrl("/img/header-2.png")} alt="Get_Started Image" />
-				<GetStartedContent />
-			</>
-			: 
-			<>
-				<GetStartedContent />
-				<img className="getStartedImage" src={useBaseUrl("/img/header-2.png")} alt="Get_Started Image" />
-			</>}
+			<img className="getStartedImage" src={useBaseUrl("/img/header-2.png")} alt="Get_Started Image" />
+			<GetStartedContent />
 		</ResponsiveRow>
 	)
 }

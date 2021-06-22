@@ -7,6 +7,7 @@
     cursor: pointer;
     :hover {        
         color: map-get($colors, textPrimary);
-        text-decoration: none;
+        text-decoration: none !important;
+        list-style: none;
     }
 }
