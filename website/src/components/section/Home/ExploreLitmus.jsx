@@ -2,11 +2,9 @@ import React from 'react'
 import { Link } from '../../../components/link'
 import { Paragraph, SubHeading } from '../../../components/texts'
 import '../../../css/home.css'
-import { useTheme } from '../../../theme'
 import { advancedLitmusData, exploreLitmusData } from './data'
 
-const ExploreLitmus = ({ type }) => {
-	const {textSecondary} = useTheme().colors
+const ExploreLitmus = ({ type }) => {	
 	return (
 		<>
 			{type === 'basic' ? (

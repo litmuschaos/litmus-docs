@@ -12,7 +12,7 @@ const GetStartedContent = () => (
 			Litmus is used by devs & SREs alike to create, manage and monitor chaos workflows by extending Kubernetes
 			itself. Find everything that you need for creating and running chaos workflows on and around Kubernetes.
 		</Paragraph>
-		<br />
+		<br />		
 		<Row>
 			<Link to={'/docs/'}>Get Started with Litmus</Link>
 			<img style={{marginLeft: '1rem'}} src={useBaseUrl("/img/arrow.png")} alt="Arrow" />

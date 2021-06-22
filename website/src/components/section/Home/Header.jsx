@@ -8,11 +8,11 @@ const Header = () => {
 	return (
 		<ResponsiveRow>
 			<div className="left">				
-				<Heading>
+				<Heading fontWeight="bold">
 					What is <span className="purple">Litmus Chaos</span> ?
 				</Heading>
 				<br />
-				<SubText className="spacing" color="#1C1438">
+				<SubText className="spacing" fontWeight="bold" color="#1C1438">
 					Litmus is a control-plane to orchestrate chaos on Kubernetes to help developers and SREs find weaknesses in
 					their application deployments.
 				</SubText>

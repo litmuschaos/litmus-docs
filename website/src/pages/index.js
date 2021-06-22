@@ -1,7 +1,7 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import React from "react";
-import { LitmusDocsThemeProvider, SectionDark, SectionLight } from '../components/layout';
+import { SectionDark, SectionLight } from '../components/layout';
 import { ExploreLitmus, Header } from '../components/section/Home';
 import { GetStartedHeader } from '../components/section/Home/GetStartedHeader';
 import { MoreResources } from '../components/section/Home/MoreResources';
@@ -14,7 +14,6 @@ export default function Home() {
 			title={`${siteConfig.title}`}
 			description="Description will go into a meta tag in <head />">			
 			<main>
-				<LitmusDocsThemeProvider>
 				{/* Pages Components */}
 				<div className="homeMainContent">
 					<SectionLight>
@@ -29,8 +28,7 @@ export default function Home() {
 					<SectionDark>
 						<MoreResources />
 					</SectionDark>
-				</div>
-				</LitmusDocsThemeProvider>
+				</div>				
 			</main>
 		</Layout>
 	);

@@ -1,12 +1,10 @@
 import React from 'react'
 import { Link } from '../../../components/link'
 import '../../../css/home.css'
-import { useTheme } from '../../../theme'
 import { Paragraph, SubHeading } from '../../texts'
 import { moreResources } from './data'
 
-const MoreResources = () => {
-	const {textSecondary} = useTheme().colors
+const MoreResources = () => {	
 	return (
 		
 		<div style={{marginTop: '3rem'}}>
