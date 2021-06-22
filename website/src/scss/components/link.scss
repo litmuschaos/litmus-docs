@@ -5,9 +5,8 @@
     color: map-get($colors, textSecondary);
     text-decoration: none;
     cursor: pointer;
-    :hover {        
-        color: map-get($colors, textPrimary);
-        text-decoration: none !important;
+    &:hover {                
+        text-decoration: none;
         list-style: none;
     }
 }

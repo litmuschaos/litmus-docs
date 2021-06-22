@@ -5,9 +5,8 @@
   cursor: pointer;
 }
 
-.link :hover {
-  color: #042a2b;
-  text-decoration: none !important;
+.link:hover {
+  text-decoration: none;
   list-style: none;
 }
 /*# sourceMappingURL=link.css.map */

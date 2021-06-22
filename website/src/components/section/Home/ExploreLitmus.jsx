@@ -16,7 +16,8 @@ const ExploreLitmus = ({ type }) => {
 						{exploreLitmusData.map((exploreData) => (
 							<div className="exploreLitmusDiv">
 								<img src={exploreData.icon} alt={exploreData.icon} />
-								<Link className="subHeading" to={exploreData.url} color={textSecondary}>
+								<br />
+								<Link className="subHeading" to={exploreData.url}>
 									{exploreData.heading}
 								</Link>
 								<Paragraph>{exploreData.description}</Paragraph>
@@ -31,7 +32,8 @@ const ExploreLitmus = ({ type }) => {
 						{advancedLitmusData.map((exploreData) => (
 							<div className="exploreLitmusDiv">
 								<img src={exploreData.icon} alt={exploreData.icon} />
-								<Link className="subHeading" to={exploreData.url} color={textSecondary}>
+								<br />
+								<Link className="subHeading" to={exploreData.url}>
 									{exploreData.heading}
 								</Link>
 								<Paragraph>{exploreData.description}</Paragraph>

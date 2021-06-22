@@ -14,7 +14,7 @@ const GetStartedContent = () => (
 		</Paragraph>
 		<div style={{display: 'flex'}}>
 			<Link to={'/docs/'}>Get Started with Litmus</Link>
-			<img src={useBaseUrl("/img/arrow.png")} alt="Arrow" />
+			<img style={{marginLeft: '1rem'}} src={useBaseUrl("/img/arrow.png")} alt="Arrow" />
 		</div>
 	</div>
 	)

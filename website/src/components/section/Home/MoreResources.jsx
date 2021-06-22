@@ -17,7 +17,7 @@ const MoreResources = () => {
 					<div style={{ display: 'flex' }}>
 						<img src={exploreData.icon} alt={exploreData.icon} />
 						<div className="subHeading" style={{ marginLeft: 10 }}>
-							<Link to={exploreData.url} color={textSecondary}>
+							<Link to={exploreData.url}>
 								{exploreData.heading}
 							</Link>
 							<Paragraph>{exploreData.description}</Paragraph>
