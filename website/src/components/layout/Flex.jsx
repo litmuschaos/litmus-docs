@@ -1,30 +1,12 @@
-import styled from "styled-components";
+import React from 'react';
+import '../../css/flex.css';
 
-const Row = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: ${props => props.wrap ?? "no-wrap"};
-`;
+const Row = ({children, flexWrap, justifyContent}) => <span className="row" style={{justifyContent: `${justifyContent ?? 'flex-start'}`, flexWrap: `${flexWrap ?? 'no-wrap'}`}}>{children}</span>;
 
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-`;
+const Column = ({children}) => <div className="column">{children}</div>;
 
-const ColumnCenter = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-`;
+const ColumnCenter = ({children}) => <div className="columnCenter">{children}</div>;
 
-const Center = styled.div`
-  display: grid;
-  place-items: center;
-  width: 100%;
-  height: 100%;
-`;
+const Center = ({children}) => <div className="center">{children}</div>;
 
 export { Row, Column, ColumnCenter, Center };

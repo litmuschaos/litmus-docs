@@ -1,23 +1,8 @@
-import styled from "styled-components";
+import React from 'react';
+import '../../css/sections.css';
 
-const SectionLight = styled.section`
-  background-color: ${(props) => props.theme.colors.backgroundLight};
-  padding: ${(props) => (props.theme.screens.lg ? "3rem 2rem" : "1rem 20%")};
+const SectionLight = ({children}) => <div className="sectionLight">{children}</div>
 
-  & > div {
-    max-width: 112.5rem;
-    margin: 0 auto;
-  }
-`;
-
-const SectionDark = styled.section`
-  background-color: ${(props) => props.theme.colors.backgroundDark};
-  padding: ${(props) => (props.theme.screens.lg ? "3rem 2rem" : "1rem 20%")};
-
-  & > div {
-    max-width: 112.5rem;
-    margin: 0 auto;
-  }
-`;
+const SectionDark = ({children}) => <div className="sectionDark">{children}</div>
 
 export { SectionLight, SectionDark };
