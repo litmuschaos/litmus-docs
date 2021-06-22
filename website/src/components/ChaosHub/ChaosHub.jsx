@@ -16,7 +16,7 @@ const ChaosHub = () => {
 						<div className="chaosHubExplore">
 							<p className="chaosHubExploreText">Explore the experiments at Chaoshub</p>
 							<img
-								src={useBaseUrl("/docs/assets/arrow.png")}								
+								src={useBaseUrl("/img/arrow.png")}								
 								alt="Chaos hub"
 								height="14"
 								width="7"
@@ -26,7 +26,7 @@ const ChaosHub = () => {
 					</a>
 				</div>
 				<div>
-					<img src={useBaseUrl("/docs/assets/chaos-hub.png")} alt="Chaos hub" />
+					<img src={useBaseUrl("/img/chaos-hub.png")} alt="Chaos hub" />
 				</div>
 			</div>
 		</div>
