@@ -1,4 +1,12 @@
-<!-- This form is for bug reports and feature requests ONLY! -->
+---
+name: Technical Issue
+about: For BUG REPORTS & FEATURE REQUESTS only!
+title: {title}
+labels: technical
+
+---
+<!-- This template is for bug reports and feature requests ONLY! -->
+
 <!-- Thanks for filing an issue! Before hitting the button, please answer these questions.-->
 
 ## Is this a BUG REPORT or FEATURE REQUEST?
@@ -12,10 +20,7 @@ If this is a BUG REPORT, please:
 If this is a FEATURE REQUEST, please:
   - Describe *in detail* the feature/behavior/change you'd like to see.
 
-In both cases, be ready for followup questions, and please respond in a timely
-manner.  If we can't reproduce a bug or think a feature already exists, we
-might close your issue.  If we're wrong, PLEASE feel free to reopen it and
-explain why.
+In both cases, be ready for follow-up questions, and please respond in a timely manner.  If we can't reproduce a bug or think a feature already exists, we might close your issue.  If we're wrong, PLEASE feel free to reopen it and explain why.
 -->
 
 **What happened**:
