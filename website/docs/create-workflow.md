@@ -11,22 +11,19 @@ Click on the **Schedule your first workflow** button on the home page to get sta
 ### 1. Choose Target Agent
 
 This is the first step in workflow creation. In this step, you can select a target agent where the chaos workflow will be scheduled. These agents consist the CRDs and the required resources to run a chaos workflow.
-While installing the Litmus Portal, a default agent named **Self Cluster** is created.
+While installing the Litmus Portal, a default agent named **Self Agent** is created.
 
 After Selecting the agent, you can continue by clicking on **Next** button.
 
-```
-Note:
- You may have to wait for the agent to be up and ready, after which you can move forward by again clicking on “Next”. Newly created users by the admin can’t schedule a workflow, As non-admin users, you will  get a message  ‘No Cluster Registered With Your Project ID, Please Wait…’   if you try to create a workflow.
-```
+> Note: You may have to wait for the agent to be up and ready, after which you can move forward by again clicking on “Next” . Newly created users by the admin won't have any agent connected and thus won't be able to schedule a workflow. As non-admin users, you will get a message ‘No Cluster Registered With Your Project ID, Please Wait…’ if you try to create a workflow.
 
 ### 2. Choose a Workflow
 
 In this step, you can create a workflow from different methods, these include:
 
-- **Create a new workflow from one of the pre-defined chaos experiment** : With this option, you can select a pre-defined workflow which is available in the connected ChaosHub. The default ChaosHub consists of 2 pre-defined workflows `podtato-head` and `sock-shop`.
+- **Create a new workflow from one of the pre-defined chaos workflows** : With this option, you can select a pre-defined workflow which is available in the connected ChaosHub. The default ChaosHub consists of 2 pre-defined workflows `podtato-head` and `sock-shop`.
 
-- **Create a new workflow by cloning and existing workflow** : With this option, you can create a new workflow from an existing one. You an save an existing workflow as a template from the schedules tab present in the Browse Workflow section. You can provide a `workflow name` and `workflow description` to the template. After successfully saving the templates, you can view them here.
+- **Create a new workflow by using cloned template workflow** : With this option, you can create a new workflow from an existing one. You an save an existing workflow as a template from the schedules tab present in the Browse Workflow section. You can provide a `workflow name` and `workflow description` to the template. After successfully saving the templates, you can view them here.
 
 - **Create a new workflow using experiments from MyHub** : With this option, you can create custom workflows from the connected ChaosHubs.
 
@@ -43,7 +40,7 @@ Some new and advanced features that are present in this section are :
 
 1. **Workflow Visualization** : This feature allows you to visualize the workflow even before scheduling it.
    This gives a brief information related to the structure of workflow <i>i.e</i> if the experiments are present in serial or parallel way.
-2. **Workflow Table** : This table contains the list of experiments present in the worklow. It also consists of some valuable information related to the target applications.
+2. **Workflow Table** : This table contains the list of experiments present in the workflow. It also consists of some valuable information related to the target applications.
 3. **Add Experiment** : If you have selected `Create a new workflow using experiments from MyHub` in Choose a Workflow step, you can see a `Add a new experiment` button, this will allow you to add more experiments to the workflow.
 4. **Edit Workflow** : With this option, you can view and make changes in the workflow manifest with a YAML editor.
 5. **Revert Chaos** : For custom workflows, you can now enable or disable the revert step from the portal.
@@ -52,7 +49,7 @@ Some new and advanced features that are present in this section are :
 Some of the other features that are included with Litmus Portal 2.0 are :
 
 1. **Target Selection** : On the workflow table, you can select an experiment to edit the engine configuration directly from the portal. You can change the `annotationCheck` and `jobCleanUpPolicy` according to the use-case.
-   You can also target the application by selecting the namespace and the respective label of that application. We have added a functionality to fetch the live data from the kubernetes cluster like the available namespaces and resources that you can target.
+   You can also target the application by selecting the namespace and the respective label of that application. We have added a functionality to fetch the live data from the selected agent like the available namespaces and resources that you can target.
 
 2. **Defining the steady state for the application** : With this step, you can add probes to your experiments. Probes are some additional checks that you can provide in your experiments. To know more about probes, you can visit [here](https://docs.litmuschaos.io/docs/litmus-probe/).
 

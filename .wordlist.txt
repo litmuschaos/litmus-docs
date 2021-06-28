@@ -725,3 +725,6 @@ installCRDs
 jetstack
 ClusterMode
 LetsEncrypt
+podtato
+ChaosHubs
+podGC
