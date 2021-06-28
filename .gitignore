@@ -17,6 +17,7 @@ website/i18n/*
 # Generated files
 website/.docusaurus
 website/.cache-loader
+website/build
 
 # Misc
 .DS_Store
