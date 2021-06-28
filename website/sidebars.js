@@ -1,10 +1,21 @@
 module.exports = {
 	docs: {
-		Introduction: ['introduction', 'architecture', 'tutorials', 'chaos-hub'],
+		Introduction: [
+			'introduction',
+			'architecture',
+			'tutorials',
+			'chaos-hub'
+			// "feature-definition"
+		],
 		'Getting Started': [
 			'getstarted',
 			{
-				Installation: ['litmus-install', 'agent-install', 'litmus-with-ingress']
+				Installation: [
+					'litmus-install-cluster-mode',
+					'litmus-install-namespace-mode',
+					'agent-install',
+					'litmus-with-ingress'
+				]
 			},
 			'create-workflow',
 			'observe-workflow',
@@ -40,6 +51,6 @@ module.exports = {
 		//   "rbac",
 		//   "service-acounts",
 		// ],
-		Advanced: ['admin-mode', 'namespaced-mode', 'litmus-psp']
+		Advanced: ['litmus-psp', 'k8s-support']
 	}
 }

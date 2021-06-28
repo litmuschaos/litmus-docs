@@ -1,25 +1,22 @@
 name: LitmusDocs-CI
 on:
   pull_request:
-    types: [ opened, synchronize, reopened ]
+    types: [opened, synchronize, reopened]
     paths:
-      - '.github/workflows/dockerbuild.yml'
-      - '.github/workflows/Pull_Request.yml'
-      - 'website/**'
+      - "website/**"
 
 jobs:
   embedmdCheck_and_linksVerification:
     runs-on: ubuntu-latest
     steps:
-
       - uses: actions/checkout@v2
         with:
-          ref: ${{steps.getcommit.outputs.sha}} 
+          ref: ${{steps.getcommit.outputs.sha}}
 
       - uses: actions/setup-go@v2
         with:
-          stable: 'false'
-          go-version: '1.14.0'
+          stable: "false"
+          go-version: "1.14.0"
 
       - name: Links Verification
         run: |
@@ -32,10 +29,10 @@ jobs:
           go get github.com/campoy/embedmd
           cd website/docs
           embedmd -w $(find *.md)
-        continue-on-error: true  
-        
+        continue-on-error: true
+
       - name: embedmd check
-        run: | 
+        run: |
           export TERM=xterm-256color
           count=$(git status -s| wc -l)
           if [ "$count" -ne "0" ]
@@ -53,7 +50,7 @@ jobs:
             tput setaf 2; echo "Nothing to embed"
           fi
         shell: sh
-        
+
   ci:
     runs-on: ubuntu-18.04
     steps:
@@ -65,11 +62,10 @@ jobs:
   Spellcheck:
     runs-on: ubuntu-latest
     steps:
-    # The checkout step
-    - uses: actions/checkout@master
-    - uses: rojopolis/spellcheck-github-actions@0.11.0
-      name: Spellcheck
-      with:
-        source_files: 'website/docs/*.md'
-        task_name: Markdown
-      
+      # The checkout step
+      - uses: actions/checkout@master
+      - uses: rojopolis/spellcheck-github-actions@0.11.0
+        name: Spellcheck
+        with:
+          source_files: "website/docs/*.md"
+          task_name: Markdown
