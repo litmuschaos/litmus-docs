@@ -1,0 +1,42 @@
+@import '../theme';
+
+.heading {
+    line-height: 130%;
+    text-align: left;
+    font-size: map-get(map-get($fontSize, heading), lg);
+}
+
+.subheading {
+    font-weight: 600;
+    font-size: map-get(map-get($fontSize, subHeading), lg);
+}
+
+.paragraph {
+    line-height: 170%;
+    color: map-get($colors, 'darkGray');
+    font-size: map-get(map-get($fontSize, paragraph), lg);
+}
+
+.subText {
+    line-height: 150%;
+    font-size: map-get(map-get($fontSize, subText), lg);
+}
+
+@media (max-width: map-get($screens, mmd)) {
+    .heading {
+        text-align: center;
+        font-size: map-get(map-get($fontSize, heading), md);
+    }
+
+    .subheading {
+        font-size: map-get(map-get($fontSize, subHeading), md);
+    }
+
+    .paragraph {
+        font-size: map-get(map-get($fontSize, paragraph), md);
+    }
+
+    .subText {
+        font-size: map-get(map-get($fontSize, subText), md);
+    }
+}

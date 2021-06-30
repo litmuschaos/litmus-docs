@@ -12,18 +12,18 @@ Welcome to the documentation for the **LitmusChaos** project. Litmus is used by 
 
 Service downtimes are always expensive and they are very difficult to predict and respond to. Certifying if a given change is going to break the services that are functioning well has become increasingly challenging for IT teams. What's more? With the evolution of modern cloud-native micro services these changes have become more dynamic. In such an atmosphere, Chaos Engineering is increasingly becoming the go-to solution within cloud-native ecosystems for asserting the resilience of a service or application at any stage of rolling out changes.
 
-LitmusChaos is a complete framework to implement chaos engineering within a cloud-native ecosystem. It helps both Developers and SREs automate the chaos experiments at different stages within the DevOps pipeline like development, during CI/CD, & in production. 
+LitmusChaos is a complete framework to implement chaos engineering within a cloud-native ecosystem. It helps both Developers and SREs automate the chaos experiments at different stages within the DevOps pipeline like development, during CI/CD, & in production.
 
 - What is a Chaos Experiment?
 
-Chaos Experiments are fundamental units within the LitmusChaos architecture. Users can choose between readily available chaos experiments or create new ones to construct a required chaos workflow. 
+Chaos Experiments are fundamental units within the LitmusChaos architecture. Users can choose between readily available chaos experiments or create new ones to construct a required chaos workflow.
 
 - What is a Chaos Workflow?
 
 A chaos workflow is much more than a simple chaos experiment. It supports the user in defining the expected result, observing the result, analysing the overall system behaviour, and in the decision-making process if the system needs to be tuned for improving the resilience.
 LitmusChaos provides necessary infrastructure to develop, use, and manage chaos workflows for a typical development or operations team. Teaming and GitOps features of Litmus help greatly to collaborate the chaos workflows management within the teams or software organisations.
 
-## Litmus 2.0 Prologue
+### Litmus 2.0 Prologue {#litmus-20-prologue}
 
 The goal of the LitmusChaos project is to create a complete solution to implement chaos engineering at scale, the Kubernetes way! Of course this had to be done incrementally by first creating a toolset for chaos injection and then adding additional features to make it a platform. Litmus 1.x achieved the goal of keeping it completely open source, creating a ChaosHub and the required CRDs, Operators, and Schedulers. With Litmus 1.x, users have a working chaos engineering toolset aligned with the original goals. Over time, the monthly cadence releases added the following features.
 

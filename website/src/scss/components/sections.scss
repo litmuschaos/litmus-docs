@@ -1,0 +1,35 @@
+@import '../theme';
+
+.sectionLight {
+    background-color: map-get($colors, backgroundLight);
+    padding: 3rem 2rem;
+    > div {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+.sectionDark {
+    background-color: map-get($colors, backgroundDark);
+    padding: 3rem 2rem;
+    > div {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: map-get($screens, mmd)) {
+    .sectionLight {
+        padding: 1rem 10%;
+        > div {
+            width: 100%;
+        }
+    }
+
+    .sectionDark {
+        padding: 1rem 10%;
+        > div {
+            width: 100%;
+        }
+    }
+}

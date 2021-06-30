@@ -1,0 +1,38 @@
+.heading {
+  line-height: 130%;
+  text-align: left;
+  font-size: 2rem;
+}
+
+.subheading {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.paragraph {
+  line-height: 170%;
+  color: #6f6f6f;
+  font-size: 0.9rem;
+}
+
+.subText {
+  line-height: 150%;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 890px) {
+  .heading {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .subheading {
+    font-size: 1.1rem;
+  }
+  .paragraph {
+    font-size: 0.7rem;
+  }
+  .subText {
+    font-size: 0.9rem;
+  }
+}
+/*# sourceMappingURL=texts.css.map */
