@@ -30,7 +30,7 @@ export const advancedLitmusData = [
 		icon: 'img/AdvanceLitmus/advanced.svg',
 		heading: 'Advanced User Guides',
 		description: 'Learn about Litmus containing the user guide and architecture.',
-		url: '/docs/admin-mode'
+		url: '/404'
 	},
 	{
 		icon: 'img/AdvanceLitmus/design.svg',
@@ -48,19 +48,19 @@ export const advancedLitmusData = [
 		icon: 'img/AdvanceLitmus/dev-resource.svg',
 		heading: 'Developer Resources',
 		description: 'Resources for Chaos Engineering, blogs and community updates.',
-		url: ''
+		url: '/404'
 	},
 	{
 		icon: 'img/AdvanceLitmus/integration.svg',
 		heading: 'Integrations',
 		description: 'Integrate your litmus project with other Kubenetes applications.',
-		url: ''
+		url: '/404'
 	},
 	{
 		icon: 'img/AdvanceLitmus/air-gapped.svg',
 		heading: 'Air Gapped',
 		description: 'Know how Litmus can be used for air gapped environments and enterprises.',
-		url: ''
+		url: '/404'
 	},
 	{
 		icon: 'img/AdvanceLitmus/git-ops.svg',
@@ -72,7 +72,7 @@ export const advancedLitmusData = [
 		icon: 'img/AdvanceLitmus/multi-tenancy.svg',
 		heading: 'Multi Tenancy',
 		description: 'Litmus security features are one of the best thing and can not be overlooked.',
-		url: ''
+		url: '/404'
 	}
 ]
 
@@ -81,18 +81,18 @@ export const moreResources = [
 		heading: 'Glossary',
 		description: 'All Litmus and chaos engineering terms and explanations in one place.',
 		icon: 'img/Resources/glossary.svg',
-		url: ''
+		url: '/404'
 	},
 	{
 		heading: 'FAQs',
 		description: 'All common Frequently Asked Questions curated in one place',
 		icon: 'img/Resources/FAQs.svg',
-		url: ''
+		url: '/404'
 	},
 	{
 		heading: 'Troubleshooting',
 		description: 'Know more about troubleshooting of common issues',
 		icon: 'img/Resources/troubleshooting.svg',
-		url: ''
+		url: '/404'
 	}
 ]

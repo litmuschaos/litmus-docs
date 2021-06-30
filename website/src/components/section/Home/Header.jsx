@@ -7,7 +7,7 @@ import { Heading, Paragraph, SubText } from '../../texts'
 const Header = () => {
 	return (
 		<ResponsiveRow>
-			<div className="left">				
+			<div className="left">
 				<Heading fontWeight="bold">
 					What is <span className="purple">Litmus Chaos</span> ?
 				</Heading>
@@ -22,7 +22,7 @@ const Header = () => {
 					chaos engineering principles while providing autonomy and extensibility to the users.
 				</Paragraph>
 			</div>
-			<img className="headerImage" src={useBaseUrl("/img/header.png")} alt="Header Image" />
+			<img className="headerImage" src={useBaseUrl('/img/header.png')} alt="Header Image" />
 		</ResponsiveRow>
 	)
 }
