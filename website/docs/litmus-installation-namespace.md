@@ -7,6 +7,10 @@ sidebar_label: Control Plane (Namespace Mode)
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rOrKegj5ePI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br />
+<br />
+
+Installing Litmus in namespace mode limits Litmus access to a particluar namespace. Here, you need to create a namespace where Litmus CRDs would be installed directly. This namespace will be specified during the installation step.
 
 ## Pre-requisites
 
