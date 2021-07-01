@@ -23,7 +23,7 @@ Installation of Litmus can be done using either of the below methods
 - [Helm3](#helm_install) chart or
 - [Kubectl](#kubectl_install) yaml spec file
 
-### Installation Steps
+### Install Litmus using Helm
 
 The helm chart will install all the required service account configuration and chaos control plane.
 
