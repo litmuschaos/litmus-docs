@@ -20,11 +20,11 @@ sidebar_label: Pre-requisites
 
 Running chaos on your application involves the following steps:
 
-[Install Litmus](litmus-install-cluster-mode)
+- [Install Litmus](litmus-install-cluster-mode)
 
-[How to Create and Run a Workflow](create-workflow)
+- [How to Create and Run a Workflow](create-workflow)
 
-[Observe ChaosResults](observe-workflow)
+- [Observe ChaosResults](observe-workflow)
 
 <hr/>
 
