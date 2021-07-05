@@ -1,0 +1,35 @@
+.sectionLight {
+  background-color: #f9fafc;
+  padding: 3rem 2rem;
+}
+
+.sectionLight > div {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.sectionDark {
+  background-color: #f4f5f7;
+  padding: 3rem 2rem;
+}
+
+.sectionDark > div {
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media (max-width: 890px) {
+  .sectionLight {
+    padding: 1rem 10%;
+  }
+  .sectionLight > div {
+    width: 100%;
+  }
+  .sectionDark {
+    padding: 1rem 10%;
+  }
+  .sectionDark > div {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=sections.css.map */
