@@ -1,0 +1,37 @@
+@import '../theme';
+@import '../mixin';
+
+// Header
+
+.spacing {
+	margin: auto;
+}
+
+.left {
+	width: 45%;
+	margin: auto;
+}
+
+.underConstructionImage {
+	width: 40%;
+}
+
+@media (min-width: 2000px) {
+	.left {
+		width: 30%;
+	}
+
+	.underConstructionImage {
+		width: 20%;
+	}
+}
+
+@media (max-width: 890px) {
+	.left {
+		width: 100%;
+	}
+
+	.underConstructionImage {
+		width: 20%;
+	}
+}

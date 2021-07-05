@@ -1,4 +1,8 @@
 mongodb
+jsx
+src
+img
+png
 eventtracker
 eventtrackerpolicies
 portalScope

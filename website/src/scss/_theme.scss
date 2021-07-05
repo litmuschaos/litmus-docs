@@ -1,0 +1,46 @@
+$screens: (
+	'xs': 450px,
+	'sm': 640px,
+	'md': 768px,
+	'mmd': 890px,
+	'lg': 1024px,
+	'xl': 1280px,
+	'xxl': 1350px,
+	'xxxl': 1600px,
+	'xxxxl': 1800px
+);
+
+$fontSize: (
+	'heading': (
+		'lg': 2rem,
+		'md': 1.5rem
+	),
+	'subHeading': (
+		'lg': 1.3rem,
+		'md': 1.1rem
+	),
+	'paragraph': (
+		'lg': 0.9rem,
+		'md': 0.7rem
+	),
+	'subText': (
+		'lg': 1.1rem,
+		'md': 0.9rem
+	),
+	'small': (
+		'lg': 0.7rem,
+		'md': 0.6rem
+	),
+	'button': 1rem
+);
+
+$colors: (
+	'backgroundLight': #f9fafc,
+	'backgroundDark': #f4f5f7,
+	'spaceGrey': #f1f2f6,
+	'lightGray': #ebebeb,
+	'darkGray': #6f6f6f,
+	'textPrimary': #042a2b,
+	'textSecondary': #5b44ba,
+	'textFooter': #1c1438
+);

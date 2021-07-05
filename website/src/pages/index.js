@@ -1,7 +1,35 @@
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Layout from "@theme/Layout";
 import React from "react";
-import { Redirect } from "@docusaurus/router";
-function Home() {
-  return <Redirect to="/docs/" />;
-}
+import { SectionDark, SectionLight } from '../components/layout';
+import { ExploreLitmus, Header } from '../components/section/Home';
+import { GetStartedHeader } from '../components/section/Home/GetStartedHeader';
+import { MoreResources } from '../components/section/Home/MoreResources';
 
-export default Home;
+
+export default function Home() {
+	const { siteConfig } = useDocusaurusContext();
+	return (
+		<Layout
+			title={`${siteConfig.title}`}
+			description="Description will go into a meta tag in <head />">			
+			<main>
+				{/* Pages Components */}
+				<div className="homeMainContent">
+					<SectionLight>
+						<Header />
+						<br />
+						<GetStartedHeader />
+						<br />
+						<ExploreLitmus type={'basic'} />					
+						<ExploreLitmus type={'advance'} />					
+						<br />
+					</SectionLight>
+					<SectionDark>
+						<MoreResources />
+					</SectionDark>
+				</div>				
+			</main>
+		</Layout>
+	);
+}
