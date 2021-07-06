@@ -1,4 +1,8 @@
 mongodb
+jsx
+src
+img
+png
 eventtracker
 eventtrackerpolicies
 portalScope
@@ -725,3 +729,6 @@ installCRDs
 jetstack
 ClusterMode
 LetsEncrypt
+podtato
+ChaosHubs
+podGC
