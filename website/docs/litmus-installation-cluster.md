@@ -32,14 +32,8 @@ The following steps will help you install litmus via helm.
 #### Step-1: Add the litmus helm repository
 
 ```bash
-root@demo:~# helm repo add litmuschaos https://litmuschaos.github.io/litmus-helm/
-"litmuschaos" has been added to your repositories
-```
-
-```bash
-root@demo:~# helm repo list
-NAME            URL
-litmuschaos     https://litmuschaos.github.io/litmus-helm/
+helm repo add litmuschaos https://litmuschaos.github.io/litmus-helm/
+helm repo list
 ```
 
 #### Step-2: Create the litmus namespace
@@ -49,14 +43,13 @@ litmuschaos     https://litmuschaos.github.io/litmus-helm/
 **Note**: The chaos control plane can be placed in any namespace, though it is typically placed in "litmus".
 
 ```bash
-root@demo:~# kubectl create ns litmus
-namespace/litmus created
+kubectl create ns litmus
 ```
 
 #### Step-3: Install the litmus chaos control plane
 
 ```bash
-root@demo:~# helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=litmus --devel
+helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=litmus --devel
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -74,7 +67,6 @@ Thank you for installing litmus-2-0-0-beta 😀
 Your release is named chaos and its installed to namespace: litmus.
 
 Visit https://docs.litmuschaos.io/docs/getstarted/ to find more info.
-
 ```
 
 > **Note:** Litmus uses Kubernetes CRDs to define chaos intent. Helm3 handles CRDs better than Helm2. Before you start running a chaos experiment, verify if Litmus is installed correctly.
