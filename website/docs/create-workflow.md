@@ -5,8 +5,16 @@ sidebar_label: Create Workflow
 ---
 
 ---
+Once you have litmus setup, and you are logged in on the litmus portal, you can then proceed to create a workflow on the portal.
 
-Click on the **Schedule your first workflow** button on the home page to get started. It will take you to the workflow page where you can choose or design your own workflow by doing the following steps:
+## Create a workflow
+
+To create a workflow, click on the **Schedule your first workflow** button on the homepage. It will take you to the workflow page where you can choose or design your own workflow by going through the following steps:
+
+<figure>
+<img src={require('./assets/create-workflow-button.png').default} width="800" />
+<i>Fig 1 : Click on the "Schedule Workflow" button to create a new workflow.</i>
+</figure>
 
 ### 1. Choose Target Agent
 
@@ -28,6 +36,11 @@ In this step, you can create a workflow from different methods, these include:
 - **Create a new workflow using experiments from MyHub** : With this option, you can create custom workflows from the connected ChaosHubs.
 
 - **Import workflow using YAML** : With this option, you can import a hand-crafted chaos workflow manifest and tune it according to the use-case.
+
+<figure>
+<img src={require('./assets/select-workflow.png').default} width="800" />
+<i>Fig 2 : Choose a workflow.</i>
+</figure>
 
 ### 3. Workflow Settings
 
@@ -53,9 +66,20 @@ Some of the other features that are included with Litmus Portal 2.0 are :
 
 2. **Defining the steady state for the application** : With this step, you can add probes to your experiments. Probes are some additional checks that you can provide in your experiments. To know more about probes, you can visit [here](https://docs.litmuschaos.io/docs/litmus-probe/).
 
-### 5. Reliability score
+<figure>
+<img src={require('./assets/tune-workflow.png').default} width="800" />
+<i>Fig 3 : Tune a workflow.</i>
+</figure>
 
-In this step, you can assign weights to the experiments present in the workflow. These weights will be then used for the calculation of the resilience score after the workflow completion. By default, 10 points are assigned to each experiment. This can be altered as per your use-case.
+### 5. Reliability Score (Optional)
+
+In this step, you can assign weights to the experiments present in the workflow. These weights will be then used for the calculation of the resilience score after the workflow completion. By default, 10 points are assigned to each experiment. This can be altered as per your use-case. After selecting weights click on the Next Button.
+
+<figure>
+<img src={require('./assets/reliability.png').default} width="800" />
+<i>Fig 3 : Reliability score</i>
+</figure>
+
 
 ### 6. Schedule
 
@@ -71,3 +95,9 @@ In this step, you can schedule the workflow in 2 ways:
 ### 7. Verify and Commit
 
 This is the final step in workflow creation process. In this step, you can validate all the changes related to the workflow like the workflow name, the experiment weights, workflow description, workflow manifest etc. Once you have verified all the changes, you can click the **Finish** button to start the schedule.
+
+
+<figure>
+<img src={require('./assets/workflow-summary.png').default} width="800" />
+<i>Fig 3 : Verify and commit.</i>
+</figure>

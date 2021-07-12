@@ -7,6 +7,10 @@ sidebar_label: Control Plane (Cluster Mode)
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rOrKegj5ePI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br />
+<br />
+
+Installing Litmus in cluster mode gives Litmus access to cluster wide resources. Here, the CRDs are installed directly on the cluster.
 
 ## Pre-requisites
 
@@ -23,7 +27,7 @@ Installation of Litmus can be done using either of the below methods
 - [Helm3](#helm_install) chart or
 - [Kubectl](#kubectl_install) yaml spec file
 
-### Installation Steps
+### Install Litmus using Helm
 
 The helm chart will install all the required service account configuration and chaos control plane.
 
