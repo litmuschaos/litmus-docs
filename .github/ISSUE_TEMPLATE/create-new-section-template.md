@@ -1,7 +1,7 @@
 ---
-name: Create a new section
+name: Create a new sidebar section
 about: For issues requesting for the need of an entirely new section(sidebars) in the documentation
-title: Create {section}
+title: Create {section-name} - Title
 labels: sections
 
 ---
@@ -11,9 +11,9 @@ labels: sections
 
 <!-- Thanks for filing an issue! Before hitting the button, please answer these questions.-->
 
-# Create {section}
+# Create {section-name}
 
-## Section Name: {section}
+## Section Name: {section-name}
 <!-- What is this section called? -->
 
 ### Why do we need to create this section
