@@ -1,7 +1,7 @@
 ---
 id: litmus-install-cluster-mode
 title: Litmus Chaos Control Plane (Cluster Mode)
-sidebar_label: Control Plane (Cluster Mode)
+sidebar_label: Cluster Mode
 ---
 
 ---

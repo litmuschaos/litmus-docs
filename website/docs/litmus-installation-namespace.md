@@ -1,7 +1,7 @@
 ---
 id: litmus-install-namespace-mode
 title: Litmus Chaos Control Plane (Namespace Mode)
-sidebar_label: Control Plane (Namespace Mode)
+sidebar_label: Namespace Mode
 ---
 
 ---
@@ -20,7 +20,7 @@ sidebar_label: Control Plane (Namespace Mode)
 
 Installation of Litmus can be done using either of the below methods
 
-- [Helm3](#helm_install) chart or
+- [Helm3](#helm_install) chart
 - [Kubectl](#kubectl_install) yaml spec file
 
 ### <a name="kubectl_install"> </a>**Install Litmus using Helm **
@@ -36,20 +36,40 @@ helm repo add litmuschaos https://litmuschaos.github.io/litmus-helm/
 helm repo list
 ```
 
-#### Step-2: Create the litmus namespace
+#### Step-2: Create the namespace on which you want to install Litmus <span style={{color: '#909191'}}><b>[Required only if namespace isn't there]</b></span>
 
-- The litmus infra components will be placed in this namespace.
-
-**Note**: The chaos control plane can be placed in any namespace, though it is typically placed in "litmus".
+The Litmus infra components will be placed in this namespace.
 
 ```bash
-kubectl create ns litmus
+kubectl create ns <LITMUS_PORTAL_NAMESPACE>
+```
+> The chaos control plane can be placed in any namespace, though it is typically placed in `litmus`. Ignore if you already have the namespace where you want to install Litmus created.
+
+#### Step-3: Install the required Litmus CRDs
+
+The cluster-admin or an equivalent user with the right permissions are required to install the CRDs upfront.
+
+```bash
+kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/litmus-portal-crds.yml
 ```
 
-#### Step-3: Install the litmus chaos control plane
+<span style={{color: 'green'}}><b>Expected Output</b></span>
 
 ```bash
-helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=litmus --devel --set portalScope=namespace
+customresourcedefinition.apiextensions.k8s.io/clusterworkflowtemplates.argoproj.io created
+customresourcedefinition.apiextensions.k8s.io/cronworkflows.argoproj.io created
+customresourcedefinition.apiextensions.k8s.io/workflows.argoproj.io created
+customresourcedefinition.apiextensions.k8s.io/workflowtemplates.argoproj.io created
+customresourcedefinition.apiextensions.k8s.io/chaosengines.litmuschaos.io created
+customresourcedefinition.apiextensions.k8s.io/chaosexperiments.litmuschaos.io created
+customresourcedefinition.apiextensions.k8s.io/chaosresults.litmuschaos.io created
+customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.litmuschaos.io created
+```
+
+#### Step-4: Install the litmus chaos control plane
+
+```bash
+helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=<LITMUS_PORTAL_NAMESPACE> --devel --set portalScope=namespace
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -57,14 +77,14 @@ helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=litmus --devel --se
 ```bash
 NAME: chaos
 LAST DEPLOYED: Tue Jun 15 19:20:09 2021
-NAMESPACE: litmus
+NAMESPACE: <LITMUS_PORTAL_NAMESPACE>
 STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 NOTES:
 Thank you for installing litmus-2-0-0-beta 😀
 
-Your release is named chaos and its installed to namespace: litmus.
+Your release is named chaos and its installed to namespace: <LITMUS_PORTAL_NAMESPACE>.
 
 Visit https://docs.litmuschaos.io/docs/getstarted/ to find more info.
 
@@ -72,40 +92,26 @@ Visit https://docs.litmuschaos.io/docs/getstarted/ to find more info.
 
 > **Note:** Litmus uses Kubernetes CRDs to define chaos intent. Helm3 handles CRDs better than Helm2. Before you start running a chaos experiment, verify if Litmus is installed correctly.
 
-- The cluster-admin or an equivalent user with the right permissions are required to install them CRDs upfront. To apply LitmusCRDs:
-
-```bash
-kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/litmus-portal-crds.yml
-```
-
-<span style={{color: 'green'}}><b>Expected Output</b></span>
-
-```bash
-customresourcedefinition.apiextensions.k8s.io/clusterworkflowtemplates.argoproj.io created
-customresourcedefinition.apiextensions.k8s.io/cronworkflows.argoproj.io created
-customresourcedefinition.apiextensions.k8s.io/workflows.argoproj.io created
-customresourcedefinition.apiextensions.k8s.io/workflowtemplates.argoproj.io created
-customresourcedefinition.apiextensions.k8s.io/chaosengines.litmuschaos.io created
-customresourcedefinition.apiextensions.k8s.io/chaosexperiments.litmuschaos.io created
-customresourcedefinition.apiextensions.k8s.io/chaosresults.litmuschaos.io created
-customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.litmuschaos.io created
-```
-
 ### <a name="kubectl_install"> </a>**Install Litmus using kubectl **
 
-#### **Install Litmus**
-
-- Set the namespace on which you want to install litmus.
+#### **Set the namespace on which you want to install Litmus**
 
 ```bash
 export LITMUS_PORTAL_NAMESPACE="<namespace>"
 kubectl get ns ${LITMUS_PORTAL_NAMESPACE}
-# If the namespace is not already present
-# then create the target namespace
-kubectl create ns ${LITMUS_PORTAL_NAMESPACE}
+```
+> If the namespace is not already present then create the target namespace `kubectl create ns ${LITMUS_PORTAL_NAMESPACE}` or `kubectl create ns <Your Namespace>`
+
+<span style={{color: 'green'}}><b>Expected Output</b></span>
+
+```bash
+NAME                        STATUS   AGE
+<LITMUS_PORTAL_NAMESPACE>   Active   79m
 ```
 
-- The cluster-admin or an equivalent user with the right permissions are required to install them CRDs upfront. To apply LitmusCRDs:
+#### **Install the required Litmus CRDs**
+
+The cluster-admin or an equivalent user with the right permissions are required to install the CRDs upfront.
 
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/litmus-portal-crds.yml
@@ -124,15 +130,17 @@ customresourcedefinition.apiextensions.k8s.io/chaosresults.litmuschaos.io create
 customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.litmuschaos.io created
 ```
 
-- Replace namespace with the target namespace.
+#### **Install Litmus**
+
+Applying the manifest file will install all the required service account configuration and chaos control plane.
 
 ```bash
-export LITMUS_PORTAL_NAMESPACE="<namespace>"
 curl https://raw.githubusercontent.com/litmuschaos/litmus/master/docs/2.0.0-Beta/litmus-namespaced-2.0.0-Beta.yaml --output litmus-portal-namespaced-K8s-template.yml
 envsubst < litmus-portal-namespaced-K8s-template.yml >
 ${LITMUS_PORTAL_NAMESPACE}-ns-scoped-litmus-portal-manifest.yml
 kubectl apply -f ${LITMUS_PORTAL_NAMESPACE}-ns-scoped-litmus-portal-manifest.yml -n ${LITMUS_PORTAL_NAMESPACE}
 ```
+> You need to export the namespace in order for the above step to work `export LITMUS_PORTAL_NAMESPACE="<namespace>"`. Ignore if already done in the first step.
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
 
