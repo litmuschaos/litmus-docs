@@ -1,5 +1,5 @@
 ---
-name: Technical Issue
+name: 🛠️ Technical Issue
 about: For BUG REPORTS & FEATURE REQUESTS only!
 title: {title}
 labels: technical

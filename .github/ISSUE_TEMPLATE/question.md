@@ -1,5 +1,5 @@
 ---
-name: 🤔 Question
+name: 🤔 Questions
 about: For Questions not answered in our community meetings, Docs, Readme or Slack
 title: {title}
 labels: question

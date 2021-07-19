@@ -1,5 +1,5 @@
 ---
-name: Update documentation
+name: ⬆️ Update documentation
 about: For issues that require an update or improvement to the existing Litmus documentation
 title: {title}
 labels: updates
