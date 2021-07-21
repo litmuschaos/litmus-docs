@@ -16,7 +16,7 @@ Overview Tab helps users to manage their connected Datasources and Dashboards & 
 - Dashboards
 - Workflow Dashboards
 
-> When no agent is connected or in active state, the overwiew page will show a banner for connecting an agent. Users can deploy a new agent using [litmusctl]("https://github.com/litmuschaos/litmusctl").
+> When no agent is connected or in active state, the overwiew page will show a banner for connecting an agent. Users can deploy a new agent using [litmusctl](https://github.com/litmuschaos/litmusctl).
 
 <img src={require('./assets/overview-agent-connect.png').default} width="1000" height="500" />
 
