@@ -24,7 +24,7 @@ Once the agent is connected, Users will see a banner for adding datasources and 
 
 <img src={require('./assets/overview-first-look.png').default} width="1000" height="500" />
 
-For Adding a Data source, Users can follow [here]("")
+For Adding a Data source, Users can follow here
 
 Once users have added a data source sucessfully, they will be able to see the data source listed on the overview page.
 
@@ -32,7 +32,7 @@ Once users have added a data source sucessfully, they will be able to see the da
 
 Now, users will get an banner with an option to add a dashboard for visualizing the data from the connected the data sources.
 
-For Adding a Dashboard, Users can follow [here](""), After setting up the dashboard, the users will be able to see the the dashboard on overview page.
+For Adding a Dashboard, Users can follow here, After setting up the dashboard, the users will be able to see the the dashboard on overview page.
 
 <img src={require('./assets/overview-with-dashboard.png').default} width="1000" />
 
@@ -40,7 +40,7 @@ Users can check workflow analytics and workflow run graph by clicking on _**see 
 
 ### Workflow Analytics
 
-As we have already discussed about the workflow run graph in other parts of [documentation](""), we can proceed with workflow analytics. On clicking _**see workflow analytics**_, Users will be redirected to workflow analytics page for that particular workflow.
+As we have already discussed about the workflow run graph in other parts of documentation, we can proceed with workflow analytics. On clicking _**see workflow analytics**_, Users will be redirected to workflow analytics page for that particular workflow.
 
 <img src={require('./assets/workflow-analytics.png').default} width="1000" height="500" />
 
