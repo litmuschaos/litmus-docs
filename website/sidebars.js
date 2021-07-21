@@ -11,8 +11,9 @@ module.exports = {
 			'getstarted',
 			{
 				Installation: [
-					'litmus-install-cluster-mode',
-					'litmus-install-namespace-mode',
+					{
+						'Control Plane': ['litmus-install-cluster-mode', 'litmus-install-namespace-mode']
+					},
 					'agent-install',
 					'litmus-with-ingress'
 				]
