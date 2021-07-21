@@ -32,6 +32,9 @@ module.exports = {
 			},
 			{
 				'Day 2': ['myhub', 'gitops', 'probes']
+			},
+			{
+				'Day 3': ['workflow-analytics']
 			}
 		],
 		//    Features: [
