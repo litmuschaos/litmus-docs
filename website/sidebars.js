@@ -13,7 +13,7 @@ module.exports = {
 				Installation: [
 					'litmus-install-cluster-mode',
 					'litmus-install-namespace-mode',
-					'agent-install',
+					'chaos-agent',
 					'litmus-with-ingress'
 				]
 			},
