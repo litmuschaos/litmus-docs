@@ -8,7 +8,14 @@ module.exports = {
 			// "feature-definition"
 		],
 		'Getting Started': [
-			'getstarted',
+			{
+				Prerequisites: [
+					'basic-requirements',
+					{
+						Resources: ['chaos-control-plane', 'agents']
+					}
+				]
+			},
 			{
 				Installation: [
 					'litmus-install-cluster-mode',
