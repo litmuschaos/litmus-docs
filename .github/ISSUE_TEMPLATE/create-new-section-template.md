@@ -1,7 +1,7 @@
 ---
-name: 📖 Create a new sidebar section
-about: For issues requesting for the need of an entirely new section(sidebars) in the documentation
-title: Create {section-name} - Title
+name: Create a new section
+about: For documentation issues requiring an entirely new section in the sidebar
+title: Create {section}
 labels: sections
 
 ---

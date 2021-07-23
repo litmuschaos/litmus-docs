@@ -17,7 +17,7 @@ The above picture gives you a high-level architecture of the Litmus. At highleve
 
 **Agent** is the set of Litmus components which induces Chaos using the chaos workflows on the K8S cluster component.
 
-A typical user scenario would be when a user would installs litmus, this would in-turn install Portal and Agent on the self cluster. Using the portal user can create/schedule new chaos workflows on the Agents and observe the results from here. Users can also connect more clusters to the portal, and use the Portal as single window pane for cross cloud chaos management.
+A typical user scenario would be when a user would install litmus. This would, in turn, install Portal and Agent on the self cluster. Using the portal, the user can create/schedule new chaos workflows on the Agents and observe the results from here. Users can also connect more clusters to the portal, and use the Portal as single window pane for cross cloud chaos management.
 
 
 #### Portal Components
