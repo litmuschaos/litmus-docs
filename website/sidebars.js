@@ -31,11 +31,8 @@ module.exports = {
 					}
 				]
 			},
-			'create-workflow',
-			'observe-workflow',
-			{
-				Uninstallation: ['agent-uninstall', 'litmus-uninstall']
-			}
+			'run-your-first-workflow',
+			'learning-litmus'
 		],
 		'User Guide': [
 			{
