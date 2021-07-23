@@ -157,23 +157,14 @@ service/mongo-service created
 
 **Verify if the frontend, server, and database pods are running**
 
-<<<<<<< HEAD
 - Check the pods in litmus namespace:
-=======
-Check the litmus CRDs:
->>>>>>> 46a701c (Modified Litnmus Installation steps(Cluster and Namespace modes))
 
   ```bash
   kubectl get pods -n litmus
   ```
 
-<<<<<<< HEAD
   <span style={{color: 'green'}}><b>Expected Output</b></span>
   
-=======
-Check the pods in litmus namespace:
-
->>>>>>> 46a701c (Modified Litnmus Installation steps(Cluster and Namespace modes))
   ```bash
   NAME                                    READY   STATUS  RESTARTS  AGE
   litmusportal-frontend-97c8bf86b-mx89w   1/1     Running 2         6m24s
