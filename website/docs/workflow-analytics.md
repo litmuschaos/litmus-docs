@@ -50,15 +50,15 @@ On clicking on **show statistics**, you will be able to see the experiment stati
 
 <img src={require('./assets/workflow-single-run.png').default} width="1000"/>
 
-If the selected workflow is recurring or is re-run multiple times, then the average resiliency score for all the workflow runs is shown. A dropdown has been provided to switch between workflows & experiments for checking the pass/fail ratio.
+If the selected workflow is recurring or is re-run multiple times, then the average resiliency score for all the workflow runs is shown. A drop-down has been provided to switch between workflows & experiments for checking the pass/fail ratio.
 
 <img src={require('./assets/workflow-multi-run.png').default} width="1000"/>
 
-If the selected workflow is recurring or is re-run multiple times, a heatmap representing the days of the year showing all the workflow runs for the selected workflow can be observed. On hovering over a point in the heatmap, the average resiliency score for that particular day will be shown in the form of a tooltip.
+If the selected workflow is recurring or is re-run multiple times, a heat map representing the days of the year showing all the workflow runs for the selected workflow can be observed. On hovering over a point in the heat map, the average resiliency score for that particular day will be shown in the form of a tool-tip.
 
 <img src={require('./assets/workflows-heatmap.png').default} width="1000"/>
 
-On clicking on a heatmap entry, a stacked bar graph representing the pass/fail rato is shown, on which you can see the workflow runs on that day and hover over the bars to see the resiliency for that particular workflow run on that day.
+On clicking on a heat map entry, a stacked bar graph representing the pass/fail ratio is shown, on which you can see the workflow runs on that day and hover over the bars to see the resiliency for that particular workflow run on that day.
 
 <img src={require('./assets/workflow-activity.png').default} width="1000"/>
 
