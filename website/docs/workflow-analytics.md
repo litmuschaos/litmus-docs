@@ -24,7 +24,7 @@ Once the agent is connected, you will see a banner for adding data sources and a
 
 <img src={require('./assets/overview-first-look.png').default} width="1000" height="500" />
 
-For Adding a data source, you can refer to the following guide.
+For adding a data source, you can refer to the following guide.
 
 Once you have added a data source successfully, you will be able to see the data source listed on the overview page.
 
@@ -40,11 +40,11 @@ You can check the workflow analytics and the workflow run graph by clicking on _
 
 ### Workflow Analytics
 
-As we have already discussed the workflow run graph in other parts of documentation, this section will focus on workflow analytics. On clicking _**see workflow analytics**_, you will be redirected to the workflow analytics page for that particular workflow.
+As the workflow run graph has already been discussed in other parts of the documentation, this section will focus on workflow analytics. On clicking _**see workflow analytics**_, you will be redirected to the workflow analytics page for that particular workflow.
 
 <img src={require('./assets/workflow-analytics.png').default} width="1000" height="500" />
 
-On the workflow analytics page, In the first container, you will be able to see the details about the selected workflow such as the workflow name, workflow id, agent details(name, namespace, etc.), and the workflow run details like the last run as well as regularity.
+On the workflow analytics page, in the first container, you will be able to see the details about the selected workflow such as the workflow name, workflow id, agent details(name, namespace, etc.), and the workflow run details like the last run as well as regularity.
 
 On clicking on **show statistics**, you will be able to see the experiment statistics, average resiliency score and pass/fail ratio for the workflows/experiments.
 
@@ -62,6 +62,6 @@ On clicking on a heat map entry, a stacked bar graph representing the pass/fail 
 
 <img src={require('./assets/workflow-activity.png').default} width="1000"/>
 
-On clicking on a bar, more details about the workflow run represented by that stacked bar are presented in a tabular format. Here, we can see a table showing test names, experiment names, test results & weights, etc.
+On clicking on a bar, more details about the workflow run represented by that stacked bar are presented in a tabular format. Here, a table showing test names, experiment names, test results & weights, etc. can be seen.
 
 <img src={require('./assets/experiments-table.png').default} width="1000"/>
