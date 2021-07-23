@@ -14,11 +14,11 @@ Service downtimes are always expensive and they are very difficult to predict an
 
 LitmusChaos is a complete framework to implement chaos engineering within a cloud-native ecosystem. It helps both Developers and SREs automate the chaos experiments at different stages within the DevOps pipeline like development, during CI/CD, & in production. 
 
-- What is a Chaos Experiment?
+#### What is a Chaos Experiment?
 
 Chaos Experiments are fundamental units within the LitmusChaos architecture. Users can choose between readily available chaos experiments or create new ones to construct a required chaos workflow. 
 
-- What is a Chaos Workflow?
+#### What is a Chaos Workflow?
 
 A chaos workflow is much more than a simple chaos experiment. It supports the user in defining the expected result, observing the result, analysing the overall system behaviour, and in the decision-making process if the system needs to be tuned for improving the resilience.
 LitmusChaos provides necessary infrastructure to develop, use, and manage chaos workflows for a typical development or operations team. Teaming and GitOps features of Litmus help greatly to collaborate the chaos workflows management within the teams or software organisations.
