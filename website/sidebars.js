@@ -18,10 +18,17 @@ module.exports = {
 			},
 			{
 				Installation: [
-					'litmus-install-cluster-mode',
-					'litmus-install-namespace-mode',
-					'chaos-agent',
-					'litmus-with-ingress'
+					{
+						'Control Plane': [
+							'cluster-scope-installation',
+							'namespace-scope-installation',
+							'setup-without-ingress',
+							'setup-with-ingress'
+						]
+					},
+					{
+						'Chaos Plane': ['agent-install', 'litmusctl']
+					}
 				]
 			},
 			'create-workflow',

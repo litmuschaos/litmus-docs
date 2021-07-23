@@ -1,24 +1,7 @@
 ---
-id: chaos-agent
-title: Litmus Chaos Agent Install
-sidebar_label: Chaos Agent
----
-
-## What is an Agent in Litmus
-
-An Agent in Litmus is nothing but the target cluster where Chaos would be injected via Litmus. There should always be atleast one or more than one Agents connected to the Litmus Control Plane. Each individual Agent can be chosen to be the Target Agent for Chaos Injection.
-
-## Types of Agent
-
-In Litmus the Agents can be classified into two types
-
-- Self Agent
-- External Agent
-
-As part of Litmus installation, a Self Agent would be registered as a default Agent in the Portal. The same cluster where Litmus is installed is chosen as the Self Agent by the installer. From Portal you can now induce chaos into this Self Agent and observe the results.
-
-As you are aware by now, Portal is a Cross Cloud Chaos Control plane i.e. you can connect multiple external kubernetes agents to this portal. Once connected you can manage, monitor, observe and induce chaos from Portal to the respective agent. The command line utility **_litmusctl_** helps you connect external agents to the Control Plane.
-
+id: litmusctl
+title: LitmusCTL
+sidebar_label: LitmusCTL
 ---
 
 ## Litmusctl
@@ -110,7 +93,8 @@ litmusctl agent connect
 Next, you need to enter LitmusPortal details to login into your LitmusPortal account. Fields to be filled in:
 
 **LitmusPortal UI URL:** Enter the URL used to access the Litmus Portal UI.
->For Example `http://172.17.0.2:31696/`
+
+> For Example `http://172.17.0.2:31696/`
 
 **Username:** Enter your LitmusPortal username.<br />
 **Password:** Enter your LitmusPortal password.
@@ -150,7 +134,7 @@ Next, select the installation mode. In case the selected mode was a Cluster ther
 🌟 Sufficient permissions. Connecting Agent
 ```
 
-Next, enter the details of the new agent. 
+Next, enter the details of the new agent.
 
 **Agent Name:** Enter the name for the new agent.
 
