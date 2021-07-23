@@ -9,7 +9,7 @@ In Litmus the Agents can be classified into two, namely;
 - Self Agent
 - External Agent
 
-As a part of the Litmus installation, by default, a self cluster would be registered as Agent in the Portal. From the Portal you induce chaos into self cluster and observe the results from the Portal.
+As a part of the Litmus installation, by default, a self cluster would be registered as an Agent in the Portal. From the Portal you may induce chaos into self cluster and observe the results from the Portal.
 
 As you are aware by now, Portal is a Cross Cloud Chaos Control plane. That is you can connect multiple external kubernetes agents to this portal. Once connected you can manage the chaos from the Portal that is you can induce chaos into this agent from the Portal and observe the results from the Portal. Using the command line utility _litmusctl_ you can connect the external agents to the Portal.
 
