@@ -709,6 +709,7 @@ Worklfow
 LitmusPortal
 abc
 litmusctl
+LitmusCTL
 subcommand
 Litmusctl
 gz
