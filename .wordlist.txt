@@ -55,6 +55,7 @@ ArgoCD
 argoproj
 argowf
 args
+atleast
 AUT
 auth
 AUTH
@@ -696,6 +697,7 @@ workflowtemplates
 xcvc
 wp
 yaml
+YAMLs
 yml
 zk
 Zokeeper
@@ -707,6 +709,7 @@ Worklfow
 LitmusPortal
 abc
 litmusctl
+LitmusCTL
 subcommand
 Litmusctl
 gz

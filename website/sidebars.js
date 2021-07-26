@@ -8,20 +8,31 @@ module.exports = {
 			// "feature-definition"
 		],
 		'Getting Started': [
-			'getstarted',
 			{
-				Installation: [
-					'litmus-install-cluster-mode',
-					'litmus-install-namespace-mode',
-					'agent-install',
-					'litmus-with-ingress'
+				Prerequisites: [
+					'basic-requirements',
+					{
+						Resources: ['chaos-control-plane', 'agents']
+					}
 				]
 			},
-			'create-workflow',
-			'observe-workflow',
 			{
-				Uninstallation: ['agent-uninstall', 'litmus-uninstall']
-			}
+				Installation: [
+					{
+						'Control Plane': [
+							'cluster-scope-installation',
+							'namespace-scope-installation',
+							'setup-without-ingress',
+							'setup-with-ingress'
+						]
+					},
+					{
+						'Chaos Plane': ['agent-install', 'litmusctl']
+					}
+				]
+			},
+			'run-your-first-workflow',
+			'learning-litmus'
 		],
 		'User Guide': [
 			{
