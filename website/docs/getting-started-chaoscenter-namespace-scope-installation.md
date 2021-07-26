@@ -1,6 +1,6 @@
 ---
-id: namespace-scope-installation
-title: Litmus Namespace Scope Installation
+id: chaoscenter-namespace-scope-installation
+title: ChaosCenter Namespace Scope Installation
 sidebar_label: Namespace Scope
 ---
 
@@ -19,9 +19,9 @@ Installation of Litmus can be done using either of the below methods
 
 ### **Install Litmus using Helm **
 
-The helm chart will install all the required service account configuration and chaos control plane.
+The helm chart will install all the required service account configuration and ChaosCenter.
 
-The following steps will help you install litmus via helm.
+The following steps will help you install Litmus ChaosCenter via helm.
 
 #### Step-1: Add the litmus helm repository
 
@@ -30,7 +30,7 @@ helm repo add litmuschaos https://litmuschaos.github.io/litmus-helm/
 helm repo list
 ```
 
-#### Step-2: Create the namespace on which you want to install Litmus <span style={{color: '#909191'}}><b>[Required only if namespace isn't there]</b></span>
+#### Step-2: Create the namespace on which you want to install Litmus ChaosCenter <span style={{color: '#909191'}}><b>[Required only if namespace isn't there]</b></span>
 
 The Litmus infra components will be placed in this namespace.
 
@@ -38,7 +38,7 @@ The Litmus infra components will be placed in this namespace.
 kubectl create ns <LITMUS_PORTAL_NAMESPACE>
 ```
 
-> The chaos control plane can be placed in any namespace, though it is typically placed in `litmus`. Ignore if you already have the namespace where you want to install Litmus created.
+> The ChaosCenter can be placed in any namespace, though it is typically placed in `litmus`. Ignore if you already have the namespace where you want to install Litmus created.
 
 #### Step-3: Install the required Litmus CRDs
 
@@ -61,7 +61,7 @@ customresourcedefinition.apiextensions.k8s.io/chaosresults.litmuschaos.io create
 customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.litmuschaos.io created
 ```
 
-#### Step-4: Install the litmus chaos control plane
+#### Step-4: Install Litmus ChaosCenter
 
 ```bash
 helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=<LITMUS_PORTAL_NAMESPACE> --devel --set portalScope=namespace
@@ -89,7 +89,7 @@ Visit https://docs.litmuschaos.io/docs/getstarted/ to find more info.
 
 ### **Install Litmus using kubectl **
 
-#### **Set the namespace on which you want to install Litmus**
+#### **Set the namespace on which you want to install Litmus ChaosCenter**
 
 ```bash
 export LITMUS_PORTAL_NAMESPACE="<namespace>"
@@ -126,9 +126,9 @@ customresourcedefinition.apiextensions.k8s.io/chaosresults.litmuschaos.io create
 customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.litmuschaos.io created
 ```
 
-#### **Install Litmus**
+#### **Install Litmus ChaosCenter**
 
-Applying the manifest file will install all the required service account configuration and chaos control plane.
+Applying the manifest file will install all the required service account configuration and ChaosCenter.
 
 ```bash
 curl https://raw.githubusercontent.com/litmuschaos/litmus/master/docs/2.0.0-Beta/litmus-namespaced-2.0.0-Beta.yaml --output litmus-portal-namespaced-K8s-template.yml
@@ -234,6 +234,6 @@ service/mongo-service created
 
 ## Learn More
 
-- [Install Litmus in Namespace Scope](namespace-scope-installation)
-- [Setup Endpoints and Access Litmus without Ingress](setup-without-ingress)
-- [Setup Endpoints and Access Litmus with Ingress](setup-with-ingress)
+- [Install ChaosCenter in Cluster Scope](chaoscenter-cluster-scope-installation)
+- [Setup Endpoints and Access ChaosCenter without Ingress](setup-without-ingress)
+- [Setup Endpoints and Access ChaosCenter with Ingress](setup-with-ingress)

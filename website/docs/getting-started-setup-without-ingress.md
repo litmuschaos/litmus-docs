@@ -6,10 +6,10 @@ sidebar_label: Setup without Ingress
 
 ## Prerequisites
 
-Before setting up endpoint with Ingress make sure the [Litmus Chaos Control Plane](chaos-control-plane) is installed in either one of these scopes
+Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](chaoscenter) is installed in either one of these scopes
 
-- [Cluster Scope](cluster-scope-installation)
-- [Namespace Scope](namespace-scope-installation)
+- [Cluster Scope](chaoscenter-cluster-scope-installation)
+- [Namespace Scope](chaoscenter-namespace-scope-installation)
 
 ## **With NodePort**
 
@@ -47,9 +47,9 @@ litmusportal-frontend-service   NodePort    10.101.81.70     <none>        9091:
 litmusportal-server-service     NodePort    10.108.151.79    <none>        9002:32456/TCP,9003:31160/TCP   2m
 ```
 
-## **Accessing the Portal**
+## **Accessing the ChaosCenter**
 
-Once you have the PORT copied in your clipboard, simply use your IP and PORT in this manner `<IP>:<PORT>` to access the portal.
+Once you have the PORT copied in your clipboard, simply use your IP and PORT in this manner `<IP>:<PORT>` to access the Litmus ChaosCenter.
 
 For example:
 
@@ -59,7 +59,7 @@ http://172.17.0.3:30385/
 
 > Where `172.17.0.3` is my NodeIP and `30385` is the frontend service PORT. If using a LoadBalancer, the only change would be to provide a `<LoadBalancerIP>:<PORT>`
 
-You should be able to see the Login Page of Litmus. The **default credentials** are
+You should be able to see the Login Page of Litmus ChaosCenter. The **default credentials** are
 
 ```yaml
 Username: admin
@@ -106,6 +106,6 @@ Password: litmus
 
 ## Learn More
 
-- [Setup Endpoints and Access Litmus with Ingress](setup-with-ingress)
-- [Install Litmus in Namespace Scope](namespace-scope-installation)
-- [Install Litmus in Cluster Scope](cluster-scope-installation)
+- [Setup Endpoints and Access ChaosCenter with Ingress](setup-with-ingress)
+- [Install ChaosCenter in Namespace Scope](chaoscenter-namespace-scope-installation)
+- [Install ChaosCenter in Cluster Scope](chaoscenter-cluster-scope-installation)
