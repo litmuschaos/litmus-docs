@@ -1,29 +1,20 @@
 ---
-id: agent-install
-title: Litmus Chaos Agent Install
-sidebar_label: Chaos Agent
+id: litmusctl
+title: LitmusCTL
+sidebar_label: LitmusCTL
 ---
 
-In Litmus the Agents can be classified as two types
-
-- Self Agent
-- External Agent
-
-As part of Litmus installation by default, a self cluster would be registered as Agent in the Portal. From Portal you induce chaos into self cluster and observe the results from the Portal.
-
-As you are aware by now, Portal is a Cross Cloud Chaos Control plane. That is you can connect multiple external kubernetes agents to this portal. Once connected you can manage the chaos from the Portal that is you can induce chaos into this agent from the Portal and observe the results from the Portal. Using the command line utility _litmusctl_ you can connect the external agents to the Portal.
-
-# Litmusctl
+## Litmusctl
 
 Litmusctl is a command line interface to manage LitmusPortal services.
 
-## Requirements
+### Requirements
 
 The litmusctl CLI requires the following things:
 
 - Kubeconfig - litmusctl needs the kubeconfig of the k8s cluster where we need to connect litmus agents. The CLI currently uses the default path of kubeconfig i.e. `~/.kube/config`.
 
-## Installation
+### Installation
 
 To install the latest version of litmusctl follow the below steps:
 
@@ -77,7 +68,7 @@ chmod +x litmusctl
 sudo mv litmusctl /usr/local/bin/litmusctl
 ```
 
-## Basic Commands
+### Basic Commands
 
 litmusctl CLI command has the following structure:
 
@@ -91,7 +82,7 @@ To get the version of the litmusctl CLI:
 litmusctl version
 ```
 
-### Connecting an agent
+#### Connecting an agent
 
 To connect Litmus Chaos agent:
 
@@ -102,9 +93,10 @@ litmusctl agent connect
 Next, you need to enter LitmusPortal details to login into your LitmusPortal account. Fields to be filled in:
 
 **LitmusPortal UI URL:** Enter the URL used to access the Litmus Portal UI.
-Example, http://172.17.0.2:31696/
 
-**Username:** Enter your LitmusPortal username.
+> For Example `http://172.17.0.2:31696/`
+
+**Username:** Enter your LitmusPortal username.<br />
 **Password:** Enter your LitmusPortal password.
 
 ```bash
@@ -144,7 +136,6 @@ Next, select the installation mode. In case the selected mode was a Cluster ther
 
 Next, enter the details of the new agent.
 
-Fields to filled in:
 **Agent Name:** Enter the name for the new agent.
 
 **Agent Description:** Fill in details about the agent.

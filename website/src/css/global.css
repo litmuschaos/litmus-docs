@@ -8,11 +8,11 @@ body {
   margin: 0;
   padding: 0;
   background: #f4f5f7;
+  font-size: 1.05rem;
 }
 
 a {
   text-decoration: none;
-  color: #000;
 }
 
 /* SVGs font work differenly than normal HTML elements. So this rule is required. */
