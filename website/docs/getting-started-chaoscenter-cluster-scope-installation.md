@@ -1,6 +1,6 @@
 ---
-id: cluster-scope-installation
-title: Litmus Cluster Scope Installation
+id: chaoscenter-cluster-scope-installation
+title: ChaosCenter Cluster Scope Installation
 sidebar_label: Cluster Scope
 ---
 
@@ -19,9 +19,9 @@ Installation of Litmus can be done using either of the below methods
 
 ### Install Litmus using Helm
 
-The helm chart will install all the required service account configuration and chaos control plane.
+The helm chart will install all the required service account configuration and ChaosCenter.
 
-The following steps will help you install litmus via helm.
+The following steps will help you install Litmus ChaosCenter via helm.
 
 #### Step-1: Add the litmus helm repository
 
@@ -30,17 +30,17 @@ helm repo add litmuschaos https://litmuschaos.github.io/litmus-helm/
 helm repo list
 ```
 
-#### Step-2: Create the namespace on which you want to install Litmus
+#### Step-2: Create the namespace on which you want to install Litmus ChaosCenter
 
 - The litmus infra components will be placed in this namespace.
 
-> The chaos control plane can be placed in any namespace, in this case we are using `litmus` as the namespace of our choice.
+> The ChaosCenter can be placed in any namespace
 
 ```bash
 kubectl create ns <LITMUS_PORTAL_NAMESPACE>
 ```
 
-#### Step-3: Install the litmus chaos control plane
+#### Step-3: Install Litmus ChaosCenter
 
 ```bash
 helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=<LITMUS_PORTAL_NAMESPACE> --devel
@@ -67,15 +67,15 @@ Visit https://docs.litmuschaos.io/docs/getstarted/ to find more info.
 
 ### **Install Litmus using kubectl **
 
-#### **Create the namespace on which you want to install Litmus**
+#### **Create the namespace on which you want to install Litmus ChaosCenter**
 
 ```bash
 kubectl create ns <LITMUS_PORTAL_NAMESPACE>
 ```
 
-#### **Install Litmus**
+#### **Install Litmus ChaosCenter**
 
-Applying the manifest file will install all the required service account configuration and chaos control plane.
+Applying the manifest file will install all the required service account configuration and ChaosCenter.
 
 ```bash
 kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Beta.yaml -n <LITMUS_PORTAL_NAMESPACE>
@@ -161,6 +161,6 @@ kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Be
 
 ## Learn More
 
-- [Install Litmus in Namespace Scope](namespace-scope-installation)
-- [Setup Endpoints and Access Litmus without Ingress](setup-without-ingress)
-- [Setup Endpoints and Access Litmus with Ingress](setup-with-ingress)
+- [Install ChaosCenter in Namespace Scope](chaoscenter-namespace-scope-installation)
+- [Setup Endpoints and Access ChaosCenter without Ingress](setup-without-ingress)
+- [Setup Endpoints and Access ChaosCenter with Ingress](setup-with-ingress)

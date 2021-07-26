@@ -8,14 +8,14 @@ sidebar_label: Setup With Ingress
 
 ## Prerequisites
 
-Before setting up endpoint with Ingress make sure the [Litmus Chaos Control Plane](chaos-control-plane) is installed in either one of these scopes
+Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](chaoscenter) is installed in either one of these scopes
 
-- [Cluster Scope](cluster-scope-installation)
-- [Namespace Scope](namespace-scope-installation)
+- [Cluster Scope](chaoscenter-cluster-scope-installation)
+- [Namespace Scope](chaoscenter-namespace-scope-installation)
 
-## Install LitmusPortal with Ingress
+## Install ChaosCenter with Ingress
 
-With Litmus-2.0.0-Beta3, LitmusPortal can be installed with ingress.
+With Litmus-2.0.0-Beta3, ChaosCenter can be installed with ingress.
 In the following doc, we will use the Nginx ingress controller for ingress setup.
 
 1. By default, the service type is `NodePort`. For Ingress, we need to change the service type to `ClusterIP` in the following services.
@@ -156,6 +156,6 @@ kubectl apply -f <litmus_ingress_manifest> -n <PORTAL_NAMESPACE>
 
 ## Learn More
 
-- [Setup Endpoints and Access Litmus without Ingress](setup-without-ingress)
-- [Install Litmus in Namespace Scope](namespace-scope-installation)
-- [Install Litmus in Cluster Scope](cluster-scope-installation)
+- [Setup Endpoints and Access ChaosCenter without Ingress](setup-without-ingress)
+- [Install ChaosCenter in Namespace Scope](chaoscenter-namespace-scope-installation)
+- [Install ChaosCenter in Cluster Scope](chaoscenter-cluster-scope-installation)

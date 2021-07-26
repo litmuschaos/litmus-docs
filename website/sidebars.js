@@ -12,22 +12,22 @@ module.exports = {
 				Prerequisites: [
 					'basic-requirements',
 					{
-						Resources: ['chaos-control-plane', 'agents']
+						Resources: ['chaoscenter', 'chaosagents']
 					}
 				]
 			},
 			{
 				Installation: [
 					{
-						'Control Plane': [
-							'cluster-scope-installation',
-							'namespace-scope-installation',
+						ChaosCenter: [
+							'chaoscenter-cluster-scope-installation',
+							'chaoscenter-namespace-scope-installation',
 							'setup-without-ingress',
 							'setup-with-ingress'
 						]
 					},
 					{
-						'Chaos Plane': ['agent-install', 'litmusctl']
+						ChaosAgents: ['chaosagents-cluster-scope-installation', 'chaosagents-namespace-scope-installation']
 					}
 				]
 			},
