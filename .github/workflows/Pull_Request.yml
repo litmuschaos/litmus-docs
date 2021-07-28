@@ -28,7 +28,7 @@ jobs:
           sudo apt install boxes
           go get github.com/campoy/embedmd
           cd website/docs
-          embedmd -w $(find *.md)
+          embedmd -w $(find **/*.md)
         continue-on-error: true
 
       - name: embedmd check
