@@ -36,7 +36,7 @@ A sample PR flow is outlined [here](https://guides.github.com/introduction/flow/
 
 ```bash
 cd docs
-embedmd -w $(find *.md)
+embedmd -w $(find **/*.md)
 ```
 
 ## Pull Request Checklist
