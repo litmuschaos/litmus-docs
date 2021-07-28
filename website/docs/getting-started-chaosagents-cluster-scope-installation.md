@@ -38,7 +38,7 @@ Next, you need to enter ChaosCenter details to login into your ChaosCenter accou
 ✅ Login Successful!
 ```
 
-Upon successful login, there will be a list of exiting projects displayed on the terminal. Select the desired project by entering the sequence number indicated against it.
+Upon successful login, there will be a list of existing projects displayed on the terminal. Select the desired project by entering the sequence number indicated against it.
 
 ```bash
 ✨ Projects List:

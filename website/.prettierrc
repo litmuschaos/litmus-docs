@@ -8,5 +8,5 @@
 	"semi": false,
 	"singleQuote": true,
 	"jsxBracketSameLine": true,
-	"arrowParens": "always"
+	"arrowParens": false
 }
