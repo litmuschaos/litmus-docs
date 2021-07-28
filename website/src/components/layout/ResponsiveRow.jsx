@@ -1,6 +1,6 @@
-import React from 'react';
-import '../../css/responsiveRow.css';
+import React from 'react'
+import '../../css/responsiveRow.css'
 
-const ResponsiveRow = ({ children }) => <div className="responsiveRow">{children}</div>;
+const ResponsiveRow = ({ children }) => <div className="responsiveRow">{children}</div>
 
-export { ResponsiveRow };
+export { ResponsiveRow }

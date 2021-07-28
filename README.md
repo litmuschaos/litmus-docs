@@ -51,7 +51,7 @@ _Run embedmd (needs to be done before commiting the changes):_
 
 ```bash
 cd website/docs
-embedmd -w $(find *.md)
+embedmd -w $(find **/*.md)
 ```
 
 _Check the difference:_
