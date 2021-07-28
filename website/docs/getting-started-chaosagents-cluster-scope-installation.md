@@ -38,7 +38,7 @@ Next, you need to enter ChaosCenter details to login into your ChaosCenter accou
 ✅ Login Successful!
 ```
 
-Upon successful login, there will be a list of exiting projects displayed on the terminal. Select the desired project by entering the sequence number indicated against it.
+Upon successful login, there will be a list of existing projects displayed on the terminal. Select the desired project by entering the sequence number indicated against it.
 
 ```bash
 ✨ Projects List:
@@ -68,13 +68,13 @@ Next, enter the details of the new agent.
 
 Fields to be filled in <br />
 
-| Platforms                  | Download Link                                                                                                                                      |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Agent Name:**            | Enter the name for the new agent.                                                                                                                  |
-| **Agent Description:**     | Fill in details about the agent.                                                                                                                   |
-| **Platform Name:**         | Enter the platform name on which this agent is hosted. For example, AWS, GCP, Rancher etc.                                                         |
-| **Enter the namespace:**   | You can either enter an existing namespace or enter a new namespace. In cases where the namespace does not exist, LitmusPortal creates it for you. |
-| **Enter service account:** | Enter a name for your service account.                                                                                                             |
+| Platforms                  | Download Link                                                                                                                                   |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Agent Name:**            | Enter the name for the new agent.                                                                                                               |
+| **Agent Description:**     | Fill in details about the agent.                                                                                                                |
+| **Platform Name:**         | Enter the platform name on which this agent is hosted. For example, AWS, GCP, Rancher etc.                                                      |
+| **Enter the namespace:**   | You can either enter an existing namespace or enter a new namespace. In cases where the namespace does not exist, litmusctl creates it for you. |
+| **Enter service account:** | Enter a name for your service account.                                                                                                          |
 
 ```shell
 🔗 Enter the details of the agent ----
@@ -128,6 +128,7 @@ To verify, if the connection process was successful you can view the list of con
 
 ## Learn More
 
+- [Install ChaosAgents in Namespace Scope](chaosagents-namespace-scope-installation)
 - [Install ChaosCenter in Cluster Scope](chaoscenter-cluster-scope-installation)
 - [Install ChaosCenter in Namespace Scope](chaoscenter-namespace-scope-installation)
 - [Setup Endpoints and Access ChaosCenter without Ingress](setup-without-ingress)

@@ -154,11 +154,11 @@ statefulset.apps/mongo created
 service/mongo-service created
 ```
 
----
-
 ## **Verify your installation**
 
-**Verify if the frontend, server, and database pods are running**
+---
+
+#### **Verify if the frontend, server, and database pods are running**
 
 - Check the pods in the namespace where you installed Litmus:
 
@@ -189,6 +189,29 @@ service/mongo-service created
   litmusportal-server-service     NodePort    10.100.150.175  <none>      9002:30479/TCP,9003:31949/TCP 7m8s
   mongo-service                   ClusterIP   10.100.226.179  <none>      27017/TCP                     7m6s
   ```
+
+---
+
+#### **Verify Successful Registration of the Self Agent post [Account Configuration](setup-without-ingress)**
+
+Once the project is created, the cluster is automatically registered as a chaos target via installation of [ChaosAgents](chaosagents). This is represented as [Self-Agent](chaosagents#types-of-chaosagents) in [ChaosCenter](chaoscenter).
+
+```bash
+kubectl get pods -n litmus
+```
+
+```bash
+NAME                                     READY   STATUS    RESTARTS   AGE
+argo-server-58cb64db7f-pmbnq             1/1     Running   0          5m32s
+chaos-exporter-547b59d887-4dm58          1/1     Running   0          5m27s
+chaos-operator-ce-84ddc8f5d7-l8c6d       1/1     Running   0          5m27s
+event-tracker-5bc478cbd7-xlflb           1/1     Running   0          5m28s
+litmusportal-frontend-97c8bf86b-mx89w    1/1     Running   0          15m
+litmusportal-server-5cfbfc88cc-m6c5j     2/2     Running   1          15m
+mongo-0                                  1/1     Running   0          15m
+subscriber-958948965-qbx29               1/1     Running   0          5m30s
+workflow-controller-78fc7b6c6-w82m7      1/1     Running   0          5m32s
+```
 
 ## Resources
 
