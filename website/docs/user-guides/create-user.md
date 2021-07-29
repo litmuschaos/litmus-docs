@@ -9,19 +9,19 @@ This feature enables the admin to create a new user by assigning a unique userna
 
 ## Steps
 
-### Create a new user
+### 1. Create a new user
 
 click the `Create new user` button as observed below:
 
 <img src={require('../assets/user-guides/user-management/create-user/step-1.png').default} width="1000" height="500" />
 
-### Add the details of the new user
+### 2. Add the details of the new user
 
 Add all the details of the user to be created and hit the `Create` button.
 
 <img src={require('../assets/user-guides/user-management/create-user/step-2.png').default} width="1000" height="500" />
 
-### Confirmation of creation
+### 3. Confirmation of creation
 
 The user is created and you will receive a confirmation modal.
 
