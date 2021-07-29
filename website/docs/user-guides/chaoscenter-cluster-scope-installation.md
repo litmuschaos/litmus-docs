@@ -10,11 +10,13 @@ sidebar_label: Cluster Scope
 
 Before deploying LitmusChaos, make sure the following items are there
 
-- Kubernetes 1.15 or later
+- Kubernetes 1.17 or later
 
 - A Persistent volume of 20GB
 
-  >Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purposes as well. This PV is used as persistent storage to store the chaos config and chaos-metrics in the Portal. By default, litmus install would use the default storage class to allocate the PV. Provide this value
+  :::note
+  Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purposes as well. This PV is used as persistent storage to store the chaos config and chaos-metrics in the Portal. By default, litmus install would use the default storage class to allocate the PV. Provide this value
+  :::
 
 - [Helm3](https://v3.helm.sh/) or [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
 
@@ -42,7 +44,7 @@ helm repo list
 
 - The litmus infra components will be placed in this namespace.
 
-> The ChaosCenter can be placed in any namespace
+> The ChaosCenter can be placed in any namespace.
 
 ```bash
 kubectl create ns <LITMUS_PORTAL_NAMESPACE>
@@ -76,6 +78,8 @@ Visit https://docs.litmuschaos.io/docs/getstarted/ to find more info.
 ### **Install Litmus using kubectl **
 
 #### **Create the namespace on which you want to install Litmus ChaosCenter**
+
+> If you are installing Litmus in any other namespace apart from `litmus` namespace, make sure to change the same in the manifest too `https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Beta.yaml`.
 
 ```bash
 kubectl create ns <LITMUS_PORTAL_NAMESPACE>

@@ -71,9 +71,11 @@ Fields to be filled in <br />
 | **Enter the namespace:**   | You can either enter an existing namespace (where your application is running) or create a new namespace |
 | **Enter service account:** | Enter a name for your service account.                                                                   |
 
-> Since Namespaced Scope ChaosAgent don't have Cluster Wide Permission therefore if you are willing to install the ChaosAgent in new namespace, the namespace won't be automatically created
+:::note
+Since Namespaced Scope ChaosAgent don't have Cluster Wide Permission therefore if you are willing to install the ChaosAgent in new namespace, the namespace won't be automatically created
 
-> If you install the Namespaced Scope ChaosAgent in the same namespace as ChaosCenter, since the subscriber is already present in the namespace, you will see this message `🚫 Subscriber already present. Please enter a different namespace` in such cases you have to create a new namespace in the cluster to install the ChaosAgent else choose the existing namespace where your application resides _(besides the ns where ChaosCenter is present)_
+If you install the Namespaced Scope ChaosAgent in the same namespace as ChaosCenter, since the subscriber is already present in the namespace, you will see this message `🚫 Subscriber already present. Please enter a different namespace` in such cases you have to create a new namespace in the cluster to install the ChaosAgent else choose the existing namespace where your application resides _(besides the ns where ChaosCenter is present)_
+:::
 
 ```shell
 🔗 Enter the details of the agent ----
@@ -127,9 +129,7 @@ To verify, if the connection process was successful you can view the list of con
 
 ## Learn More
 
-- [Install ChaosAgents in Cluster Scope](../getting-started/chaosagents-cluster-scope-installation.md)
-- [Install ChaosCenter in Cluster Scope](../getting-started/chaoscenter-cluster-scope-installation.md)
-- [Install ChaosCenter in Namespace Scope](../getting-started/chaoscenter-namespace-scope-installation.md)
-- [Setup Endpoints and Access ChaosCenter without Ingress](../getting-started/setup-without-ingress.md)
-- [Setup Endpoints and Access ChaosCenter with Ingress](../getting-started/setup-with-ingress.md)
-
+- [Learn More about Litmusctl](installation)
+- [Install ChaosAgents in Cluster Scope](cluster-scope-installation)
+- [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
+- [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)

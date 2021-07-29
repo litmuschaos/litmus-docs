@@ -24,7 +24,7 @@ module.exports = {
     // Concepts
     {
       Concepts: [
-        'concepts/learn-by-concepts',
+        'concepts/overview',
         'concepts/litmus',
         'concepts/experiment',
         'concepts/probes',
@@ -49,7 +49,7 @@ module.exports = {
     // User Guides
     {
       'User Guides': [
-        'user-guides/learn-by-user-guides',
+        'user-guides/overview',
         {
           'Advance Installation': [
             {

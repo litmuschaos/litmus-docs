@@ -10,11 +10,13 @@ sidebar_label: Installation
 
 Before deploying LitmusChaos, make sure the following items are there
 
-- Kubernetes 1.15 or later
+- Kubernetes 1.17 or later
 
 - A Persistent volume of 20GB
 
-  >Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purposes as well. This PV is used as persistent storage to store the chaos config and chaos-metrics in the Portal. By default, litmus install would use the default storage class to allocate the PV. Provide this value
+  :::note
+  Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purposes as well. This PV is used as persistent storage to store the chaos config and chaos-metrics in the Portal. By default, litmus install would use the default storage class to allocate the PV. Provide this value
+  :::
 
 - [Helm3](https://v3.helm.sh/) or [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
 
@@ -42,16 +44,16 @@ helm repo list
 
 - The litmus infra components will be placed in this namespace.
 
-> The ChaosCenter can be placed in any namespace
+> The ChaosCenter can be placed in any namespace, but for this scenario we are choose `litmus` as the namespace.
 
 ```bash
-kubectl create ns <LITMUS_PORTAL_NAMESPACE>
+kubectl create ns litmus
 ```
 
 #### Step-3: Install Litmus ChaosCenter
 
 ```bash
-helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=<LITMUS_PORTAL_NAMESPACE> --devel
+helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=litmus --devel
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -59,7 +61,7 @@ helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=<LITMUS_PORTAL_NAME
 ```
 NAME: chaos
 LAST DEPLOYED: Tue Jun 15 19:20:09 2021
-NAMESPACE: <LITMUS_PORTAL_NAMESPACE>
+NAMESPACE: litmus
 STATUS: deployed
 REVISION: 1
 TEST SUITE: None
@@ -78,7 +80,7 @@ Visit https://docs.litmuschaos.io/docs/getstarted/ to find more info.
 #### **Create the namespace on which you want to install Litmus ChaosCenter**
 
 ```bash
-kubectl create ns <LITMUS_PORTAL_NAMESPACE>
+kubectl create ns litmus
 ```
 
 #### **Install Litmus ChaosCenter**
@@ -86,8 +88,9 @@ kubectl create ns <LITMUS_PORTAL_NAMESPACE>
 Applying the manifest file will install all the required service account configuration and ChaosCenter.
 
 ```bash
-kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Beta.yaml -n <LITMUS_PORTAL_NAMESPACE>
+kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Beta.yaml -n litmus
 ```
+
 ---
 
 ## **Verify your installation**
@@ -97,7 +100,7 @@ kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Be
 - Check the pods in the namespace where you installed Litmus:
 
   ```bash
-  kubectl get pods -n <LITMUS_PORTAL_NAMESPACE>
+  kubectl get pods -n litmus
   ```
 
   <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -112,7 +115,7 @@ kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Be
 - Check the services running in the namespace where you installed Litmus:
 
   ```bash
-  kubectl get svc -n <LITMUS_PORTAL_NAMESPACE>
+  kubectl get svc -n litmus
   ```
 
   <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -131,7 +134,7 @@ kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Be
 To setup and login to ChaosCenter expand the available services just created and copy the `PORT` of the `litmusportal-frontend-service` service
 
 ```bash
-kubectl get svc -n <LITMUS_PORTAL_NAMESPACE>
+kubectl get svc -n litmus
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>

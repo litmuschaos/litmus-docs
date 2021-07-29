@@ -121,8 +121,7 @@ To verify, if the connection process was successful you can view the list of con
 
 ## Learn More
 
-- [Install ChaosAgents in Namespace Scope](../getting-started/chaosagents-namespace-scope-installation.md)
-- [Install ChaosCenter in Cluster Scope](../getting-started/chaoscenter-cluster-scope-installation.md)
-- [Install ChaosCenter in Namespace Scope](../getting-started/chaoscenter-namespace-scope-installation.md)
-- [Setup Endpoints and Access ChaosCenter without Ingress](../getting-started/setup-without-ingress.md)
-- [Setup Endpoints and Access ChaosCenter with Ingress](../getting-started/setup-with-ingress.md)
+- [Learn More about Litmusctl](installation)
+- [Install ChaosAgents in Namespace Scope](namespace-scope-installation)
+- [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
+- [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)
