@@ -6,7 +6,7 @@ sidebar_label: Setup without Ingress
 
 ## Prerequisites
 
-Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](chaoscenter) is installed in either one of these scopes
+Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](../getting-started/resources#chaoscenter.md) is installed in either one of these scopes
 
 - [Cluster Scope](chaoscenter-cluster-scope-installation)
 - [Namespace Scope](chaoscenter-namespace-scope-installation)
@@ -71,42 +71,6 @@ Password: litmus
 By default you are assigned with a default project with Owner permissions.
 
 <img src={require('../assets/landing-page.png').default} width="800" />
-
-## Resources
-
-<table>
-  <tr>
-    <td>
-      <a href="https://kubernetes.io/docs/concepts/services-networking/service/#nodeport">
-        <img width={300} src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mirantis.com%2Fwp-content%2Fuploads%2F2018%2F03%2Ffirst-beta-version-of-kubernetes-1-10-is-here-your-chance-to-provide-feedback.jpg&f=1&nofb=1" />
-        <br />
-        <div style={{width: "300px"}}>
-        NodePort
-        </div>
-      </a>
-    </td>
-    <td>
-      <a href="https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer">
-        <img width={300} src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mirantis.com%2Fwp-content%2Fuploads%2F2018%2F03%2Ffirst-beta-version-of-kubernetes-1-10-is-here-your-chance-to-provide-feedback.jpg&f=1&nofb=1" />
-        <br />
-        <div style={{width: "300px"}}>
-        LoadBalancer
-        </div>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-        <a href="https://kubernetes.io/docs/concepts/services-networking/ingress/">
-        <img width={300} src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mirantis.com%2Fwp-content%2Fuploads%2F2018%2F03%2Ffirst-beta-version-of-kubernetes-1-10-is-here-your-chance-to-provide-feedback.jpg&f=1&nofb=1" />
-        <br />
-        <div style={{width: "300px"}}>
-        Ingress
-        </div>
-      </a>
-    </td>
-  </tr>
-</table>
 
 ## Learn More
 

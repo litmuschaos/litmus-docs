@@ -15,41 +15,16 @@ module.exports = {
     // Getting Started
     {
       'Getting Started': [
-        {
-          Prerequisites: [
-            'getting-started/basic-requirements',
-            {
-              Resources: ['getting-started/chaoscenter', 'getting-started/chaosagents']
-            }
-          ]
-        },
-        {
-          Installation: [
-            {
-              ChaosCenter: [
-                'getting-started/chaoscenter-cluster-scope-installation',
-                'getting-started/chaoscenter-namespace-scope-installation',
-                'getting-started/setup-without-ingress',
-                'getting-started/setup-with-ingress'
-              ]
-            },
-            {
-              ChaosAgents: [
-                'getting-started/chaosagents-cluster-scope-installation',
-                'getting-started/chaosagents-namespace-scope-installation'
-              ]
-            }
-          ]
-        },
-        'getting-started/run-your-first-workflow',
-        'getting-started/learning-litmus'
+        'getting-started/resources',
+        'getting-started/installation',
+        'getting-started/run-your-first-workflow'
       ]
     },
 
     // Concepts
     {
       Concepts: [
-        'concepts/introduction',
+        'concepts/overview',
         'concepts/litmus',
         'concepts/experiment',
         'concepts/probes',
@@ -74,7 +49,20 @@ module.exports = {
     // User Guides
     {
       'User Guides': [
-        'user-guides/introduction',
+        'user-guides/overview',
+        {
+          'Advance Installation': [
+            {
+              ChaosCenter: [
+                'user-guides/chaoscenter-cluster-scope-installation',
+                'user-guides/chaoscenter-namespace-scope-installation',
+                'user-guides/setup-without-ingress',
+                'user-guides/setup-with-ingress'
+              ]
+            },
+            'user-guides/chaosagents-installation',
+          ]
+        },
         {
           'Running Litmus': ['user-guides/air-gapped']
         },

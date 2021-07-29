@@ -42,7 +42,7 @@ module.exports = {
   tagline: 'A website for testing',
   url: 'https://litmusdocs.netlify.app',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'litmuschaos',
   projectName: 'litmus',
