@@ -8,7 +8,7 @@ sidebar_label: Setup With Ingress
 
 ## Prerequisites
 
-Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](chaoscenter) is installed in either one of these scopes
+Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](../getting-started/resources#chaoscenter) is installed in either one of these scopes
 
 - [Cluster Scope](chaoscenter-cluster-scope-installation)
 - [Namespace Scope](chaoscenter-namespace-scope-installation)
@@ -128,31 +128,6 @@ spec:
 ```bash
 kubectl apply -f <litmus_ingress_manifest> -n <PORTAL_NAMESPACE>
 ```
-
-## Resources
-
-<table>
-  <tr>
-    <td>
-      <a href="https://dev.to/hjgraca/aks-ingress-with-nginx-and-key-vault-certificates-2kma">
-        <img width={300} src="https://res.cloudinary.com/practicaldev/image/fetch/s--RyQOqlJg--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/o13zbbtdr3nen2ikv734.jpg" />
-        <br />
-        <div style={{width: "300px"}}>
-        AKS ingress with nginx and Key Vault certificates
-        </div>
-      </a>
-    </td>
-    <td>
-        <a href="https://kubernetes.io/docs/concepts/services-networking/ingress/">
-        <img width={300} src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mirantis.com%2Fwp-content%2Fuploads%2F2018%2F03%2Ffirst-beta-version-of-kubernetes-1-10-is-here-your-chance-to-provide-feedback.jpg&f=1&nofb=1" />
-        <br />
-        <div style={{width: "300px"}}>
-        Ingress
-        </div>
-      </a>
-    </td>
-  </tr>
-</table>
 
 ## Learn More
 

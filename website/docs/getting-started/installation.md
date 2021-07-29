@@ -1,14 +1,22 @@
 ---
-id: chaoscenter-cluster-scope-installation
+id: installation
 title: ChaosCenter Cluster Scope Installation
-sidebar_label: Cluster Scope
+sidebar_label: Installation
 ---
 
 ---
 
 ## Prerequisites
 
-Before deploying LitmusChaos, make sure the [prerequisites](basic-requirements) are met.
+Before deploying LitmusChaos, make sure the following items are there
+
+- Kubernetes 1.15 or later
+
+- A Persistent volume of 20GB
+
+  >Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purposes as well. This PV is used as persistent storage to store the chaos config and chaos-metrics in the Portal. By default, litmus install would use the default storage class to allocate the PV. Provide this value
+
+- [Helm3](https://v3.helm.sh/) or [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
 
 ## Installation
 
@@ -80,10 +88,9 @@ Applying the manifest file will install all the required service account configu
 ```bash
 kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Beta.yaml -n <LITMUS_PORTAL_NAMESPACE>
 ```
+---
 
 ## **Verify your installation**
-
----
 
 #### **Verify if the frontend, server, and database pods are running**
 
@@ -119,9 +126,51 @@ kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Be
 
 ---
 
-#### **Verify Successful Registration of the Self Agent post [Account Configuration](setup-without-ingress)**
+## **Accessing the ChaosCenter**
 
-Once the project is created, the cluster is automatically registered as a chaos target via installation of [ChaosAgents](chaosagents). This is represented as [Self-Agent](chaosagents#types-of-chaosagents) in [ChaosCenter](chaoscenter).
+To setup and login to ChaosCenter expand the available services just created and copy the `PORT` of the `litmusportal-frontend-service` service
+
+```bash
+kubectl get svc -n <LITMUS_PORTAL_NAMESPACE>
+```
+
+<span style={{color: 'green'}}><b>Expected Output</b></span>
+
+```bash
+NAME                            TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                         AGE
+chaos-litmus-portal-mongo       ClusterIP   10.104.107.117   <none>        27017/TCP                       2m
+litmusportal-frontend-service   NodePort    10.101.81.70     <none>        9091:30385/TCP                  2m
+litmusportal-server-service     NodePort    10.108.151.79    <none>        9002:32456/TCP,9003:31160/TCP   2m
+```
+
+> **Note**: In this case, the PORT for `litmusportal-frontend-service` is `30385`. Yours will be different.
+
+Once you have the PORT copied in your clipboard, simply use your IP and PORT in this manner `<NODEIP>:<PORT>` to access the Litmus ChaosCenter.
+
+For example:
+
+```yaml
+http://172.17.0.3:30385/
+```
+
+> Where `172.17.0.3` is my NodeIP and `30385` is the frontend service PORT. If using a LoadBalancer, the only change would be to provide a `<LoadBalancerIP>:<PORT>`. [Learn more about how to access ChaosCenter with LoadBalancer](../user-guide/setup-without-ingress#with-loadbalancer)
+
+You should be able to see the Login Page of Litmus ChaosCenter. The **default credentials** are
+
+```yaml
+Username: admin
+Password: litmus
+```
+
+<img src={require('../assets/login.png').default} width="800" />
+
+By default you are assigned with a default project with Owner permissions.
+
+<img src={require('../assets/landing-page.png').default} width="800" />
+
+## **Verify Successful Registration of the Self Agent**
+
+Once the project is created, the cluster is automatically registered as a chaos target via installation of [ChaosAgents](resources#chaosagents). This is represented as [Self-Agent](resources#types-of-chaosagents) in [ChaosCenter](resources#chaoscenter).
 
 ```bash
 kubectl get pods -n litmus
@@ -142,48 +191,11 @@ workflow-controller-78fc7b6c6-w82m7      1/1     Running   0          5m32s
 
 ## Resources
 
-#### Videos
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rOrKegj5ePI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-#### Blogs
-
-<table>
-  <tr>
-    <td>
-      <a href="https://dev.to/litmus-chaos/getting-started-with-litmus-2-0-in-google-kubernetes-engine-4obf">
-        <img width={300} src="https://res.cloudinary.com/practicaldev/image/fetch/s--zqwPPulX--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vklusi3v61g28ospmpck.png" />
-        <br />
-        <div style={{width: "300px"}}>
-        Getting Started with Litmus 2.0 in Google Kubernetes Engine
-        </div>
-      </a>
-    </td>
-    <td>
-      <a href="https://dev.to/avaakash/getting-started-with-litmus-2-0-in-azure-kubernetes-service-13f3">
-        <img width={300} src="https://res.cloudinary.com/practicaldev/image/fetch/s--2AubMs-V--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8c9oa4s10q3zbj9ew7eu.png" />
-        <br />
-        <div style={{width: "300px"}}>
-        Getting Started with LitmusChaos 2.0 in Azure Kubernetes Service
-        </div>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://blog.mayadata.io/get-started-with-litmuschaos-in-minutes">
-        <img width={300} src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmma.prnewswire.com%2Fmedia%2F736824%2FMayaData_Logo.jpg%3Fp%3Dtwitter&f=1&nofb=1" />
-        <br />
-        <div style={{width: "300px"}}>
-        Get Started with LitmusChaos in Minutes
-        </div>
-      </a>
-    </td>
-  </tr>
-</table>
 
 ## Learn More
 
-- [Install ChaosCenter in Namespace Scope](chaoscenter-namespace-scope-installation)
-- [Setup Endpoints and Access ChaosCenter without Ingress](setup-without-ingress)
-- [Setup Endpoints and Access ChaosCenter with Ingress](setup-with-ingress)
+- [Install ChaosCenter in Namespace Scope](../user-guides/chaoscenter-namespace-scope-installation)
+- [Connect External ChaosAgents to ChaosCenter](../user-guides/chaosagents-installation)
+- [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress)
+- [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress)

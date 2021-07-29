@@ -8,10 +8,10 @@ Welcome to this scenario, in this section you will get an overview of how to exe
 
 ## Prerequisites
 
-Before starting with your first Chaos Workflow make sure the [Litmus ChaosCenter](chaoscenter) is installed in either one of these scopes
+Before starting with your first Chaos Workflow make sure the [Litmus ChaosCenter](resources#chaoscenter) is installed in either one of these scopes
 
-- [Cluster Scope](chaoscenter-cluster-scope-installation)
-- [Namespace Scope](chaoscenter-namespace-scope-installation)
+- [Cluster Scope](../user-guides/chaoscenter-cluster-scope-installation)
+- [Namespace Scope](../user-guides/chaoscenter-namespace-scope-installation)
 
 ## Aim of the scenario
 
@@ -32,7 +32,7 @@ In this scenario we will execute a pod-delete fault on a sample micro-service ap
 
 <br /> <br />
 
-2. Select **Self Agent** as the target [ChaosAgent](chaosagents) for Chaos Injection. This is where we'll select which ChaosAgent to choose as the Target Agent.
+2. Select **Self Agent** as the target [ChaosAgent](resources#chaosagents) for Chaos Injection. This is where we'll select which ChaosAgent to choose as the Target Agent.
 
    <img src={require("../assets/selecting-self-agent.png").default} alt="Selecting Self Agent" />
 
@@ -125,35 +125,16 @@ And with that you have successfully scheduled your first Chaos Workflow with Lit
 
 ## Resources
 
-#### Videos
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hcPvbDSPdeo?start=871" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-#### Blogs
+### Beginner Friendly Resources
 
-<table>
-  <tr>
-    <td>
-      <a href="https://dev.to/avaakash/getting-started-with-litmus-2-0-in-azure-kubernetes-service-13f3">
-        <img width={300} src="https://res.cloudinary.com/practicaldev/image/fetch/s--2AubMs-V--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8c9oa4s10q3zbj9ew7eu.png" />
-        <br />
-        <div style={{width: "300px"}}>
-        Getting Started with LitmusChaos 2.0 in Azure Kubernetes Service
-        </div>
-      </a>
-    </td>
-    <td>
-      <a href="https://dev.to/litmus-chaos/getting-started-with-litmus-2-0-in-google-kubernetes-engine-4obf">
-        <img width={300} src="https://res.cloudinary.com/practicaldev/image/fetch/s--zqwPPulX--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vklusi3v61g28ospmpck.png" />
-        <br />
-        <div style={{width: "300px"}}>
-        Getting Started with Litmus 2.0 in Google Kubernetes Engine
-        </div>
-      </a>
-    </td>
-  </tr>
-</table>
+✨ Below is a list of beginner-level resources, everything you need to get started in your Cloud-Native Chaos Engineering journey ✨
 
-## Learn More
+[List of Beginner Friendly Resources](https://github.com/litmuschaos/litmus/tree/master/resources)
 
-- [Resources to Learn More about Litmus](learning-litmus)
+## Various Ways of Learning Litmus
+
+- [Learn by Concept](../concepts/learn-by-concepts)
+- [Learn by User Guides](../user-guides/learn-by-user-guides)
+- [Learn by Running a sample Katakoda Scenario](https://www.katacoda.com/litmusbot/scenarios/getting-started-with-litmus)
