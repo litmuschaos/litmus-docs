@@ -153,7 +153,7 @@ For example:
 http://172.17.0.3:30385/
 ```
 
-> Where `172.17.0.3` is my NodeIP and `30385` is the frontend service PORT. If using a LoadBalancer, the only change would be to provide a `<LoadBalancerIP>:<PORT>`. [Learn more about how to access ChaosCenter with LoadBalancer](../user-guide/setup-without-ingress#with-loadbalancer)
+> Where `172.17.0.3` is my NodeIP and `30385` is the frontend service PORT. If using a LoadBalancer, the only change would be to provide a `<LoadBalancerIP>:<PORT>`. [Learn more about how to access ChaosCenter with LoadBalancer](../user-guide/setup-without-ingress#with-loadbalancer.md)
 
 You should be able to see the Login Page of Litmus ChaosCenter. The **default credentials** are
 
@@ -195,7 +195,7 @@ workflow-controller-78fc7b6c6-w82m7      1/1     Running   0          5m32s
 
 ## Learn More
 
-- [Install ChaosCenter in Namespace Scope](../user-guides/chaoscenter-namespace-scope-installation)
-- [Connect External ChaosAgents to ChaosCenter](../user-guides/chaosagents-installation)
-- [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress)
-- [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress)
+- [Install ChaosCenter in Namespace Scope](../user-guides/chaoscenter-namespace-scope-installation.md)
+- [Connect External ChaosAgents to ChaosCenter](../user-guides/chaosagents-installation.md)
+- [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
+- [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)

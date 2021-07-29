@@ -10,8 +10,8 @@ Welcome to this scenario, in this section you will get an overview of how to exe
 
 Before starting with your first Chaos Workflow make sure the [Litmus ChaosCenter](resources#chaoscenter) is installed in either one of these scopes
 
-- [Cluster Scope](../user-guides/chaoscenter-cluster-scope-installation)
-- [Namespace Scope](../user-guides/chaoscenter-namespace-scope-installation)
+- [Cluster Scope](../user-guides/chaoscenter-cluster-scope-installation.md)
+- [Namespace Scope](../user-guides/chaoscenter-namespace-scope-installation.md)
 
 ## Aim of the scenario
 
@@ -135,6 +135,6 @@ And with that you have successfully scheduled your first Chaos Workflow with Lit
 
 ## Various Ways of Learning Litmus
 
-- [Learn by Concept](../concepts/learn-by-concepts)
-- [Learn by User Guides](../user-guides/learn-by-user-guides)
+- [Learn by Concept](../concepts/learn-by-concepts.md)
+- [Learn by User Guides](../user-guides/learn-by-user-guides.md)
 - [Learn by Running a sample Katakoda Scenario](https://www.katacoda.com/litmusbot/scenarios/getting-started-with-litmus)

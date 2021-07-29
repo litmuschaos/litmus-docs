@@ -66,4 +66,4 @@ In Litmus, ChaosAgents can be classified into two types
 
 As part of the Litmus installation, a Self Agent would be registered as a default Agent in the ChaosCenter. The same cluster where Litmus is installed is chosen as the Self Agent by the installer. From the ChaosCenter you can now induce chaos into this Self Agent and observe the results.
 
-Since the ChaosCenter is Cross Cloud, you can connect multiple external Kubernetes agents to the same with the help of the command line utility [litmusctl](../litmusctl/installation). Once connected you can manage, monitor, observe and induce chaos from the ChaosCenter to the respective ChaosAgents.
+Since the ChaosCenter is Cross Cloud, you can connect multiple external Kubernetes agents to the same with the help of the command line utility [litmusctl](../litmusctl/installation.md). Once connected you can manage, monitor, observe and induce chaos from the ChaosCenter to the respective ChaosAgents.

@@ -202,7 +202,7 @@ service/mongo-service created
 
 #### **Verify Successful Registration of the Self Agent post [Account Configuration](setup-without-ingress)**
 
-Once the project is created, the cluster is automatically registered as a chaos target via installation of [ChaosAgents](resources#chaosagents). This is represented as [Self-Agent](resources#types-of-chaosagents) in [ChaosCenter](resources#chaosagents).
+Once the project is created, the cluster is automatically registered as a chaos target via installation of [ChaosAgents](../getting-started/resources#chaosagents.md). This is represented as [Self-Agent](../getting-started/resources#types-of-chaosagents.md) in [ChaosCenter](../getting-started/resources#chaosagents.md).
 
 ```bash
 kubectl get pods -n litmus

@@ -4,7 +4,7 @@ title: Installing Agent with Namespace Scope
 sidebar_label: Namespace Scope
 ---
 
-Multiple external [ChaosAgents](../getting-started/chaosagents) can be connected to application namespace/s with the help of the command line utility [litmusctl](installation).
+Multiple external [ChaosAgents](../getting-started/chaosagents.md) can be connected to application namespace/s with the help of the command line utility [litmusctl](installation).
 
 There can be one or more than one ChaosAgent in a cluster connected to different namespaces of the same cluster.
 
@@ -127,9 +127,9 @@ To verify, if the connection process was successful you can view the list of con
 
 ## Learn More
 
-- [Install ChaosAgents in Cluster Scope](../getting-started/chaosagents-cluster-scope-installation)
-- [Install ChaosCenter in Cluster Scope](../getting-started/chaoscenter-cluster-scope-installation)
-- [Install ChaosCenter in Namespace Scope](../getting-started/chaoscenter-namespace-scope-installation)
-- [Setup Endpoints and Access ChaosCenter without Ingress](../getting-started/setup-without-ingress)
-- [Setup Endpoints and Access ChaosCenter with Ingress](../getting-started/setup-with-ingress)
+- [Install ChaosAgents in Cluster Scope](../getting-started/chaosagents-cluster-scope-installation.md)
+- [Install ChaosCenter in Cluster Scope](../getting-started/chaoscenter-cluster-scope-installation.md)
+- [Install ChaosCenter in Namespace Scope](../getting-started/chaoscenter-namespace-scope-installation.md)
+- [Setup Endpoints and Access ChaosCenter without Ingress](../getting-started/setup-without-ingress.md)
+- [Setup Endpoints and Access ChaosCenter with Ingress](../getting-started/setup-with-ingress.md)
 
