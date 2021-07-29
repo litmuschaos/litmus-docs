@@ -65,8 +65,8 @@ module.exports = {
         {
           Observability: ['concepts/workflow-statistics', 'concepts/app-infra-monitoring', 'concepts/datasource']
         },
-        'concepts/teaming',
         'concepts/user-management',
+        'concepts/teaming',
         'concepts/gitops'
       ]
     },
@@ -120,10 +120,10 @@ module.exports = {
           ]
         },
         {
-          Teaming: ['user-guides/invite-team-member', 'user-guides/remove-team-member']
+          'User Management': ['user-guides/view-user', 'user-guides/create-user', 'user-guides/reset-password', 'user-guides/deactivate-user']
         },
         {
-          'User Management': ['user-guides/create-user', 'user-guides/reset-password', 'user-guides/deactivate-user']
+          'Teaming': ['user-guides/invite-team-member', 'user-guides/remove-team-member']
         },
         'user-guides/image-registry',
         'user-guides/uninstall-litmus'
