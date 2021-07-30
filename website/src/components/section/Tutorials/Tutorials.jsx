@@ -7,7 +7,7 @@ const Tutorials = () => {
   return (
     <div className="tutorialContainer">
       {TutorialData.map(tutorials => (
-        <TutorialCard props={tutorials} />
+        <TutorialCard key={tutorials.heading} props={tutorials} />
       ))}
     </div>
   )
