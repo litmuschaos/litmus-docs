@@ -4,7 +4,7 @@ title: Collaborate with Teams
 sidebar_label: Teaming
 ---
 
-The litmus portal has a built in teaming feature to facilitate collaboration between users using project level role access, the core concepts of which are discussed below.
+The ChaosCenter has a built in teaming feature to facilitate collaboration between users using project level role access, the core concepts of which are discussed below.
 
 ### Project level roles (Owner, Editor, Viewer)
 Each user has a default project created on user creation by the admin for which they maintain a project level `Owner` access. Every `Owner` has the ability to invite other users into their project with different permission levels, namely `Editor`,  and `Viewer`.

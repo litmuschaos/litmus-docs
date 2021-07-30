@@ -4,12 +4,12 @@ title: User Management
 sidebar_label: User Management
 ---
 
-The Litmus portal supports two different levels of hierarchy, a portal level access, and a project level access.
+The ChaosCenter supports two different levels of hierarchy, a portal level access, and a project level access.
 
 >This section discusses the detailed breakdown of the portal level roles a user may have. For project level roles refer [here](teaming).
 
 ### Portal level user Roles (Admin, Non-Admins)
-Litmus supports two portal level roles for defining the privilege levels of a certain user:
+ChaosCenter supports two portal level roles for defining the privilege levels of a certain user:
 
 **Admin:** the admin user is created by default on initial project setup and can log into the portal using the credentials `admin/litmus` once the server pod (auth container) is up.
 
