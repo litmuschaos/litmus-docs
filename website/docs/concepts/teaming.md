@@ -32,8 +32,8 @@ Teaming is based on the following principles and each user can have one of the 3
 
 ***As a Viewer or Editor you can:***
 
-- Check and Accept/Decline the received invitations
+- Check and Accept/Decline the received invitations.
 - Switch and browse any project you are a member of.
-- Can leave the Project you are a part of, except your own.
+- Can leave the project you are a part of, except your own.
 
 >Note: The settings page will not be visible to you if you are browsing someone else’s project. You can only view it if you are the project owner.

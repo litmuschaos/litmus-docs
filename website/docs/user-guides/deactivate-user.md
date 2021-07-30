@@ -16,7 +16,7 @@ In the user management tab, locate the user account that you'd like to deactivat
 
 ### 2. Confirm the user is deactivated
 
-Once deactivated, the indicator next to the users username in the usermanagement table will turn gray.
+Once deactivated, the indicator next to the user's username in the usermanagement table will turn gray.
 
 <img src={require('../assets/user-guides/user-management/deactivate-user/step-2.png').default} width="1000" height="500" />
 
