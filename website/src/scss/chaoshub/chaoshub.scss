@@ -46,3 +46,13 @@
 .chaosbird {
   width: 20rem;
 }
+
+@media (max-width: 890px) {
+  .header {
+    width: 11rem;
+  }
+
+  .chaosbird {
+    width: 100%;
+  }
+}

@@ -1,26 +1,29 @@
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import React from 'react'
 import '../../../css/home.css'
-import { ResponsiveRow } from '../../layout'
-import { Heading, Paragraph, SubText } from '../../texts'
+import { ButtonFilled, ButtonOutlined } from '../../button'
+import { ResponsiveRow, Row } from '../../layout'
+import { Heading, Paragraph } from '../../texts'
 
 const Header = () => {
   return (
     <ResponsiveRow>
-      <div className="left">
+      <div className="headingLeft">
         <Heading fontWeight="bold">
           What is <span className="purple">Litmus Chaos</span> ?
         </Heading>
-        <br />
-        <SubText className="spacing" fontWeight="bold" color="#1C1438">
-          Litmus is a control-plane to orchestrate chaos on Kubernetes to help developers and SREs find weaknesses in
-          their application deployments.
-        </SubText>
-        <br />
         <Paragraph className="spacing">
-          Litmus is one of the most promising open source chaos engineering frameworks that takes into account proper
-          chaos engineering principles while providing autonomy and extensibility to the users.
+          Litmus is an end-to-end chaos engineering platform for cloud native infrastructure and applications. Cloud
+          native SREs, QA teams and developers use Litmus to design, orchestrate and analyse chaos in their
+          environments.
         </Paragraph>
+        <Row>
+          <ButtonFilled action={() => window.location.replace('/tutorials')}>Start Learning</ButtonFilled>
+          <span style={{ width: '1rem' }} />
+          <ButtonOutlined action={() => window.location.replace('/docs/next/getting-started/installation')}>
+            Get Started
+          </ButtonOutlined>
+        </Row>
       </div>
       <img className="headerImage" src={useBaseUrl('/img/header.png')} alt="Header Image" />
     </ResponsiveRow>

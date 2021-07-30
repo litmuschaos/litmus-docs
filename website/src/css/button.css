@@ -1,0 +1,21 @@
+.filled {
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  color: #f9fafc;
+  background: linear-gradient(133.06deg, #7c6ac8 1.78%, #5b44ba 64.41%);
+  -webkit-box-shadow: 0px 10px 29px "rgba(91, 68, 186, 0.25)";
+          box-shadow: 0px 10px 29px "rgba(91, 68, 186, 0.25)";
+}
+
+.outlined {
+  padding: 1rem 1rem;
+  border: 1px solid #5b44ba;
+  border-radius: 0.2rem;
+  background: transparent;
+  cursor: pointer;
+  color: #5b44ba;
+  padding: 1rem 2rem;
+}
+/*# sourceMappingURL=button.css.map */

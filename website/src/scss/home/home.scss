@@ -16,21 +16,21 @@
 }
 
 // Header
-
-.left {
+.headingLeft {
   width: 45%;
+}
+
+.headerImage {
+  width: 50%;
+  height: 100%;
 }
 
 .purple {
   color: map-get($colors, textSecondary);
 }
 
-.headerImage {
-  width: 55%;
-}
-
 @media (min-width: 2000px) {
-  .left {
+  .headingLeft {
     width: 30%;
   }
 
@@ -40,11 +40,12 @@
 }
 
 @media (max-width: 890px) {
-  .left {
+  .headingLeft {
     width: 100%;
   }
 
   .headerImage {
+    margin-top: 2rem;
     width: 100%;
   }
 }
