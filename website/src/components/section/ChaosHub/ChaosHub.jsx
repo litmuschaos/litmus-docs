@@ -1,13 +1,20 @@
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import React from 'react'
-import '../../../css/home.css'
+import '../../../css/chaoshub.css'
+import { ResponsiveRow } from '../../layout'
+import { Heading, SubText } from '../../texts'
 
 const ChaosHub = () => {
   return (
     <div>
-      <p className="chaosHubHeader">Litmus ChaosHub hosts chaos experiments for Kubernetes</p>
-      <div className="chaosHubDiv">
-        <div className="chaosHubInfo">
+      <div className="header">
+        <img className="chaoshubIcon" src={useBaseUrl('/img/chaos-hub.svg')} alt="ChaosHub Icon" />
+        <Heading fontWeight={600}>Chaoshubs</Heading>
+      </div>
+      <SubText color={'#6f6f6f'}>Litmus ChaosHub hosts chaos experiments for Kubernetes</SubText>
+      <br />
+      <ResponsiveRow>
+        <div>
           <h3>Chaos Experiments for Kubernetes</h3>
           <p className="chaosHubDescription">
             Use Litmus ChaosHub to use and tune the predefined experiemnts ready to be used for workflow creations.
@@ -19,10 +26,8 @@ const ChaosHub = () => {
             </div>
           </a>
         </div>
-        <div>
-          <img src={useBaseUrl('/img/chaos-hub.png')} alt="Chaos hub" />
-        </div>
-      </div>
+        <img className="chaosbird" src={useBaseUrl('/img/chaos-hub.png')} alt="Chaos hub" />
+      </ResponsiveRow>
     </div>
   )
 }

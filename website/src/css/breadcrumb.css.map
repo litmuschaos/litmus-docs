@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,KAAK,CAAC;EACJ,KAAK,ECsCO,OAAO;CDrCpB;;AAED,AAAA,MAAM,CAAC;EACL,KAAK,ECkCO,OAAO;EDjCnB,MAAM,EAAE,QAAQ;CACjB",
+    "sources": [
+        "../scss/components/breadcrumb.scss",
+        "../scss/_theme.scss"
+    ],
+    "names": [],
+    "file": "breadcrumb.css"
+}

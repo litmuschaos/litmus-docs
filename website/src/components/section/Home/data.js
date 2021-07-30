@@ -9,13 +9,13 @@ export const exploreLitmusData = [
     icon: 'img/tutorials.svg',
     heading: 'Tutorials',
     description: 'Get hands on learning to use Litmus with Katkoda and Codelabs',
-    url: '/docs/next/tutorials'
+    url: '/tutorials'
   },
   {
     icon: 'img/chaos-hub.svg',
     heading: 'Chaos Hub',
     description: 'GA shop for thousands of pre defined workflows and experiements to be used.',
-    url: '/docs/next/chaos-hub'
+    url: '/chaoshub'
   },
   {
     icon: 'img/advantages.svg',
