@@ -1,3 +1,4 @@
+import Link from '@docusaurus/Link'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import React from 'react'
 import '../../../css/home.css'
@@ -18,11 +19,13 @@ const Header = () => {
           environments.
         </Paragraph>
         <Row>
-          <ButtonFilled action={() => window.location.replace('/tutorials')}>Start Learning</ButtonFilled>
+          <Link to="/tutorials">
+            <ButtonFilled>Start Learning</ButtonFilled>
+          </Link>
           <span style={{ width: '1rem' }} />
-          <ButtonOutlined action={() => window.location.replace('/docs/next/getting-started/installation')}>
-            Get Started
-          </ButtonOutlined>
+          <Link to="/docs/next/getting-started/installation">
+            <ButtonOutlined>Get Started</ButtonOutlined>
+          </Link>
         </Row>
       </div>
       <img className="headerImage" src={useBaseUrl('/img/header.png')} alt="Header Image" />
