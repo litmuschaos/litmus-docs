@@ -1,0 +1,68 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 13rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.chaoshubIcon {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.chaosHubHeader {
+  font-size: 24px;
+  color: #777288;
+}
+
+.chaosHubDiv {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.chaosHubDescription {
+  max-width: 500px;
+  margin-top: 20px;
+  color: #777288;
+}
+
+.chaosHubExplore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+.chaosHubExploreText {
+  color: #5b44ba;
+}
+
+.chaosHubImage {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.chaosbird {
+  width: 20rem;
+}
+
+@media (max-width: 890px) {
+  .header {
+    width: 11rem;
+  }
+  .chaosbird {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=chaoshub.css.map */

@@ -1,0 +1,10 @@
+@import '../theme';
+
+.link {
+  color: map-get($colors, 'darkGray');
+}
+
+.arrow {
+  color: map-get($colors, 'darkGray');
+  margin: 0 0.5rem;
+}

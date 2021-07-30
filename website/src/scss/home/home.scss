@@ -4,216 +4,136 @@
 // Global
 
 .spacing {
-	margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 .grid {
-	@include grid();
+  @include grid();
 }
 
 .subHeading {
-	padding: 0.5rem 0;
+  padding: 0.5rem 0;
 }
 
 // Header
-
-.left {
-	width: 45%;
-}
-
-.purple {
-	color: map-get($colors, textSecondary);
+.headingLeft {
+  width: 45%;
 }
 
 .headerImage {
-	width: 55%;
+  width: 50%;
+  height: 100%;
+}
+
+.purple {
+  color: map-get($colors, textSecondary);
 }
 
 @media (min-width: 2000px) {
-	.left {
-		width: 30%;
-	}
+  .headingLeft {
+    width: 30%;
+  }
 
-	.headerImage {
-		width: 35%;
-	}
+  .headerImage {
+    width: 35%;
+  }
 }
 
 @media (max-width: 890px) {
-	.left {
-		width: 100%;		
-	}
+  .headingLeft {
+    width: 100%;
+  }
 
-	.headerImage {
-		width: 100%;
-	}
+  .headerImage {
+    margin-top: 2rem;
+    width: 100%;
+  }
 }
 
 // Homepage main content
 .homeMainContent {
-	margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 // Get Started Header
 
 .right {
-	width: 50%;
-	margin-top: 3rem;
+  width: 50%;
+  margin-top: 3rem;
 }
 
 .getStartedImage {
-	width: 40%;
+  width: 40%;
 }
 
 @media (min-width: 2000px) {
-	.right {
-		width: 35%;
-	}
+  .right {
+    width: 35%;
+  }
 
-	.getStartedImage {
-		width: 30%;
-	}
+  .getStartedImage {
+    width: 30%;
+  }
 }
 
 @media (max-width: map-get($screens, mmd)) {
-	.right {
-		width: 100%;
-	}
+  .right {
+    width: 100%;
+  }
 
-	.getStartedImage {
-		width: 100%;
-	}
+  .getStartedImage {
+    width: 100%;
+  }
 }
 
 // Explore Litmus
 
 .exploreLitmusDiv {
-	height: 100%;
-	margin: 1rem 0;
+  height: 100%;
+  margin: 1rem 0;
 }
 
 // footer
 .footerDiv {
-	display: flex;
-	justify-content: space-between;
-	padding: 2% 20%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 20%;
 }
 
 .cncfDiv {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
 .cncfText {
-	font-size: 14px;
-	text-align: center;
-	margin-top: 20px;
-	color: map-get($colors, textFooter);
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+  color: map-get($colors, textFooter);
 }
 
 .cncfLink {
-	color: map-get($colors, textSecondary);
+  color: map-get($colors, textSecondary);
 }
 
 .preFooterRight {
-	width: 50%;
-	display: flex;
-	justify-content: space-between;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .preFooterButton {
-	height: 3rem;
-	min-width: 10rem;
-	width: 18rem;
-	border: none;
-	background: linear-gradient(133.06deg, #7c6ac8 1.78%, #5b44ba 64.41%);
-	color: white;
-	border-radius: 0.25rem;
-	cursor: pointer;
-	:disabled {
-		background: lightgray;
-	}
-	display: flex;
-	justify-content: center;
-	padding: 10px;
-}
-
-// Tutorials
-.tutorialCardDiv {
-	width: 350px;
-	margin: 20px;
-	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
-	cursor: pointer;
-}
-
-.tutorialLink {
-	text-decoration: none;
-}
-
-.cardContent {
-	padding: 20px;
-}
-
-.cardHeading {
-	font-size: 16px;
-	font-weight: bold;
-	margin-top: 20px;
-	margin-bottom: 10px;
-}
-
-.cardDescription {
-	color: #777288;
-}
-
-.tutorialAvailable {
-	padding: 6px 12px;
-	border-radius: 26px;
-	background-color: rgba(143, 150, 224, 0.25);
-	width: 100px;
-	margin-top: 11px;
-}
-
-.comingSoon {
-	font-size: 12px;
-	color: #5b44ba;
-}
-
-.tutorialContainer {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-// ChaosHub Page
-.chaosHubHeader {
-	font-size: 24px;
-	color: #777288;
-}
-
-.chaosHubDiv {
-	margin-top: 60px;
-	display: flex;
-}
-
-.chaosHubInfo {
-	margin: auto;
-}
-
-.chaosHubDescription {
-	max-width: 600px;
-	margin-top: 20px;
-	color: #777288;
-}
-
-.chaosHubExplore {
-	display: flex;
-	margin-top: 20px;
-}
-
-.chaosHubExploreText {
-	color: #5b44ba;
-}
-
-.chaosHubImage {
-	margin-left: 5px;
-	margin-top: 5px;
+  height: 3rem;
+  min-width: 10rem;
+  width: 18rem;
+  border: none;
+  background: linear-gradient(133.06deg, #7c6ac8 1.78%, #5b44ba 64.41%);
+  color: white;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  :disabled {
+    background: lightgray;
+  }
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }

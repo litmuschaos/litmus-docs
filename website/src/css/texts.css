@@ -6,33 +6,33 @@
 
 .subheading {
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .paragraph {
   line-height: 170%;
   color: #6f6f6f;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .subText {
   line-height: 150%;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 @media (max-width: 890px) {
   .heading {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   .subheading {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   .paragraph {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
   .subText {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=texts.css.map */

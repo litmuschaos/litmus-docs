@@ -1,6 +1,6 @@
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import React from 'react'
-import '../../../css/home.css'
+import '../../../css/tutorials.css'
 
 const TutorialCard = ({ props }) => {
   return (

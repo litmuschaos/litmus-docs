@@ -135,6 +135,6 @@ And with that you have successfully scheduled your first Chaos Workflow with Lit
 
 ## Various Ways of Learning Litmus
 
-- [Learn by Concept](../concepts/overview.md)
-- [Learn by User Guides](../user-guides/overview.md)
+- [Learn Concept](../concepts/overview.md)
+- [View User Guides](../user-guides/overview.md)
 - [Learn by Running a sample Katakoda Scenario](https://www.katacoda.com/litmusbot/scenarios/getting-started-with-litmus)

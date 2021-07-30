@@ -1,0 +1,58 @@
+// Header
+.header {
+  display: flex;
+  width: 13rem;
+  height: fit-content;
+  justify-content: space-between;
+}
+
+.chaoshubIcon {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+// ChaosHub Page
+.chaosHubHeader {
+  font-size: 24px;
+  color: #777288;
+}
+
+.chaosHubDiv {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chaosHubDescription {
+  max-width: 500px;
+  margin-top: 20px;
+  color: #777288;
+}
+
+.chaosHubExplore {
+  display: flex;
+  margin-top: 20px;
+}
+
+.chaosHubExploreText {
+  color: #5b44ba;
+}
+
+.chaosHubImage {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.chaosbird {
+  width: 20rem;
+}
+
+@media (max-width: 890px) {
+  .header {
+    width: 11rem;
+  }
+
+  .chaosbird {
+    width: 100%;
+  }
+}

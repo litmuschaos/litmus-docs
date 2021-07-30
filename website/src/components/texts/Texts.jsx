@@ -1,8 +1,8 @@
 import React from 'react'
 import '../../css/texts.css'
 
-const Heading = ({ children, fontWeight }) => (
-  <p style={{ fontWeight: `${fontWeight ?? 'normal'}` }} className="heading">
+const Heading = ({ children, fontWeight, lineHeight }) => (
+  <p style={{ fontWeight: `${fontWeight ?? 'normal'}`, lineHeight: `${lineHeight ?? ''}` }} className="heading">
     {children}
   </p>
 )
@@ -22,7 +22,7 @@ const Paragraph = ({ children, textAlign }) => (
 const SubText = ({ children, textAlign, color, fontWeight }) => (
   <p
     style={{ textAlign: `${textAlign ?? 'left'}`, color: `${color}`, fontWeight: `${fontWeight ?? 'normal'}` }}
-    className="paragraph">
+    className="subText">
     {children}
   </p>
 )
