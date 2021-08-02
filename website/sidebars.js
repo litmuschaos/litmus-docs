@@ -51,7 +51,7 @@ module.exports = {
       'User Guides': [
         'user-guides/overview',
         {
-          'Advance Installation': [
+          'Advanced Installation': [
             {
               ChaosCenter: [
                 'user-guides/chaoscenter-cluster-scope-installation',
@@ -60,7 +60,7 @@ module.exports = {
                 'user-guides/setup-with-ingress'
               ]
             },
-            'user-guides/chaosagents-installation',
+            'user-guides/chaosagents-installation'
           ]
         },
         {

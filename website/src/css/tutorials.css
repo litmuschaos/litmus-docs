@@ -1,0 +1,74 @@
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 11rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tutorialIcon {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.tutorialCardDiv {
+  width: 350px;
+  margin: 20px 20px 20px 0;
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.tutorialLink {
+  text-decoration: none;
+}
+
+.cardContent {
+  padding: 20px;
+}
+
+.cardHeading {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.cardDescription {
+  color: #777288;
+}
+
+.tutorialAvailable {
+  padding: 0.5rem 0;
+  border-radius: 26px;
+  background-color: rgba(143, 150, 224, 0.25);
+  width: 100px;
+  margin-top: 11px;
+  display: table;
+}
+
+.comingSoon {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 12px;
+  color: #5b44ba;
+}
+
+.tutorialContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/*# sourceMappingURL=tutorials.css.map */
