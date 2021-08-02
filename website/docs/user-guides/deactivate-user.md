@@ -25,3 +25,6 @@ Once deactivated, the indicator next to the user's username in the usermanagemen
 Similarly, the admin can re-activate the user from the same drop-down menu as shown:
 
 <img src={require('../assets/user-guides/user-management/deactivate-user/step-3.png').default} width="1000" height="500" />
+
+### Learn more
+- [View users](view-user)

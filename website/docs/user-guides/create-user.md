@@ -28,3 +28,8 @@ The user is created and you will receive a confirmation modal.
 <img src={require('../assets/user-guides/user-management/create-user/step-3.png').default} width="1000" height="500" />
 
 You will now be able to view the new user in the table in the user management tab.
+
+### Learn more
+- [View users](view-user)
+- [Reset the password of a user](reset-password)
+- [Deactivate a user](deactivate-user)

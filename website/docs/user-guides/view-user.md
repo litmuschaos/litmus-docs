@@ -11,3 +11,10 @@ sidebar_label: View users
 The admin can access the user management tab to check the list of all users present in the portal.
 
 <img src={require('../assets/user-guides/user-management/view-user/step-1.png').default} width="1000" height="500" />
+
+
+### Learn more
+
+- [Create a user](create-user)
+- [Reset the password of a user](reset-password)
+- [Deactivate a user](deactivate-user)

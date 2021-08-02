@@ -19,3 +19,6 @@ Under the `User management` tab find the user who's password needs to be updated
 In the `Login Details` section select the `New password` input field and type in the new password. Once done hit the `Save` button to update the password.
 
 <img src={require('../assets/user-guides/user-management/reset-password/step-2.png').default} width="1000" height="500" />
+
+### Learn more
+- [View users](view-user)

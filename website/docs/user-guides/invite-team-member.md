@@ -27,3 +27,7 @@ From the list of all available members, choose the ones you want to collaborate 
 On successful invitation you will receive the confirmation dialog as shown below indicating selected members have been invited to your project.
 
 <img src={require('../assets/user-guides/teaming/invite-team-member/step-3.png').default} width="1000" height="500" />
+
+### Learn more
+- [Edit an invitation](edit-invite)
+- [Accept invite](accept-invite)
