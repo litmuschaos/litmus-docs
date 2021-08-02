@@ -37,3 +37,10 @@ Teaming is based on the following principles and each user can have one of the 3
 - Can leave the project you are a part of, except your own.
 
 >Note: The settings page will not be visible to you if you are browsing someone else’s project. You can only view it if you are the project owner.
+
+### Learn more
+
+- [Invite a team member](../user-guides/invite-team-member)
+- [Edit/Cancel an invite](../user-guides/edit-invite)
+- [Accept an invite](../user-guides/accept-invite)
+- [Remove a team member](../user-guides/remove-team-member)

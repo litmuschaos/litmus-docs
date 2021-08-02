@@ -4,6 +4,7 @@ title: Invite a Team Member
 sidebar_label: Invite Team Member
 ---
 
+> In the `/settings` route (settings on the sidebar) the `Team` tab can be used to access the teaming feature by the `owner`. We recommend learning about the concept of [teaming](../concepts/teaming) before proceeding with the following user guides.
 
 With this feature, you can select as many users you want, choose their roles individually and send the invitation at once! Once it is done successfully you can see the status of the sent invitation (whether it is in a pending/accepted/declined or exited state) along with all the other necessary details in the `Invited` tab.
 

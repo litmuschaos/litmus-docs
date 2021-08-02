@@ -4,7 +4,7 @@ title: View all users
 sidebar_label: View users
 ---
 
-> The `/settings` route (settings on the sidebar) the `User Management` tab can be used to access the user management feature by the admin.
+> In the `/settings` route (settings on the sidebar) the `User Management` tab can be used to access the user management feature by the admin. We recommend learning about the concept of [user management](../concepts/user-management) before proceeding with the following user guides.
 
 ### View users
 

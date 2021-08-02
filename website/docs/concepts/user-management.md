@@ -21,3 +21,10 @@ ChaosCenter supports two portal level roles for defining the privilege levels of
 
 
 **Non-admin users:** Non-admin users get all the same privileges as an admin level user, with the exception of the user management feature which is an admin exclusive feature to facilitate an admin to manage their teams on the portal. (Example: In an organization, multiple different teams might be formed to inject chaos on different agents which have no layover between each other.)
+
+### Learn More
+
+- [View Users](../user-guides/view-user)
+- [Create a user](../user-guides/create-user)
+- [Reset password of a user](../user-guides/reset-password)
+- [Deactivate a user](../user-guides/deactivate-user)
