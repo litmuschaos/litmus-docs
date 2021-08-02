@@ -30,49 +30,49 @@ export const advancedLitmusData = [
     icon: 'img/AdvanceLitmus/advanced.svg',
     heading: 'Advanced User Guides',
     description: 'Learn about Litmus containing the user guide and architecture.',
-    url: '/404'
+    url: '/docs/next/user-guides/overview'
   },
   {
     icon: 'img/AdvanceLitmus/design.svg',
     heading: 'Design & Architecture',
     description: 'Know in depth details of the LitmusChaos architecture used for testing resiliency of system.',
-    url: '/docs/architecture'
+    url: '/docs/next/introduction/what-is-litmus'
   },
   {
     icon: 'img/AdvanceLitmus/observability.svg',
     heading: 'Observability',
     description: 'The next big thing in Chaos Engineering and know how we can utilise this with Litmus.',
-    url: '/docs/observe-workflow'
+    url: '/docs/next/concepts/workflow-statistics'
   },
   {
     icon: 'img/AdvanceLitmus/dev-resource.svg',
     heading: 'Developer Resources',
     description: 'Resources for Chaos Engineering, blogs and community updates.',
-    url: '/404'
+    url: '/docs/next/introduction/other-links'
   },
   {
     icon: 'img/AdvanceLitmus/integration.svg',
     heading: 'Integrations',
     description: 'Integrate your litmus project with other Kubenetes applications.',
-    url: '/404'
+    url: '/docs/next/integrations/prometheus'
   },
   {
     icon: 'img/AdvanceLitmus/air-gapped.svg',
     heading: 'Air Gapped',
     description: 'Know how Litmus can be used for air gapped environments and enterprises.',
-    url: '/404'
+    url: '/docs/next/user-guides/air-gapped'
   },
   {
     icon: 'img/AdvanceLitmus/git-ops.svg',
     heading: 'GitOps',
     description: 'Enabling GitOps is what makes Litmus stand out from rest. Know how.',
-    url: '/docs/gitops'
+    url: '/docs/next/concepts/gitops'
   },
   {
     icon: 'img/AdvanceLitmus/multi-tenancy.svg',
     heading: 'Multi Tenancy',
     description: 'Litmus security features are one of the best thing and can not be overlooked.',
-    url: '/404'
+    url: '/docs/next/concepts/user-management'
   }
 ]
 
