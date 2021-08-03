@@ -6,11 +6,11 @@ sidebar_label: Analyzing Workflow
 
 ---
 
-Workflow Analytics allows the users to analyze their workflows (Recurring/ Nonrecurring) & helps them to keep track of the workflow runs of scheduled workflows and their behaviour.
+Workflow Analytics allows you to analyze their workflows (Recurring/ Nonrecurring) & helps them to keep track of the workflow runs of scheduled workflows and their behaviour.
 
 ### Workflow Details
 
-On the workflow analytics page, in the first container, users will be able to see the details about the selected workflow such as the workflow name, workflow id, agent details(name, namespace, etc.), and the workflow run details like the last run as well as regularity.
+On the workflow analytics page, in the first container, you will be able to see the details about the selected workflow such as the workflow name, workflow id, agent details(name, namespace, etc.), and the workflow run details like the last run as well as regularity.
 
 <img src={require('../assets/user-guides/observability/workflow-analysis/workflow-details.png').default} />
 
@@ -42,7 +42,7 @@ On clicking on a heat map entry, a stacked bar graph representing the pass/fail 
 
 :::info
 
-Users can check Pass Count, Fail Count of Experiments & Resiliency Score by hovering over the bar for that workflow run.
+You can check Pass Count, Fail Count of Experiments & Resiliency Score by hovering over the bar for that workflow run.
 
 :::
 
