@@ -6,19 +6,19 @@ sidebar_label: Analyzing Workflow
 
 ---
 
-Workflow Analytics allows the users to analyze their workflows (Recurring/ non-Recurring) & helps them to keep track of the workflow runs of scheduled workflows and their behaviour.
+Workflow Analytics allows the users to analyze their workflows (Recurring/ Nonrecurring) & helps them to keep track of the workflow runs of scheduled workflows and their behaviour.
 
 ### Workflow Details
 
 On the workflow analytics page, in the first container, users will be able to see the details about the selected workflow such as the workflow name, workflow id, agent details(name, namespace, etc.), and the workflow run details like the last run as well as regularity.
 
-<img src={require('../assets/workflow-details.png').default} />
+<img src={require('../assets/user-guides/observability/workflow-analysis/workflow-details.png').default} />
 
 ### Workflow Statistics
 
 On clicking on **show statistics**, you will be able to see the experiment statistics, average resiliency score and pass/fail ratio for the workflows/experiments.
 
-<img src={require('../assets/workflow-single-run.png').default} />
+<img src={require('../assets/user-guides/observability/workflow-analysis/workflow-single-run.png').default} />
 
 :::note
 
@@ -26,19 +26,19 @@ If the selected workflow is recurring or is re-run multiple times, then the aver
 
 :::
 
-<img src={require('../assets/workflow-multi-run.png').default} />
+<img src={require('../assets/user-guides/observability/workflow-analysis/workflow-multi-run.png').default} />
 
 ### Workflow Heatmap
 
 If the selected workflow is recurring or is re-run multiple times, a heat map representing the days of the year showing all the workflow runs for the selected workflow can be observed. On hovering over a point in the heat map, the average resiliency score for that particular day will be shown in the form of a tool-tip.
 
-<img src={require('../assets/workflow-heatmap.png').default} />
+<img src={require('../assets/user-guides/observability/workflow-analysis/workflow-heatmap.png').default} />
 
 ### Workflow Activity
 
 On clicking on a heat map entry, a stacked bar graph representing the pass/fail ratio is shown, on which you can see the workflow runs on that day and hover over the bars to see the resiliency for that particular workflow run on that day.
 
-<img src={require('../assets/workflow-activity.png').default} />
+<img src={require('../assets/user-guides/observability/workflow-analysis/workflow-activity.png').default} />
 
 :::info
 
@@ -50,6 +50,10 @@ Users can check Pass Count, Fail Count of Experiments & Resiliency Score by hove
 
 On clicking on a bar, more details about the workflow run represented by that stacked bar are presented in a tabular format. A table having individual experiments details is presented to the user, which helps them to get insights about the experiments.
 
-<img src={require('../assets/experiments-table.png').default} />
+<img src={require('../assets/user-guides/observability/workflow-analysis/experiments-table.png').default} />
 
 ## Learn More
+
+- [Compare Workflows](comparative-analysis)
+- [Manage Application Dashboard](manage-app-dashboard)
+- [Configure Datasource](configure-datasource)
