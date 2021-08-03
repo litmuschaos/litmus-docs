@@ -81,6 +81,11 @@ module.exports = {
           ]
         },
         {
+          label: 'Tutorials',
+          to: '/tutorials',
+          position: 'right'
+        },
+        {
           href: 'https://github.com/litmuschaos/litmus',
           label: 'GitHub',
           position: 'right'
