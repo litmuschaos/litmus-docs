@@ -12,7 +12,7 @@ Litmus can be used to run chaos experiments initially in the staging environment
 
 ## Importance of Resilience
 
-<img src={require("../assets/importance-of-resilience.png").default} alt="Importance Of Resilience" />
+<img src={require("../assets/introduction/litmus/importance-of-resilience.png").default} alt="Importance Of Resilience" />
 
 Kubernetes is being run on a variety of infrastructure, ranging from virtual machines to bare metal and a combination of them. The platform’s physical nature is a source of faults to the application that runs inside containers, as shown in the tip of the above diagram. The next layer of dependency is Kubernetes itself.
 

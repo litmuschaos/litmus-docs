@@ -9,7 +9,7 @@ sidebar_label: Uninstall Litmus
 To disconnect the [ChaosAgent](../getting-started/resources#chaosagents) connected to the [ChaosCenter](../getting-started/resources#chaoscenter), follow these steps -
 
 1. Login to the ChaosCenter and navigate to the ChaosAgents Tab.
-2. Click on the `Disconnect icon` <img src={require("../assets/disconnect-icon.png").default} alt="Disconnect Icon" /> of the respective ChaosAgent you want to disconnect.
+2. Click on the `Disconnect icon` <img src={require("../assets/user-guides/uninstall-litmus/disconnect-icon.png").default} alt="Disconnect Icon" /> of the respective ChaosAgent you want to disconnect.
 3. On the Modal that appears, confirm your selection by clicking `Yes` and the selected ChaosAgent would be disconnected from the ChaosCenter.
    :::note
    The above disconnect would remove the subscriber component from ChaosAgent and thus removing the connectivity between the ChaosAgent and the ChaosCenter.
