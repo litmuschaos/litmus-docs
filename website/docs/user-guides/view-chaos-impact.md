@@ -28,7 +28,7 @@ After creating a dashboard, you view the corresponding metrics along with the ch
 - **More Options:** 
   - Configure: To make changes in the metadata and/or fine-tune the queries. To learn about configuring a dashboard [click here.](manage-app-dashboard)
     
-  - Clone: To make a copy of the current dashboard click on the clone button. Enter the new name of the dashboard and click on `ok`
+  - Clone: To make a copy of the current dashboard click on the clone button. Enter new name of the dashboard and click on `ok`
  
   - Download a JSON: To download the complete dashboard configuration in JSON format.
 
