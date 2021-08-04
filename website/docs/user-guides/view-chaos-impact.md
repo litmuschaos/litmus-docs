@@ -81,4 +81,4 @@ After creating a dashboard, you view the corresponding metrics along with the ch
 </figure>
 
 
-- **Switch between dashboards for the same agent:** You can switch between the dashboard for the selected agent. To view a different dashboard for the given agent, click the dropdown option placed next to the dashboard name which contains the list of all the configured dashboards for that agent and select a particular dashbord.
+- **Switch between dashboards for the same agent:** You can switch between the dashboards for the selected agent. To view a different dashboard for the given agent, click the dropdown option placed next to the dashboard name which contains the list of all the configured dashboards for that agent and select a particular dashbord.
