@@ -54,7 +54,7 @@ A new query will be created with some prefilled configurations.
   
     To select and configure multiple keys, you can switch between all the keys available and select the corresponding values for them. All of your selections for the keys and their values are reflected in the query generated based upon your selection.
 
-  - Query: This field can be auto-generated based upon your selections for the metric, key and values field or you can directly provide it with a Promqul query. The query editing option also comes along with intelligence for user assistance. 
+  - Query: This field can be auto-generated based upon your selections for the metric, key and values field or you can directly provide it with a query. The query editing option also comes along with intelligence for user assistance. 
 
   - Configurations :
     - (Optional) Legends: The legend field is used for grouping the metric data
