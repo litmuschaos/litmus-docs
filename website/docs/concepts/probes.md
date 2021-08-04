@@ -226,7 +226,7 @@ Events:
 
 ## Probe Chaining
 
-Probe chaining enables reuse of probe a result (represented by the template function `{{ .<probeName>.probeArtifact.Register}})` in subsequent "downstream" probes defined in the ChaosEngine. Note that the order of execution of probes in the experiment depends purely on the order in which they are defined in the ChaosEngine.
+Probe chaining enables reuse of probe a result represented by the template function `{{ .<probeName>.probeArtifact.Register}})` in subsequent "downstream" probes defined in the ChaosEngine. Note that the order of execution of probes in the experiment depends purely on the order in which they are defined in the ChaosEngine.
 
 Probe chaining is currently supported only for `cmdProbes`.
 
@@ -1091,6 +1091,14 @@ This section describes the different fields of the litmus probes and the possibl
 ## Resources
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bocVdb7mjO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Summary
+
+Probes are pluggable checks that can be defined within the ChaosEngine for any Chaos Experiment. There are four kinds of probes `httpProbe` (allows developers to specify a URL which the experiment uses to gauge health/service availability as part of the entry/exit criteria), `cmdProbe` (allows developers to run shell commands and match the resulting output as part of the entry/exit criteria), `k8sProbe` (addresses verification of the desired resource state by allowing users to define the Kubernetes GVR with appropriate filters) and `promProbe` (allows users to run Prometheus queries and match the resulting output against specific conditions).
+
+The different modes these probes can be used in are `SoT`, `EoT`, `Edge`, `Continuous` and `OnChaos`. The litmus chaos experiments run the probes defined in the ChaosEngine and update their stage-wise success in the ChaosResult custom resource with `probeSuccessPercentage`. A `probeSuccessPercentage` is the ratio of successful checks v/s total probes.
+
+Probes can be Chained, Probe chaining enables reuse of probe, the order of execution of probes in the experiment depends purely on the order in which they are defined in the ChaosEngine.
 
 ## Learn More
 
