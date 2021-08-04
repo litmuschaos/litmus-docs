@@ -45,14 +45,14 @@ A new query will be created with some prefilled configurations.
 <i>Editing a query</i>
 </figure>
 
-- **Copy query:** Click to copy the Promql query.
+- **Copy query:** Click to copy the query.
 - **Delete a query:** Click to delete the specific query.
 - **Hide query:**  Click to hide the query from the panel. This feature assists you in creating and tuning the graph without deleting the queries. 
-- **Queries:** you can edit the queries to get the appropriate visualisations of your application’s metrics. The number of queries present in the particular panel is also mentioned besides the `Queries` text. Please note that the metric, key and values fields provide you assistance in the generation of a Promql query. You may generate a Promql query with their assistance or if you already have a Promql query then you can directly add it in the query field.
-  - Metric: All the metrics which are valid as per the connected data source are listed in the dropdown. Select any metric as per your requirement. Also if you want to input a metric that is not listed in the dropdown then you may simply enter the metic name as the option of free-solo has been enabled. 
+- **Queries:** you can edit the queries to get the appropriate visualisations of your application’s metrics. The number of queries present in the particular panel is also mentioned besides the `Queries` text. Please note that the metric, key and values fields provide you assistance in the generation of a query. You may generate a query with their assistance or if you already have a query then you can directly add it in the query field.
+  - Metric: All the metrics which are valid as per the connected data source are listed in the dropdown. Select any metric as per your requirement. Also if you want to input a metric that is not listed in the dropdown then you may simply enter the metric name as the option of free-solo has been enabled. 
   - (Optional) Key & Values:  Based upon your selection of the metric, all the valid keys are listed in the dropdown. For a given key all the possible valid values are listed in the drop-down list in the Values field. You may select multiple values for the given key.
   
-    To select and configure multiple keys, you can switch between all the keys available and select the corresponding values for them. All of your selections for the keys and their values are reflected in the Promql query generated based upon your selection.
+    To select and configure multiple keys, you can switch between all the keys available and select the corresponding values for them. All of your selections for the keys and their values are reflected in the query generated based upon your selection.
 
   - Query: This field can be auto-generated based upon your selections for the metric, key and values field or you can directly provide it with a Promqul query. The query editing option also comes along with intelligence for user assistance. 
 
