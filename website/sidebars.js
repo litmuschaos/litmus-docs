@@ -28,6 +28,7 @@ module.exports = {
         'concepts/litmus',
         'concepts/experiment',
         'concepts/probes',
+        'concepts/chaos-engine',
         'concepts/chaos-results',
         'concepts/chaos-schedule',
         'concepts/chaoshub',
@@ -108,10 +109,20 @@ module.exports = {
           ]
         },
         {
-          'User Management': ['user-guides/view-user', 'user-guides/create-user', 'user-guides/reset-password', 'user-guides/deactivate-user']
+          'User Management': [
+            'user-guides/view-user',
+            'user-guides/create-user',
+            'user-guides/reset-password',
+            'user-guides/deactivate-user'
+          ]
         },
         {
-          'Teaming': ['user-guides/invite-team-member', 'user-guides/edit-invite', 'user-guides/accept-invite', 'user-guides/remove-team-member']
+          Teaming: [
+            'user-guides/invite-team-member',
+            'user-guides/edit-invite',
+            'user-guides/accept-invite',
+            'user-guides/remove-team-member'
+          ]
         },
         'user-guides/image-registry',
         'user-guides/uninstall-litmus'
