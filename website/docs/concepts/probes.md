@@ -286,7 +286,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a  (type: string)</td>
+  <td>n/a  <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -355,7 +355,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a {type: string}</td>
+  <td>n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -380,7 +380,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td> n/a {type: string}</td>
+  <td> n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -403,7 +403,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td> n/a {type: string}</td>
+  <td> n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -426,7 +426,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td> n/a {type: string}</td>
+  <td> n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -449,7 +449,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td> n/a {type: string}</td>
+  <td> n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -472,7 +472,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td> n/a {type: string}</td>
+  <td> n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -495,7 +495,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td> n/a {type: string}</td>
+  <td> n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -543,7 +543,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a {type: string}</td>
+  <td>n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -591,7 +591,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td> n/a {type: string}</td>
+  <td> n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -637,7 +637,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td> n/a {type: integer}</td>
+  <td> n/a <code>type: integer</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -706,7 +706,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td> n/a {type: string}</td>
+  <td> n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -729,7 +729,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td> n/a {type: string}</td>
+  <td> n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -752,7 +752,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td> n/a {type: string}</td>
+  <td> n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -823,7 +823,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td> n/a {type: string}</td>
+  <td> n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -846,7 +846,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td> n/a {type: string}</td>
+  <td> n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -869,7 +869,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td> n/a {type: string}</td>
+  <td> n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -894,7 +894,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a {type: integer}</td>
+  <td>n/a <code>type: integer</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -917,7 +917,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a {type: integer}</td>
+  <td>n/a <code>type: integer</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -940,7 +940,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a {type: integer}</td>
+  <td>n/a <code>type: integer</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -963,7 +963,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a {type: integer}</td>
+  <td>n/a <code>type: integer</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -986,7 +986,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a {type: integer}</td>
+  <td>n/a <code>type: integer</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -1009,7 +1009,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>false {type: boolean}</td>
+  <td>false <code>type: boolean</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -1057,7 +1057,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td> it supports {>=, <=, ==, >, <, !=, oneOf, between} for int & float type. And {equal, notEqual, contains, matches, notMatches, oneOf} for string type.</td>
+  <td> it supports <code>{`>=, <=, ==, >, <, !=, oneOf, between`}</code> for int & float type. And <code>equal, notEqual, contains, matches, notMatches, oneOf</code> for string type.</td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -1080,7 +1080,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td> n/a {type: string}</td>
+  <td> n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
