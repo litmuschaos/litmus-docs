@@ -6,6 +6,12 @@ sidebar_label: Editing Panel Queries
 
 ___
 
+### Before you begin
+In order to edit the queries, you must first have a [data source](configure-datasource) connected and a configured [dashboard](manage-app-dashboard#create-dashboard).
+___
+
+### Dashboard Structure
+
 For visualization of the metrics, you need to tune the queries as per your use case. To learn about the dashboard schema [click here](https://raw.githubusercontent.com/litmuschaos/litmus/master/monitoring/portal-dashboards/schema.json). The hierarchical structure of the dashboard is defined as follows:
  
 ```
@@ -21,6 +27,8 @@ The dashboard is the root level element that contains multiple panel groups. A p
 <img src={require('../assets/user-guides/observability/setup/create-dashboard-tune-queries.png').default} />
 <i>Create dashboard, Tune the queries step</i>
 </figure>
+
+### Editing Queries
 
 - **Add a panel:** Every individual tab in the `Tune the queries` header section corresponds to a panel. For example in the image given below  `Chaos-Pod-CPU Usage` and `Chaos-Pod-Memory Usage` both are individual panels. To add another panel simply click on `+ Add Panel` and a new panel will appear with the name `Untitled Panel`.
 
@@ -77,3 +85,8 @@ It enables the user to customize the visual experience on the dashboard.
 - **Discard changes:** By clicking this button it reverts all the changes performed in the given panel.
 
 - **Save changes:** Click this button to save all the changes made in the dashboard.
+
+
+### Learn more
+
+- [Sharing Application Dashboards](share-app-dashboard)

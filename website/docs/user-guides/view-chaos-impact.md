@@ -13,7 +13,9 @@ After creating a dashboard, you view the corresponding metrics along with the ch
 <i>Viewing particular application dashboard</i>
 </figure>
 
-- **Info section:** All the dashboard meta-data (name, type, data source, agent ), selected applications and selected panels are displayed in this selection. To check on the data source connected with the dashboard click on the attached data source link. You may select/deselect the items listed in the selected applications and selected panels field to visualize the appropriate data. 
+### Dashboard Navigation
+
+- **Dashboard Info:** All the dashboard meta-data (name, type, data source, agent ), selected applications and selected panels are displayed in this selection. To check on the data source connected with the dashboard click on the attached data source link. You may select/deselect the items listed in the selected applications and selected panels field to visualize the appropriate data. 
 
 <figure>
 <img src={require('../assets/user-guides/observability/setup/view-chaos-impact-info.png').default} />
@@ -81,4 +83,12 @@ After creating a dashboard, you view the corresponding metrics along with the ch
 </figure>
 
 
+
 - **Switch between dashboards for the same agent:** You can switch between the dashboards for the selected agent. To view a different dashboard for the given agent, click the dropdown option placed next to the dashboard name which contains the list of all the configured dashboards for that agent and select a particular dashbord.
+
+
+### Learn more
+
+- [Manage Application Dashboard](manage-app-dashboard)
+- [Editing Panel Queries](editing-queries-app-dashboard)
+- [Sharing Application Dashboards](share-app-dashboard)

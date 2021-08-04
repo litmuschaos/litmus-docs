@@ -8,7 +8,7 @@ ___
 
 Observing chaos injections and deriving insights from the chaos events is the core part of Chaos Observability. Whenever a chaos workflow run is performed its impact may be observed across different services and applications. Application dashboards provide a systematic visualization of all such events along with the performance of the individual service/application. To learn more about the dashboard schema architecture [click here](https://raw.githubusercontent.com/litmuschaos/litmus/master/monitoring/portal-dashboards/schema.json)
 
-### Prerequisite 
+### Before you begin
 To configure an application dashboard, you must first add a data source. To learn more about data sources [click here](configure-datasource)
 
   - If no data source is available, a banner on the application dashboard tab requests you to add it before configuring a dashboard. 
@@ -20,7 +20,7 @@ To configure an application dashboard, you must first add a data source. To lear
 
   - If a data source becomes inactive after dashboard creation then you will be requested to either reconfigure the dashboard with another data source or update the existing data source.
 
-
+___
 
 ### Table for configured dashboards
 
@@ -87,3 +87,9 @@ The dashboards comprise panel groups each having a set of panel metrics. For exa
 
 - **Tune the queries:** 
 Tuning the queries is an optional step. If you want to continue with the default set of queries then click on Save Changes and the dashboard will be created. To learn more about tuning the queries [click here](editing-queries-app-dashboard).
+
+
+### Learn more
+
+- [Editing Panel Queries](editing-queries-app-dashboard)
+- [Sharing Application Dashboards](share-app-dashboard)
