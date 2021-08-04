@@ -19,7 +19,7 @@ The Chaos Execution Plane contains the components responsible for executing the 
 4. **GitOps Controller:** 
 5. **Chaos exporter:** Responsible for exporting the observed metrics of the target resource to be fetched as time series data by the Prometheus DB for its post-processing and analysis.
 
-Litmus Backend Execution Infrastructure components execute in the host Litmus cluster, and they are responsible for orchestrating the execution of chaos workflows in the various target resources.These components include:
+Litmus Backend Execution Infrastructure components execute in the host Litmus cluster, and they are responsible for orchestrating the execution of chaos workflows in the various target resources. These components include:
 1. **Chaos Workflow CR:** Refers to the Argo workflow CR which defines the Litmus chaos workflow that is used by the Argo workflow controller to inject chaos in the respective target resources.
 2. **ChaosExperiment CR:** Used for defining the low-level execution information for any Litmus chaos experiment as well as to store the various experiment tunables.
 3. **ChaosEngine CR:** Used to hold information about how the chaos experiments are executed. It connects an application instance with one or more chaos experiments, while allowing the users to specify run level details.
