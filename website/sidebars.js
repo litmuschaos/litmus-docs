@@ -46,6 +46,13 @@ module.exports = {
       ]
     },
 
+    // Architecture
+    {
+      'Architecture': [
+        'architecture/overview'
+      ]
+    },
+
     // User Guides
     {
       'User Guides': [
