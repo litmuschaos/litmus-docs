@@ -8,7 +8,11 @@ The ChaosCenter comes with a project management system which can be used for wor
 
 > A project signifies a separation between Agents, Schedules, Teams (collaborating on that specific project), and observability configurations.
 
-The project management feature is the second level of privilege layer delivered by the ChaosCenter. The specifics of which w.r.t different first layer privilege levels (Admin/non-admin users) are discussed below:
+The project management feature is the second level of privilege layer delivered by the ChaosCenter and a breakdown can be observed in the below diagram:
+
+<img src={require('../assets/concepts/projects/flow-chart.png').default} width="1000" height="500" />
+
+The specifics of project management with respect to different first layer privilege levels (Admin/non-admin users) are discussed below:
 
 The **Admin** user of the portal has a default project (named as `admin’s project`) created on the initial login, and by default has the `owner` privileges in this project.
 
