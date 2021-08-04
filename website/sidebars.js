@@ -49,7 +49,8 @@ module.exports = {
     // Architecture
     {
       'Architecture': [
-        'architecture/overview'
+        'architecture/overview',
+        'architecture/control-plane'
       ]
     },
 
