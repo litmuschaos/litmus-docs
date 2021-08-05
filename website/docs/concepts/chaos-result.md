@@ -5,11 +5,18 @@ sidebar_label: Chaos Result
 ---
 ------
 
+## Introduction
 ChaosResult resource holds the results of a ChaosExperiment with a namespace scope. It is created or updated at runtime by the experiment itself. It holds important information like the ChaosEngine reference, Experiment State, Verdict of the experiment (on completion), salient application/result attributes. It is also a source for metrics collection. It is updated/patched with the status of the experiment run. It is not removed as part of the default cleanup procedures to allow for extended reference.
+
+## Prerequisites
+To understand the concept of ChaosResult, make sure you have good knowledge of the [ChaosEngine](chaos-engine) CR and
+[Chaos Workflow](chaos-workflow) .
+
+## Chaos Result Spec
 
 This section describes the fields/details provided by the ChaosResult spec.
 
-## Component Details
+### Component Details
 
 <table>
 <tr>
@@ -57,7 +64,7 @@ This section describes the fields/details provided by the ChaosResult spec.
 </tr>
 </table>
 
-## Status Details
+### Status Details
 
 <table>
 <tr>
@@ -220,7 +227,7 @@ This section describes the fields/details provided by the ChaosResult spec.
 </tr>
 </table>
 
-## Probe Details
+### Probe Details
 
 <table>
 <tr>
@@ -330,3 +337,7 @@ This section describes the fields/details provided by the ChaosResult spec.
 </tr>
 </table>
 
+## Learn More
+
+- [Run a Chaos Workflow](../getting-started/run-your-first-workflow)
+- [Observe a chaos workflow](observe-workflow)

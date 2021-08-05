@@ -6,11 +6,19 @@ sidebar_label: Chaos Workflow
 
 ---
 
-## What is a Chaos Workflow?
+## Introduction
 
 **Chaos Workflow** is a set of different operations coupled together to achieve desired chaos imapact on a Kubernetes Cluster. <br/>
 It is useful in automating a series of pre-conditioning steps or action which is necessary to be performed before triggering the chaos injection.<br/>
 A Chaos Workflow can also be used to perform different operations parallelly to achieve a desired chaos injection scenario.
+
+## Prerequisites
+The following should be required before creating a Chaos Workflow:
+- [ChaosCenter](chaos-center)
+- Chaos Agent
+- Chaos Experiment CR
+- Chaos Engine CR
+- [Probes](probes)
 
 ## How do we define and execute a workflow?
 LitmusChaos leverages the popular workflow and GitOps tool **Argo** to achieve this goal. Argo enables the creation of different chaos scenarios together in from of workflows which are extremly simple and efficient to use.<br/>
@@ -391,3 +399,9 @@ While scheduling a workflow, in the `Schedule` step, there are few options as pa
 ## Resources
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OuB3dS05DHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Learn More
+
+- [Explore Probes](probes)
+- [Observe a Chaos Workflow](observe-workflow)
+- [Examine the ChaosResult](chaos-result)

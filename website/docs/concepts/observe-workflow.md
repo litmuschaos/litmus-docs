@@ -5,19 +5,24 @@ sidebar_label: Observe Workflow
 ---
 
 ---
-## How to Observe a Chaos Workflow?
+## Introduction
 Observability is an important aspect while doing chaos engineering. It allows the user to discover and inspect different changes that occur during a Chaos Workflow execution. <br/>
 With ChaosCenter, the real-time data and status of the workflows can be observed. Valuable information like pod logs, workflow status, chaos results can also be viewed.
 
-### Litmus Workflow
+## Prerequisites
+The following should be required before creating a Chaos Workflow:
+- [ChaosCenter](chaos-center)
+- [Workflows](chaos-workflow)
+
+## Litmus Workflow
 After scheduling a workflow, you are redirected to the Litmus Workflow page which is divided into 2 sections `Runs` and `Schedules`.
 
-#### Runs
+### Runs
 This section consists the list of individual workflow
 runs and its related data like `Workflow Name`, `Status`, `Reliability Score` etc. <br/>
 This table displays the real-time status of the workflows. 
 
-#### Schedules
+### Schedules
 This section consists the list of workflow schedules.
 These schedules can consist one time workflow runs or CronWorkflows. User can perfom serveral operations in this table, few of them are listed below:
 - Disable a CronWorkflow
@@ -26,7 +31,7 @@ These schedules can consist one time workflow runs or CronWorkflows. User can pe
 - Edit a schedule 
 - Re-run a workflow etc
 
-### Observing a Litmus Workflow
+## Observing a Litmus Workflow
 To observe a workflow, user can either click on the workflow name or click on the three dots and select `Show the workflow` option in the runs table.<br/>
 <img src={require('../assets/workflow-observe-select.png').default} width="800" />
 
@@ -47,5 +52,10 @@ To view the details of the step, you can click on the individual nodes. This wil
 On clicking the <b>View Logs & Results</b> button in the table, a pop-over is displayed with the logs of the selected step. <br/><br/>
 <img src={require('../assets/workflow-observe-table-logs.png').default} width="800" />
 
+## Learn More
+
+- [Explore Probes](probes)
+- [What is a Chaos Workflow](chaos-workflow)
+- [Examine the ChaosResult](chaos-result)
 
 
