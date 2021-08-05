@@ -4,9 +4,15 @@ title: Changing Project Name
 sidebar_label: Change Project Name
 ---
 
-## Steps
+## Introduction
 
-Owners have the ability to change the name of their project by following the steps below:
+Owners have the ability to change the name of their project if they wish to do so.
+
+## Before you begin
+
+The concept of `Projects` is discussed [here](../concepts/projects) and will help you build a foundational understanding of what projects mean in the ChaosCenter.
+
+## Steps
 
 ### 1. Go to `My Project`
 
@@ -26,7 +32,7 @@ Once in the editing mode, type out the name you want to replace the current name
 
 <img src={require('../assets/user-guides/managing-projects/change-project-name/step-3.png').default} width="1000" height="500" />
 
-### Learn More
+## Learn More
 
 - [Invite a member to your project](invite-team-member)
 - [Remove a member from your project](remove-team-member)

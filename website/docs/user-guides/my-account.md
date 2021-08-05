@@ -4,13 +4,16 @@ title: My Account
 sidebar_label: My Account
 ---
 
+## Introduction
+
 Under the `My Account` tab, you can change your personal details such as the email, full name, and password.
 
-> Note: The username can’t be changed as it is unique. 
+> Note: The username can’t be changed as it is unique.
 
 ## Edit Personal Details
 
 ### 1. Enter details
+
 Enter your name and your email address in the following text fields and click on the `Save Changes` button.
 
 <img src={require('../assets/user-guides/my-account/step-1.png').default} width="1000" height="500" />

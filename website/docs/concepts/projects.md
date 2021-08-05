@@ -4,9 +4,15 @@ title: Projects
 sidebar_label: Projects
 ---
 
+## Introduction
+
 The ChaosCenter comes with a project management system which can be used for working on chaos workflows with multiple different projects across different agents.
 
-> A project signifies a separation between Agents, Schedules, Teams (collaborating on that specific project), and observability configurations.
+## Prerequisites
+
+Before learning abpout the concept of `projects`, it is important to note that a `project` signifies a separation between [Agents](agent), [Schedules](chaos-schedule), [Observability](observe-workflow), and Teams (discussed in the next section) configurations, and prior knowledge of these will prove fruitful in understanding the concept of `projects` in-depth.
+
+## Projects
 
 The project management feature is the second level of privilege layer delivered by the ChaosCenter and a breakdown can be observed in the below diagram:
 
@@ -18,7 +24,11 @@ The **Admin** user of the portal has a default project (named as `admin’s proj
 
 The Admin can [create a user](../user-guides/create-user) (these users will be treated as **non-admin** users), and each of these users will have their own projects created on completion of their initial login. The `Owner` of a project can invite multiple users to their project, and a user can be a part of multiple projects, these features are covered under the [teaming](teaming) section.
 
-### Learn More
+## Summary
+
+Projects can be imagined as separations between multiple different configurations for your chaos and help you manage collaborations between multiple teams.
+
+## Learn More
 
 - [More about project management](../user-guides/change-project-name)
 - [More about Teaming](teaming)
