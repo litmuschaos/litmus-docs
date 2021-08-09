@@ -50,7 +50,8 @@ module.exports = {
     {
       'Architecture': [
         'architecture/overview',
-        'architecture/control-plane'
+        'architecture/control-plane',
+        'architecture/execution-plane'
       ]
     },
 
