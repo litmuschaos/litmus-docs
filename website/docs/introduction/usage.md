@@ -8,7 +8,7 @@ Chaos tests can be done anywhere in the DevOps cycle. The extent of chaos tests 
 
 <img src={require("../assets/introduction/uses-of-litmus/chaos-test-devops.png").default} alt="Chaos Testing in DevOps Cycle" />
 
-#### Common Use Cases
+## Common Use Cases
 
 Typical use cases of Litmus include – failure or chaos testing in CI pipelines, increased chaos testing in staging and production and production environments, Kubernetes upgrades certification, post-upgrade validation of services, and resilience benchmarking, etc.
 

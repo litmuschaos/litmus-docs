@@ -17,7 +17,7 @@ The <span style={{color: '#5B44BA'}}>**ChaosCenter**</span> is a single source o
 The ChaosCenter gives you access to a plethora of features, the major ones include
 
 - Workflow Creation
-  <span style={{color: '#909191'}}>
+  <span style={{color: '#696F8C'}}>
     <ul>
         <li>From Templates, Custom Workflows from Scratch (using ChaosHubs), From pre-created YAMLs</li>
         <li>Chaos Experiments Sequence Control (Parallel as well as Sequential steps creation)</li>
@@ -26,7 +26,7 @@ The ChaosCenter gives you access to a plethora of features, the major ones inclu
     </ul>
     </span>
 - Users & Teams
-  <span style={{color: '#909191'}}>
+  <span style={{color: '#696F8C'}}>
     <ul>
         <li>Creation of Users with Role Based Access Control</li>
         <li>Creating a Team of multiple Users</li>
@@ -34,7 +34,7 @@ The ChaosCenter gives you access to a plethora of features, the major ones inclu
     </ul>
     </span>
 - Monitoring & Observability
-  <span style={{color: '#909191'}}>
+  <span style={{color: '#696F8C'}}>
     <ul>
         <li>Connect a Data Source (from any Agent) and monitor workflows</li>
         <li>Visualize workflow run statistics and aggregated schedules</li>
@@ -45,7 +45,7 @@ The ChaosCenter gives you access to a plethora of features, the major ones inclu
     </ul>
     </span>
 - Workflow Management
-  <span style={{color: '#909191'}}>
+  <span style={{color: '#696F8C'}}>
     <ul>
         <li>Rolling out automated changes using GitOps</li>
         <li>Allowing image addition from custom image server (both public and private)</li>

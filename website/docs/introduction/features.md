@@ -15,7 +15,7 @@ A high-level feature overview of Litmus 2.0 are as follows
 - The Addition of [Chaos Workflow](../concepts/chaos-workflow) creation, Chaos experiments become building blocks of a Chaos Workflow, to allow users to create a larger chaos scenario using sequential or parallel experiment executions.
 - Addition of [ChaosCenter](../getting-started/resources#chaoscenter) where you can take advantage of all these features and a lot more
   - Workflow Creation
-    <span style={{color: '#909191'}}>
+    <span style={{color: '#696F8C'}}>
     <ul>
     <li>From Templates, Custom Workflows from Scratch (using ChaosHubs), From pre-created YAMLs</li>
     <li>Chaos Experiments Sequence Control (Parallel as well as Sequential steps creation)</li>
@@ -24,17 +24,17 @@ A high-level feature overview of Litmus 2.0 are as follows
     </ul>
     </span>
   - Users & Teams
-    <span style={{color: '#909191'}}>
+    <span style={{color: '#696F8C'}}>
     <ul>
-    <li>Creation of Users with Role Based Access Control</li>
-    <li>Creating a Team of multiple Users</li>
+    <li>Creation of [Users](../concepts/user-management) with Role Based Access Control</li>
+    <li>Creating a [Team](../concepts/teaming) of multiple Users</li>
     <li>Authenticating Users</li>
     </ul>
     </span>
   - Monitoring & Observability
-    <span style={{color: '#909191'}}>
+    <span style={{color: '#696F8C'}}>
     <ul>
-    <li>Connect a Data Source (from any Agent) and monitor workflows</li>
+    <li>[Connect a Data Source](../concepts/datasource) (from any Agent) and monitor workflows</li>
     <li>Visualize workflow run statistics and aggregated schedules</li>
     <li>Compare two or more Workflows</li>
     <li>Upload shared/downloadable dashboards available in the community</li>
@@ -43,9 +43,9 @@ A high-level feature overview of Litmus 2.0 are as follows
     </ul>
     </span>
   - Workflow Management
-    <span style={{color: '#909191'}}>
+    <span style={{color: '#696F8C'}}>
     <ul>
-    <li>Rolling out automated changes using GitOps</li>
+    <li>Rolling out automated changes using [GitOps](../concepts/gitops)</li>
     <li>Allowing image addition from custom image server (both public and private)</li>
     <li>Measure and Analyse the Resilience Score of each workflow</li>
     </ul>
@@ -54,6 +54,8 @@ A high-level feature overview of Litmus 2.0 are as follows
 Litmus itself is composed of microservices. And we made sure that by adding the above features for 2.0, seamlessly integrates the additional microservices in conjunction with the existing one. Litmus 2.0 is completely backwards compatible. No features are deprecated.
 
 The migration path is about constructing new artifacts such as Chaos Workflows that include the current chaos experiments in use by the users.
+
+## Feature Comparison between 1.x and 2.0
 
 Below is a high level comparison between Litmus 1.x and Litmus 2.0 providing a holistic view of the feature additions you get in Litmus 2.0.
 
@@ -71,15 +73,8 @@ Below is a high level comparison between Litmus 1.x and Litmus 2.0 providing a h
 ## Learn More
 
 - [Install Litmus](../getting-started/installation)
-- [ChaosHub](../concepts/chaoshub.md)
-- [ChaosCenter](../getting-started/resources#chaoscenter)
-- [Chaos Workflows](../concepts/chaos-workflow)
 - [Observe Workflows](../concepts/observe-workflow)
 - [Chaos Schedule](../concepts/chaos-schedule)
-- [User Management](../concepts/user-management)
-- [Create Teams](../concepts/teaming)
-- [GitOps](../concepts/gitops)
-- [Connecting a DataSource](../concepts/datasource)
 - [Monitoring](../concepts/app-infra-monitoring)
 - [View the different User Guides](../user-guides/overview)
 - [Run your first workflow in 5 minutes](../getting-started/run-your-first-workflow)
