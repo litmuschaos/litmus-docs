@@ -70,7 +70,7 @@ Below is a high level comparison between Litmus 1.x and Litmus 2.0 providing a h
 |                      | Scalability                           |
 |                      | Integrated and Interleaved monitoring |
 
-## Learn More
+## Learn more
 
 - [Run your first workflow in 5 minutes](../getting-started/run-your-first-workflow)
 - [Install Litmus](../getting-started/installation)

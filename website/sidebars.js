@@ -30,7 +30,6 @@ module.exports = {
         'concepts/probes',
         'concepts/chaos-engine',
         'concepts/chaos-results',
-        'concepts/chaos-schedule',
         'concepts/chaoshub',
         'concepts/chaos-center',
         'concepts/agent',
@@ -71,6 +70,7 @@ module.exports = {
           'Injecting Fault': [
             'user-guides/schedule-workflow',
             'user-guides/observe-workflow',
+            'user-guides/edit-schedule',
             'user-guides/event-triggered-chaos',
             'user-guides/save-as-template',
             'user-guides/download-workflow-manifest',
@@ -110,10 +110,7 @@ module.exports = {
           ]
         },
         {
-          'Managing Projects': [
-            'user-guides/change-project-name',
-            'user-guides/leave-project'
-          ]
+          'Managing Projects': ['user-guides/change-project-name', 'user-guides/leave-project']
         },
         {
           Teaming: [

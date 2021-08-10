@@ -28,7 +28,7 @@ The Admin can [create a user](../user-guides/create-user) (these users will be t
 
 Projects can be imagined as separations between multiple different configurations for your chaos and help you manage collaborations between multiple teams.
 
-## Learn More
+## Learn more
 
 - [More about project management](../user-guides/change-project-name)
 - [More about Teaming](teaming)
