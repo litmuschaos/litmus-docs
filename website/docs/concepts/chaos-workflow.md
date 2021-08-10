@@ -15,9 +15,9 @@ A Chaos Workflow can also be used to perform different operations parallelly to 
 ## Prerequisites
 The following should be required before creating a Chaos Workflow:
 - [ChaosCenter](chaos-center)
-- Chaos Agent
+- [ChaosAgent](agent)
 - Chaos Experiment CR
-- Chaos Engine CR
+- [Chaos Engine CR](chaos-engine)
 - [Probes](probes)
 
 ## How do we define and execute a workflow?
@@ -396,9 +396,16 @@ While scheduling a workflow, in the `Schedule` step, there are few options as pa
 - Every Week
 - Every Month
 
+## Summary
+Chaos Workflow is combination of different steps combined together to perfrom a specific chaos use-case on a Kubernetes system. These steps can include install experiment steps, Chaos Engine CR for target selection, revert-chaos steps etc. Chaos Workflows can be scheduled for a later time with the help of Cron Workflows.
+These workflows consist of a cron syntax that is used for scheduling a workflow. Once the workflow execution is completed, the resiliency of the targeted application is calculated. Several weights are assigned to different experiments in the workflow. These weights are used along with the ProbeSuccessPercentage to find out the resiliency score. 
+
 ## Resources
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OuB3dS05DHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nqkq7pFI9mM?start=2779" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ## Learn More
 

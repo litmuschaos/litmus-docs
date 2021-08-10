@@ -52,6 +52,9 @@ To view the details of the step, you can click on the individual nodes. This wil
 On clicking the <b>View Logs & Results</b> button in the table, a pop-over is displayed with the logs of the selected step. <br/><br/>
 <img src={require('../assets/workflow-observe-table-logs.png').default} width="800" />
 
+## Summary
+After scheduling a workflow, a user can view the details of the running workflow from the ChaosCenter. ChaosCenter provides a realtime graph that is used to visualise the workflow and get the details of individual step of the workflow. Important details like the logs and target applications can be viewed from ChaosCenter. These logs are also downloadable. User can view the details in 2 different ways i.e `Graph View` and `Table View`. Once the workflow exection is completed, the resiliency score is calcualted and the ChaosResult for the ChaosEngine pods are available now.
+
 ## Learn More
 
 - [Explore Probes](probes)

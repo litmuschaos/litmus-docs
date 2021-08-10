@@ -337,6 +337,10 @@ This section describes the fields/details provided by the ChaosResult spec.
 </tr>
 </table>
 
+## Summary
+Just like the ChaosExperiment CR and ChaosEngine CR, ChaosResult is a Custom Resource provided by Litmus.
+ChaosResult resource holds the results of a ChaosExperiment. It comprises of some important information related to the experiment execution like Experiment Details, Verdict, Phase, ProbeSuccessPercentage etc. It is updated/patched with every experiment run. It can also be used as a source for matrics collection. 
+
 ## Learn More
 
 - [Run a Chaos Workflow](../getting-started/run-your-first-workflow)
