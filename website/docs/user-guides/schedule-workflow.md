@@ -100,7 +100,7 @@ Some of the other features that are included with Litmus Portal 2.0 are :
 <i>Target Selection</i>
 </figure>
 
-## 5. Reliability score
+## 5. Assign weights to experiments
 
 In this step, you can assign weights to the experiments present in the workflow. These weights will be then used for the calculation of the resilience score after the workflow completion. By default, 10 points are assigned to each experiment. This can be altered as per your use-case.
 
@@ -108,6 +108,16 @@ In this step, you can assign weights to the experiments present in the workflow.
 <img src={require('../assets/user-guides/injecting-fault/schedule-workflow/adjust-weights.png').default} alt="Adjust Experiment Weights" />
 <i>Adjust Experiment Weights</i>
 </figure>
+
+#### **The Importance of Weights in experiments**
+
+Giving a weightage to your experiment is a way of signifying/attaching the importance/priority of that experiment in your workflow. The higher the weight, the more importance it holds.
+
+The weight priority is generally divided into three sections:
+
+- **0-3:** Low Priority
+- **4-6:** Medium Priority
+- **7-10:** High Priority
 
 ## 6. Schedule
 
