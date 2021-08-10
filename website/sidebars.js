@@ -33,7 +33,6 @@ module.exports = {
         'concepts/chaos-schedule',
         'concepts/chaoshub',
         'concepts/chaos-center',
-        'concepts/project',
         'concepts/agent',
         {
           Workflow: ['concepts/chaos-workflow', 'concepts/observe-workflow']
@@ -42,6 +41,7 @@ module.exports = {
           Observability: ['concepts/workflow-statistics', 'concepts/app-infra-monitoring', 'concepts/datasource']
         },
         'concepts/user-management',
+        'concepts/projects',
         'concepts/teaming',
         'concepts/gitops'
       ]
@@ -100,20 +100,19 @@ module.exports = {
           ]
         },
         'user-guides/byoc',
-        'user-guides/account-settings',
-        {
-          'Managing Projects': [
-            'user-guides/change-project-name',
-            'user-guides/get-added-to-projects',
-            'user-guides/leave-project'
-          ]
-        },
+        'user-guides/my-account',
         {
           'User Management': [
             'user-guides/view-user',
             'user-guides/create-user',
             'user-guides/reset-password',
             'user-guides/deactivate-user'
+          ]
+        },
+        {
+          'Managing Projects': [
+            'user-guides/change-project-name',
+            'user-guides/leave-project'
           ]
         },
         {
