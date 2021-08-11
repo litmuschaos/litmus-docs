@@ -42,7 +42,7 @@ kubectl delete clusterrolebindings litmus-admin litmus-admin-crb-for-litmusporta
 kubectl delete clusterrole litmus-admin litmus-admin-crb-for-litmusportal-server litmus-cluster-scope litmus-cluster-scope-crb-for-litmusportal-server litmus-server-crb subscriber-crb-for-litmusportal-server -n -<AGENT_NAMESPACE>
 ```
 
-## For Namespace Scope
+#### For Namespace Scope
 
 ```bash
 kubectl delete sa clusterrolebindings clusterrole --all -n <NAMESPACE>
