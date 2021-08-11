@@ -25,16 +25,29 @@ To disconnect the [ChaosAgent](../getting-started/resources#chaosagents) connect
    If the ChaosAgent is not reachable it would remove only the entry from the database of the ChaosCenter
    :::
 
+### Removing the respective components individually
+
 To remove the respective components of the ChaosAgents you need to manually delete the created resources of that ChaosAgent.
 
 ```bash
 kubectl delete chaosexperiments <CHAOSEXPERIMENTS_NAMEs> --all -<AGENT_NAMESPACE>
 kubectl delete chaosresults <CHAOSRESULTS_NAMEs> --all -<AGENT_NAMESPACE>
 kubectl delete workflows <WORKFLOW_NAMEs> --all -<AGENT_NAMESPACE>
+kubectl delete cronworkflows <CRONWORKFLOW_NAMEs> --all -<AGENT_NAMESPACE>
 kubectl delete deployment chaos-operator-ce chaos-exporter --all -<AGENT_NAMESPACE>
 ```
 
----
+### Removing all components
+
+To remove all the ChaosAgents component ever created from the system, apply this command.
+
+```bash
+kubectl delete chaosengine,chaosexperiments,chaosresults --all -A
+kubectl delete workflows cronworflows --all -<AGENT_NAMESPACE>
+kubectl delete deployment chaos-operator-ce chaos-exporter --all -A
+```
+
+### Removing Service Account, Role Bindings and Roles
 
 #### For Cluster Scope
 
@@ -51,13 +64,6 @@ kubectl delete sa rolebindings role --all -n <NAMESPACE>
 ```
 
 ---
-
-To remove all the ChaosAgents component ever created from the system, apply this command.
-
-```bash
-kubectl delete chaosengine,chaosexperiments,chaosresults,workflows --all -A
-kubectl delete deployment chaos-operator-ce chaos-exporter --all -A
-```
 
 ## ChaosCenter
 
