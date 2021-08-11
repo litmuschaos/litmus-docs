@@ -8,9 +8,15 @@ sidebar_label: Uninstall Litmus
 
 To disconnect the [ChaosAgent](../getting-started/resources#chaosagents) connected to the [ChaosCenter](../getting-started/resources#chaoscenter), follow these steps -
 
-1. Login to the ChaosCenter and navigate to the ChaosAgents Tab.
-2. Click on the `Disconnect icon` <img src={require("../assets/user-guides/uninstall-litmus/disconnect-icon.png").default} alt="Disconnect Icon" /> of the respective ChaosAgent you want to disconnect.
-3. On the Modal that appears, confirm your selection by clicking `Yes` and the selected ChaosAgent would be disconnected from the ChaosCenter.
+1. Remove the ChaosEngines of the respective ChaosAgent
+
+   ```bash
+   kubectl delete chaosengine <CHAOSENGINE_NAMEs> --all -<AGENT_NAMESPACE>
+   ```
+
+2. Login to the ChaosCenter and navigate to the ChaosAgents Tab.
+3. Click on the `Disconnect icon` <img src={require("../assets/user-guides/uninstall-litmus/disconnect-icon.png").default} alt="Disconnect Icon" /> of the respective ChaosAgent you want to disconnect.
+4. On the Modal that appears, confirm your selection by clicking `Yes` and the selected ChaosAgent would be disconnected from the ChaosCenter.
    :::note
    The above disconnect would remove the subscriber component from ChaosAgent and thus removing the connectivity between the ChaosAgent and the ChaosCenter.
 
@@ -20,12 +26,29 @@ To disconnect the [ChaosAgent](../getting-started/resources#chaosagents) connect
 To remove the respective components of the ChaosAgents you need to manually delete the created resources of that ChaosAgent.
 
 ```bash
-kubectl delete chaosengine <CHAOSENGINE_IDs> --all -<AGENT_NAMESPACE>
-kubectl delete chaosexperiments <CHAOSEXPERIMENTS_IDs> --all -<AGENT_NAMESPACE>
-kubectl delete chaosresults <CHAOSRESULTS_IDs> --all -<AGENT_NAMESPACE>
-kubectl delete workflows <WORKFLOW_IDs> --all -<AGENT_NAMESPACE>
+kubectl delete chaosexperiments <CHAOSEXPERIMENTS_NAMEs> --all -<AGENT_NAMESPACE>
+kubectl delete chaosresults <CHAOSRESULTS_NAMEs> --all -<AGENT_NAMESPACE>
+kubectl delete workflows <WORKFLOW_NAMEs> --all -<AGENT_NAMESPACE>
 kubectl delete deployment chaos-operator-ce chaos-exporter --all -<AGENT_NAMESPACE>
 ```
+
+---
+
+#### For Cluster Scope
+
+```bash
+kubectl delete sa litmus litmus-admin litmus-cluster-scope litmus-server-account -n -<AGENT_NAMESPACE>
+kubectl delete clusterrolebindings litmus-admin litmus-admin-crb-for-litmusportal-server litmus-cluster-scope litmus-cluster-scope-crb-for-litmusportal-server litmus-server-crb subscriber-crb-for-litmusportal-server -n -<AGENT_NAMESPACE>
+kubectl delete clusterrole litmus-admin litmus-admin-crb-for-litmusportal-server litmus-cluster-scope litmus-cluster-scope-crb-for-litmusportal-server litmus-server-crb subscriber-crb-for-litmusportal-server -n -<AGENT_NAMESPACE>
+```
+
+## For Namespace Scope
+
+```bash
+kubectl delete sa clusterrolebindings clusterrole --all -n <NAMESPACE>
+```
+
+---
 
 To remove all the ChaosAgents component ever created from the system, apply this command.
 
