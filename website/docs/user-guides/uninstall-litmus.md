@@ -14,6 +14,8 @@ To disconnect the [ChaosAgent](../getting-started/resources#chaosagents) connect
    kubectl delete chaosengine <CHAOSENGINE_NAMEs> --all -<AGENT_NAMESPACE>
    ```
 
+   > If ChaosEngines is unable to delete successfully then the Kubernetes finalizers need to be removed manually.
+
 2. Login to the ChaosCenter and navigate to the ChaosAgents Tab.
 3. Click on the `Disconnect icon` <img src={require("../assets/user-guides/uninstall-litmus/disconnect-icon.png").default} alt="Disconnect Icon" /> of the respective ChaosAgent you want to disconnect.
 4. On the Modal that appears, confirm your selection by clicking `Yes` and the selected ChaosAgent would be disconnected from the ChaosCenter.
@@ -45,7 +47,7 @@ kubectl delete clusterrole litmus-admin litmus-admin-crb-for-litmusportal-server
 #### For Namespace Scope
 
 ```bash
-kubectl delete sa clusterrolebindings clusterrole --all -n <NAMESPACE>
+kubectl delete sa rolebindings role --all -n <NAMESPACE>
 ```
 
 ---
