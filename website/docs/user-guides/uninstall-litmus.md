@@ -20,15 +20,18 @@ To disconnect the [ChaosAgent](../getting-started/resources#chaosagents) connect
 To remove the respective components of the ChaosAgents you need to manually delete the created resources of that ChaosAgent.
 
 ```bash
-kubectl delete chaosengine <CHAOSENGINE_IDs> --all -A
-kubectl delete chaosexperiments <CHAOSEXPERIMENTS_IDs> --all -A
-kubectl delete chaosresults <CHAOSRESULTS_IDs> --all -A
+kubectl delete chaosengine <CHAOSENGINE_IDs> --all -<AGENT_NAMESPACE>
+kubectl delete chaosexperiments <CHAOSEXPERIMENTS_IDs> --all -<AGENT_NAMESPACE>
+kubectl delete chaosresults <CHAOSRESULTS_IDs> --all -<AGENT_NAMESPACE>
+kubectl delete workflows <WORKFLOW_IDs> --all -<AGENT_NAMESPACE>
+kubectl delete deployment chaos-operator-ce chaos-exporter --all -<AGENT_NAMESPACE>
 ```
 
 To remove all the ChaosAgents component ever created from the system, apply this command.
 
 ```bash
-kubectl delete chaosengine,chaosexperiments,chaosresults --all -A
+kubectl delete chaosengine,chaosexperiments,chaosresults,workflows --all -A
+kubectl delete deployment chaos-operator-ce chaos-exporter --all -A
 ```
 
 ## ChaosCenter
