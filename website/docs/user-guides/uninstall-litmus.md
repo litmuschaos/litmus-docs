@@ -40,8 +40,8 @@ kubectl delete deployment chaos-operator-ce chaos-exporter --all -<AGENT_NAMESPA
 
 ```bash
 kubectl delete sa litmus litmus-admin litmus-cluster-scope litmus-server-account -n -<AGENT_NAMESPACE>
-kubectl delete clusterrolebindings litmus-admin litmus-admin-crb-for-litmusportal-server litmus-cluster-scope litmus-cluster-scope-crb-for-litmusportal-server litmus-server-crb subscriber-crb-for-litmusportal-server -n -<AGENT_NAMESPACE>
-kubectl delete clusterrole litmus-admin litmus-admin-crb-for-litmusportal-server litmus-cluster-scope litmus-cluster-scope-crb-for-litmusportal-server litmus-server-crb subscriber-crb-for-litmusportal-server -n -<AGENT_NAMESPACE>
+kubectl delete clusterrolebindings litmus-admin litmus-admin-crb-for-litmusportal-server litmus-cluster-scope litmus-cluster-scope-crb-for-litmusportal-server litmus-server-crb subscriber-crb-for-litmusportal-server
+kubectl delete clusterrole litmus-admin litmus-admin-crb-for-litmusportal-server litmus-cluster-scope litmus-cluster-scope-crb-for-litmusportal-server litmus-server-crb subscriber-crb-for-litmusportal-server
 ```
 
 #### For Namespace Scope
