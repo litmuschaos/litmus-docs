@@ -10,16 +10,16 @@ sidebar_label: Execution Plane
 
 Execution Plane contains the components responsible for executing the chaos. It can be further segregated into Litmus Agent Infrastructure components and Litmus Backend Execution Infrastructure components. Litmus Agent Infrastructure components get installed in the cluster belonging to the target resource by the Litmus agent and help facilitate the chaos injection and its observability on the target resource. These components include:
 
-1. **Argo workflow controller:** Used for the creation of chaos workflows for Litmus using the Chaos Workflow CR.
+1. **Argo Workflow Controller:** Used for the creation of Chaos Workflows for Litmus using the Chaos Workflow CR.
 
 2. **Subscriber:** Serves as the link between the Execution Plane and the Control Plane. It has a few distinct responsibilities including creation of a Chaos Workflow CR from a Chaos Workflow template, watching for Chaos Workflow events during its execution, and sending the chaos workflow result to the Control Plane. 
 
 3. **Event Tracker:** An optional component that is capable of triggering automated chaos workflow runs based on a set of defined conditions. It is managed by the Backend GitOps Controller, and can only be used if GitOps is enabled.
 
-4. **Chaos exporter:** An optional component that is responsible for exporting the observed metrics of the target resource as time series data to the Prometheus DB for its post-processing and analysis.
+4. **Chaos Exporter:** An optional component that is responsible for exporting the observed metrics of the target resource as time series data to the Prometheus DB for its post-processing and analysis.
 
 
-Litmus Backend Execution Infrastructure components execute in the host Litmus cluster, and they are responsible for orchestrating the execution of chaos workflows in the various target resources. These components include:
+Litmus Backend Execution Infrastructure components execute in the host Litmus cluster, and they are responsible for orchestrating the execution of Chaos Workflows in the various target resources. These components include:
 
 1. **Chaos Workflow CR:** Refers to the Argo workflow CR which defines the Litmus chaos workflow that is used by the Argo workflow controller to inject chaos in the respective target resources.
 
