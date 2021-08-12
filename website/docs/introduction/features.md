@@ -26,15 +26,15 @@ A high-level feature overview of Litmus 2.0 are as follows
   - Users & Teams
     <span style={{color: '#696F8C'}}>
     <ul>
-    <li>Creation of [Users](../concepts/user-management) with Role Based Access Control</li>
-    <li>Creating a [Team](../concepts/teaming) of multiple Users</li>
+    <li>Creation of <a href="../concepts/user-management">Users</a> with Role Based Access Control</li>
+    <li>Creating a <a href="../concepts/teaming" >Team</a> of multiple Users</li>
     <li>Authenticating Users</li>
     </ul>
     </span>
   - Monitoring & Observability
     <span style={{color: '#696F8C'}}>
     <ul>
-    <li>[Connect a Data Source](../concepts/datasource) (from any Agent) and monitor workflows</li>
+    <li><a href="../concepts/datasource">Connect a Data Source</a> (from any Agent) and monitor workflows</li>
     <li>Visualize workflow run statistics and aggregated schedules</li>
     <li>Compare two or more Workflows</li>
     <li>Upload shared/downloadable dashboards available in the community</li>
@@ -45,7 +45,7 @@ A high-level feature overview of Litmus 2.0 are as follows
   - Workflow Management
     <span style={{color: '#696F8C'}}>
     <ul>
-    <li>Rolling out automated changes using [GitOps](../concepts/gitops)</li>
+    <li>Rolling out automated changes using <a href="../concepts/gitops" >GitOps</a></li>
     <li>Allowing image addition from custom image server (both public and private)</li>
     <li>Measure and Analyse the Resilience Score of each workflow</li>
     </ul>

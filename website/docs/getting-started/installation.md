@@ -156,7 +156,7 @@ For example:
 http://172.17.0.3:30385/
 ```
 
-> Where `172.17.0.3` is my NodeIP and `30385` is the frontend service PORT. If using a LoadBalancer, the only change would be to provide a `<LoadBalancerIP>:<PORT>`. [Learn more about how to access ChaosCenter with LoadBalancer](../user-guide/setup-without-ingress#with-loadbalancer.md)
+> Where `172.17.0.3` is my NodeIP and `30385` is the frontend service PORT. If using a LoadBalancer, the only change would be to provide a `<LoadBalancerIP>:<PORT>`. [Learn more about how to access ChaosCenter with LoadBalancer](../user-guides/setup-without-ingress#with-loadbalancer.md)
 
 You should be able to see the Login Page of Litmus ChaosCenter. The **default credentials** are
 
