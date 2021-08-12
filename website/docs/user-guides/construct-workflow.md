@@ -11,12 +11,63 @@ A basic chaos workflow consists of these steps:
 3. Revert Chaos
 
 ## Before we begin
-To construct a Chaos Workflow without ChaosCenter, make sure you are aware of [Chaos Workflow](../concepts/chaos-workflow) and the different steps present in it.  
+To construct a Chaos Workflow without ChaosCenter, make sure you are aware of [Chaos Workflow](../concepts/chaos-workflow), [ChaosEngine CR](../concepts/chaos-engine) and the different steps present in it.  
 
 ## Steps to Construct a Chaos Workflow
-LitmusChaos leverages the popular workflow and GitOps tool **Argo** to achieve this goal. Argo enables the creation of different chaos scenarios together in from of workflows which are extremly simple and efficient to use.<br/>
+LitmusChaos leverages the popular workflow and GitOps tool **Argo** to achieve this goal. Argo enables the orchestration of different chaos scenarios together in the form of workflow which is extremly simple and efficient to use.<br/>
 
-Here is a sample pod-delete chaos workflow.
+The structure of a chaos workflow is similar to that of a Kubernetes Object. It consists of the mandatory fields like `apiVersion`, `kind`, `metadata`, `spec`.
+
+Few additional terms in an Argo workflows are:
+1. **Template** : It consists of different steps with their specific operations.
+```yaml
+      templates:
+    - name: custom-chaos
+      steps:
+        - - name: install-chaos-experiments
+            template: install-chaos-experiments
+        - - name: pod-delete
+            template: pod-delete
+        - - name: revert-chaos
+            template: revert-chaos
+```
+
+2. **Steps** : It is a single step inside a workflow which runs a container based on the input parameters.
+These can also be sequenced parallely.
+```yaml
+    steps:
+        - - name: install-chaos-experiments
+            template: install-chaos-experiments
+        - - name: pod-delete
+            template: pod-delete
+          - name: pod-cpu-hog
+            template: pod-cpu-hog
+        - - name: revert-chaos
+            template: revert-chaos
+```
+
+3. **Entrypoint** : The first step that executes in a workflow is called its entrypoint.
+```yaml
+entrypoint: custom-chaos
+```
+Here, the template with the name `custom-chaos` will be executed first.
+
+4. **Artifacts** : Artifacts are defined as the files saved by the containers in each step.
+```yaml
+- name: install-chaos-experiments
+      inputs:
+        artifacts:
+          - name: pod-delete
+            path: /tmp/pod-delete.yaml
+            raw:
+              data: >
+                apiVersion: litmuschaos.io/v1alpha1
+
+                description:
+                  message: |...
+```
+
+Once the workflow is constructed, it should look like this:
 ```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
@@ -188,54 +239,6 @@ spec:
             {{workflow.parameters.adminModeNamespace}} "
 ```
 
-The structure of a chaos workflow is similar to that of a Kubernetes Object. It consists of the mandatory fields like `apiVersion`, `kind`, `metadata`, `spec`.
-
-Few additional terms in an Argo workflows are:
-1. **Template** : It consists of different steps with their specific operations.
-```yaml
-      templates:
-    - name: custom-chaos
-      steps:
-        - - name: install-chaos-experiments
-            template: install-chaos-experiments
-        - - name: pod-delete
-            template: pod-delete
-        - - name: revert-chaos
-            template: revert-chaos
-```
-
-2. **Steps** : It is a single step inside a workflow which runs a container based on the input parameters.
-These can also be sequenced parallely.
-```yaml
-    steps:
-        - - name: install-chaos-experiments
-            template: install-chaos-experiments
-        - - name: pod-delete
-            template: pod-delete
-        - - name: revert-chaos
-            template: revert-chaos
-```
-
-3. **Entrypoint** : The first step that executes in a workflow is called its entrypoint.
-```yaml
-entrypoint: custom-chaos
-```
-Here, the template with the name `custom-chaos` will be executed first.
-
-4. **Artifacts** : Artifacts are defined as the files saved by the containers in each step.
-```yaml
-- name: install-chaos-experiments
-      inputs:
-        artifacts:
-          - name: pod-delete
-            path: /tmp/pod-delete.yaml
-            raw:
-              data: >
-                apiVersion: litmuschaos.io/v1alpha1
-
-                description:
-                  message: |...
-```
 ## Install Experiment
 1. ### ChaosExperiment CR:
 The `install-experiment` step consists of ChaosExperiment CR in its artifact.
@@ -252,5 +255,5 @@ The ChaosEngine is the main user-facing chaos custom resource with a namespace s
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xLjTx8lqTuQ?start=1163" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Learn More
-- [What is a Chaos Workflow](../concepts/chaos-workflow)
-- [What is a Chaos Workflow](../concepts/chaos-engine)
+- [What is a Probe](../concepts/probes)
+- [What is a Chaos Result](../concepts/chaos-result)
