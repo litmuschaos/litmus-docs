@@ -4,6 +4,8 @@ title: Core principles of Litmus
 sidebar_label: Core principles
 ---
 
+<img src={require("../assets/introduction/core-principles/litmus-principles.png").default} alt="Core Principles" />
+
 Cloud Native Chaos Engineering, defined as engineering practices focused on (and built on) Kubernetes environments, applications, microservices, and infrastructure follows these core principles -
 
 ## Driven by Open Source
