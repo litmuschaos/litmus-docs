@@ -92,6 +92,10 @@ Resilience Score = Total Test Result / Weight Sum
 
 Once the workflow run execution completes, you can click the **Show the analytics** option in the `Runs` tab of `Litmus Workflows` which opens up a [Workflow Dashboard](../user-guides/analyze-workflow) which can also be accessed from the Analytics section and is explained more [here](../user-guides/analyze-workflow). This analytics can be crucial to analyse the Cron Workflows.
 
+## Resources
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OuB3dS05DHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Learn more
 
 - [Edit Schedule](edit-schdule)
