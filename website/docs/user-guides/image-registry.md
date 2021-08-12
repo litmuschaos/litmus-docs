@@ -5,7 +5,6 @@ sidebar_label: Using different Image Registries
 ---
 ---
 
-## Image Registry
 A container image registry can be defined as a collection of repositories that store container image.
 These can be either public or private. Few of the container image registries are Docker, Red Hat Quay, Google Container Registry. 
 By default LitmusChaos uses DockerHub for managing the different images. These images are then used in Chaos Workflows. Few images that are used in the Litmus workflows are `litmuschaos:k8s`, `litmuschaos:litmus-checker` etc.

@@ -6,7 +6,6 @@ sidebar_label: ChaosHub
 
 ---
 
-## Introduction
 ChaosHub allows you to orchestrate workflows from the Public **[ChaosHub](http://hub.litmuschaos.io/)** or an alternate source for the Experiments (basically, a **[fork](https://github.com/litmuschaos/chaos-charts)** of the public hub with custom experiments).
 
 ## Prerequisites
