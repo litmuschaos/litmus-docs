@@ -3,7 +3,6 @@ import Layout from '@theme/Layout'
 import React from 'react'
 import { SectionDark, SectionLight } from '../components/layout'
 import { ExploreLitmus, Header } from '../components/section/Home'
-import { GetStartedHeader } from '../components/section/Home/GetStartedHeader'
 import { MoreResources } from '../components/section/Home/MoreResources'
 
 export default function Home() {
@@ -15,8 +14,6 @@ export default function Home() {
         <div className="homeMainContent">
           <SectionLight>
             <Header />
-            <br />
-            <GetStartedHeader />
             <br />
             <ExploreLitmus type={'basic'} />
             <ExploreLitmus type={'advance'} />
