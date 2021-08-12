@@ -30,7 +30,6 @@ module.exports = {
         'concepts/probes',
         'concepts/chaos-engine',
         'concepts/chaos-results',
-        'concepts/chaos-schedule',
         'concepts/chaoshub',
         'concepts/chaos-center',
         'concepts/agent',
@@ -91,15 +90,15 @@ module.exports = {
             'user-guides/share-app-dashboard'
           ]
         },
-        {
-          'Litmus in CI/CD pipeline': [
-            'user-guides/github-actions',
-            'user-guides/gitlab-templates',
-            'user-guides/keptn',
-            'user-guides/spinnaker'
-          ]
-        },
-        'user-guides/byoc',
+        // To be added later
+        // {
+        //   'Litmus in CI/CD pipeline': [
+        //     'user-guides/github-actions',
+        //     'user-guides/gitlab-templates',
+        //     'user-guides/keptn',
+        //     'user-guides/spinnaker'
+        //   ]
+        // },
         'user-guides/my-account',
         {
           'User Management': [
@@ -110,10 +109,7 @@ module.exports = {
           ]
         },
         {
-          'Managing Projects': [
-            'user-guides/change-project-name',
-            'user-guides/leave-project'
-          ]
+          'Managing Projects': ['user-guides/change-project-name', 'user-guides/leave-project']
         },
         {
           Teaming: [
