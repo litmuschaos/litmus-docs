@@ -255,5 +255,5 @@ The ChaosEngine is the main user-facing chaos custom resource with a namespace s
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xLjTx8lqTuQ?start=1163" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Learn More
-- [What is a Probe](../concepts/probes)
-- [What is a Chaos Result](../concepts/chaos-result)
+- [What are the different Probes](../concepts/probes)
+- [What is ChaosResult](../concepts/chaos-results)
