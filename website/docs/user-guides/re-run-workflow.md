@@ -6,7 +6,7 @@ sidebar_label: Re-run Workflow
 
 ## Introduction
 
-You can re-run any schedule should you wish to test your application against it at any point.
+You can re-run any **_non-recurring_** schedule should you wish to test your application against it at any point.
 
 ## Before you begin
 

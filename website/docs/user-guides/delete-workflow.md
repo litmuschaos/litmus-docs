@@ -6,7 +6,11 @@ sidebar_label: Delete Workflow
 
 ## Introduction
 
-If required, it is possible to delete a workflow that you no longer wish to run against your application.
+If required, it is possible to delete a workflow schedule that you no longer wish to run against your application.
+
+:::note
+This also means that all the runs corresponding to that workflow will also be deleted.
+:::
 
 ## Before you begin
 
@@ -32,7 +36,7 @@ You will observe that the workflow no longer appears in the list of schedules an
 
 <img src={require('../assets/user-guides/injecting-fault/delete-workflow/step-3.png').default} width="1000" height="500" />
 
-**Note:** This also means all the runs corresponding to that workflow have also been deleted.
+As stated above, we observe that the runs have been removed as well.
 
 <img src={require('../assets/user-guides/injecting-fault/delete-workflow/step-4.png').default} width="1000" height="500" />
 
