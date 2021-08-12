@@ -81,6 +81,16 @@ module.exports = {
           ]
         },
         {
+          label: 'Tutorials',
+          to: '/tutorials',
+          position: 'right'
+        },
+        {
+          label: 'APIs',
+          to: 'http://litmuschaos.github.io/litmus/graphql/v2.0.0/api.html',
+          position: 'right'
+        },
+        {
           href: 'https://github.com/litmuschaos/litmus',
           label: 'GitHub',
           position: 'right'

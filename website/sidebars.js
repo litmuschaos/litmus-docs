@@ -28,11 +28,10 @@ module.exports = {
         'concepts/litmus',
         'concepts/experiment',
         'concepts/probes',
+        'concepts/chaos-engine',
         'concepts/chaos-results',
-        'concepts/chaos-schedule',
         'concepts/chaoshub',
         'concepts/chaos-center',
-        'concepts/project',
         'concepts/agent',
         {
           Workflow: ['concepts/chaos-workflow', 'concepts/observe-workflow']
@@ -40,8 +39,9 @@ module.exports = {
         {
           Observability: ['concepts/workflow-statistics', 'concepts/app-infra-monitoring', 'concepts/datasource']
         },
-        'concepts/teaming',
         'concepts/user-management',
+        'concepts/projects',
+        'concepts/teaming',
         'concepts/gitops'
       ]
     },
@@ -72,13 +72,15 @@ module.exports = {
             'user-guides/chaosagents-installation'
           ]
         },
-        {
-          'Running Litmus': ['user-guides/air-gapped']
-        },
+        // To be added later
+        // {
+        //   'Running Litmus': ['user-guides/air-gapped']
+        // },
         {
           'Injecting Fault': [
             'user-guides/schedule-workflow',
             'user-guides/observe-workflow',
+            'user-guides/edit-schedule',
             'user-guides/event-triggered-chaos',
             'user-guides/save-as-template',
             'user-guides/download-workflow-manifest',
@@ -99,28 +101,34 @@ module.exports = {
             'user-guides/share-app-dashboard'
           ]
         },
+        // To be added later
+        // {
+        //   'Litmus in CI/CD pipeline': [
+        //     'user-guides/github-actions',
+        //     'user-guides/gitlab-templates',
+        //     'user-guides/keptn',
+        //     'user-guides/spinnaker'
+        //   ]
+        // },
+        'user-guides/my-account',
         {
-          'Litmus in CI/CD pipeline': [
-            'user-guides/github-actions',
-            'user-guides/gitlab-templates',
-            'user-guides/keptn',
-            'user-guides/spinnaker'
+          'User Management': [
+            'user-guides/view-user',
+            'user-guides/create-user',
+            'user-guides/reset-password',
+            'user-guides/deactivate-user'
           ]
         },
-        'user-guides/byoc',
-        'user-guides/account-settings',
         {
-          'Managing Projects': [
-            'user-guides/change-project-name',
-            'user-guides/get-added-to-projects',
-            'user-guides/leave-project'
+          'Managing Projects': ['user-guides/change-project-name', 'user-guides/leave-project']
+        },
+        {
+          Teaming: [
+            'user-guides/invite-team-member',
+            'user-guides/edit-invite',
+            'user-guides/accept-invite',
+            'user-guides/remove-team-member'
           ]
-        },
-        {
-          Teaming: ['user-guides/invite-team-member', 'user-guides/remove-team-member']
-        },
-        {
-          'User Management': ['user-guides/create-user', 'user-guides/reset-password', 'user-guides/deactivate-user']
         },
         'user-guides/image-registry',
         'user-guides/uninstall-litmus'
@@ -146,9 +154,6 @@ module.exports = {
     'troubleshooting',
 
     // FAQ
-    'faq',
-
-    // Contribute
-    'contribute'
+    'faq'
   ]
 }
