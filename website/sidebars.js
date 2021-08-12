@@ -63,13 +63,15 @@ module.exports = {
             'user-guides/chaosagents-installation'
           ]
         },
-        {
-          'Running Litmus': ['user-guides/air-gapped']
-        },
+        // To be added later
+        // {
+        //   'Running Litmus': ['user-guides/air-gapped']
+        // },
         {
           'Injecting Fault': [
             'user-guides/schedule-workflow',
             'user-guides/observe-workflow',
+            'user-guides/edit-schedule',
             'user-guides/event-triggered-chaos',
             'user-guides/save-as-template',
             'user-guides/download-workflow-manifest',
@@ -143,9 +145,6 @@ module.exports = {
     'troubleshooting',
 
     // FAQ
-    'faq',
-
-    // Contribute
-    'contribute'
+    'faq'
   ]
 }

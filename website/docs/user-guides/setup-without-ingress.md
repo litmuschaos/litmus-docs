@@ -72,7 +72,7 @@ By default you are assigned with a default project with Owner permissions.
 
 <img src={require('../assets/landing-page.png').default} width="800" />
 
-## Learn More
+## Learn more
 
 - [Setup Endpoints and Access ChaosCenter with Ingress](setup-with-ingress)
 - [Install ChaosCenter in Namespace Scope](chaoscenter-namespace-scope-installation)
