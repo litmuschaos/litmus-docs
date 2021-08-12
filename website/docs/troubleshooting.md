@@ -46,7 +46,7 @@ You have to check the logs of the subscriber pod and expose the port mentioned f
 
 ### After logging in for the first time to the portal, `/getStarted` page  kept loading after I provided the new Password
 
-First try to clear the browser cache and refresh the page, this might solve your problem.
+First, try to clear the browser cache and cookies and refresh the page, this might solve your problem.
 If your problem is not solved then delete all the cluster role bindings,PV and pvc used by litmus and try to reinstall the litmus again.
 
 ### In the logs of Helper pod, I am getting this error `Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`.
@@ -54,4 +54,3 @@ If your problem is not solved then delete all the cluster role bindings,PV and p
 You need to Provide the correct socket path.By default in Portal `CONTAINER_RUNTIME` is set to `docker`, 
 If  Your container runtime is `containerd` then  you have to change the `CONTAINER_RUNTIME` to `containerd`  and `SOCKET_PATH` to `/run/containerd.d/sock`.
 You can find these in tune experiments part of the tune workflow page.
-
