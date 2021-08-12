@@ -64,7 +64,7 @@ The Comparison report can be downloaded in PDF form using the _**export button**
 
 > **Sample workflows comparison report can be downloaded from [here](../assets/chaos-center-analytics.pdf)**
 
-## Learn More
+## Learn more
 
 - [Configure Datasource](configure-datasource)
 - [See Workflow Analytics](analyze-workflow)

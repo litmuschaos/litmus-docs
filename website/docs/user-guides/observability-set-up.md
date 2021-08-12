@@ -49,7 +49,7 @@ You can view, configure & download the dashboards in the form of JSON for reusab
 
 You can check the workflow analytics and the workflow run graph by clicking on _**see workflow run**_ & _**see workflow analytics**_ icons for a workflow from the list of workflow dashboards present on the overview page.
 
-## Learn More
+## Learn more
 
 - [Analyze a Workflow](analyze-workflow)
 - [Configure Datasource](configure-datasource)

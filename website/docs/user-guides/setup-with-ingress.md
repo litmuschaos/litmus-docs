@@ -129,7 +129,7 @@ spec:
 kubectl apply -f <litmus_ingress_manifest> -n <PORTAL_NAMESPACE>
 ```
 
-## Learn More
+## Learn more
 
 - [Setup Endpoints and Access ChaosCenter without Ingress](setup-without-ingress)
 - [Install ChaosCenter in Namespace Scope](chaoscenter-namespace-scope-installation)
