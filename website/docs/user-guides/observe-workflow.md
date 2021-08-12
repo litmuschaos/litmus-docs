@@ -10,7 +10,7 @@ You must schedule a workflow. To know more about scheduling workflows click [her
 
 ---
 
-After scheduling a workflow, the user can track the status of the workflow run from the `Runs` tab in the `Litmus Workflow`. The status that is currently displayed are:
+After scheduling a workflow, you can track the status of the workflow run from the `Runs` tab in the `Litmus Workflow`. The status that is currently displayed are:
 
 - Failed
 - Running
@@ -23,11 +23,11 @@ After scheduling a workflow, the user can track the status of the workflow run f
 
 ---
 
-The user can analyze a workflow using two methods:
+you can analyze a workflow using two methods:
 
 ## Visualize the workflow run graph
 
-After scheduling a workflow, the user can click on the **Show the workflow** option or click on the wor to see the real-time graph of the workflow.
+After scheduling a workflow, you can click on the **Show the workflow** option or click on the workflow name to see the real-time graph of the workflow.
 
 <figure>
 <img src={require('../assets/user-guides/injecting-fault/observe-workflow/running-workflow.png').default} alt="Workflow Runs Graph of Podtato Head workflow" />
@@ -42,7 +42,7 @@ The graph consists of useful information such as :
 
 ## View logs of individual nodes
 
-The user can click on the nodes to get the logs of that particular step. If the revert-chaos step is disabled, the complete logs are available which include the runner pod logs and the chaos logs.
+you can click on the nodes to get the logs of that particular step. If the revert-chaos step is disabled, the complete logs are available which include the runner pod logs and the chaos logs.
 
 <figure>
 <img src={require('../assets/user-guides/injecting-fault/observe-workflow/running-workflow-with-logs.png').default} alt="Workflow Runs Podtato Head workflow with Logs" />
@@ -90,7 +90,7 @@ Resilience Score = Total Test Result / Weight Sum
 
 ## Analytics from the runs tab
 
-Once the workflow run execution completes, the user can click the **Show the analytics** option in the `Runs` tab of `Litmus Workflows` which opens up a [Workflow Dashboard](../user-guides/analyze-workflow) which can also be accessed from the Analytics section and is explained more [here](../user-guides/analyze-workflow). This analytics can be crucial to analyse the Cron Workflows.
+Once the workflow run execution completes, you can click the **Show the analytics** option in the `Runs` tab of `Litmus Workflows` which opens up a [Workflow Dashboard](../user-guides/analyze-workflow) which can also be accessed from the Analytics section and is explained more [here](../user-guides/analyze-workflow). This analytics can be crucial to analyse the Cron Workflows.
 
 ## Learn more
 

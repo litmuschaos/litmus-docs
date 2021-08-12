@@ -10,7 +10,7 @@ You must connect an Agent before scheduling a workflow. There might be a default
 
 ---
 
-Click on the **Schedule a workflow** button on the home page or **Schedule workflow** button in Homepage or Litmus Workflows page to get started.
+Click on the **Schedule a workflow** button on the home page or **Schedule workflow** button in Litmus Workflows page to get started.
 
 <figure>
 <img src={require('../assets/user-guides/injecting-fault/schedule-workflow/home-schedule-button.png').default} alt="Home Page" />
@@ -21,7 +21,7 @@ It will take you to the **Schedule a new Litmus workflow** page where you can ch
 
 ## 1. Choose target agent
 
-This is the first step in workflow creation. In this step, you can select a target agent where the chaos workflow will be scheduled. These agents consist the CRDs and the required resources to run a chaos workflow.
+This is the first step in workflow creation. In this step, you can select a target agent where the chaos workflow will be scheduled. These agents consist of the CRDs and the required resources to run a chaos workflow.
 While installing the Litmus Portal, a default agent named **Self Agent** is created.
 
 <figure>
