@@ -63,9 +63,10 @@ module.exports = {
             'user-guides/chaosagents-installation'
           ]
         },
-        {
-          'Running Litmus': ['user-guides/air-gapped']
-        },
+        // To be added later
+        // {
+        //   'Running Litmus': ['user-guides/air-gapped']
+        // },
         {
           'Injecting Fault': [
             'user-guides/schedule-workflow',
@@ -144,9 +145,6 @@ module.exports = {
     'troubleshooting',
 
     // FAQ
-    'faq',
-
-    // Contribute
-    'contribute'
+    'faq'
   ]
 }
