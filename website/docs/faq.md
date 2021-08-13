@@ -37,7 +37,7 @@ For the SSH key, click on the SSH and it will generate a public key. You have to
 
 ### Does Litmus 2.0 maintain backward compatibility with kubernetes?
 
-Yes Litmus maintains a separate CRD manifest to support backward compatibility.
+Yes, Litmus maintains a separate CRD manifest to support backward compatibility.
 
 ### Can I run LitmusChaos Outside of my Kubernetes clusters?
 
