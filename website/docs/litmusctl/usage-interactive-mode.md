@@ -4,6 +4,29 @@ title: Installing ChaosAgents with Cluster Scope
 sidebar_label: Cluster Scope
 ---
 
+# Usage: Litmusctl v0.3.0
+> Notes:
+> * For litmusctl v0.3.0 or latest
+> * Compatible with Litmus 2.0.0 or latest
+
+### litmusctl Syntax
+`litmusctl` has a syntax to use as follows:
+
+```shell
+litmusctl [command] [TYPE] [flags]
+```
+* Command: refers to what you do want to perform (create, get and config)
+* Type: refers to the feature type you are performing a command against (agent, project etc.)
+* Flags: It takes some additional information for resource operations. For example, `--installation-mode` allows you to specify an installation mode.
+
+Litmusctl is using the `.litmusconfig` config file to manage multiple accounts
+1. If the --config flag is set, then only the given file is loaded. The flag may only be set once and no merging takes place.
+2. Otherwise, the ${HOME}/.litmusconfig file is used, and no merging takes place.
+
+Litmusctl supports both interactive and non-interactive(flag based) modes.
+> Only `litmusctl create agent`  command needs --non-interactive flag, other commands don't need this flag to be in non-interactive mode. If mandatory flags aren't passed, then litmusctl takes input in an interactive mode.
+
+
 Multiple external [ChaosAgents](../getting-started/chaosagents.md) can be connected to the [ChaosCenter](../getting-started/chaoscenter.md) with the help of the command line utility [litmusctl](installation)
 
 The following steps will help you connect your ChaosAgents via litmusctl
