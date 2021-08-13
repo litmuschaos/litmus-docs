@@ -22,7 +22,7 @@ We keep hearing from SREs that they typically see a lot of resistance for introd
 
 Chaos Engineering is a practice. As seen above, with time, management buying and the SRE confidence will increase, and they move the chaos tests into production. This process will increase resilience metrics, as well.
 
-## Learn More
+## Learn more
 
 - [Understand the Core Principles of Litmus](core-principles)
 - [Be a part of the Community](community)

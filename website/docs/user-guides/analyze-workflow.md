@@ -52,7 +52,7 @@ On clicking on a bar, more details about the workflow run represented by that st
 
 <img src={require('../assets/user-guides/observability/workflow-analysis/experiments-table.png').default} />
 
-## Learn More
+## Learn more
 
 - [Compare Workflows](comparative-analysis)
 - [Manage Application Dashboard](manage-app-dashboard)

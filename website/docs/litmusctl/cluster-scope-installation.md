@@ -119,9 +119,9 @@ To verify, if the connection process was successful you can view the list of con
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uIVrNH2_nVI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Learn More
+## Learn more
 
-- [Learn More about Litmusctl](installation)
+- [Learn more about Litmusctl](installation)
 - [Install ChaosAgents in Namespace Scope](namespace-scope-installation)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)
