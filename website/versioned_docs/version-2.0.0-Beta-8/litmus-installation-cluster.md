@@ -92,7 +92,7 @@ kubectl create ns litmus
 Applying the manifest file will install all the required service account configuration and chaos control plane.
 
 ```bash
-kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Beta.yaml
+kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0/litmus-2.0.0.yaml
 ```
 
 ## **Verify your installation**
