@@ -9,7 +9,7 @@ original_id: chaoshub
 
 **Important links**
 
-Chaos Hub is maintained at https://hub.litmuschaos.io
+ChaosHub is maintained at https://hub.litmuschaos.io
 
 To contribute new chaos charts visit: https://github.com/litmuschaos/chaos-charts
 

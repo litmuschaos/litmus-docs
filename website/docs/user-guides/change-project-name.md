@@ -4,7 +4,7 @@ title: Changing Project Name
 sidebar_label: Change Project Name
 ---
 
-## Introduction
+---
 
 Owners have the ability to change the name of their project if they wish to do so.
 

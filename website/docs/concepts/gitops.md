@@ -4,11 +4,13 @@ title: Litmus with GitOps
 sidebar_label: GitOps
 ---
 
+---
+
 ## Prerequisites
+
 - [ChaosCenter](chaos-center)
 - [ChaosAgent](agent)
 - [ChaosWorkflow](chaos-workflow)
-
 
 GitOps feature in Litmus enables you to configure a single source of truth for your chaos workflows and experiments, any changes made either to the artifacts stored in the configured git repository or the portal will be synced. This allows you to create and execute workflows directly from git enabling a vast scope of automation in CI/CD pipelines.
 

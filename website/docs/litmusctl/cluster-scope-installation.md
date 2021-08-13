@@ -4,7 +4,9 @@ title: Installing ChaosAgents with Cluster Scope
 sidebar_label: Cluster Scope
 ---
 
-Multiple external [ChaosAgents](../getting-started/chaosagents.md) can be connected to the [ChaosCenter](../getting-started/chaoscenter.md) with the help of the command line utility [litmusctl](installation)
+---
+
+Multiple external [ChaosAgents](../concepts/chaos-agent.md) can be connected to the [ChaosCenter](../concepts/chaoscenter.md) with the help of the command line utility [litmusctl](installation)
 
 The following steps will help you connect your ChaosAgents via litmusctl
 
@@ -123,5 +125,5 @@ To verify, if the connection process was successful you can view the list of con
 
 - [Learn more about Litmusctl](installation)
 - [Install ChaosAgents in Namespace Scope](namespace-scope-installation)
-- [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
-- [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)
+- [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress)
+- [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress)
