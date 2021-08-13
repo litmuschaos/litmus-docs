@@ -1,18 +1,18 @@
 ---
-id: execution-plane
-title: Execution Plane
-sidebar_label: Execution Plane
+id: chaos-execution-plane
+title: Chaos Execution Plane
+sidebar_label: Chaos Execution Plane
 ---
 
 ---
 
-<img src={require("../assets/execution-plane.png").default} alt="Execution Plane" />
+<img src={require("../assets/execution-plane.png").default} alt="Chaos Execution Plane" />
 
-Execution Plane contains the components responsible for executing the chaos. It can be further segregated into Litmus Agent Infrastructure components and Litmus Backend Execution Infrastructure components. Litmus Agent Infrastructure components get installed in the cluster belonging to the target resource by the Litmus agent and help facilitate the chaos injection and its observability on the target resource. These components include:
+Chaos Execution Plane contains the components responsible for orchestrating the chaos injection in the target resources. It can be further segregated into Litmus Agent Infrastructure components and Litmus Backend Execution Infrastructure components. Litmus Agent Infrastructure components get installed in the cluster belonging to the target resource by the Litmus agent and help facilitate the chaos injection and its observability on the target resource. These components include:
 
 1. **Argo Workflow Controller:** Used for the creation of Chaos Workflows for Litmus using the Chaos Workflow CR.
 
-2. **Subscriber:** Serves as the link between the Execution Plane and the Control Plane. It has a few distinct responsibilities including creation of a Chaos Workflow CR from a Chaos Workflow template, watching for Chaos Workflow events during its execution, and sending the chaos workflow result to the Control Plane. 
+2. **Subscriber:** Serves as the link between the Chaos Execution Plane and the Control Plane. It has a few distinct responsibilities including creation of a Chaos Workflow CR from a Chaos Workflow template, watching for Chaos Workflow events during its execution, and sending the chaos workflow result to the Control Plane. 
 
 3. **Event Tracker:** An optional component that is capable of triggering automated chaos workflow runs based on a set of defined conditions. It is managed by the Backend GitOps Controller, and can only be used if GitOps is enabled.
 

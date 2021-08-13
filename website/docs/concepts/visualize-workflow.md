@@ -1,7 +1,7 @@
 ---
-id: observe-workflow
-title: Observing the Workflow Execution
-sidebar_label: Observe Workflow
+id: visualize-workflow
+title: Visualize the Workflow Execution
+sidebar_label: Visualize Workflow
 ---
 
 ---
@@ -37,7 +37,7 @@ These schedules can consist one time workflow runs or CronWorkflows. User can pe
 - Edit a schedule
 - Re-run a workflow etc
 
-## Observing a Litmus Workflow
+## Visualize a Litmus Workflow
 
 To observe a workflow, user can either click on the workflow name or click on the three dots and select `Show the workflow` option in the runs table.<br/>
 <img src={require('../assets/workflow-observe-select.png').default} width="800" />

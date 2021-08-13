@@ -25,8 +25,8 @@ module.exports = {
     {
       Architecture: [
         'architecture/overview',
-        'architecture/control-plane',
-        'architecture/execution-plane',
+        'architecture/chaos-control-plane',
+        'architecture/chaos-execution-plane',
         'architecture/chaos-experiment-flow',
         'architecture/chaos-observability-flow'
       ]
@@ -42,22 +42,12 @@ module.exports = {
         'concepts/chaos-results',
         'concepts/chaoshub',
         {
-          'Chaos Workflow': ['concepts/chaos-workflow', 'concepts/observe-workflow']
+          'Chaos Workflow': ['concepts/chaos-workflow', 'concepts/visualize-workflow']
         },
         'concepts/user-management',
         'concepts/projects',
         'concepts/teaming',
         'concepts/gitops'
-      ]
-    },
-
-    // Architecture
-    {
-      'Architecture': [
-        'architecture/topics',
-        'architecture/overview',
-        'architecture/control-plane',
-        'architecture/execution-plane'
       ]
     },
 
