@@ -1,12 +1,10 @@
 ---
 id: observability-set-up
-title: Setup Observability with Chaos Center
+title: Setup Observability with ChaosCenter
 sidebar_label: Setup Observability
 ---
 
 ---
-
-### Overview
 
 Overview Tab helps you to manage your connected data sources and dashboards, all while making it easier to view and analyze your workflows. The overview tab is split into 3 parts -
 
@@ -14,7 +12,7 @@ Overview Tab helps you to manage your connected data sources and dashboards, all
 - Application Dashboards
 - Workflow Dashboards
 
-### Before you begin
+## Before you begin
 
 Before starting with observability setup, you have to connect an agent to get workflow statistics & keep track of workflows performance.
 For connecting a new agent, you can follow [here](../litmusctl/installation) .

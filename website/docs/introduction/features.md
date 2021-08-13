@@ -4,6 +4,8 @@ title: Why should you choose Litmus?
 sidebar_label: Features
 ---
 
+---
+
 The goal of the LitmusChaos project is to create a complete solution to implement chaos engineering at scale, the Kubernetes way! Of course, this had to be done incrementally by first creating a toolset for chaos injection and then adding additional features to make it a platform. Litmus 1.x achieved the goal of keeping it completely open-source, creating a [ChaosHub](../concepts/chaoshub.md) and the required CRDs, Operators, and Schedulers. With Litmus 1.x, users have a working chaos engineering toolset aligned with the original goals.
 
 Over time, with the monthly cadence releases and community engagement, we have added a lot of features and made LitmusChaos much easier for the end-users. With the launch of Litmus 2.0, a new way of chaos engineering can be performed by the users, a few high-level features are mentioned [below](features#advantages-of-litmus-20), however a detailed list can be found on the [release page](https://github.com/litmuschaos/litmus/releases).

@@ -4,6 +4,8 @@ title: Find more about Litmus
 sidebar_label: More Resources
 ---
 
+---
+
 You can learn more about Litmus using the following resources available
 
 ### Official Website

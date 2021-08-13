@@ -4,6 +4,8 @@ title: Community driven Chaos Engineering
 sidebar_label: Community
 ---
 
+---
+
 Created by our users, contributors, and adopters, the Litmus community truly believes in adding to the value of open source culture. Serving and listening to the community is a priority to us.
 
 We welcome Kubernetes SREs and Developers to join this zealous community to learn and share all about Cloud-Native Chaos Engineering. There are many contributors in our community who are ready to mentor those who want to contribute. Ask a question in [our slack channel](https://slack.litmuschaos.io/).

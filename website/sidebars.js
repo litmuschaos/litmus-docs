@@ -21,20 +21,30 @@ module.exports = {
       ]
     },
 
+    // Architecture
+    {
+      Architecture: [
+        'architecture/overview',
+        'architecture/control-plane',
+        'architecture/execution-plane',
+        'architecture/chaos-experiment-flow',
+        'architecture/chaos-observability-flow'
+      ]
+    },
+
     // Concepts
     {
       Concepts: [
         'concepts/overview',
-        'concepts/litmus',
-        'concepts/experiment',
+        'concepts/chaos-experiment',
         'concepts/probes',
         'concepts/chaos-engine',
         'concepts/chaos-results',
         'concepts/chaoshub',
-        'concepts/chaos-center',
-        'concepts/agent',
+        'concepts/chaoscenter',
+        'concepts/chaos-agent',
         {
-          Workflow: ['concepts/chaos-workflow', 'concepts/observe-workflow']
+          'Chaos Workflow': ['concepts/chaos-workflow', 'concepts/observe-workflow']
         },
         {
           Observability: ['concepts/workflow-statistics', 'concepts/app-infra-monitoring', 'concepts/datasource']
@@ -81,7 +91,6 @@ module.exports = {
             'user-guides/schedule-workflow',
             'user-guides/observe-workflow',
             'user-guides/edit-schedule',
-            'user-guides/event-triggered-chaos',
             'user-guides/save-as-template',
             'user-guides/download-workflow-manifest',
             'user-guides/re-run-workflow',
@@ -101,6 +110,7 @@ module.exports = {
             'user-guides/share-app-dashboard'
           ]
         },
+        'user-guides/event-triggered-chaos',
         // To be added later
         // {
         //   'Litmus in CI/CD pipeline': [
@@ -110,11 +120,11 @@ module.exports = {
         //     'user-guides/spinnaker'
         //   ]
         // },
-        'user-guides/my-account',
+        'user-guides/account-settings',
         {
           'User Management': [
-            'user-guides/view-user',
             'user-guides/create-user',
+            'user-guides/view-user',
             'user-guides/reset-password',
             'user-guides/deactivate-user'
           ]

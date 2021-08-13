@@ -1,7 +1,7 @@
 ---
 id: agent-install
-title: Litmus Chaos Agent Install
-sidebar_label: Chaos Agent
+title: Litmus ChaosAgent Install
+sidebar_label: ChaosAgent
 ---
 
 In Litmus the Agents can be classified as two types
