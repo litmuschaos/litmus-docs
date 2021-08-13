@@ -31,7 +31,7 @@ Failed status indicates that either there is some misconfiguration in the workfl
 
 In the litmus portal when you go to the chaoshub section and you click on connect new hub button, you can see that there are two modes of authentication i.e public mode and private mode. In public mode, you only have to provide the git URL and branch name.
 
-For  private mode, we have two types of authentication; Access token and SSH key.
+In private mode, we have two types of authentication; Access token and SSH key.
 For the access token, go to the settings of GitLab and in the Access token section, add a token with read repository permission. After getting the token, go to the Litmus portal and provide the GitLab URL and branch name along with the access token. After submitting, your own chaos hub is connected to the Litmus portal.
 For the SSH key, click on the SSH and it will generate a public key. You have to use this public key and put it in your GitLab account. Just go to the settings of GitLab, you can see the SSH key section, go to the SSH key section and add your public key. After adding the public key. Get the ssh type URL of the git repository and put it in the Litmus Portal along with the branch. After submitting, your own chaoshub is connected to the Litmus Portal.
 
