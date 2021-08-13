@@ -4,6 +4,8 @@ title: Schedule a Workflow
 sidebar_label: Schedule Workflow
 ---
 
+---
+
 ## Before you begin
 
 You must connect an Agent before scheduling a workflow. There might be a default `Self-Agent` automatically created or you can [connect an external Agent](../litmusctl/cluster-scope-installation).

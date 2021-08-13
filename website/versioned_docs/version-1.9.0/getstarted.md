@@ -107,7 +107,7 @@ Expected output:
 ### Install Chaos Experiments
 
 Chaos experiments contain the actual chaos details. These experiments are installed on your cluster as Kubernetes CRs.
-The Chaos Experiments are grouped as Chaos Charts and are published on <a href="https://hub.litmuschaos.io" target="_blank">Chaos Hub</a>.
+The Chaos Experiments are grouped as Chaos Charts and are published on <a href="https://hub.litmuschaos.io" target="_blank">ChaosHub</a>.
 
 The generic chaos experiments such as `pod-delete`, `container-kill`,` pod-network-latency` are available under Generic Chaos Chart.
 This is the first chart you are recommended to install.
@@ -132,7 +132,7 @@ into a `rbac.yaml` manifest and run `kubectl apply -f rbac.yaml` to create one s
 - For rbac samples corresponding to other experiments such as, say, container-kill, please refer the respective experiment folder in
   the [chaos-charts](https://github.com/litmuschaos/chaos-charts/tree/master/charts/generic/container-kill) repository.
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-delete/rbac_nginx_getstarted.yaml yaml"
+[embedmd]: # 'https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-delete/rbac_nginx_getstarted.yaml yaml'
 
 ```yaml
 ---
@@ -152,20 +152,9 @@ metadata:
   labels:
     name: pod-delete-sa
 rules:
-  - apiGroups: ["", "litmuschaos.io", "batch", "apps"]
-    resources:
-      [
-        "pods",
-        "deployments",
-        "pods/log",
-        "events",
-        "jobs",
-        "chaosengines",
-        "chaosexperiments",
-        "chaosresults",
-      ]
-    verbs:
-      ["create", "list", "get", "patch", "update", "delete", "deletecollection"]
+  - apiGroups: ['', 'litmuschaos.io', 'batch', 'apps']
+    resources: ['pods', 'deployments', 'pods/log', 'events', 'jobs', 'chaosengines', 'chaosexperiments', 'chaosresults']
+    verbs: ['create', 'list', 'get', 'patch', 'update', 'delete', 'deletecollection']
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -208,7 +197,7 @@ Change the `chaosServiceAccount` to the name of service account created in above
 
 <strong> NOTE:</strong> To learn more about the various fields in the ChaosEngine spec and their supported values, refer to [Constructing ChaosEngine](https://docs.litmuschaos.io/docs/chaosengine/)
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-delete/engine_nginx_getstarted.yaml yaml"
+[embedmd]: # 'https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/pod-delete/engine_nginx_getstarted.yaml yaml'
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1
@@ -218,19 +207,19 @@ metadata:
   namespace: nginx
 spec:
   appinfo:
-    appns: "nginx"
-    applabel: "app=nginx"
-    appkind: "deployment"
+    appns: 'nginx'
+    applabel: 'app=nginx'
+    appkind: 'deployment'
   # It can be true/false
-  annotationCheck: "true"
+  annotationCheck: 'true'
   # It can be active/stop
-  engineState: "active"
+  engineState: 'active'
   #ex. values: ns1:name=percona,ns2:run=nginx
-  auxiliaryAppInfo: ""
+  auxiliaryAppInfo: ''
   chaosServiceAccount: pod-delete-sa
   monitoring: false
   # It can be delete/retain
-  jobCleanUpPolicy: "delete"
+  jobCleanUpPolicy: 'delete'
   experiments:
     - name: pod-delete
       spec:
@@ -238,15 +227,15 @@ spec:
           env:
             # set chaos duration (in sec) as desired
             - name: TOTAL_CHAOS_DURATION
-              value: "30"
+              value: '30'
 
             # set chaos interval (in sec) as desired
             - name: CHAOS_INTERVAL
-              value: "10"
+              value: '10'
 
             # pod failures without '--force' & default terminationGracePeriodSeconds
             - name: FORCE
-              value: "false"
+              value: 'false'
 ```
 
 ### Override Default Chaos Experiments Variables

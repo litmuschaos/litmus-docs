@@ -4,6 +4,8 @@ title: Setting up Endpoints without Ingress
 sidebar_label: Setup without Ingress
 ---
 
+---
+
 ## Prerequisites
 
 Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](../getting-started/resources#chaoscenter.md) is installed in either one of these scopes

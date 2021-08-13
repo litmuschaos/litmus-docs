@@ -4,6 +4,8 @@ title: Uses of Litmus
 sidebar_label: Uses of Litmus
 ---
 
+---
+
 Chaos tests can be done anywhere in the DevOps cycle. The extent of chaos tests varies from CI pipelines to production. In development pipelines, you might use chaos tests specific to applications being developed. As you move towards operations or production, you will expect a lot of failure scenarios for which you want to be resilient against, hence the number of chaos tests grows significantly.
 
 <img src={require("../assets/introduction/uses-of-litmus/chaos-test-devops.png").default} alt="Chaos Testing in DevOps Cycle" />
