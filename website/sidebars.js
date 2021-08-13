@@ -72,7 +72,7 @@ module.exports = {
             'user-guides/schedule-workflow',
             'user-guides/observe-workflow',
             'user-guides/edit-schedule',
-            'user-guides/event-triggered-chaos',
+            // 'user-guides/event-triggered-chaos',
             'user-guides/save-as-template',
             'user-guides/download-workflow-manifest',
             'user-guides/re-run-workflow',
@@ -121,6 +121,7 @@ module.exports = {
             'user-guides/remove-team-member'
           ]
         },
+        'user-guides/gitops-configuration',
         'user-guides/image-registry',
         'user-guides/uninstall-litmus'
       ]
