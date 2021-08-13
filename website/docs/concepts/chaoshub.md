@@ -83,7 +83,7 @@ Similarly, you can view the different charts and the experiment. These charts ar
 
 You can select one of the chart and can examine the experiment details.
 The experiment page consists of all the important details like the description of the experiment, a tutorial video, the maintainer of the experiment etc.
-You can also find experiment yaml link, RBAC link and the Chaos Engine yaml link of the experiment.
+You can also find experiment yaml link, RBAC link and the ChaosEngine yaml link of the experiment.
 These yaml links are required for the creation of Custom Chaos Workflows.
 
 <img src={require('../assets/concepts/chaoshub/chaoshub-exp-details.png').default} width="800" />

@@ -10,7 +10,7 @@ The Architecture section contains the component overview, sequence diagrams and 
 
 ### [Control Plane](control-plane)
 
-Consists of micro-services responsible for the functioning of the Chaos Center, the web based portal used for creating, scheduling, and monitoring chaos workflows.
+Consists of micro-services responsible for the functioning of the ChaosCenter, the web based portal used for creating, scheduling, and monitoring chaos workflows.
 
 ### [Execution Plane](execution-plane)
 

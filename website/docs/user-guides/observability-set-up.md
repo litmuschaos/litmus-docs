@@ -1,6 +1,6 @@
 ---
 id: observability-set-up
-title: Setup Observability with Chaos Center
+title: Setup Observability with ChaosCenter
 sidebar_label: Setup Observability
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: chaos-agent
-title: Chaos Agent
-sidebar_label: Chaos Agent
+title: ChaosAgent
+sidebar_label: ChaosAgent
 ---
 
 ---

@@ -1,7 +1,7 @@
 ---
 id: chaos-results
-title: Chaos Result
-sidebar_label: Chaos Result
+title: ChaosResult
+sidebar_label: ChaosResult
 ---
 
 ---
@@ -13,7 +13,7 @@ ChaosResult resource holds the results of a ChaosExperiment with a namespace sco
 To understand the concept of ChaosResult, make sure you have good knowledge of the [ChaosEngine](chaos-engine) CR and
 [Chaos Workflow](chaos-workflow) .
 
-## Chaos Result Spec
+## ChaosResult Spec
 
 This section describes the fields/details provided by the ChaosResult spec.
 

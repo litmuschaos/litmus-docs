@@ -16,11 +16,11 @@ ChaosExperiment CR is the heart of litmus and contains the low-level execution i
 
 Probes are pluggable checks that can be defined within the ChaosEngine for any Chaos Experiment.
 
-### [Chaos Engine](chaos-engine)
+### [ChaosEngine](chaos-engine)
 
 The ChaosEngine CR is the main user-facing chaos custom resource with a namespace scope and is designed to hold information around how the chaos experiments are executed.
 
-### [Chaos Result](chaos-results)
+### [ChaosResult](chaos-results)
 
 ChaosResult resource holds the results of a ChaosExperiment with a namespace scope.
 
@@ -28,11 +28,11 @@ ChaosResult resource holds the results of a ChaosExperiment with a namespace sco
 
 ChaosHub allows you to orchestrate workflows from the Public **[ChaosHub](http://hub.litmuschaos.io/)** or an alternate source for the Experiments.
 
-### [Chaos Center](chaos-center)
+### [ChaosCenter](chaos-center)
 
-Chaos Center is the web based portal used for creating, scheduling, and monitoring chaos workflows.
+ChaosCenter is the web based portal used for creating, scheduling, and monitoring chaos workflows.
 
-### [Chaos Agent](chaos-agent)
+### [ChaosAgent](chaos-agent)
 
 A lightweight agent used by Litmus for cross-cloud chaos injection in a host of different Kuberentes infrastructure from a single Litmus Control Plane.
 

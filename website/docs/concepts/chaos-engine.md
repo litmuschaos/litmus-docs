@@ -1,7 +1,7 @@
 ---
 id: chaos-engine
-title: Chaos Engine
-sidebar_label: Chaos Engine
+title: ChaosEngine
+sidebar_label: ChaosEngine
 ---
 
 ---
@@ -897,7 +897,7 @@ This section describes the fields in the ChaosEngine spec and the possible value
 
 ## Summary
 
-The Chaos Engine CR is the user-facing CR which helps in binding the application instance with the ChaosExperiment. It defines the Run Policies and also holds the status of your experiment. This CR helps you customize the experiment according to your need since it can override some of the default characteristics/tunables in your experiment CR.
+The ChaosEngine CR is the user-facing CR which helps in binding the application instance with the ChaosExperiment. It defines the Run Policies and also holds the status of your experiment. This CR helps you customize the experiment according to your need since it can override some of the default characteristics/tunables in your experiment CR.
 
 This CR is also updated/patched with status of the chaos experiments, making it the single source of truth with respect to the chaos.
 
