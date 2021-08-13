@@ -4,9 +4,11 @@ title: Comparative Analysis of Chaos Workflows
 sidebar_label: Compare Workflows
 ---
 
+---
+
 Workflow Dashboard allows you to manage your workflows runs, schedules & statistics.
 
-### Long-term Statistics
+## Long-term Statistics
 
 Long-term Statistics provides details about workflow runs & schedules over time.
 
@@ -26,13 +28,13 @@ You can hover over the respective graphs to get the total workflow runs & total 
 
 :::
 
-### Total Workflow Statistics
+## Total Workflow Statistics
 
 Total Workflow Statistics helps you to see how many of their scheduled have been passing/ failing & running. This helps you to see average performance of all the workflow runs.
 
 <img src={require('../assets/user-guides/observability/workflow-dashboard/workflows-radial-chart.png').default} />
 
-### Comparing Multiple Workflows
+## Comparing Multiple Workflows
 
 List of workflows provided on the page helps you to keep track of their scheduled workflows along with associated details like workflow name, target agent, starting time,etc & allows to compare the workflows by selecting them from the table.
 

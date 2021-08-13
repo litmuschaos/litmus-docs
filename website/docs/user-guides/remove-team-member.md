@@ -4,6 +4,8 @@ title: Remove a Team Member
 sidebar_label: Remove Team Member
 ---
 
+---
+
 If you are the project owner, you have the ability to remove any members from your project as required.
 
 ## Steps

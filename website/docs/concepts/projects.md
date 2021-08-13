@@ -4,7 +4,7 @@ title: Projects
 sidebar_label: Projects
 ---
 
-## Introduction
+---
 
 The ChaosCenter comes with a project management system which can be used for working on chaos workflows with multiple different projects across different agents.
 

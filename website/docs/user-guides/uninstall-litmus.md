@@ -4,6 +4,8 @@ title: Uninstalling Litmus
 sidebar_label: Uninstall Litmus
 ---
 
+---
+
 ## ChaosAgents
 
 To disconnect the [ChaosAgent](../getting-started/resources#chaosagents) connected to the [ChaosCenter](../getting-started/resources#chaoscenter), follow these steps -

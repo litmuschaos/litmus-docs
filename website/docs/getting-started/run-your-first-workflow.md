@@ -4,6 +4,8 @@ title: Run your First Chaos Workflow in 5 minutes
 sidebar_label: Run Your First Workflow
 ---
 
+---
+
 Welcome to this scenario, in this section you will get an overview of how to execute a sample Litmus Workflow on your application to induce Chaos as well as to observe the results and resilience score.
 
 ## Prerequisites

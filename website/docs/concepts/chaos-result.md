@@ -3,12 +3,13 @@ id: chaos-results
 title: Chaos Result
 sidebar_label: Chaos Result
 ---
-------
 
-## Introduction
+---
+
 ChaosResult resource holds the results of a ChaosExperiment with a namespace scope. It is created or updated at runtime by the experiment itself. It holds important information like the ChaosEngine reference, Experiment State, Verdict of the experiment (on completion), salient application/result attributes. It is also a source for metrics collection. It is updated/patched with the status of the experiment run. It is not removed as part of the default cleanup procedures to allow for extended reference.
 
 ## Prerequisites
+
 To understand the concept of ChaosResult, make sure you have good knowledge of the [ChaosEngine](chaos-engine) CR and
 [Chaos Workflow](chaos-workflow) .
 
@@ -338,8 +339,9 @@ This section describes the fields/details provided by the ChaosResult spec.
 </table>
 
 ## Summary
+
 Just like the ChaosExperiment CR and ChaosEngine CR, ChaosResult is a Custom Resource provided by Litmus.
-ChaosResult resource holds the results of a ChaosExperiment. It comprises of some important information related to the experiment execution like Experiment Details, Verdict, Phase, ProbeSuccessPercentage etc. It is updated/patched with every experiment run. It can also be used as a source for matrics collection. 
+ChaosResult resource holds the results of a ChaosExperiment. It comprises of some important information related to the experiment execution like Experiment Details, Verdict, Phase, ProbeSuccessPercentage etc. It is updated/patched with every experiment run. It can also be used as a source for matrics collection.
 
 ## Learn More
 
