@@ -29,7 +29,7 @@ Failed status indicates that either there is some misconfiguration in the workfl
 
 ### How can I setup chaoshub of my own gitlab repo in Litmus Portal?
 
-In the litmus portal when you go to the chaoshub section and you click on connect new hub button, you can see that there are two modes of authentication i.e public mode and private mode. For public mode, you only have to provide the git URL and branch name.
+In the litmus portal when you go to the chaoshub section and you click on connect new hub button, you can see that there are two modes of authentication i.e public mode and private mode. In public mode, you only have to provide the git URL and branch name.
 
 For  private mode, we have two types of authentication; Access token and SSH key.
 For the access token, go to the settings of GitLab and in the Access token section, add a token with read repository permission. After getting the token, go to the Litmus portal and provide the GitLab URL and branch name along with the access token. After submitting, your own chaos hub is connected to the Litmus portal.
