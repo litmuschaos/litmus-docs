@@ -59,6 +59,7 @@ module.exports = {
     // Architecture
     {
       'Architecture': [
+        'architecture/topics',
         'architecture/overview',
         'architecture/control-plane',
         'architecture/execution-plane'
