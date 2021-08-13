@@ -41,13 +41,8 @@ module.exports = {
         'concepts/chaos-engine',
         'concepts/chaos-results',
         'concepts/chaoshub',
-        'concepts/chaoscenter',
-        'concepts/chaos-agent',
         {
           'Chaos Workflow': ['concepts/chaos-workflow', 'concepts/observe-workflow']
-        },
-        {
-          Observability: ['concepts/workflow-statistics', 'concepts/app-infra-monitoring', 'concepts/datasource']
         },
         'concepts/user-management',
         'concepts/projects',
