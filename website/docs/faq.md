@@ -53,7 +53,7 @@ Currently, you can’t. But we are working on it. Shortly we will publish sample
  
 ### Does Litmusctl support actions that are currently performed from the portal dashboard?
 
-For now you can create agents and projects, also you can get the agents and project details by using litmusctl. To know more about litmusctl please refer to the [documentation of litmusctl](https://github.com/litmuschaos/litmusctl/blob/master/Usage.md).
+For now, you can create agents and projects, also you can get the agents and project details by using litmusctl. To know more about litmusctl please refer to the [documentation of litmusctl](https://github.com/litmuschaos/litmusctl/blob/master/Usage.md).
  
 ###  What is the minimum system requirement to run Portal and agent together?
 
