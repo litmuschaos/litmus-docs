@@ -14,8 +14,8 @@ A Chaos Workflow can also be used to perform different operations parallelly to 
 
 The following should be required before creating a Chaos Workflow:
 
-- [ChaosCenter](chaos-center)
-- [ChaosAgent](agent)
+- [ChaosCenter](chaoscenter)
+- [ChaosAgent](chaos-agent)
 - Chaos Experiment CR
 - [ChaosEngine CR](chaos-engine)
 - [Probes](probes)
@@ -423,4 +423,4 @@ These workflows consist of a cron syntax that is used for scheduling a workflow.
 
 - [Explore Probes](probes)
 - [Observe a Chaos Workflow](observe-workflow)
-- [Examine the ChaosResult](chaos-result)
+- [Examine the ChaosResult](chaos-results)

@@ -909,4 +909,4 @@ This CR is also updated/patched with status of the chaos experiments, making it 
 
 - [Explore Probes](probes)
 - [What is a Chaos Workflow](chaos-workflow)
-- [Examine the ChaosResult](chaos-result)
+- [Examine the ChaosResult](chaos-results)
