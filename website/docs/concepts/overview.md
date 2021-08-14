@@ -28,14 +28,6 @@ ChaosResult resource holds the results of a ChaosExperiment with a namespace sco
 
 ChaosHub allows you to orchestrate workflows from the Public **[ChaosHub](http://hub.litmuschaos.io/)** or an alternate source for the Experiments.
 
-### [ChaosCenter](chaos-center)
-
-ChaosCenter is the web based portal used for creating, scheduling, and monitoring chaos workflows.
-
-### [ChaosAgent](chaos-agent)
-
-A lightweight agent used by Litmus for cross-cloud chaos injection in a host of different Kuberentes infrastructure from a single Litmus Control Plane.
-
 ### [Chaos Workflow](chaos-workflow)
 
 Probes are pluggable checks that can be defined within the ChaosEngine for any Chaos Experiment.
