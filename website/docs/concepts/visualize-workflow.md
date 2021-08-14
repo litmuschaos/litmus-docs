@@ -6,7 +6,7 @@ sidebar_label: Visualize Workflow
 
 ---
 
-Observability is an important aspect while doing chaos engineering. It allows the user to discover and inspect different changes that occur during a Chaos Workflow execution. <br/>
+Visualization is an important aspect while doing chaos engineering. It allows the user to discover and inspect different changes that occur during a Chaos Workflow execution. <br/>
 With ChaosCenter, the real-time data and status of the workflows can be observed. Valuable information like pod logs, workflow status, chaos results can also be viewed.
 
 ## Prerequisites
@@ -68,4 +68,4 @@ After scheduling a workflow, a user can view the details of the running workflow
 
 - [Explore Probes](probes)
 - [What is a Chaos Workflow](chaos-workflow)
-- [Examine the ChaosResult](chaos-results)
+- [Examine the ChaosResult](chaos-result)

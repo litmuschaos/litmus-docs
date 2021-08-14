@@ -107,7 +107,7 @@ module.exports = {
             'user-guides/share-app-dashboard'
           ]
         },
-        'user-guides/event-triggered-chaos',
+        // 'user-guides/event-triggered-chaos',
         // To be added later
         // {
         //   'Litmus in CI/CD pipeline': [

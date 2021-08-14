@@ -77,6 +77,10 @@ module.exports = {
             {
               label: 'Master/Unreleased',
               to: 'docs/next/introduction/what-is-litmus'
+            },
+            {
+              label: 'V1-Docs',
+              to: 'https://v1-docs.litmuschaos.io/docs/getstarted/'
             }
           ]
         },
@@ -145,7 +149,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/litmuschaos/litmus-docs-beta/edit/staging/',
+          editUrl: 'https://github.com/litmuschaos/litmus-docs/edit/staging/website',
           showLastUpdateTime: true
         },
         theme: {

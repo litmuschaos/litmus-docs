@@ -21,7 +21,7 @@ export const exploreLitmusData = [
     icon: 'img/advantages.svg',
     heading: 'Litmus 2.0 Advantages',
     description: 'The new Litmus is better and easier to use than Litmus 1.0 . Know here about Litmus 2.0',
-    url: '/docs/next/introduction#litmus-20-prologue'
+    url: 'docs/next/introduction/features/'
   }
 ]
 
@@ -36,7 +36,7 @@ export const advancedLitmusData = [
     icon: 'img/AdvanceLitmus/design.svg',
     heading: 'Design & Architecture',
     description: 'Know in depth details of the LitmusChaos architecture used for testing resiliency of system.',
-    url: '/docs/next/introduction/what-is-litmus'
+    url: '/docs/next/architecture/overview/'
   },
   {
     icon: 'img/AdvanceLitmus/observability.svg',
@@ -81,7 +81,7 @@ export const moreResources = [
     heading: 'Glossary',
     description: 'All Litmus and chaos engineering terms and explanations in one place.',
     icon: 'img/Resources/glossary.svg',
-    url: '/404'
+    url: '/docs/next/introduction/other-links'
   },
   {
     heading: 'FAQs',
@@ -99,6 +99,6 @@ export const moreResources = [
     heading: 'References',
     description: 'Find all the releases of LitmusChaos in one place',
     icon: 'img/Resources/references.svg',
-    url: 'https://v1-docs.litmuschaos.io/'
+    url: 'https://github.com/litmuschaos/litmus/releases'
   }
 ]
