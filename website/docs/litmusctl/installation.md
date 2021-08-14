@@ -4,8 +4,6 @@ title: Litmusctl
 sidebar_label: Installation
 ---
 
----
-
 The Litmuschaos command-line tool, litmusctl, allows you to manage litmuschaos's agent plane. You can use litmusctl to create agents, project, and manage multiple litmuschaos accounts.
 
 ## Prerequisites
@@ -20,8 +18,8 @@ Litmusctl CLI requires the following things:
 
 For more information including a complete list of litmusctl operations, see the litmusctl reference documentation.
 
-- For v0.3.0 or latest && compatible with Litmus-2.0.0-Beta9 or latest: <a href="https://github.com/litmuschaos/litmusctl/blob/master/Usage.md">Click here</a>
-- For v0.2.0 or earlier && compatible with Litmus-2.0.0-Beta8 or earlier: <a href="https://github.com/litmuschaos/litmusctl/blob/master/Usage_v0.2.0.md">Click here</a>
+- For v0.3.0 or latest && compatible with Litmus-2.0.0 or latest: <a href="https://github.com/litmuschaos/litmusctl/blob/master/Usage.md">Click here</a>
+- For v0.2.0 or earlier && compatible with Litmus-2.0.0 or earlier: <a href="https://github.com/litmuschaos/litmusctl/blob/master/Usage_v0.2.0.md">Click here</a>
 
 ## Installation
 

@@ -15,7 +15,7 @@ Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](../ge
 
 ## Install ChaosCenter with Ingress
 
-With Litmus-2.0.0-Beta3, ChaosCenter can be installed with ingress.
+With Litmus-2.0.0, ChaosCenter can be installed with ingress.
 In the following doc, we will use the Nginx ingress controller for ingress setup.
 
 1. By default, the service type is `NodePort`. For Ingress, we need to change the service type to `ClusterIP` in the following services.
