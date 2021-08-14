@@ -5,15 +5,16 @@ sidebar_label: Litmus with Ingress
 ---
 
 ---
+
 ### Install LitmusPortal with Ingress
 
-With Litmus-2.0.0-Beta3, LitmusPortal can be installed with ingress.
-In the following doc, we will use the Nginx ingress controller for ingress setup. 
-
+With Litmus-2.0.0, LitmusPortal can be installed with ingress.
+In the following doc, we will use the Nginx ingress controller for ingress setup.
 
 1. Install LitmusPortal in ClusterMode
+
 ```bash
-kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Beta.yaml
+kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0/litmus-2.0.0.yaml
 ```
 
 2. By default, the service type is NodePort. We have to patch it to ClusterIP
@@ -24,6 +25,7 @@ kubectl patch svc litmusportal-server -n litmus -p '{"spec": {"type": "ClusterIP
 ```
 
 3. Install Nginx Ingress Controller
+
 ```bash
 kubectl create ns nginx
 helm repo add nginx-stable https://helm.nginx.com/stable
@@ -33,6 +35,7 @@ helm install nginx-ingress nginx-stable/nginx-ingress -n nginx
 #### With HTTP
 
 4. Sample litmus ingress manifest With HTTP
+
 ```yaml
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -57,10 +60,10 @@ spec:
             pathType: ImplementationSpecific
 ```
 
-
 #### With HTTPS
 
 5. Install CertManager
+
 ```bash
 kubectl create namespace cert-manager
 helm repo add jetstack https://charts.jetstack.io
@@ -102,21 +105,21 @@ metadata:
   namespace: litmus
 spec:
   rules:
-  - host: "<HOST-NAME>"
-    http:
-      paths:
-      - backend:
-          serviceName: litmusportal-frontend-service
-          servicePort: 9091
-        path: /(.*)
-        pathType: ImplementationSpecific
-      - backend:
-          serviceName: litmusportal-server-service
-          servicePort: 9002
-        path: /backend/(.*)
-        pathType: ImplementationSpecific
+    - host: '<HOST-NAME>'
+      http:
+        paths:
+          - backend:
+              serviceName: litmusportal-frontend-service
+              servicePort: 9091
+            path: /(.*)
+            pathType: ImplementationSpecific
+          - backend:
+              serviceName: litmusportal-server-service
+              servicePort: 9002
+            path: /backend/(.*)
+            pathType: ImplementationSpecific
   tls:
-  - hosts:
-    - "<HOST-NAME>"
-    secretName: litmuspreview-tls-secret
+    - hosts:
+        - '<HOST-NAME>'
+      secretName: litmuspreview-tls-secret
 ```

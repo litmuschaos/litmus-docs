@@ -18,11 +18,12 @@ sidebar_label: Control Plane
 
 - Helm3 or Kubectl
 
-## Installation 
+## Installation
 
 Installation of Litmus can be done using either of below methods
--  [Helm3](#helm_install) chart or 
--  [Kubectl](#kubectl_install) yaml spec file
+
+- [Helm3](#helm_install) chart or
+- [Kubectl](#kubectl_install) yaml spec file
 
 ### <a name="helm_install"> </a>**Install Litmus using Helm **
 
@@ -46,7 +47,7 @@ cd litmus-helm
 The helm chart will install all the CRDs, required service account configuration, and chaos-operator required both for the core services as well as the portal to run.
 
 ```bash
-helm install litmuschaos  --namespace litmus ./charts/litmus-2-0-0-beta/
+helm install litmuschaos  --namespace litmus ./charts/litmus/
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -59,7 +60,7 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 NOTES:
-Thank you for installing litmus-2-0-0-beta 😀
+Thank you for installing litmus 😀
 
 Your release is named chaos and its installed to namespace: litmus.
 
@@ -70,16 +71,18 @@ Visit https://docs.litmuschaos.io/docs/getstarted/ to find more info.
 
 ### <a name="kubectl_install"> </a>**Install Litmus using kubectl **
 
-#### **Create a Litmus namespace  in Kubernetes**
+#### **Create a Litmus namespace in Kubernetes**
 
 ```bash
 kubectl create ns litmus
 ```
+
 #### **Install Litmus**
 
 Applying the manifest file will install all the CRDs, required service account configuration, and chaos-operator required both for the core services as well as the portal to run.
+
 ```bash
-kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Beta.yaml
+kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0/litmus-2.0.0.yaml
 ```
 
 ## **Verify your installation**

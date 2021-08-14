@@ -45,6 +45,14 @@ module.exports = {
         {
           'Chaos Workflow': ['concepts/chaos-workflow', 'concepts/visualize-workflow']
         },
+        {
+          Observability: [
+            'concepts/workflow-statistics',
+            'concepts/app-infra-monitoring',
+            'concepts/datasource',
+            'concepts/open-observability'
+          ]
+        },
         'concepts/user-management',
         'concepts/projects',
         'concepts/teaming',
@@ -78,6 +86,7 @@ module.exports = {
             'user-guides/schedule-workflow',
             'user-guides/observe-workflow',
             'user-guides/edit-schedule',
+            // 'user-guides/event-triggered-chaos',
             'user-guides/save-as-template',
             'user-guides/download-workflow-manifest',
             'user-guides/re-run-workflow',
@@ -90,6 +99,7 @@ module.exports = {
             'user-guides/observability-set-up',
             'user-guides/analyze-workflow',
             'user-guides/comparative-analysis',
+            'user-guides/setup-datasource',
             'user-guides/configure-datasource',
             'user-guides/manage-app-dashboard',
             'user-guides/editing-queries-app-dashboard',
@@ -127,6 +137,7 @@ module.exports = {
             'user-guides/remove-team-member'
           ]
         },
+        'user-guides/gitops-configuration',
         'user-guides/image-registry',
         'user-guides/uninstall-litmus'
       ]
@@ -137,7 +148,7 @@ module.exports = {
       Litmusctl: [
         'litmusctl/installation',
         {
-          'Connect Agent': ['litmusctl/cluster-scope-installation', 'litmusctl/namespace-scope-installation']
+          'Connect Agent': ['litmusctl/usage-non-interactive-mode', 'litmusctl/usage-interactive-mode']
         }
       ]
     },

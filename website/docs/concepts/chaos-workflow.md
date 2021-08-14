@@ -14,8 +14,8 @@ A Chaos Workflow can also be used to perform different operations parallelly to 
 
 The following should be required before creating a Chaos Workflow:
 
-- [ChaosCenter](chaos-center)
-- [ChaosAgent](agent)
+- [ChaosCenter](chaoscenter)
+- [ChaosAgent](chaos-agent)
 - Chaos Experiment CR
 - [ChaosEngine CR](chaos-engine)
 - [Probes](probes)
