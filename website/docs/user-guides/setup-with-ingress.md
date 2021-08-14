@@ -1,6 +1,6 @@
 ---
 id: setup-with-ingress
-title: Install LitmusPortal with Ingress
+title: Install Litmus ChaosCenter with Ingress
 sidebar_label: Setup With Ingress
 ---
 

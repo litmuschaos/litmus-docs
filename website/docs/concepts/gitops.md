@@ -46,4 +46,4 @@ GitOps is by default disabled for the projects created in Litmus, but it can be 
 
 - [Configuring GitOps](../user-guides/gitops-configuration)
 - [Schedule a workflow](../user-guides/schedule-workflow)
-- [Observe a Chaos Workflow](../user-guides/observe-workflow)
+- [Observe a Chaos Workflow](../user-guides/visualize-workflow)

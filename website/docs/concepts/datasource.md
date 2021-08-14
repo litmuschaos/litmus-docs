@@ -49,5 +49,5 @@ LitmusChaos facilitates in-house real-time monitoring for `events` and `verdicts
 
 ## Learn More
 
-- [Observe a Chaos Workflow](observe-workflow)
+- [Visualize a Chaos Workflow](visualize-workflow)
 - [Application and infrastructure monitoring](app-infra-monitoring)

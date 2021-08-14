@@ -1,12 +1,12 @@
 ---
-id: observe-workflow
-title: Observing the Workflow Execution
-sidebar_label: Observe Workflow
+id: visualize-workflow
+title: Visualize the Workflow Execution
+sidebar_label: Visualize Workflow
 ---
 
 ---
 
-Observability is an important aspect while doing chaos engineering. It allows the user to discover and inspect different changes that occur during a Chaos Workflow execution. <br/>
+Visualization is an important aspect while doing chaos engineering. It allows the user to discover and inspect different changes that occur during a Chaos Workflow execution. <br/>
 With ChaosCenter, the real-time data and status of the workflows can be observed. Valuable information like pod logs, workflow status, chaos results can also be viewed.
 
 ## Prerequisites
@@ -37,7 +37,7 @@ These schedules can consist one time workflow runs or CronWorkflows. User can pe
 - Edit a schedule
 - Re-run a workflow etc
 
-## Observing a Litmus Workflow
+## Visualize a Litmus Workflow
 
 To observe a workflow, user can either click on the workflow name or click on the three dots and select `Show the workflow` option in the runs table.<br/>
 <img src={require('../assets/workflow-observe-select.png').default} width="800" />

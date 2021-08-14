@@ -20,7 +20,7 @@ Constructing, Scheduling, Editing and Observing workflows.
 
 Set-up monitoring, Analyze and Compare various metrics that help you make reliable decisions regarding your application.
 
-### [Event Triggered Chaos using GitOps](event-triggered-chaos)
+### [Event Triggered Chaos using GitOps](gitops-configuration)
 
 GitOps in Litmus provides a way of using Event-Driven Chaos Injection, where target resources(stateful sets, deployments, etc.) can be configured to automatically trigger chaos workflows with any changes in the resource spec.
 
