@@ -10,7 +10,7 @@ Chaos Engineering is the discipline of experimenting on a system to build confid
 
 The following should be required before integrating Grafana with litmus 2.0:
 
-- [ChaosCenter](../concepts/chaos-center)
+- [Running Chaos Workflows](run-your-first-workflow)
 - [Prometheus TSDB](https://prometheus.io/)
 - [Prometheus Integration](prometheus)
 - [Application and infrastructure monitoring](../concepts/app-infra-monitoring)
