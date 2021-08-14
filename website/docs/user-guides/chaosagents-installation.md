@@ -11,13 +11,8 @@ sidebar_label: ChaosAgents
 
 ## Connecting ChaosAgents 
 
-* ### In Cluster Scope
-
-    Learn to [connect ChaosAgents with Cluster Scope access using litmuctl](../litmusctl/cluster-scope-installation.md)
-
-* ### In Namespace Scope
-
-    Learn to [connect ChaosAgents within a Namespace Scope access using litmuctl](../litmusctl/namespace-scope-installation.md)
+    -   Learn to [connect ChaosAgents with non interactive mode using litmuctl](../litmusctl/usage-non-interactive-mode.md)
+    -   Learn to [connect ChaosAgents with interactive mode using litmuctl](../litmusctl/usage-interactive-mode.md)
 
 ## Resources
 

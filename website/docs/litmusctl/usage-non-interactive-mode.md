@@ -1,7 +1,7 @@
 ---
-id: namespace-scope-installation
-title: Installing Agent with Namespace Scope
-sidebar_label: Namespace Scope
+id: usage-non-interactive-mode
+title: Installing ChaosAgents in non interactive mode
+sidebar_label: Using non interactive mode
 ---
 
 # Usage: Litmusctl v0.3.0
@@ -33,7 +33,7 @@ Litmusctl supports both interactive and non-interactive(flag based) modes.
 litmusctl config set-account --endpoint="" --username="" --password=""
 ```
 
-* To create an agent without a project
+* To create an agent without a project in a cluster mode
 >Note: If the user doesn't have any project, it will create a random project and add the agent in that random project.
 ```shell
 litmusctl create agent --agent-name="" --non-interactive
@@ -47,6 +47,10 @@ litmusctl create agent --agent-name="" --non-interactive
 ```shell
 litmusctl create agent --agent-name="" --project-id="" --non-interactive
 ```
+
+## Verify the new Agent Connection**
+
+To verify, if the connection process was successful you can view the list of connected agents from the Targets section on your ChaosCenter and ensure that the connected agent is in Active State.
 
 ### Flags for `create agent` command
 <table>
@@ -216,14 +220,9 @@ For more information related to flags, Use `litmusctl --help`.
 
 ---
 
-## **Verify the new Agent Connection**
-
-To verify, if the connection process was successful you can view the list of connected agents from the Targets section on your ChaosCenter and ensure that the connected agent is in Active State.
-
-
 ## Learn More
 
 - [Learn More about Litmusctl](installation)
-<!-- - [Install ChaosAgents in Cluster Scope](cluster-scope-installation) -->
+- [Installing ChaosAgents in interactive mode](usage-interactive)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)
