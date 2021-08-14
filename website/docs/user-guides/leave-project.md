@@ -4,13 +4,11 @@ title: Leave a Project
 sidebar_label: Leave Project
 ---
 
-## Introduction
+---
 
 You can leave a project that you no longer wish to be a part of.
 
-## Steps
-
-### 1. Identify the project you want to leave
+## 1. Identify the project you want to leave
 
 In the settings page, scroll to the very bottom of the `Team` tab. Here you will see a list of all the projects you are a part of, identify the project you’d like to leave and click on the `Leave Project` button:
 
@@ -20,7 +18,7 @@ In the settings page, scroll to the very bottom of the `Team` tab. Here you will
 
 <img src={require('../assets/user-guides/managing-projects/leave-project/step-2.png').default} width="1000" height="500" />
 
-### Learn more
+## Learn more
 
 - [Invite a member to your project](invite-team-member)
 - [Remove a member from your project](remove-team-member)

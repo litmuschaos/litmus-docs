@@ -4,7 +4,7 @@ title: Probes
 sidebar_label: Probes
 ---
 
-## Introduction
+---
 
 In Litmus, Probes are pluggable checks that can be defined within the ChaosEngine for any Chaos Experiment. The experiment pods execute these checks based on the mode they are defined in & factor their success as necessary conditions in determining the verdict of the experiment (along with the standard `in-built` checks).
 
@@ -1100,7 +1100,7 @@ The different modes these probes can be used in are `SoT`, `EoT`, `Edge`, `Conti
 
 Probes can be Chained, Probe chaining enables reuse of probe, the order of execution of probes in the experiment depends purely on the order in which they are defined in the ChaosEngine.
 
-## Learn More
+## Learn more
 
 - [Explore the ChaosResult Custom Resource](chaos-results)
 - [Explore the ChaosEngine Custom Resource](chaos-engine)

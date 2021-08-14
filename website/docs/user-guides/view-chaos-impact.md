@@ -4,7 +4,7 @@ title: Viewing Chaos Impact on Applications Metrics Across Agent’s Scope
 sidebar_label: Viewing Chaos Impact
 ---
 
-___
+---
 
 After creating a dashboard, you view the corresponding metrics along with the chaos events in order to understand the impact of the chaos on various applicatons.
 
@@ -13,9 +13,9 @@ After creating a dashboard, you view the corresponding metrics along with the ch
 <i>Viewing particular application dashboard</i>
 </figure>
 
-### Dashboard Navigation
+## Dashboard Navigation
 
-- **Dashboard Info:** All the dashboard meta-data (name, type, data source, agent ), selected applications and selected panels are displayed in this selection. To check on the data source connected with the dashboard click on the attached data source link. You may select/deselect the items listed in the selected applications and selected panels field to visualize the appropriate data. 
+- **Dashboard Info:** All the dashboard meta-data (name, type, data source, agent ), selected applications and selected panels are displayed in this selection. To check on the data source connected with the dashboard click on the attached data source link. You may select/deselect the items listed in the selected applications and selected panels field to visualize the appropriate data.
 
 <figure>
 <img src={require('../assets/user-guides/observability/setup/view-chaos-impact-info.png').default} />
@@ -27,11 +27,11 @@ After creating a dashboard, you view the corresponding metrics along with the ch
 <i>Viewing more options</i>
 </figure>
 
-- **More Options:** 
+- **More Options:**
+
   - Configure: To make changes in the metadata and/or fine-tune the queries. To learn about configuring a dashboard [click here.](manage-app-dashboard)
-    
   - Clone: To make a copy of the current dashboard click on the clone button. Enter new name of the dashboard and click on `ok`
- 
+
   - Download a JSON: To download the complete dashboard configuration in JSON format.
 
   - PDF report: For downloading all the metric data in report format with graphs and summary. This feature is under development and will be made available in an upcoming version.
@@ -41,11 +41,9 @@ After creating a dashboard, you view the corresponding metrics along with the ch
 <i>Creating a copy of the dashboard</i>
 </figure>
 
-  
-- **Select a time interval:** To visualize the metric data for a specific period, you may select the date and time for the start and end of the interval. 
+- **Select a time interval:** To visualize the metric data for a specific period, you may select the date and time for the start and end of the interval.
 
 - **Refresh rate:** As the metrics data for a given data source is updated so to query and update all the graphs on the dashboard you may provide a refresh rate. By default, the refresh rate is set at 15 seconds.
-
 
 <figure>
 <img src={require('../assets/user-guides/observability/setup/view-chaos-impact-refresh-rate.png').default} />
@@ -72,22 +70,18 @@ After creating a dashboard, you view the corresponding metrics along with the ch
 <i>Selecting/deselecting chaos metric</i>
 </figure>
 
-
-  -  Edit: Click to edit the chaos annotations. 
-      - Event query: Queries related to the chaos injection events. You may edit them as per your requirement.
-      - Verdict query: Query related to the verdict/results of the chaos injection. You may edit them as per your requirement.
+- Edit: Click to edit the chaos annotations.
+  - Event query: Queries related to the chaos injection events. You may edit them as per your requirement.
+  - Verdict query: Query related to the verdict/results of the chaos injection. You may edit them as per your requirement.
 
 <figure>
 <img src={require('../assets/user-guides/observability/setup/view-chaos-impact-edit-chaos-queries.png').default} />
 <i>Editing chaos metric queries</i>
 </figure>
 
-
-
 - **Switch between dashboards for the same agent:** You can switch between the dashboards for the selected agent. To view a different dashboard for the given agent, click the dropdown option placed next to the dashboard name which contains the list of all the configured dashboards for that agent and select a particular dashbord.
 
-
-### Learn more
+## Learn more
 
 - [Manage Application Dashboard](manage-app-dashboard)
 - [Editing Panel Queries](editing-queries-app-dashboard)

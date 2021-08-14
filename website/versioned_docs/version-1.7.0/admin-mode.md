@@ -32,7 +32,7 @@ kubectl apply -f https://hub.litmuschaos.io/api/chaos/1.7.0?file=charts/generic/
 
 Here is an RBAC definition, which in essence is a superset of individual experiments RBAC that has the permissions to run all chaos experiments across different namespaces.
 
-[embedmd]: # "https://litmuschaos.github.io/litmus/litmus-admin-rbac.yaml"
+[embedmd]: # 'https://litmuschaos.github.io/litmus/litmus-admin-rbac.yaml'
 
 ```yaml
 apiVersion: v1
@@ -51,44 +51,35 @@ metadata:
   labels:
     name: litmus-admin
 rules:
-  - apiGroups:
-      [
-        "",
-        "apps",
-        "batch",
-        "extensions",
-        "litmuschaos.io",
-        "openebs.io",
-        "storage.k8s.io",
-      ]
+  - apiGroups: ['', 'apps', 'batch', 'extensions', 'litmuschaos.io', 'openebs.io', 'storage.k8s.io']
     resources:
       [
-        "chaosengines",
-        "chaosexperiments",
-        "chaosresults",
-        "cstorpools",
-        "cstorvolumereplicas",
-        "configmaps",
-        "secrets",
-        "pods",
-        "pods/exec",
-        "pods/log",
-        "pods/eviction",
-        "jobs",
-        "replicasets",
-        "deployments",
-        "daemonsets",
-        "statefulsets",
-        "persistentvolumeclaims",
-        "persistentvolumes",
-        "storageclasses",
-        "services",
-        "events",
+        'chaosengines',
+        'chaosexperiments',
+        'chaosresults',
+        'cstorpools',
+        'cstorvolumereplicas',
+        'configmaps',
+        'secrets',
+        'pods',
+        'pods/exec',
+        'pods/log',
+        'pods/eviction',
+        'jobs',
+        'replicasets',
+        'deployments',
+        'daemonsets',
+        'statefulsets',
+        'persistentvolumeclaims',
+        'persistentvolumes',
+        'storageclasses',
+        'services',
+        'events'
       ]
-    verbs: ["create", "delete", "get", "list", "patch", "update"]
-  - apiGroups: [""]
-    resources: ["nodes"]
-    verbs: ["get", "list", "patch"]
+    verbs: ['create', 'delete', 'get', 'list', 'patch', 'update']
+  - apiGroups: ['']
+    resources: ['nodes']
+    verbs: ['get', 'list', 'patch']
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding
@@ -116,19 +107,19 @@ metadata:
   namespace: litmus #Chaos Resources Namespace
 spec:
   appinfo:
-    appns: "default" #Application Namespace
-    applabel: "app=nginx"
-    appkind: "deployment"
+    appns: 'default' #Application Namespace
+    applabel: 'app=nginx'
+    appkind: 'deployment'
   # It can be true/false
-  annotationCheck: "true"
+  annotationCheck: 'true'
   # It can be active/stop
-  engineState: "active"
+  engineState: 'active'
   #ex. values: ns1:name=percona,ns2:run=nginx
-  auxiliaryAppInfo: ""
+  auxiliaryAppInfo: ''
   chaosServiceAccount: litmus-admin
   monitoring: false
   # It can be delete/retain
-  jobCleanUpPolicy: "delete"
+  jobCleanUpPolicy: 'delete'
   experiments:
     - name: pod-delete
       spec:
@@ -136,15 +127,15 @@ spec:
           env:
             # set chaos duration (in sec) as desired
             - name: TOTAL_CHAOS_DURATION
-              value: "30"
+              value: '30'
 
             # set chaos interval (in sec) as desired
             - name: CHAOS_INTERVAL
-              value: "10"
+              value: '10'
 
             # pod failures without '--force' & default terminationGracePeriodSeconds
             - name: FORCE
-              value: "false"
+              value: 'false'
 ```
 
 ### Create the ChaosEngine Resource
@@ -153,9 +144,9 @@ spec:
 
   `kubectl apply -f chaosengine.yml`
 
-### Watch Chaos Engine
+### Watch ChaosEngine
 
-- Describe Chaos Engine for chaos steps.
+- Describe ChaosEngine for chaos steps.
 
   `kubectl describe chaosengine nginx-chaos -n litmus`
 

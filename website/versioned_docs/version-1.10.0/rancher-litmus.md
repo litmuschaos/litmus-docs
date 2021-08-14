@@ -144,7 +144,7 @@ chaosresults                                   litmuschaos.io                 tr
 ### Install Chaos Experiments
 
 Chaos experiments contain the actual chaos details. These experiments are installed on your cluster as Kubernetes Custom Resources (CRs).
-The Chaos Experiments are grouped as Chaos Charts and are published on <a href="https://hub.litmuschaos.io" target="_blank">Chaos Hub</a>.
+The Chaos Experiments are grouped as Chaos Charts and are published on <a href="https://hub.litmuschaos.io" target="_blank">ChaosHub</a>.
 
 The generic chaos experiments such as `pod-delete`, `container-kill`,` pod-network-latency` are available under Generic Chaos Chart.
 This is the first chart you are recommended to install.
@@ -207,7 +207,7 @@ has just enough permissions needed to run the container-kill chaos experiment.
 - For rbac samples corresponding to other experiments such as, say, pod-delete, please refer the respective experiment folder in
   the [chaos-charts](https://github.com/litmuschaos/chaos-charts/tree/master/charts/generic/pod-delete) repository.
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/container-kill/rbac_nginx_getstarted.yaml"
+[embedmd]: # 'https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/container-kill/rbac_nginx_getstarted.yaml'
 
 ```yaml
 ---
@@ -227,20 +227,9 @@ metadata:
   labels:
     name: container-kill-sa
 rules:
-  - apiGroups: ["", "litmuschaos.io", "batch", "apps"]
-    resources:
-      [
-        "pods",
-        "jobs",
-        "pods/exec",
-        "pods/log",
-        "events",
-        "chaosengines",
-        "chaosexperiments",
-        "chaosresults",
-      ]
-    verbs:
-      ["create", "list", "get", "patch", "update", "delete", "deletecollection"]
+  - apiGroups: ['', 'litmuschaos.io', 'batch', 'apps']
+    resources: ['pods', 'jobs', 'pods/exec', 'pods/log', 'events', 'chaosengines', 'chaosexperiments', 'chaosresults']
+    verbs: ['create', 'list', 'get', 'patch', 'update', 'delete', 'deletecollection']
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -289,7 +278,7 @@ ChaosEngine connects the application instance to a Chaos Experiment. Copy the fo
 **NOTE:** You may update the values of `applabel` , `appns`, `appkind` and `experiments` as per your deployment and choices.
 Change the `chaosServiceAccount` to the name of service account created in above previous steps if you modified the `rbac.yaml`.
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/container-kill/engine_nginx_getstarted.yaml yaml"
+[embedmd]: # 'https://raw.githubusercontent.com/litmuschaos/chaos-charts/v1.10.x/charts/generic/container-kill/engine_nginx_getstarted.yaml yaml'
 
 ```yaml
 apiVersion: litmuschaos.io/v1alpha1
@@ -299,19 +288,19 @@ metadata:
   namespace: nginx
 spec:
   # It can be true/false
-  annotationCheck: "true"
+  annotationCheck: 'true'
   # It can be active/stop
-  engineState: "active"
+  engineState: 'active'
   #ex. values: ns1:name=percona,ns2:run=nginx
-  auxiliaryAppInfo: ""
+  auxiliaryAppInfo: ''
   appinfo:
-    appns: "nginx"
-    applabel: "app=nginx"
-    appkind: "deployment"
+    appns: 'nginx'
+    applabel: 'app=nginx'
+    appkind: 'deployment'
   chaosServiceAccount: container-kill-sa
   monitoring: false
   # It can be delete/retain
-  jobCleanUpPolicy: "delete"
+  jobCleanUpPolicy: 'delete'
   experiments:
     - name: container-kill
       spec:
@@ -319,29 +308,29 @@ spec:
           env:
             # specify the name of the container to be killed
             - name: TARGET_CONTAINER
-              value: "nginx"
+              value: 'nginx'
 
             # provide the chaos interval
             - name: CHAOS_INTERVAL
-              value: "10"
+              value: '10'
 
             # provide the total chaos duration
             - name: TOTAL_CHAOS_DURATION
-              value: "20"
+              value: '20'
 
             - name: LIB_IMAGE
-              value: "litmuschaos/go-runner:1.10.0"
+              value: 'litmuschaos/go-runner:1.10.0'
 
             # provide the name of container runtime
             # it supports docker, containerd, crio
             # default to docker
             - name: CONTAINER_RUNTIME
-              value: "docker"
+              value: 'docker'
 
             # provide the container runtime path for containerd
             # applicable only for containerd runtime
             - name: CONTAINER_PATH
-              value: "/run/containerd/containerd.sock"
+              value: '/run/containerd/containerd.sock'
 ```
 
 ### Override Default Chaos Experiments Variables

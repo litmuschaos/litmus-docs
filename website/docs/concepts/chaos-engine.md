@@ -1,10 +1,10 @@
 ---
 id: chaos-engine
-title: Chaos Engine
-sidebar_label: Chaos Engine
+title: ChaosEngine
+sidebar_label: ChaosEngine
 ---
 
-## Introduction
+---
 
 The ChaosEngine CR is the main user-facing chaos custom resource with a namespace scope and is designed to hold information around how the chaos experiments are executed. It connects an application instance with one or more chaos experiments,
 while allowing the users to specify run level details (override experiment defaults, provide new environment variables and volumes, options to delete or retain experiment pods, etc.,). This CR is also updated/patched with status of the chaos experiments, making it the single source of truth with respect to the chaos.
@@ -897,7 +897,7 @@ This section describes the fields in the ChaosEngine spec and the possible value
 
 ## Summary
 
-The Chaos Engine CR is the user-facing CR which helps in binding the application instance with the ChaosExperiment. It defines the Run Policies and also holds the status of your experiment. This CR helps you customize the experiment according to your need since it can override some of the default characteristics/tunables in your experiment CR.
+The ChaosEngine CR is the user-facing CR which helps in binding the application instance with the ChaosExperiment. It defines the Run Policies and also holds the status of your experiment. This CR helps you customize the experiment according to your need since it can override some of the default characteristics/tunables in your experiment CR.
 
 This CR is also updated/patched with status of the chaos experiments, making it the single source of truth with respect to the chaos.
 
@@ -909,4 +909,4 @@ This CR is also updated/patched with status of the chaos experiments, making it 
 
 - [Explore Probes](probes)
 - [What is a Chaos Workflow](chaos-workflow)
-- [Examine the ChaosResult](chaos-result)
+- [Examine the ChaosResult](chaos-results)

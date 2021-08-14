@@ -4,7 +4,7 @@ title: Changing Project Name
 sidebar_label: Change Project Name
 ---
 
-## Introduction
+---
 
 Owners have the ability to change the name of their project if they wish to do so.
 
@@ -32,7 +32,7 @@ Once in the editing mode, type out the name you want to replace the current name
 
 <img src={require('../assets/user-guides/managing-projects/change-project-name/step-3.png').default} width="1000" height="500" />
 
-## Learn More
+## Learn more
 
 - [Invite a member to your project](invite-team-member)
 - [Remove a member from your project](remove-team-member)

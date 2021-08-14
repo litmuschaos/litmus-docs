@@ -102,7 +102,7 @@ module.exports = {
         },
         {
           href: 'https://hub.litmuschaos.io/',
-          label: 'Chaos Hub',
+          label: 'ChaosHub',
           position: 'right'
         }
       ]
