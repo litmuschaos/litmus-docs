@@ -44,7 +44,7 @@ module.exports = {
         'concepts/chaoscenter',
         'concepts/chaos-agent',
         {
-          'Chaos Workflow': ['concepts/chaos-workflow', 'concepts/observe-workflow']
+          'Chaos Workflow': ['concepts/chaos-workflow', 'concepts/visualize-workflow']
         },
         {
           Observability: [
@@ -108,7 +108,7 @@ module.exports = {
             'user-guides/share-app-dashboard'
           ]
         },
-        'user-guides/event-triggered-chaos',
+        // 'user-guides/event-triggered-chaos',
         // To be added later
         // {
         //   'Litmus in CI/CD pipeline': [
