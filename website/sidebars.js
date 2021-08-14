@@ -149,7 +149,7 @@ module.exports = {
       Litmusctl: [
         'litmusctl/installation',
         {
-          'Connect Agent': ['litmusctl/cluster-scope-installation', 'litmusctl/namespace-scope-installation']
+          'Connect Agent': ['litmusctl/usage-non-interactive-mode', 'litmusctl/usage-interactive-mode']
         }
       ]
     },
