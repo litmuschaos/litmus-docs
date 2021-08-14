@@ -200,7 +200,7 @@ service/mongo-service created
   mongo-service                   ClusterIP   10.100.226.179  <none>      27017/TCP                     7m6s
   ```
 
-> Note: With the namespace mode of the control panel, we need to set the endpoint of the chaos centre server according to the use case. By default, it is `http://litmusportal-server-service:9002`
+> Note: With the namespace mode of the control panel, we need to set the endpoint of the chaos center server according to the use case. By default, it is `http://litmusportal-server-service:9002`
 
 To alter, Apply:
 ```bash
