@@ -204,7 +204,7 @@ service/mongo-service created
 
 To alter, Apply:
 ```bash
-kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" PORTAL_ENDPOINT="http://preview.litmuschaos.io"
+kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" PORTAL_ENDPOINT="http://172.132.44.44:3231"
 ```
 
 ---
