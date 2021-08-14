@@ -1,4 +1,4 @@
-<img src="https://camo.githubusercontent.com/953211f24c1c246f7017703f67b9779e4589bf76/68747470733a2f2f6c616e6473636170652e636e63662e696f2f6c6f676f732f6c69746d75732e737667"  width="160" align="left">
+<img alt="LitmusChaos" src="https://avatars.githubusercontent.com/u/49853472?s=200&v=4" width="200" align="left">
 
 # Documentation for the Litmus Project
 
@@ -24,11 +24,11 @@ Additional details on the Docusaurus project can be found [here](https://docusau
 
 ## For Developers
 
-### Clone litmus-docs-beta repository
+### Clone litmus-docs repository
 
 ```bash
-git clone https://github.com/litmuschaos/litmus-docs-beta.git
-cd litmus-docs-beta
+git clone https://github.com/litmuschaos/litmus-docs.git
+cd litmus-docs
 ```
 
 The docs website server can be setup manually or through docker compose
