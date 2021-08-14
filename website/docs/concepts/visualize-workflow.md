@@ -68,4 +68,4 @@ After scheduling a workflow, a user can view the details of the running workflow
 
 - [Explore Probes](probes)
 - [What is a Chaos Workflow](chaos-workflow)
-- [Examine the ChaosResult](chaos-results)
+- [Examine the ChaosResult](chaos-result)

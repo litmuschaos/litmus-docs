@@ -423,4 +423,4 @@ These workflows consist of a cron syntax that is used for scheduling a workflow.
 
 - [Explore Probes](probes)
 - [Visualize a Chaos Workflow](visualize-workflow)
-- [Examine the ChaosResult](chaos-results)
+- [Examine the ChaosResult](chaos-result)

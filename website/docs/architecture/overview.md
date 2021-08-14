@@ -5,7 +5,6 @@ sidebar_label: Overview
 ---
 
 ---
-
 The Architecture section contains the component overview, sequence diagrams and description of flow of information through the Litmus architecture.
 
 ### [Control Plane](control-plane)
