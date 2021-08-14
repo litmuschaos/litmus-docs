@@ -4,6 +4,8 @@ title: ChaosAgents Installation
 sidebar_label: ChaosAgents
 ---
 
+---
+
 ## Prerequisites
 
 - Before connecting a ChaosAgent to the [ChaosCenter](../getting-started/resources#chaoscenter.md), learn about what is a [ChaosAgent](../getting-started/resources#chaosagents.md) in Litmus.

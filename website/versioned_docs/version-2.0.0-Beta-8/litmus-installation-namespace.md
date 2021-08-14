@@ -56,7 +56,7 @@ namespace/litmus created
 #### Step-3: Install the litmus chaos control plane
 
 ```bash
-root@demo:~# helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=litmus --devel --set portalScope=namespace
+root@demo:~# helm install chaos litmuschaos/litmus --namespace=litmus --devel --set portalScope=namespace
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -69,7 +69,7 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 NOTES:
-Thank you for installing litmus-2-0-0-beta 😀
+Thank you for installing litmus 😀
 
 Your release is named chaos and its installed to namespace: litmus.
 

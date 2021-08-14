@@ -47,7 +47,7 @@ cd litmus-helm
 The helm chart will install all the CRDs, required service account configuration, and chaos-operator required both for the core services as well as the portal to run.
 
 ```bash
-helm install litmuschaos  --namespace litmus ./charts/litmus-2-0-0-beta/
+helm install litmuschaos  --namespace litmus ./charts/litmus/
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -60,7 +60,7 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 NOTES:
-Thank you for installing litmus-2-0-0-beta 😀
+Thank you for installing litmus 😀
 
 Your release is named chaos and its installed to namespace: litmus.
 

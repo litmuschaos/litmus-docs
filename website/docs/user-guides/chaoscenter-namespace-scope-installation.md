@@ -74,7 +74,7 @@ customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.
 #### Step-4: Install Litmus ChaosCenter
 
 ```bash
-helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=<LITMUS_PORTAL_NAMESPACE> --devel --set portalScope=namespace
+helm install chaos litmuschaos/litmus --namespace=<LITMUS_PORTAL_NAMESPACE> --devel --set portalScope=namespace
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -87,7 +87,7 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 NOTES:
-Thank you for installing litmus-2-0-0-beta 😀
+Thank you for installing litmus 😀
 
 Your release is named chaos and its installed to namespace: <LITMUS_PORTAL_NAMESPACE>.
 

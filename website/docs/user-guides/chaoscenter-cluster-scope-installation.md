@@ -53,7 +53,7 @@ kubectl create ns <LITMUS_PORTAL_NAMESPACE>
 #### Step-3: Install Litmus ChaosCenter
 
 ```bash
-helm install chaos litmuschaos/litmus-2-0-0-beta --namespace=<LITMUS_PORTAL_NAMESPACE> --devel
+helm install chaos litmuschaos/litmus --namespace=<LITMUS_PORTAL_NAMESPACE> --devel
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -66,7 +66,7 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 NOTES:
-Thank you for installing litmus-2-0-0-beta 😀
+Thank you for installing litmus 😀
 
 Your release is named chaos and its installed to namespace: litmus.
 

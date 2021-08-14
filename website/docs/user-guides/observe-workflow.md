@@ -4,6 +4,8 @@ title: Observe Workflow
 sidebar_label: Observe Workflow
 ---
 
+---
+
 ## Before you begin
 
 You must schedule a workflow. To know more about scheduling workflows click [here](schedule-workflow)

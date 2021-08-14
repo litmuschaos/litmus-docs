@@ -4,13 +4,13 @@ title: Projects
 sidebar_label: Projects
 ---
 
-## Introduction
+---
 
 The ChaosCenter comes with a project management system which can be used for working on chaos workflows with multiple different projects across different agents.
 
 ## Prerequisites
 
-Before learning abpout the concept of `projects`, it is important to note that a `project` signifies a separation between [Agents](agent), [Schedules](chaos-schedule), [Observability](observe-workflow), and Teams (discussed in the next section) configurations, and prior knowledge of these will prove fruitful in understanding the concept of `projects` in-depth.
+Before learning abpout the concept of `projects`, it is important to note that a `project` signifies a separation between [Agents](chaos-agent), [Schedules](chaos-schedule), [Observability](observe-workflow), and Teams (discussed in the next section) configurations, and prior knowledge of these will prove fruitful in understanding the concept of `projects` in-depth.
 
 ## Projects
 
