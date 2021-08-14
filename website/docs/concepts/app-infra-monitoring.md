@@ -14,8 +14,8 @@ These dashboards are associated with ChaosAgent(s) and consume a specific Promet
 
 The following should be required before knowing about application or infrastructure monitoring using chaos center:
 
-- [ChaosCenter](chaos-center)
-- [DataSource](datasource)
+- [Data Source](datasource)
+- [Chaos Workflow](chaos-workflow)
 
 ## Data flow architecture
 
@@ -74,5 +74,4 @@ Building a hypothesis around steady-state behaviour, varying real-world events, 
 ## Learn More
 
 - [Observe a Chaos Workflow](observe-workflow)
-- [Examine the ChaosResult](chaos-result)
 - [Workflow Statistics](workflow-statistics)

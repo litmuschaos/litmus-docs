@@ -12,7 +12,6 @@ Litmus 2.0 builds on principle of Open observability through observability hooks
 
 The following should be required before knowing about Open observability hooks in litmus 2.0:
 
-- [ChaosCenter](chaos-center)
 - [Probes](probes)
 - [Application / Infra. monitoring](app-infra-monitoring)
 

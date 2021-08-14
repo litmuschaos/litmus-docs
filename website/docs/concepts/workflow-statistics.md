@@ -12,7 +12,6 @@ Chaos injections often tends to disrupt tightly coupled micro-services and proce
 
 The following should be required before knowing about workflow statistics:
 
-- [ChaosCenter](chaos-center)
 - [Workflows](chaos-workflow)
 - [ObserveWorkflow](observe-workflow)
 
@@ -48,5 +47,4 @@ Statistics of a workflow schedule across its runs and analyzing application perf
 ## Learn More
 
 - [Explore Probes](probes)
-- [Examine the ChaosResult](chaos-result)
 - [Application and infrastructure monitoring](app-infra-monitoring)
