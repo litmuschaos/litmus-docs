@@ -42,10 +42,10 @@ helm repo list
 
 #### Step-2: Create the namespace on which you want to install Litmus ChaosCenter <span style={{color: '#909191'}}><b>[Required only if namespace isn't there]</b></span>
 
-The Litmus infra components will be placed in this namespace.
+- The chaoscenter components can be placed in any namespace, though it is typically placed in "litmus".
 
 ```bash
-kubectl create ns <LITMUS_PORTAL_NAMESPACE>
+kubectl create ns litmus
 ```
 
 > The ChaosCenter can be placed in any namespace, though it is typically placed in `litmus`. Ignore if you already have the namespace where you want to install Litmus created.
@@ -74,7 +74,7 @@ customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.
 #### Step-4: Install Litmus ChaosCenter
 
 ```bash
-helm install chaos litmuschaos/litmus --namespace=<LITMUS_PORTAL_NAMESPACE> --devel --set portalScope=namespace
+helm install chaos litmuschaos/litmus --namespace=litmus --set portalScope=namespace
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -82,14 +82,14 @@ helm install chaos litmuschaos/litmus --namespace=<LITMUS_PORTAL_NAMESPACE> --de
 ```bash
 NAME: chaos
 LAST DEPLOYED: Tue Jun 15 19:20:09 2021
-NAMESPACE: <LITMUS_PORTAL_NAMESPACE>
+NAMESPACE: litmus
 STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 NOTES:
 Thank you for installing litmus 😀
 
-Your release is named chaos and its installed to namespace: <LITMUS_PORTAL_NAMESPACE>.
+Your release is named chaos and its installed to namespace: litmus.
 
 Visit https://docs.litmuschaos.io/docs/getstarted/ to find more info.
 
@@ -112,7 +112,7 @@ kubectl get ns ${LITMUS_PORTAL_NAMESPACE}
 
 ```bash
 NAME                        STATUS   AGE
-<LITMUS_PORTAL_NAMESPACE>   Active   79m
+litmus   Active   79m
 ```
 
 #### **Install the required Litmus CRDs**
@@ -173,7 +173,7 @@ service/mongo-service created
 - Check the pods in the namespace where you installed Litmus:
 
   ```bash
-  kubectl get pods -n <LITMUS_PORTAL_NAMESPACE>
+  kubectl get pods -n litmus
   ```
 
   <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -188,7 +188,7 @@ service/mongo-service created
 - Check the services running in the namespace where you installed Litmus:
 
   ```bash
-  kubectl get svc -n <LITMUS_PORTAL_NAMESPACE>
+  kubectl get svc -n litmus
   ```
 
   <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -199,6 +199,13 @@ service/mongo-service created
   litmusportal-server-service     NodePort    10.100.150.175  <none>      9002:30479/TCP,9003:31949/TCP 7m8s
   mongo-service                   ClusterIP   10.100.226.179  <none>      27017/TCP                     7m6s
   ```
+
+> Note: With the namespace mode of the control panel, we need to set the endpoint of the chaos center server according to the use case. By default, it is `http://litmusportal-server-service:9002`
+
+To alter, Apply:
+```bash
+kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" PORTAL_ENDPOINT="http://172.132.44.44:3231"
+```
 
 ---
 
