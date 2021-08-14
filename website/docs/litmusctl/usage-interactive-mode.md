@@ -66,7 +66,7 @@ Project list:
 Select a project [Range: 1-1]: 1
 ```
 
-Next, select the installation mode based on your requirement by entering the sequence number indicated against it. Cluster mode agent can run chaos in any namespace, and namespace mode agent can run chaos in its namespace.
+Next, select the installation mode based on your requirement by entering the sequence number indicated against it.
 
 Litmusctl can install an agent in two different modes.
 * cluster mode: With this mode, the agent can run the chaos in any namespace. It installs appropriate cluster roles and cluster role bindings to achieve this mode.
