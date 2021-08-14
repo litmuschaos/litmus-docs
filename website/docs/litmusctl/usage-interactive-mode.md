@@ -73,6 +73,8 @@ Litmusctl can install an agent in two different modes.
 
 * namespace mode: With this mode, the agent can run the chaos in its namespace. It installs appropriate roles and role bindings to achieve this mode.
 
+Note: With namespace mode, the user needs to create the namespace to install the agent as a prerequisite.
+
 ```
 Installation Modes:
 1. Cluster
