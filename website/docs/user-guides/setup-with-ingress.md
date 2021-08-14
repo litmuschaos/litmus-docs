@@ -25,8 +25,17 @@ In the following doc, we will use the Nginx ingress controller for ingress setup
 
 2. Install Nginx Ingress Controller along with Kubernetes RBAC roles and bindings, please refer [here](https://kubernetes.github.io/ingress-nginx/deploy/#installation-guide)
 
-> - If you're changing ingress name from **litmus-ingress** to a different name, make sure to update the **INGRESS_NAME** environment variable in the litmusportal-server deployment
 > - Set the environment variable **INGRESS** as true in the litmusportal-server deployment.
+
+```bash
+kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" INGRESS="true"
+```
+
+> - If you're changing ingress name from **litmus-ingress** to a different name, make sure to update the **INGRESS_NAME** environment variable in the litmusportal-server deployment
+
+```bash
+kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" INGRESS_NAME=""
+```
 
 ### With HTTP
 

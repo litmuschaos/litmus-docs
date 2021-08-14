@@ -35,7 +35,7 @@ Our resolve is to reach the global community and escalate the value of Cloud-Nat
   <tr>
     <td>
       <a href="https://zoom.us/j/91358162694">
-        <img src="https://litmuschaos.io/static/98dc234f86b61a728935ed06852dfa17/75203/CommunitySyncUp.webp" />
+        <img src={require("../assets/introduction/community/CommunitySyncUp.webp").default} />
         <br />
         <div style={{width: "300px"}}>
         Community Sync Up
@@ -47,7 +47,7 @@ Our resolve is to reach the global community and escalate the value of Cloud-Nat
     </td>
      <td>
       <a href="https://community.cncf.io/events/details/cncf-kubernetes-chaos-engineering-meetup-group-presents-kubernetes-chaos-engineering-meetup-1/#/">
-        <img height={200} src="https://litmuschaos.io/static/aacb0301616ade8d2ffa30155185489e/0b151/CNCF.webp" />
+        <img height={200} src={require("../assets/introduction/community/CNCF.webp").default} />
         <br />
         <div style={{width: "300px"}}>
         Kubernetes Chaos Engineering Meetup
