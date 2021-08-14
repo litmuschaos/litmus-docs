@@ -25,6 +25,7 @@ module.exports = {
     {
       Architecture: [
         'architecture/overview',
+        'architecture/architecture-summary',
         'architecture/chaos-control-plane',
         'architecture/chaos-execution-plane',
         'architecture/chaos-experiment-flow',
