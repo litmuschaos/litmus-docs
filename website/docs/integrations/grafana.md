@@ -149,7 +149,7 @@ label_values(litmuschaos_experiment_verdict{app=~"chaos-exporter"}, chaosengine_
 <figure>
 <img src={require('../assets/integrations/grafana/variable-engine-context.png').default} />
 <i>Chaos engine context variable</i>
-</figure>>
+</figure>
 
 > Sample annotation configurations:
 
@@ -201,7 +201,7 @@ litmuschaos_experiment_verdict{job="litmus/chaos-exporter", app="chaos-exporter"
 <figure>
 <img src={require('../assets/integrations/grafana/experiment-verdict-failure-alert-config.png').default} />
 <i>Experiment verdict failure alert configuration</i>
-</figure>>
+</figure>
 
 > Sample alert configuration for probe success percentage
 
