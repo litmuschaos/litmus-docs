@@ -42,9 +42,7 @@ helm repo list
 
 #### Step-2: Create the namespace on which you want to install Litmus ChaosCenter
 
-- The litmus infra components will be placed in this namespace.
-
-> The chaoscenter components can be placed in any namespace, though it is typically placed in "litmus".
+- The chaoscenter components can be placed in any namespace, though it is typically placed in "litmus".
 
 ```bash
 kubectl create ns litmus
