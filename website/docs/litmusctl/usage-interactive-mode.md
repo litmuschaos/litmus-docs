@@ -28,7 +28,6 @@ Litmusctl supports both interactive and non-interactive(flag based) modes.
 
 Multiple external [ChaosAgents](../getting-started/chaosagents.md) can be connected to the [ChaosCenter](../getting-started/chaoscenter.md) with the help of the command line utility [litmusctl](installation)
 
-
 ### Steps to create an agent
 
 * To setup an account with litmusctl
@@ -68,6 +67,11 @@ Select a project [Range: 1-1]: 1
 ```
 
 Next, select the installation mode based on your requirement by entering the sequence number indicated against it. Cluster mode agent can run chaos in any namespace, and namespace mode agent can run chaos in its namespace.
+
+Litmusctl can install an agent in two different modes.
+* cluster mode: With this mode, the agent can run the chaos in any namespace. It installs appropriate cluster roles and cluster role bindings to achieve this mode.
+
+* namespace mode: With this mode, the agent can run the chaos in its namespace. It installs appropriate roles and role bindings to achieve this mode.
 
 ```
 Installation Modes:
@@ -259,6 +263,6 @@ For more information related to flags, Use `litmusctl --help`.
 ## Learn More
 
 - [Learn More about Litmusctl](installation)
-- [Installing ChaosAgents in non interactive mode](usage-non-interactive)
+- [Installing ChaosAgents in non interactive mode](./usage-non-interactive-mode.md)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)
