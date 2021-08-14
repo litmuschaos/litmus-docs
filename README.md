@@ -1,4 +1,4 @@
-<img src="https://camo.githubusercontent.com/953211f24c1c246f7017703f67b9779e4589bf76/68747470733a2f2f6c616e6473636170652e636e63662e696f2f6c6f676f732f6c69746d75732e737667"  width="160" align="left">
+<img alt="LitmusChaos" src="https://avatars.githubusercontent.com/u/49853472?s=200&v=4" width="200" align="left">
 
 # Documentation for the Litmus Project
 
