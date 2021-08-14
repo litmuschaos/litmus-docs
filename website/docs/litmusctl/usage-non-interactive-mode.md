@@ -54,7 +54,6 @@ To verify, if the connection process was successful you can view the list of con
 
 ### Flags for `create agent` command
 <table>
-<tr>
     <th>Flag</th>
     <th>Short Flag</th>
     <th>Type</th>
@@ -99,7 +98,7 @@ To verify, if the connection process was successful you can view the list of con
         <td>--node-selector</td>
         <td></td>
         <td>String</td>
-        <td>Set the node-selector for agent components | Format: key1=value1,key2=value2)
+        <td>Set the node-selector for agent components | Format: key1=value1,key2=value2)</td>
     </tr>
     <tr>
         <td>--non-interactive</td>
@@ -214,7 +213,6 @@ AGENTID                                AGENTNAME          STATUS
 55ecc7f2-2754-43aa-8e12-6903e4c6183a   agent-1            ACTIVE 
 13dsf3d1-5324-54af-4g23-5331g5v2364f   agent-2            INACTIVE
 ```
-
 
 For more information related to flags, Use `litmusctl --help`.
 

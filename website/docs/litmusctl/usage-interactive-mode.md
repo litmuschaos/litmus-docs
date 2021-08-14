@@ -243,7 +243,7 @@ PROJECT ID                                PROJECT NAME       CREATEDAT
 ```shell
 litmusctl get agents
 
-Enter the Project ID: 55ecc7f2-2754-43aa-8e12-6903e4c6183a
+Enter the Project ID: 50addd40-8767-448c-a91a-5071543a2d8e
 ```
 
 **Output:**
@@ -255,12 +255,6 @@ AGENTID                                AGENTNAME          STATUS
 ```
 
 For more information related to flags, Use `litmusctl --help`.
-
-## Resources
-
-#### Videos
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uIVrNH2_nVI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Learn More
 
