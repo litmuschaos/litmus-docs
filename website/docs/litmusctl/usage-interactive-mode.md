@@ -165,7 +165,7 @@ https://preview.litmuschaos.io/api/file/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ
 👉 Litmus agents can be accessed here: https://preview.litmuschaos.io/targets
 ```
 
-### Verify the new Agent Connection**
+#### Verify the new Agent Connection**
 
 To verify, if the connection process was successful you can view the list of connected agents from the Targets section on your ChaosCenter and ensure that the connected agent is in Active State.
 

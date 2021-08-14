@@ -39,7 +39,7 @@ litmusctl config set-account --endpoint="" --username="" --password=""
 litmusctl create agent --agent-name="" --non-interactive
 ```
 
-### Or,
+Or,
 
 * To create an agent with an existing project
 > Note: To get `project-id`. Apply `litmusctl get projects`
@@ -48,7 +48,7 @@ litmusctl create agent --agent-name="" --non-interactive
 litmusctl create agent --agent-name="" --project-id="" --non-interactive
 ```
 
-## Verify the new Agent Connection**
+#### Verify the new Agent Connection
 
 To verify, if the connection process was successful you can view the list of connected agents from the Targets section on your ChaosCenter and ensure that the connected agent is in Active State.
 
