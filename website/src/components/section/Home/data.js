@@ -87,12 +87,18 @@ export const moreResources = [
     heading: 'FAQs',
     description: 'All common Frequently Asked Questions curated in one place',
     icon: 'img/Resources/FAQs.svg',
-    url: '/404'
+    url: 'https://docs.litmuschaos.io/docs/next/faq'
   },
   {
     heading: 'Troubleshooting',
     description: 'Know more about troubleshooting of common issues',
     icon: 'img/Resources/troubleshooting.svg',
-    url: '/404'
+    url: 'https://docs.litmuschaos.io/docs/next/troubleshooting'
+  },
+  {
+    heading: 'References',
+    description: 'Find all the releases of LitmusChaos in one place',
+    icon: 'img/Resources/references.svg',
+    url: 'https://v1-docs.litmuschaos.io/'
   }
 ]

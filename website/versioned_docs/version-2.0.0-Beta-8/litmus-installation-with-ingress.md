@@ -8,25 +8,26 @@ sidebar_label: Litmus with Ingress
 
 ### Install LitmusPortal with Ingress
 
-With Litmus-2.0.0-Beta3, LitmusPortal can be installed with ingress.
+With Litmus-2.0.03, LitmusPortal can be installed with ingress.
 In the following doc, we will use the Nginx ingress controller for ingress setup.
 
 1. Install the litmus chaos control plane
 
 ```bash
-kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0-Beta/litmus-2.0.0-Beta.yaml
+kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0/litmus-2.0.0.yaml
 ```
 
 2. By default, the service type is NodePort. For Ingress, we need to change the service type to ClusterIP in the following services.
-* litmusportal-frontend-service
-* litmusportal-server-service
 
+- litmusportal-frontend-service
+- litmusportal-server-service
 
 3. Install Nginx Ingress Controller along with Kubernetes RBAC roles and bindings, please refer [here](https://kubernetes.github.io/ingress-nginx/deploy/#installation-guide)
 
-**Note:** 
-* If you're changing ingress name from **litmus-ingress** to a different name, make sure to update the **INGRESS_NAME** environment variable in the litmusportal-server deployment
-* Set the environment variable **INGRESS** as true in the litmusportal-server deployment.
+**Note:**
+
+- If you're changing ingress name from **litmus-ingress** to a different name, make sure to update the **INGRESS_NAME** environment variable in the litmusportal-server deployment
+- Set the environment variable **INGRESS** as true in the litmusportal-server deployment.
 
 #### With HTTP
 
@@ -42,7 +43,7 @@ metadata:
   name: litmus-ingress
 spec:
   rules:
-    - host: "<HOST-NAME>"
+    - host: '<HOST-NAME>'
       http:
         paths:
           - backend:
@@ -106,7 +107,7 @@ metadata:
   namespace: litmus
 spec:
   rules:
-    - host: "<HOST-NAME>"
+    - host: '<HOST-NAME>'
       http:
         paths:
           - backend:
@@ -121,9 +122,10 @@ spec:
             pathType: ImplementationSpecific
   tls:
     - hosts:
-        - "<HOST-NAME>"
+        - '<HOST-NAME>'
       secretName: litmuspreview-tls-secret
 ```
+
 ```bash
 kubectl apply -f <litmus_ingress_manifest> -n <PORTAL_NAMESPACE>
 ```
