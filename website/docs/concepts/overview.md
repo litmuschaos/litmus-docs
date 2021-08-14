@@ -28,7 +28,7 @@ ChaosResult resource holds the results of a ChaosExperiment with a namespace sco
 
 ChaosHub allows you to orchestrate workflows from the Public **[ChaosHub](http://hub.litmuschaos.io/)** or an alternate source for the Experiments.
 
-### [ChaosCenter](chaos-center)
+### [ChaosCenter](chaoscenter)
 
 ChaosCenter is the web based portal used for creating, scheduling, and monitoring chaos workflows.
 
