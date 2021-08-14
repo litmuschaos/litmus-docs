@@ -37,7 +37,12 @@ module.exports = {
           Workflow: ['concepts/chaos-workflow', 'concepts/observe-workflow']
         },
         {
-          Observability: ['concepts/workflow-statistics', 'concepts/app-infra-monitoring', 'concepts/datasource']
+          Observability: [
+            'concepts/workflow-statistics',
+            'concepts/app-infra-monitoring',
+            'concepts/datasource',
+            'concepts/open-observability'
+          ]
         },
         'concepts/user-management',
         'concepts/projects',
@@ -83,6 +88,7 @@ module.exports = {
             'user-guides/observability-set-up',
             'user-guides/analyze-workflow',
             'user-guides/comparative-analysis',
+            'user-guides/setup-datasource',
             'user-guides/configure-datasource',
             'user-guides/manage-app-dashboard',
             'user-guides/editing-queries-app-dashboard',
