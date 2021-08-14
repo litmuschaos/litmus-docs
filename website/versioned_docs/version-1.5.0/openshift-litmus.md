@@ -95,7 +95,7 @@ Expected output:
 ### Install Chaos Experiments
 
 Chaos experiments contain the actual chaos details. These experiments are installed on your cluster as OpenShift CRs.
-The Chaos Experiments are grouped as Chaos Charts and are published on <a href="https://hub.litmuschaos.io" target="_blank">Chaos Hub</a>.
+The Chaos Experiments are grouped as Chaos Charts and are published on <a href="https://hub.litmuschaos.io" target="_blank">ChaosHub</a>.
 
 The generic chaos experiments such as `pod-delete`, `container-kill`,` pod-network-latency` are available under Generic Chaos Chart.
 This is the first chart you are recommended to install.
@@ -121,7 +121,7 @@ has just enough permissions needed to run the container-kill chaos experiment.
 - For rbac samples corresponding to other experiments such as, say, pod-delete, please refer the respective experiment folder in
   the [chaos-charts](https://github.com/litmuschaos/chaos-charts/tree/master/charts/generic/pod-delete) repository.
 
-[embedmd]: # "https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/container-kill/rbac_nginx_getstarted.yaml"
+[embedmd]: # 'https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/container-kill/rbac_nginx_getstarted.yaml'
 
 ```yaml
 ---
@@ -141,20 +141,20 @@ metadata:
   labels:
     name: container-kill-sa
 rules:
-  - apiGroups: ["", "litmuschaos.io", "batch", "apps"]
+  - apiGroups: ['', 'litmuschaos.io', 'batch', 'apps']
     resources:
       [
-        "pods",
-        "jobs",
-        "daemonsets",
-        "pods/exec",
-        "pods/log",
-        "events",
-        "chaosengines",
-        "chaosexperiments",
-        "chaosresults",
+        'pods',
+        'jobs',
+        'daemonsets',
+        'pods/exec',
+        'pods/log',
+        'events',
+        'chaosengines',
+        'chaosexperiments',
+        'chaosresults'
       ]
-    verbs: ["create", "list", "get", "patch", "update", "delete"]
+    verbs: ['create', 'list', 'get', 'patch', 'update', 'delete']
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: RoleBinding
@@ -202,15 +202,15 @@ metadata:
   name: nginx-chaos
   namespace: nginx
 spec:
-  annotationCheck: "true"
-  engineState: "active"
+  annotationCheck: 'true'
+  engineState: 'active'
   appinfo:
-    appns: "nginx"
-    applabel: "run=nginx"
-    appkind: "deploymentconfig"
+    appns: 'nginx'
+    applabel: 'run=nginx'
+    appkind: 'deploymentconfig'
   chaosServiceAccount: container-kill-sa
   # use retain to keep the job for debug
-  jobCleanUpPolicy: "delete"
+  jobCleanUpPolicy: 'delete'
   experiments:
     - name: container-kill
       spec:
@@ -218,7 +218,7 @@ spec:
           env:
             # specify the name of the container to be killed
             - name: TARGET_CONTAINER
-              value: "nginx"
+              value: 'nginx'
 ```
 
 ### Override Default Chaos Experiments Variables

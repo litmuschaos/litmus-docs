@@ -92,7 +92,7 @@ LitmusChaos facilitates real-time monitoring for events using litmus event route
 
 ### How to interleave chaos events with existing application metric graphs?
 
-- Write queries for Prometheus or other TSDBs using Chaos Engine Name as label selector.
+- Write queries for Prometheus or other TSDBs using ChaosEngine Name as label selector.
 
   ```json
   heptio_eventrouter_normal_total{reason="ChaosEngineInitialized",involved_object_namespace="litmus",involved_object_name="orders-pod-memory-hog",involved_object_kind="ChaosEngine"} - on () (heptio_eventrouter_normal_total{reason="ChaosEngineCompleted",involved_object_namespace="litmus",involved_object_name="orders-pod-memory-hog",involved_object_kind="ChaosEngine"} OR on() vector(0))

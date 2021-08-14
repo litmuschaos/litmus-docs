@@ -4,6 +4,8 @@ title: Run your First Chaos Workflow in 5 minutes
 sidebar_label: Run Your First Workflow
 ---
 
+---
+
 Welcome to this scenario, in this section you will get an overview of how to execute a sample Litmus Workflow on your application to induce Chaos as well as to observe the results and resilience score.
 
 ## Prerequisites
@@ -121,7 +123,7 @@ And with that you have successfully scheduled your first Chaos Workflow with Lit
 
 3. Post Chaos Execution view the Experiment Results. Click on the **pod-delete** node on the graph to launch a results console. Click on the **Chaos Results** tab to view the details around success/failure of the steady-state hypothesis constraints (podtato-head website availability through pod deletion period) and the experiment verdict.
 
-   <img src={require("../assets/getting-started/run-your-first-workflow/chaos-result-of-podtato-head.png").default} alt="Chaos Result of Podtato Head" />
+   <img src={require("../assets/getting-started/run-your-first-workflow/chaos-result-of-podtato-head.png").default} alt="ChaosResult of Podtato Head" />
 
 ## Resources
 

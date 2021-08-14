@@ -4,6 +4,8 @@ title: Setting up Endpoints without Ingress
 sidebar_label: Setup without Ingress
 ---
 
+---
+
 ## Prerequisites
 
 Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](../getting-started/resources#chaoscenter.md) is installed in either one of these scopes
@@ -72,7 +74,7 @@ By default you are assigned with a default project with Owner permissions.
 
 <img src={require('../assets/landing-page.png').default} width="800" />
 
-## Learn More
+## Learn more
 
 - [Setup Endpoints and Access ChaosCenter with Ingress](setup-with-ingress)
 - [Install ChaosCenter in Namespace Scope](chaoscenter-namespace-scope-installation)

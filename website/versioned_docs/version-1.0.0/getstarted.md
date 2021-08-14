@@ -89,7 +89,7 @@ deployed in the default namespace.
 
 ### Install Chaos Experiments
 
-Chaos experiments contain the actual chaos details. These experiments are installed on your cluster as Kubernetes CRs (Custom Resources). The Chaos Experiments are grouped as Chaos Charts and are published on <a href="https://hub.litmuschaos.io" target="_blank">Chaos Hub</a>.
+Chaos experiments contain the actual chaos details. These experiments are installed on your cluster as Kubernetes CRs (Custom Resources). The Chaos Experiments are grouped as Chaos Charts and are published on <a href="https://hub.litmuschaos.io" target="_blank">ChaosHub</a>.
 
 The generic chaos experiments such as `pod-kill`, `container-kill`,` network-delay` are available under Generic Chaos Chart. This is the first chart you install. You can later install application specific chaos charts for running application oriented chaos.
 
@@ -124,18 +124,9 @@ metadata:
   labels:
     name: nginx-sa
 rules:
-  - apiGroups: ["", "litmuschaos.io", "batch", "apps"]
-    resources:
-      [
-        "pods",
-        "jobs",
-        "daemonsets",
-        "pods/exec",
-        "chaosengines",
-        "chaosexperiments",
-        "chaosresults",
-      ]
-    verbs: ["create", "list", "get", "patch", "update", "delete"]
+  - apiGroups: ['', 'litmuschaos.io', 'batch', 'apps']
+    resources: ['pods', 'jobs', 'daemonsets', 'pods/exec', 'chaosengines', 'chaosexperiments', 'chaosresults']
+    verbs: ['create', 'list', 'get', 'patch', 'update', 'delete']
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: RoleBinding
@@ -175,28 +166,28 @@ metadata:
   namespace: default
 spec:
   # It can be app/infra
-  chaosType: "app"
+  chaosType: 'app'
   #ex. values: ns1:name=percona,ns2:run=nginx
-  auxiliaryAppInfo: ""
+  auxiliaryAppInfo: ''
   components:
     runner:
-      image: "litmuschaos/chaos-executor:1.0.0"
-      type: "go"
+      image: 'litmuschaos/chaos-executor:1.0.0'
+      type: 'go'
   # It can be delete/retain
-  jobCleanUpPolicy: "delete"
+  jobCleanUpPolicy: 'delete'
   monitoring: false
   appinfo:
-    appns: "default"
+    appns: 'default'
     # FYI, To see app label, apply kubectl get pods --show-labels
-    applabel: "app=nginx"
-    appkind: "deployment"
+    applabel: 'app=nginx'
+    appkind: 'deployment'
   chaosServiceAccount: nginx-sa
   experiments:
     - name: container-kill
       spec:
         components:
           - name: TARGET_CONTAINER
-            value: "nginx"
+            value: 'nginx'
 ```
 
 ### Override Default Chaos Experiments Variables

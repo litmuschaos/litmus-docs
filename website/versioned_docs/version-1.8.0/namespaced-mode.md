@@ -71,14 +71,14 @@ metadata:
   namespace: default
 spec:
   appinfo:
-    appns: "default"
-    applabel: "app=nginx"
-    appkind: "deployment"
-  annotationCheck: "true"
-  engineState: "active"
+    appns: 'default'
+    applabel: 'app=nginx'
+    appkind: 'deployment'
+  annotationCheck: 'true'
+  engineState: 'active'
   chaosServiceAccount: litmus
   monitoring: false
-  jobCleanUpPolicy: "delete"
+  jobCleanUpPolicy: 'delete'
   experiments:
     - name: pod-delete
       spec:
@@ -86,15 +86,15 @@ spec:
           env:
             # set chaos duration (in sec) as desired
             - name: TOTAL_CHAOS_DURATION
-              value: "30"
+              value: '30'
 
             # set chaos interval (in sec) as desired
             - name: CHAOS_INTERVAL
-              value: "10"
+              value: '10'
 
             # pod failures without '--force' & default terminationGracePeriodSeconds
             - name: FORCE
-              value: "false"
+              value: 'false'
 ```
 
 ### Create the ChaosEngine Resource
@@ -103,9 +103,9 @@ spec:
 
   `kubectl apply -f chaosengine.yml`
 
-### Watch Chaos Engine
+### Watch ChaosEngine
 
-- Describe Chaos Engine for chaos steps. Append your respective namespace to this command.
+- Describe ChaosEngine for chaos steps. Append your respective namespace to this command.
 
   `kubectl describe chaosengine nginx-chaos`
 
