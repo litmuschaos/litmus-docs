@@ -42,9 +42,7 @@ helm repo list
 
 #### Step-2: Create the namespace on which you want to install Litmus ChaosCenter
 
-- The litmus infra components will be placed in this namespace.
-
-> The ChaosCenter can be placed in any namespace, but for this scenario we are choose `litmus` as the namespace.
+- The ChaosCenter can be placed in any namespace, but for this scenario we are choose `litmus` as the namespace.
 
 ```bash
 kubectl create ns litmus
@@ -53,7 +51,7 @@ kubectl create ns litmus
 #### Step-3: Install Litmus ChaosCenter
 
 ```bash
-helm install chaos litmuschaos/litmus --namespace=litmus --devel
+helm install chaos litmuschaos/litmus --namespace=litmus
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -70,7 +68,7 @@ Thank you for installing litmus 😀
 
 Your release is named chaos and its installed to namespace: litmus.
 
-Visit https://docs.litmuschaos.io/docs/getstarted/ to find more info.
+Visit https://docs.litmuschaos.io to find more info.
 ```
 
 > **Note:** Litmus uses Kubernetes CRDs to define chaos intent. Helm3 handles CRDs better than Helm2. Before you start running a chaos experiment, verify if Litmus is installed correctly.
