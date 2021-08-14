@@ -127,9 +127,17 @@ Chaos interleaving can be achieved using the `litmuschaos_awaited_experiments` a
 
 _Queries:_
 
-**chaosresult_name** `label_values(litmuschaos_awaited_experiments{app=~"chaos-exporter"}, chaosresult_name)`
+**chaosresult_name**
 
-**chaosengine_context** `label_values(litmuschaos_experiment_verdict{app=~"chaos-exporter"}, chaosengine_context)`
+```json
+label_values(litmuschaos_awaited_experiments{app=~"chaos-exporter"}, chaosresult_name)
+```
+
+**chaosengine_context**
+
+```json
+label_values(litmuschaos_experiment_verdict{app=~"chaos-exporter"}, chaosengine_context)
+```
 
 #### Screenshots
 
@@ -147,9 +155,17 @@ _Queries:_
 
 _Queries:_
 
-**LitmusChaos Events** `litmuschaos_awaited_experiments{chaosresult_name=~"$chaosresult_name", job="litmus/chaos-exporter", app="chaos-exporter"}`
+**LitmusChaos Events**
 
-**LitmusChaos Metrics** `litmuschaos_experiment_verdict{chaosresult_name=~"$chaosresult_name",chaosengine_context=~"$chaosengine_context", job="litmus/chaos-exporter", app="chaos-exporter"}`
+```json
+litmuschaos_awaited_experiments{chaosresult_name=~"$chaosresult_name", job="litmus/chaos-exporter", app="chaos-exporter"}
+```
+
+**LitmusChaos Metrics**
+
+```json
+litmuschaos_experiment_verdict{chaosresult_name=~"$chaosresult_name",chaosengine_context=~"$chaosengine_context", job="litmus/chaos-exporter", app="chaos-exporter"}
+```
 
 #### Screenshots
 
@@ -171,7 +187,9 @@ These alerts can be configured and triggered based on conditions set on panels u
 
 _Query:_
 
-`litmuschaos_experiment_verdict{job="litmus/chaos-exporter", app="chaos-exporter", chaosresult_verdict="Fail"}`
+```json
+litmuschaos_experiment_verdict{job="litmus/chaos-exporter", app="chaos-exporter", chaosresult_verdict="Fail"}
+```
 
 #### Screenshots
 
@@ -189,7 +207,9 @@ _Query:_
 
 _Query:_
 
-`litmuschaos_experiment_verdict{job="litmus/chaos-exporter", app="chaos-exporter", probe_success_percentage!="100.000000"}`
+```json
+litmuschaos_experiment_verdict{job="litmus/chaos-exporter", app="chaos-exporter", probe_success_percentage!="100.000000"}
+```
 
 #### Screenshots
 
@@ -209,13 +229,29 @@ Metrics from chaos-exporter like `litmuschaos_passed_experiments`, `litmuschaos_
 
 _Queries:_
 
-**Total Experiments Runs** `sum(litmuschaos_passed_experiments{job="litmus/chaos-exporter"} + litmuschaos_failed_experiments{job="litmus/chaos-exporter"})`
+**Total Experiments Runs**
 
-**Passed Experiments** `sum(litmuschaos_passed_experiments{job="litmus/chaos-exporter"})`
+```json
+sum(litmuschaos_passed_experiments{job="litmus/chaos-exporter"} + litmuschaos_failed_experiments{job="litmus/chaos-exporter"})
+```
 
-**Failed Experiments** `sum(litmuschaos_failed_experiments{job="litmus/chaos-exporter"})`
+**Passed Experiments**
 
-**Queued Experiments** `sum(litmuschaos_awaited_experiments{job="litmus/chaos-exporter"})`
+```json
+sum(litmuschaos_passed_experiments{job="litmus/chaos-exporter"})
+```
+
+**Failed Experiments**
+
+```json
+sum(litmuschaos_failed_experiments{job="litmus/chaos-exporter"})
+```
+
+**Queued Experiments**
+
+```json
+sum(litmuschaos_awaited_experiments{job="litmus/chaos-exporter"})
+```
 
 #### Screenshot
 
