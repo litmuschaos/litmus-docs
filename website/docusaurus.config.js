@@ -72,7 +72,7 @@ module.exports = {
             },
             ...versions.slice(1).map(version => ({
               label: version,
-              to: `docs/${version}/getstarted`
+              to: `docs/${version}/introduction/what-is-litmus`
             })),
             {
               label: 'Master/Unreleased',
