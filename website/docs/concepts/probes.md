@@ -1102,5 +1102,5 @@ Probes can be Chained, Probe chaining enables reuse of probe, the order of execu
 
 ## Learn more
 
-- [Explore the ChaosResult Custom Resource](chaos-results)
+- [Explore the ChaosResult Custom Resource](chaos-result)
 - [Explore the ChaosEngine Custom Resource](chaos-engine)

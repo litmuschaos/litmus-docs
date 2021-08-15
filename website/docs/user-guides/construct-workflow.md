@@ -272,4 +272,4 @@ spec:
 ## Learn More
 
 - [What are the different Probes](../concepts/probes)
-- [What is ChaosResult](../concepts/chaos-results)
+- [What is ChaosResult](../concepts/chaos-result)

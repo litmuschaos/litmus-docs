@@ -12,8 +12,6 @@ ChaosHub allows you to orchestrate workflows from the Public **[ChaosHub](http:/
 
 The following are the prerequisites for creating a Chaos Workflow:
 
-- [ChaosCenter](chaoscenter)
-- [ChaosAgent](chaos-agent)
 - Fork of [Chaos-Charts](https://github.com/litmuschaos/chaos-charts) repository
 
 :::note
@@ -103,4 +101,4 @@ ChaosHubs are basically a collection of different clones of the Chaos-Charts rep
 ## Learn More
 
 - [What is a Chaos Workflow](chaos-workflow)
-- [Examine the ChaosResult](chaos-results)
+- [Examine the ChaosResult](chaos-result)

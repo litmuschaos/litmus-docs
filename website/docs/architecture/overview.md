@@ -7,11 +7,11 @@ sidebar_label: Overview
 ---
 The Architecture section contains the component overview, sequence diagrams and description of flow of information through the Litmus architecture.
 
-### [Control Plane](control-plane)
+### [Control Plane](chaos-control-plane)
 
 Consists of micro-services responsible for the functioning of the ChaosCenter, the web based portal used for creating, scheduling, and monitoring chaos workflows.
 
-### [Execution Plane](execution-plane)
+### [Execution Plane](chaos-execution-plane)
 
 Contains the components required for the orchestration of chaos injection in the target resources.
 

@@ -60,4 +60,4 @@ Now while scheduling a workflow, the image registry changes will be visible. Her
 ## Learn More
 
 - [What is a Chaos Workflow](../concepts/chaos-workflow)
-- [What is ChaosCenter](../concepts/chaoscenter)
+- [What is ChaosCenter](../getting-started/resources#chaoscenter)
