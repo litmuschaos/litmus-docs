@@ -1,7 +1,7 @@
 ---
 id: setup-datasource
 title: Setting up Data source
-sidebar_label: Set up Data source
+sidebar_label: Setup Data source
 ---
 
 This guide provides sample scrape job to be used for Prometheus deployment’s scrape-configmap and service monitors to be used with Prometheus operator for the different architectural topologies for integrating Prometheus (connecting a data source link) with Chaos center.
