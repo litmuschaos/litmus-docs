@@ -367,6 +367,10 @@
         {
           "type": "doc",
           "id": "version-2.0.0/user-guides/uninstall-litmus"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.0.0/user-guides/upgrade"
         }
       ]
     },
