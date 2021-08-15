@@ -23,6 +23,8 @@ To upgrade Litmus ChaosCenter from 2.0.0-Beta9 to 2.0.0, you can follow these st
     To do this, `disconnect` the ChaosAgent from ChaosCenter.
 
     <img src={require('../assets/disconnect-image.png').default} width="800" />
+
+    or
     
     After that delete the `agent-config` and `subscriber` deployment. Once this is done, the ChaosAgents can be re-installed using [Litmusctl](../litmusctl/installation)
 
