@@ -22,7 +22,7 @@ To upgrade Litmus ChaosCenter from 2.0.0-Beta9 to 2.0.0, you can follow these st
     kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/2.0.0/docs/2.0.0/litmus-2.0.0.yaml
     ```
     
-2.  Reinstall the agent components using litmuctl
+2.  Reinstall the agent components using litmusctl
     >Note: While reinstallation, make sure to use the same agent name 
     
     To reinstall the ChaosAgents, use [Litmusctl](../litmusctl/usage-non-interactive-mode.md)
