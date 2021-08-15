@@ -6,23 +6,25 @@ sidebar_label: Upgrade
 
 ---
 
+## Upgrade ChaosCenter
+
 To upgrade Litmus ChaosCenter from 2.0.0-Beta9 to 2.0.0, you can follow these steps:
 
-1. ## Control Plane Upgrade
-    With this approach, the ChaosCenter components will get upgrade via helm. This step updates the frontend, server and mongo image. This can be done using the following commands: 
+1.  **Control Plane Upgrade**
+    To upgrade ChaosCenter with this approach, you can re-apply the 2.0.0 manifest: 
 
     ```
-    kubectl set image
+    kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/2.0.0/docs/2.0.0/litmus-2.0.0.yaml
     ```
 
-    ```
-    kubectl set env VERSION=“2.0.0”
-    ```
-
-2. ## Agent Plane Upgrade
+2.  **Agent Plane Upgrade**
     With this approach, all the ChaosAgents connected with ChaosCenter should be upgraded manually with [Litmusctl](../litmusctl/installation).
-    To do this, delete the `agent-config` and `subscriber` deployment. Once this is done, the ChaosAgents can be re-installed using [Litmusctl](../litmusctl/installation)
 
-:::note
+    To do this, `disconnect` the ChaosAgent from ChaosCenter.
+
+    <img src={require('../assets/disconnect-image.png').default} width="800" />
+    
+    After that delete the `agent-config` and `subscriber` deployment. Once this is done, the ChaosAgents can be re-installed using [Litmusctl](../litmusctl/installation)
+
+## Upgrade DB Schema
 To upgrade the DB schema, make sure to delete the PV before re-installing ChaosCenter.
-:::
