@@ -129,7 +129,7 @@ kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0/litmus-2.0.0.yaml -n
 
 #### **Verify Successful Registration of the Self Agent post [Account Configuration](setup-without-ingress)**
 
-Once the project is created, the cluster is automatically registered as a chaos target via installation of [ChaosAgents](../getting-started/resources#chaosagents.md). This is represented as [Self-Agent](../getting-started/resources#types-of-chaosagents.md) in [ChaosCenter](../getting-started/resources#chaoscenter.md).
+Once the project is created, the cluster is automatically registered as a chaos target via installation of [ChaosAgents](../getting-started/resources.md#chaosagents). This is represented as [Self-Agent](../getting-started/resources.md#types-of-chaosagents) in [ChaosCenter](../getting-started/resources.md#chaoscenter).
 
 ```bash
 kubectl get pods -n litmus

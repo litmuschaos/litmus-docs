@@ -203,6 +203,7 @@ service/mongo-service created
 > Note: With the namespace mode of the control panel, we need to set the endpoint of the chaos center server according to the use case. By default, it is `http://litmusportal-server-service:9002`
 
 To alter, Apply:
+
 ```bash
 kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" PORTAL_ENDPOINT="http://172.132.44.44:3231"
 ```
@@ -211,7 +212,7 @@ kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-s
 
 #### **Verify Successful Registration of the Self Agent post [Account Configuration](setup-without-ingress)**
 
-Once the project is created, the cluster is automatically registered as a chaos target via installation of [ChaosAgents](../getting-started/resources#chaosagents.md). This is represented as [Self-Agent](../getting-started/resources#types-of-chaosagents.md) in [ChaosCenter](../getting-started/resources#chaosagents.md).
+Once the project is created, the cluster is automatically registered as a chaos target via installation of [ChaosAgents](../getting-started/resources.md#chaosagents). This is represented as [Self-Agent](../getting-started/resources.md#types-of-chaosagents) in [ChaosCenter](../getting-started/resources.md#chaosagents).
 
 ```bash
 kubectl get pods -n litmus
