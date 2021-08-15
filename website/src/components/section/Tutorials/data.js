@@ -9,7 +9,7 @@ export const TutorialData = [
   {
     heading: 'Creating Custom Chaos Workflows',
     description: 'Usage MyHub and Asset Discovery to create Custom Workflows',
-    image: '/img//Tutorials/custom-chaos.png',
+    image: '/img/Tutorials/custom-chaos.png',
     isAvailable: false
   },
   {
