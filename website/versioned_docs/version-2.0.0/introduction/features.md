@@ -77,6 +77,6 @@ Below is a high level comparison between Litmus 1.x and Litmus 2.0 providing a h
 - [Run your first workflow in 5 minutes](../getting-started/run-your-first-workflow)
 - [Install Litmus](../getting-started/installation)
 - [Visualize Workflows](../concepts/visualize-workflow)
-- [Chaos Schedule](../concepts/chaos-schedule)
+<!-- - [Chaos Schedule](../concepts/chaos-schedule) -->
 - [Monitoring](../concepts/app-infra-monitoring)
 - [View the different User Guides](../user-guides/overview)

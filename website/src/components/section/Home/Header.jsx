@@ -23,7 +23,7 @@ const Header = () => {
             <ButtonFilled>Start Learning</ButtonFilled>
           </Link>
           <span style={{ width: '1rem' }} />
-          <Link to="/docs/next/getting-started/installation">
+          <Link to="/docs/getting-started/installation">
             <ButtonOutlined>Get Started</ButtonOutlined>
           </Link>
         </Row>

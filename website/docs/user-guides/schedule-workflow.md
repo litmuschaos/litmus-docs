@@ -8,7 +8,7 @@ sidebar_label: Schedule Workflow
 
 ## Before you begin
 
-You must connect an Agent before scheduling a workflow. There might be a default `Self-Agent` automatically created or you can [connect an external Agent](../litmusctl/cluster-scope-installation).
+You must connect an Agent before scheduling a workflow. There might be a default `Self-Agent` automatically created or you can [connect an external Agent](../litmusctl/installation).
 
 ---
 
@@ -149,5 +149,5 @@ This is the final step in workflow creation process. In this step, you can valid
 ## Learn more
 
 - [Observe Workflow](observe-workflow)
-- [Edit Schedule](edit-schdule)
+- [Edit Schedule](edit-schedule)
 - [Save Workflows as a Template](save-as-template)

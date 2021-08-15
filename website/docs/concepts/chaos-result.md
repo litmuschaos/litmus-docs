@@ -1,5 +1,5 @@
 ---
-id: chaos-results
+id: chaos-result
 title: ChaosResult
 sidebar_label: ChaosResult
 ---

@@ -10,7 +10,7 @@ sidebar_label: Resources
 
 The <span style={{color: '#5B44BA'}}>**ChaosCenter**</span> is a single source of truth to control all the different Chaos Activities happening around Litmus. From the ChaosCenter you get the freedom to manage every single part of Litmus and shape your workflows exactly the way you want it.
 
-**ChaosCenter comes pre-packaged** as a part of LitmusChaos installation and can be easily accessed via [Ingress](setup-with-ingress), [NodePort](setup-without-ingress#with-nodeport) or [LoadBalancer](setup-without-ingress#with-loadbalancer). Since Litmus has Cross-Cloud support, you get seamless access to the ChaosCenter irrespectively of where you deploy it.
+**ChaosCenter comes pre-packaged** as a part of LitmusChaos installation and can be easily accessed via [Ingress](../user-guides/setup-with-ingress), [NodePort](../user-guides/setup-without-ingress#with-nodeport) or [LoadBalancer](../user-guides/setup-without-ingress#with-loadbalancer). Since Litmus has Cross-Cloud support, you get seamless access to the ChaosCenter irrespectively of where you deploy it.
 
 > [Get a broader view of which Platforms are supported by Litmus](https://github.com/litmuschaos/litmus/tree/master/litmus-portal#platforms-support)
 

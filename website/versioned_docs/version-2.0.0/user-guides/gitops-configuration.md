@@ -10,7 +10,7 @@ GitOps enables you to configure a single source of truth for your chaos workflow
 
 ## Before you begin
 - [Gitops](../concepts/gitops)
-- [ChaosAgent](../concepts/chaos-agent)
+<!-- - [ChaosAgent](../concepts/chaos-agent) -->
 - [ChaosWorkflow](../concepts/chaos-workflow)
 - Ensure that you have an active internet connection and a git repository. 
 
