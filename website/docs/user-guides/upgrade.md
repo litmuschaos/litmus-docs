@@ -10,14 +10,14 @@ sidebar_label: Upgrade
 
 To upgrade Litmus ChaosCenter from 2.0.0-Beta9 to 2.0.0, you can follow these steps:
 
-1.  **Control Plane Upgrade**
+1.  ## Control Plane Upgrade
     To upgrade ChaosCenter with this approach, you can re-apply the 2.0.0 manifest: 
 
     ```
     kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/2.0.0/docs/2.0.0/litmus-2.0.0.yaml
     ```
 
-2.  **Agent Plane Upgrade**
+2.  ## Agent Plane Upgrade
     With this approach, all the ChaosAgents connected with ChaosCenter should be upgraded manually with [Litmusctl](../litmusctl/installation).
 
     To do this, `disconnect` the ChaosAgent from ChaosCenter.
