@@ -6,7 +6,7 @@ sidebar_label: Upgrade
 
 ---
 
-To upgrade the Litmus ChaosCenter from 2.0.0-Beta9 to 2.0.0, you can follow the following steps:
+To upgrade Litmus ChaosCenter from 2.0.0-Beta9 to 2.0.0, you can follow these steps:
 
 1. ## Control Plane Upgrade
     With this approach, the ChaosCenter components will get upgrade via helm. This step updates the frontend, server and mongo image. This can be done using the following commands: 
