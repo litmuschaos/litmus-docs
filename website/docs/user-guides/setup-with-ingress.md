@@ -36,7 +36,7 @@ kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-s
 
 Example:
 ```bash
-kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" INGRESS_NAME="example-ingress"
+kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" INGRESS_NAME="litmus-ingress"
 ```
 
 ### With HTTP

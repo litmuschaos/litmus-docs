@@ -53,7 +53,7 @@ you can click on the nodes to get the logs of that particular step. If the rever
 
 ## View chaos results
 
-Once the experiment completes, the [Chaos Results](../concepts/chaos-results) are also available alongside the logs. The Chaos Results are directly fetched from the ChaosResult CRD.
+Once the experiment completes, the [Chaos Results](../concepts/chaos-result) are also available alongside the logs. The Chaos Results are directly fetched from the ChaosResult CRD.
 
 <figure>
 <img src={require('../assets/user-guides/injecting-fault/observe-workflow/completed-workflow-with-chaos-results.png').default} alt="Podtato Head workflow with chaos logs and chaos result of pod-delete experiment" />
@@ -100,6 +100,6 @@ Once the workflow run execution completes, you can click the **Show the analytic
 
 ## Learn more
 
-- [Edit Schedule](edit-schdule)
+- [Edit Schedule](edit-schedule)
 - [Download Workflow Manifest](download-workflow-manifest)
 - [Re-run a Workflow](re-run-workflow)

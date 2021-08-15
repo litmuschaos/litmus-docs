@@ -40,7 +40,7 @@ module.exports = {
         'concepts/chaos-experiment',
         'concepts/probes',
         'concepts/chaos-engine',
-        'concepts/chaos-results',
+        'concepts/chaos-result',
         'concepts/chaoshub',
         {
           'Chaos Workflow': ['concepts/chaos-workflow', 'concepts/visualize-workflow']

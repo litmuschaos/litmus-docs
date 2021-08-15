@@ -13,7 +13,7 @@ With ChaosCenter, the real-time data and status of the workflows can be observed
 
 The following should be required before creating a Chaos Workflow:
 
-- [ChaosCenter](chaoscenter)
+- ChaosCenter
 - [Workflows](chaos-workflow)
 
 ## Litmus Workflow
