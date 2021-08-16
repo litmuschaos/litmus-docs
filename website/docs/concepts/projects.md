@@ -31,5 +31,5 @@ Projects can be imagined as separations between multiple different configuration
 ## Learn more
 
 - [More about project management](../user-guides/change-project-name)
-- [More about Teaming](teaming)
+- [More about Teaming](../concepts/teaming)
 - [Invite a member to your project](../user-guides/invite-team-member)

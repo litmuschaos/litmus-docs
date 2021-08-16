@@ -16,9 +16,9 @@ The following should be required before creating a Chaos Workflow:
 
 - ChaosCenter
 - ChaosAgent
-- [Chaos Experiment CR](chaos-experiment)
-- [ChaosEngine CR](chaos-engine)
-- [Probes](probes)
+- [Chaos Experiment CR](../concepts/chaos-experiment)
+- [ChaosEngine CR](../concepts/chaos-engine)
+- [Probes](../concepts/probes)
 
 ## How do we define and execute a workflow?
 
