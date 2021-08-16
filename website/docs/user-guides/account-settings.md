@@ -34,5 +34,5 @@ On successful completion, you’ll be getting a modal indicating that the passwo
 
 ## Learn more
 
-- [Create a new user](create-user)
-- [View users and their details](view-user)
+- [Create a new user](create-user.md)
+- [View users and their details](view-user.md)

@@ -29,7 +29,7 @@ After creating a dashboard, you view the corresponding metrics along with the ch
 
 - **More Options:**
 
-  - Configure: To make changes in the metadata and/or fine-tune the queries. To learn about configuring a dashboard [click here.](manage-app-dashboard)
+  - Configure: To make changes in the metadata and/or fine-tune the queries. To learn about configuring a dashboard [click here.](manage-app-dashboard.md)
   - Clone: To make a copy of the current dashboard click on the clone button. Enter new name of the dashboard and click on `ok`
 
   - Download a JSON: To download the complete dashboard configuration in JSON format.
@@ -61,7 +61,7 @@ After creating a dashboard, you view the corresponding metrics along with the ch
 <i>View individulal graph in modal</i>
 </figure>
 
-- **Edit particular panel:** To edit the queries for the specific panel. On clicking on the `Edit` button you will be directed to the dashboard configuration page where you can tune the queries. To learn more about query editing [click here](editing-queries-app-dashboard).
+- **Edit particular panel:** To edit the queries for the specific panel. On clicking on the `Edit` button you will be directed to the dashboard configuration page where you can tune the queries. To learn more about query editing [click here](editing-queries-app-dashboard.md).
 
 - **Show chaos during this interval:** Among all the chaos injections that have been scheduled by the user, chaos events that lie within the selected time interval are listed in form of a table. You may select/deselect the specific chaos events to visualize them on the graphs as an overlay for the chaos during. Please note that all the chaos events come along with the lasted verdict corresponding to the chaos workflow.
 
@@ -83,6 +83,6 @@ After creating a dashboard, you view the corresponding metrics along with the ch
 
 ## Learn more
 
-- [Manage Application Dashboard](manage-app-dashboard)
-- [Editing Panel Queries](editing-queries-app-dashboard)
-- [Sharing Application Dashboards](share-app-dashboard)
+- [Manage Application Dashboard](manage-app-dashboard.md)
+- [Editing Panel Queries](editing-queries-app-dashboard.md)
+- [Sharing Application Dashboards](share-app-dashboard.md)

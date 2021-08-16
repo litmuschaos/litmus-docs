@@ -15,7 +15,7 @@ Overview Tab helps you to manage your connected data sources and dashboards, all
 ## Before you begin
 
 Before starting with observability setup, you have to connect an agent to get workflow statistics & keep track of workflows performance.
-For connecting a new agent, you can follow [here](../litmusctl/installation) .
+For connecting a new agent, you can follow [here](../litmusctl/installation.md) .
 
 ---
 
@@ -49,6 +49,6 @@ You can check the workflow analytics and the workflow run graph by clicking on _
 
 ## Learn more
 
-- [Analyze a Workflow](analyze-workflow)
-- [Configure Datasource](configure-datasource)
-- [Manage Application Dashboard](manage-app-dashboard)
+- [Analyze a Workflow](analyze-workflow.md)
+- [Configure Datasource](configure-datasource.md)
+- [Manage Application Dashboard](manage-app-dashboard.md)

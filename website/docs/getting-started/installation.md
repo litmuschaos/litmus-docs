@@ -171,7 +171,7 @@ By default you are assigned with a default project with Owner permissions.
 
 ## **Verify Successful Registration of the Self Agent**
 
-Once the project is created, the cluster is automatically registered as a chaos target via installation of [ChaosAgents](resources#chaosagents). This is represented as [Self-Agent](resources#types-of-chaosagents) in [ChaosCenter](resources#chaoscenter).
+Once the project is created, the cluster is automatically registered as a chaos target via installation of [ChaosAgents](resources.md#chaosagents). This is represented as [Self-Agent](resources.md#types-of-chaosagents) in [ChaosCenter](resources.md#chaoscenter).
 
 ```bash
 kubectl get pods -n litmus

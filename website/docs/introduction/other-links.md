@@ -39,4 +39,4 @@ http://hub.litmuschaos.io/
 
 We welcome Kubernetes SREs and Developers to join this zealous community to learn and share all about Cloud-Native Chaos Engineering.
 
-[Be a part of the community now.](community)
+[Be a part of the community now.](community.md)

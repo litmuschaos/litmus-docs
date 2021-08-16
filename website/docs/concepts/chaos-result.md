@@ -10,8 +10,8 @@ ChaosResult resource holds the results of a ChaosExperiment with a namespace sco
 
 ## Prerequisites
 
-To understand the concept of ChaosResult, make sure you have good knowledge of the [ChaosEngine](../concepts/chaos-engine) CR and
-[Chaos Workflow](../concepts/chaos-workflow).
+To understand the concept of ChaosResult, make sure you have good knowledge of the [ChaosEngine](chaos-engine.md) CR and
+[Chaos Workflow](chaos-workflow.md).
 
 ## ChaosResult Spec
 
@@ -345,5 +345,5 @@ ChaosResult resource holds the results of a ChaosExperiment. It comprises of som
 
 ## Learn More
 
-- [Run a Chaos Workflow](../getting-started/run-your-first-workflow)
-- [Observe a chaos workflow](visualize-workflow)
+- [Run a Chaos Workflow](../getting-started/run-your-first-workflow.md)
+- [Observe a chaos workflow](visualize-workflow.md)

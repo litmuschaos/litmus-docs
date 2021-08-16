@@ -8,14 +8,14 @@ sidebar_label: Features
 
 The goal of the LitmusChaos project is to create a complete solution to implement chaos engineering at scale, the Kubernetes way! Of course, this had to be done incrementally by first creating a toolset for chaos injection and then adding additional features to make it a platform. Litmus 1.x achieved the goal of keeping it completely open-source, creating a [ChaosHub](../concepts/chaoshub.md) and the required CRDs, Operators, and Schedulers. With Litmus 1.x, users have a working chaos engineering toolset aligned with the original goals.
 
-Over time, with the monthly cadence releases and community engagement, we have added a lot of features and made LitmusChaos much easier for the end-users. With the launch of Litmus 2.0, a new way of chaos engineering can be performed by the users, a few high-level features are mentioned [below](features#advantages-of-litmus-20), however a detailed list can be found on the [release page](https://github.com/litmuschaos/litmus/releases).
+Over time, with the monthly cadence releases and community engagement, we have added a lot of features and made LitmusChaos much easier for the end-users. With the launch of Litmus 2.0, a new way of chaos engineering can be performed by the users, a few high-level features are mentioned [below](features.md#advantages-of-litmus-20), however a detailed list can be found on the [release page](https://github.com/litmuschaos/litmus/releases).
 
 ## Advantages of Litmus 2.0
 
 A high-level feature overview of Litmus 2.0 are as follows
 
-- The Addition of [Chaos Workflow](../concepts/chaos-workflow) creation, Chaos experiments become building blocks of a Chaos Workflow, to allow users to create a larger chaos scenario using sequential or parallel experiment executions.
-- Addition of [ChaosCenter](../getting-started/resources#chaoscenter) where you can take advantage of all these features and a lot more
+- The Addition of [Chaos Workflow](../concepts/chaos-workflow.md) creation, Chaos experiments become building blocks of a Chaos Workflow, to allow users to create a larger chaos scenario using sequential or parallel experiment executions.
+- Addition of [ChaosCenter](../getting-started/resources.md#chaoscenter) where you can take advantage of all these features and a lot more
   - Workflow Creation
     <span style={{color: '#696F8C'}}>
     <ul>
@@ -74,9 +74,9 @@ Below is a high level comparison between Litmus 1.x and Litmus 2.0 providing a h
 
 ## Learn more
 
-- [Run your first workflow in 5 minutes](../getting-started/run-your-first-workflow)
-- [Install Litmus](../getting-started/installation)
-- [Visualize Workflows](../concepts/visualize-workflow)
+- [Run your first workflow in 5 minutes](../getting-started/run-your-first-workflow.md)
+- [Install Litmus](../getting-started/installation.md)
+- [Visualize Workflows](../concepts/visualize-workflow.md)
 - Chaos Schedule
-- [Monitoring](../concepts/app-infra-monitoring)
-- [View the different User Guides](../user-guides/overview)
+- [Monitoring](../concepts/app-infra-monitoring.md)
+- [View the different User Guides](../user-guides/overview.md)

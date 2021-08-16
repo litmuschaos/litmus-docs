@@ -14,7 +14,7 @@ This also means that all the runs corresponding to that workflow will also be de
 
 ## Before you begin
 
-You can learn about the concept of workflows [here](../concepts/chaos-workflow) and how to schedule your first workflow [here](schedule-workflow).
+You can learn about the concept of workflows [here](../concepts/chaos-workflow.md) and how to schedule your first workflow [here](schedule-workflow.md).
 
 ## 1. Go to the workflows sections
 
@@ -40,4 +40,4 @@ As stated above, we observe that the runs have been removed as well.
 
 ## Learn more
 
-- [schedule a workflow](schedule-workflow)
+- [schedule a workflow](schedule-workflow.md)

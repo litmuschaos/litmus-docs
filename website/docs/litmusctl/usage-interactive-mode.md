@@ -4,6 +4,8 @@ title: Installing ChaosAgents in interactive mode
 sidebar_label: Using interactive mode
 ---
 
+---
+
 # Usage: Litmusctl v0.3.0
 
 > Notes:
@@ -32,7 +34,7 @@ Litmusctl supports both interactive and non-interactive(flag based) modes.
 
 > Only `litmusctl create agent` command needs --non-interactive flag, other commands don't need this flag to be in non-interactive mode. If mandatory flags aren't passed, then litmusctl takes input in an interactive mode.
 
-Multiple external ChaosAgents can be connected to the ChaosCenter with the help of the command line utility [litmusctl](installation)
+Multiple external ChaosAgents can be connected to the ChaosCenter with the help of the command line utility [litmusctl](installation.md)
 
 ### Steps to create an agent
 
@@ -278,7 +280,7 @@ For more information related to flags, Use `litmusctl --help`.
 
 ## Learn More
 
-- [Learn More about Litmusctl](installation)
+- [Learn More about Litmusctl](installation.md)
 - [Installing ChaosAgents in non interactive mode](./usage-non-interactive-mode.md)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)

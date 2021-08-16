@@ -10,7 +10,7 @@ Owners have the ability to change the name of their project if they wish to do s
 
 ## Before you begin
 
-The concept of `Projects` is discussed [here](../concepts/projects) and will help you build a foundational understanding of what projects mean in the ChaosCenter.
+The concept of `Projects` is discussed [here](../concepts/projects.md) and will help you build a foundational understanding of what projects mean in the ChaosCenter.
 
 ## Steps
 
@@ -34,5 +34,5 @@ Once in the editing mode, type out the name you want to replace the current name
 
 ## Learn more
 
-- [Invite a member to your project](invite-team-member)
-- [Remove a member from your project](remove-team-member)
+- [Invite a member to your project](invite-team-member.md)
+- [Remove a member from your project](remove-team-member.md)

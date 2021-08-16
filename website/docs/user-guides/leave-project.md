@@ -20,5 +20,5 @@ In the settings page, scroll to the very bottom of the `Team` tab. Here you will
 
 ## Learn more
 
-- [Invite a member to your project](invite-team-member)
-- [Remove a member from your project](remove-team-member)
+- [Invite a member to your project](invite-team-member.md)
+- [Remove a member from your project](remove-team-member.md)
