@@ -12,8 +12,8 @@ Litmus 2.0 builds on principle of Open observability through observability hooks
 
 The following should be required before knowing about Open observability hooks in litmus 2.0:
 
-- [Probes](probes)
-- [Application / Infra. monitoring](app-infra-monitoring)
+- [Probes](../concepts/probes)
+- [Application / Infra. monitoring](../concepts/app-infra-monitoring)
 
 ## Probes
 
@@ -28,7 +28,7 @@ _Litmus currently supports four types of probes:_
 
 These probes can be used in isolation or in several combinations to achieve the desired checks.
 
-More about Probes can be found [here](probes)
+More about Probes can be found [here](../concepts/probes)
 
 ## Chaos exporter
 
@@ -68,4 +68,4 @@ Litmus supports several kinds of `probes` and also has a `chaos-exporter` on it'
 
 - [Prometheus](../integrations/prometheus)
 - [Grafana](../integrations/grafana)
-- [Application and infrastructure monitoring](app-infra-monitoring)
+- [Application and infrastructure monitoring](../concepts/app-infra-monitoring)

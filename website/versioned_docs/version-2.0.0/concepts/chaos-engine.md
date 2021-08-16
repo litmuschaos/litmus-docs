@@ -907,6 +907,6 @@ This CR is also updated/patched with status of the chaos experiments, making it 
 
 ## Learn More
 
-- [Explore Probes](probes)
-- [What is a Chaos Workflow](chaos-workflow)
-- [Examine the ChaosResult](chaos-result)
+- [Explore Probes](../concepts/probes)
+- [What is a Chaos Workflow](../concepts/chaos-workflow)
+- [Examine the ChaosResult](../concepts/chaos-result)

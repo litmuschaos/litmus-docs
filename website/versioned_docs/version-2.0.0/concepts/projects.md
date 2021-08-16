@@ -10,7 +10,7 @@ The ChaosCenter comes with a project management system which can be used for wor
 
 ## Prerequisites
 
-Before learning abpout the concept of `projects`, it is important to note that a `project` signifies a separation between Agents, Schedules, [Visualization](visualize-workflow), and Teams (discussed in the next section) configurations, and prior knowledge of these will prove fruitful in understanding the concept of `projects` in-depth.
+Before learning abpout the concept of `projects`, it is important to note that a `project` signifies a separation between Agents, Schedules, [Visualization](../concepts/visualize-workflow), and Teams (discussed in the next section) configurations, and prior knowledge of these will prove fruitful in understanding the concept of `projects` in-depth.
 
 ## Projects
 
@@ -31,5 +31,5 @@ Projects can be imagined as separations between multiple different configuration
 ## Learn more
 
 - [More about project management](../user-guides/change-project-name)
-- [More about Teaming](teaming)
+- [More about Teaming](../concepts/teaming)
 - [Invite a member to your project](../user-guides/invite-team-member)
