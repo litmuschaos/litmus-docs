@@ -4,16 +4,18 @@ title: Collecting metrics using Prometheus
 sidebar_label: Prometheus
 ---
 
+---
+
 LitmusChaos facilitates real-time monitoring for events and metrics using it’s native chaos exporter. These events and metrics can be exported into any TSDBs (Time-series databases) to overlay on top of application performance graphs and also as additional visualizations for chaos testing statistics. To set up or configure your monitoring infrastructure to support litmus chaos events and metrics, we provide both service endpoints and service monitors setup.
 
-## Prerequisites
+## Before you begin
 
 The following should be required before integrating Prometheus in litmus 2.0:
 
-- [Running Chaos Workflows](../getting-started/run-your-first-workflow)
+- [Running Chaos Workflows](../getting-started/run-your-first-workflow.md)
 - [Prometheus TSDB](https://prometheus.io/)
-- [Probes](../concepts/probes)
-- [Data source](../concepts/datasource)
+- [Probes](../concepts/probes.md)
+- [Data source](../concepts/datasource.md)
 
 ## Prometheus deployment with scrape job
 
@@ -181,7 +183,7 @@ Link: [https://github.com/litmuschaos/tutorials/issues/6](https://github.com/lit
 
 The promProbe allows users to run Prometheus queries and match the resulting output against specific conditions. The intent behind this probe is to allow users to define metrics-based SLOs in a declarative way and determine the experiment verdict based on its success. The probe runs the query on a Prometheus server defined by the endpoint, and checks whether the output satisfies the specified criteria.
 
-Know more on promProbe [here](../concepts/probes)
+Know more on promProbe [here](../concepts/probes.md)
 
 ## Resources
 
@@ -189,7 +191,7 @@ Know more on promProbe [here](../concepts/probes)
 
 ## Learn More
 
-- [Application and infrastructure monitoring](../concepts/app-infra-monitoring)
-- [Observability Setup](../user-guides/observability-set-up)
-- [Configure Data Source](../user-guides/configure-datasource)
-- [Grafana Integration](grafana)
+- [Application and infrastructure monitoring](../concepts/app-infra-monitoring.md)
+- [Observability Setup](../user-guides/observability-set-up.md)
+- [Configure Data Source](../user-guides/configure-datasource.md)
+- [Grafana Integration](grafana.md)

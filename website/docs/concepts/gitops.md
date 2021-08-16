@@ -9,7 +9,7 @@ sidebar_label: GitOps
 ## Prerequisites
 
 - ChaosAgent
-- [ChaosWorkflow](../concepts/chaos-workflow)
+- [ChaosWorkflow](chaos-workflow.md)
 
 GitOps feature in Litmus enables you to configure a single source of truth for your chaos workflows and experiments, any changes made either to the artifacts stored in the configured git repository or the portal will be synced. This allows you to create and execute workflows directly from git enabling a vast scope of automation in CI/CD pipelines.
 
@@ -43,6 +43,6 @@ GitOps is by default disabled for the projects created in Litmus, but it can be 
 
 ## Learn More
 
-- [Configuring GitOps](../user-guides/gitops-configuration)
-- [Schedule a workflow](../user-guides/schedule-workflow)
-- [Observe a Chaos Workflow](../user-guides/Observe-workflow)
+- [Configuring GitOps](../user-guides/gitops-configuration.md)
+- [Schedule a workflow](../user-guides/schedule-workflow.md)
+- [Observe a Chaos Workflow](../user-guides/observe-workflow.md)

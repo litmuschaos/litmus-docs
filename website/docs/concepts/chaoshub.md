@@ -100,5 +100,5 @@ ChaosHubs are basically a collection of different clones of the Chaos-Charts rep
 
 ## Learn More
 
-- [What is a Chaos Workflow](../concepts/chaos-workflow)
-- [Examine the ChaosResult](../concepts/chaos-result)
+- [What is a Chaos Workflow](chaos-workflow.md)
+- [Examine the ChaosResult](chaos-result.md)

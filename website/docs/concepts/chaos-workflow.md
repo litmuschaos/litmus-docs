@@ -16,9 +16,9 @@ The following should be required before creating a Chaos Workflow:
 
 - ChaosCenter
 - ChaosAgent
-- [Chaos Experiment CR](../concepts/chaos-experiment)
-- [ChaosEngine CR](../concepts/chaos-engine)
-- [Probes](../concepts/probes)
+- [Chaos Experiment CR](chaos-experiment.md)
+- [ChaosEngine CR](chaos-engine.md)
+- [Probes](probes.md)
 
 ## How do we define and execute a workflow?
 
@@ -421,6 +421,6 @@ These workflows consist of a cron syntax that is used for scheduling a workflow.
 
 ## Learn More
 
-- [Explore Probes](probes)
-- [Visualize a Chaos Workflow](visualize-workflow)
-- [Examine the ChaosResult](chaos-result)
+- [Explore Probes](probes.md)
+- [Visualize a Chaos Workflow](visualize-workflow.md)
+- [Examine the ChaosResult](chaos-result.md)
