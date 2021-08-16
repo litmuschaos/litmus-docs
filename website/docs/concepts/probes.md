@@ -10,7 +10,7 @@ In Litmus, Probes are pluggable checks that can be defined within the ChaosEngin
 
 ## Prerequisites
 
-To understand the concepts of Probes better make sure you are aware of the [ChaosEngine](chaos-engine) Custom Resources and promql queries (for Prometheus Probes)
+To understand the concepts of Probes better make sure you are aware of the [ChaosEngine](../concepts/chaos-engine) Custom Resources and promql queries (for Prometheus Probes)
 
 ## Probes
 
@@ -54,7 +54,7 @@ The `httpProbe` allows developers to specify a URL which the experiment uses to 
 
 In HTTP `Get` method it sends a http `GET` request to the provided url and matches the response code based on the given criteria(`==`, `!=`, `oneOf`).
 
-In HTTP `Post` method it sends a http `POST` request to the provided url. The http body can be provided in the `body` field. In the case of a complex POST request in which the body spans multiple lines, the `bodyPath` attribute can be used to provide the path to a file consisting of the same. This file can be made available to the experiment pod via a ConfigMap resource, with the ConfigMap name being defined in the [ChaosEngine](chaos-engine) OR the ChaosExperiment CR.
+In HTTP `Post` method it sends a http `POST` request to the provided url. The http body can be provided in the `body` field. In the case of a complex POST request in which the body spans multiple lines, the `bodyPath` attribute can be used to provide the path to a file consisting of the same. This file can be made available to the experiment pod via a ConfigMap resource, with the ConfigMap name being defined in the [ChaosEngine](../concepts/chaos-engine) OR the ChaosExperiment CR.
 It can be defined at `.spec.experiments[].spec.probe` inside ChaosEngine.
 
 > `body` and `bodyPath` are mutually exclusive

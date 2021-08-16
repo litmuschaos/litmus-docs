@@ -12,8 +12,8 @@ Chaos injections often tends to disrupt tightly coupled micro-services and proce
 
 The following should be required before knowing about workflow statistics:
 
-- [Workflows](chaos-workflow)
-- [Visualize Workflow](visualize-workflow)
+- [Workflows](../concepts/chaos-workflow)
+- [Visualize Workflow](../concepts/visualize-workflow)
 
 ## Data flow architecture
 
@@ -46,5 +46,5 @@ Statistics of a workflow schedule across its runs and analyzing application perf
 
 ## Learn More
 
-- [Explore Probes](probes)
-- [Application and infrastructure monitoring](app-infra-monitoring)
+- [Explore Probes](../concepts/probes)
+- [Application and infrastructure monitoring](../concepts/app-infra-monitoring)
