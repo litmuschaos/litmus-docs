@@ -4,7 +4,7 @@ title: Workflow Statistics
 sidebar_label: Workflow Statistics
 ---
 
-## Introduction
+---
 
 Chaos injections often tends to disrupt tightly coupled micro-services and processes. Visualizing the results and plotting analytical graphs prove to be useful under such circumstances. An analytical overview of chaos workflows for an entire month or a year can help in benchmarking release cycles and building a viable cloud-native product. Also a comparative study over time or rather just being able to observe and plot resiliency scores across different types of chaos workflows on different subsystems provide a conclusive summary of the reliability metrics for an application under test (AUT) and the supporting platform or infrastructure.
 
@@ -12,8 +12,8 @@ Chaos injections often tends to disrupt tightly coupled micro-services and proce
 
 The following should be required before knowing about workflow statistics:
 
-- [Workflows](../concepts/chaos-workflow)
-- [Visualize Workflow](../concepts/visualize-workflow)
+- [Workflows](chaos-workflow.md)
+- [Visualize Workflow](visualize-workflow.md)
 
 ## Data flow architecture
 
@@ -46,5 +46,5 @@ Statistics of a workflow schedule across its runs and analyzing application perf
 
 ## Learn More
 
-- [Explore Probes](../concepts/probes)
-- [Application and infrastructure monitoring](../concepts/app-infra-monitoring)
+- [Explore Probes](probes.md)
+- [Application and infrastructure monitoring](app-infra-monitoring.md)

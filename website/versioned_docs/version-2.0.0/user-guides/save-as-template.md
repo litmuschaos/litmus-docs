@@ -10,7 +10,7 @@ You can save a schedule as a template for later usage in subsequent schedules. T
 
 ## Before you begin
 
-You can learn how to schedule your first workflow [here](schedule-workflow).
+You can learn how to schedule your first workflow [here](schedule-workflow.md).
 
 ## 1. Go to the workflows sections
 
@@ -38,6 +38,6 @@ You can now see your template under the `Create a new workflow by cloning an exi
 
 ## Learn more
 
-- [Schedule a workflow](schedule-workflow)
-- [Re-run a workflow](re-run-workflow)
-- [Delete a workflow](delete-workflow)
+- [Schedule a workflow](schedule-workflow.md)
+- [Re-run a workflow](re-run-workflow.md)
+- [Delete a workflow](delete-workflow.md)
