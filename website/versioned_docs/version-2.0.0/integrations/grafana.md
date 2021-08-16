@@ -4,16 +4,18 @@ title: Observe chaos impact using Grafana
 sidebar_label: Grafana
 ---
 
+---
+
 Chaos Engineering is the discipline of experimenting on a system to build confidence in the system’s capability to withstand turbulent conditions in production. Monitoring a system's resilience and its performance under chaos are one of the fundamental principles of chaos engineering. Litmus has sample chaos interleaved dashboards available on Grafana’s community dashboards as well as provisioned dashboards along with provisioned data sources. Some sample chaos interleaved dashboards can be found [here](https://github.com/litmuschaos/litmus/tree/master/monitoring/grafana-dashboards)
 
-## Prerequisites
+## Before you begin
 
 The following should be required before integrating Grafana with litmus 2.0:
 
-- [Running Chaos Workflows](../getting-started/run-your-first-workflow)
+- [Running Chaos Workflows](../getting-started/run-your-first-workflow.md)
 - [Prometheus TSDB](https://prometheus.io/)
-- [Prometheus Integration](prometheus)
-- [Application and infrastructure monitoring](../concepts/app-infra-monitoring)
+- [Prometheus Integration](prometheus.md)
+- [Application and infrastructure monitoring](../concepts/app-infra-monitoring.md)
 
 ## Grafana setup with provisioned data source amd dashboards using Prometheus deployment with scrape jobs
 
@@ -268,5 +270,5 @@ sum(litmuschaos_awaited_experiments{job="litmus/chaos-exporter"})
 
 ## Learn More
 
-- [Application and infrastructure monitoring](../concepts/app-infra-monitoring)
-- [Observability Setup](../user-guides/observability-set-up)
+- [Application and infrastructure monitoring](../concepts/app-infra-monitoring.md)
+- [Observability Setup](../user-guides/observability-set-up.md)

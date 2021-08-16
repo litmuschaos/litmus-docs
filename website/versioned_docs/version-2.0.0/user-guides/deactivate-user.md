@@ -28,4 +28,4 @@ Similarly, the admin can re-activate the user from the same drop-down menu as sh
 
 ## Learn more
 
-- [View users](view-user)
+- [View users](view-user.md)

@@ -4,7 +4,7 @@ title: Manage Datasources
 sidebar_label: Datasource
 ---
 
-## Introduction
+---
 
 The primary stateful data store for litmus's chaos center is a mongoDB statefulset. It powers all the features in chaos center including authentication, chaos injection and analysis, agent connections etc. Apart from the primary data store, the portal provides a way to add Prometheus (TSDB) data sources for time series data visualization and monitoring. The principle of Open observability drives the chaos center and allows users to manage the data sources for a project in multiple topologies for agent specific and cross agent dashboards. The system allows to either have multiple data sources or a single data source scraping metrics and events from all target agents for monitoring chaos impact on
 application OR infrastructure.
@@ -13,7 +13,7 @@ application OR infrastructure.
 
 The following should be required before knowing about managing data sources in chaos center:
 
-- [Running Chaos Workflows](../getting-started/run-your-first-workflow)
+- [Running Chaos Workflows](../getting-started/run-your-first-workflow.md)
 - [Prometheus TSDB](https://prometheus.io/)
 
 ## Data flow architecture
@@ -47,5 +47,5 @@ LitmusChaos facilitates in-house real-time monitoring for `events` and `verdicts
 
 ## Learn More
 
-- [Visualize a Chaos Workflow](../concepts/visualize-workflow)
-- [Application and infrastructure monitoring](../concepts/app-infra-monitoring)
+- [Visualize a Chaos Workflow](visualize-workflow.md)
+- [Application and infrastructure monitoring](app-infra-monitoring.md)
