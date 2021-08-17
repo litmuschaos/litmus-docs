@@ -8,7 +8,7 @@ sidebar_label: Editing Panel Queries
 
 ## Before you begin
 
-In order to edit the queries, you must first have a [data source](configure-datasource) connected and a configured [dashboard](manage-app-dashboard#create-dashboard).
+In order to edit the queries, you must first have a [data source](configure-datasource.md) connected and a configured [dashboard](manage-app-dashboard#create-dashboard.md).
 
 ---
 
@@ -89,4 +89,4 @@ The dashboard is the root level element that contains multiple panel groups. A p
 
 ## Learn more
 
-- [Sharing Application Dashboards](share-app-dashboard)
+- [Sharing Application Dashboards](share-app-dashboard.md)

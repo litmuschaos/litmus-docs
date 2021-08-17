@@ -10,7 +10,7 @@ Observing chaos injections and deriving insights from the chaos events is the co
 
 ## Before you begin
 
-To configure an application dashboard, you must first add a data source. To learn more about data sources [click here](configure-datasource)
+To configure an application dashboard, you must first add a data source. To learn more about data sources [click here](configure-datasource.md)
 
 - If no data source is available, a banner on the application dashboard tab requests you to add it before configuring a dashboard.
 
@@ -85,9 +85,9 @@ You need to select the dashboard type from the following options:
 The dashboards comprise panel groups each having a set of panel metrics. For example here, CPU Utilization Metrics is the panel group and Chaos-Node-CPU Utilization is the panel metric.
 
 - **Tune the queries:**
-  Tuning the queries is an optional step. If you want to continue with the default set of queries then click on Save Changes and the dashboard will be created. To learn more about tuning the queries [click here](editing-queries-app-dashboard).
+  Tuning the queries is an optional step. If you want to continue with the default set of queries then click on Save Changes and the dashboard will be created. To learn more about tuning the queries [click here](editing-queries-app-dashboard.md).
 
 ## Learn more
 
-- [Editing Panel Queries](editing-queries-app-dashboard)
-- [Sharing Application Dashboards](share-app-dashboard)
+- [Editing Panel Queries](editing-queries-app-dashboard.md)
+- [Sharing Application Dashboards](share-app-dashboard.md)

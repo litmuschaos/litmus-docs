@@ -9,9 +9,9 @@ sidebar_label: Configuring GitOps
 GitOps enables you to configure a single source of truth for your chaos workflows and experiments, any changes made either to the artifacts stored in the configured git repository or the portal will be synced.
 
 ## Before you begin
-- [Gitops](../concepts/gitops)
-- [ChaosAgent](../concepts/chaos-agent)
-- [ChaosWorkflow](../concepts/chaos-workflow)
+- [Gitops](../concepts/gitops.md)
+- ChaosAgent
+- [ChaosWorkflow](../concepts/chaos-workflow.md)
 - Ensure that you have an active internet connection and a git repository. 
 
 
@@ -100,5 +100,5 @@ Currently supported policy operators are:
 
 ## Learn More
 
-- [Schedule a workflow](../user-guides/schedule-workflow)
-- [Observe a Chaos Workflow](../user-guides/observe-workflow)
+- [Schedule a workflow](../user-guides/schedule-workflow.md)
+- [Observe a Chaos Workflow](../user-guides/observe-workflow.md)

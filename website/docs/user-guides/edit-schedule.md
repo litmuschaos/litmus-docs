@@ -8,7 +8,7 @@ sidebar_label: Edit Workflow Schedule
 
 ## Before you begin
 
-You must schedule a workflow. To know more about scheduling workflows click [here](schedule-workflow)
+You must schedule a workflow. To know more about scheduling workflows click [here](schedule-workflow.md)
 
 ---
 
@@ -47,6 +47,6 @@ Click on the `Save Changes` button to commit the changes to your workflow.
 
 ## Learn more
 
-- [Observe Workflow](observe-workflow)
-- [Save Workflows as a Template](save-as-template)
-- [Re-run a Workflow](re-run-workflow)
+- [Observe Workflow](observe-workflow.md)
+- [Save Workflows as a Template](save-as-template.md)
+- [Re-run a Workflow](re-run-workflow.md)

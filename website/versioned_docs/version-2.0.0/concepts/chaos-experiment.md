@@ -6,7 +6,7 @@ sidebar_label: ChaosExperiment
 
 ---
 
-ChaosExperiment CR is the heart of litmus and contains the low-level execution information. They serve as off-the-shelf templates that one needs to "pull" (install on the cluster) before including them as part of a chaos run against any target applications (the binding being defined in the [ChaosEngine](chaos-engine)). The experiments are installed on the cluster as Kubernetes custom resources and are designed to hold granular details of the experiment such as image, library, necessary permissions, chaos parameters (set to their default values). Most of the ChaosExperiment parameters, are essentially tunables that can be overridden from the ChaosEngine resource. The ChaosExperiment CRs are the primary artifacts hosted on the [ChaosHub](https://hub.litmuschaos.io)
+ChaosExperiment CR is the heart of litmus and contains the low-level execution information. They serve as off-the-shelf templates that one needs to "pull" (install on the cluster.md) before including them as part of a chaos run against any target applications (the binding being defined in the [ChaosEngine](chaos-engine.md)). The experiments are installed on the cluster as Kubernetes custom resources and are designed to hold granular details of the experiment such as image, library, necessary permissions, chaos parameters (set to their default values). Most of the ChaosExperiment parameters, are essentially tunables that can be overridden from the ChaosEngine resource. The ChaosExperiment CRs are the primary artifacts hosted on the [ChaosHub](https://hub.litmuschaos.io)
 
 This section describes the fields in the ChaosExperiment spec and the possible values that can be set against the same.
 

@@ -22,4 +22,4 @@ In the `Login Details` section select the `New password` input field and type in
 
 ## Learn more
 
-- [View users](view-user)
+- [View users](view-user.md)

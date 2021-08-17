@@ -68,6 +68,6 @@ The Comparison report can be downloaded in PDF form using the _**export button**
 
 ## Learn more
 
-- [Configure Datasource](configure-datasource)
-- [See Workflow Analytics](analyze-workflow)
-- [Manage Application Dashboard](manage-app-dashboard)
+- [Configure Datasource](configure-datasource.md)
+- [See Workflow Analytics](analyze-workflow.md)
+- [Manage Application Dashboard](manage-app-dashboard.md)

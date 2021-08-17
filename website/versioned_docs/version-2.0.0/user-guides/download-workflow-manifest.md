@@ -10,7 +10,7 @@ You can save a schedule configurations manifest as a `YAML`. This section goes o
 
 ## Before you begin
 
-You can learn how to schedule your first workflow [here](schedule-workflow).
+You can learn how to schedule your first workflow [here](schedule-workflow.md).
 
 ## 1. Go to the workflows sections
 
@@ -26,6 +26,6 @@ After opening the options menu, click on the `Download Manifest` option. Having 
 
 ## Learn more
 
-- [Schedule a workflow](schedule-workflow)
-- [Re-run a workflow](re-run-workflow)
-- [Delete a workflow](delete-workflow)
+- [Schedule a workflow](schedule-workflow.md)
+- [Re-run a workflow](re-run-workflow.md)
+- [Delete a workflow](delete-workflow.md)

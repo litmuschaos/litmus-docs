@@ -4,7 +4,7 @@ title: Monitor Chaos in your Application/Infrastructure
 sidebar_label: Application/Infra Monitoring
 ---
 
-## Introduction
+---
 
 Application OR Infra dashboards provide a way to monitor the chaos impact on application resources, services or cloud infrastructure from within the ChaosCenter. They are user-defined and offer a way to observe systems on ChaosAgent’s cluster in the specified scope (Cluster or Namespace)
 
@@ -14,8 +14,8 @@ These dashboards are associated with ChaosAgent(s) and consume a specific Promet
 
 The following should be required before knowing about application or infrastructure monitoring using chaos center:
 
-- [Data Source](datasource)
-- [Chaos Workflow](chaos-workflow)
+- [Data Source](datasource.md)
+- [Chaos Workflow](chaos-workflow.md)
 
 ## Data flow architecture
 
@@ -71,5 +71,5 @@ Building a hypothesis around steady-state behaviour, varying real-world events, 
 
 ## Learn More
 
-- [Observe a Chaos Workflow](visualize-workflow)
-- [Workflow Statistics](workflow-statistics)
+- [Observe a Chaos Workflow](visualize-workflow.md)
+- [Workflow Statistics](workflow-statistics.md)

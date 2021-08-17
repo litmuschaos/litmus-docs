@@ -42,7 +42,6 @@ module.exports = {
   tagline: 'A website for testing',
   url: 'https://litmusdocs.netlify.app',
   baseUrl: '/',
-  onBrokenLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'litmuschaos',
   projectName: 'litmus',
@@ -92,6 +91,11 @@ module.exports = {
         {
           label: 'APIs',
           to: 'http://litmuschaos.github.io/litmus/graphql/v2.0.0/api.html',
+          position: 'right'
+        },
+        {
+          label: 'Experiment Docs',
+          to: 'http://litmuschaos.github.io/litmus',
           position: 'right'
         },
         {

@@ -4,11 +4,13 @@ title: Configuring a Datasource
 sidebar_label: Configure Datasource
 ---
 
+---
+
 Litmus 2.0 provides in-house monitoring support which can be leveraged by connecting a data source to the chaos center, configured to scrape chaos event metics and application or infrastructure metics.
 
 ### Before you begin
 
-To configure a data source for a chaos center project, you must first setup the data source. To learn more about data source setup [click here](setup-datasource)
+To configure a data source for a chaos center project, you must first setup the data source. To learn more about data source setup [click here](setup-datasource.md)
 
 ### Connecting a data source
 
@@ -77,9 +79,9 @@ Number of connected data sources are also listed on `Overview` tab of `Observabi
 
 ### Uses of data source in application monitoring
 
-- [Data source linking during creation and update of application monitoring dashboards](manage-app-dashboard)
-- [Tuning queries for dashboards uses data source details associated with the linked data source](editing-queries-app-dashboard)
-- [Application monitoring dashboard uses the data source details to perform a health check before pulling application metrics, chaos events and verdict from it to be observed by the user to analyse chaos impact on services or resources](view-chaos-impact)
+- [Data source linking during creation and update of application monitoring dashboards](manage-app-dashboard.md)
+- [Tuning queries for dashboards uses data source details associated with the linked data source](editing-queries-app-dashboard.md)
+- [Application monitoring dashboard uses the data source details to perform a health check before pulling application metrics, chaos events and verdict from it to be observed by the user to analyse chaos impact on services or resources](view-chaos-impact.md)
 
 ### Resources
 
@@ -87,5 +89,5 @@ Number of connected data sources are also listed on `Overview` tab of `Observabi
 
 ### Learn more
 
-- [Observability Setup](observability-set-up)
-- [Manage Application Dashboards](manage-app-dashboard)
+- [Observability Setup](observability-set-up.md)
+- [Manage Application Dashboards](manage-app-dashboard.md)

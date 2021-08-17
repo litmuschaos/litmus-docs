@@ -13,7 +13,7 @@ With ChaosCenter, you get the privilege to use your own/custom image registries 
 
 ## Before you begin
 
-To understand the concept of Image Registry, make sure you are aware of [Chaos Workflow](../concepts/chaos-workflow) and the different image registries that are used in it.
+To understand the concept of Image Registry, make sure you are aware of [Chaos Workflow](../concepts/chaos-workflow.md) and the different image registries that are used in it.
 
 ## Steps to Update Chaos Workflow Image Registry
 
@@ -59,5 +59,5 @@ Now while scheduling a workflow, the image registry changes will be visible. Her
 
 ## Learn More
 
-- [What is a Chaos Workflow](../concepts/chaos-workflow)
-- [What is ChaosCenter](../concepts/chaoscenter)
+- [What is a Chaos Workflow](../concepts/chaos-workflow.md)
+- [What is ChaosCenter](../getting-started/resources.md#chaoscenter)

@@ -8,7 +8,7 @@ sidebar_label: Schedule Workflow
 
 ## Before you begin
 
-You must connect an Agent before scheduling a workflow. There might be a default `Self-Agent` automatically created or you can [connect an external Agent](../litmusctl/cluster-scope-installation).
+You must connect an Agent before scheduling a workflow. There might be a default `Self-Agent` automatically created or you can [connect an external Agent](../litmusctl/installation.md).
 
 ---
 
@@ -46,11 +46,11 @@ In this step, you can create a workflow from different methods, these include:
 
 - **Create a new workflow from one of the pre-defined chaos workflows** : With this option, you can select a pre-defined workflows which are available in the connected ChaosHub.
 
-- **Create a new workflow by using cloned template workflow** : With this option, you can create a new workflow from an existing one [saved as a template](save-as-template). Choose on of the saved templates and tweak it according to your requirements.
+- **Create a new workflow by using cloned template workflow** : With this option, you can create a new workflow from an existing one [saved as a template](save-as-template.md). Choose on of the saved templates and tweak it according to your requirements.
 
 - **Create a new workflow using experiments from MyHub** : With this option, you can create customized workflows from the one of your connected ChaosHubs. With this option you can add multiple experiments from that ChaosHub either serially or in parallel to construct your workflow graphically.
 
-- **Import workflow using YAML** : With this option, you can import a [hand-crafted/constructed chaos workflow](construct-workflow) manifest and tune it according to the use-case.
+- **Import workflow using YAML** : With this option, you can import a [hand-crafted/constructed chaos workflow](construct-workflow.md) manifest and tune it according to the use-case.
 
 ## 3. Workflow Settings
 
@@ -94,7 +94,7 @@ Some of the other features that are included with Litmus Portal 2.0 are :
 1. **Target Selection** : On the workflow table, you can select an experiment to edit the engine configuration directly from the portal. You can change the `annotationCheck` and `jobCleanUpPolicy` according to the use-case.
    You can also target the application by selecting the namespace and the respective label of that application. We have added a functionality to fetch the live data from the selected agent like the available namespaces and resources that you can target.
 
-2. **Defining the steady state for the application** : With this step, you can add probes to your experiments. Probes are some additional checks that you can provide in your experiments. To know more about probes, you can visit [here](../concepts/probes).
+2. **Defining the steady state for the application** : With this step, you can add probes to your experiments. Probes are some additional checks that you can provide in your experiments. To know more about probes, you can visit [here](../concepts/probes.md).
 
 <figure>
 <img src={require('../assets/user-guides/injecting-fault/schedule-workflow/target-selection.png').default} alt="Target Selection" />
@@ -148,6 +148,6 @@ This is the final step in workflow creation process. In this step, you can valid
 
 ## Learn more
 
-- [Observe Workflow](observe-workflow)
-- [Edit Schedule](edit-schdule)
-- [Save Workflows as a Template](save-as-template)
+- [Observe Workflow](observe-workflow.md)
+- [Edit Schedule](edit-schedule.md)
+- [Save Workflows as a Template](save-as-template.md)

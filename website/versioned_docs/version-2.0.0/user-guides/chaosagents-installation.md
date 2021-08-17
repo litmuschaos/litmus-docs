@@ -18,5 +18,5 @@ sidebar_label: ChaosAgents
 
 ## Learn more
 
-- [Setup Endpoints and Access ChaosCenter without Ingress](setup-without-ingress)
-- [Setup Endpoints and Access ChaosCenter with Ingress](setup-with-ingress)
+- [Setup Endpoints and Access ChaosCenter without Ingress](setup-without-ingress.md)
+- [Setup Endpoints and Access ChaosCenter with Ingress](setup-with-ingress.md)

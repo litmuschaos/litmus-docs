@@ -44,7 +44,7 @@ Teaming is based on the following principles and each user can have one of the 3
 
 ## Learn more
 
-- [Invite a team member](../user-guides/invite-team-member)
-- [Edit/Cancel an invite](../user-guides/edit-invite)
-- [Accept an invite](../user-guides/accept-invite)
-- [Remove a team member](../user-guides/remove-team-member)
+- [Invite a team member](../user-guides/invite-team-member.md)
+- [Edit/Cancel an invite](../user-guides/edit-invite.md)
+- [Accept an invite](../user-guides/accept-invite.md)
+- [Remove a team member](../user-guides/remove-team-member.md)

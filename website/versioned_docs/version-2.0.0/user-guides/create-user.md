@@ -30,6 +30,6 @@ You will now be able to view the new user in the table in the user management ta
 
 ## Learn more
 
-- [View users](view-user)
-- [Reset the password of a user](reset-password)
-- [Deactivate a user](deactivate-user)
+- [View users](view-user.md)
+- [Reset the password of a user](reset-password.md)
+- [Deactivate a user](deactivate-user.md)

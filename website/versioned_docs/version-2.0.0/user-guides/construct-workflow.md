@@ -15,7 +15,7 @@ A basic chaos workflow consists of these steps:
 
 ## Before we begin
 
-To construct a Chaos Workflow without ChaosCenter, make sure you are aware of [Chaos Workflow](../concepts/chaos-workflow), [ChaosEngine CR](../concepts/chaos-engine) and the different steps present in it.
+To construct a Chaos Workflow without ChaosCenter, make sure you are aware of [Chaos Workflow](../concepts/chaos-workflow.md), [ChaosEngine CR](../concepts/chaos-engine.md) and the different steps present in it.
 
 ## Steps to Construct a Chaos Workflow
 
@@ -271,5 +271,5 @@ spec:
 
 ## Learn More
 
-- [What are the different Probes](../concepts/probes)
-- [What is ChaosResult](../concepts/chaos-results)
+- [What are the different Probes](../concepts/probes.md)
+- [What is ChaosResult](../concepts/chaos-result.md)

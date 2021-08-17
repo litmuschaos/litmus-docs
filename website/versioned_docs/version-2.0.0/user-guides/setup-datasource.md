@@ -4,11 +4,13 @@ title: Setting up Data source
 sidebar_label: Setup Data source
 ---
 
+---
+
 This guide provides sample scrape job to be used for Prometheus deployment’s scrape-configmap and service monitors to be used with Prometheus operator for the different architectural topologies for integrating Prometheus (connecting a data source link) with Chaos center.
 
 ### Before you begin
 
-To setup a data source for a chaos center project, you must know about [open observability](../concepts/open-observability) and [data source considerations](../concepts/datasource) in Litmus 2.0
+To setup a data source for a chaos center project, you must know about [open observability](../concepts/open-observability.md) and [data source considerations](../concepts/datasource.md) in Litmus 2.0
 
 ### Topologies
 
@@ -435,7 +437,7 @@ spec:
 - [Node exporter](https://github.com/litmuschaos/litmus/blob/master/monitoring/utils/metrics-exporters-with-service-monitors/node-exporter/service-monitor.yaml)
 - [Black box exporter](https://github.com/litmuschaos/litmus/blob/master/monitoring/utils/metrics-exporters-with-service-monitors/prometheus-blackbox-exporter-metrics/service-monitor.yaml)
 
-[Detailed setup guide for Prometheus operator with service monitors](../integrations/prometheus)
+[Detailed setup guide for Prometheus operator with service monitors](../integrations/prometheus.md)
 
 ### Resources
 
@@ -443,6 +445,6 @@ spec:
 
 ### Learn more
 
-- [Observability Setup](observability-set-up)
-- [Configure Data Source](configure-datasource)
-- [Manage Application Dashboards](manage-app-dashboard)
+- [Observability Setup](observability-set-up.md)
+- [Configure Data Source](configure-datasource.md)
+- [Manage Application Dashboards](manage-app-dashboard.md)

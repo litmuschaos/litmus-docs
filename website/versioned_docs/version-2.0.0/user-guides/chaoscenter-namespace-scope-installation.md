@@ -237,6 +237,6 @@ workflow-controller-78fc7b6c6-w82m7      1/1     Running   0          5m32s
 
 ## Learn more
 
-- [Install ChaosCenter in Cluster Scope](chaoscenter-cluster-scope-installation)
-- [Setup Endpoints and Access ChaosCenter without Ingress](setup-without-ingress)
-- [Setup Endpoints and Access ChaosCenter with Ingress](setup-with-ingress)
+- [Install ChaosCenter in Cluster Scope](chaoscenter-cluster-scope-installation.md)
+- [Setup Endpoints and Access ChaosCenter without Ingress](setup-without-ingress.md)
+- [Setup Endpoints and Access ChaosCenter with Ingress](setup-with-ingress.md)

@@ -13,8 +13,8 @@ With ChaosCenter, the real-time data and status of the workflows can be observed
 
 The following should be required before creating a Chaos Workflow:
 
-- [ChaosCenter](chaoscenter)
-- [Workflows](chaos-workflow)
+- ChaosCenter
+- [Workflows](chaos-workflow.md)
 
 ## Litmus Workflow
 
@@ -66,6 +66,6 @@ After scheduling a workflow, a user can view the details of the running workflow
 
 ## Learn More
 
-- [Explore Probes](probes)
-- [What is a Chaos Workflow](chaos-workflow)
-- [Examine the ChaosResult](chaos-result)
+- [Explore Probes](probes.md)
+- [What is a Chaos Workflow](chaos-workflow.md)
+- [Examine the ChaosResult](chaos-result.md)

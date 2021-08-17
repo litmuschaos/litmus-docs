@@ -4,7 +4,7 @@ title: Open Observability
 sidebar_label: Open Observability
 ---
 
-## Introduction
+---
 
 Litmus 2.0 builds on principle of Open observability through observability hooks such as probes to validate steady state hypothesis along with chaos injection. Chaos exporter also provides prometheus metrics which can be used to generate alerts based on events and also to view chaos impact and application performance in terms of probe success percentage and experiment verdict. It provides for several integration points with Prometheus's alert manager and Grafana, also for the in-house application and infrastructure monitoring capabilities with chaos events, metadata and results.
 
@@ -12,8 +12,8 @@ Litmus 2.0 builds on principle of Open observability through observability hooks
 
 The following should be required before knowing about Open observability hooks in litmus 2.0:
 
-- [Probes](probes)
-- [Application / Infra. monitoring](app-infra-monitoring)
+- [Probes](probes.md)
+- [Application / Infra. monitoring](app-infra-monitoring.md)
 
 ## Probes
 
@@ -28,7 +28,7 @@ _Litmus currently supports four types of probes:_
 
 These probes can be used in isolation or in several combinations to achieve the desired checks.
 
-More about Probes can be found [here](probes)
+More about Probes can be found [here](probes.md)
 
 ## Chaos exporter
 
@@ -68,4 +68,4 @@ Litmus supports several kinds of `probes` and also has a `chaos-exporter` on it'
 
 - [Prometheus](../integrations/prometheus)
 - [Grafana](../integrations/grafana)
-- [Application and infrastructure monitoring](app-infra-monitoring)
+- [Application and infrastructure monitoring](app-infra-monitoring.md)

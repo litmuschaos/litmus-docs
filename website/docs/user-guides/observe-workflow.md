@@ -8,7 +8,7 @@ sidebar_label: Observe Workflow
 
 ## Before you begin
 
-You must schedule a workflow. To know more about scheduling workflows click [here](schedule-workflow)
+You must schedule a workflow. To know more about scheduling workflows click [here](schedule-workflow.md)
 
 ---
 
@@ -53,7 +53,7 @@ you can click on the nodes to get the logs of that particular step. If the rever
 
 ## View chaos results
 
-Once the experiment completes, the [Chaos Results](../concepts/chaos-results) are also available alongside the logs. The Chaos Results are directly fetched from the ChaosResult CRD.
+Once the experiment completes, the [Chaos Results](../concepts/chaos-result.md) are also available alongside the logs. The Chaos Results are directly fetched from the ChaosResult CRD.
 
 <figure>
 <img src={require('../assets/user-guides/injecting-fault/observe-workflow/completed-workflow-with-chaos-results.png').default} alt="Podtato Head workflow with chaos logs and chaos result of pod-delete experiment" />
@@ -92,7 +92,7 @@ Resilience Score = Total Test Result / Weight Sum
 
 ## Analytics from the runs tab
 
-Once the workflow run execution completes, you can click the **Show the analytics** option in the `Runs` tab of `Litmus Workflows` which opens up a [Workflow Dashboard](../user-guides/analyze-workflow) which can also be accessed from the Analytics section and is explained more [here](../user-guides/analyze-workflow). This analytics can be crucial to analyse the Cron Workflows.
+Once the workflow run execution completes, you can click the **Show the analytics** option in the `Runs` tab of `Litmus Workflows` which opens up a [Workflow Dashboard](../user-guides/analyze-workflow.md) which can also be accessed from the Analytics section and is explained more [here](../user-guides/analyze-workflow.md). This analytics can be crucial to analyse the Cron Workflows.
 
 ## Resources
 
@@ -100,6 +100,6 @@ Once the workflow run execution completes, you can click the **Show the analytic
 
 ## Learn more
 
-- [Edit Schedule](edit-schdule)
-- [Download Workflow Manifest](download-workflow-manifest)
-- [Re-run a Workflow](re-run-workflow)
+- [Edit Schedule](edit-schedule.md)
+- [Download Workflow Manifest](download-workflow-manifest.md)
+- [Re-run a Workflow](re-run-workflow.md)

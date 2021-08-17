@@ -10,7 +10,7 @@ Created by our users, contributors, and adopters, the Litmus community truly bel
 
 We welcome Kubernetes SREs and Developers to join this zealous community to learn and share all about Cloud-Native Chaos Engineering. There are many contributors in our community who are ready to mentor those who want to contribute. Ask a question in [our slack channel](https://slack.litmuschaos.io/).
 
-## Join out Slack channel
+## Join our Slack channel
 
 Join Our Community On Slack For Detailed Discussion, Feedback & Regular Updates On Chaos Engineering For Kubernetes, join `#litmus` on `Kubernetes Slack` and connect with SREs and Chaos Engineering enthusiasts.
 

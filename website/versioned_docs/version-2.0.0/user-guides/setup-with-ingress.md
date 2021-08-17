@@ -10,8 +10,8 @@ sidebar_label: Setup With Ingress
 
 Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](../getting-started/resources.md#chaoscenter) is installed in either one of these scopes
 
-- [Cluster Scope](chaoscenter-cluster-scope-installation)
-- [Namespace Scope](chaoscenter-namespace-scope-installation)
+- [Cluster Scope](chaoscenter-cluster-scope-installation.md)
+- [Namespace Scope](chaoscenter-namespace-scope-installation.md)
 
 ## Install ChaosCenter with Ingress
 
@@ -36,7 +36,7 @@ kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-s
 
 Example:
 ```bash
-kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" INGRESS_NAME="example-ingress"
+kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" INGRESS_NAME="litmus-ingress"
 ```
 
 ### With HTTP
@@ -142,6 +142,6 @@ kubectl apply -f <litmus_ingress_manifest> -n <PORTAL_NAMESPACE>
 
 ## Learn more
 
-- [Setup Endpoints and Access ChaosCenter without Ingress](setup-without-ingress)
-- [Install ChaosCenter in Namespace Scope](chaoscenter-namespace-scope-installation)
-- [Install ChaosCenter in Cluster Scope](chaoscenter-cluster-scope-installation)
+- [Setup Endpoints and Access ChaosCenter without Ingress](setup-without-ingress.md)
+- [Install ChaosCenter in Namespace Scope](chaoscenter-namespace-scope-installation.md)
+- [Install ChaosCenter in Cluster Scope](chaoscenter-cluster-scope-installation.md)

@@ -14,4 +14,4 @@ Just go to the invited tab, change the role, and hit the `Resend` button. You ca
 
 ## Learn more
 
-- [Accept an invitation](accept-invite)
+- [Accept an invitation](accept-invite.md)

@@ -40,7 +40,7 @@ module.exports = {
         'concepts/chaos-experiment',
         'concepts/probes',
         'concepts/chaos-engine',
-        'concepts/chaos-results',
+        'concepts/chaos-result',
         'concepts/chaoshub',
         {
           'Chaos Workflow': ['concepts/chaos-workflow', 'concepts/visualize-workflow']
@@ -139,7 +139,8 @@ module.exports = {
         },
         'user-guides/gitops-configuration',
         'user-guides/image-registry',
-        'user-guides/uninstall-litmus'
+        'user-guides/uninstall-litmus',
+        'user-guides/upgrade'
       ]
     },
 

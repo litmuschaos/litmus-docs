@@ -4,6 +4,8 @@ title: Litmusctl
 sidebar_label: Installation
 ---
 
+---
+
 The Litmuschaos command-line tool, litmusctl, allows you to manage litmuschaos's agent plane. You can use litmusctl to create agents, project, and manage multiple litmuschaos accounts.
 
 ## Prerequisites

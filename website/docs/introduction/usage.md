@@ -26,7 +26,7 @@ Chaos Engineering is a practice. As seen above, with time, management buying and
 
 ## Learn more
 
-- [Understand the Core Principles of Litmus](core-principles)
-- [Be a part of the Community](community)
-- [Get Started with Litmus](../getting-started/installation)
-- [Check out more resources about Litmus](other-links)
+- [Understand the Core Principles of Litmus](core-principles.md)
+- [Be a part of the Community](community.md)
+- [Get Started with Litmus](../getting-started/installation.md)
+- [Check out more resources about Litmus](other-links.md)

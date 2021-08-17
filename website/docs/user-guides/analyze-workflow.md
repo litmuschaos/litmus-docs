@@ -54,6 +54,6 @@ On clicking on a bar, more details about the workflow run represented by that st
 
 ## Learn more
 
-- [Compare Workflows](comparative-analysis)
-- [Manage Application Dashboard](manage-app-dashboard)
-- [Configure Datasource](configure-datasource)
+- [Compare Workflows](comparative-analysis.md)
+- [Manage Application Dashboard](manage-app-dashboard.md)
+- [Configure Datasource](configure-datasource.md)
