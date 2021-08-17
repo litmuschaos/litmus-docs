@@ -94,6 +94,11 @@ module.exports = {
           position: 'right'
         },
         {
+          label: 'Experiment Docs',
+          to: 'http://litmuschaos.github.io/litmus',
+          position: 'right'
+        },
+        {
           href: 'https://github.com/litmuschaos/litmus',
           label: 'GitHub',
           position: 'right'
