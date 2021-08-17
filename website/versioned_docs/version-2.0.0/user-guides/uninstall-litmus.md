@@ -27,26 +27,32 @@ To disconnect the [ChaosAgent](../getting-started/resources.md#chaosagents) conn
    If the ChaosAgent is not reachable it would remove only the entry from the database of the ChaosCenter
    :::
 
-### Removing the respective components individually
+### Remove the CRs
 
-To remove the respective components of the ChaosAgents you need to manually delete the created resources of that ChaosAgent.
+To remove the CRs Litmus uses, use the following command:
+
+- To remove individual CRs
 
 ```bash
-kubectl delete chaosexperiments <CHAOSEXPERIMENTS_NAMEs> --all -<AGENT_NAMESPACE>
-kubectl delete chaosresults <CHAOSRESULTS_NAMEs> --all -<AGENT_NAMESPACE>
-kubectl delete workflows <WORKFLOW_NAMEs> --all -<AGENT_NAMESPACE>
-kubectl delete cronworkflows <CRONWORKFLOW_NAMEs> --all -<AGENT_NAMESPACE>
-kubectl delete deployment chaos-operator-ce chaos-exporter --all -<AGENT_NAMESPACE>
+kubectl delete chaosexperiments <CHAOSEXPERIMENTS_NAMEs> -n <AGENT_NAMESPACE>
+kubectl delete chaosresults <CHAOSRESULTS_NAMEs> -n <AGENT_NAMESPACE>
+kubectl delete workflows <WORKFLOW_NAMEs> -n <AGENT_NAMESPACE>
+kubectl delete cronworkflows <CRONWORKFLOW_NAMEs> -n <AGENT_NAMESPACE>
 ```
 
-### Removing all components
-
-To remove all the ChaosAgents component ever created from the system, apply this command.
+- To remove all CRs
 
 ```bash
-kubectl delete chaosengine,chaosexperiments,chaosresults --all -A
-kubectl delete workflows cronworflows --all -<AGENT_NAMESPACE>
-kubectl delete deployment chaos-operator-ce chaos-exporter --all -A
+kubectl delete chaosengine,chaosexperiments,chaosresults --all <AGENT_NAMESPACE>
+kubectl delete workflows cronworflows --all <AGENT_NAMESPACE>
+```
+
+### Delete the Deployments
+
+To remove the respective deployments of the ChaosAgents you need to manually delete them.
+
+```bash
+kubectl delete deployment chaos-operator-ce event-tracker workflow-controller chaos-exporter -n <AGENT_NAMESPACE>
 ```
 
 ### Removing Service Account, Role Bindings and Roles
@@ -54,9 +60,9 @@ kubectl delete deployment chaos-operator-ce chaos-exporter --all -A
 #### For Cluster Scope
 
 ```bash
-kubectl delete sa litmus litmus-admin litmus-cluster-scope litmus-server-account -n -<AGENT_NAMESPACE>
-kubectl delete clusterrolebindings litmus-admin litmus-admin-crb-for-litmusportal-server litmus-cluster-scope litmus-cluster-scope-crb-for-litmusportal-server litmus-server-crb subscriber-crb-for-litmusportal-server
-kubectl delete clusterrole litmus-admin litmus-admin-crb-for-litmusportal-server litmus-cluster-scope litmus-cluster-scope-crb-for-litmusportal-server litmus-server-crb subscriber-crb-for-litmusportal-server
+kubectl delete sa argo argo-chaos litmus-admin litmus-cluster-scope event-tracker-sa -n -<AGENT_NAMESPACE>
+kubectl delete clusterrolebindings argo-binding chaos-cluster-role-binding event-tracker-clusterole-binding litmus-admin litmus-cluster-scope subscriber-cluster-role-binding
+kubectl delete clusterrole litmus-admin chaos-cluster-role subscriber-cluster-role event-tracker-cluster-role litmus-cluster-scope argo-aggregate-to-admin argo-aggregate-to-edit argo-aggregate-to-view argo-cluster-role
 ```
 
 #### For Namespace Scope
@@ -67,17 +73,51 @@ kubectl delete sa rolebindings role --all -n <NAMESPACE>
 
 ---
 
+## Remove the Litmus CRDs
+
+:::note
+If the Litmus CRDs are deleted in the Cluster Scope all the respective custom resources in the individual namespaces would stop working.
+:::
+
+To remove all the CRDs Litmus uses, use the following command:
+
+```bash
+kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/litmus-portal-crds.yml
+```
+
+---
+
 ## ChaosCenter
+
+> To remove the Self Agent Resources you need to follow the above ChaosAgent Uninstall process
 
 To uninstall the ChaosCenter from the system, follow these steps -
 
-#### Using Kubectl
+### Using Kubectl
+
+#### For Cluster Scope
+
+- **Litmus 2.0.0**
+
+  ```bash
+  kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/2.0.0/docs/2.0.0/litmus-2.0.0.yaml
+  ```
+
+  > To delete any specific version of the ChaosCenter, replace the above command with the below command. `kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/<VERSION>/docs/<VERSION/litmus-<VERSION>.yaml`
+
+- **Litmus Master Manifest**
+
+  ```bash
+  kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/cluster-k8s-manifest.yml
+  ```
+
+#### For Namespace Scope
 
 ```bash
-kubectl delete ns litmus
+kubectl delete -f ${LITMUS_PORTAL_NAMESPACE}-ns-scoped-litmus-portal-manifest.yml -n ${LITMUS_PORTAL_NAMESPACE}
 ```
 
-#### Using Helm
+### Using Helm
 
 ```bash
 helm uninstall litmuschaos  --namespace litmus
