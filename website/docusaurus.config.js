@@ -99,17 +99,17 @@ module.exports = {
           position: 'right'
         },
         {
-          href: 'https://github.com/litmuschaos/litmus',
+          to: 'https://github.com/litmuschaos/litmus',
           label: 'GitHub',
           position: 'right'
         },
         {
-          href: 'https://app.slack.com/client/T09NY5SBT/CNXNB0ZTN',
+          to: 'https://app.slack.com/client/T09NY5SBT/CNXNB0ZTN',
           label: 'Slack',
           position: 'right'
         },
         {
-          href: 'https://hub.litmuschaos.io/',
+          to: 'https://hub.litmuschaos.io/',
           label: 'ChaosHub',
           position: 'right'
         }
