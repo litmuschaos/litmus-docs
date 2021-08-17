@@ -57,6 +57,9 @@ kubectl -n litmus apply -f utils/metrics-exporters/litmus-metrics/chaos-exporter
 - job_name: 'chaos-exporter'
   static_configs:
     - targets: ['chaos-exporter.litmus.svc.cluster.local:8080']
+  relabel_configs:
+    - target_label: instance
+      replacement: 'chaos-exporter-service'
 ```
 
 ## Prometheus operator with service monitor
@@ -120,6 +123,9 @@ spec:
   endpoints:
     - port: tcp
       interval: 1s
+      metricRelabelings:
+        - targetLabel: instance
+          replacement: 'chaos-exporter-service'
 ```
 
 ## Prometheus community version (helm) - kube-prometheus-stack with pod monitor
@@ -171,6 +177,9 @@ spec:
   podMetricsEndpoints:
     - port: tcp
     - interval: 1s
+      metricRelabelings:
+        - targetLabel: instance
+          replacement: 'chaos-exporter-service'
 ```
 
 ## Prometheus alertmanager for generating alerts for experiment results

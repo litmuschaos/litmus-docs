@@ -31,6 +31,9 @@ _Scrape jobs:_
 - job_name: 'chaos-exporter'
   static_configs:
     - targets: ['chaos-exporter.litmus.svc.cluster.local:8080']
+  relabel_configs:
+    - target_label: instance
+      replacement: 'chaos-exporter-service'
 ```
 
 - **Kube state metrics exporter**
@@ -70,6 +73,9 @@ spec:
   endpoints:
     - port: tcp
       interval: 1s
+      metricRelabelings:
+        - targetLabel: instance
+          replacement: 'chaos-exporter-service'
 ```
 
 - **Kube state metrics exporter**
@@ -150,6 +156,9 @@ spec:
   podMetricsEndpoints:
     - port: tcp
     - interval: 1s
+      metricRelabelings:
+        - targetLabel: instance
+          replacement: 'chaos-exporter-service'
 ```
 
 _Black box exporter_
@@ -212,6 +221,9 @@ _Scrape jobs:_
 - job_name: 'chaos-exporter-agent-1'
   static_configs:
     - targets: ['<AGENT_1_CHAOS_EXPORTER_SERVICE_PUBLIC_HOSTNAME/IP:8080>']
+  relabel_configs:
+    - target_label: instance
+      replacement: 'chaos-exporter-service'
 ```
 
 - **Chaos-exporter - agent-2**
@@ -220,6 +232,9 @@ _Scrape jobs:_
 - job_name: 'chaos-exporter-agent-2'
   static_configs:
     - targets: ['<AGENT_2_CHAOS_EXPORTER_SERVICE_PUBLIC_HOSTNAME/IP:8080>']
+  relabel_configs:
+    - target_label: instance
+      replacement: 'chaos-exporter-service'
 ```
 
 - **Kube state metrics exporter - agent-1**
@@ -291,6 +306,9 @@ spec:
   endpoints:
     - interval: 1s
       port: tcp
+      metricRelabelings:
+        - targetLabel: instance
+          replacement: 'chaos-exporter-service'
 ```
 
 - **Chaos-exporter - agent-2**
@@ -338,6 +356,9 @@ spec:
   endpoints:
     - interval: 1s
       port: tcp
+      metricRelabelings:
+        - targetLabel: instance
+          replacement: 'chaos-exporter-service'
 ```
 
 - **Kube state metrics exporter - agent-1**
