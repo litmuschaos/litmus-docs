@@ -154,7 +154,7 @@ The Resource requests provided here have been estimated using data gathered manu
 
 - Using command `kubectl top`
 - Recommendations from Vertical-Pod-Autoscaler
-- Recommendations by a great utility Goldilocks.
+- Recommendations by a great utility [Goldilocks](https://github.com/FairwindsOps/goldilocks).
 
 These resources are getting monitored continuously and the information below will be updated as the metrics changes.
 
