@@ -191,6 +191,45 @@ These resources are getting monitored continuously and the information below wil
    </tr>
 </table>
 
+:::note
+**The resources may need to be increased when used at scale.**
+
+For example, The resources consumed when used at medium scale are given below.
+
+<table>
+   <tr>
+      <th>Pod</th>
+      <th>Container</th>
+      <th>CPU</th>
+      <th>Memory</th>
+   </tr>
+   <tr>
+   <td>litmusportal-frontend</td>
+   <td>litmusportal-frontend</td>
+   <td>25m</td>
+   <td>300M</td>
+   </tr>
+   <tr>
+   <td>litmusportal-server</td>
+   <td>auth-server</td>
+   <td>25m</td>
+   <td>150M</td>
+   </tr>
+   <tr>
+   <td>litmusportal-server</td>
+   <td>graphql-server</td>
+   <td>25m</td>
+   <td>350M</td>
+   </tr>
+   <tr>
+   <td>mongodb</td>
+   <td>mongodb</td>
+   <td>25m</td>
+   <td>350M</td>
+   </tr>
+</table>
+:::
+
 ## Resources
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rOrKegj5ePI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
