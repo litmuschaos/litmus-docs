@@ -8,7 +8,7 @@ sidebar_label: Editing Panel Queries
 
 ## Before you begin
 
-In order to edit the queries, you must first have a [data source](configure-datasource.md) connected and a configured [dashboard](manage-app-dashboard#create-dashboard.md).
+In order to edit the queries, you must first have a [data source](configure-datasource.md) connected and a configured [dashboard](manage-app-dashboard.md#create-dashboard).
 
 ---
 
