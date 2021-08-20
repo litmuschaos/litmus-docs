@@ -52,7 +52,7 @@ kubectl delete workflows cronworflows --all <AGENT_NAMESPACE>
 To remove the respective deployments of the ChaosAgents you need to manually delete them.
 
 ```bash
-kubectl delete deployment chaos-operator-ce event-tracker workflow-controller chaos-exporter -n <AGENT_NAMESPACE>
+kubectl delete deployment subscriber chaos-operator-ce event-tracker workflow-controller chaos-exporter -n <AGENT_NAMESPACE>
 ```
 
 ### Removing Service Account, Role Bindings and Roles
