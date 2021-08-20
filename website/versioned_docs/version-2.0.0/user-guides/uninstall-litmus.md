@@ -38,6 +38,7 @@ kubectl delete chaosexperiments <CHAOSEXPERIMENTS_NAMEs> -n <AGENT_NAMESPACE>
 kubectl delete chaosresults <CHAOSRESULTS_NAMEs> -n <AGENT_NAMESPACE>
 kubectl delete workflows <WORKFLOW_NAMEs> -n <AGENT_NAMESPACE>
 kubectl delete cronworkflows <CRONWORKFLOW_NAMEs> -n <AGENT_NAMESPACE>
+kubectl delete eventtrackerpolicies -n <AGENT_NAMESPACE>
 ```
 
 - To remove all CRs
@@ -45,6 +46,7 @@ kubectl delete cronworkflows <CRONWORKFLOW_NAMEs> -n <AGENT_NAMESPACE>
 ```bash
 kubectl delete chaosengine,chaosexperiments,chaosresults --all <AGENT_NAMESPACE>
 kubectl delete workflows cronworflows --all <AGENT_NAMESPACE>
+kubectl delete eventtrackerpolicies -n <AGENT_NAMESPACE>
 ```
 
 ### Delete the Deployments
