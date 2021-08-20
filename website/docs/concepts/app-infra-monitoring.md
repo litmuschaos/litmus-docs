@@ -39,13 +39,13 @@ Both chaos event query and chaos verdict queries can be updated from the Chaos c
 > Default chaos event query
 
 ```json
-litmuschaos_awaited_experiments{job="chaos-exporter", chaos_injection_time!=""}
+litmuschaos_awaited_experiments{job="chaos-exporter", chaos_injection_time!="", instance="chaos-exporter-service"}
 ```
 
 > Default chaos verdict query
 
 ```json
-litmuschaos_experiment_verdict{job="chaos-exporter", chaosresult_verdict!="Awaited"}
+litmuschaos_experiment_verdict{job="chaos-exporter", chaosresult_verdict!="Awaited", instance="chaos-exporter-service"}
 ```
 
 The central chaos table on the dashboard level above the graph panels shows an aggregate view of all the faults injected during the time interval set while browsing the dashboard. The fields of the table being, `Chaos result name`, `Workflow`, `Engine context` and `Verdict`. The `Verdict` shows only the verdict of the latest fault injection associated with a `Chaos result name`. In order to browse all the verdicts associated and more data fields of the particular fault injection, the user can hover over the enclosure on any expanded graph panel and view it on the integrated `Chaos metric info` table.
