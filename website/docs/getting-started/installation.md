@@ -75,18 +75,12 @@ Visit https://docs.litmuschaos.io to find more info.
 
 ### **Install Litmus using kubectl **
 
-#### **Create the namespace on which you want to install Litmus ChaosCenter**
-
-```bash
-kubectl create ns litmus
-```
-
 #### **Install Litmus ChaosCenter**
 
 Applying the manifest file will install all the required service account configuration and ChaosCenter.
 
 ```bash
-kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0/litmus-2.0.0.yaml -n litmus
+kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0/litmus-2.0.0.yaml
 ```
 
 ---
