@@ -40,7 +40,7 @@ const resources = [
 module.exports = {
   title: 'Litmus Docs',
   tagline: 'A website for testing',
-  url: 'https://litmusdocs.netlify.app',
+  url: 'https://docs.litmuschaos.io',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'litmuschaos',
