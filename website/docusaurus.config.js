@@ -150,7 +150,11 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} LitmusChaos Authors. All rights reserved.`
     },
-    hideableSidebar: true
+    hideableSidebar: true,
+
+    googleAnalytics: {
+      trackingID: 'UA-155028077-2'
+    }
   },
   presets: [
     [
