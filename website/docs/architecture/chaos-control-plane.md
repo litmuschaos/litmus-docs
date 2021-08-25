@@ -8,7 +8,9 @@ sidebar_label: Chaos Control Plane
 
 <img src={require("../assets/chaos-control-plane.png").default} alt="Chaos Control Plane" />
 
-Chaos Control Plane consists of micro-services responsible for the functioning of the Chaos Center, the website-based portal that can be used for interacting with Litmus, apart from the CLI. Chaos Plane facilitates the creation and scheduling of chaos workflows, system observability during the event of chaos, and post-processing and analysis of experiment results. To achieve this, it uses four separate components:
+Chaos Control Plane consists of micro-services responsible for the functioning of the Chaos Center, the website-based portal that can be used for interacting with Litmus, apart from the CLI. Chaos Plane facilitates the creation and scheduling of chaos workflows, system observability during the event of chaos, and post-processing and analysis of experiment results. 
+
+## Chaos Control Plane Components
 
 * **Authentication Server:** A Golang micro-service that is responsible for authorizing as well as authenticating the requests received from Chaos Center. It primarily serves the cause of user creation, user login, reset the password, and update user information.
 

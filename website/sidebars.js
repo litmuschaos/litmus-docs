@@ -29,7 +29,14 @@ module.exports = {
         'architecture/chaos-control-plane',
         'architecture/chaos-execution-plane',
         'architecture/chaos-experiment-flow',
-        'architecture/chaos-observability-flow'
+        {
+          'Chaos Observability Flow': [
+            'architecture/chaos-observability-flow-summary',
+            'architecture/chaos-observability-flow-visualization',
+            'architecture/chaos-observability-flow-logging',
+            'architecture/chaos-observability-flow-monitoring'
+          ]
+        }
       ]
     },
 
