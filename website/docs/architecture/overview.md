@@ -23,6 +23,6 @@ Contains the components required for the orchestration of chaos injection in the
 
 Flow of information during the execution of Litmus chaos experiments, grouped into the categories such as pod-level, node-level, application-level, and public-cloud.
 
-### [Chaos Observability Flow](chaos-observability-flow.md)
+### [Chaos Observability Flow](chaos-observability-flow-overview.md)
 
 Information flow for monitoring and observability during and post chaos using built-in Litmus analytics dashboard as well as external observability tools.

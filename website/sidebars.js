@@ -31,10 +31,12 @@ module.exports = {
         'architecture/chaos-experiment-flow',
         {
           'Chaos Observability Flow': [
-            'architecture/chaos-observability-flow-summary',
+            'architecture/chaos-observability-flow-overview',
             'architecture/chaos-observability-flow-visualization',
             'architecture/chaos-observability-flow-logging',
-            'architecture/chaos-observability-flow-monitoring'
+            'architecture/chaos-observability-flow-monitoring',
+            'architecture/chaos-observability-flow-summarisation',
+            'architecture/chaos-observability-flow-analytics'
           ]
         }
       ]
