@@ -16,7 +16,7 @@ const PreFooterTop = () => {
               stargazer.
             </Paragraph>
             <br />
-            <a href="https://docs.litmuschaos.io/docs/getstarted/" className="preFooterButton">
+            <a href="/docs/getstarted/" className="preFooterButton">
               <img
                 src="img/Socials/github-white.svg"
                 alt="github white"
