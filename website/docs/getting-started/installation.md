@@ -173,7 +173,6 @@ kubectl get pods -n litmus
 
 ```bash
 NAME                                     READY   STATUS    RESTARTS   AGE
-argo-server-58cb64db7f-pmbnq             1/1     Running   0          5m32s
 chaos-exporter-547b59d887-4dm58          1/1     Running   0          5m27s
 chaos-operator-ce-84ddc8f5d7-l8c6d       1/1     Running   0          5m27s
 event-tracker-5bc478cbd7-xlflb           1/1     Running   0          5m28s
