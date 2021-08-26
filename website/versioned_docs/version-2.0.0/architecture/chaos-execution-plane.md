@@ -10,6 +10,8 @@ sidebar_label: Chaos Execution Plane
 
 Chaos Execution Plane contains the components responsible for orchestrating the chaos injection in the target resources. They get installed in either an external target cluster if an external agent is being used or in the host cluster containing the control plane if a self-agent is being used. It can be further segregated into Litmus Agent Infrastructure components and Litmus Backend Execution Infrastructure components. 
 
+## Litmus Execution Plane Components
+
 Litmus Agent Infrastructure components help facilitate the chaos injection, manage chaos observability, and enable chaos automation for target resources. These components include:
 
 1. **Workflow Controller:** The Argo Workflow Controller responsible for the creation of Chaos Workflows using the Chaos Workflow CR.
@@ -39,6 +41,16 @@ Litmus Backend Execution Infrastructure components orchestrate the execution of 
 
 ## Standard Chaos Execution Plane Flow
 
-When Subscriber receives the Chaos Workflow manifest from the Control Plane, it applies the manifest to create a Chaos Workflow CR. Chaos Workflow CRs are tracked by the Argo Workflow Controller. When the Argo Workflow Controller finds a new Chaos Workflow CR, it creates the ChaosExperiment CRs and the ChaosEngine CRs for the chaos experiments that are a part of the workflow execution. ChaosEngine CRs are tracked by the Chaos Operator. Once a ChaosEngine CR is ready, the Chaos Operator updates the ChaosEngine state to reflect that the particular ChaosEngine is now performing the respective chaos experiment and creates Chaos Runner. Chaos Runner firstly reads the chaos parameters from the ChaosExperiment CR and overrides them with values from the ChaosEngine CR. It then constructs the Experiment Jobs and monitors them until their completion. Experiment Jobs execute the experiment business logic and undertake chaos injection on target resources. Once done, the ChaosResult is updated with the experiment verdict. Chaos Runner then fetches the updated ChaosResult and updates the ChaosEngine status as well as the verdict. Once the ChaosEngine is updated, the Subscriber fetches the ChaosEngine Details and sends them to the Control Plane.
+1. Subscriber receives the Chaos Workflow manifest from the Control Plane and applies the manifest to create a Chaos Workflow CR.
+2. Chaos Workflow CRs are tracked by the Argo Workflow Controller. When the Workflow Controller finds a new Chaos Workflow CR, it creates the ChaosExperiment CRs and the ChaosEngine CRs for the chaos experiments that are a part of the workflow.
+3. ChaosEngine CRs are tracked by the Chaos Operator. Once a ChaosEngine CR is ready, the Chaos Operator updates the ChaosEngine state to reflect that the particular ChaosEngine is now being executed.
+4. For each ChaosEngine resource, a Chaos Runner is created by the Chaos Operator.
+5. Chaos Runner firstly reads the chaos parameters from the ChaosExperiment CR and overrides them with values from the ChaosEngine CR. It then constructs the Experiment Jobs and monitors them until their completion.
+6. Experiment Jobs execute the experiment business logic and undertake chaos injection on target resources. Once done, the ChaosResult is updated with the experiment verdict.
+7. Chaos Runner then fetches the updated ChaosResult and updates the ChaosEngine status as well as the verdict.
+8. Once the ChaosEngine is updated, Subscriber fetches the ChaosEngine Details and returns them to Control Plane.
 
-If configured, Chaos Exporter fetches data from the ChaosResult CR and converts it in a time-series format to be consumed by the Prometheus DB. An Event Tracker Policy can also be set up as part of the Backend GitOps, where the Backend GitOps Controller tracks a set of specified resources in the target cluster for any change. If any of the tracked resources undergo any change and their resulting state matches the state defined in the Event Tracker Policy, then a pre-defined Chaos Workflow is executed.
+It is worth noticing that:
+- If configured, Chaos Exporter fetches data from the ChaosResult CR and converts it in a time-series format to be consumed by the Prometheus DB. 
+
+- An Event Tracker Policy can also be set up as part of the Backend GitOps, where the Backend GitOps Controller tracks a set of specified resources in the target cluster for any change. If any of the tracked resources undergo any change and their resulting state matches the state defined in the Event Tracker Policy, then a pre-defined Chaos Workflow is executed.
