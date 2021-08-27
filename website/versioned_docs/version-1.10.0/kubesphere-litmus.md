@@ -1,6 +1,6 @@
 ---
 id: KubeSphere-litmus
-title: Installtion of LitmusChaos on KubeSphere
+title: Installation of LitmusChaos on KubeSphere
 sidebar_label: Install Litmus
 original_id: kubesphere-litmus
 ---
