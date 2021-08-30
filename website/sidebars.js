@@ -51,6 +51,7 @@ module.exports = {
 		//   "rbac",
 		//   "service-acounts",
 		// ],
-		Advanced: ['litmus-psp', 'k8s-support']
+		Advanced: ['litmus-psp', 'k8s-support'],
+		Glossary: ['terms'],
 	}
 }
