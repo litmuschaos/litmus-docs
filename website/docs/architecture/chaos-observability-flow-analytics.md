@@ -13,9 +13,10 @@ Analytics is an integral part of Chaos Engineering, as it offers key insights th
 In Litmus, workflow run statistics and information are generated post the chaos workflow execution, which can be accessed directly using the ChaosCenter.
 
 ## Observability Flow for Analytics
-1. The Chaos Workflow run is specified by the user as an input using the ChaosCenter.
-2. The request for workflow run statistics and information is served by the Backend Server.
-3. The Backend Server queries the Database for the details of the ChaosEngines which were a part of the Chaos Workflow.
-4. Fetched ChaosEngine details are fetched by the Backend Server.
-5. Backend Server processes the fetched details and generates the workflow statistics and information using it.
-6. Workflow statistics and information is returned to ChaosCenter.
+1. In the Chaos Execution Plane, the ChaosEngine Details and ChaosResult are fetched by the Chaos Agent.
+2. Chaos Agent then forwards them to the Backend Server in the Chaos Control Plane and later they get stored into the Database.
+3. User specifies the Chaos Workflow Schedule for which the workflow statistics and information is to be fetched as an input in the ChaosCenter.
+4. The request for the workflow statistics and information is received by the Backend Server.
+5. Backend Server queries the Database for the details of past Workflow Runs.
+6. Aggregated workflow statistics based on the ChaosResult verdict and probe success percentage are fetched from the Database by Backend Server. 
+7. Workflow statistics and information are forwarded to ChaosCenter by Backend Server.

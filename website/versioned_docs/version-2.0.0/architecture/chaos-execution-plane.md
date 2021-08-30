@@ -48,7 +48,7 @@ Litmus Backend Execution Infrastructure components orchestrate the execution of 
 5. Chaos Runner firstly reads the chaos parameters from the ChaosExperiment CR and overrides them with values from the ChaosEngine CR. It then constructs the Experiment Jobs and monitors them until their completion.
 6. Experiment Jobs execute the experiment business logic and undertake chaos injection on target resources. Once done, the ChaosResult is updated with the experiment verdict.
 7. Chaos Runner then fetches the updated ChaosResult and updates the ChaosEngine status as well as the verdict.
-8. Once the ChaosEngine is updated, Subscriber fetches the ChaosEngine Details and returns them to Control Plane.
+8. Once the ChaosEngine is updated, Subscriber fetches the ChaosEngine details and the ChaosResult and forwards them to Chaos Control Plane.
 
 It is worth noticing that:
 - If configured, Chaos Exporter fetches data from the ChaosResult CR and converts it in a time-series format to be consumed by the Prometheus DB. 
