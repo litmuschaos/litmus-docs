@@ -32,9 +32,9 @@ Chaos Control Plane consists of micro-services responsible for the functioning o
 
 ## Standard Chaos Control Plane Flow
 
-1. The User logs in to the ChaosCenter using a valid login credential. Every user is a part of a project and has a role assigned to them. To schedule a workflow, the user needs to have Editor or Owner role assigned in the project.
+1. The User logs in to the ChaosCenter using a valid login credential. Every user is a part of a project and has a role assigned to them. To schedule a workflow, the user needs to have an Editor or Owner role assigned in the project.
 2. The user uploads a Chaos Workflow manifest using the ChaosCenter, which is received by the Backend Server.
 3. Backend Server stores the manifest in the Database and also sends it to the Chaos Agent.
-4. Chaos Agent uses the Chaos Workflow manifest to inject chaos in the target resources. The steps of the Chaos Workflow execution can be visualised using the ChaosCenter.
+4. Chaos Agent uses the Chaos Workflow manifest to inject chaos into the target resources. The steps of the Chaos Workflow execution can be visualized using the ChaosCenter.
 5. Chaos Agent returns the results of the chaos experiments that were a part of the workflow back to the Backend Server, along with the experiment logs.
 6. Backend Server then sends the chaos experiment results and logs to the ChaosCenter. It also stores the results into the Database for generating post-chaos workflow statistics and information.
