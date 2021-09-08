@@ -8,7 +8,9 @@ sidebar_label: Chaos Control Plane
 
 <img src={require("../assets/chaos-control-plane.png").default} alt="Chaos Control Plane" />
 
-Chaos Control Plane consists of micro-services responsible for the functioning of the Chaos Center, the website-based portal that can be used for interacting with Litmus, apart from the CLI. Chaos Plane facilitates the creation and scheduling of chaos workflows, system observability during the event of chaos, and post-processing and analysis of experiment results. To achieve this, it uses four separate components:
+Chaos Control Plane consists of micro-services responsible for the functioning of the Chaos Center, the website-based portal that can be used for interacting with Litmus, apart from the CLI. Chaos Plane facilitates the creation and scheduling of chaos workflows, system observability during the event of chaos, and post-processing and analysis of experiment results. 
+
+## Chaos Control Plane Components
 
 * **Authentication Server:** A Golang micro-service that is responsible for authorizing as well as authenticating the requests received from Chaos Center. It primarily serves the cause of user creation, user login, reset the password, and update user information.
 
@@ -30,4 +32,9 @@ Chaos Control Plane consists of micro-services responsible for the functioning o
 
 ## Standard Chaos Control Plane Flow
 
-To schedule and execute a chaos workflow using the Chaos Center, the user is required to log in to the portal using a valid login credential. This will lead them to the user dashboard where they will be able to access the Litmus projects they are a part of. To schedule a workflow, the user needs to have Editor or Owner access to the project. Once the user successfully creates a Chaos Workflow manifest using the interactive web UI, it is received by the backend server that forwards it to the Chaos Agent as well as stores it in the database. The Chaos Agent uses the Chaos Workflow in the target cluster to inject chaos in the target resources and return the experiment results for the chaos experiments that are a part of the workflow back to the backend server, along with the experiment logs. The backend server then sends the experiment results and logs to the Chaos Center. It also stores the results and logs into the database to populate the workflow run history. This information can then be used to perform post-processing of the Chaos Workflow run, using the built-in analytics dashboard in the Chaos Center.
+1. The User logs in to the ChaosCenter using a valid login credential. Every user is a part of a project and has a role assigned to them. To schedule a workflow, the user needs to have an Editor or Owner role assigned in the project.
+2. The user uploads a Chaos Workflow manifest using the ChaosCenter, which is received by the Backend Server.
+3. Backend Server stores the manifest in the Database and also sends it to the Chaos Agent.
+4. Chaos Agent uses the Chaos Workflow manifest to inject chaos into the target resources. The steps of the Chaos Workflow execution can be visualized using the ChaosCenter.
+5. Chaos Agent returns the results of the chaos experiments that were a part of the workflow back to the Backend Server, along with the experiment logs.
+6. Backend Server then sends the chaos experiment results and logs to the ChaosCenter. It also stores the results into the Database for generating post-chaos workflow statistics and information.

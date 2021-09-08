@@ -76,8 +76,35 @@
           "id": "version-2.0.0/architecture/chaos-experiment-flow"
         },
         {
-          "type": "doc",
-          "id": "version-2.0.0/architecture/chaos-observability-flow"
+          "collapsed": true,
+          "type": "category",
+          "label": "Chaos Observability Flow",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.0.0/architecture/chaos-observability-flow-overview"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0/architecture/chaos-observability-flow-visualization"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0/architecture/chaos-observability-flow-logging"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0/architecture/chaos-observability-flow-monitoring"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0/architecture/chaos-observability-flow-summarisation"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.0.0/architecture/chaos-observability-flow-analytics"
+            }
+          ]
         }
       ]
     },
