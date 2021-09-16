@@ -40,12 +40,17 @@ const resources = [
 module.exports = {
   title: 'Litmus Docs',
   tagline: 'A website for testing',
-  url: 'https://litmusdocs.netlify.app',
+  url: 'https://docs.litmuschaos.io',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'litmuschaos',
   projectName: 'litmus',
   themeConfig: {
+    algolia: {
+      apiKey: '7af78d639b7342f7da38c5c5c51993b0',
+      indexName: 'litmuschaos',
+      contextualSearch: true
+    },
     navbar: {
       title: 'Litmus Docs',
       logo: {
@@ -99,17 +104,17 @@ module.exports = {
           position: 'right'
         },
         {
-          href: 'https://github.com/litmuschaos/litmus',
+          to: 'https://github.com/litmuschaos/litmus',
           label: 'GitHub',
           position: 'right'
         },
         {
-          href: 'https://app.slack.com/client/T09NY5SBT/CNXNB0ZTN',
+          to: 'https://app.slack.com/client/T09NY5SBT/CNXNB0ZTN',
           label: 'Slack',
           position: 'right'
         },
         {
-          href: 'https://hub.litmuschaos.io/',
+          to: 'https://hub.litmuschaos.io/',
           label: 'ChaosHub',
           position: 'right'
         }
@@ -145,7 +150,11 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} LitmusChaos Authors. All rights reserved.`
     },
-    hideableSidebar: true
+    hideableSidebar: true,
+
+    googleAnalytics: {
+      trackingID: 'UA-155028077-2'
+    }
   },
   presets: [
     [

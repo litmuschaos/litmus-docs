@@ -891,7 +891,7 @@ This section describes the fields in the ChaosEngine spec and the possible value
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>.probe</code> allows developers to specify the chaos hypothesis. It supports four types: <code>cmdProbe</code>, <code>k8sProbe</code>, <code>httpProbe</code>, <code>promProbe</code>. For more details <a href="https://docs.litmuschaos.io/docs/litmus-probe/">refer</a></td>
+  <td>The <code>.probe</code> allows developers to specify the chaos hypothesis. It supports four types: <code>cmdProbe</code>, <code>k8sProbe</code>, <code>httpProbe</code>, <code>promProbe</code>. For more details <a href="https://docs.litmuschaos.io/docs/concepts/probes">refer</a></td>
 </tr>
 </table>
 
