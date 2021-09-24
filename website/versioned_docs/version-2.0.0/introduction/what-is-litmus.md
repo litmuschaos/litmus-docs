@@ -35,4 +35,4 @@ A chaos workflow is much more than a simple chaos experiment. It supports the us
 - If you are a first-time contributor, please see [Steps to Contribute](https://github.com/litmuschaos/litmus/blob/master/CONTRIBUTING.md#steps-to-contribute-).
 - If you would like to suggest new tests to be added to litmus, please go ahead and [create a new issue](https://github.com/litmuschaos/litmus/issues/new) describing your test. All you need to do is specify the workload type and the operations that you would like to perform on the workload.
 - If you would like to work on something more involved, please connect with the Litmus Contributors.
-- If you would like to make code contributions, all your commits should be signed with Developer Certificate of Origin. See [Sign your work](https://github.com/litmuschaos/litmus/blob/master/CONTRIBUTING.md#sign-your-work).
+- If you would like to make code contributions, all your commits should be signed with Developer Certificate of Origin. See [Sign your work](https://github.com/litmuschaos/litmus/blob/master/CONTRIBUTING.md#sign-your-work-with-developer-certificate-of-origin).

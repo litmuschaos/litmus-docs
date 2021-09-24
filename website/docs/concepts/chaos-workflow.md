@@ -6,7 +6,7 @@ sidebar_label: Chaos Workflow
 
 ---
 
-**Chaos Workflow** is a set of different operations coupled together to achieve desired chaos imapact on a Kubernetes Cluster. <br/>
+**Chaos Workflow** is a set of different operations coupled together to achieve desired chaos impact on a Kubernetes Cluster. <br/>
 It is useful in automating a series of pre-conditioning steps or action which is necessary to be performed before triggering the chaos injection.<br/>
 A Chaos Workflow can also be used to perform different operations parallelly to achieve a desired chaos injection scenario.
 
