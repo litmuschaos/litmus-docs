@@ -12,7 +12,9 @@ Monitoring is a key part to effectively watch and understand the state of the sy
 
 ## Metrics Monitoring
 
-<img src={require("../assets/chaos-observability-flow-metrics.png").default} alt="Chaos Observability Flow Metrics" />
+<div style={{textAlign: 'center'}}>
+  <img src={require("../assets/chaos-observability-flow-metrics.png").default} alt="Chaos Observability Flow Metrics" />
+</div>
 
 Metrics Monitoring enables the users to monitor the chaos metrics generated during chaos injection, which is exported by the chaos exporter to be consumed as time-series information.
 
@@ -25,7 +27,9 @@ Metrics Monitoring enables the users to monitor the chaos metrics generated duri
 
 ## Events Monitoring
 
-<img src={require("../assets/chaos-observability-flow-events.png").default} alt="Chaos Observability Flow Events" />
+<div style={{textAlign: 'center'}}>
+  <img src={require("../assets/chaos-observability-flow-events.png").default} alt="Chaos Observability Flow Events" />
+</div>
 
 Events Monitoring enables the users to monitor the Kubernetes events that are created as part of the orchestration of chaos injection by Litmus. These events occur through different points in the lifetime of a Chaos Experiment's execution to accomplish.
 

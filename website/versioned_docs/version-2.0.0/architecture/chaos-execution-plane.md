@@ -33,9 +33,17 @@ Litmus Backend Execution Infrastructure components orchestrate the execution of 
 
 4. **Chaos Operator:** A Kubernetes custom-controller that manages the lifecycle of certain resources or applications intending to validate their "desired state". It helps reconcile the state of the ChaosEngine by performing specific actions upon CRUD of the ChaosEngine. It also defines a secondary resource (the ChaosEngine Runner pod), which is created & managed by it to implement the reconcile functions.
 
+<div style={{textAlign: 'center'}}>
+  <img src={require("../assets/chaos-execution-plane-chaos-operator.png").default} alt="Chaos Operator" />
+</div>
+
 5. **ChaosResult CR:** Holds the results of a chaos experiment, such as ChaosEngine reference, Experiment State, Verdict of the experiment (on completion), salient application/result attributes. It also acts as a source for metrics collection for observability.
 
 6. **Chaos Runner:** Acts as a bridge between the Chaos Operator and Chaos Experiments. It is a lifecycle manager for the chaos experiments that creates Experiment Jobs for the execution of experiment business logic and monitors the experiment pods (jobs) until completion.
+
+<div style={{textAlign: 'center'}}>
+  <img src={require("../assets/chaos-execution-plane-chaos-runner.png").default} alt="Chaos Runner" />
+</div>
 
 7. **Experiment Jobs:** Refers to the pods that execute the experiment logic. One experiment pod is created per chaos experiment in the workflow.
 
