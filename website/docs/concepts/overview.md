@@ -30,7 +30,7 @@ ChaosHub allows you to orchestrate workflows from the Public **[ChaosHub](http:/
 
 ### [Chaos Workflow](chaos-workflow.md)
 
-Probes are pluggable checks that can be defined within the ChaosEngine for any Chaos Experiment.
+Chaos Workflow is a set of different operations coupled together to achieve desired chaos impact on a Kubernetes Cluster.
 
 ### [Observability](workflow-statistics.md)
 
