@@ -1,34 +1,17 @@
-.sectionLight {
-  background-color: #f9fafc;
+.homeSection {
   padding: 3rem 2rem;
 }
 
-.sectionLight > div {
-  width: 70%;
-  margin: 0 auto;
-}
-
-.sectionDark {
-  background-color: #f4f5f7;
-  padding: 3rem 2rem;
-}
-
-.sectionDark > div {
+.homeSection > div {
   width: 70%;
   margin: 0 auto;
 }
 
 @media (max-width: 890px) {
-  .sectionLight {
+  .homeSection {
     padding: 1rem 10%;
   }
-  .sectionLight > div {
-    width: 100%;
-  }
-  .sectionDark {
-    padding: 1rem 10%;
-  }
-  .sectionDark > div {
+  .homeSection > div {
     width: 100%;
   }
 }
