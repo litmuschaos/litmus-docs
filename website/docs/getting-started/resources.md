@@ -55,7 +55,7 @@ The ChaosCenter gives you access to a plethora of features, the major ones inclu
 
 ## ChaosAgents
 
-A <span style={{color: '#5B44BA'}}>**ChaosAgent**</span> in Litmus is nothing but the target cluster where Chaos would be injected via Litmus. There should always be atleast one or more than one ChaosAgents connected to the ChaosCenter. Each individual ChaosAgent can be chosen to be the Target Agent for Chaos Injection.
+A <span style={{color: '#5B44BA'}}>**ChaosAgent**</span> in Litmus is nothing but the target cluster where Chaos would be injected via Litmus. There should always be at least one or more than one ChaosAgents connected to the ChaosCenter. Each individual ChaosAgent can be chosen to be the Target Agent for Chaos Injection.
 
 ## Types of ChaosAgents
 
