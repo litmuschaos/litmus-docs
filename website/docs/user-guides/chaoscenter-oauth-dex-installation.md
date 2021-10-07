@@ -28,7 +28,7 @@ Before deploying LitmusChaos, make sure the following items are there
 
 ## Deploy Dex OIDC provider
 
-In order to enable OAuth2 and to be able to login via Google and GitHub, litmus uses [Dex OIDC](dexidp.io/)
+In order to enable OAuth2 and to be able to login via Google and GitHub, litmus uses [Dex OIDC](https://dexidp.io/)
 
 Make sure you have your Google and GitHub Client credentials ready, if you do not have them, you can generate one yourself
 

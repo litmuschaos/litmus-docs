@@ -65,7 +65,8 @@ module.exports = {
         'concepts/user-management',
         'concepts/projects',
         'concepts/teaming',
-        'concepts/gitops'
+        'concepts/gitops',
+        'concepts/oauth-dex-concept'
       ]
     },
 
