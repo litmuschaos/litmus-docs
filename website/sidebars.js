@@ -65,7 +65,8 @@ module.exports = {
         'concepts/user-management',
         'concepts/projects',
         'concepts/teaming',
-        'concepts/gitops'
+        'concepts/gitops',
+        'concepts/oauth-dex-concept'
       ]
     },
 
@@ -77,6 +78,7 @@ module.exports = {
           'Advanced Installation': [
             {
               ChaosCenter: [
+                'user-guides/chaoscenter-oauth-dex-installation',
                 'user-guides/chaoscenter-cluster-scope-installation',
                 'user-guides/chaoscenter-namespace-scope-installation',
                 'user-guides/setup-without-ingress',
