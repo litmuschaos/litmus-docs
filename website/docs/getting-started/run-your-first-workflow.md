@@ -34,7 +34,7 @@ In this scenario we will execute a pod-delete fault on a sample micro-service ap
 
 <br /> <br />
 
-2. Select **Self Agent** as the target [ChaosAgent](resources#chaosagents) for Chaos Injection. This is where we'll select which ChaosAgent to choose as the Target Agent.
+2. Select **Self Agent** as the target [ChaosAgent](resources.md#chaosagents) for Chaos Injection. This is where we'll select which ChaosAgent to choose as the Target Agent.
 
    <img src={require("../assets/getting-started/run-your-first-workflow/selecting-self-agent.png").default} alt="Selecting Self Agent" />
 
