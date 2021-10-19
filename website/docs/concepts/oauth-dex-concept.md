@@ -23,7 +23,7 @@ Litmus portal uses two components for authentication of users:
 - Authentication Server
 - Dex OIDC Server (Optional)
 
-By defauly litmus-portal comes with then authentication server as part of the `litmusportal-server` deployment and it allows local authentication that is based of mongo database. Client services such as `litmus-ctl` and `litmusportal-frontend` make use of this server.
+By default litmus-portal comes with then authentication server as part of the `litmusportal-server` deployment and it allows local authentication that is based of mongo database. Client services such as `litmus-ctl` and `litmusportal-frontend` make use of this server.
 
 In order to provide enhanced and seamless login features, we wanted to integrate OAuth and various other authentication mechanism such as OpenID connect. To have flexibility, litmus-portal also makes use of an additional component, the [Dex OIDC server](https://dexidp.io/).
 
