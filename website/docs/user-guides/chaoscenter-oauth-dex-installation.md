@@ -106,7 +106,7 @@ mongo-0                                   1/1     Running             0         
 
 ### Configuring `litmusportal-server` to enable Dex features
 
-To setup Dex, we would require to modify our litmusportal-server a bit inorder to enable Dex features, we will be modifying some environment variables
+To set up Dex, we would require to modify our litmusportal-server a bit in order to communicate with Dex. This will be achieved by adding some environment variables
 
 - `OIDC_ISSUER`: The place where the Dex OIDC lives, i.e `NODE_IP:32000`
 - `DEX_ENABLED`: This variable enables dex features in the litmusportal-server
