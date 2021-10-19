@@ -27,7 +27,7 @@ By default litmus-portal comes with then authentication server as part of the `l
 
 In order to provide enhanced and seamless login features, we wanted to integrate OAuth and other authentication mechanisms such as OpenID connect. To have flexibility, litmus-portal makes use of an additional component, [Dex OIDC server](https://dexidp.io/).
 
-It is an highly extensible cloud native OIDC provider that is able to take care of various authentication mechanisms. In order to keep things uniform, when this additional server is deployed, the authentication-server has some features that allows it to communicate to the dex-server, this enables integration of various OAuth providers, some being GitHub auth and Google auth in this case.
+Dex is a highly extensible cloud-native OIDC provider that is able to take care of various authentication mechanisms. With Dex being deployed, the authentication-server can communicate with the dex-server,  enabling integration of various OAuth providers. GitHub and Google auth has been tested at present. 
 
 
 ## Resources
