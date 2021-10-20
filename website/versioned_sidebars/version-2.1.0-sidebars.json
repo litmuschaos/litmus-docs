@@ -1,0 +1,454 @@
+{
+  "version-2.1.0/docs": [
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Introduction",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.1.0/introduction/what-is-litmus"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/introduction/features"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/introduction/usage"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/introduction/core-principles"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/introduction/community"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/introduction/other-links"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Getting Started",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.1.0/getting-started/resources"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/getting-started/installation"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/getting-started/run-your-first-workflow"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Architecture",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.1.0/architecture/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/architecture/architecture-summary"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/architecture/chaos-control-plane"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/architecture/chaos-execution-plane"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/architecture/chaos-experiment-flow"
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Chaos Observability Flow",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.1.0/architecture/chaos-observability-flow-overview"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/architecture/chaos-observability-flow-visualization"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/architecture/chaos-observability-flow-logging"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/architecture/chaos-observability-flow-monitoring"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/architecture/chaos-observability-flow-summarisation"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/architecture/chaos-observability-flow-analytics"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Concepts",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.1.0/concepts/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/concepts/chaos-experiment"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/concepts/probes"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/concepts/chaos-engine"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/concepts/chaos-result"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/concepts/chaoshub"
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Chaos Workflow",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.1.0/concepts/chaos-workflow"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/concepts/visualize-workflow"
+            }
+          ]
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Observability",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.1.0/concepts/workflow-statistics"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/concepts/app-infra-monitoring"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/concepts/datasource"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/concepts/open-observability"
+            }
+          ]
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/concepts/user-management"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/concepts/projects"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/concepts/teaming"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/concepts/gitops"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "User Guides",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.1.0/user-guides/overview"
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Advanced Installation",
+          "items": [
+            {
+              "collapsed": true,
+              "type": "category",
+              "label": "ChaosCenter",
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "version-2.1.0/user-guides/chaoscenter-cluster-scope-installation"
+                },
+                {
+                  "type": "doc",
+                  "id": "version-2.1.0/user-guides/chaoscenter-namespace-scope-installation"
+                },
+                {
+                  "type": "doc",
+                  "id": "version-2.1.0/user-guides/setup-without-ingress"
+                },
+                {
+                  "type": "doc",
+                  "id": "version-2.1.0/user-guides/setup-with-ingress"
+                }
+              ]
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/chaosagents-installation"
+            }
+          ]
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Injecting Fault",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/schedule-workflow"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/observe-workflow"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/edit-schedule"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/save-as-template"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/download-workflow-manifest"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/re-run-workflow"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/delete-workflow"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/construct-workflow"
+            }
+          ]
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Observing Chaos",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/observability-set-up"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/analyze-workflow"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/comparative-analysis"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/setup-datasource"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/configure-datasource"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/manage-app-dashboard"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/editing-queries-app-dashboard"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/view-chaos-impact"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/share-app-dashboard"
+            }
+          ]
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/user-guides/account-settings"
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "User Management",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/create-user"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/view-user"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/reset-password"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/deactivate-user"
+            }
+          ]
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Managing Projects",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/change-project-name"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/leave-project"
+            }
+          ]
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Teaming",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/invite-team-member"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/edit-invite"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/accept-invite"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/user-guides/remove-team-member"
+            }
+          ]
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/user-guides/gitops-configuration"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/user-guides/image-registry"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/user-guides/uninstall-litmus"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/user-guides/upgrade"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Litmusctl",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.1.0/litmusctl/installation"
+        },
+        {
+          "collapsed": true,
+          "type": "category",
+          "label": "Connect Agent",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-2.1.0/litmusctl/usage-non-interactive-mode"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.1.0/litmusctl/usage-interactive-mode"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Integrations",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.1.0/integrations/prometheus"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1.0/integrations/grafana"
+        }
+      ]
+    },
+    {
+      "type": "doc",
+      "id": "version-2.1.0/troubleshooting"
+    },
+    {
+      "type": "doc",
+      "id": "version-2.1.0/faq"
+    }
+  ]
+}
