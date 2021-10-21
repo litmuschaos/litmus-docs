@@ -40,7 +40,7 @@ To upgrade your ChaosAgent, you can follow these steps:
 <img src={require('../assets/user-guides/upgrade/upgrade-agent.png').default} width="800" />
 
 
-Alternatively you can run the following command on litmusctl by providing `<CLUSTER_ID>` and `<PROJECT_ID>`.
+Alternatively you can run the following command using litmusctl in the cluster containing the agent by providing `<CLUSTER_ID>` and `<PROJECT_ID>`.
 
 ```
 litmusctl upgrade agent --cluster-id="<CLUSTER_ID>" --project-id="<PROJECT_ID>"
