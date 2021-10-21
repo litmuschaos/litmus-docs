@@ -45,3 +45,5 @@ Alternatively you can run the following command using litmusctl in the cluster c
 ```
 litmusctl upgrade agent --cluster-id="<CLUSTER_ID>" --project-id="<PROJECT_ID>"
 ```
+
+> Note: v0.5.0 of [litmusctl](https://github.com/litmuschaos/litmusctl/blob/master/README.md) is required.
