@@ -176,7 +176,7 @@ spec:
       - litmus
   podMetricsEndpoints:
     - port: tcp
-    - interval: 1s
+      interval: 1s
       metricRelabelings:
         - targetLabel: instance
           replacement: 'chaos-exporter-service'
