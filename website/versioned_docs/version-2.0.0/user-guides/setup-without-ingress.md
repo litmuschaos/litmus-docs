@@ -43,10 +43,10 @@ kubectl patch svc litmusportal-frontend-service -p '{"spec": {"type": "LoadBalan
 <span style={{color: 'green'}}><b>Expected Output</b></span>
 
 ```bash
-NAME                            TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                         AGE
-chaos-litmus-portal-mongo       ClusterIP   10.104.107.117   <none>        27017/TCP                       2m
-litmusportal-frontend-service   NodePort    10.101.81.70     <none>        9091:30385/TCP                  2m
-litmusportal-server-service     NodePort    10.108.151.79    <none>        9002:32456/TCP,9003:31160/TCP   2m
+NAME                            TYPE          CLUSTER-IP       EXTERNAL-IP    PORT(S)                         AGE
+chaos-litmus-portal-mongo       ClusterIP     10.104.107.117   <none>         27017/TCP                       2m
+litmusportal-frontend-service   LoadBalancer  10.101.81.70     <LB_DNS>       9091:30385/TCP                  2m
+litmusportal-server-service     NodePort      10.108.151.79    <none>         9002:32456/TCP,9003:31160/TCP   2m
 ```
 
 ## **Accessing the ChaosCenter**
