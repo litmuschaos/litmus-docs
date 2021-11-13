@@ -35,7 +35,7 @@ GitOps enables you to configure a single source of truth for your chaos workflow
 - Some metadata will be pushed to your repository, that is the projectID of your project.
 - Now whenever you schedule a workflow, it will automatically be pushed to your repository. And that repository will be the single source of truth.
 
-**Note:** It is also possible to account for the workflows that are directly pushed to the git repository, after configuring GitOps. In this case, if the workflow is a single run workflow, then it starts executing as soon as it is pushed to the repository. Alternatively, if the workflow is a scheduled workflow, then it executes as per the defined schedule.
+**Note:** It is also possible to account for the workflows that are created and pushed to the git repository directly, after configuring GitOps. In this case, if the workflow is a single run workflow, then it starts executing as soon as it is pushed to the repository. Alternatively, if the workflow is a scheduled workflow, then it executes as per the defined schedule. On the other hand, updating an existing workflow present in the git repository will not execute the workflow but only sync the workflow resource definition with the ChaosCenter, if applicable.
 
 ## Steps to configure Event-Triggered Chaos Injection
 
