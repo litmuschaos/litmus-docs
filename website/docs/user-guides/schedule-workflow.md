@@ -50,7 +50,11 @@ In this step, you can create a workflow from different methods, these include:
 
 - **Create a new workflow using experiments from MyHub** : With this option, you can create customized workflows from the one of your connected ChaosHubs. With this option you can add multiple experiments from that ChaosHub either serially or in parallel to construct your workflow graphically.
 
-- **Import workflow using YAML** : With this option, you can import a [hand-crafted/constructed chaos workflow](construct-workflow.md) manifest and tune it according to the use-case.
+- **Import workflow using YAML** : With this option, you can import a [hand-crafted/constructed chaos workflow](construct-workflow.md) manifest and tune it according to the use-case. You can also import a basic Argo workflow using this functionality. 
+ :::note
+   For an uploaded workflow, the tune workflow functionality will not be available. The uploaded workflow is completely user-dependent or user-specific.
+
+
 
 ## 3. Workflow Settings
 
