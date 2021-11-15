@@ -15,7 +15,6 @@ Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](../ge
 
 ## Install ChaosCenter with Ingress
 
-With Litmus-2.0.0, ChaosCenter can be installed with ingress.
 In the following doc, we will use the Nginx ingress controller for ingress setup.
 
 1. By default, the service type is `NodePort`. For Ingress, we need to change the service type to `ClusterIP` in the following services.
@@ -28,6 +27,7 @@ In the following doc, we will use the Nginx ingress controller for ingress setup
 > - Set the environment variable **INGRESS** as true in the litmusportal-server deployment.
 
 Example:
+
 ```bash
 kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" INGRESS="true"
 ```
@@ -35,6 +35,7 @@ kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-s
 > - If you're changing ingress name from **litmus-ingress** to a different name, make sure to update the **INGRESS_NAME** environment variable in the litmusportal-server deployment
 
 Example:
+
 ```bash
 kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" INGRESS_NAME="litmus-ingress"
 ```

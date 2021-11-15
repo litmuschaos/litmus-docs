@@ -141,9 +141,8 @@ customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.
 Applying the manifest file will install all the required service account configuration and ChaosCenter.
 
 ```bash
-curl https://raw.githubusercontent.com/litmuschaos/litmus/master/docs/2.0.0/litmus-namespaced-2.0.0.yaml --output litmus-portal-namespaced-K8s-template.yml
-envsubst < litmus-portal-namespaced-K8s-template.yml >
-${LITMUS_PORTAL_NAMESPACE}-ns-scoped-litmus-portal-manifest.yml
+curl https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/2.3.0/litmus-namespaced-2.3.0.yaml --output litmus-portal-namespaced-K8s-template.yml
+envsubst '${LITMUS_PORTAL_NAMESPACE}' < litmus-portal-namespaced-k8s-template.yml > ${LITMUS_PORTAL_NAMESPACE}-ns-scoped-litmus-portal-manifest.yml
 kubectl apply -f ${LITMUS_PORTAL_NAMESPACE}-ns-scoped-litmus-portal-manifest.yml -n ${LITMUS_PORTAL_NAMESPACE}
 ```
 

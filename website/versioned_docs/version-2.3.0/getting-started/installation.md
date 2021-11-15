@@ -58,7 +58,7 @@ helm install chaos litmuschaos/litmus --namespace=litmus
 
 ```
 NAME: chaos
-LAST DEPLOYED: Tue Jun 15 19:20:09 2021
+LAST DEPLOYED: Mon Nov 15 22:25:48 2021
 NAMESPACE: litmus
 STATUS: deployed
 REVISION: 1
@@ -80,7 +80,7 @@ Visit https://docs.litmuschaos.io to find more info.
 Applying the manifest file will install all the required service account configuration and ChaosCenter.
 
 ```bash
-kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0/litmus-2.0.0.yaml
+kubectl apply -f https://litmuschaos.github.io/litmus/2.3.0/litmus-2.3.0.yaml
 ```
 
 ---
