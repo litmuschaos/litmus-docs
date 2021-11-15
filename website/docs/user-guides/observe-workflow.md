@@ -42,6 +42,13 @@ The graph consists of useful information such as :
 - Total time taken for the nodes to execute.
 - Structure of the experiments (Serial or Parallel experiments).
 
+You can also visualize the non Chaos workflows. The logs of individual nodes are also available here.
+
+<figure>
+<img src={require('../assets/argo-chaos-workflow.png').default} alt="Workflow run graph of a non chaos workflow" />
+<i>Graph of a non Chaos Workflow</i>
+</figure>
+
 ## View logs of individual nodes
 
 you can click on the nodes to get the logs of that particular step. If the revert-chaos step is disabled, the complete logs are available which include the runner pod logs and the chaos logs.

@@ -59,3 +59,40 @@ If your problem persists, then delete all the cluster role bindings, PV and PVC 
 You need to Provide the correct socket path. By default in Portal `CONTAINER_RUNTIME` is set to `docker`,
 If Your container runtime is `containerd` then you have to change the `CONTAINER_RUNTIME` to `containerd` and `SOCKET_PATH` to `/var/run/containerd/containerd.sock`.
 You can find these in tune experiments part of the tune workflow page.
+
+### We have installed ChaosCenter successfully but the Litmus ChaosHub is in error state and manual cloning of a Git repository does not work.
+It is most probably a network issue. Currently the ChaosHub feature is not supported in airgapped environment since it requires cloning of a remote git repository. Make sure you have an active internet connection to clone the git repository. If the issue still persists, you can manually add the git repository in the server pod. Here are the steps for the same:
+
+- Step 1: Exec inside the litmus-portal server pod and graphql-server container
+
+```
+kubectl exec -i -t <litmusportal-server> -n litmus --container graphql-server -- sh 
+```
+
+Check if the Chaos Charts directory is available. The directory structure is like 
+```
+/tmp/version/<project_id>/<hub_name>
+```
+
+Create these directories if not present inside /tmp/version/ :
+```
+mkdir <project_id> 
+cd <project_id> 
+mkdir <hub_name>
+```
+
+- Step 2: Clone the Chaos-Charts/Hub repository locally
+
+- Step 3: Use this command to copy the hub directory from your local system to the litmus-portal server pod
+
+```
+kubectl cp <location to chaos-chart/hub directory> <namespace>/<litmusportal-server-pod-name>:</tmp/version/<project_id>/<hub_name> -c graphql-server
+```
+
+
+Example: 
+```
+kubectl cp /home/amitkrdas/Chaos-Charts/chaos-charts/  litmus/litmusportal-server-6df9c5895d-57xx7:/tmp/version/686c1da2-da9c-4029-9c6a-528a9455a3b3/"Litmus ChaosHub" -c graphql-server 
+```
+
+- Step 4: Once the chaos charts directory is copied, refresh the ChaosHub page in ChaosCenter.
