@@ -23,8 +23,8 @@ Before deploying LitmusChaos, make sure the following items are there
 - [Deployed ChaosCenter](../getting-started/installation.md)
 
 - Atleast one of the following
-    - Google Oauth credentials
-    - GitHub Oauth credentials
+  - Google Oauth credentials
+  - GitHub Oauth credentials
 
 ## Deploy Dex OIDC provider
 
@@ -35,18 +35,17 @@ Make sure you have your Google and GitHub Client credentials ready, if you do no
 - [Guide to generating Google Oauth Client Credentials](https://support.google.com/cloud/answer/6158849?hl=en#zippy=)
 - [Guide to generating GitHub OAuth Client Credentials](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app)
 
-
 ### Configuring Dex OIDC provider
 
-
 ```bash
-curl https://raw.githubusercontent.com/litmuschaos/litmus/8d025a2f3101990a1acc002612fbe7281dcbfb4d/litmus-portal/dex-server/dex-deployment.yaml --output dex-deployment.yaml
+curl https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/dex-server/dex-deployment.yaml --output dex-deployment.yaml
 ```
 
 1. Open the file with your favorite text-editor
 2. You will find the following `config-map` with some data, replace your data as the comments suggests
+
     ```yaml
-    issuer: http://<NODE_IP>:32000  # Replace your NODE_IP here
+    issuer: http://<NODE_IP>:32000  # Replace with the DEX URL
     storage:
       type: kubernetes
       config:
@@ -58,6 +57,7 @@ curl https://raw.githubusercontent.com/litmuschaos/litmus/8d025a2f3101990a1acc00
         redirectURIs:
           - '/auth/dex/callback'
           - 'http://localhost:8080/auth/dex/callback' # Included for local testing purposes
+          - 'http://<LITMUS_PORTAL_FRONTEND>/auth/dex/callback' # Replace with the Litmus Portal Frontend callback
         name: 'LitmusPortalAuthBackend'
         secret: ZXhhbXBsZS1hcHAtc2VjcmV0
     oauth2:
@@ -69,14 +69,14 @@ curl https://raw.githubusercontent.com/litmuschaos/litmus/8d025a2f3101990a1acc00
         config:
           clientID: # Add your Google Client ID here
           clientSecret: # Add your Google Client Secret here
-          redirectURI: http://<NODE_IP>:32000 # Replace your NODE_IP here
+          redirectURI: http://<NODE_IP>:32000 # Replace with the DEX URL
       - type: github
         id: github
         name: GitHub
         config:
           clientID: # Add your GitHub Client ID here
           clientSecret: # Add your GitHub Client Secret here
-          redirectURI: http://<NODE_IP>:32000/callback  # Replace your NODE_IP here
+          redirectURI: http://<NODE_IP>:32000/callback  # Replace with the DEX URL
     ```
 
 **Note: The Dex OIDC provider runs at `NODE_IP:32000` by default**
@@ -103,29 +103,31 @@ litmusportal-server-9c4d85f57-5r6km       2/2     Running             0         
 mongo-0                                   1/1     Running             0          5m57s
 ```
 
-
 ### Configuring `litmusportal-server` to enable Dex features
 
 To set up Dex, we would require to modify our litmusportal-server a bit in order to communicate with Dex. This will be achieved by adding some environment variables
 
 - `OIDC_ISSUER`: The place where the Dex OIDC lives, i.e `NODE_IP:32000`
 - `DEX_ENABLED`: This variable enables dex features in the litmusportal-server
-- `CALLBACK_URL`: This is the url that will be called back after user completes thier OAuth, this will be the litmusportal-frontend service
+- `DEX_OAUTH_CALLBACK_URL`: This is the url that will be called back after user completes its authentication, this will be the litmusportal-frontend service
+- `DEX_OAUTH_CLIENT_ID`: The client ID defined at the DEX server to allow it act on behalf of Litmus, i.e: `LitmusPortalAuthBackend`
+- `DEX_OAUTH_CLIENT_SECRET`: The client secret defined at the DEX server, i.e: `ZXhhbXBsZS1hcHAtc2VjcmV0`
 
-Set your variables using 
+Set your variables using
 
 ```bash
-kubectl set env deployment/litmusportal-server -n litmus --containers="auth-server" DEX_SERVER="true", OIDC_ISSUER=<REPLACE_NODE_IP>:32000, CALLBACK_URL=<REPLACE_litmusportal_frontend_Service>
+kubectl set env deployment/litmusportal-server -n litmus --containers="auth-server" DEX_SERVER="true", OIDC_ISSUER=<REPLACE_NODE_IP>:32000, DEX_OAUTH_CALLBACK_URL=<REPLACE_litmusportal_frontend_Service>/callback,
+DEX_OAUTH_CLIENT_ID="LitmusPortalAuthBackend",
+DEX_OAUTH_CLIENT_SECRET="ZXhhbXBsZS1hcHAtc2VjcmV0"
 ```
+
 Your litmusportal-server pod will be restarted and Dex features will be enabled!
 
 ### Verifying if OAuth2 is enabled
 
-Go to http://litmusportal-frontend-service/auth/dex/login, you should be prompted with Google or GitHub login
+Go to <http://litmusportal-frontend-service/auth/dex/login>, you should be prompted with Google or GitHub login
 
 ![litmus-oauth-image](https://user-images.githubusercontent.com/31009634/135559389-c8cdf53c-76cf-4f9d-acaa-99014540f9cf.png)
-
-
 
 ## Resources
 
@@ -137,4 +139,3 @@ Go to http://litmusportal-frontend-service/auth/dex/login, you should be prompte
 - [Connect External ChaosAgents to ChaosCenter](../user-guides/chaosagents-installation.md)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)
-
