@@ -110,8 +110,8 @@ To set up Dex, we would require to modify our litmusportal-server a bit in order
 - `OIDC_ISSUER`: The place where the Dex OIDC lives, i.e `NODE_IP:32000`
 - `DEX_ENABLED`: This variable enables dex features in the litmusportal-server
 - `DEX_OAUTH_CALLBACK_URL`: This is the url that will be called back after user completes its authentication, this will be the litmusportal-frontend service
-- `DEX_OAUTH_CLIENT_ID`: The client ID defined at the DEX server to allow it act on behalf of Litmus, i.e: `LitmusPortalAuthBackend`
-- `DEX_OAUTH_CLIENT_SECRET`: The client secret defined at the DEX server, i.e: `ZXhhbXBsZS1hcHAtc2VjcmV0`
+- `DEX_OAUTH_CLIENT_ID`: The client ID defined at the DEX server to allow it act on behalf of Litmus, e.g: `LitmusPortalAuthBackend`
+- `DEX_OAUTH_CLIENT_SECRET`: The client secret defined at the DEX server, e.g: `ZXhhbXBsZS1hcHAtc2VjcmV0`
 
 Set your variables using
 
