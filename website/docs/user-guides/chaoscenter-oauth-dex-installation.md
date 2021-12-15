@@ -121,7 +121,10 @@ DEX_OAUTH_CLIENT_ID="LitmusPortalAuthBackend",
 DEX_OAUTH_CLIENT_SECRET="ZXhhbXBsZS1hcHAtc2VjcmV0"
 ```
 
+<div style="background-color:#F4D03F ">
+&#9888;
 Your litmusportal-server pod will be restarted and Dex features will be enabled!
+</div>
 
 ### Verifying if OAuth2 is enabled
 
