@@ -81,7 +81,7 @@ helm install chaos litmuschaos/litmus --namespace=litmus --set portalScope=names
 
 ```bash
 NAME: chaos
-LAST DEPLOYED: Tue Jun 15 19:20:09 2021
+LAST DEPLOYED: Wed Dec 15 20:18:37 2021
 NAMESPACE: litmus
 STATUS: deployed
 REVISION: 1
@@ -89,9 +89,9 @@ TEST SUITE: None
 NOTES:
 Thank you for installing litmus 😀
 
-Your release is named chaos and its installed to namespace: litmus.
+Your release is named chaos and it's installed to namespace: litmus.
 
-Visit https://docs.litmuschaos.io/ to find more info.
+Visit https://docs.litmuschaos.io to find more info.e info.
 
 ```
 
@@ -112,7 +112,7 @@ kubectl get ns ${LITMUS_PORTAL_NAMESPACE}
 
 ```bash
 NAME                        STATUS   AGE
-litmus   Active   79m
+litmus                      Active   79m
 ```
 
 #### **Install the required Litmus CRDs**
@@ -120,7 +120,7 @@ litmus   Active   79m
 The cluster-admin or an equivalent user with the right permissions are required to install the CRDs upfront.
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/litmus-portal-crds.yml
+kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/2.4.0/litmus-portal/litmus-portal-crds.yml
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -141,7 +141,7 @@ customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.
 Applying the manifest file will install all the required service account configuration and ChaosCenter.
 
 ```bash
-curl https://raw.githubusercontent.com/litmuschaos/litmus/master/docs/2.0.0/litmus-namespaced-2.0.0.yaml --output litmus-portal-namespaced-K8s-template.yml
+curl https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/2.4.0/litmus-namespaced-2.4.0.yaml --output litmus-portal-namespaced-K8s-template.yml
 envsubst < litmus-portal-namespaced-K8s-template.yml >
 ${LITMUS_PORTAL_NAMESPACE}-ns-scoped-litmus-portal-manifest.yml
 kubectl apply -f ${LITMUS_PORTAL_NAMESPACE}-ns-scoped-litmus-portal-manifest.yml -n ${LITMUS_PORTAL_NAMESPACE}
