@@ -10,18 +10,14 @@ sidebar_label: Upgrade
 
 To upgrade Litmus ChaosCenter from 2.2.0 to 2.3.0, you can follow these steps:
 
+> Note: This step is not required if using Helm, Helm upgrade should work.
+
 1. Upgrade the control plane (ChaosCenter)
    To upgrade ChaosCenter, you can re-apply the manifest using the kubectl.
 
    ```bash
    kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/2.3.0/mkdocs/docs/2.3.0/litmus-2.3.0.yaml
    ```
-
-2. Reinstall the agent components using litmusctl
-
-   > Note: While reinstallation, make sure to use the same agent name
-
-   To reinstall the ChaosAgents, use [Litmusctl](../litmusctl/usage-non-interactive-mode.md)
 
 ## Upgrade Mongodb DB Schema
 
