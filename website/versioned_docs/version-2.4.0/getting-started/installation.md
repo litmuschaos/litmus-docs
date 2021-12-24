@@ -42,7 +42,7 @@ helm repo list
 
 #### Step-2: Create the namespace on which you want to install Litmus ChaosCenter
 
-- The ChaosCenter can be placed in any namespace, but for this scenario we are choose `litmus` as the namespace.
+- The ChaosCenter can be placed in any namespace, but for this scenario we are choosing `litmus` as the namespace.
 
 ```bash
 kubectl create ns litmus
@@ -123,7 +123,7 @@ kubectl apply -f https://litmuschaos.github.io/litmus/2.4.0/litmus-2.4.0.yaml
 
 ## **Accessing the ChaosCenter**
 
-To setup and login to ChaosCenter expand the available services just created and copy the `PORT` of the `litmusportal-frontend-service` service
+To setup and login to ChaosCenter, expand the available services just created and copy the `PORT` of the `litmusportal-frontend-service` service
 
 ```bash
 kubectl get svc -n litmus
@@ -159,7 +159,7 @@ Password: litmus
 
 <img src={require('../assets/login.png').default} width="800" />
 
-By default you are assigned with a default project with Owner permissions.
+By default you are assigned with a default project with owner permissions.
 
 <img src={require('../assets/landing-page.png').default} width="800" />
 
