@@ -12,7 +12,7 @@ Chaos Control Plane consists of micro-services responsible for the functioning o
 
 ## Chaos Control Plane Components
 
-* **Authentication Server:** A Golang micro-service that is responsible for authorizing as well as authenticating the requests received from Chaos Center. It primarily serves the cause of user creation, user login, reset the password, and update user information.
+* **Authentication Server:** A Golang micro-service that is responsible for authorizing, authenticating the requests received from Chaos Center and managing users along with their projects. It primarily serves the cause of user creation, user login, resetting the password, updating user information, creating project, managing project related operations.
 
 * **Backend Server:** A GraphQL based Golang micro-service that serves the requests received from Chaos Center, by either querying the database for the relevant information or by fetching information from the Execution Plane.
 
@@ -26,13 +26,13 @@ Chaos Control Plane consists of micro-services responsible for the functioning o
 
   * **Litmus API:** Refers to two different Litmus APIs, namely Litmus Authentication API and Litmus Portal API:
 
-    * **Litmus Authentication API:** Used to authenticate the idenity of a user and to perform several user-specific tasks like update profile, change password, reset password, create new users, etc. It uses the Authentication Server to perform these tasks.
+    * **Litmus Authentication API:** Used to authenticate the identity of a user and to perform several user and project specific tasks like create new users, update profile, update password, create project, invite users to project, get project details etc. It uses the Authentication Server to perform these tasks.
 
     * **Litmus Portal API:** Provides command-line and UI experience for managing and monitoring the events around chaos workflows. It uses the Backend Server to perform its functions.
 
 ## Standard Chaos Control Plane Flow
 
-1. The User logs in to the ChaosCenter using a valid login credential. Every user is a part of a project and has a role assigned to them. To schedule a workflow, the user needs to have an Editor or Owner role assigned in the project.
+1. The User logs in to the ChaosCenter using a valid login credential. A default project is created for the user on initial login. Every user is a part of a project and has a role assigned to them. To schedule a workflow, the user needs to have an Editor or Owner role assigned in the project.
 2. The user uploads a Chaos Workflow manifest using the ChaosCenter, which is received by the Backend Server.
 3. Backend Server stores the manifest in the Database and also sends it to the Chaos Agent.
 4. Chaos Agent uses the Chaos Workflow manifest to inject chaos into the target resources. The steps of the Chaos Workflow execution can be visualized using the ChaosCenter.
