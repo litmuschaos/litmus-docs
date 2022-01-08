@@ -96,3 +96,14 @@ kubectl cp /home/amitkrdas/Chaos-Charts/chaos-charts/  litmus/litmusportal-serve
 ```
 
 - Step 4: Once the chaos charts directory is copied, refresh the ChaosHub page in ChaosCenter.
+
+### Getting invalid token error while running litmusctl commands
+
+Invalid token error occurs when the authorization token is not valid or expired. Authorization token expires in 24 hours. To solve the problem you need to generate a new token and update it in 
+.litmusconfig.
+
+The following command can be used to do the same
+
+```
+litmusctl config set-account
+```
