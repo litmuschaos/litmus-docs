@@ -64,7 +64,7 @@ To run LitmusPortal you need to have a minimum of 1 GiB memory and 1 core of CPU
 
 Yes, you can use Litmuschaos in production. Litmus has a wide variety of experiments and is designed as per the principles of chaos. But, if you are new to Chaos Engineering, we would recommend you to first try Litmus on your dev environment, and then after getting the confidence, you should use it in Production.
 
-### How is resilience score is calculated?
+### How is resilience score calculated?
 
 The Resilience score is calculated on the basis of the weightage and the Probe Success Percentage of the experiment. Resilience for one single experiment is the multiplication of the weight given to that experiment and the Probe Success Percentage. Then we get the total test result by adding the resilience score of all the experiments. The Final Resilience Score is calculated by dividing the total test result by the sum of the weights of all the experiments combined in the single workflow. For more detail refer to [this blog](https://dev.to/litmus-chaos/how-the-resilience-score-algorithm-works-in-litmus-1d22).
 
@@ -81,3 +81,7 @@ To configure a git repo the user must provide the Git URL of the repository and 
 - SSH Key
 
 Once GitOps is enabled, any new workflows created will be stored in the configured repo in the path `litmus/<project-id>/<workflow-name>.yaml`.
+
+### How to solve `invalid token` issue in litmusctl?
+
+You can use the command `litmusctl config set-account` to generate a new token. You get `invalid token` error if the authorization token is expired. Authorization token has a life span of 24 hours.
