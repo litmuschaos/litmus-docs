@@ -22,7 +22,9 @@ Before deploying LitmusChaos, make sure the following items are there
 
 ## Installation
 
-Litmus can be installed to be used either as a Self-Hosted application into your own Kuberentes cluster or as a Hosted cloud service.
+Users looking to use Litmus for the first time have two options available to them today. One way is to use a hosted Litmus service like [ChaosNative Litmus Cloud](https://cloud.chaosnative.com/). Alternatively, users looking for some more flexibility can install Litmus into their own Kubernetes cluster.
+
+Users choosing the self-hosted option can refer to our Install and Configure docs for installing alternate versions and more detailed instructions.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -36,9 +38,9 @@ import TabItem from '@theme/TabItem';
     Refer to the below details for Self-Hosted Litmus installation.
   </TabItem>
   <TabItem value="hosted" label="Hosted (Beta)">
-    Litmus can be used as a hosted cloud service using <a href="https://litmuschaos.cloud/">Litmus Cloud</a>. Litmus Cloud executes your Chaos Workflows in the cloud by managing all your <a href="../architecture/chaos-control-plane">Chaos Control Plane</a> components, while the <a href="../architecture/chaos-execution-plane">Chaos Execution Plane</a> components exist on your Kubernetes cluster as part of an <a href="../getting-started/resources#types-of-chaosagents">external agent</a>. 
+    ChaosNative, the founders of Litmus, offers a free service for community members which makes getting started with Litmus easy. Create an account to get started. Once logged in, create a new hosted control plane and connect to it via the up CLI. Litmus can be used as a hosted cloud service using <a href="https://cloud.chaosnative.com/">ChaosNative Litmus Cloud</a>. ChaosNative Litmus Cloud executes your Chaos Workflows in the cloud by managing all your <a href="../architecture/chaos-control-plane">Chaos Control Plane</a> components, while the <a href="../architecture/chaos-execution-plane">Chaos Execution Plane</a> components exist on your Kubernetes cluster as part of an <a href="../getting-started/resources#types-of-chaosagents">external agent</a>. 
     <br/><br/>
-    To get started with Litmus Cloud, visit <a href="https://litmuschaos.cloud/">Litmus Cloud</a> and register for free. You can skip the below installation steps.
+    To get started with ChaosNative Litmus Cloud, visit <a href="https://cloud.chaosnative.com/">ChaosNative Litmus Cloud</a> and register for free. You can skip the below installation steps.
   </TabItem>
 </Tabs>
 

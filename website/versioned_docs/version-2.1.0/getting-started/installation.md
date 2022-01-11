@@ -22,25 +22,10 @@ Before deploying LitmusChaos, make sure the following items are there
 
 ## Installation
 
-Litmus can be installed to be used either as a Self-Hosted application into your own Kuberentes cluster or as a Hosted cloud service.
+Installation of Litmus can be done using either of the below methods
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs>
-  <TabItem value="self-hosted" label="Self-Hosted" default>
-    Installation of Self-Hosted Litmus can be done using either of the below methods:
-    <li><a href="#install-litmus-using-helm">Helm3</a> chart</li>
-    <li><a href="#install-litmus-using-kubectl">Kubectl</a> yaml spec file</li>
-    <br/>
-    Refer to the below details for Self-Hosted Litmus installation.
-  </TabItem>
-  <TabItem value="hosted" label="Hosted (Beta)">
-    Litmus can be used as a hosted cloud service using <a href="https://litmuschaos.cloud/">Litmus Cloud</a>. Litmus Cloud executes your Chaos Workflows in the cloud by managing all your <a href="../architecture/chaos-control-plane">Chaos Control Plane</a> components, while the <a href="../architecture/chaos-execution-plane">Chaos Execution Plane</a> components exist on your Kubernetes cluster as part of an <a href="../getting-started/resources#types-of-chaosagents">external agent</a>. 
-    <br/><br/>
-    To get started with Litmus Cloud, visit <a href="https://litmuschaos.cloud/">Litmus Cloud</a> and register for free. You can skip the below installation steps.
-  </TabItem>
-</Tabs>
+- [Helm3](#install-litmus-using-helm) chart
+- [Kubectl](#install-litmus-using-kubectl) yaml spec file
 
 ### Install Litmus using Helm
 
