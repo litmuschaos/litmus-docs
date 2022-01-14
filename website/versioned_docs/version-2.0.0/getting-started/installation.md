@@ -73,7 +73,7 @@ Visit https://docs.litmuschaos.io to find more info.
 
 > **Note:** Litmus uses Kubernetes CRDs to define chaos intent. Helm3 handles CRDs better than Helm2. Before you start running a chaos experiment, verify if Litmus is installed correctly.
 
-### **Install Litmus using kubectl **
+### **Install Litmus using kubectl**
 
 #### **Install Litmus ChaosCenter**
 

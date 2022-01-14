@@ -22,10 +22,27 @@ Before deploying LitmusChaos, make sure the following items are there
 
 ## Installation
 
-Installation of Litmus can be done using either of the below methods
+Users looking to use Litmus for the first time have two options available to them today. One way is to use a hosted Litmus service like [ChaosNative Litmus Cloud](https://cloud.chaosnative.com/). Alternatively, users looking for some more flexibility can install Litmus into their own Kubernetes cluster.
 
-- [Helm3](#install-litmus-using-helm) chart
-- [Kubectl](#install-litmus-using-kubectl) yaml spec file
+Users choosing the self-hosted option can refer to our Install and Configure docs for installing alternate versions and more detailed instructions.
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="self-hosted" label="Self-Hosted" default>
+    Installation of Self-Hosted Litmus can be done using either of the below methods:
+    <li><a href="#install-litmus-using-helm">Helm3</a> chart</li>
+    <li><a href="#install-litmus-using-kubectl">Kubectl</a> yaml spec file</li>
+    <br/>
+    Refer to the below details for Self-Hosted Litmus installation.
+  </TabItem>
+  <TabItem value="hosted" label="Hosted (Beta)">
+    ChaosNative, the founders of Litmus, offers a free service for community members which makes getting started with Litmus easy. Create an account to get started. Once logged in, create a new hosted control plane and connect to it via the up CLI. Litmus can be used as a hosted cloud service using <a href="https://cloud.chaosnative.com/">ChaosNative Litmus Cloud</a>. ChaosNative Litmus Cloud executes your Chaos Workflows in the cloud by managing all your <a href="../architecture/chaos-control-plane">Chaos Control Plane</a> components, while the <a href="../architecture/chaos-execution-plane">Chaos Execution Plane</a> components exist on your Kubernetes cluster as part of an <a href="../getting-started/resources#types-of-chaosagents">external agent</a>. 
+    <br/><br/>
+    To get started with ChaosNative Litmus Cloud, visit <a href="https://cloud.chaosnative.com/">ChaosNative Litmus Cloud</a> and register for free. You can skip the below installation steps.
+  </TabItem>
+</Tabs>
 
 ### Install Litmus using Helm
 
@@ -73,7 +90,7 @@ Visit https://docs.litmuschaos.io to find more info.
 
 > **Note:** Litmus uses Kubernetes CRDs to define chaos intent. Helm3 handles CRDs better than Helm2. Before you start running a chaos experiment, verify if Litmus is installed correctly.
 
-### **Install Litmus using kubectl **
+### **Install Litmus using kubectl**
 
 #### **Install Litmus ChaosCenter**
 
