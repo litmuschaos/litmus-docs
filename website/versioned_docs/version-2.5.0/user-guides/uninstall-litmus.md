@@ -99,10 +99,10 @@ To uninstall the ChaosCenter from the system, follow these steps -
 
 #### For Cluster Scope
 
-- **Litmus 2.0.0**
+- **Litmus 2.5.0**
 
   ```bash
-  kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/2.0.0/docs/2.0.0/litmus-2.0.0.yaml
+  kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/2.5.0/litmus-2.5.0.yaml
   ```
 
   > To delete any specific version of the ChaosCenter, replace the above command with the below command. `kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/<VERSION>/docs/<VERSION/litmus-<VERSION>.yaml`
