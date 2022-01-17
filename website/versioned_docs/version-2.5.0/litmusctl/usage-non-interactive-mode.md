@@ -43,7 +43,7 @@ Note: With namespace mode, the user needs to create the namespace to install the
 litmusctl config set-account --endpoint="" --username="" --password=""
 ```
 
-* To create an agent without a project
+* To create an agent without a project in a cluster mode
 >Note: If the user doesn't have any project, it will create a random project and add the agent in that random project.
 ```shell
 litmusctl create agent --agent-name="" --non-interactive
@@ -57,6 +57,10 @@ litmusctl create agent --agent-name="" --non-interactive
 ```shell
 litmusctl create agent --agent-name="" --project-id="" --non-interactive
 ```
+
+#### Verify the new Agent Connection
+
+To verify, if the connection process was successful you can view the list of connected agents from the Targets section on your ChaosCenter and ensure that the connected agent is in Active State.
 
 ### Flags for `create agent` command
 <table>
@@ -111,7 +115,7 @@ litmusctl create agent --agent-name="" --project-id="" --non-interactive
         <td>--node-selector</td>
         <td></td>
         <td>String</td>
-        <td>Set the node-selector for agent components | Format: key1=value1,key2=value2)
+        <td>Set the node-selector for agent components | Format: key1=value1,key2=value2)</td>
     </tr>
     <tr>
         <td>--non-interactive</td>
