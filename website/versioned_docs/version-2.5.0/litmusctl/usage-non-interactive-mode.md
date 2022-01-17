@@ -9,7 +9,7 @@ sidebar_label: Using non interactive mode
 # Usage: Litmusctl v0.3.0
 > Notes:
 > * For litmusctl v0.3.0 or latest
-> * Compatible with Litmus 2.0.0 or latest
+> * Compatible with Litmus 2.0.0-Beta9 or latest
 
 ### litmusctl Syntax
 `litmusctl` has a syntax to use as follows:
@@ -43,13 +43,13 @@ Note: With namespace mode, the user needs to create the namespace to install the
 litmusctl config set-account --endpoint="" --username="" --password=""
 ```
 
-* To create an agent without a project in a cluster mode
+* To create an agent without a project
 >Note: If the user doesn't have any project, it will create a random project and add the agent in that random project.
 ```shell
 litmusctl create agent --agent-name="" --non-interactive
 ```
 
-Or,
+### Or,
 
 * To create an agent with an existing project
 > Note: To get `project-id`. Apply `litmusctl get projects`
@@ -58,12 +58,9 @@ Or,
 litmusctl create agent --agent-name="" --project-id="" --non-interactive
 ```
 
-#### Verify the new Agent Connection
-
-To verify, if the connection process was successful you can view the list of connected agents from the Targets section on your ChaosCenter and ensure that the connected agent is in Active State.
-
 ### Flags for `create agent` command
 <table>
+<tr>
     <th>Flag</th>
     <th>Short Flag</th>
     <th>Type</th>
@@ -79,6 +76,12 @@ To verify, if the connection process was successful you can view the list of con
         <td></td>
         <td>String</td>
         <td>Set the cluster-type to external for external agents | Supported=external/internal (default "external")</td>
+    </tr>
+    <tr>
+        <td>--skip-agent-ssl</td>
+        <td></td>
+        <td>Boolean</td>
+        <td>Set whether agent will skip ssl/tls check (can be used for self-signed certs, if cert is not provided in portal) (default false)</td>
     </tr>
     <tr>
         <td>--cluster-type</td>
@@ -108,7 +111,7 @@ To verify, if the connection process was successful you can view the list of con
         <td>--node-selector</td>
         <td></td>
         <td>String</td>
-        <td>Set the node-selector for agent components | Format: key1=value1,key2=value2)</td>
+        <td>Set the node-selector for agent components | Format: key1=value1,key2=value2)
     </tr>
     <tr>
         <td>--non-interactive</td>
@@ -223,6 +226,7 @@ AGENTID                                AGENTNAME          STATUS
 55ecc7f2-2754-43aa-8e12-6903e4c6183a   agent-1            ACTIVE 
 13dsf3d1-5324-54af-4g23-5331g5v2364f   agent-2            INACTIVE
 ```
+
 
 For more information related to flags, Use `litmusctl --help`.
 
