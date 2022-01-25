@@ -8,7 +8,7 @@ sidebar_label: Setup With Ingress
 
 ## Prerequisites
 
-Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](../getting-started/resources.md#chaoscenter) is installed in either one of these scopes
+Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](../getting-started/resources.md#chaoscenter) is installed in either one of these scopes:
 
 - [Cluster Scope](chaoscenter-cluster-scope-installation.md)
 - [Namespace Scope](chaoscenter-namespace-scope-installation.md)
@@ -20,8 +20,8 @@ In the following doc, we will use the Nginx ingress controller for ingress setup
 
 1. By default, the service type is `NodePort`. For Ingress, we need to change the service type to `ClusterIP` in the following services.
 
-- `litmusportal-frontend-service`
-- `litmusportal-server-service`
+- `chaos-litmus-frontend-service`
+- `chaos-litmus-server-service`
 
 2. Install Nginx Ingress Controller along with Kubernetes RBAC roles and bindings, please refer [here](https://kubernetes.github.io/ingress-nginx/deploy/#installation-guide)
 
@@ -32,11 +32,11 @@ Example:
 kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" INGRESS="true"
 ```
 
-> - If you're changing ingress name from **litmus-ingress** to a different name, make sure to update the **INGRESS_NAME** environment variable in the litmusportal-server deployment
+> - If you're changing ingress name from **litmus-ingress** to a different name, make sure to update the **INGRESS_NAME** environment variable in the chaos-litmus-server deployment
 
 Example:
 ```bash
-kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" INGRESS_NAME="litmus-ingress"
+kubectl set env deployment/chaos-litmus-server -n litmus --containers="graphql-server" INGRESS_NAME="litmus-ingress"
 ```
 
 ### With HTTP
@@ -44,7 +44,7 @@ kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-s
 Sample litmus ingress manifest With HTTP
 
 ```yaml
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
@@ -57,12 +57,12 @@ spec:
       http:
         paths:
           - backend:
-              serviceName: litmusportal-frontend-service
+              serviceName: chaos-litmus-frontend-service
               servicePort: 9091
             path: /(.*)
             pathType: ImplementationSpecific
           - backend:
-              serviceName: litmusportal-server-service
+              serviceName: chaos-litmus-server-service
               servicePort: 9002
             path: /backend/(.*)
             pathType: ImplementationSpecific
@@ -104,7 +104,7 @@ spec:
 3. Sample Litmus Portal Ingress Manifest with HTTPS
 
 ```yaml
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
@@ -121,12 +121,12 @@ spec:
       http:
         paths:
           - backend:
-              serviceName: litmusportal-frontend-service
+              serviceName: chaos-litmus-frontend-service
               servicePort: 9091
             path: /(.*)
             pathType: ImplementationSpecific
           - backend:
-              serviceName: litmusportal-server-service
+              serviceName: chaos-litmus-server-service
               servicePort: 9002
             path: /backend/(.*)
             pathType: ImplementationSpecific
