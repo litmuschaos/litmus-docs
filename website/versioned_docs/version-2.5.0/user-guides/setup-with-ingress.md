@@ -43,7 +43,7 @@ kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-s
 Sample litmus ingress manifest With HTTP
 
 ```yaml
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
@@ -56,13 +56,17 @@ spec:
       http:
         paths:
           - backend:
-              serviceName: litmusportal-frontend-service
-              servicePort: 9091
+              service:
+                name: litmusportal-frontend-service
+                port:
+                  number: 9091
             path: /(.*)
             pathType: ImplementationSpecific
           - backend:
-              serviceName: litmusportal-server-service
-              servicePort: 9002
+              service:
+                name: litmusportal-server-service
+                port:
+                  number: 9002
             path: /backend/(.*)
             pathType: ImplementationSpecific
 ```
@@ -103,7 +107,7 @@ spec:
 3. Sample Litmus Portal Ingress Manifest with HTTPS
 
 ```yaml
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
@@ -120,13 +124,17 @@ spec:
       http:
         paths:
           - backend:
-              serviceName: litmusportal-frontend-service
-              servicePort: 9091
+              service:
+                name: litmusportal-frontend-service
+                port:
+                  number: 9091
             path: /(.*)
             pathType: ImplementationSpecific
           - backend:
-              serviceName: litmusportal-server-service
-              servicePort: 9002
+              service:
+                name: litmusportal-server-service
+                port:
+                  number: 9002
             path: /backend/(.*)
             pathType: ImplementationSpecific
   tls:
