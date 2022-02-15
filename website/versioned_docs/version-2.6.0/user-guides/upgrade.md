@@ -8,7 +8,7 @@ sidebar_label: Upgrade
 
 ## Upgrade ChaosCenter
 
-To upgrade Litmus ChaosCenter from 2.3.0 to 2.4.0, you can follow these steps:
+To upgrade Litmus ChaosCenter from 2.5.0 to 2.6.0, you can follow these steps:
 
 > Note: This step is not required if using Helm, Helm upgrade should work.
 
@@ -16,16 +16,16 @@ To upgrade Litmus ChaosCenter from 2.3.0 to 2.4.0, you can follow these steps:
    To upgrade ChaosCenter, you can re-apply the manifest using the kubectl.
 
    ```bash
-   kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/2.4.0/litmus-2.4.0.yaml
+   kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/2.6.0/litmus-2.6.0.yaml
    ```
 
 ## Upgrade Mongodb DB Schema
 
 > Note: This step is not required if using Helm, Helm upgrade should work.
 
-To upgrade the DB schema, deploy the [upgrade-agent](https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/upgrade-agents/control-plane/upgrade-agent.yaml) in your k8s cluster where ChaosCenter is installed. This manifest will create a Job, which will upgrade the mongoDB schema.
+To upgrade the DB schema, deploy the [upgrade-agent](https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/2.6.0/upgrade-agent.yaml) in your k8s cluster where ChaosCenter is installed. This manifest will create a Job, which will upgrade the mongoDB schema.
 
-`kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/upgrade-agents/control-plane/upgrade-agent.yaml`
+`kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/2.6.0/upgrade-agent.yaml`
 
 ## Upgrade ChaosAgent
 
@@ -41,4 +41,4 @@ Alternatively you can run the following command using litmusctl in the cluster c
 litmusctl upgrade agent --cluster-id="<CLUSTER_ID>" --project-id="<PROJECT_ID>"
 ```
 
-> Note: v0.7.0 of [litmusctl](https://github.com/litmuschaos/litmusctl/blob/master/README.md) is required.
+> Note: v0.9.0 of [litmusctl](https://github.com/litmuschaos/litmusctl/blob/master/README.md) is required.
