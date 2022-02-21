@@ -78,7 +78,7 @@ To verify, if the connection process was successful you can view the list of con
         <td>--agent-name</td>
         <td></td>
         <td>String</td>
-        <td>Set the cluster-type to external for external agents | Supported=external/internal (default "external")</td>
+        <td>Set the agent name</td>
     </tr>
     <tr>
         <td>--cluster-type</td>
