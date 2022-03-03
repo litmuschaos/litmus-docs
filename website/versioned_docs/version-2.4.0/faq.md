@@ -81,3 +81,7 @@ To configure a git repo the user must provide the Git URL of the repository and 
 - SSH Key
 
 Once GitOps is enabled, any new workflows created will be stored in the configured repo in the path `litmus/<project-id>/<workflow-name>.yaml`.
+
+### How to solve `invalid token` issue in litmusctl?
+
+You can use the command `litmusctl config set-account` to generate a new token. You get `invalid token` error if the authorization token is expired. Authorization token has a life span of 24 hours.
