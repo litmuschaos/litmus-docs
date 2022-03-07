@@ -87,7 +87,7 @@ The `httpProbe` is better used in the Continuous mode of operation as a parallel
 
 The `cmdProbe` allows developers to run shell commands and match the resulting output as part of the entry/exit criteria. The intent behind this probe was to allow users to implement a non-standard & imperative way for expressing their hypothesis. For example, the cmdProbe enables you to check for specific data within a database, parse the value out of a JSON blob being dumped into a certain path or check for the existence of a particular string in the service logs.
 
-In order to enable this behaviour, the probe supports an inline mode in which the command is run from within the experiment image as well as a source mode, where the command execution is carried out from within a new pod whose image can be specified. While inline is preferred for simple shell commands , source mode can be used when application-specific binaries are required. The cmdProbe can be defined at `.spec.experiments[].spec.probe` the path inside the ChaosEngine.
+In order to enable this behaviour, the probe supports an inline mode in which the command is run from within the experiment image as well as a source mode, where the command execution is carried out from within a new pod whose image can be specified. While inline is preferred for simple shell commands, source mode can be used when application-specific binaries are required. The cmdProbe can be defined at `.spec.experiments[].spec.probe` the path inside the ChaosEngine.
 
 ```yaml
 probe:
@@ -99,7 +99,9 @@ probe:
         type: 'string' # supports: string, int, float
         criteria: 'contains' #supports >=,<=,>,<,==,!= for int and contains,equal,notEqual,matches,notMatches for string values
         value: '<value-for-criteria-match>'
-      source: '<repo>/<tag>' # it can be “inline” or any image
+      source:  # omit this tag to "inline" the probe
+        image: '<repo>/<tag>'
+        hostNetwork: false
     mode: 'Edge'
     runProperties:
       probeTimeout: 5
@@ -107,6 +109,8 @@ probe:
       retry: 1
       initialDelaySeconds: 5
 ```
+
+> `source.hostNetwork` can be set to `true` to allow access to the node network namespace for the pod executing the probe
 
 ### k8sProbe
 
@@ -554,23 +558,46 @@ This section describes the different fields of the litmus probes and the possibl
 <table>
 <tr>
   <th>Field</th>
-  <td><code>.cmdProbe/inputs.source</code></td>
+  <td><code>.cmdProbe/inputs.source.image</code></td>
 </tr>
 <tr>
   <th>Description</th>
-  <td>Flag to hold the source for the cmdProbe</td>
+  <td>Flag to hold the image for the cmdProbe</td>
 </tr>
 <tr>
   <th>Type</th>
-  <td>Mandatory</td>
+  <td>Optional</td>
 </tr>
 <tr>
   <th>Range</th>
-  <td> <code>inline</code>, <code>any source docker image</code></td>
+  <td><code>any source docker image</code></td>
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>.cmdProbe/inputs.source</code> It supports <code>inline</code> value when command can be run from within the experiment image. Otherwise provide the source image which can be used to launch a external pod where the command execution is carried out.</td>
+  <td>The <code>.cmdProbe/inputs.source.image</code> provides the source image which can be used to launch a external pod where the command execution is carried out.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+  <th>Field</th>
+  <td><code>.cmdProbe/inputs.source.hostNetwork</code></td>
+</tr>
+<tr>
+  <th>Description</th>
+  <td>Flag to allow or deny the <code>.cmdProbe/inputs.source.image</code> access to the node network namespace</td>
+</tr>
+<tr>
+  <th>Type</th>
+  <td>Optional</td>
+</tr>
+<tr>
+  <th>Range</th>
+  <td><code>true</code>, <code>false</code></td>
+</tr>
+<tr>
+  <th>Notes</th>
+  <td>The <code>.cmdProbe/inputs.source.hostNetwork</code> provides a possibility to allow the pod executing the cmdProbe access to the network of the node he is running on. For more details <a href="https://kubernetes.io/docs/concepts/policy/pod-security-policy/#host-namespaces" target="_blank">refer to the offical Kubernetes documentation</a>.</td>
 </tr>
 </table>
 
