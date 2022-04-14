@@ -1,7 +1,7 @@
 ---
 id: observability-set-up
-title: Setup Observability with ChaosCenter
-sidebar_label: Setup Observability
+title: Setup Analytics with ChaosCenter
+sidebar_label: Setup Analytics
 ---
 
 ---

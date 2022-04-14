@@ -51,7 +51,7 @@
           ]
         },
         {
-          "Observability": [
+          "Analytics": [
             "concepts/workflow-statistics",
             "concepts/app-infra-monitoring",
             "concepts/datasource",
