@@ -10,7 +10,7 @@ Overview Tab helps you to manage your connected data sources and dashboards, all
 
 - Data Sources
 - Application Dashboards
-- Workflow Dashboards
+- Workflow Statistics
 
 ## Before you begin
 
