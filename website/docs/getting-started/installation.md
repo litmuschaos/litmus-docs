@@ -22,7 +22,7 @@ Before deploying LitmusChaos, make sure the following items are there
 
 ## Installation
 
-Users looking to use Litmus for the first time have two options available to them today. One way is to use a hosted Litmus service like [ChaosNative Litmus Cloud](https://cloud.chaosnative.com/). Alternatively, users looking for some more flexibility can install Litmus into their own Kubernetes cluster.
+Users looking to use Litmus for the first time have two options available to them today. One way is to use a hosted Litmus service like [Harness Chaos Engineering SaaS](https://cloud.chaosnative.com/). Alternatively, users looking for some more flexibility can install Litmus into their own Kubernetes cluster.
 
 Users choosing the self-hosted option can refer to our Install and Configure docs for installing alternate versions and more detailed instructions.
 
