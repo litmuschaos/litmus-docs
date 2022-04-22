@@ -141,7 +141,7 @@ customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.
 Applying the manifest file will install all the required service account configuration and ChaosCenter.
 
 ```bash
-curl https://raw.githubusercontent.com/litmuschaos/litmus/master/docs/2.0.0/litmus-namespaced-2.0.0.yaml --output litmus-portal-namespaced-K8s-template.yml
+curl https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/2.8.0/litmus-namespaced-2.8.0.yaml --output litmus-portal-namespaced-K8s-template.yml
 envsubst < litmus-portal-namespaced-K8s-template.yml >
 ${LITMUS_PORTAL_NAMESPACE}-ns-scoped-litmus-portal-manifest.yml
 kubectl apply -f ${LITMUS_PORTAL_NAMESPACE}-ns-scoped-litmus-portal-manifest.yml -n ${LITMUS_PORTAL_NAMESPACE}
@@ -180,9 +180,10 @@ service/mongo-service created
 
   ```bash
   NAME                                    READY   STATUS  RESTARTS  AGE
-  litmusportal-frontend-97c8bf86b-mx89w   1/1     Running 2         6m24s
-  litmusportal-server-5cfbfc88cc-m6c5j    2/2     Running 2         6m19s
-  mongo-0                                 1/1     Running 0         6m16s
+  litmusportal-server-6fd57cc89-6w5pn        1/1     Running              0          57s
+  litmusportal-auth-server-7b596fff9-5s6g5   1/1     Running              0          57s
+  mongo-0                                    1/1     Running              0          57s
+  litmusportal-frontend-55974fcf59-cxxrf     1/1     Running              0          58s
   ```
 
 - Check the services running in the namespace where you installed Litmus:
@@ -195,9 +196,11 @@ service/mongo-service created
 
   ```bash
   NAME                            TYPE        CLUSTER-IP      EXTERNAL-IP PORT(S)                       AGE
-  litmusportal-frontend-service   NodePort    10.100.105.154  <none>      9091:30229/TCP                7m14s
-  litmusportal-server-service     NodePort    10.100.150.175  <none>      9002:30479/TCP,9003:31949/TCP 7m8s
-  mongo-service                   ClusterIP   10.100.226.179  <none>      27017/TCP                     7m6s
+  litmusportal-frontend-service      NodePort    10.43.79.17    <none>        9091:31846/TCP                  102s
+  litmusportal-server-service        NodePort    10.43.30.54    <none>        9002:31245/TCP,8000:32714/TCP   101s
+  litmusportal-auth-server-service   NodePort    10.43.81.108   <none>        9003:32618/TCP,3030:31899/TCP   101s
+  mongo-service                      ClusterIP   10.43.227.10   <none>        27017/TCP                       101s
+  mongo-headless-service             ClusterIP   None           <none>        27017/TCP                       101s
   ```
 
 > Note: With the namespace mode of the control panel, we need to set the endpoint of the chaos center server according to the use case. By default, it is `http://litmusportal-server-service:9002`
@@ -224,7 +227,8 @@ chaos-exporter-547b59d887-4dm58          1/1     Running   0          5m27s
 chaos-operator-ce-84ddc8f5d7-l8c6d       1/1     Running   0          5m27s
 event-tracker-5bc478cbd7-xlflb           1/1     Running   0          5m28s
 litmusportal-frontend-97c8bf86b-mx89w    1/1     Running   0          15m
-litmusportal-server-5cfbfc88cc-m6c5j     2/2     Running   1          15m
+litmusportal-server-6fd57cc89-6w5pn      1/1     Running   0          15m
+litmusportal-auth-server-7b596fff9-5s6g5 1/1     Running   0          15m
 mongo-0                                  1/1     Running   0          15m
 subscriber-958948965-qbx29               1/1     Running   0          5m30s
 workflow-controller-78fc7b6c6-w82m7      1/1     Running   0          5m32s
