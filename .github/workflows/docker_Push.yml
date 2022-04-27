@@ -53,7 +53,7 @@ jobs:
           # Deployment Images Update
           sed -i -e "s|litmuschaos/litmus-docs:.*|litmuschaos/litmus-docs:$tag|g" litmusdocs-deploy.yaml
 
-          git config user.name litmusbot
+          git config user.name litmuschaos-bot
           git config user.email litmusbot@github.com
           git add .
           git commit -m "Manifest updated for litmus-docs"
