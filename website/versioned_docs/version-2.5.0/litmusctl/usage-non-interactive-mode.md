@@ -9,7 +9,7 @@ sidebar_label: Using non interactive mode
 # Usage: Litmusctl v0.3.0
 > Notes:
 > * For litmusctl v0.3.0 or latest
-> * Compatible with Litmus 2.0.0 or latest
+> * Compatible with Litmus 2.0.0-Beta9 or latest
 
 ### litmusctl Syntax
 `litmusctl` has a syntax to use as follows:
@@ -49,7 +49,7 @@ litmusctl config set-account --endpoint="" --username="" --password=""
 litmusctl create agent --agent-name="" --non-interactive
 ```
 
-Or,
+### Or,
 
 * To create an agent with an existing project
 > Note: To get `project-id`. Apply `litmusctl get projects`
@@ -64,6 +64,7 @@ To verify, if the connection process was successful you can view the list of con
 
 ### Flags for `create agent` command
 <table>
+<tr>
     <th>Flag</th>
     <th>Short Flag</th>
     <th>Type</th>
@@ -79,6 +80,12 @@ To verify, if the connection process was successful you can view the list of con
         <td></td>
         <td>String</td>
         <td>Set the agent name</td>
+    </tr>
+    <tr>
+        <td>--skip-agent-ssl</td>
+        <td></td>
+        <td>Boolean</td>
+        <td>Set whether agent will skip ssl/tls check (can be used for self-signed certs, if cert is not provided in portal) (default false)</td>
     </tr>
     <tr>
         <td>--cluster-type</td>
@@ -223,6 +230,7 @@ AGENTID                                AGENTNAME          STATUS
 55ecc7f2-2754-43aa-8e12-6903e4c6183a   agent-1            ACTIVE 
 13dsf3d1-5324-54af-4g23-5331g5v2364f   agent-2            INACTIVE
 ```
+
 
 For more information related to flags, Use `litmusctl --help`.
 
