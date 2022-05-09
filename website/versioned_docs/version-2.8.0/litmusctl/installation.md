@@ -129,7 +129,8 @@ litmusctl <command> <subcommand> <subcommand> [options and parameters]
 ### Windows
 
 - Extract the binary from the zip using WinZip or any other extraction tool.
-
+- Convert the file into .exe format
+- Add the file to PATH variable.
 - You can run the litmusctl command in windows:
 
 ```shell
