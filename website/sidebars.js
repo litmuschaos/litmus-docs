@@ -165,6 +165,13 @@ module.exports = {
       ]
     },
 
+    // m-agent
+    {
+      "m-agent": [
+        'm-agent/overview',
+      ]
+    },
+
     // Integrations
     {
       Integrations: ['integrations/prometheus', 'integrations/grafana']
