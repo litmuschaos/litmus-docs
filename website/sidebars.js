@@ -169,6 +169,9 @@ module.exports = {
     {
       "m-agent": [
         'm-agent/overview',
+        'm-agent/installation',
+        'm-agent/usage',
+        'm-agent/uninstallation'
       ]
     },
 

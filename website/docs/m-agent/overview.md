@@ -22,7 +22,7 @@ To address these issues, m-agent has been introduced. m-agent provides many adva
 - Introduces error classification for simplifying the process of their mitigation
 
 ## How does m-agent work?
-m-agent is essentially a server which lies within the target machine, where it performs different actions on behalf of the experiment pod, that lies in the execution plane. These actions include, but are not limited to:
+m-agent is essentially a web server which lies within the target machine, where it performs different actions on behalf of the experiment pod, that lies in the execution plane. These actions include, but are not limited to:
 - Check Steady State
 - Inject Chaos
 - Execute Litmus Probe
