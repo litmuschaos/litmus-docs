@@ -4,12 +4,12 @@ title: m-agent Usage
 sidebar_label: Usage
 ---
 
-Upon installing m-agent, you can use it to generate a token for your Chaos Experiment. It step will require you to specify an expiry duration for your token. Tokens are valid through a minimum duration of 1 minute to a maximum of 30 days. The token can be generated in two modes:
+Upon installing m-agent, you can use it to generate a token for your Chaos Experiment. It will require you to specify an expiry duration for your token. Tokens are valid from a minimum duration of 1 minute to a maximum of 30 days. The token can be generated in two modes:
 
 1. Interactive Mode
 2. Non-Interactive Mode
 
-To generate a token in an interactive mode, use the -get-token boolean flag, which will prompt you to select the expiry duration for the token:
+To generate a token in interactive mode, use the -get-token boolean flag, which will prompt you to select the expiry duration for the token:
 ```
 m-agent -get-token
 ```
