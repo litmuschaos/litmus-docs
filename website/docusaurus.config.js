@@ -95,7 +95,7 @@ module.exports = {
         },
         {
           label: 'APIs',
-          to: 'http://litmuschaos.github.io/litmus/graphql/v2.0.0/api.html',
+          to: 'http://litmuschaos.github.io/litmus/graphql/v2.9.0/api.html',
           position: 'right'
         },
         {
