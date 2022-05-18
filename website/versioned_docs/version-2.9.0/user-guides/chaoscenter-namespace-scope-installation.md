@@ -101,18 +101,18 @@ Visit https://docs.litmuschaos.io/ to find more info.
 
 #### **Set the namespace on which you want to install Litmus ChaosCenter**
 
-```bash
-export LITMUS_PORTAL_NAMESPACE="<namespace>"
-kubectl get ns ${LITMUS_PORTAL_NAMESPACE}
-```
 
-> If the namespace is not already present then create the target namespace `kubectl create ns ${LITMUS_PORTAL_NAMESPACE}` or `kubectl create ns <Your Namespace>`
+> Create a namespace `kubectl create ns <Your Namespace>`
+
+```bash
+kubectl create ns litmus
+```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
 
 ```bash
 NAME                        STATUS   AGE
-litmus   Active   79m
+litmus                      Active   2s
 ```
 
 #### **Install the required Litmus CRDs**
@@ -129,6 +129,7 @@ kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/lit
 customresourcedefinition.apiextensions.k8s.io/clusterworkflowtemplates.argoproj.io created
 customresourcedefinition.apiextensions.k8s.io/cronworkflows.argoproj.io created
 customresourcedefinition.apiextensions.k8s.io/workflows.argoproj.io created
+customresourcedefinition.apiextensions.k8s.io/workflowtasksets.argoproj.io created
 customresourcedefinition.apiextensions.k8s.io/workflowtemplates.argoproj.io created
 customresourcedefinition.apiextensions.k8s.io/chaosengines.litmuschaos.io created
 customresourcedefinition.apiextensions.k8s.io/chaosexperiments.litmuschaos.io created
@@ -141,27 +142,41 @@ customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.
 Applying the manifest file will install all the required service account configuration and ChaosCenter.
 
 ```bash
-curl https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/2.9.0/litmus-namespaced-2.9.0.yaml --output litmus-portal-namespaced-K8s-template.yml
-envsubst < litmus-portal-namespaced-K8s-template.yml >
-${LITMUS_PORTAL_NAMESPACE}-ns-scoped-litmus-portal-manifest.yml
-kubectl apply -f ${LITMUS_PORTAL_NAMESPACE}-ns-scoped-litmus-portal-manifest.yml -n ${LITMUS_PORTAL_NAMESPACE}
+kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/2.9.0/litmus-namespaced-2.9.0.yaml -n <Your Namespace>
 ```
 
-> You need to export the namespace in order for the above step to work `export LITMUS_PORTAL_NAMESPACE="<namespace>"`. Ignore if already done in the first step.
+> You need to provide the Namespace in place of `Your Namespace`, that you have created eariler for the litmuschaos Installation
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
 
 ```bash
+role.rbac.authorization.k8s.io/argo-role-for-litmusportal-server created
+rolebinding.rbac.authorization.k8s.io/argo-rb-for-litmusportal-server created
+role.rbac.authorization.k8s.io/litmus-namespace-scope-for-litmusportal-server created
+rolebinding.rbac.authorization.k8s.io/litmus-namespace-scope-rb-for-litmusportal-server created
+role.rbac.authorization.k8s.io/subscriber-role-for-litmusportal-server created
+rolebinding.rbac.authorization.k8s.io/subscriber-rb-for-litmusportal-server created
+role.rbac.authorization.k8s.io/litmus-admin-role-for-litmusportal-server created
+rolebinding.rbac.authorization.k8s.io/litmus-admin-rb-for-litmusportal-server created
+role.rbac.authorization.k8s.io/chaos-role-for-litmusportal-server created
+rolebinding.rbac.authorization.k8s.io/chaos-rb-for-litmusportal-server created
+role.rbac.authorization.k8s.io/event-tracker-role-for-litmusportal-server created
+rolebinding.rbac.authorization.k8s.io/event-tracker-rb-for-litmusportal-server created
+role.rbac.authorization.k8s.io/litmus-server-role created
+rolebinding.rbac.authorization.k8s.io/litmus-server-rb created
+serviceaccount/litmus-server-account created
+secret/litmus-portal-admin-secret created
 configmap/litmus-portal-admin-config created
+configmap/litmusportal-frontend-nginx-configuration created
 deployment.apps/litmusportal-frontend created
 service/litmusportal-frontend-service created
-serviceaccount/litmus-server-account created
-role.rbac.authorization.k8s.io/litmus-server created
-rolebinding.rbac.authorization.k8s.io/litmus-server-rb created
 deployment.apps/litmusportal-server created
 service/litmusportal-server-service created
+deployment.apps/litmusportal-auth-server created
+service/litmusportal-auth-server-service created
 statefulset.apps/mongo created
 service/mongo-service created
+service/mongo-headless-service created
 ```
 
 ## **Verify your installation**
