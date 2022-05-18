@@ -145,7 +145,7 @@ Applying the manifest file will install all the required service account configu
 kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/2.9.0/litmus-namespaced-2.9.0.yaml -n <Your Namespace>
 ```
 
-> You need to provide the Namespace in place of <Your Namespace>, that you have created eariler for the litmuschaos Installation
+> You need to provide the Namespace in place of `Your Namespace`, that you have created eariler for the litmuschaos Installation
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
 
