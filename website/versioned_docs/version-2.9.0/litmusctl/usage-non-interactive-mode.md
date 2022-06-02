@@ -26,7 +26,7 @@ Litmusctl is using the `.litmusconfig` config file to manage multiple accounts
 2. Otherwise, the ${HOME}/.litmusconfig file is used, and no merging takes place.
 
 Litmusctl supports both interactive and non-interactive(flag based) modes.
-> Only `litmusctl create agent`  command needs --non-interactive flag, other commands don't need this flag to be in non-interactive mode. If mandatory flags aren't passed, then litmusctl takes input in an interactive mode.
+> Only `litmusctl connect agent`  command needs --non-interactive flag, other commands don't need this flag to be in non-interactive mode. If mandatory flags aren't passed, then litmusctl takes input in an interactive mode.
 
 ### Installation modes
 Litmusctl can install an agent in two different modes.
@@ -46,7 +46,7 @@ litmusctl config set-account --endpoint="" --username="" --password=""
 * To create an agent without a project in a cluster mode
 >Note: If the user doesn't have any project, it will create a random project and add the agent in that random project.
 ```shell
-litmusctl create agent --agent-name="" --non-interactive
+litmusctl connect agent --agent-name="" --non-interactive
 ```
 
 Or,
@@ -55,14 +55,14 @@ Or,
 > Note: To get `project-id`. Apply `litmusctl get projects`
 
 ```shell
-litmusctl create agent --agent-name="" --project-id="" --non-interactive
+litmusctl connect agent --agent-name="" --project-id="" --non-interactive
 ```
 
 #### Verify the new Agent Connection
 
 To verify, if the connection process was successful you can view the list of connected agents from the Targets section on your ChaosCenter and ensure that the connected agent is in Active State.
 
-### Flags for `create agent` command
+### Flags for `connect agent` command
 <table>
     <th>Flag</th>
     <th>Short Flag</th>
@@ -206,8 +206,8 @@ litmusctl get projects
 
 ```
 PROJECT ID                                PROJECT NAME       CREATEDAT
-50addd40-8767-448c-a91a-5071543a2d8e      Developer Project  2021-07-21 14:38:51 +0530 IST     
-7a4a259a-1ae5-4204-ae83-89a8838eaec3      DevOps Project     2021-07-21 14:39:14 +0530 IST     
+50addd40-8767-448c-a91a-5071543a2d8e      Developer Project  2021-07-21 14:38:51 +0530 IST
+7a4a259a-1ae5-4204-ae83-89a8838eaec3      DevOps Project     2021-07-21 14:39:14 +0530 IST
 ```
 
 
@@ -219,9 +219,21 @@ litmusctl get agents --project-id=""
 **Output:**
 
 ```
-AGENTID                                AGENTNAME          STATUS 
-55ecc7f2-2754-43aa-8e12-6903e4c6183a   agent-1            ACTIVE 
-13dsf3d1-5324-54af-4g23-5331g5v2364f   agent-2            INACTIVE
+AGENTID                                AGENTNAME          STATUS     REGISTRATION
+55ecc7f2-2754-43aa-8e12-6903e4c6183a   agent-1            ACTIVE     REGISTERED
+13dsf3d1-5324-54af-4g23-5331g5v2364f   agent-2            INACTIVE   NOT REGISTERED
+```
+
+- To disconnect an agent, issue the following command.
+
+```shell
+litmusctl disconnect agent f9799723-29f1-454c-b830-ae8ba7ee4c30 --project-id=""
+```
+
+**Output:**
+
+```
+🚀 ChaosAgent successfully disconnected.
 ```
 
 For more information related to flags, Use `litmusctl --help`.

@@ -32,7 +32,7 @@ Litmusctl is using the `.litmusconfig` config file to manage multiple accounts
 
 Litmusctl supports both interactive and non-interactive(flag based) modes.
 
-> Only `litmusctl create agent` command needs --non-interactive flag, other commands don't need this flag to be in non-interactive mode. If mandatory flags aren't passed, then litmusctl takes input in an interactive mode.
+> Only `litmusctl connect agent` command needs --non-interactive flag, other commands don't need this flag to be in non-interactive mode. If mandatory flags aren't passed, then litmusctl takes input in an interactive mode.
 
 Multiple external ChaosAgents can be connected to the ChaosCenter with the help of the command line utility [litmusctl](installation.md)
 
@@ -64,7 +64,7 @@ account.username/admin configured
 - To create an agent in a cluster mode
 
 ```shell
-litmusctl create agent
+litmusctl connect agent
 ```
 
 There will be a list of existing projects displayed on the terminal. Select the desired project by entering the sequence number indicated against it.
@@ -271,9 +271,21 @@ Enter the Project ID: 50addd40-8767-448c-a91a-5071543a2d8e
 **Output:**
 
 ```
-AGENTID                                AGENTNAME          STATUS
-55ecc7f2-2754-43aa-8e12-6903e4c6183a   agent-1            ACTIVE
-13dsf3d1-5324-54af-4g23-5331g5v2364f   agent-2            INACTIVE
+AGENTID                                AGENTNAME          STATUS     REGISTRATION
+55ecc7f2-2754-43aa-8e12-6903e4c6183a   agent-1            ACTIVE     REGISTERED
+13dsf3d1-5324-54af-4g23-5331g5v2364f   agent-2            INACTIVE   NOT REGISTERED
+```
+
+- To disconnect an agent, issue the following command.
+
+```shell
+litmusctl disconnect agent f9799723-29f1-454c-b830-ae8ba7ee4c30 --project-id=""
+```
+
+**Output:**
+
+```
+🚀 ChaosAgent successfully disconnected.
 ```
 
 For more information related to flags, Use `litmusctl --help`.
