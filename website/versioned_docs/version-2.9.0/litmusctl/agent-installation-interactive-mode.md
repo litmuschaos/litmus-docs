@@ -1,5 +1,5 @@
 ---
-id: usage-interactive-mode
+id: agent-installation-interactive-mode
 title: Installing ChaosAgents in interactive mode
 sidebar_label: Using interactive mode
 ---
@@ -293,6 +293,7 @@ For more information related to flags, Use `litmusctl --help`.
 ## Learn More
 
 - [Learn More about Litmusctl](installation.md)
-- [Installing ChaosAgents in non interactive mode](./usage-non-interactive-mode.md)
+- [Installing ChaosAgents in non interactive mode](./agent-installation-non-interactive-mode.md)
+- [Create Chaos Workflows using Litmusctl](./chaos-workflow-creation.md)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)

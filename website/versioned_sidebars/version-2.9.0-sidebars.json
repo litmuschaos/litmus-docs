@@ -141,10 +141,11 @@
         "litmusctl/installation",
         {
           "Connect Agent": [
-            "litmusctl/usage-non-interactive-mode",
-            "litmusctl/usage-interactive-mode"
+            "litmusctl/agent-installation-non-interactive-mode",
+            "litmusctl/agent-installation-interactive-mode"
           ]
-        }
+        },
+        "litmusctl/chaos-workflow-creation"
       ]
     },
     {

@@ -13,8 +13,8 @@ sidebar_label: ChaosAgents
 
 ## Connecting ChaosAgents
 
-- Learn to [connect ChaosAgents with non interactive mode using litmuctl](../litmusctl/usage-non-interactive-mode.md)
-- Learn to [connect ChaosAgents with interactive mode using litmuctl](../litmusctl/usage-interactive-mode.md)
+- Learn to [connect ChaosAgents with non interactive mode using litmuctl](../litmusctl/agent-installation-non-interactive-mode.md)
+- Learn to [connect ChaosAgents with interactive mode using litmuctl](../litmusctl/agent-installation-interactive-mode.md)
 
 ## Resource Requiremenets for Agents-plane components
 
