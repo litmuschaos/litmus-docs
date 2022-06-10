@@ -55,7 +55,7 @@ module.exports = {
           'Chaos Workflow': ['concepts/chaos-workflow', 'concepts/visualize-workflow']
         },
         {
-          Observability: [
+          Analytics: [
             'concepts/workflow-statistics',
             'concepts/app-infra-monitoring',
             'concepts/datasource',

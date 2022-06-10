@@ -32,7 +32,7 @@ ChaosHub allows you to orchestrate workflows from the Public **[ChaosHub](http:/
 
 Chaos Workflow is a set of different operations coupled together to achieve desired chaos impact on a Kubernetes Cluster.
 
-### [Observability](workflow-statistics.md)
+### [Analytics](workflow-statistics.md)
 
 Monitoring and observability during and post chaos using built-in Litmus analytics dashboard as well as external observability tools.
 
