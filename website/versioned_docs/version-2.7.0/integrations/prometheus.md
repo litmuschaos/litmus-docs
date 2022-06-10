@@ -154,7 +154,7 @@ kubectl create ns monitoring
 ```bash
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
-helm install prom prometheus-community/kube-prometheus-stack --namespace monitoring
+helm install prometheus-stack prometheus-community/kube-prometheus-stack --namespace monitoring
 ```
 
 - Create the pod monitor as specified
