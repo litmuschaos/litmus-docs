@@ -161,7 +161,8 @@ module.exports = {
         'litmusctl/installation',
         {
           'Connect Agent': ['litmusctl/usage-non-interactive-mode', 'litmusctl/usage-interactive-mode']
-        }
+        },
+        'litmusctl/chaos-workflow-creation'
       ]
     },
 
