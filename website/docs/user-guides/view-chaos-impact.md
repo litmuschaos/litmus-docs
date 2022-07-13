@@ -52,7 +52,7 @@ After creating a dashboard, you view the corresponding metrics along with the ch
 
 - **Hard Refresh:** To perform a refresh explicitly a hard refresh option is given to the user.
 
-- **View chaos metric info:** For the particular graph, if you want to view the chaos chaos scenario -related information in the table then you may first expand the graph and hover over the specific chaos event to view all its chaos scenario -related information.
+- **View chaos metric info:** For the particular graph, if you want to view the chaos scenario -related information in the table then you may first expand the graph and hover over the specific chaos event to view all its chaos scenario -related information.
 
 - **Popout:** To open the particular graph in a modal.
 
@@ -63,7 +63,7 @@ After creating a dashboard, you view the corresponding metrics along with the ch
 
 - **Edit particular panel:** To edit the queries for the specific panel. On clicking on the `Edit` button you will be directed to the dashboard configuration page where you can tune the queries. To learn more about query editing [click here](editing-queries-app-dashboard.md).
 
-- **Show chaos during this interval:** Among all the chaos injections that have been scheduled by the user, chaos events that lie within the selected time interval are listed in form of a table. You may select/deselect the specific chaos events to visualize them on the graphs as an overlay for the chaos during. Please note that all the chaos events come along with the lasted verdict corresponding to the chaos chaos scenario .
+- **Show chaos during this interval:** Among all the chaos injections that have been scheduled by the user, chaos events that lie within the selected time interval are listed in form of a table. You may select/deselect the specific chaos events to visualize them on the graphs as an overlay for the chaos during. Please note that all the chaos events come along with the lasted verdict corresponding to the chaos scenario .
 
 <figure>
 <img src={require('../assets/user-guides/observability/setup/view-chaos-impact-show-chaos-during-this-interval.png').default} />

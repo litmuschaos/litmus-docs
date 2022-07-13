@@ -63,7 +63,7 @@ Below is a high level comparison between Litmus 1.x and Litmus 2.0 providing a h
 
 | Litmus 1.x           | Litmus 2.0                            |
 | -------------------- | ------------------------------------- |
-| Experiments          | Chaos Chaos Scenarios                 |
+| Experiments          | Chaos Scenarios                       |
 | Per user             | Teams (Multi Tenant)                  |
 | Per cluster          | Per organisation (Cross Cloud)        |
 | Only Public ChaosHub | Public and Private ChaosHubs          |

@@ -42,10 +42,10 @@ The graph consists of useful information such as :
 - Total time taken for the nodes to execute.
 - Structure of the experiments (Serial or Parallel experiments).
 
-You can also visualize the non Chaos chaos scenarios. The logs of individual nodes are also available here.
+You can also visualize the non Chaos scenarios. The logs of individual nodes are also available here.
 
 <figure>
-<img src={require('../assets/argo-chaos-workflow.png').default} alt="Chaos Scenario run graph of a non chaos chaos scenario" />
+<img src={require('../assets/argo-chaos-workflow.png').default} alt="Chaos Scenario run graph of a non chaos scenario" />
 <i>Graph of a non Chaos Scenario</i>
 </figure>
 

@@ -6,7 +6,7 @@ sidebar_label: Configuring GitOps
 
 ## Introduction
 
-GitOps enables you to configure a single source of truth for your chaos chaos scenarios and experiments, any changes made either to the artifacts stored in the configured git repository or the portal will be synced.
+GitOps enables you to configure a single source of truth for your chaos scenarios and experiments, any changes made either to the artifacts stored in the configured git repository or the portal will be synced.
 
 ## Before you begin
 
@@ -66,7 +66,7 @@ kubectl logs -f event-tracker-pod-name -n litmus
 In the logs, you’ll notice that the event-tracker has started.
 If you make changes in the application the event tracker will trigger the chaos injection. If the policy conditions are met then the event tracker will inform the server to schedule a chaos scenario in that same target. For eg: if you have an Nginx app as your target application, you can just edit the deployment and change its image tag, this will trigger the chaos injection.
 
-Below is a sample policy where two conditions are present and will be validated by the respective operator. The chaos chaos scenario will be triggered if both conditions are met due to the `AND` condition type.
+Below is a sample policy where two conditions are present and will be validated by the respective operator. The chaos scenario will be triggered if both conditions are met due to the `AND` condition type.
 
 ```
 apiVersion: eventtracker.litmuschaos.io/v1

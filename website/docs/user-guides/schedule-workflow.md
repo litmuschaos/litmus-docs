@@ -23,7 +23,7 @@ It will take you to the **Schedule a new Litmus chaos scenario ** page where you
 
 ## 1. Choose targetchaos delegate
 
-This is the first step in chaos scenario creation. In this step, you can select a target chaos delegate where the chaos scenario will be scheduled. These chaos delegate consist of the CRDs and the required resources to run a chaos chaos scenario .
+This is the first step in chaos scenario creation. In this step, you can select a target chaos delegate where the chaos scenario will be scheduled. These chaos delegate consist of the CRDs and the required resources to run a chaos scenario .
 While installing the Litmus Portal, a default chaos delegate named **Self Chaos Delegate ** is created.
 
 <figure>
@@ -44,13 +44,13 @@ After Selecting thechaos delegate , you can continue by clicking on **Next** but
 
 In this step, you can create a chaos scenario from different methods, these include:
 
-- **Create a new chaos scenario from one of the pre-defined chaos chaos scenario s** : With this option, you can select a pre-defined chaos scenarios which are available in the connected ChaosHub.
+- **Create a new chaos scenario from one of the pre-defined chaos scenario s** : With this option, you can select a pre-defined chaos scenarios which are available in the connected ChaosHub.
 
 - **Create a new chaos scenario by using cloned template chaos scenario ** : With this option, you can create a new chaos scenario from an existing one [saved as a template](save-as-template.md). Choose on of the saved templates and tweak it according to your requirements.
 
 - **Create a new chaos scenario using experiments from MyHub** : With this option, you can create customized chaos scenarios from the one of your connected ChaosHubs. With this option you can add multiple experiments from that ChaosHub either serially or in parallel to construct your chaos scenario graphically.
 
-- **Import chaos scenario using YAML** : With this option, you can import a [hand-crafted/constructed chaos chaos scenario ](construct-workflow.md) manifest and tune it according to the use-case. You can also import a basic Argo chaos scenario using this functionality.
+- **Import chaos scenario using YAML** : With this option, you can import a [hand-crafted/constructed chaos scenario ](construct-workflow.md) manifest and tune it according to the use-case. You can also import a basic Argo chaos scenario using this functionality.
   :::note
   For an uploaded chaos scenario , the tune chaos scenario functionality will not be available. The uploaded chaos scenario is completely user-dependent or user-specific.
 
@@ -65,7 +65,7 @@ In this section, you can change the name of the chaos scenario and also provide 
 
 ## 4. Tune the chaos scenario
 
-This section consists of all the information related to the chaos chaos scenario .
+This section consists of all the information related to the chaos scenario .
 Some new and advanced features that are present in this section are :
 
 1. **Chaos Scenario Visualization** : This feature allows you to visualize the chaos scenario even before scheduling it.

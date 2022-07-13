@@ -1,6 +1,6 @@
 ---
 id: run-your-first-workflow
-title: Run your First ChaosChaos Scenario in 5 minutes
+title: Run your First Chaos Scenario in 5 minutes
 sidebar_label: Run Your FirstChaos Scenario
 ---
 
@@ -10,7 +10,7 @@ Welcome to this scenario, in this section you will get an overview of how to exe
 
 ## Prerequisites
 
-Before starting with your first ChaosChaos Scenario make sure the [Litmus ChaosCenter](resources#chaoscenter) is installed in either one of these scopes
+Before starting with your first Chaos Scenario make sure the [Litmus ChaosCenter](resources#chaoscenter) is installed in either one of these scopes
 
 - [Cluster Scope](../user-guides/chaoscenter-cluster-scope-installation.md)
 - [Namespace Scope](../user-guides/chaoscenter-namespace-scope-installation.md)
@@ -72,7 +72,7 @@ In this scenario we will execute a pod-delete fault on a sample micro-service ap
 
 ### Congratulations
 
-And with that you have successfully scheduled your first ChaosChaos Scenario with Litmus.
+And with that you have successfully scheduled your first Chaos Scenario with Litmus.
 
 <img src={require("../assets/getting-started/run-your-first-workflow/scheduled-successfully.png").default} alt="Podtato Head Chaos Scenario Scheduled Successfully" />
 

@@ -22,7 +22,7 @@ Set-up monitoring, Analyze and Compare various metrics that help you make reliab
 
 ### [Event Triggered Chaos using GitOps](gitops-configuration.md)
 
-GitOps in Litmus provides a way of using Event-Driven Chaos Injection, where target resources(stateful sets, deployments, etc.) can be configured to automatically trigger chaos chaos scenarios with any changes in the resource spec.
+GitOps in Litmus provides a way of using Event-Driven Chaos Injection, where target resources(stateful sets, deployments, etc.) can be configured to automatically trigger chaos scenarios with any changes in the resource spec.
 
 ### [Account Settings](account-settings.md)
 

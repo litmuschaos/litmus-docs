@@ -6,8 +6,8 @@ sidebar_label: Construct Chaos Scenario YAML
 
 ---
 
-**Chaos Chaos Scenario** is a set of different operations coupled together to achieve desired chaos imapact on a Kubernetes Cluster. <br/>
-A basic chaos chaos scenario consists of these steps:
+**Chaos Scenario** is a set of different operations coupled together to achieve desired chaos imapact on a Kubernetes Cluster. <br/>
+A basic chaos scenario consists of these steps:
 
 1. Install ChaosExperiment
 2. Install ChaosEngine
@@ -15,13 +15,13 @@ A basic chaos chaos scenario consists of these steps:
 
 ## Before we begin
 
-To construct a Chaos Chaos Scenario without ChaosCenter, make sure you are aware of [Chaos Chaos Scenario](../concepts/chaos-workflow.md), [ChaosEngine CR](../concepts/chaos-engine.md) and the different steps present in it.
+To construct a Chaos Scenario without ChaosCenter, make sure you are aware of [Chaos Scenario](../concepts/chaos-workflow.md), [ChaosEngine CR](../concepts/chaos-engine.md) and the different steps present in it.
 
-## Steps to Construct a Chaos Chaos Scenario
+## Steps to Construct a Chaos Scenario
 
 LitmusChaos leverages the popular chaos scenario and GitOps tool **Argo** to achieve this goal. Argo enables the orchestration of different chaos scenarios together in the form of chaos scenario which is extremly simple and efficient to use.<br/>
 
-The structure of a chaos chaos scenario is similar to that of a Kubernetes Object. It consists of the mandatory fields like `apiVersion`, `kind`, `metadata`, `spec`.
+The structure of a chaos scenario is similar to that of a Kubernetes Object. It consists of the mandatory fields like `apiVersion`, `kind`, `metadata`, `spec`.
 
 Few additional terms in an Argo chaos scenarios are:
 
