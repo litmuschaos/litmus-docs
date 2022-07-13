@@ -1,7 +1,7 @@
 ---
 id: download-workflow-manifest
-title: Download Workflow Manifest
-sidebar_label: Download Workflow Manifest
+title: Download Chaos Scenario Manifest
+sidebar_label: Download Chaos Scenario Manifest
 ---
 
 ---
@@ -10,11 +10,11 @@ You can save a schedule configurations manifest as a `YAML`. This section goes o
 
 ## Before you begin
 
-You can learn how to schedule your first workflow [here](schedule-workflow.md).
+You can learn how to schedule your first chaos scenario [here](schedule-workflow.md).
 
-## 1. Go to the workflows sections
+## 1. Go to the chaos scenarios sections
 
-In the `Workflows` page, go to the `Schedules` tab and click on the options menu for the specific schedule you wish to download the manifest for:
+In the `Chaos Scenario` page, go to the `Schedules` tab and click on the options menu for the specific schedule you wish to download the manifest for:
 
 <img src={require('../assets/user-guides/injecting-fault/download-workflow-manifest/step-1.png').default} width="1000" height="500" />
 
@@ -26,6 +26,6 @@ After opening the options menu, click on the `Download Manifest` option. Having 
 
 ## Learn more
 
-- [Schedule a workflow](schedule-workflow.md)
-- [Re-run a workflow](re-run-workflow.md)
-- [Delete a workflow](delete-workflow.md)
+- [Schedule a chaos scenario](schedule-workflow.md)
+- [Re-run a chaos scenario](re-run-workflow.md)
+- [Delete a chaos scenario](delete-workflow.md)

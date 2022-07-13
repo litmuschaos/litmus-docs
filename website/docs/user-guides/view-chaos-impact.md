@@ -1,6 +1,6 @@
 ---
 id: view-chaos-impact
-title: Viewing Chaos Impact on Applications Metrics Across Agent’s Scope
+title: Viewing Chaos Impact on Applications Metrics Across Chaos Delegate ’s Scope
 sidebar_label: Viewing Chaos Impact
 ---
 
@@ -15,7 +15,7 @@ After creating a dashboard, you view the corresponding metrics along with the ch
 
 ## Dashboard Navigation
 
-- **Dashboard Info:** All the dashboard meta-data (name, type, data source, agent ), selected applications and selected panels are displayed in this selection. To check on the data source connected with the dashboard click on the attached data source link. You may select/deselect the items listed in the selected applications and selected panels field to visualize the appropriate data.
+- **Dashboard Info:** All the dashboard meta-data (name, type, data source, chaos delegate ), selected applications and selected panels are displayed in this selection. To check on the data source connected with the dashboard click on the attached data source link. You may select/deselect the items listed in the selected applications and selected panels field to visualize the appropriate data.
 
 <figure>
 <img src={require('../assets/user-guides/observability/setup/view-chaos-impact-info.png').default} />
@@ -52,7 +52,7 @@ After creating a dashboard, you view the corresponding metrics along with the ch
 
 - **Hard Refresh:** To perform a refresh explicitly a hard refresh option is given to the user.
 
-- **View chaos metric info:** For the particular graph, if you want to view the chaos workflow-related information in the table then you may first expand the graph and hover over the specific chaos event to view all its workflow-related information.
+- **View chaos metric info:** For the particular graph, if you want to view the chaos chaos scenario -related information in the table then you may first expand the graph and hover over the specific chaos event to view all its chaos scenario -related information.
 
 - **Popout:** To open the particular graph in a modal.
 
@@ -63,7 +63,7 @@ After creating a dashboard, you view the corresponding metrics along with the ch
 
 - **Edit particular panel:** To edit the queries for the specific panel. On clicking on the `Edit` button you will be directed to the dashboard configuration page where you can tune the queries. To learn more about query editing [click here](editing-queries-app-dashboard.md).
 
-- **Show chaos during this interval:** Among all the chaos injections that have been scheduled by the user, chaos events that lie within the selected time interval are listed in form of a table. You may select/deselect the specific chaos events to visualize them on the graphs as an overlay for the chaos during. Please note that all the chaos events come along with the lasted verdict corresponding to the chaos workflow.
+- **Show chaos during this interval:** Among all the chaos injections that have been scheduled by the user, chaos events that lie within the selected time interval are listed in form of a table. You may select/deselect the specific chaos events to visualize them on the graphs as an overlay for the chaos during. Please note that all the chaos events come along with the lasted verdict corresponding to the chaos chaos scenario .
 
 <figure>
 <img src={require('../assets/user-guides/observability/setup/view-chaos-impact-show-chaos-during-this-interval.png').default} />
@@ -79,7 +79,7 @@ After creating a dashboard, you view the corresponding metrics along with the ch
 <i>Editing chaos metric queries</i>
 </figure>
 
-- **Switch between dashboards for the same agent:** You can switch between the dashboards for the selected agent. To view a different dashboard for the given agent, click the dropdown option placed next to the dashboard name which contains the list of all the configured dashboards for that agent and select a particular dashbord.
+- **Switch between dashboards for the same chaos delegate :** You can switch between the dashboards for the selected chaos delegate . To view a different dashboard for the given chaos delegate , click the dropdown option placed next to the dashboard name which contains the list of all the configured dashboards for that chaos delegate and select a particular dashbord.
 
 ## Learn more
 

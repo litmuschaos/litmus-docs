@@ -1,58 +1,68 @@
 ---
 id: usage-non-interactive-mode
-title: Installing ChaosAgents in non interactive mode
+title: Installing Chaos Delegates in non interactive mode
 sidebar_label: Using non interactive mode
 ---
 
 ---
 
 # Usage: Litmusctl v0.10.0
+
 > Notes:
-> * For litmusctl v0.10.0 or latest
-> * Compatible with Litmus 2.9.0 or latest
+>
+> - For litmusctl v0.10.0 or latest
+> - Compatible with Litmus 2.9.0 or latest
 
 ### litmusctl Syntax
+
 `litmusctl` has a syntax to use as follows:
 
 ```shell
 litmusctl [command] [TYPE] [flags]
 ```
-* Command: refers to what you do want to perform (create, get and config)
-* Type: refers to the feature type you are performing a command against (agent, project etc.)
-* Flags: It takes some additional information for resource operations. For example, `--installation-mode` allows you to specify an installation mode.
+
+- Command: refers to what you do want to perform (create, get and config)
+- Type: refers to the feature type you are performing a command against (chaos delegate, project etc.)
+- Flags: It takes some additional information for resource operations. For example, `--installation-mode` allows you to specify an installation mode.
 
 Litmusctl is using the `.litmusconfig` config file to manage multiple accounts
+
 1. If the --config flag is set, then only the given file is loaded. The flag may only be set once and no merging takes place.
 2. Otherwise, the ${HOME}/.litmusconfig file is used, and no merging takes place.
 
 Litmusctl supports both interactive and non-interactive(flag based) modes.
-> Only `litmusctl connect agent`  command needs --non-interactive flag, other commands don't need this flag to be in non-interactive mode. If mandatory flags aren't passed, then litmusctl takes input in an interactive mode.
+
+> Only `litmusctl connect agent` command needs --non-interactive flag, other commands don't need this flag to be in non-interactive mode. If mandatory flags aren't passed, then litmusctl takes input in an interactive mode.
 
 ### Installation modes
-Litmusctl can install an agent in two different modes.
-* cluster mode: With this mode, the agent can run the chaos in any namespace. It installs appropriate cluster roles and cluster role bindings to achieve this mode. It can be enabled by passing a flag `--installation-mode=cluster`
 
-* namespace mode: With this mode, the agent can run the chaos in its namespace. It installs appropriate roles and role bindings to achieve this mode. It can be enabled by passing a flag `--installation-mode=namespace`
+Litmusctl can install an chaos delegate in two different modes.
 
-Note: With namespace mode, the user needs to create the namespace to install the agent as a prerequisite.
+- cluster mode: With this mode, the chaos delegate can run the chaos in any namespace. It installs appropriate cluster roles and cluster role bindings to achieve this mode. It can be enabled by passing a flag `--installation-mode=cluster`
 
-### Minimal steps to connect an agent
+- namespace mode: With this mode, the chaos delegate can run the chaos in its namespace. It installs appropriate roles and role bindings to achieve this mode. It can be enabled by passing a flag `--installation-mode=namespace`
 
-* To setup an account with litmusctl
+Note: With namespace mode, the user needs to create the namespace to install the chaos delegate as a prerequisite.
+
+### Minimal steps to connect an chaos delegate
+
+- To setup an account with litmusctl
+
 ```shell
 litmusctl config set-account --endpoint="" --username="" --password=""
 ```
 
-* To connect an agent without a project in a cluster mode
->Note: If the user doesn't have any project, it will create a random project and add the agent in that random project.
+- To connect a chaos delegate without a project in a cluster mode
+  > Note: If the user doesn't have any project, it will create a random project and add the chaos delegate in that random project.
+
 ```shell
 litmusctl connect agent --agent-name="" --non-interactive
 ```
 
 Or,
 
-* To connect an agent with an existing project
-> Note: To get `project-id`. Apply `litmusctl get projects`
+- To connect a chaos delegate with an existing project
+  > Note: To get `project-id`. Apply `litmusctl get projects`
 
 ```shell
 litmusctl connect agent --agent-name="" --project-id="" --non-interactive
@@ -60,9 +70,10 @@ litmusctl connect agent --agent-name="" --project-id="" --non-interactive
 
 #### Verify the new Agent Connection
 
-To verify, if the connection process was successful you can view the list of connected agents from the Targets section on your ChaosCenter and ensure that the connected agent is in Active State.
+To verify, if the connection process was successful you can view the list of connected chaos delegate from the Targets section on your ChaosCenter and ensure that the connected chaos delegate is in Active State.
 
 ### Flags for `connect agent` command
+
 <table>
     <th>Flag</th>
     <th>Short Flag</th>
@@ -72,25 +83,25 @@ To verify, if the connection process was successful you can view the list of con
         <td>--agent-description</td>
         <td></td>
         <td>String</td>
-        <td>Set the agent description (default "---")</td>
+        <td>Set the chaos delegate description (default "---")</td>
     </tr>
     <tr>
         <td>--agent-name</td>
         <td></td>
         <td>String</td>
-        <td>Set the agent name</td>
+        <td>Set the chaos delegate name</td>
     </tr>
     <tr>
         <td>--cluster-type</td>
         <td></td>
         <td>String</td>
-        <td>Set the cluster-type to external for external agents | Supported=external/internal (default "external")</td>
+        <td>Set the cluster-type to external for external chaos delegates | Supported=external/internal (default "external")</td>
     </tr>
     <tr>
         <td>--installation-mode</td>
         <td></td>
         <td>String</td>
-        <td>Set the installation mode for the kind of agent | Supported=cluster/namespace (default "cluster")</td>
+        <td>Set the installation mode for the kind of chaos delegate | Supported=cluster/namespace (default "cluster")</td>
     </tr>
     <tr>
         <td>--kubeconfig</td>
@@ -102,13 +113,13 @@ To verify, if the connection process was successful you can view the list of con
         <td>--namespace</td>
         <td></td>
         <td>String</td>
-        <td>Set the namespace for the agent installation (default "litmus")</td>
+        <td>Set the namespace for the chaos delegate installation (default "litmus")</td>
     </tr>
     <tr>
         <td>--node-selector</td>
         <td></td>
         <td>String</td>
-        <td>Set the node-selector for agent components | Format: key1=value1,key2=value2)</td>
+        <td>Set the node-selector for chaos delegate components | Format: key1=value1,key2=value2)</td>
     </tr>
     <tr>
         <td>--non-interactive</td>
@@ -138,7 +149,7 @@ To verify, if the connection process was successful you can view the list of con
         <td>--service-account</td>
         <td></td>
         <td>String</td>
-        <td>Set the service account to be used by the agent (default "litmus")</td>
+        <td>Set the service account to be used by the chaos delegate (default "litmus")</td>
     </tr>
     <tr>
         <td>--config</td>
@@ -148,15 +159,16 @@ To verify, if the connection process was successful you can view the list of con
     </tr>
 </table>
 
-
 ### Additional commands
 
-* To view the current configuration of `.litmusconfig`, type:
+- To view the current configuration of `.litmusconfig`, type:
+
 ```shell
 litmusctl config view
 ```
 
 **Output:**
+
 ```
 accounts:
 - users:
@@ -173,7 +185,7 @@ current-user: litmus-user
 kind: Config
 ```
 
-* To get an overview of the accounts available within `.litmusconfig`, use the `config get-accounts` command:
+- To get an overview of the accounts available within `.litmusconfig`, use the `config get-accounts` command:
 
 ```shell
 litmusctl config get-accounts
@@ -187,17 +199,20 @@ CURRENT  ENDPOINT                         USERNAME  EXPIRESIN
 *        https://preview.litmuschaos.io   raj       2021-07-22 14:33:22 +0530 IST
 ```
 
-* To alter the current account use the `use-account` command with the --endpoint and --username flags:
+- To alter the current account use the `use-account` command with the --endpoint and --username flags:
+
 ```shell
 litmusctl config use-account --endpoint="" --username=""
 ```
 
-* To create a project, apply the following command with the `--name` flag:
+- To create a project, apply the following command with the `--name` flag:
+
 ```shell
 litmusctl create project --name=""
 ```
 
-* To view all the projects with the user, use the `get projects` command.
+- To view all the projects with the user, use the `get projects` command.
+
 ```shell
 litmusctl get projects
 ```
@@ -206,12 +221,12 @@ litmusctl get projects
 
 ```
 PROJECT ID                                PROJECT NAME       CREATEDAT
-50addd40-8767-448c-a91a-5071543a2d8e      Developer Project  2021-07-21 14:38:51 +0530 IST     
-7a4a259a-1ae5-4204-ae83-89a8838eaec3      DevOps Project     2021-07-21 14:39:14 +0530 IST     
+50addd40-8767-448c-a91a-5071543a2d8e      Developer Project  2021-07-21 14:38:51 +0530 IST
+7a4a259a-1ae5-4204-ae83-89a8838eaec3      DevOps Project     2021-07-21 14:39:14 +0530 IST
 ```
 
+- To get an overview of the chaos delegate available within a project, issue the following command.
 
-* To get an overview of the agents available within a project, issue the following command.
 ```shell
 litmusctl get agents --project-id=""
 ```
@@ -221,10 +236,10 @@ litmusctl get agents --project-id=""
 ```
 AGENTID                                AGENTNAME          STATUS     REGISTRATION
 55ecc7f2-2754-43aa-8e12-6903e4c6183a   agent-1            ACTIVE     REGISTERED
-13dsf3d1-5324-54af-4g23-5331g5v2364f   agent-2            INACTIVE   NOT REGISTERED                                         
+13dsf3d1-5324-54af-4g23-5331g5v2364f   agent-2            INACTIVE   NOT REGISTERED
 ```
 
-- To disconnect an agent, issue the following command.
+- To disconnect a chaos delegate, issue the following command.
 
 ```shell
 litmusctl disconnect agent 55ecc7f2-2754-43aa-8e12-6903e4c6183a --project-id=""
@@ -236,11 +251,10 @@ litmusctl disconnect agent 55ecc7f2-2754-43aa-8e12-6903e4c6183a --project-id=""
 🚀 ChaosAgent successfully disconnected.
 ```
 
-
 ## Learn More
 
 - [Learn More about Litmusctl](installation.md)
-- [Installing ChaosAgents in interactive mode](./usage-interactive-mode.md)
-- [Create Chaos Workflows using Litmusctl](./chaos-workflow-creation.md)
+- [Installing Chaos Delegate in interactive mode](./usage-interactive-mode.md)
+- [Create Chaos Scenarios using Litmusctl](./chaos-workflow-creation.md)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)

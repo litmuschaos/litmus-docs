@@ -6,7 +6,7 @@ sidebar_label: Manage Application Dashboard
 
 ---
 
-Observing chaos injections and deriving insights from the chaos events is the core part of Chaos Observability. Whenever a chaos workflow run is performed its impact may be observed across different services and applications. Application dashboards provide a systematic visualization of all such events along with the performance of the individual service/application. To learn more about the dashboard schema architecture [click here](https://raw.githubusercontent.com/litmuschaos/litmus/master/monitoring/portal-dashboards/schema.json)
+Observing chaos injections and deriving insights from the chaos events is the core part of Chaos Observability. Whenever a chaos scenario run is performed its impact may be observed across different services and applications. Application dashboards provide a systematic visualization of all such events along with the performance of the individual service/application. To learn more about the dashboard schema architecture [click here](https://raw.githubusercontent.com/litmuschaos/litmus/master/monitoring/portal-dashboards/schema.json)
 
 ## Before you begin
 
@@ -25,9 +25,9 @@ To configure an application dashboard, you must first add a data source. To lear
 
 ## Table for configured dashboards
 
-All the configured dashboards are listed under the Dashboards table. The table provides you all the details related to the dashboard like the name of the dashboard, the agent with which it has been connected, type of the dashboard, connected data source type and the last date it was opened.
+All the configured dashboards are listed under the Dashboards table. The table provides you all the details related to the dashboard like the name of the dashboard, the chaos delegate with which it has been connected, type of the dashboard, connected data source type and the last date it was opened.
 
-For all the dashboards listed in the table, you can filter the dashboard with respect to agent name, dashboard-type and time period for dashboard creation.
+For all the dashboards listed in the table, you can filter the dashboard with respect to chaos delegate name, dashboard-type and time period for dashboard creation.
 
 <figure>
 <img src={require('../assets/user-guides/observability/setup/manage-application-dashboard-table.png').default} />
@@ -65,7 +65,7 @@ You need to select the dashboard type from the following options:
 - **Dashboard metadata:**
 
   - Name: Enter the name for your dashboard. A default name for the dashboard is provided you may override it as per your requirement.
-  - Agent: Select the agent for which you want to set up the dashboard. By default, an agent from the list of all connected agents is selected for you. You may override this as per your requirement.
+  - chaos delegate: Select the chaos delegate for which you want to set up the dashboard. By default, an chaos delegate from the list of all connected chaos delegates is selected for you. You may override this as per your requirement.
   - Data source: Select the data source from which you want to scrap the metrics and visualise it. By default, a data source from the list of all the active data sources is selected for you. You may override this as per your requirement.
   - Dashboard type: It contains information about the type of the dashboard being configured. If you want to change it you may navigate back to `Choose a dashboard type` and select the desired dashboard type. Once the dashboard is created its type cannot be changed.
   - Applications: You can make selections for particular namespaces, application types and specific applications which will assist you while tuning the queries and visualizing the metrics.

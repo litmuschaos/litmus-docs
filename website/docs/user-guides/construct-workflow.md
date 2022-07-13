@@ -1,13 +1,13 @@
 ---
 id: construct-workflow
-title: Construct Workflow YAML without ChaosCenter
-sidebar_label: Construct Workflow YAML
+title: Construct Chaos Scenario YAML without ChaosCenter
+sidebar_label: Construct Chaos Scenario YAML
 ---
 
 ---
 
-**Chaos Workflow** is a set of different operations coupled together to achieve desired chaos imapact on a Kubernetes Cluster. <br/>
-A basic chaos workflow consists of these steps:
+**Chaos Chaos Scenario** is a set of different operations coupled together to achieve desired chaos imapact on a Kubernetes Cluster. <br/>
+A basic chaos chaos scenario consists of these steps:
 
 1. Install ChaosExperiment
 2. Install ChaosEngine
@@ -15,15 +15,15 @@ A basic chaos workflow consists of these steps:
 
 ## Before we begin
 
-To construct a Chaos Workflow without ChaosCenter, make sure you are aware of [Chaos Workflow](../concepts/chaos-workflow.md), [ChaosEngine CR](../concepts/chaos-engine.md) and the different steps present in it.
+To construct a Chaos Chaos Scenario without ChaosCenter, make sure you are aware of [Chaos Chaos Scenario](../concepts/chaos-workflow.md), [ChaosEngine CR](../concepts/chaos-engine.md) and the different steps present in it.
 
-## Steps to Construct a Chaos Workflow
+## Steps to Construct a Chaos Chaos Scenario
 
-LitmusChaos leverages the popular workflow and GitOps tool **Argo** to achieve this goal. Argo enables the orchestration of different chaos scenarios together in the form of workflow which is extremly simple and efficient to use.<br/>
+LitmusChaos leverages the popular chaos scenario and GitOps tool **Argo** to achieve this goal. Argo enables the orchestration of different chaos scenarios together in the form of chaos scenario which is extremly simple and efficient to use.<br/>
 
-The structure of a chaos workflow is similar to that of a Kubernetes Object. It consists of the mandatory fields like `apiVersion`, `kind`, `metadata`, `spec`.
+The structure of a chaos chaos scenario is similar to that of a Kubernetes Object. It consists of the mandatory fields like `apiVersion`, `kind`, `metadata`, `spec`.
 
-Few additional terms in an Argo workflows are:
+Few additional terms in an Argo chaos scenarios are:
 
 1. **Template** : It consists of different steps with their specific operations.
 
@@ -39,7 +39,7 @@ Few additional terms in an Argo workflows are:
             template: revert-chaos
 ```
 
-2. **Steps** : It is a single step inside a workflow which runs a container based on the input parameters.
+2. **Steps** : It is a single step inside a chaos scenario which runs a container based on the input parameters.
    These can also be sequenced parallely.
 
 ```yaml
@@ -54,7 +54,7 @@ steps:
       template: revert-chaos
 ```
 
-3. **Entrypoint** : The first step that executes in a workflow is called its entrypoint.
+3. **Entrypoint** : The first step that executes in a chaos scenario is called its entrypoint.
 
 ```yaml
 entrypoint: custom-chaos
@@ -78,7 +78,7 @@ Here, the template with the name `custom-chaos` will be executed first.
                   message: |...
 ```
 
-Once the workflow is constructed, it should look like this:
+Once the chaos scenario is constructed, it should look like this:
 
 ```yaml
 apiVersion: argoproj.io/v1alpha1

@@ -56,7 +56,7 @@ All metrics exported from chaos exporter can be found [here](https://github.com/
 
 ## Summary
 
-Litmus supports several kinds of `probes` and also has a `chaos-exporter` on it's execution plane on the target agent's cluster which is essential for interleaved monitoring, integrated alerts and to hook into existing observability infrastructure. Chaos experimentation is a lot about hypothesizing around the application and/or infrastructure behavior, controlling blast radius & measuring SLOs. SREs love to visualize the impact of chaos - either actively (live) or recorded (as with automated chaos tests)
+Litmus supports several kinds of `probes` and also has a `chaos-exporter` on it's execution plane on the chaos delegate's cluster which is essential for interleaved monitoring, integrated alerts and to hook into existing observability infrastructure. Chaos experimentation is a lot about hypothesizing around the application and/or infrastructure behavior, controlling blast radius & measuring SLOs. SREs love to visualize the impact of chaos - either actively (live) or recorded (as with automated chaos tests)
 
 ## Resources
 

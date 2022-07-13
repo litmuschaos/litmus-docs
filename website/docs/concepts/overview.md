@@ -26,11 +26,11 @@ ChaosResult resource holds the results of a ChaosExperiment with a namespace sco
 
 ### [ChaosHub](chaoshub.md)
 
-ChaosHub allows you to orchestrate workflows from the Public **[ChaosHub](http://hub.litmuschaos.io/)** or an alternate source for the Experiments.
+ChaosHub allows you to orchestrate chaos scenarios from the Public **[ChaosHub](http://hub.litmuschaos.io/)** or an alternate source for the Experiments.
 
-### [Chaos Workflow](chaos-workflow.md)
+### [Chaos Scenario](chaos-workflow.md)
 
-Chaos Workflow is a set of different operations coupled together to achieve desired chaos impact on a Kubernetes Cluster.
+Chaos Scenario is a set of different operations coupled together to achieve desired chaos impact on a Kubernetes Cluster.
 
 ### [Observability](workflow-statistics.md)
 
@@ -42,7 +42,7 @@ Role Privileges of different users in the ChaosCenter.
 
 ### [Projects](projects.md)
 
-Project management system which can be used for working on chaos workflows with multiple different projects across different agents.
+Project management system which can be used for working on chaos scenario with multiple different projects across different chaos delegates.
 
 ### [Teaming](probes.md)
 
@@ -50,4 +50,4 @@ Teaming feature to facilitate collaboration between users using project level ro
 
 ### [GitOps](gitops.md)
 
-GitOps feature in Litmus enables you to configure a single source of truth for your chaos workflows and experiments.
+GitOps feature in Litmus enables you to configure a single source of truth for your chaos scenarios and experiments.

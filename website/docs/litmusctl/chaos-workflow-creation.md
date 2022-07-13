@@ -1,7 +1,7 @@
 ---
 id: chaos-workflow-creation
-title: Create Chaos Workflows using Litmusctl
-sidebar_label: Create Chaos Workflows
+title: Create Scenarios using Litmusctl
+sidebar_label: Create Scenarios
 ---
 
 ---
@@ -12,6 +12,7 @@ sidebar_label: Create Chaos Workflows
 >
 > - For litmusctl v0.10.0 or latest
 > - Compatible with Litmus 2.9.0 or latest
+
 ### litmusctl Syntax
 
 `litmusctl` has a syntax to use as follows:
@@ -21,7 +22,7 @@ litmusctl [command] [TYPE] [flags]
 ```
 
 - Command: refers to what you do want to perform (create, get and config)
-- Type: refers to the feature type you are performing a command against (agent, project etc.)
+- Type: refers to the feature type you are performing a command against (chaos delegate, project etc.)
 - Flags: It takes some additional information for resource operations. For example, `--installation-mode` allows you to specify an installation mode.
 
 Litmusctl is using the `.litmusconfig` config file to manage multiple accounts
@@ -31,23 +32,27 @@ Litmusctl is using the `.litmusconfig` config file to manage multiple accounts
 
 ---
 
-### Steps to create a Chaos Workflow
+### Steps to create a Chaos Scenario
 
-* To setup an account with litmusctl
+- To setup an account with litmusctl
+
 ```shell
 litmusctl config set-account --endpoint="" --username="" --password=""
 ```
 
-* To create a Chaos Workflow by passing a manifest file
-> Note:
-> * To get `project-id`, apply `litmusctl get projects`
-> * To get `agent-id`, apply `litmusctl get agents --project-id=""`
+- To create a Chaos Scenario by passing a manifest file
+  > Note:
+  >
+  > - To get `project-id`, apply `litmusctl get projects`
+  > - To get `agent-id`, apply `litmusctl get agents --project-id=""`
+
 ```shell
 litmusctl create workflow -f custom-chaos-workflow.yml --project-id="" --agent-id=""
 ```
-#### Verify the new Chaos Workflow
 
-To verify the successful creation, you can either view the list of chaos workflows at the ChaosCenter dashboard or run the below given command to list the chaos workflow within a given project.
+#### Verify the new Chaos Scenario
+
+To verify the successful creation, you can either view the list of chaos Scenarios at the ChaosCenter dashboard or run the below given command to list the chaos workflow within a given project.
 
 ```shell
 litmusctl get workflows --project-id=""
@@ -65,7 +70,8 @@ Showing 1 of 1 workflows
 
 ### Additional commands
 
-* To list all the chaos workflow runs within a project, issue the following command.
+- To list all the chaos scenario runs within a project, issue the following command.
+
 ```shell
 litmusctl get workflowruns --project-id=""
 ```
@@ -78,8 +84,8 @@ WORKFLOW RUN ID                      STATUS  RESILIENCY SCORE WORKFLOW ID       
 Showing 1 of 1 workflow runs
 ```
 
+- To describe a particular chaos scenario, issue the following command.
 
-* To describe a particular chaos workflow, issue the following command.
 ```shell
 litmusctl describe workflow 9433b48c-4ab7-4544-8dab-4a7237619e09 --project-id=""
 ```
@@ -102,8 +108,8 @@ spec:
 ...
 ```
 
+- To delete a particular chaos scenario, issue the following command.
 
-* To delete a particular chaos workflow, issue the following command.
 ```shell
 litmusctl delete workflow df91c6b2-ad33-45ae-9a2f-00cb87978657 --project-id=""
 ```
@@ -121,7 +127,7 @@ For more information related to flags, Use `litmusctl --help`.
 ## Learn More
 
 - [Learn More about Litmusctl](installation.md)
-- [Installing ChaosAgents in interactive mode](./usage-interactive-mode.md)
-- [Installing ChaosAgents in non interactive mode](./usage-non-interactive-mode.md)
+- [Installing Chaos Delegate in interactive mode](./usage-interactive-mode.md)
+- [Installing Chaos Delegate in non interactive mode](./usage-non-interactive-mode.md)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)

@@ -38,7 +38,7 @@ import TabItem from '@theme/TabItem';
     Refer to the below details for Self-Hosted Litmus installation.
   </TabItem>
   <TabItem value="hosted" label="Hosted (Beta)">
-    <a href="https://harness.io/">Harness</a> offers a free service for community members which makes getting started with Litmus easy. Create an account to get started. Once logged in, create a new hosted control plane and connect to it via the up CLI. Litmus can be used as a hosted cloud service using <a href="https://cloud.chaosnative.com">Harness Chaos Engineering SaaS</a>. Harness Chaos Engineering SaaS executes your Chaos Workflows in the cloud by managing all your Chaos Control Plane components, while the Chaos Execution Plane components exist on your Kubernetes cluster as part of an external agent.
+    <a href="https://harness.io/">Harness</a> offers a free service for community members which makes getting started with Litmus easy. Create an account to get started. Once logged in, create a new hosted control plane and connect to it via the up CLI. Litmus can be used as a hosted cloud service using <a href="https://cloud.chaosnative.com">Harness Chaos Engineering SaaS</a>. Harness Chaos Engineering SaaS executes your Chaos Scenarios in the cloud by managing all your Chaos Control Plane components, while the Chaos Execution Plane components exist on your Kubernetes cluster as part of an external chaos delegate.
     <br/><br/>
     To get started with Harness Chaos Engineering SaaS, visit <a href="https://cloud.chaosnative.com">Harness Chaos Engineering SaaS</a> and register for free. You can skip the below installation steps.
   </TabItem>
@@ -185,9 +185,9 @@ By default you are assigned with a default project with Owner permissions.
 
 <img src={require('../assets/landing-page.png').default} width="800" />
 
-## **Verify Successful Registration of the Self Agent**
+## **Verify Successful Registration of the Self Chaos Delegate**
 
-Once the project is created, the cluster is automatically registered as a chaos target via installation of [ChaosAgents](resources.md#chaosagents). This is represented as [Self-Agent](resources.md#types-of-chaosagents) in [ChaosCenter](resources.md#chaoscenter).
+Once the project is created, the cluster is automatically registered as a chaos target via installation of [Chaos Delegate](resources.md#chaosagents). This is represented as [Self Chaos Delegate](resources.md#types-of-chaosagents) in [ChaosCenter](resources.md#chaoscenter).
 
 ```bash
 kubectl get pods -n litmus
@@ -213,6 +213,6 @@ workflow-controller-78fc7b6c6-w82m7      1/1     Running   0          5m32s
 ## Learn more
 
 - [Install ChaosCenter in Namespace Scope](../user-guides/chaoscenter-namespace-scope-installation.md)
-- [Connect External ChaosAgents to ChaosCenter](../user-guides/chaosagents-installation.md)
+- [Connect External Chaos Delegates to ChaosCenter](../user-guides/chaosagents-installation.md)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)

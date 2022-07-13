@@ -52,7 +52,7 @@ module.exports = {
         'concepts/chaos-result',
         'concepts/chaoshub',
         {
-          'Chaos Workflow': ['concepts/chaos-workflow', 'concepts/visualize-workflow']
+          'Chaos Scenario': ['concepts/chaos-workflow', 'concepts/visualize-workflow']
         },
         {
           Observability: [

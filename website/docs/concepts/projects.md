@@ -6,11 +6,11 @@ sidebar_label: Projects
 
 ---
 
-The ChaosCenter comes with a project management system which can be used for working on chaos workflows with multiple different projects across different agents.
+The ChaosCenter comes with a project management system which can be used for working on chaos scenarios with multiple different projects across different chaos delegates.
 
 ## Prerequisites
 
-Before learning abpout the concept of `projects`, it is important to note that a `project` signifies a separation between Agents,Schedules, [Visualization](visualize-workflow.md), and Teams (discussed in the next section) configurations, and prior knowledge of these will prove fruitful in understanding the concept of `projects` in-depth.
+Before learning abpout the concept of `projects`, it is important to note that a `project` signifies a separation between Chaos Delegates,Schedules, [Visualization](visualize-workflow.md), and Teams (discussed in the next section) configurations, and prior knowledge of these will prove fruitful in understanding the concept of `projects` in-depth.
 
 ## Projects
 

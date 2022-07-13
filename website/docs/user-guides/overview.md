@@ -10,11 +10,11 @@ The User Guides section details Processes, User-flows and How-tos detailing all 
 
 ### [Advanced Installation](chaoscenter-cluster-scope-installation.md)
 
-Install ChaosCenter and ChaosAgents in various environment configurations.
+Install ChaosCenter and Chaos Delegate in various environment configurations.
 
 ### [Injecting Fault](schedule-workflow.md)
 
-Constructing, Scheduling, Editing and Observing workflows.
+Constructing, Scheduling, Editing and Observing chaos scenarios.
 
 ### [Observing Chaos](observability-set-up.md)
 
@@ -22,7 +22,7 @@ Set-up monitoring, Analyze and Compare various metrics that help you make reliab
 
 ### [Event Triggered Chaos using GitOps](gitops-configuration.md)
 
-GitOps in Litmus provides a way of using Event-Driven Chaos Injection, where target resources(stateful sets, deployments, etc.) can be configured to automatically trigger chaos workflows with any changes in the resource spec.
+GitOps in Litmus provides a way of using Event-Driven Chaos Injection, where target resources(stateful sets, deployments, etc.) can be configured to automatically trigger chaos chaos scenarios with any changes in the resource spec.
 
 ### [Account Settings](account-settings.md)
 
@@ -40,10 +40,10 @@ Probes are pluggable checks that can be defined within the ChaosEngine for any C
 
 Adding members to a project, Editing user-invite and Removing team members from a project.
 
-### [Using different Image Registries in a Workflow](image-registry.md)
+### [Using different Image Registries in a Chaos Scenario](image-registry.md)
 
-Using different Image Registries like Docker, Red Hat Quay, Google Container Registry in a Workflow.
+Using different Image Registries like Docker, Red Hat Quay, Google Container Registry in a Chaos Scenario.
 
 ### [Uninstalling Litmus](uninstall-litmus.md)
 
-Disconnecting ChaosAgents and uninstalling ChaosCenter.
+Disconnecting Chaos Delegate and uninstalling ChaosCenter.

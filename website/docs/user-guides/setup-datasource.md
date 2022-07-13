@@ -14,9 +14,9 @@ To setup a data source for a chaos center project, you must know about [open obs
 
 ### Topologies
 
-Listed below are three among many topologies in which a data source can be setup for collecting agent cluster's metrics along with chaos metrics for chaos center.
+Listed below are three among many topologies in which a data source can be setup for collecting chaos delegate cluster's metrics along with chaos metrics for chaos center.
 
-#### For Control plane agent / Self agent with Prometheus - scraping chaos-exporter metrics and events along with other metrics
+#### For Control plane chaos delegate / Self chaos delegate with Prometheus - scraping chaos-exporter metrics and events along with other metrics
 
 <figure>
 <img src={require('../assets/user-guides/observability/data-source/self-agent-prometheus.png').default} />
@@ -195,18 +195,18 @@ spec:
 
 [Detailed setup guide for Prometheus operator with pod monitors](../integrations/prometheus)
 
-#### For Multiple agents with multiple prometheus instances - scraping chaos-exporter metrics and events along with other metrics
+#### For Multiple chaos delegate s with multiple prometheus instances - scraping chaos-exporter metrics and events along with other metrics
 
 <figure>
 <img src={require('../assets/user-guides/observability/data-source/multiple-agents-multiple-prometheus.png').default} />
 <i>Data flow and topological diagram</i>
 </figure>
 
-- Scrape job and service monitor remain same as in case of Control plane agent / self agent, the individual [Prometheus instances can be connected](configure-datasource) as separate data sources to the Chaos center. [Separate dashboards can be created](manage-app-dashboard) by selecting specific agents and their corresponding data source which is essentially a Prometheus time series database, collecting metrics from the agent cluster for application / infra metrics, chaos events and chaos verdicts.
+- Scrape job and service monitor remain same as in case of Control plane chaos delegate / self chaos delegate , the individual [Prometheus instances can be connected](configure-datasource) as separate data sources to the Chaos center. [Separate dashboards can be created](manage-app-dashboard) by selecting specific chaos delegate s and their corresponding data source which is essentially a Prometheus time series database, collecting metrics from the chaos delegate cluster for application / infra metrics, chaos events and chaos verdicts.
 
-#### For Multiple agents with single prometheus - scraping chaos-exporter metrics and events along with other metrics
+#### For Multiple chaos delegate s with single prometheus - scraping chaos-exporter metrics and events along with other metrics
 
-- Separate dashboards can be created by selecting specific agents and the data source which is essentially a Prometheus time series database, collecting metrics from the agent cluster for application / infra metrics, chaos events and chaos verdicts.
+- Separate dashboards can be created by selecting specific chaos delegate s and the data source which is essentially a Prometheus time series database, collecting metrics from the chaos delegate cluster for application / infra metrics, chaos events and chaos verdicts.
 
 <figure>
 <img src={require('../assets/user-guides/observability/data-source/multiple-agents-single-prometheus.png').default} />
@@ -215,7 +215,7 @@ spec:
 
 _Scrape jobs:_
 
-- **Chaos-exporter - agent-1**
+- **Chaos-exporter - chaos delegate -1**
 
 ```yaml
 - job_name: 'chaos-exporter-agent-1'
@@ -226,7 +226,7 @@ _Scrape jobs:_
       replacement: 'chaos-exporter-service'
 ```
 
-- **Chaos-exporter - agent-2**
+- **Chaos-exporter - chaos delegate -2**
 
 ```yaml
 - job_name: 'chaos-exporter-agent-2'
@@ -237,7 +237,7 @@ _Scrape jobs:_
       replacement: 'chaos-exporter-service'
 ```
 
-- **Kube state metrics exporter - agent-1**
+- **Kube state metrics exporter - chaos delegate -1**
 
 ```yaml
 - job_name: 'kube-state-metrics-agent-1'
@@ -245,7 +245,7 @@ _Scrape jobs:_
     - targets: ['<AGENT_1_KUBE_STATE_METRICS_EXPORTER_SERVICE_PUBLIC_HOSTNAME/IP:8080>']
 ```
 
-- **Kube state metrics exporter - agent-2**
+- **Kube state metrics exporter - chaos delegate -2**
 
 ```yaml
 - job_name: 'kube-state-metrics-agent-2'
@@ -261,7 +261,7 @@ _Scrape jobs:_
 
 _Service endpoint, spec and monitors:_
 
-- **Chaos-exporter - agent-1**
+- **Chaos-exporter - chaos delegate -1**
 
 ```yaml
 kind: Service
@@ -311,7 +311,7 @@ spec:
           replacement: 'chaos-exporter-service'
 ```
 
-- **Chaos-exporter - agent-2**
+- **Chaos-exporter - chaos delegate -2**
 
 ```yaml
 kind: Service
@@ -361,7 +361,7 @@ spec:
           replacement: 'chaos-exporter-service'
 ```
 
-- **Kube state metrics exporter - agent-1**
+- **Kube state metrics exporter - chaos delegate -1**
 
 ```yaml
 kind: Service
@@ -408,7 +408,7 @@ spec:
       port: tcp
 ```
 
-- **Kube state metrics exporter - agent-2**
+- **Kube state metrics exporter - chaos delegate -2**
 
 ```yaml
 kind: Service

@@ -1,7 +1,7 @@
 ---
 id: save-as-template
-title: Save Workflows as a Template
-sidebar_label: Save Workflows as Template
+title: Save Chaos Scenarios as a Template
+sidebar_label: Save Chaos Scenarios as Template
 ---
 
 ---
@@ -10,17 +10,17 @@ You can save a schedule as a template for later usage in subsequent schedules. T
 
 ## Before you begin
 
-You can learn how to schedule your first workflow [here](schedule-workflow.md).
+You can learn how to schedule your first chaos scenario [here](schedule-workflow.md).
 
-## 1. Go to the workflows sections
+## 1. Go to the chaos scenarios sections
 
-In the `Workflows` page, go to the `Schedules` tab and click on the options menu for the specific schedule you wish to save as a template:
+In the `Chaos Scenario` page, go to the `Schedules` tab and click on the options menu for the specific schedule you wish to save as a template:
 
 <img src={require('../assets/user-guides/injecting-fault/save-workflow-as-template/step-1.png').default} width="1000" height="500" />
 
 ## 2. Click on the `Save Template` option
 
-After opening the options menu, click on the `Save Template` option. You will see the following modal popup. Here you can edit the workflow `YAML` and provide a name and description for the template you are creating:
+After opening the options menu, click on the `Save Template` option. You will see the following modal popup. Here you can edit the chaos scenario `YAML` and provide a name and description for the template you are creating:
 
 <img src={require('../assets/user-guides/injecting-fault/save-workflow-as-template/step-2.png').default} width="1000" height="500" />
 
@@ -32,12 +32,12 @@ After having made all the changes you wish to preserve as a template, click the 
 
 ## 4. Use your new template
 
-You can now see your template under the `Create a new workflow by cloning an existing workflow` option in the workflow scheduling steps and can directly use it for your chaos.
+You can now see your template under the `Create a new chaos scenario by cloning an existing chaos scenario` option in the chaos scenario scheduling steps and can directly use it for your chaos.
 
 <img src={require('../assets/user-guides/injecting-fault/save-workflow-as-template/step-4.png').default} width="1000" height="500" />
 
 ## Learn more
 
-- [Schedule a workflow](schedule-workflow.md)
-- [Re-run a workflow](re-run-workflow.md)
-- [Delete a workflow](delete-workflow.md)
+- [Schedule a chaos scenario](schedule-workflow.md)
+- [Re-run a chaos scenario](re-run-workflow.md)
+- [Delete a chaos scenario](delete-workflow.md)
