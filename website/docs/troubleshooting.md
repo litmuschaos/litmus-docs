@@ -84,7 +84,7 @@ cd <project_id>
 mkdir <hub_name>
 ```
 
-- Step 2: Clone the Chaos-Experiments/Hub repository locally
+- Step 2: Clone the Chaos-Charts/Hub repository locally
 
 - Step 3: Use this command to copy the hub directory from your local system to the litmus-portal server pod
 
@@ -95,7 +95,7 @@ kubectl cp <location to chaos-experiment/hub directory> <namespace>/<litmusporta
 Example:
 
 ```
-kubectl cp /home/amitkrdas/Chaos-Experiments/chaos-experiments/  litmus/litmusportal-server-6df9c5895d-57xx7:/tmp/version/686c1da2-da9c-4029-9c6a-528a9455a3b3/"Litmus ChaosHub" -c graphql-server
+kubectl cp /home/amitkrdas/Chaos-Charts/chaos-experiments/  litmus/litmusportal-server-6df9c5895d-57xx7:/tmp/version/686c1da2-da9c-4029-9c6a-528a9455a3b3/"Litmus ChaosHub" -c graphql-server
 ```
 
 - Step 4: Once the chaos experiments directory is copied, refresh the ChaosHub page in ChaosCenter.
