@@ -31,7 +31,7 @@ While installing the Litmus Portal, a default chaos delegate named **Self Chaos 
 <i>Selecting a Chaos Delegate </i>
 </figure>
 
-After Selecting thechaos delegate , you can continue by clicking on **Next** button.
+After Selecting the chaos delegate , you can continue by clicking on **Next** button.
 
 > Note: You may have to wait for the chaos delegate to be up and ready, after which you can move forward by again clicking on “Next” . Newly created users by the admin won't have any chaos delegate connected and thus won't be able to schedule a chaos scenario . As non-admin users, you will get a message ‘No Cluster Registered With Your Project ID, Please Wait…’ if you try to create a chaos scenario .
 
@@ -73,7 +73,7 @@ Some new and advanced features that are present in this section are :
 2. **Chaos Scenario Table** : This table contains the list of experiments present in the chaos scenario . It also consists of some valuable information related to the target applications.
 3. **Add Experiment** : If you have selected `Create a new chaos scenario using experiments from MyHub` in Choose a Chaos Scenario step, you can see a `Add a new experiment` button, this will allow you to add more experiments to the chaos scenario .
 4. **Edit Chaos Scenario ** : With this option, you can view and make changes in the chaos scenario manifest with a YAML editor.
-5. **Revert Chaos** : For custom chaos scenario s, you can now enable or disable the revert step from the portal.
+5. **Revert Chaos** : For custom chaos scenarios, you can now enable or disable the revert step from the portal.
    With revert step enabled, a new functionality called `podGC` is also added which deletes the chaos scenario pods after the completion of chaos scenario as part of the clean-up process.
 
 <figure>

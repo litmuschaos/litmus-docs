@@ -37,7 +37,7 @@ Make sure to update the namespace and mongo pod name according to your setup, th
 
 ### While uninstalling Litmus portal using helm, some components like subscriber, exporter, event, chaos scenatios, etc are not removed.
 
-These arechaos delegatecomponents, which are launched by the control plane server, so first disconnect thechaos delegatefrom the portal then uninstall the portal using helm.
+These are chaos delegate components, which are launched by the control plane server, so first disconnect the chaos delegatefrom the portal then uninstall the portal using helm.
 
 ### Unable to Install Litmus portal using helm. Server pod and mongo pod are in CrashLoopBackOff state. Got this error while checking the logs of mongo container `chown: changing ownership of '/data/db/.snapshot': Read-only file system`.
 
@@ -95,7 +95,7 @@ kubectl cp <location to chaos-experiment/hub directory> <namespace>/<litmusporta
 Example:
 
 ```
-kubectl cp /home/amitkrdas/Chaos-Charts/chaos-experiments/  litmus/litmusportal-server-6df9c5895d-57xx7:/tmp/version/686c1da2-da9c-4029-9c6a-528a9455a3b3/"Litmus ChaosHub" -c graphql-server
+kubectl cp /home/amitkrdas/Chaos-Charts/chaos-charts/  litmus/litmusportal-server-6df9c5895d-57xx7:/tmp/version/686c1da2-da9c-4029-9c6a-528a9455a3b3/"Litmus ChaosHub" -c graphql-server
 ```
 
 - Step 4: Once the chaos experiments directory is copied, refresh the ChaosHub page in ChaosCenter.

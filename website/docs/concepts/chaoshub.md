@@ -92,7 +92,7 @@ To remove a ChaosHub from a project, you can select the **Disconnect Hub** optio
 
 ## Summary
 
-ChaosHubs are basically a collection of different clones of the Chaos-Charts repository, which consists of a variety of experiments and pre-defined haos scenarios. You can use a ChaosHub to construct a custom chaos scenarios and tune it according to the use-case. These ChaosHubs can also be synced with the latest changes. New experiments and pre-defined chaos scenarios can also be added in the repository which can be directly used in the ChaosCenter.
+ChaosHubs are basically a collection of different clones of the Chaos-Charts repository, which consists of a variety of experiments and pre-defined chaos scenarios. You can use a ChaosHub to construct a custom chaos scenarios and tune it according to the use-case. These ChaosHubs can also be synced with the latest changes. New experiments and pre-defined chaos scenarios can also be added in the repository which can be directly used in the ChaosCenter.
 
 ## Resources
 

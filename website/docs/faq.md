@@ -19,10 +19,10 @@ Yes, with the help of github-chaos-action we can automate the chaos execution on
 ### I encountered the concept of `namespace` and `cluster` scope during the installation. What is meant by the scopes, and how does it affect experiments to be performed outside or inside the litmus Namespace?
 
 The scope of portal control plane (portal) installation tuned by the env `PORTAL_SCOPE` of litmusportal-server deployment can be kept as a namespace if you want to provide a very restricted access to litmus; It's useful in dev environments like Okteto cloud etc.
-That basically restricts portal installation along with itschaos delegate to a single namespace and the chaos operator, exporter all get installed in a single namespace and can only perform and monitor chaos in that namespace.
-Other than that there is another key in the control plane’s configmap `litmus-portal-admin-config` called `AgentScope`, this is given to allow users to restrict access to the litmus self chaos delegate components self chaos delegate is thechaos delegate for your control plane cluster (exporter, operator etc), you can use both of them in a way to give access as per the requirement.
-The above holds for the control plane and selfchaos delegate, for the externalchaos delegates which can be connected using the litmusctl CLI you can provide the scope of thechaos delegate while using the utility to connect your other cluster to the control plane with access to just a single namespace or cluster-wide access.
-Using a combination of AgentScope: cluster and `PORTAL_SCOPE` env set to cluster would give you cluster-admin privileges to inject chaos on all namespaces where the control plane/portal is installed. For externalchaos delegates just selecting the scope of installation as cluster would be sufficient via litmusctl.
+That basically restricts portal installation along with its chaos delegate to a single namespace and the chaos operator, exporter all get installed in a single namespace and can only perform and monitor chaos in that namespace.
+Other than that there is another key in the control plane’s configmap `litmus-portal-admin-config` called `AgentScope`, this is given to allow users to restrict access to the litmus self chaos delegate components self chaos delegate is the chaos delegate for your control plane cluster (exporter, operator etc), you can use both of them in a way to give access as per the requirement.
+The above holds for the control plane and self chaos delegate, for the external chaos delegates which can be connected using the litmusctl CLI you can provide the scope of the chaos delegate while using the utility to connect your other cluster to the control plane with access to just a single namespace or cluster-wide access.
+Using a combination of AgentScope: cluster and `PORTAL_SCOPE` env set to cluster would give you cluster-admin privileges to inject chaos on all namespaces where the control plane/portal is installed. For external chaos delegates just selecting the scope of installation as cluster would be sufficient via litmusctl.
 
 ### What does failed status of chaos scenario means in LitmusPortal?
 
@@ -54,9 +54,9 @@ Currently, you can’t. But we are working on it. Shortly we will publish sample
 
 ### Does Litmusctl support actions that are currently performed from the portal dashboard?
 
-For now, you can createchaos delegates and projects, also you can get thechaos delegates and project details by using litmusctl. To know more about litmusctl please refer to the [documentation of litmusctl](https://github.com/litmuschaos/litmusctl/blob/master/Usage.md).
+For now, you can create chaos delegates and projects, also you can get the chaos delegates and project details by using litmusctl. To know more about litmusctl please refer to the [documentation of litmusctl](https://github.com/litmuschaos/litmusctl/blob/master/Usage.md).
 
-### What is the minimum system requirement to run Portal andchaos delegate together?
+### What is the minimum system requirement to run Portal and chaos delegate together?
 
 To run LitmusPortal you need to have a minimum of 1 GiB memory and 1 core of CPU free.
 

@@ -1,7 +1,7 @@
 ---
 id: run-your-first-workflow
 title: Run your First Chaos Scenario in 5 minutes
-sidebar_label: Run Your FirstChaos Scenario
+sidebar_label: Run Your First Chaos Scenario
 ---
 
 ---
@@ -24,17 +24,17 @@ In this scenario we will execute a pod-delete fault on a sample micro-service ap
 
 ---
 
-## Schedule your FirstChaos Scenario
+## Schedule your First Chaos Scenario
 
-### Select the podtato-head predefinedChaos Scenario
+### Select the podtato-head predefined Chaos Scenario
 
-1. Click on <span style={{color: '#5B44BA'}}>**Schedule aChaos Scenario**</span> from the ChaosCenter Homepage or from the top right button in the **Litmus Workflows** tab.
+1. Click on <span style={{color: '#5B44BA'}}>**Schedule a Chaos Scenario**</span> from the ChaosCenter Homepage or from the top right button in the **Litmus Workflows** tab.
 
 <img src={require("../assets/getting-started/run-your-first-workflow/schedule-workflow-from-homepage.png").default} width="350" alt="Schedule Chaos Scenario from Homepage" /> <img src={require("../assets/getting-started/run-your-first-workflow/schedule-workflow-from-litmus-workflows.png").default} width="350" alt="Schedule Chaos Scenario from Litmus Chaos Scenarios" />
 
 <br /> <br />
 
-2. Select **SelfChaos Delegate** as the target [Chaos Delegate](resources.md#chaosagents) for Chaos Injection. This is where we'll select which Chaos Delegate to choose as the Chaos Delegate.
+2. Select **Self Chaos Delegate** as the target [Chaos Delegate](resources.md#chaosagents) for Chaos Injection. This is where we'll select which Chaos Delegate to choose as the Chaos Delegate.
 
    <img src={require("../assets/getting-started/run-your-first-workflow/selecting-self-agent.png").default} alt="Selecting Self Chaos Delegate" />
 
@@ -46,7 +46,7 @@ In this scenario we will execute a pod-delete fault on a sample micro-service ap
 
    <img src={require("../assets/getting-started/run-your-first-workflow/workflow-settings-podtato-head.png").default} alt="Modify Details of Podtato Head Chaos Scenario" />
 
-### Simulate theChaos Scenario Steps Visualization
+### Simulate the Chaos Scenario Steps Visualization
 
 5. View the visualization of the Litmus Chaos Scenario you are about to execute. This step also allows for you to edit or modify the YAML/tunable if required. We would just stick with the default configurations for now.
 
@@ -54,13 +54,13 @@ In this scenario we will execute a pod-delete fault on a sample micro-service ap
 
    > By default in the Podtato Head Chaos Scenario Template the steps to gracefully delete the Chaos Resources (`revert-chaos`) and also the Podtato Head application (`delete-application`) are present.
 
-### Assign Weights to theChaos Scenario Experiments
+### Assign Weights to the Chaos Scenario Experiments
 
-6. Assign weights to the chaos experiments that are part of theChaos Scenario using the slider. This is typically used when there are multiple experiments as part of a Chaos Scenario. These weights influence the **Resilience Score** calculation for the Chaos Scenario.
+6. Assign weights to the chaos experiments that are part of the Chaos Scenario using the slider. This is typically used when there are multiple experiments as part of a Chaos Scenario. These weights influence the **Resilience Score** calculation for the Chaos Scenario.
 
    <img src={require("../assets/getting-started/run-your-first-workflow/adjust-weights-for-podtato-head.png").default} alt="Assign Weights for Chaos Scenario Experiments" />
 
-### Schedule the Podtato-HeadChaos Scenario
+### Schedule the Podtato-Head Chaos Scenario
 
 7. Schedule the Litmus Chaos Scenario for immediate and one-time execution by selecting the **Schedule Now** option
 
@@ -68,7 +68,7 @@ In this scenario we will execute a pod-delete fault on a sample micro-service ap
 
 8. Verify and click on **Finish** to start the Chaos Injection
 
-   <img src={require("../assets/getting-started/run-your-first-workflow/verify-and-commit-podtato-head.png").default} alt="Verify and Schedule the Podtato HeadChaos Scenario" />
+   <img src={require("../assets/getting-started/run-your-first-workflow/verify-and-commit-podtato-head.png").default} alt="Verify and Schedule the Podtato Head Chaos Scenario" />
 
 ### Congratulations
 
@@ -80,7 +80,7 @@ And with that you have successfully scheduled your first Chaos Scenario with Lit
 
 ## Visualize and Analyze
 
-1. To check the current progress of the Podtato-HeadChaos Scenario, view the status of theChaos Scenario from the **Litmus Chaos Scenarios** Tab.
+1. To check the current progress of the Podtato-Head Chaos Scenario, view the status of the Chaos Scenario from the **Litmus Chaos Scenarios** Tab.
 
    <img src={require("../assets/getting-started/run-your-first-workflow/podtato-head-workflow-running.png").default} alt="Podtato Head Chaos Scenario in Running State" />
 
@@ -117,7 +117,7 @@ And with that you have successfully scheduled your first Chaos Scenario with Lit
    podtato-head-chaos-1622018315-80657052      0/2     Completed           0          79s
    podtato-head-pod-delete-chaosx55vh-runner   1/1     Running             0          25s
    subscriber-958948965-qbx29                  1/1     Running             0          6h16m
-   Chaos Scenario-controller-78fc7b6c6-w82m7         1/1     Running             0          6h16m
+   workflow-controller-78fc7b6c6-w82m7         1/1     Running             0          6h16m
    ```
 
 3. Post Chaos Execution view the Experiment Results. Click on the **pod-delete** node on the graph to launch a results console. Click on the **Chaos Results** tab to view the details around success/failure of the steady-state hypothesis constraints (podtato-head website availability through pod deletion period) and the experiment verdict.

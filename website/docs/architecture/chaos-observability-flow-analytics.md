@@ -14,8 +14,8 @@ In Litmus, chaos scenario run statistics and information are generated post the 
 
 ## Observability Flow for Analytics
 
-1. In the Chaos Execution Plane, the ChaosEngine Details and ChaosResult are fetched by the Chaos Delagate.
-2. Chaos Delagate then forwards them to the Backend Server in the Chaos Control Plane and later they get stored into the Database.
+1. In the Chaos Execution Plane, the ChaosEngine Details and ChaosResult are fetched by the Chaos Delegate.
+2. Chaos Delegate then forwards them to the Backend Server in the Chaos Control Plane and later they get stored into the Database.
 3. User specifies the Chaos Scenario Schedule for which the Chaos Scenario statistics and information is to be fetched as an input in the ChaosCenter.
 4. The request for the Chaos Scenario statistics and information is received by the Backend Server.
 5. Backend Server queries the Database for the details of past Chaos Scenario Runs.

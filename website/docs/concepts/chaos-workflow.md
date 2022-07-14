@@ -20,7 +20,7 @@ The following should be required before creating a Chaos Scenario:
 - [ChaosEngine CR](chaos-engine.md)
 - [Probes](probes.md)
 
-## How do we define and execute a ?
+## How do we define and execute a Chaos Scenario ?
 
 LitmusChaos leverages the popular chaos scenario and GitOps tool **Argo** to achieve this goal. Argo enables the creation of different chaos scenarios together in from of chaos scenarios which are extremly simple and efficient to use.<br/>
 With the help of **ChaosCenter**, chaos scenarios with different type of experiments can be created. In a Chaos Scenario, the experiments can be added in a parallel way and the user can tune the chaos scenario by adding additional steps to simulate a desired fault that might occur in production stage.
@@ -269,7 +269,7 @@ spec:
   schedule: 10 0-23 * * *
   concurrencyPolicy: Forbid
   startingDeadlineSeconds: 0
- chaos scenarioSpec:
+  workflowSpec:
     entrypoint: argowf-chaos
     serviceAccountName: argo-chaos
     securityContext:

@@ -66,4 +66,4 @@ In Litmus, Chaos Delegates can be classified into two types
 
 As part of the Litmus installation, a Self Chaos Delegate would be registered as a default Chaos Delegate in the ChaosCenter. The same cluster where Litmus is installed is chosen as the Self Chaos Delegate by the installer. From the ChaosCenter you can now induce chaos into this Self Chaos Delegate and observe the results.
 
-Since the ChaosCenter is Cross Cloud, you can connect multiple external Chaos Deleagtes to the same with the help of the command line utility [litmusctl](../litmusctl/installation.md). Once connected you can manage, monitor, observe and induce chaos from the ChaosCenter to the respective Chaos Delegates.
+Since the ChaosCenter is Cross Cloud, you can connect multiple external Chaos Delegates to the same with the help of the command line utility [litmusctl](../litmusctl/installation.md). Once connected you can manage, monitor, observe and induce chaos from the ChaosCenter to the respective Chaos Delegates.
