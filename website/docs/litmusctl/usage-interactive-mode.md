@@ -1,6 +1,6 @@
 ---
 id: usage-interactive-mode
-title: Installing ChaosAgents in interactive mode
+title: Installing Chaos Delegate in interactive mode
 sidebar_label: Using interactive mode
 ---
 
@@ -22,7 +22,7 @@ litmusctl [command] [TYPE] [flags]
 ```
 
 - Command: refers to what you do want to perform (create, get and config)
-- Type: refers to the feature type you are performing a command against (agent, project etc.)
+- Type: refers to the feature type you are performing a command against (Chaos Delegate , project etc.)
 - Flags: It takes some additional information for resource operations. For example, `--installation-mode` allows you to specify an installation mode.
 
 Litmusctl is using the `.litmusconfig` config file to manage multiple accounts
@@ -34,9 +34,9 @@ Litmusctl supports both interactive and non-interactive(flag based) modes.
 
 > Only `litmusctl connect agent` command needs --non-interactive flag, other commands don't need this flag to be in non-interactive mode. If mandatory flags aren't passed, then litmusctl takes input in an interactive mode.
 
-Multiple external ChaosAgents can be connected to the ChaosCenter with the help of the command line utility [litmusctl](installation.md)
+Multiple external Chaos Delegate can be connected to the ChaosCenter with the help of the command line utility [litmusctl](installation.md)
 
-### Steps to connect an agent
+### Steps to connect a Chaos Delegate
 
 - To setup an account with litmusctl
 
@@ -61,7 +61,7 @@ Password:
 account.username/admin configured
 ```
 
-- To connect an agent in a cluster mode
+- To connect a Chaos Delegate in a cluster mode
 
 ```shell
 litmusctl connect agent
@@ -78,13 +78,13 @@ Select a project [Range: 1-1]: 1
 
 Next, select the installation mode based on your requirement by entering the sequence number indicated against it.
 
-Litmusctl can install an agent in two different modes.
+Litmusctl can install a Chaos Delegate in two different modes.
 
-- cluster mode: With this mode, the agent can run the chaos in any namespace. It installs appropriate cluster roles and cluster role bindings to achieve this mode.
+- cluster mode: With this mode, the Chaos Delegate can run the chaos in any namespace. It installs appropriate cluster roles and cluster role bindings to achieve this mode.
 
-- namespace mode: With this mode, the agent can run the chaos in its namespace. It installs appropriate roles and role bindings to achieve this mode.
+- namespace mode: With this mode, the Chaos Delegate can run the chaos in its namespace. It installs appropriate roles and role bindings to achieve this mode.
 
-Note: With namespace mode, the user needs to create the namespace to install the agent as a prerequisite.
+Note: With namespace mode, the user needs to create the namespace to install the Chaos Delegate as a prerequisite.
 
 ```
 Installation Modes:
@@ -100,7 +100,7 @@ Select Mode [Default: cluster] [Range: 1-2]: 1
 
 ```
 
-Next, enter the details of the new agent.
+Next, enter the details of the new chaos delegate.
 
 Fields to be filled in <br />
 
@@ -156,7 +156,7 @@ Enter the namespace (new or existing namespace) [Default: litmus]:
 ```
 
 Once, all these steps are implemented you will be able to see a summary of all the entered fields.
-After verification of these details, you can proceed with the connection of the agent by entering Y. The process of connection might take up to a few seconds.
+After verification of these details, you can proceed with the connection of the chaos delegate by entering Y. The process of connection might take up to a few seconds.
 
 ```
 Enter service account [Default: litmus]:
@@ -182,9 +182,9 @@ https://preview.litmuschaos.io/api/file/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ
 👉 Litmus agents can be accessed here: https://preview.litmuschaos.io/targets
 ```
 
-#### Verify the new Agent Connection\*\*
+#### Verify the new Chaos Delegate Connection\*\*
 
-To verify, if the connection process was successful you can view the list of connected agents from the Targets section on your ChaosCenter and ensure that the connected agent is in Active State.
+To verify, if the connection process was successful you can view the list of connected chaos delegates from the Targets section on your ChaosCenter and ensure that the connected chaos delegate is in Active State.
 
 ---
 
@@ -260,7 +260,7 @@ PROJECT ID                                PROJECT NAME       CREATEDAT
 7a4a259a-1ae5-4204-ae83-89a8838eaec3      DevOps Project     2021-07-21 14:39:14 +0530 IST
 ```
 
-- To get an overview of the agents available within a project, issue the following command.
+- To get an overview of the chaos delegates available within a project, issue the following command.
 
 ```shell
 litmusctl get agents
@@ -273,10 +273,10 @@ Enter the Project ID: 50addd40-8767-448c-a91a-5071543a2d8e
 ```
 AGENTID                                AGENTNAME          STATUS     REGISTRATION
 55ecc7f2-2754-43aa-8e12-6903e4c6183a   agent-1            ACTIVE     REGISTERED
-13dsf3d1-5324-54af-4g23-5331g5v2364f   agent-2            INACTIVE   NOT REGISTERED                                         
+13dsf3d1-5324-54af-4g23-5331g5v2364f   agent-2            INACTIVE   NOT REGISTERED
 ```
 
-- To disconnect an agent, issue the following command.
+- To disconnect an chaos delegate, issue the following command.
 
 ```shell
 litmusctl disconnect agent 55ecc7f2-2754-43aa-8e12-6903e4c6183a --project-id=""
@@ -293,7 +293,7 @@ For more information related to flags, Use `litmusctl --help`.
 ## Learn More
 
 - [Learn More about Litmusctl](installation.md)
-- [Installing ChaosAgents in non interactive mode](./usage-non-interactive-mode.md)
-- [Create Chaos Workflows using Litmusctl](./chaos-workflow-creation.md)
+- [Installing Chaos Delegates in non interactive mode](./usage-non-interactive-mode.md)
+- [Create Chaos Scenarios using Litmusctl](./chaos-workflow-creation.md)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)

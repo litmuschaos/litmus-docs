@@ -1,22 +1,22 @@
 ---
 id: chaosagents-installation
-title: ChaosAgents Installation
-sidebar_label: ChaosAgents
+title: Chaos Delegate Installation
+sidebar_label: Chaos Delegate
 ---
 
 ---
 
 ## Prerequisites
 
-- Before connecting a ChaosAgent to the [ChaosCenter](../getting-started/resources.md#chaoscenter), learn about what is a [ChaosAgent](../getting-started/resources.md#chaosagents) in Litmus.
+- Before connecting a Chaos Delegate to the [ChaosCenter](../getting-started/resources.md#chaoscenter), learn about what is a [Chaos Delegate](../getting-started/resources.md#chaosagents) in Litmus.
 - Make sure [litmusctl](../litmusctl/installation.md) is installed.
 
-## Connecting ChaosAgents
+## Connecting Chaos Delegate
 
-- Learn to [connect ChaosAgents with non interactive mode using litmuctl](../litmusctl/usage-non-interactive-mode.md)
-- Learn to [connect ChaosAgents with interactive mode using litmuctl](../litmusctl/usage-interactive-mode.md)
+- Learn to [connect Chaos Delegate with non interactive mode using litmuctl](../litmusctl/usage-non-interactive-mode.md)
+- Learn to [connect Chaos Delegate with interactive mode using litmuctl](../litmusctl/usage-interactive-mode.md)
 
-## Resource Requiremenets for Agents-plane components
+## Resource Requiremenets for Chaos Delegate plane components
 
 The Resource requests provided here have been estimated using data gathered manually through different methods -
 

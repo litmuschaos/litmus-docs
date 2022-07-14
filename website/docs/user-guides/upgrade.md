@@ -27,15 +27,15 @@ To upgrade the DB schema, deploy the [upgrade-agent](https://raw.githubuserconte
 
 `kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/upgrade-agents/control-plane/upgrade-agent.yaml`
 
-## Upgrade ChaosAgent
+## Upgrade Chaos Delegate
 
-To upgrade your ChaosAgent, you can follow these steps:
+To upgrade your Chaos Delegate, you can follow these steps:
 
-1. If an upgrade is available, you will get an option to upgrade your agent in the ChaosCenter. Upon clicking on the upgrade option, a modal will pop up providing you the litmusctl command which you can execute and your ChaosAgent will be upgraded.
+1. If an upgrade is available, you will get an option to upgrade your chaos delegate in the ChaosCenter. Upon clicking on the upgrade option, a modal will pop up providing you the litmusctl command which you can execute and your Chaos Delegate will be upgraded.
 
 <img src={require('../assets/user-guides/upgrade/upgrade-agent.png').default} width="800" />
 
-Alternatively you can run the following command using litmusctl in the cluster containing the agent by providing `<CLUSTER_ID>` and `<PROJECT_ID>`.
+Alternatively you can run the following command using litmusctl in the cluster containing the chaos delegate by providing `<CLUSTER_ID>` and `<PROJECT_ID>`.
 
 ```
 litmusctl upgrade agent --cluster-id="<CLUSTER_ID>" --project-id="<PROJECT_ID>"

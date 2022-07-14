@@ -1,33 +1,33 @@
 ---
 id: chaos-workflow
-title: Chaos Workflow
-sidebar_label: Chaos Workflow
+title: Chaos Scenario
+sidebar_label: Chaos Scenario
 ---
 
 ---
 
-**Chaos Workflow** is a set of different operations coupled together to achieve desired chaos impact on a Kubernetes Cluster. <br/>
+**Chaos Scenario** is a set of different operations coupled together to achieve desired chaos impact on a Kubernetes Cluster. <br/>
 It is useful in automating a series of pre-conditioning steps or action which is necessary to be performed before triggering the chaos injection.<br/>
-A Chaos Workflow can also be used to perform different operations parallelly to achieve a desired chaos injection scenario.
+A Chaos Scenario can also be used to perform different operations parallelly to achieve a desired chaos injection scenario.
 
 ## Prerequisites
 
-The following should be required before creating a Chaos Workflow:
+The following should be required before creating a Chaos Scenario:
 
 - [ChaosCenter](../getting-started/resources.md#chaoscenter)
-- [ChaosAgent](../getting-started/resources.md#chaosagents)
+- [Chaos Delegate](../getting-started/resources.md#chaosagents)
 - [Chaos Experiment CR](chaos-experiment.md)
 - [ChaosEngine CR](chaos-engine.md)
 - [Probes](probes.md)
 
-## How do we define and execute a workflow?
+## How do we define and execute a Chaos Scenario ?
 
-LitmusChaos leverages the popular workflow and GitOps tool **Argo** to achieve this goal. Argo enables the creation of different chaos scenarios together in from of workflows which are extremly simple and efficient to use.<br/>
-With the help of **ChaosCenter**, workflows with different type of experiments can be created. In a Chaos Workflow, the experiments can be added in a parallel way and the user can tune the workflow by adding additional steps to simulate a desired fault that might occur in production stage.
+LitmusChaos leverages the popular chaos scenario and GitOps tool **Argo** to achieve this goal. Argo enables the creation of different chaos scenarios together in from of chaos scenarios which are extremly simple and efficient to use.<br/>
+With the help of **ChaosCenter**, chaos scenarios with different type of experiments can be created. In a Chaos Scenario, the experiments can be added in a parallel way and the user can tune the chaos scenario by adding additional steps to simulate a desired fault that might occur in production stage.
 
-### Life Cycle of a Chaos Workflow
+### Life Cycle of a Chaos Scenario
 
-Here is a sample pod-delete chaos workflow from ChaosCenter.
+Here is a sample pod-delete chaos scenario from ChaosCenter.
 
 ```yaml
 apiVersion: argoproj.io/v1alpha1
@@ -204,10 +204,10 @@ spec:
     strategy: OnWorkflowCompletion
 ```
 
-The structure of a chaos workflow is similar to that of a Kubernetes Object. It consists of the mandatory fields like `apiVersion`, `kind`, `metadata`, `spec`.
+The structure of a chaos scenario is similar to that of a Kubernetes Object. It consists of the mandatory fields like `apiVersion`, `kind`, `metadata`, `spec`.
 
-The **spec** in a Chaos Workflow is where the different steps are mentioned and the overall life cycle of the workflow is described.
-We can see different `templates` are present in the spec of a chaos workflow.
+The **spec** in a Chaos Scenario is where the different steps are mentioned and the overall life cycle of the chaos scenario is described.
+We can see different `templates` are present in the spec of a chaos scenario.
 
 ```
 templates:
@@ -222,20 +222,20 @@ templates:
 ```
 
 Here in this template, we can see different steps are present.
-These include installing the chaos experiments, executing the chaos engine of the experiment and at the end we have the revert chaos step which deletes/removes the resources that were created as part of the workflow.
+These include installing the chaos experiments, executing the chaos engine of the experiment and at the end we have the revert chaos step which deletes/removes the resources that were created as part of the chaos scenario.
 
 Some additional checks can be added with the experiments in the form of probes. These probes are defined in the ChaosEngines of the experiment and are updated when the experiment execution takes place.
-The overall workflow result can be viewed with the ChaosResult CRD which contains the `verdict` and the `probeSuccessPercentage` (a ratio of successful checks v/s total probes).
+The overall chaos scenario result can be viewed with the ChaosResult CRD which contains the `verdict` and the `probeSuccessPercentage` (a ratio of successful checks v/s total probes).
 
 ## What is a run?
 
-A workflow run can be defined as single/one-time execution of the workflow. There can be multiple runs of a single workflow. If the workflow consists of a cron syntax, it will run periodically according to the cron provided in the workflow.
+A chaos scenario run can be defined as single/one-time execution of the chaos scenario. There can be multiple runs of a single chaos scenario. If the chaos scenario consists of a cron syntax, it will run periodically according to the cron provided in the chaos scenario.
 
 ## What is Resiliency Score?
 
-**Resiliency score** is the measure of how resilient is the workflow when different chaos scenarios are performed on the Kubernetes System.
+**Resiliency score** is the measure of how resilient is the chaos scenario when different chaos scenarios are performed on the Kubernetes System.
 
-While creating a workflow, certain weights are assigned to all the experiments present in the workflow. These weights signify the priority/importance of the experiment. The higher the weight, the more significant is the experiment.
+While creating a chaos scenario, certain weights are assigned to all the experiments present in the chaos scenario. These weights signify the priority/importance of the experiment. The higher the weight, the more significant is the experiment.
 
 In ChaosCenter, the weight priority is generally divided into three sections:
 
@@ -250,12 +250,12 @@ Total Resilience for one single experiment = (Weight Given to that experiment * 
 Overall Resilience Score = Total Test Result / Sum of the assigned weights of the experiments
 ```
 
-## What is a Cron Workflow?
+## What is a Cron Chaos Scenario?
 
-Cron Workflow is a type of workflow that runs on a pre-defined schedule. It consists of a mandatory field `spec.schedule`. A cron syntax is provided in this field at which the workflow execution takes
+Cron Chaos Scenario is a type of chaos scenario that runs on a pre-defined schedule. It consists of a mandatory field `spec.schedule`. A cron syntax is provided in this field at which the chaos scenario execution takes
 place.
 
-Here's a sample CronWorkflow for Podtato-Head application:
+Here's a sample Cron Chaos Scenario for Podtato-Head application:
 
 ```yaml
 apiVersion: argoproj.io/v1alpha1
@@ -391,17 +391,17 @@ spec:
   timezone: Asia/Calcutta
 ```
 
-In the above workflow, we can see the cron syntax at `spec.schedule` is
+In the above chaos scenario, we can see the cron syntax at `spec.schedule` is
 
 ```
 spec:
   schedule: 10 0-23 * * *
 ```
 
-This means the workflow will be executed at the 10th minute of every hour.
+This means the chaos scenario will be executed at the 10th minute of every hour.
 
-A workflow can be changed into CronWorkflow from the ChaosCenter.
-While scheduling a workflow, in the `Schedule` step, there are few options as part of Recurring Schedules. These include:
+A chaos scenario can be changed into Cron Chaos Scenario from the ChaosCenter.
+While scheduling a chaos scenario, in the `Schedule` step, there are few options as part of Recurring Schedules. These include:
 
 - Every hour
 - Every Day
@@ -410,8 +410,8 @@ While scheduling a workflow, in the `Schedule` step, there are few options as pa
 
 ## Summary
 
-Chaos Workflow is combination of different steps combined together to perfrom a specific chaos use-case on a Kubernetes system. These steps can include install experiment steps, ChaosEngine CR for target selection, revert-chaos steps etc. Chaos Workflows can be scheduled for a later time with the help of Cron Workflows.
-These workflows consist of a cron syntax that is used for scheduling a workflow. Once the workflow execution is completed, the resiliency of the targeted application is calculated. Several weights are assigned to different experiments in the workflow. These weights are used along with the ProbeSuccessPercentage to find out the resiliency score.
+Chaos Scenario is combination of different steps combined together to perfrom a specific chaos use-case on a Kubernetes system. These steps can include install experiment steps, ChaosEngine CR for target selection, revert-chaos steps etc. Chaos Scenarios can be scheduled for a later time with the help of Cron Chaos Scenarios.
+These chaos scenarios consist of a cron syntax that is used for scheduling a chaos scenario. Once the chaos scenario execution is completed, the resiliency of the targeted application is calculated. Several weights are assigned to different experiments in the chaos scenario. These weights are used along with the ProbeSuccessPercentage to find out the resiliency score.
 
 ## Resources
 
@@ -422,5 +422,5 @@ These workflows consist of a cron syntax that is used for scheduling a workflow.
 ## Learn More
 
 - [Explore Probes](probes.md)
-- [Visualize a Chaos Workflow](visualize-workflow.md)
+- [Visualize a Chaos Scenario](visualize-workflow.md)
 - [Examine the ChaosResult](chaos-result.md)

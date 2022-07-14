@@ -6,11 +6,11 @@ sidebar_label: Uninstall Litmus
 
 ---
 
-## ChaosAgents
+## Chaos Delegate
 
-To disconnect the [ChaosAgent](../getting-started/resources.md#chaosagents) connected to the [ChaosCenter](../getting-started/resources.md#chaoscenter), follow these steps -
+To disconnect the [Chaos Delegate](../getting-started/resources.md#chaosagents) connected to the [ChaosCenter](../getting-started/resources.md#chaoscenter), follow these steps -
 
-1. Remove the ChaosEngines of the respective ChaosAgent
+1. Remove the ChaosEngines of the respective Chaos Delegate
 
    ```bash
    kubectl delete chaosengine <CHAOSENGINE_NAMEs> --all -<AGENT_NAMESPACE>
@@ -18,13 +18,13 @@ To disconnect the [ChaosAgent](../getting-started/resources.md#chaosagents) conn
 
    > If ChaosEngines is unable to delete successfully then the Kubernetes finalizers need to be removed manually.
 
-2. Login to the ChaosCenter and navigate to the ChaosAgents Tab.
-3. Click on the `Disconnect icon` <img src={require("../assets/user-guides/uninstall-litmus/disconnect-icon.png").default} alt="Disconnect Icon" /> of the respective ChaosAgent you want to disconnect.
-4. On the Modal that appears, confirm your selection by clicking `Yes` and the selected ChaosAgent would be disconnected from the ChaosCenter.
+2. Login to the ChaosCenter and navigate to the Chaos Delegates Tab.
+3. Click on the `Disconnect icon` <img src={require("../assets/user-guides/uninstall-litmus/disconnect-icon.png").default} alt="Disconnect Icon" /> of the respective Chaos Delegate you want to disconnect.
+4. On the Modal that appears, confirm your selection by clicking `Yes` and the selected Chaos Delegate would be disconnected from the ChaosCenter.
    :::note
-   The above disconnect would remove the subscriber component from ChaosAgent and thus removing the connectivity between the ChaosAgent and the ChaosCenter.
+   The above disconnect would remove the subscriber component from Chaos Delegate and thus removing the connectivity between the Chaos Delegate and the ChaosCenter.
 
-   If the ChaosAgent is not reachable it would remove only the entry from the database of the ChaosCenter
+   If the Chaos Delegate is not reachable it would remove only the entry from the database of the ChaosCenter
    :::
 
 ### Remove the CRs
@@ -51,7 +51,7 @@ kubectl delete eventtrackerpolicies -n <AGENT_NAMESPACE>
 
 ### Delete the Deployments
 
-To remove the respective deployments of the ChaosAgents you need to manually delete them.
+To remove the respective deployments of the Chaos Delegates you need to manually delete them.
 
 ```bash
 kubectl delete deployment chaos-operator-ce event-tracker workflow-controller chaos-exporter -n <AGENT_NAMESPACE>
@@ -91,7 +91,7 @@ kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/master/li
 
 ## ChaosCenter
 
-> To remove the Self Agent Resources you need to follow the above ChaosAgent Uninstall process
+> To remove the Self Chaos Delegate Resources you need to follow the above Chaos Delegate Uninstall process
 
 To uninstall the ChaosCenter from the system, follow these steps -
 

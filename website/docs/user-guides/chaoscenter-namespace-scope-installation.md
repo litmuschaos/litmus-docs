@@ -101,7 +101,6 @@ Visit https://docs.litmuschaos.io/ to find more info.
 
 #### **Set the namespace on which you want to install Litmus ChaosCenter**
 
-
 > Create a namespace `kubectl create ns <Your Namespace>`
 
 ```bash
@@ -228,9 +227,9 @@ kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-s
 
 ---
 
-#### **Verify Successful Registration of the Self Agent post [Account Configuration](setup-without-ingress)**
+#### **Verify Successful Registration of the Self Chaos Delegate post [Account Configuration](setup-without-ingress)**
 
-Once the project is created, the cluster is automatically registered as a chaos target via installation of [ChaosAgents](../getting-started/resources.md#chaosagents). This is represented as [Self-Agent](../getting-started/resources.md#types-of-chaosagents) in [ChaosCenter](../getting-started/resources.md#chaosagents).
+Once the project is created, the cluster is automatically registered as a chaos target via installation of [Chaos Delegate](../getting-started/resources.md#chaosagents). This is represented as [Self Chaos Delegate](../getting-started/resources.md#types-of-chaosagents) in [ChaosCenter](../getting-started/resources.md#chaosagents).
 
 ```bash
 kubectl get pods -n litmus

@@ -1,7 +1,7 @@
 ---
 id: re-run-workflow
-title: Re-run a Workflow
-sidebar_label: Re-run Workflow
+title: Re-run a chaos scenario
+sidebar_label: Re-run chaos scenario
 ---
 
 ---
@@ -10,11 +10,11 @@ You can re-run any **_non-recurring_** schedule should you wish to test your app
 
 ## Before you begin
 
-You can learn how to schedule your first workflow [here](schedule-workflow.md).
+You can learn how to schedule your first chaos scenario [here](schedule-workflow.md).
 
-## 1. Go to the workflows sections
+## 1. Go to the chaos scenarios sections
 
-In the `Workflows` page, go to the `Schedules` tab and click on the options menu for the specific schedule you wish to re-run:
+In the `Chaos Scenario` page, go to the `Schedules` tab and click on the options menu for the specific schedule you wish to re-run:
 
 <img src={require('../assets/user-guides/injecting-fault/re-run-workflow/step-1.png').default} width="1000" height="500" />
 
@@ -26,5 +26,5 @@ After opening the options menu, click on the `Rerun Schedule` option. Having re-
 
 ## Learn more
 
-- [Schedule a workflow](schedule-workflow.md)
-- [Delete a workflow](delete-workflow.md)
+- [Schedule a chaos scenario](schedule-workflow.md)
+- [Delete a chaos scenario](delete-workflow.md)

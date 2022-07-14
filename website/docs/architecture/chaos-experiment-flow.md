@@ -8,11 +8,11 @@ sidebar_label: Chaos Experiment Flow
 
 <img src={require("../assets/experiment-flow.png").default} alt="Chaos Experiment Flow" />
 
-The experiment execution is triggered upon the creation of a ChaosEngine resource. The ChaosEngine resource interacts with Chaos Runner, which is created by the Chaos Operator. The Chaos Runner creates Experiment Jobs that execute the experiment business logic. Typically, these ChaosEngines are embedded within the 'steps' of a Litmus Chaos Workflow. However, one may also create and apply the Chaos Engines manually, and then the chaos-operator reconciles this resource and triggers the experiment execution. Chaos experiments are classified as:
+The experiment execution is triggered upon the creation of a ChaosEngine resource. The ChaosEngine resource interacts with Chaos Runner, which is created by the Chaos Operator. The Chaos Runner creates Experiment Jobs that execute the experiment business logic. Typically, these ChaosEngines are embedded within the 'steps' of a Litmus Chaos Scenario. However, one may also create and apply the Chaos Engines manually, and then the chaos-operator reconciles this resource and triggers the experiment execution. Chaos experiments are classified as:
 
 - Kubernetes Experiments
-  - Pod-Level Chaos 
-  - Node-Level Chaos 
+  - Pod-Level Chaos
+  - Node-Level Chaos
 - Application Chaos
 - Cloud Infrastructure
 

@@ -12,7 +12,7 @@ Chaos Engineering is the discipline of experimenting on a system to build confid
 
 The following should be required before integrating Grafana with litmus 2.0:
 
-- [Running Chaos Workflows](../getting-started/run-your-first-workflow.md)
+- [Running Chaos Scenarios](../getting-started/run-your-first-workflow.md)
 - [Prometheus TSDB](https://prometheus.io/)
 - [Prometheus Integration](prometheus.md)
 - [Application and infrastructure monitoring](../concepts/app-infra-monitoring.md)
@@ -47,7 +47,7 @@ kubectl -n monitoring apply -f utils/metrics-exporters/node-exporter/
 kubectl -n monitoring apply -f utils/metrics-exporters/kube-state-metrics/
 ```
 
-- Deploy chaos-exporter when the cluster is not connected to litmus 2.0 control plane via litmus agent (exporter is installed as a part of the agent bundle)
+- Deploy chaos-exporter when the cluster is not connected to litmus 2.0 control plane via litmus chaos delegate (exporter is installed as a part of the chaos delegate bundle)
 
 ```bash
 kubectl -n litmus apply -f utils/metrics-exporters/litmus-metrics/chaos-exporter/
@@ -227,7 +227,7 @@ litmuschaos_experiment_verdict{job="litmus/chaos-exporter", app="chaos-exporter"
 
 ## Gauges from metrics for aggregated view of chaos injections
 
-Metrics from chaos-exporter like `litmuschaos_passed_experiments`, `litmuschaos_failed_experiments` and `litmuschaos_awaited_experiments` when ingested in Prometheus which is connected as a data source can provide an aggregated view of chaos injections on a target agent cluster or namespace.
+Metrics from chaos-exporter like `litmuschaos_passed_experiments`, `litmuschaos_failed_experiments` and `litmuschaos_awaited_experiments` when ingested in Prometheus which is connected as a data source can provide an aggregated view of chaos injections on a chaos delegate cluster or namespace.
 
 _Queries:_
 

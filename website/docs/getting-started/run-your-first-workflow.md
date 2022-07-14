@@ -1,16 +1,16 @@
 ---
 id: run-your-first-workflow
-title: Run your First Chaos Workflow in 5 minutes
-sidebar_label: Run Your First Workflow
+title: Run your First Chaos Scenario in 5 minutes
+sidebar_label: Run Your First Chaos Scenario
 ---
 
 ---
 
-Welcome to this scenario, in this section you will get an overview of how to execute a sample Litmus Workflow on your application to induce Chaos as well as to observe the results and resilience score.
+Welcome to this scenario, in this section you will get an overview of how to execute a sample LitmusChaos Scenario on your application to induce Chaos as well as to observe the results and resilience score.
 
 ## Prerequisites
 
-Before starting with your first Chaos Workflow make sure the [Litmus ChaosCenter](resources#chaoscenter) is installed in either one of these scopes
+Before starting with your first Chaos Scenario make sure the [Litmus ChaosCenter](resources#chaoscenter) is installed in either one of these scopes
 
 - [Cluster Scope](../user-guides/chaoscenter-cluster-scope-installation.md)
 - [Namespace Scope](../user-guides/chaoscenter-namespace-scope-installation.md)
@@ -24,71 +24,71 @@ In this scenario we will execute a pod-delete fault on a sample micro-service ap
 
 ---
 
-## Schedule your First Workflow
+## Schedule your First Chaos Scenario
 
-### Select the podtato-head predefined workflow
+### Select the podtato-head predefined Chaos Scenario
 
-1. Click on <span style={{color: '#5B44BA'}}>**Schedule a Workflow**</span> from the ChaosCenter Homepage or from the top right button in the **Litmus Workflows** tab.
+1. Click on <span style={{color: '#5B44BA'}}>**Schedule a Chaos Scenario**</span> from the ChaosCenter Homepage or from the top right button in the **Litmus Workflows** tab.
 
-<img src={require("../assets/getting-started/run-your-first-workflow/schedule-workflow-from-homepage.png").default} width="350" alt="Schedule Workflow from Homepage" /> <img src={require("../assets/getting-started/run-your-first-workflow/schedule-workflow-from-litmus-workflows.png").default} width="350" alt="Schedule Workflow from Litmus Workflows" />
+<img src={require("../assets/getting-started/run-your-first-workflow/schedule-workflow-from-homepage.png").default} width="350" alt="Schedule Chaos Scenario from Homepage" /> <img src={require("../assets/getting-started/run-your-first-workflow/schedule-workflow-from-litmus-workflows.png").default} width="350" alt="Schedule Chaos Scenario from Litmus Chaos Scenarios" />
 
 <br /> <br />
 
-2. Select **Self Agent** as the target [ChaosAgent](resources.md#chaosagents) for Chaos Injection. This is where we'll select which ChaosAgent to choose as the Target Agent.
+2. Select **Self Chaos Delegate** as the target [Chaos Delegate](resources.md#chaosagents) for Chaos Injection. This is where we'll select which Chaos Delegate to choose as the Chaos Delegate.
 
-   <img src={require("../assets/getting-started/run-your-first-workflow/selecting-self-agent.png").default} alt="Selecting Self Agent" />
+   <img src={require("../assets/getting-started/run-your-first-workflow/selecting-self-agent.png").default} alt="Selecting Self Chaos Delegate" />
 
-3. Expand the first radio button (To create a new workflow from Predefined Workflow Templates) and select **podtato-head** from the list of Predefined Workflows.
+3. Expand the first radio button (To create a new Chaos Scenario from Predefined Chaos Scenario Templates) and select **podtato-head** from the list of Predefined Chaos Scenarios.
 
    <img src={require("../assets/getting-started/run-your-first-workflow/select-podtato-head.png").default} alt="Select Podtato Head" />
 
-4. View the workflow details in the **Workflow Settings**, you can modify the name and description of the workflow to suit your needs.
+4. View the Chaos Scenario details in the **Chaos Scenario Settings**, you can modify the name and description of the Chaos Scenario to suit your needs.
 
-   <img src={require("../assets/getting-started/run-your-first-workflow/workflow-settings-podtato-head.png").default} alt="Modify Details of Podtato Head Workflow" />
+   <img src={require("../assets/getting-started/run-your-first-workflow/workflow-settings-podtato-head.png").default} alt="Modify Details of Podtato Head Chaos Scenario" />
 
-### Simulate the Workflow Steps Visualization
+### Simulate the Chaos Scenario Steps Visualization
 
-5. View the visualization of the Litmus Workflow you are about to execute. This step also allows for you to edit or modify the YAML/tunable if required. We would just stick with the default configurations for now.
+5. View the visualization of the Litmus Chaos Scenario you are about to execute. This step also allows for you to edit or modify the YAML/tunable if required. We would just stick with the default configurations for now.
 
-   <img src={require("../assets/getting-started/run-your-first-workflow/podtato-head-tune-workflow.png").default} alt="Visualize Podtato Head Workflow" />
+   <img src={require("../assets/getting-started/run-your-first-workflow/podtato-head-tune-workflow.png").default} alt="Visualize Podtato Head Chaos Scenario" />
 
-   > By default in the Podtato Head Workflow Template the steps to gracefully delete the Chaos Resources (`revert-chaos`) and also the Podtato Head application (`delete-application`) are present.
+   > By default in the Podtato Head Chaos Scenario Template the steps to gracefully delete the Chaos Resources (`revert-chaos`) and also the Podtato Head application (`delete-application`) are present.
 
-### Assign Weights to the Workflow Experiments
+### Assign Weights to the Chaos Scenario Experiments
 
-6. Assign weights to the chaos experiments that are part of the workflow using the slider. This is typically used when there are multiple experiments as part of a workflow. These weights influence the **Resilience Score** calculation for the chaos workflow.
+6. Assign weights to the chaos experiments that are part of the Chaos Scenario using the slider. This is typically used when there are multiple experiments as part of a Chaos Scenario. These weights influence the **Resilience Score** calculation for the Chaos Scenario.
 
-   <img src={require("../assets/getting-started/run-your-first-workflow/adjust-weights-for-podtato-head.png").default} alt="Assign Weights for Workflow Experiments" />
+   <img src={require("../assets/getting-started/run-your-first-workflow/adjust-weights-for-podtato-head.png").default} alt="Assign Weights for Chaos Scenario Experiments" />
 
-### Schedule the Podtato-Head Workflow
+### Schedule the Podtato-Head Chaos Scenario
 
-7. Schedule the Litmus Workflow for immediate and one-time execution by selecting the **Schedule Now** option
+7. Schedule the Litmus Chaos Scenario for immediate and one-time execution by selecting the **Schedule Now** option
 
-   <img src={require("../assets/getting-started/run-your-first-workflow/choose-schedule.png").default} alt="Choose a Schedule for Workflow Execution" />
+   <img src={require("../assets/getting-started/run-your-first-workflow/choose-schedule.png").default} alt="Choose a Schedule for Chaos Scenario Execution" />
 
 8. Verify and click on **Finish** to start the Chaos Injection
 
-   <img src={require("../assets/getting-started/run-your-first-workflow/verify-and-commit-podtato-head.png").default} alt="Verify and Schedule the Podtato Head Workflow" />
+   <img src={require("../assets/getting-started/run-your-first-workflow/verify-and-commit-podtato-head.png").default} alt="Verify and Schedule the Podtato Head Chaos Scenario" />
 
 ### Congratulations
 
-And with that you have successfully scheduled your first Chaos Workflow with Litmus.
+And with that you have successfully scheduled your first Chaos Scenario with Litmus.
 
-<img src={require("../assets/getting-started/run-your-first-workflow/scheduled-successfully.png").default} alt="Podtato Head Workflow Scheduled Successfully" />
+<img src={require("../assets/getting-started/run-your-first-workflow/scheduled-successfully.png").default} alt="Podtato Head Chaos Scenario Scheduled Successfully" />
 
 ---
 
 ## Visualize and Analyze
 
-1. To check the current progress of the Podtato-Head workflow, view the status of the Workflow from the **Litmus Workflows** Tab.
+1. To check the current progress of the Podtato-Head Chaos Scenario, view the status of the Chaos Scenario from the **Litmus Chaos Scenarios** Tab.
 
-   <img src={require("../assets/getting-started/run-your-first-workflow/podtato-head-workflow-running.png").default} alt="Podtato Head Workflow in Running State" />
+   <img src={require("../assets/getting-started/run-your-first-workflow/podtato-head-workflow-running.png").default} alt="Podtato Head Chaos Scenario in Running State" />
 
 2. Litmus deploys a sample multi-replica hello-service application before going onto pull the pod-delete ChaosExperiment template. In the next step, it creates the ChaosEngine to launch the chaos injection via dedicated pods.
 
-   To see all these steps live in action on the `workflow name` from the **Runs** Tab or select **Show the workflow** from the three dot menu.
+   To see all these steps live in action on the `chaos scenario name` from the **Runs** Tab or select **Show the Chaos Scenario** from the three dot menu.
 
-   <img src={require("../assets/getting-started/run-your-first-workflow/podtato-head-workflow-in-action.png").default} alt="Podtato Head Workflow in Action" />
+   <img src={require("../assets/getting-started/run-your-first-workflow/podtato-head-workflow-in-action.png").default} alt="Podtato Head Chaos Scenario in Action" />
 
    To see them in action on the terminal itself watch the pods in the namespace where ChaosCenter is installed.
 

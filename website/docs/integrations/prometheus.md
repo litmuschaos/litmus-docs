@@ -12,7 +12,7 @@ LitmusChaos facilitates real-time monitoring for events and metrics using it’s
 
 The following should be required before integrating Prometheus in litmus 2.0:
 
-- [Running Chaos Workflows](../getting-started/run-your-first-workflow.md)
+- [Running Chaos Scenarios](../getting-started/run-your-first-workflow.md)
 - [Prometheus TSDB](https://prometheus.io/)
 - [Probes](../concepts/probes.md)
 - [Data source](../concepts/datasource.md)
@@ -45,7 +45,7 @@ kubectl -n monitoring apply -f utils/metrics-exporters/node-exporter/
 kubectl -n monitoring apply -f utils/metrics-exporters/kube-state-metrics/
 ```
 
-- Deploy chaos-exporter when the cluster is not connected to litmus 2.0 control plane via litmus agent (exporter is installed as a part of the agent bundle)
+- Deploy chaos-exporter when the cluster is not connected to litmus 2.0 control plane via litmus chaos delegate (exporter is installed as a part of the chaos delegate bundle)
 
 ```bash
 kubectl -n litmus apply -f utils/metrics-exporters/litmus-metrics/chaos-exporter/
@@ -90,7 +90,7 @@ kubectl -n monitoring apply -f utils/metrics-exporters-with-service-monitors/nod
 kubectl -n monitoring apply -f utils/metrics-exporters-with-service-monitors/kube-state-metrics/
 ```
 
-- Deploy chaos-exporter when the cluster is not connected to litmus 2.0 control plane via litmus agent (exporter is installed as a part of the agent bundle)
+- Deploy chaos-exporter when the cluster is not connected to litmus 2.0 control plane via litmus chaos delegate (exporter is installed as a part of the chaos delegate bundle)
 
 ```bash
 kubectl -n litmus apply -f utils/metrics-exporters-with-service-monitors/litmus-metrics/chaos-exporter/
@@ -137,7 +137,7 @@ git clone https://github.com/litmuschaos/litmus.git
 cd litmus/monitoring
 ```
 
-- Deploy chaos-exporter when the cluster is not connected to litmus 2.0 control plane via litmus agent (exporter is installed as a part of the agent bundle)
+- Deploy chaos-exporter when the cluster is not connected to litmus 2.0 control plane via litmus chaos delegate (exporter is installed as a part of the chaos delegate bundle)
 
 ```bash
 kubectl -n litmus apply -f utils/metrics-exporters/litmus-metrics/chaos-exporter/
