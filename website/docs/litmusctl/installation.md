@@ -26,7 +26,7 @@ For more information including a complete list of litmusctl operations, see the 
 
 ## Compatibility matrix
 
-To check compatibility of chaosctl with Chaos Center
+To check compatibility of litmusctl with Chaos Center
 
 <table>
   <th>litmusctl version</th>

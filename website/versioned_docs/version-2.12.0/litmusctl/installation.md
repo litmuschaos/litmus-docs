@@ -21,12 +21,11 @@ Litmusctl CLI requires the following things:
 For more information including a complete list of litmusctl operations, see the litmusctl reference documentation.
 
 - For v0.12.0 or latest: <a href="https://github.com/litmuschaos/litmusctl/blob/master/Usage.md">Click here</a>
-- For v0.2.0 or earlier: <a href="https://github.com/litmuschaos/litmusctl/blob/master/Usage_v0.2.0.md">Click here</a>
 
 
 ## Compatibility matrix
 
-To check compatibility of chaosctl with Chaos Center
+To check compatibility of litmusctl with Chaos Center
 
 <table>
   <th>litmusctl version</th>
