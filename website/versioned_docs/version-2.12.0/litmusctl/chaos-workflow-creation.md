@@ -6,8 +6,6 @@ sidebar_label: Create Chaos Scenarios
 
 ---
 
-# Usage: Litmusctl v0.10.0
-
 > Notes:
 >
 > - For litmusctl v0.10.0 or latest
