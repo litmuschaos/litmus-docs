@@ -42,7 +42,7 @@ _Installation:_
 - Make sure you have [golang](https://github.com/golang/go) installed. We just need to run the following command to install embedmd.
 
 ```bash
-go get github.com/campoy/embedmd
+go install github.com/campoy/embedmd@latest
 ```
 
 _Run embedmd (needs to be done before commiting the changes):_
@@ -59,32 +59,15 @@ _Check the difference:_
 - Executing `embedmd -d docs-name.md` will display the difference between the contents of docs-name.md and the output of embedmd docs-name.md.
 
 ## Manual Setup
-
-### Install Node.js
-
-```bash
-sudo apt-get install software-properties-common
-curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
-```
-
-### Get the latest Node.js package
-
-```bash
-sudo apt-get install -y nodejs
-```
-
-### Install Yarn
-
-```bash
-npm install -g yarn
-```
+### Pre-Requisites
+- Node.js 16.14 or above. It can be installed from [here](https://nodejs.org/en/download/).
 
 ### Start the server
 
 ```bash
 cd website
-yarn install
-yarn start
+npm install
+npm start
 ```
 
 ## Using Docker compose
