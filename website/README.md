@@ -32,11 +32,3 @@ npm run docusaurus docs:version <VERSION>
 
 This command will tag a new version from master docs.
 It will copy the docs/ folder contents into a new versioned_docs/version-`<version>`/ folder, create a versioned sidebars file based from your current sidebar configuration (if it exists) - saved as versioned_sidebars/version-`<version>`-sidebars.json and append the new version number to versions.json.
-
-## Deployment
-
-```console
-GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

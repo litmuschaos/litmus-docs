@@ -102,21 +102,23 @@ litmusportal-server-9c4d85f57-5r6km       2/2     Running             0         
 mongo-0                                   1/1     Running             0          5m57s
 ```
 
-### Configuring `litmusportal-server` to enable Dex features
+### Configuring `chaos-litmus-auth-server` to enable Dex features
 
 To set up Dex, we would require to modify our litmusportal-server a bit in order to communicate with Dex. This will be achieved by adding some environment variables
 
 - `OIDC_ISSUER`: The place where the Dex OIDC is hosted, i.e `NODE_IP:32000` or `https://dex.yourdomain.com`
 - `DEX_ENABLED`: This variable enables dex features in the litmusportal-server
 - `DEX_OAUTH_CALLBACK_URL`: This is the url that will be called back after user completes thier OAuth, this will be the litmusportal-frontend service
+- `DEX_OAUTH_CLIENT_ID`: This parameter is defined in the `dex-deployment.yaml` file the defaults being `LitmusPortalAuthBackend`
+- `DEX_OAUTH_CLIENT_SECRET`: This parameter is defined in the `dex-deployment.yaml` file the defaults being `ZXhhbXBsZS1hcHAtc2VjcmV0`
 
 Set your variables using
 
 ```bash
-kubectl set env deployment/litmusportal-server -n litmus --containers="auth-server" DEX_ENABLED=true OIDC_ISSUER=<REPLACE_NODE_IP>:32000 DEX_OAUTH_CALLBACK_URL=https://<REPLACE_FRONTEND_URL>/auth/dex/callback
+kubectl set env deployment/chaos-litmus-auth-server -n litmus --containers="auth-server" DEX_ENABLED=true OIDC_ISSUER=<REPLACE_NODE_IP>:32000 DEX_OAUTH_CALLBACK_URL=https://<REPLACE_FRONTEND_URL>/auth/dex/callback DEX_OAUTH_CLIENT_ID=LitmusPortalAuthBackend DEX_OAUTH_CLIENT_SECRET=ZXhhbXBsZS1hcHAtc2VjcmV0
 ```
 
-Your litmusportal-server pod will be restarted and Dex features will be enabled!
+Your chaos-litmus-auth-server pod(s) will be restarted and Dex features will be enabled!
 
 ### Verifying if OAuth2 is enabled
 
