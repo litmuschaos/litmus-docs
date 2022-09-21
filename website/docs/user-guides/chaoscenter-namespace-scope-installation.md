@@ -217,12 +217,12 @@ service/mongo-headless-service created
   mongo-headless-service             ClusterIP   None           <none>        27017/TCP                       101s
   ```
 
-> Note: With the namespace mode of the control panel, we need to set the endpoint of the chaos center server according to the use case. By default, it is `http://litmusportal-server-service:9002`
+> Note: With the namespace mode of the control panel, we need to set the endpoint of the chaos center ui according to the use case for external Chaos Delegates. By default, it is `http://litmusportal-frontend-service:9091`
 
 To alter, Apply:
 
 ```bash
-kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" PORTAL_ENDPOINT="http://172.132.44.44:3231"
+kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" CHAOS_CENTER_UI_ENDPOINT="http://172.132.44.44:3231"
 ```
 
 ---
