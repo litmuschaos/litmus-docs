@@ -55,7 +55,7 @@ kubectl create ns litmus
 The cluster-admin or an equivalent user with the right permissions are required to install the CRDs upfront.
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/litmus-portal-crds.yml
+kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/manifests/litmus-portal-crds.yml
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -119,7 +119,7 @@ litmus                      Active   2s
 The cluster-admin or an equivalent user with the right permissions are required to install the CRDs upfront.
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/litmus-portal-crds.yml
+kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/manifests/litmus-portal-crds.yml
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -141,7 +141,7 @@ customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.
 Applying the manifest file will install all the required service account configuration and ChaosCenter.
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/2.9.0/litmus-namespaced-2.9.0.yaml -n <Your Namespace>
+kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/2.13.0/litmus-namespaced-2.13.0.yaml -n <Your Namespace>
 ```
 
 > You need to provide the Namespace in place of `Your Namespace`, that you have created eariler for the litmuschaos Installation
@@ -217,12 +217,12 @@ service/mongo-headless-service created
   mongo-headless-service             ClusterIP   None           <none>        27017/TCP                       101s
   ```
 
-> Note: With the namespace mode of the control panel, we need to set the endpoint of the chaos center server according to the use case. By default, it is `http://litmusportal-server-service:9002`
+> Note: With the namespace mode of the control panel, we need to set the endpoint of the chaos center ui according to the use case for external Chaos Delegates. By default, it is `http://litmusportal-frontend-service:9091`
 
 To alter, Apply:
 
 ```bash
-kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" PORTAL_ENDPOINT="http://172.132.44.44:3231"
+kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" CHAOS_CENTER_UI_ENDPOINT="http://172.132.44.44:3231"
 ```
 
 ---

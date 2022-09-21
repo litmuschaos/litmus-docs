@@ -8,7 +8,7 @@ sidebar_label: Upgrade
 
 ## Upgrade ChaosCenter
 
-To upgrade Litmus ChaosCenter from 2.3.0 to 2.4.0, you can follow these steps:
+To upgrade Litmus ChaosCenter from 2.12.0 to 2.13.0, you can follow these steps:
 
 > Note: This step is not required if using Helm, Helm upgrade should work.
 
@@ -16,7 +16,7 @@ To upgrade Litmus ChaosCenter from 2.3.0 to 2.4.0, you can follow these steps:
    To upgrade ChaosCenter, you can re-apply the manifest using the kubectl.
 
    ```bash
-   kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/2.4.0/litmus-2.4.0.yaml
+   kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/2.13.0/litmus-2.13.0.yaml
    ```
 
 ## Upgrade Mongodb DB Schema
