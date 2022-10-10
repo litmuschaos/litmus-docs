@@ -410,7 +410,7 @@ While scheduling a chaos scenario, in the `Schedule` step, there are few options
 
 ## Summary
 
-Chaos Scenario is combination of different steps combined together to perfrom a specific chaos use-case on a Kubernetes system. These steps can include install experiment steps, ChaosEngine CR for target selection, revert-chaos steps etc. Chaos Scenarios can be scheduled for a later time with the help of Cron Chaos Scenarios.
+Chaos Scenario is combination of different steps combined together to preform a specific chaos use-case on a Kubernetes system. These steps can include install experiment steps, ChaosEngine CR for target selection, revert-chaos steps etc. Chaos Scenarios can be scheduled for a later time with the help of Cron Chaos Scenarios.
 These chaos scenarios consist of a cron syntax that is used for scheduling a chaos scenario. Once the chaos scenario execution is completed, the resiliency of the targeted application is calculated. Several weights are assigned to different experiments in the chaos scenario. These weights are used along with the ProbeSuccessPercentage to find out the resiliency score.
 
 ## Resources
