@@ -105,7 +105,7 @@ To uninstall the ChaosCenter from the system, follow these steps -
   kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/2.12.0/mkdocs/docs/2.12.0/litmus-2.12.0.yaml
   ```
 
-  > To delete any specific version of the ChaosCenter, replace the above command with the below command. `kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/<VERSION>/mkdocs/docs/<VERSION/litmus-<VERSION>.yaml`
+  > To delete any specific version of the ChaosCenter, replace the above command with the below command. `kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/<VERSION>/mkdocs/docs/<VERSION>/litmus-<VERSION>.yaml`
 
 - **Litmus Master Manifest**
 
