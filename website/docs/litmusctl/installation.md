@@ -49,19 +49,23 @@ To check compatibility of litmusctl with Chaos Center
   </tr>
   <tr>
     <td>0.10.0</td>
-    <td>2.9.0, 2.10.0, 2.11.0, 2.12.0, 2.13.0</td>
+    <td>2.9.0, 2.10.0, 2.11.0, 2.12.0, 2.13.0, 2.14.0</td>
   </tr>
   <tr>
     <td>0.11.0</td>
-    <td>2.9.0, 2.10.0, 2.11.0, 2.12.0, 2.13.0</td>
+    <td>2.9.0, 2.10.0, 2.11.0, 2.12.0, 2.13.0, 2.14.0</td>
   </tr>
   <tr>
     <td>0.12.0</td>
-    <td>2.9.0, 2.10.0, 2.11.0, 2.12.0, 2.13.0</td>
+    <td>2.9.0, 2.10.0, 2.11.0, 2.12.0, 2.13.0, 2.14.0</td>
   </tr>
   <tr>
     <td>0.13.0</td>
-    <td>2.9.0, 2.10.0, 2.11.0, 2.12.0, 2.13.0</td>
+    <td>2.9.0, 2.10.0, 2.11.0, 2.12.0, 2.13.0, 2.14.0</td>
+  </tr>
+    <tr>
+    <td>0.14.0</td>
+    <td>2.9.0, 2.10.0, 2.11.0, 2.12.0, 2.13.0, 2.14.0</td>
   </tr>
 </table>
 
@@ -71,6 +75,7 @@ To install the latest version of litmusctl follow the below steps:
 
 <table>
   <th>Platforms</th>
+  <th>0.14.0</th>
   <th>0.13.0</th>
   <th>0.12.0</th>
   <th>v0.11.0</th>
@@ -82,6 +87,7 @@ To install the latest version of litmusctl follow the below steps:
   <th>master(Unreleased)</th>
   <tr>
     <td>litmusctl-darwin-amd64 (MacOS)</td>
+     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-darwin-amd64-0.14.0.tar.gz">Click here</a></td>
      <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-darwin-amd64-0.13.0.tar.gz">Click here</a></td>
      <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-darwin-amd64-0.12.0.tar.gz">Click here</a></td>
      <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-darwin-amd64-v0.11.0.tar.gz">Click here</a></td>
@@ -94,6 +100,7 @@ To install the latest version of litmusctl follow the below steps:
   </tr>
   <tr>
     <td>litmusctl-linux-386</td>
+    <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-linux-386-0.14.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-linux-386-0.13.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-linux-386-0.12.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-linux-386-v0.11.0.tar.gz">Click here</a></td>
@@ -106,6 +113,7 @@ To install the latest version of litmusctl follow the below steps:
   </tr>
   <tr>
     <td>litmusctl-linux-amd64</td>
+    <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-linux-amd64-0.14.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-linux-amd64-0.13.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-linux-amd64-0.12.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-linux-amd64-v0.11.0.tar.gz">Click here</a></td>
@@ -118,6 +126,7 @@ To install the latest version of litmusctl follow the below steps:
   </tr>
   <tr>
     <td>litmusctl-linux-arm</td>
+    <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-linux-arm-0.14.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-linux-arm-0.13.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-linux-arm-0.12.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-linux-arm-v0.11.0.tar.gz">Click here</a></td>
@@ -130,6 +139,7 @@ To install the latest version of litmusctl follow the below steps:
   </tr>
   <tr>
     <td>litmusctl-linux-arm64</td>
+    <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-linux-arm64-0.14.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-linux-arm64-0.13.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-linux-arm64-0.12.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-linux-arm64-v0.11.0.tar.gz">Click here</a></td>
@@ -142,6 +152,7 @@ To install the latest version of litmusctl follow the below steps:
   </tr>
   <tr>
     <td>litmusctl-windows-386</td>
+   <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-windows-386-0.14.0.tar.gz">Click here</a></td>
    <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-windows-386-0.13.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-windows-386-0.12.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-windows-386-v0.11.0.tar.gz">Click here</a></td>
@@ -154,6 +165,7 @@ To install the latest version of litmusctl follow the below steps:
   </tr>
    <tr>
     <td>litmusctl-windows-amd64</td>
+    <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-windows-amd64-0.14.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-windows-amd64-0.13.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-windows-amd64-0.12.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-windows-amd64-v0.11.0.tar.gz">Click here</a></td>
@@ -166,6 +178,7 @@ To install the latest version of litmusctl follow the below steps:
   </tr>
   <tr>
     <td>litmusctl-windows-arm</td>
+    <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-windows-arm-0.14.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-windows-arm-0.13.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-windows-arm-0.12.0.tar.gz">Click here</a></td>
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-windows-arm-v0.11.0.tar.gz">Click here</a></td>
