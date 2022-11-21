@@ -67,7 +67,6 @@ To check compatibility of litmusctl with Chaos Center
     <td>0.14.0</td>
     <td>2.9.0, 2.10.0, 2.11.0, 2.12.0, 2.13.0, 2.14.0, 3.0-beta1</td>
   </tr>
-    </tr>
     <tr>
     <td>0.15.0</td>
     <td>2.9.0, 2.10.0, 2.11.0, 2.12.0, 2.13.0, 2.14.0, 3.0-beta1</td>
