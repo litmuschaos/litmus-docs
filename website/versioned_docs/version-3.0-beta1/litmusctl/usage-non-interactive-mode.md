@@ -6,12 +6,12 @@ sidebar_label: Using non interactive mode
 
 ---
 
-# Usage: Litmusctl v0.12.0
+# Usage: Litmusctl 0.15.0
 
 > Notes:
 >
-> - For litmusctl v0.12.0 or latest
-> - Compatible with Litmus 2.12.0 or latest
+> - For litmusctl 0.15.0 or latest
+> - Compatible with Litmus 2.9.0 or latest
 
 ### litmusctl Syntax
 `litmusctl` has a syntax to use as follows:
