@@ -1,7 +1,7 @@
 ---
 id: oauth-dex-concept
 title: Authentication process in ChaosCenter
-sidebar_label: Authentication in ChoasCenter
+sidebar_label: Authentication in ChaosCenter
 ---
 
 ---
