@@ -84,7 +84,7 @@ If the Litmus CRDs are deleted in the Cluster Scope all the respective custom re
 To remove all the CRDs Litmus uses, use the following command:
 
 ```bash
-kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/litmus-portal-crds.yml
+kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/manifests/litmus-portal-crds.yml
 ```
 
 ---
@@ -99,10 +99,10 @@ To uninstall the ChaosCenter from the system, follow these steps -
 
 #### For Cluster Scope
 
-- **Litmus 2.0.0**
+- **Litmus 3.0.0-beta3**
 
   ```bash
-  kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/2.0.0/docs/2.0.0/litmus-2.0.0.yaml
+  kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/3.0.0-beta3/mkdocs/docs/3.0.0-beta3/litmus-3.0.0-beta3.yaml
   ```
 
   > To delete any specific version of the ChaosCenter, replace the above command with the below command. `kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/<VERSION>/docs/<VERSION/litmus-<VERSION>.yaml`
@@ -110,7 +110,7 @@ To uninstall the ChaosCenter from the system, follow these steps -
 - **Litmus Master Manifest**
 
   ```bash
-  kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/cluster-k8s-manifest.yml
+  kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/manifests/cluster-k8s-manifest.yml
   ```
 
 #### For Namespace Scope

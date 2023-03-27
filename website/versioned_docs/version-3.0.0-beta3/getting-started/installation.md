@@ -99,7 +99,7 @@ Visit https://docs.litmuschaos.io to find more info.
 Applying the manifest file will install all the required service account configuration and ChaosCenter.
 
 ```bash
-kubectl apply -f https://litmuschaos.github.io/litmus/2.0.0/litmus-2.0.0.yaml
+kubectl apply -f https://litmuschaos.github.io/litmus/3.0.0-beta3/litmus-3.0.0-beta3.yaml
 ```
 
 ---
