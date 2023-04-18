@@ -141,7 +141,7 @@ customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.
 Applying the manifest file will install all the required service account configuration and ChaosCenter.
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/3.0.0-beta5/litmus-namespaced-3.0.0-beta5.yaml -n <Your Namespace>
+kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/3.0.0-beta6/litmus-namespaced-3.0.0-beta6.yaml -n <Your Namespace>
 ```
 
 > You need to provide the Namespace in place of `Your Namespace`, that you have created eariler for the litmuschaos Installation
