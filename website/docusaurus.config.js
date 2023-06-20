@@ -150,25 +150,27 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} LitmusChaos Authors. All rights reserved.`
     },
-    hideableSidebar: true,
-
-    googleAnalytics: {
-      trackingID: 'UA-155028077-2'
-    }
+    hideableSidebar: true
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
-      {
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/litmuschaos/litmus-docs/edit/master/website',
-          showLastUpdateTime: true
-        },
-        theme: {
-          customCss: require.resolve('./src/css/global.css')
-        }
-      }
+      '@docusaurus/preset-classic',(
+        {
+          docs: {
+            sidebarPath: require.resolve('./sidebars.js'),
+            editUrl: 'https://github.com/litmuschaos/litmus-docs/edit/master/website',
+            showLastUpdateTime: true
+          },
+          theme: {
+            customCss: require.resolve('./src/css/global.css')
+          },
+          gtag: {
+            trackingID: "G-GG5GRPM03R",
+          },
+          googleAnalytics: {
+            trackingID: 'UA-155028077-2'
+          },
+      })
     ]
   ]
 }
