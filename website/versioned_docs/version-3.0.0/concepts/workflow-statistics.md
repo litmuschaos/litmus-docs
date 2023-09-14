@@ -13,7 +13,7 @@ Chaos injections often tends to disrupt tightly coupled micro-services and proce
 The following should be required before knowing about chaos scenario statistics:
 
 - [Chaos Scenarios](chaos-workflow.md)
-- [Visualize Chaos Scenarios](visualize-workflow.md)
+- [Visualize Chaos Scenarios](visualize-experiment.md)
 
 ## Data flow architecture
 

@@ -8,7 +8,7 @@ sidebar_label: Edit Chaos Scenario Schedule
 
 ## Before you begin
 
-You must schedule a chaos scenario. To know more about scheduling chaos scenarios click [here](schedule-workflow.md)
+You must schedule a chaos scenario. To know more about scheduling chaos scenarios click [here](schedule-experiment.md)
 
 ---
 
@@ -47,6 +47,6 @@ Click on the `Save Changes` button to commit the changes to your chaos scenario.
 
 ## Learn more
 
-- [Observe Chaos Scenario](observe-workflow.md)
+- [Observe Chaos Scenario](observe-experiment.md)
 - [Save Chaos Scenarios as a Template](save-as-template.md)
-- [Re-run a Chaos Scenario](re-run-workflow.md)
+- [Re-run a Chaos Scenario](re-run-experiment.md)

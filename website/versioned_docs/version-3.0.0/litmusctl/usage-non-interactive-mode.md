@@ -324,6 +324,6 @@ For more information related to flags, Use `litmusctl --help`.
 
 - [Learn More about Litmusctl](installation.md)
 - [Installing Chaos Delegate in interactive mode](./usage-interactive-mode.md)
-- [Create Chaos Scenarios using Litmusctl](./chaos-workflow-creation.md)
+- [Create Chaos Scenarios using Litmusctl](./chaos-experiment-creation.md)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)

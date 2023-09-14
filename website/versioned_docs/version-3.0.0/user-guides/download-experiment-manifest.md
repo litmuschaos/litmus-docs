@@ -10,7 +10,7 @@ You can save a schedule configurations manifest as a `YAML`. This section goes o
 
 ## Before you begin
 
-You can learn how to schedule your first chaos scenario [here](schedule-workflow.md).
+You can learn how to schedule your first chaos scenario [here](schedule-experiment.md).
 
 ## 1. Go to the chaos scenarios sections
 
@@ -26,6 +26,6 @@ After opening the options menu, click on the `Download Manifest` option. Having 
 
 ## Learn more
 
-- [Schedule a chaos scenario](schedule-workflow.md)
-- [Re-run a chaos scenario](re-run-workflow.md)
-- [Delete a chaos scenario](delete-workflow.md)
+- [Schedule a chaos scenario](schedule-experiment.md)
+- [Re-run a chaos scenario](re-run-experiment.md)
+- [Delete a chaos scenario](delete-experiment.md)

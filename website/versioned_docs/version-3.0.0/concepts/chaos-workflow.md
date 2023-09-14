@@ -422,5 +422,5 @@ These chaos scenarios consist of a cron syntax that is used for scheduling a cha
 ## Learn More
 
 - [Explore Probes](probes.md)
-- [Visualize a Chaos Scenario](visualize-workflow.md)
+- [Visualize a Chaos Scenario](visualize-experiment.md)
 - [Examine the ChaosResult](chaos-result.md)

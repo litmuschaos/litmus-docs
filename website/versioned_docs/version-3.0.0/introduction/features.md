@@ -74,9 +74,9 @@ Below is a high level comparison between Litmus 1.x and Litmus 2.0 providing a h
 
 ## Learn more
 
-- [Run your first chaos scenario in 5 minutes](../getting-started/run-your-first-workflow.md)
+- [Run your first chaos scenario in 5 minutes](../getting-started/run-your-first-experiment.md)
 - [Install Litmus](../getting-started/installation.md)
-- [Visualize Chaos Scenarios](../concepts/visualize-workflow.md)
+- [Visualize Chaos Scenarios](../concepts/visualize-experiment.md)
 - Chaos Schedule
 - [Monitoring](../concepts/app-infra-monitoring.md)
 - [View the different User Guides](../user-guides/overview.md)

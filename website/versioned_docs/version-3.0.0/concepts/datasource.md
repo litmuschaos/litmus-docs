@@ -13,7 +13,7 @@ application OR infrastructure.
 
 The following should be required before knowing about managing data sources in chaos center:
 
-- [Running Chaos Scenarios](../getting-started/run-your-first-workflow.md)
+- [Running Chaos Scenarios](../getting-started/run-your-first-experiment.md)
 - [Prometheus TSDB](https://prometheus.io/)
 
 ## Data flow architecture
@@ -47,5 +47,5 @@ LitmusChaos facilitates in-house real-time monitoring for `events` and `verdicts
 
 ## Learn More
 
-- [Visualize a Chaos Scenario](visualize-workflow.md)
+- [Visualize a Chaos Scenario](visualize-experiment.md)
 - [Application and infrastructure monitoring](app-infra-monitoring.md)

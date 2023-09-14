@@ -50,7 +50,7 @@ In this step, you can create a chaos scenario from different methods, these incl
 
 - **Create a new chaos scenario using experiments from MyHub** : With this option, you can create customized chaos scenarios from the one of your connected ChaosHubs. With this option you can add multiple experiments from that ChaosHub either serially or in parallel to construct your chaos scenario graphically.
 
-- **Import chaos scenario using YAML** : With this option, you can import a [hand-crafted/constructed chaos scenario ](construct-workflow.md) manifest and tune it according to the use-case. You can also import a basic Argo chaos scenario using this functionality.
+- **Import chaos scenario using YAML** : With this option, you can import a [hand-crafted/constructed chaos scenario ](construct-experiment.md) manifest and tune it according to the use-case. You can also import a basic Argo chaos scenario using this functionality.
   :::note
   For an uploaded chaos scenario , the tune chaos scenario functionality will not be available. The uploaded chaos scenario is completely user-dependent or user-specific.
 
@@ -150,6 +150,6 @@ This is the final step in chaos scenario creation process. In this step, you can
 
 ## Learn more
 
-- [Observe Chaos Scenario ](observe-workflow.md)
+- [Observe Chaos Scenario ](observe-experiment.md)
 - [Edit Schedule](edit-schedule.md)
 - [Save Chaos Scenarios as a Template](save-as-template.md)

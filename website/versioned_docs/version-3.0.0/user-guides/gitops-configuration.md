@@ -104,5 +104,5 @@ Currently supported policy operators are:
 
 ## Learn More
 
-- [Schedule a chaos scenario](../user-guides/schedule-workflow.md)
-- [Observe a Chaos Scenario](../user-guides/observe-workflow.md)
+- [Schedule a chaos scenario](../user-guides/schedule-experiment.md)
+- [Observe a Chaos Scenario](../user-guides/observe-experiment.md)

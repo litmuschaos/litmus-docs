@@ -215,6 +215,6 @@ workflow-controller-78fc7b6c6-w82m7      1/1     Running   0          5m32s
 ## Learn more
 
 - [Install ChaosCenter in Namespace Scope](../user-guides/chaoscenter-namespace-scope-installation.md)
-- [Connect External Chaos Delegates to ChaosCenter](../user-guides/chaosagents-installation.md)
+- [Connect External Chaos Delegates to ChaosCenter](../user-guides/chaos-infrastructure-installation.md)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)

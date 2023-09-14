@@ -14,7 +14,7 @@ This also means that all the runs corresponding to that chaos scenario will also
 
 ## Before you begin
 
-You can learn about the concept of chaos scenarios [here](../concepts/chaos-workflow.md) and how to schedule your first chaos scenario [here](schedule-workflow.md).
+You can learn about the concept of chaos scenarios [here](../concepts/chaos-workflow.md) and how to schedule your first chaos scenario [here](schedule-experiment.md).
 
 ## 1. Go to the chaos scenarios sections
 
@@ -40,4 +40,4 @@ As stated above, we observe that the runs have been removed as well.
 
 ## Learn more
 
-- [schedule a chaos scenario](schedule-workflow.md)
+- [schedule a chaos scenario](schedule-experiment.md)

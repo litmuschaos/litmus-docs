@@ -71,5 +71,5 @@ Building a hypothesis around steady-state behaviour, varying real-world events, 
 
 ## Learn More
 
-- [Observe a Chaos Scenario](visualize-workflow.md)
+- [Observe a Chaos Scenario](visualize-experiment.md)
 - [Chaos Scenario Statistics](workflow-statistics.md)

@@ -12,7 +12,7 @@ The User Guides section details Processes, User-flows and How-tos detailing all 
 
 Install ChaosCenter and Chaos Delegate in various environment configurations.
 
-### [Injecting Fault](schedule-workflow.md)
+### [Injecting Fault](schedule-experiment.md)
 
 Constructing, Scheduling, Editing and Observing chaos scenarios.
 

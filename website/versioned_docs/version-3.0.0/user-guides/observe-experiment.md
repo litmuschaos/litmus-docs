@@ -8,7 +8,7 @@ sidebar_label: Observe Chaos Scenario
 
 ## Before you begin
 
-You must schedule a chaos scenario. To know more about scheduling chaos scenarios click [here](schedule-workflow.md)
+You must schedule a chaos scenario. To know more about scheduling chaos scenarios click [here](schedule-experiment.md)
 
 ---
 
@@ -108,5 +108,5 @@ Once the chaos scenario run execution completes, you can click the **Show the an
 ## Learn more
 
 - [Edit Schedule](edit-schedule.md)
-- [Download Chaos Scenario Manifest](download-workflow-manifest.md)
-- [Re-run a Chaos Scenario](re-run-workflow.md)
+- [Download Chaos Scenario Manifest](download-experiment-manifest.md)
+- [Re-run a Chaos Scenario](re-run-experiment.md)
