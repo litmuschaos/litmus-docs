@@ -83,6 +83,10 @@ module.exports = {
               to: 'docs/next/introduction/what-is-litmus'
             },
             {
+              label: 'V2-Docs',
+              to: 'https://docs.litmuschaos.io/docs/getting-started/installation',
+            },
+            {
               label: 'V1-Docs',
               to: 'https://v1-docs.litmuschaos.io/docs/getstarted/'
             }
