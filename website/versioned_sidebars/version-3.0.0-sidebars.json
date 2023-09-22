@@ -23,10 +23,7 @@
     {
       "Concepts": [
         "concepts/overview",
-        "concepts/chaos-experiment",
         "concepts/probes",
-        "concepts/chaos-engine",
-        "concepts/chaos-result",
         "concepts/chaoshub",
         "concepts/chaos-infrastructure",
         {
