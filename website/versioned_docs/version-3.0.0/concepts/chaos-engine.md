@@ -901,12 +901,8 @@ The ChaosEngine CR is the user-facing CR which helps in binding the application 
 
 This CR is also updated/patched with status of the chaos experiments, making it the single source of truth with respect to the chaos.
 
-## Resources
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yhWgzN90SME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ## Learn More
 
 - [Explore Probes](probes.md)
-- [What is a Chaos Scenario](chaos-workflow.md)
+- [What is a Chaos Experiment](chaos-workflow.md)
 - [Examine the ChaosResult](chaos-result.md)

@@ -1,11 +1,7 @@
 {
   "docs": [
     {
-      "Introduction": [
-        "introduction/what-is-litmus",
-        "introduction/usage",
-        "introduction/core-principles"
-      ]
+      "Introduction": ["introduction/what-is-litmus", "introduction/usage", "introduction/core-principles"]
     },
     {
       "Getting Started": [
@@ -21,17 +17,7 @@
         "architecture/architecture-summary",
         "architecture/chaos-control-plane",
         "architecture/chaos-execution-plane",
-        "architecture/chaos-experiment-flow",
-        {
-          "Chaos Observability Flow": [
-            "architecture/chaos-observability-flow-overview",
-            "architecture/chaos-observability-flow-visualization",
-            "architecture/chaos-observability-flow-logging",
-            "architecture/chaos-observability-flow-monitoring",
-            "architecture/chaos-observability-flow-summarisation",
-            "architecture/chaos-observability-flow-analytics"
-          ]
-        }
+        "architecture/chaos-experiment-flow"
       ]
     },
     {
@@ -42,20 +28,9 @@
         "concepts/chaos-engine",
         "concepts/chaos-result",
         "concepts/chaoshub",
-        "concepts/environments",
+        "concepts/chaos-infrastructure",
         {
-          "Chaos Experiments": [
-            "concepts/chaos-experiment",
-            "concepts/visualize-experiment"
-          ]
-        },
-        {
-          "Observability": [
-            "concepts/workflow-statistics",
-            "concepts/app-infra-monitoring",
-            "concepts/datasource",
-            "concepts/open-observability"
-          ]
+          "Chaos Experiments": ["concepts/chaos-workflow", "concepts/visualize-experiment"]
         },
         "concepts/user-management",
         "concepts/projects",
@@ -103,10 +78,7 @@
           ]
         },
         {
-          "Managing Projects": [
-            "user-guides/change-project-name",
-            "user-guides/leave-project"
-          ]
+          "Managing Projects": ["user-guides/change-project-name", "user-guides/leave-project"]
         },
         {
           "Teaming": [
@@ -126,19 +98,13 @@
       "Litmusctl": [
         "litmusctl/installation",
         {
-          "Connect Infrastructure": [
-            "litmusctl/usage-non-interactive-mode",
-            "litmusctl/usage-interactive-mode"
-          ]
+          "Connect Infrastructure": ["litmusctl/usage-non-interactive-mode", "litmusctl/usage-interactive-mode"]
         },
         "litmusctl/chaos-experiment-creation"
       ]
     },
     {
-      "Integrations": [
-        "integrations/prometheus",
-        "integrations/grafana"
-      ]
+      "Integrations": ["integrations/prometheus", "integrations/grafana"]
     },
     "troubleshooting",
     "faq"

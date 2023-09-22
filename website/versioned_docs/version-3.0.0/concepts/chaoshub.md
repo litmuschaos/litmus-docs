@@ -6,11 +6,11 @@ sidebar_label: ChaosHub
 
 ---
 
-ChaosHub allows you to orchestrate chaos scenarios from the Public **[ChaosHub](http://hub.litmuschaos.io/)** or an alternate source for the Experiments (basically, a **[fork](https://github.com/litmuschaos/chaos-charts)** of the public hub with custom experiments).
+ChaosHub allows you to orchestrate chaos experiments from the Public **[ChaosHub](http://hub.litmuschaos.io/)** or an alternate source for the Experiments (basically, a **[fork](https://github.com/litmuschaos/chaos-charts)** of the public hub with custom faults).
 
 ## Prerequisites
 
-The following are the prerequisites for creating a Chaos Scenario:
+The following are the prerequisites for creating a Chaos Experiment:
 
 - Fork of [Chaos-Charts](https://github.com/litmuschaos/chaos-charts) repository
 
@@ -20,7 +20,7 @@ An active internet connection is required to clone the git repository for the fi
 
 ## Connecting a Git repository using ChaosHub
 
-With ChaosHub, you can construct chaos scenarios by selecting, tuning and sequencing different experiments together from their connected ChaosHubs.
+With ChaosHub, you can construct chaos experiments by selecting, tuning and sequencing different faults together from their connected ChaosHubs.
 
 You can make changes in your forked repositories and sync it with the Portal to get the latest changes from the fork.
 
@@ -63,26 +63,26 @@ If some changes are made into the git repository, you can reflect these changes 
 
 To make changes in a hub like changing the name, branch, access token etc, you can select the **Edit Hub** option from the ChaosHub card.
 
-## Chaos Scenarios and Experiments in a ChaosHub
+## Chaos Experiments and Experiments in a ChaosHub
 
-### 1. View the PreDefined Chaos Scenarios
+### 1. View the PreDefined Chaos Experiments
 
-After connecting a ChaosHub, you can view the different pre-defined chaos scenarios present in the ChaosHub.
+After connecting a ChaosHub, you can view the different pre-defined chaos experiments present in the ChaosHub.
 
-<img src={require('../assets/concepts/chaoshub/chaoshub-predefined-wf.png').default} width="800" />
+<img src={require('../assets/concepts/chaoshub/chaoshub-predefined-experiments.png').default} width="800" />
 
-### 2. View the Chaos-Experiments
+### 2. View the Chaos Faults
 
-Similarly, you can view the different charts and the experiment. These charts are sorted according to different categories like generic, aws, azure, kube-components etc.
+Similarly, you can view the different charts and the fault. These charts are sorted according to different categories like generic, aws, azure, kube-components etc.
 
 <img src={require('../assets/concepts/chaoshub/chaoshub-chaos-charts.png').default} width="800" />
 
-### 3. View the experiment details
+### 3. View the fault details
 
-You can select one of the chaos experiment and can examine the experiment details.
-The experiment page consists of all the important details like the description of the experiment, a tutorial video, the maintainer of the experiment etc.
-You can also find experiment yaml link, RBAC link and the ChaosEngine yaml link of the experiment.
-These yaml links are required for the creation of Custom Chaos Scenarios.
+You can select one of the chaos fault and can examine the fault details.
+The fault page consists of all the important details like the description of the fault, a tutorial video, the maintainer of the fault etc.
+You can also find fault yaml link, RBAC link and the ChaosEngine yaml link of the fault.
+These yaml links are required for the creation of Custom Chaos Experiments.
 
 <img src={require('../assets/concepts/chaoshub/chaoshub-exp-details.png').default} width="800" />
 
@@ -92,13 +92,9 @@ To remove a ChaosHub from a project, you can select the **Disconnect Hub** optio
 
 ## Summary
 
-ChaosHubs are basically a collection of different clones of the Chaos-Charts repository, which consists of a variety of experiments and pre-defined chaos scenarios. You can use a ChaosHub to construct a custom chaos scenarios and tune it according to the use-case. These ChaosHubs can also be synced with the latest changes. New experiments and pre-defined chaos scenarios can also be added in the repository which can be directly used in the ChaosCenter.
-
-## Resources
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qO-lfmorcus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ChaosHubs are basically a collection of different clones of the Chaos-Charts repository, which consists of a variety of faults and pre-defined chaos experiments. You can use a ChaosHub to construct a custom chaos experiments and tune it according to the use-case. These ChaosHubs can also be synced with the latest changes. New faults and pre-defined chaos experiments can also be added in the repository which can be directly used in the ChaosCenter.
 
 ## Learn More
 
-- [What is a Chaos Scenario](chaos-workflow.md)
+- [What is a Chaos Experiment](chaos-workflow.md)
 - [Examine the ChaosResult](chaos-result.md)

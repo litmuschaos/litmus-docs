@@ -14,9 +14,9 @@ Each user has a default project created on user creation by the admin for which 
 
 Teaming is based on the following principles and each user can have one of the 3 project roles:
 
-- **Owner:** One who created the project and owns it. Only the owner has permission to manage(invite or remove) the members in his/her project. The owner can schedule chaos scenarios, update chaos scenarios, delete chaos scenarios and view the analytics.
+- **Owner:** One who created the project and owns it. Only the owner has permission to manage(invite or remove) the members in his/her project. The owner can schedule chaos experiments, update chaos experiments, delete chaos experiments and view the analytics.
 - **Editor:** Members invited with the editor role can do everything an owner can except for managing the project.
-- **Viewer:** Members having a viewer role can only view the analytics related to the chaos scenarios and the chaos scenarios themselves, but are not given the permission to schedule chaos scenarios in the project.
+- **Viewer:** Members having a viewer role can only view the analytics related to the chaos experiments and the chaos experiments themselves, but are not given the permission to schedule chaos experiments in the project.
 
 ## Role privileges
 
