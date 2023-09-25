@@ -8,21 +8,9 @@ sidebar_label: Overview
 
 The Concepts section contains Definitions, Design principles, Terminology and Working technical theory. This section will not have the actual usage instructions or guides those will be made available in the [User Guides](../user-guides/overview.md) section.
 
-### [Chaos Fault](chaos-experiment.md)
-
-ChaosExperiment CR is the heart of litmus and contains the low-level execution information.
-
 ### [Probes](probes.md)
 
 Probes are pluggable checks that can be defined within the ChaosEngine for any Chaos Fault.
-
-### [ChaosEngine](chaos-engine.md)
-
-The ChaosEngine CR is the main user-facing chaos custom resource with a namespace scope and is designed to hold information around how the chaos faults are executed.
-
-### [ChaosResult](chaos-result.md)
-
-ChaosResult resource holds the results of a Chaos Fault with a namespace scope.
 
 ### [ChaosHub](chaoshub.md)
 
@@ -32,9 +20,9 @@ ChaosHub allows you to orchestrate chaos experiments from the Public **[ChaosHub
 
 Chaos Experiment is a set of different operations coupled together to achieve desired chaos impact on a Kubernetes Cluster.
 
-### [Environment](environments.md)
+### [Chaos Infrastructure](infrastructure.md)
 
-An environment represents where you are installing your Chaos Infrastructure acts as an additional level of abstraction for the same.
+Chaos infrastructure is a service that runs in your target environment and aids Litmus control plane in accessing and injecting chaos.
 
 ### [User Management](user-management.md)
 

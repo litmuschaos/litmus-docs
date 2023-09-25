@@ -10,14 +10,19 @@ sidebar_label: Chaos Experiment
 It is useful in automating a series of pre-conditioning steps or action which is necessary to be performed before triggering the chaos injection.<br/>
 A Chaos Experiment can also be used to perform different operations parallelly to achieve a desired chaos injection experiment.
 
+:::note
+With the latest release of LitmusChaos
+
+<li>The term <b>Chaos Experiment</b> has been changed to <b>Chaos Fault.</b> </li>
+<li>The term <b>Chaos Scenario/Workflow</b> has been changed to <b>Chaos Experiment.</b></li>
+:::
+
 ## Prerequisites
 
 The following should be required before creating a Chaos Experiment:
 
 - [ChaosCenter](../getting-started/resources.md#chaoscenter)
 - [Chaos Infrastructure](../getting-started/resources.md#chaosagents)
-- [Chaos Experiment CR](chaos-experiment.md)
-- [ChaosEngine CR](chaos-engine.md)
 - [Probes](probes.md)
 
 ## How do we define and execute a Chaos Experiment ?
@@ -417,4 +422,3 @@ These chaos experiments consist of a cron syntax that is used for scheduling a c
 
 - [Explore Probes](probes.md)
 - [Visualize a Chaos Experiment](visualize-experiment.md)
-- [Examine the ChaosResult](chaos-result.md)

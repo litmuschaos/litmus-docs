@@ -40,4 +40,3 @@ After scheduling a chaos experiment, a user can view the details of the running 
 
 - [Explore Probes](probes.md)
 - [What is a Chaos Experiment](chaos-workflow.md)
-- [Examine the ChaosResult](chaos-result.md)

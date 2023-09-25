@@ -97,4 +97,3 @@ ChaosHubs are basically a collection of different clones of the Chaos-Charts rep
 ## Learn More
 
 - [What is a Chaos Experiment](chaos-workflow.md)
-- [Examine the ChaosResult](chaos-result.md)

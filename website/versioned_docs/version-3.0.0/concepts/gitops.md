@@ -13,6 +13,13 @@ sidebar_label: GitOps
 
 GitOps feature in Litmus enables you to configure a single source of truth for your chaos experiments and faults, any changes made either to the artifacts stored in the configured git repository or the portal will be synced. This allows you to create and execute chaos experiments directly from git enabling a vast scope of automation in CI/CD pipelines.
 
+:::note
+With the latest release of LitmusChaos
+
+<li>The term <b>Chaos Experiment</b> has been changed to <b>Chaos Fault.</b> </li>
+<li>The term <b>Chaos Scenario/Workflow</b> has been changed to <b>Chaos Experiment.</b></li>
+:::
+
 ## Event-Driven Chaos Injection
 
 Besides the sync feature, GitOps in Litmus provides a way of using Event-Driven Chaos Injection, where target resources(stateful sets, deployments, etc.) can be configured to automatically trigger chaos experiments with any changes in the resource spec. Currently, the event supported for chaos injection is resource image change, configuration change, change in replicas, and many more.

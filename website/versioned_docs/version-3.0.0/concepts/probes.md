@@ -10,7 +10,7 @@ In Litmus, Probes are pluggable checks that can be defined within the ChaosEngin
 
 ## Prerequisites
 
-To understand the concepts of Probes better make sure you are aware of the [ChaosEngine](chaos-engine.md) Custom Resources and promql queries (for Prometheus Probes)
+To understand the concepts of Probes better make sure you are aware of the [ChaosEngine](glossary.md) Custom Resources and promql queries (for Prometheus Probes)
 
 ## Probes
 
@@ -54,7 +54,7 @@ The `httpProbe` allows developers to specify a URL which the fault uses to gauge
 
 In HTTP `Get` method it sends a http `GET` request to the provided url and matches the response code based on the given criteria(`==`, `!=`, `oneOf`).
 
-In HTTP `Post` method it sends a http `POST` request to the provided url. The http body can be provided in the `body` field. In the case of a complex POST request in which the body spans multiple lines, the `bodyPath` attribute can be used to provide the path to a file consisting of the same. This file can be made available to the fault pod via a ConfigMap resource, with the ConfigMap name being defined in the [ChaosEngine](chaos-engine.md) OR the ChaosExperiment CR.
+In HTTP `Post` method it sends a http `POST` request to the provided url. The http body can be provided in the `body` field. In the case of a complex POST request in which the body spans multiple lines, the `bodyPath` attribute can be used to provide the path to a file consisting of the same. This file can be made available to the fault pod via a ConfigMap resource, with the ConfigMap name being defined in the [ChaosEngine](glossary.md) OR the ChaosExperiment CR.
 It can be defined at `.spec.experiments[].spec.probe` inside ChaosEngine.
 
 > `body` and `bodyPath` are mutually exclusive
@@ -1123,7 +1123,13 @@ The different modes these probes can be used in are `SoT`, `EoT`, `Edge`, `Conti
 
 Probes can be Chained, Probe chaining enables reuse of probe, the order of execution of probes in the fault depends purely on the order in which they are defined in the ChaosEngine.
 
+:::note
+With the latest release of LitmusChaos
+
+<li>The term <b>Chaos Experiment</b> has been changed to <b>Chaos Fault.</b> </li>
+<li>The term <b>Chaos Scenario/Workflow</b> has been changed to <b>Chaos Experiment.</b></li>
+:::
+
 ## Learn more
 
-- [Explore the ChaosResult Custom Resource](chaos-result.md)
-- [Explore the ChaosEngine Custom Resource](chaos-engine.md)
+- [Explore the Custom Resources](glossary.md)

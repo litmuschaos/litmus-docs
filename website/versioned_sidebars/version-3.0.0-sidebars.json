@@ -104,6 +104,7 @@
       "Integrations": ["integrations/prometheus", "integrations/grafana"]
     },
     "troubleshooting",
+    "glossary",
     "faq"
   ]
 }
