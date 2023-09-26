@@ -15,7 +15,7 @@ A basic chaos scenario consists of these steps:
 
 ## Before we begin
 
-To construct a Chaos Scenario without ChaosCenter, make sure you are aware of [Chaos Scenario](../concepts/chaos-workflow.md), [ChaosEngine CR](../concepts/chaos-engine.md) and the different steps present in it.
+To construct a Chaos Scenario without ChaosCenter, make sure you are aware of [Chaos Scenario](../concepts/chaos-workflow.md), [ChaosEngine CR](../glossary.md) and the different steps present in it.
 
 ## Steps to Construct a Chaos Scenario
 
@@ -272,4 +272,3 @@ spec:
 ## Learn More
 
 - [What are the different Probes](../concepts/probes.md)
-- [What is ChaosResult](../concepts/chaos-result.md)

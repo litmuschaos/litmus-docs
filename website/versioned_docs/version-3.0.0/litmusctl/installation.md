@@ -20,99 +20,11 @@ Litmusctl CLI requires the following things:
 
 For more information including a complete list of litmusctl operations, see the litmusctl reference documentation.
 
-- For v0.12.0 or latest: <a href="https://github.com/litmuschaos/litmusctl/blob/master/Usage.md">Click here</a>
-- For v0.2.0 or earlier: <a href="https://github.com/litmuschaos/litmusctl/blob/master/Usage_v0.2.0.md">Click here</a>
+- For 0.23.0 or later versions: <a href="https://github.com/litmuschaos/litmusctl/blob/master/Usage_0.23.0.md">Click here</a>
 
 ## Compatibility matrix
 
 To check compatibility of litmusctl with Chaos Center
-
-<table>
-  <th>litmusctl version</th>
-  <th>Lowest Chaos Center supported version</th>
-  <th>Highest Chaos Center supported version</th>
-
-  <tr>
-    <td>0.7.0</td>
-    <td>2.4.0</td>
-    <td>2.8.0</td>
-  </tr>
-  <tr>
-    <td>0.8.0</td>
-    <td>2.4.0</td>
-    <td>2.8.0</td>
-  </tr>
-  <tr>
-    <td>0.9.0</td>
-    <td>2.4.0</td>
-    <td>2.8.0</td>
-  </tr>
-  <tr>
-    <td>0.10.0</td>
-    <td>2.9.0</td>
-    <td>3.0.0-beta8</td>
-  </tr>
-  <tr>
-    <td>0.11.0</td>
-    <td>2.9.0</td>
-    <td>3.0.0-beta8</td>
-  </tr>
-  <tr>
-    <td>0.12.0</td>
-    <td>2.9.0</td>
-    <td>3.0.0-beta8</td> 
-  </tr>
-  <tr>
-    <td>0.13.0</td>
-    <td>2.9.0</td>
-    <td>3.0.0-beta8</td> 
-  </tr>
-  <tr>
-    <td>0.14.0</td>
-    <td>2.9.0</td>
-    <td>3.0.0-beta8</td>
-  </tr>
-  <tr>
-    <td>0.15.0</td>
-    <td>2.9.0</td>
-    <td>3.0.0-beta8</td>
-  </tr>
-  <tr>
-    <td>0.16.0</td> 
-    <td>2.9.0</td>
-    <td>3.0.0-beta8</td>
-  </tr>
-  <tr>
-    <td>0.17.0</td>
-    <td>2.9.0</td>
-    <td>3.0.0-beta8</td>
-  </tr>
-  <tr>
-    <td>0.18.0</td>
-    <td>2.9.0</td>
-    <td>3.0.0-beta8</td>
-  </tr>
-  <tr>
-    <td>0.19.0</td>
-    <td>2.9.0</td>
-    <td>3.0.0-beta8</td>
-  </tr>
-  <tr>
-    <td>0.20.0</td>
-    <td>2.9.0</td>
-    <td>3.0.0-beta8</td>
-  </tr>
-  <tr>
-    <td>0.21.0</td>
-    <td>2.9.0</td>
-    <td>3.0.0-beta8</td>
-  </tr>
- <tr>
-    <td>0.22.0</td>
-    <td>2.9.0</td>
-    <td>3.0.0-beta8</td>
-  </tr>
-</table>
 
 ## Installation
 
@@ -226,7 +138,6 @@ To install the latest version of litmusctl follow the below steps:
     <td><a href="https://litmusctl-production-bucket.s3.amazonaws.com/litmusctl-windows-arm-master.tar.gz">Click here</a></td>
   </tr>
 </table>
-
 
 ### Linux/MacOS
 
