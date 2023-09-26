@@ -236,7 +236,7 @@ The overall chaos experiment result can be viewed with the ChaosResult CRD which
 
 A chaos experiment run can be defined as single/one-time execution of the chaos experiment. There can be multiple runs of a single chaos experiment. If the chaos experiment consists of a cron syntax, it will run periodically according to the cron provided in the chaos experiment.
 
-## What is Resiliency Score?
+## What is Resilience Score?
 
 **Resiliency score** is the measure of how resilient is the chaos experiment when different chaos experiments are performed on the Kubernetes System.
 
