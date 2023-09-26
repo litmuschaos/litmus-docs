@@ -11,7 +11,7 @@ sidebar_label: GitOps
 - Chaos Infrastructure
 - [Chaos Experiment](chaos-workflow.md)
 
-GitOps feature in Litmus enables you to configure a single source of truth for your chaos experiments and faults, any changes made either to the artifacts stored in the configured git repository or the portal will be synced. This allows you to create and execute chaos experiments directly from git enabling a vast scope of automation in CI/CD pipelines.
+The GitOps feature in Litmus enables you to configure a single source of truth for your chaos experiments and faults, any changes made either to the artifacts stored in the configured git repository or the portal will be synced. This allows you to create and execute chaos experiments directly from git enabling a vast scope of automation in CI/CD pipelines.
 
 :::note
 With the latest release of LitmusChaos 3.0.0:
@@ -27,13 +27,13 @@ The event-driven chaos injection allows Litmus to be integrated with traditional
 
 <img src={require('../assets/concepts/gitops/litmus-components.png').default} width="800" /><br/><br/>
 
-In Litmus, there are two components, the external cluster(blue cluster) which is the target chaos infrastructure and can be more than one, other is the self chaos infrastructure where the Litmus(red cluster) is installed. After an chaos infrastructure is connected to Litmus, an event-tracker pod will be installed which is responsible for event-driven chaos injection by tracking the changes in your target application.
+In Litmus, there are two components, the external cluster(blue cluster) which is the target chaos infrastructure and can be more than one, other is the self chaos infrastructure where the Litmus(red cluster) is installed. After a chaos infrastructure is connected to Litmus, an event-tracker pod will be installed which is responsible for event-driven chaos injection by tracking the changes in your target application.
 
 > Event tracker is a policy-driven Kubernetes controller, where one can define N number of policies. It can track updates to statefulset, deployment, daemonset and it notifies the graphql server regarding the updates.<br/><br/>
 
 <img src={require('../assets/concepts/gitops/architecture.png').default} width="800" /><br/><br/>
 
-In the above architecture, the Event-tracker pod tracks the Web App continuously, if any change occurs (for eg: App version changes from V1 to V2), it gets triggered and informs the graphql-server pod, the server will then try to look for the chaos experiment using `workflow_id` from the git repository. Once it gets the required chaos experiment, it will send it to the subscriber which is responsible for applying the chaos experiment into the target cluster. After the chaos experiment run is completed you can check the resiliency of your application.
+In the above architecture, the Event-tracker pod tracks the Web App continuously, if any change occurs (for eg: The app version changes from V1 to V2), it gets triggered and informs the graphql-server pod, the server will then try to look for the chaos experiment using `workflow_id` from the git repository. Once it gets the required chaos experiment, it will send it to the subscriber which is responsible for applying the chaos experiment to the target cluster. After the chaos experiment run is completed you can check the resiliency of your application.
 
 The event-tracker is not tracking all the applications, you need to annotate the particular application:
 

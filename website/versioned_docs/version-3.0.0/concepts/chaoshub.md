@@ -79,9 +79,9 @@ Similarly, you can view the different charts and the fault. These charts are sor
 
 ### 3. View the fault details
 
-You can select one of the chaos fault and can examine the fault details.
-The fault page consists of all the important details like the description of the fault, a tutorial video, the maintainer of the fault etc.
-You can also find fault yaml link, RBAC link and the ChaosEngine yaml link of the fault.
+You can select one of the chaos faults and can examine the fault details.
+The fault page consists of all the important details like the description of the fault, a tutorial video, the maintainer of the fault, etc.
+You can also find the fault yaml link, RBAC link, and the ChaosEngine yaml link of the fault.
 These yaml links are required for the creation of Custom Chaos Experiments.
 
 <img src={require('../assets/concepts/chaoshub/chaoshub-exp-details.png').default} width="800" />
@@ -92,7 +92,10 @@ To remove a ChaosHub from a project, you can select the **Disconnect Hub** optio
 
 ## Summary
 
-ChaosHubs are basically a collection of different clones of the Chaos-Charts repository, which consists of a variety of faults and pre-defined chaos experiments. You can use a ChaosHub to construct a custom chaos experiments and tune it according to the use-case. These ChaosHubs can also be synced with the latest changes. New faults and pre-defined chaos experiments can also be added in the repository which can be directly used in the ChaosCenter.
+You can select one of the chaos faults and can examine the fault details.
+The fault page consists of all the important details like the description of the fault, a tutorial video, the maintainer of the fault, etc.
+You can also find the fault yaml link, RBAC link, and the ChaosEngine yaml link of the fault.
+These yaml links are required for the creation of Custom Chaos Experiments.
 
 ## Learn More
 
