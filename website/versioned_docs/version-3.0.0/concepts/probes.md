@@ -1124,7 +1124,7 @@ The different modes these probes can be used in are `SoT`, `EoT`, `Edge`, `Conti
 Probes can be Chained, Probe chaining enables reuse of probe, the order of execution of probes in the fault depends purely on the order in which they are defined in the ChaosEngine.
 
 :::note
-With the latest release of LitmusChaos
+With the latest release of LitmusChaos 3.0.0:
 
 <li>The term <b>Chaos Experiment</b> has been changed to <b>Chaos Fault.</b> </li>
 <li>The term <b>Chaos Scenario/Workflow</b> has been changed to <b>Chaos Experiment.</b></li>

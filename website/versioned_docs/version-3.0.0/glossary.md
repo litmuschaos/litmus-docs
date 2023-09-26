@@ -33,12 +33,12 @@ At the heart of the Litmus Platform are the chaos custom resources. This section
 
 ## Terminology Changes
 
-With the latest release of LitmusChaos the following terminilogies have been changed:
+With the latest release of LitmusChaos 3.0.0 the following terminologies have been changed:
 
 <table>
 <tr>
-  <th>Old terminlogy</th>
-  <th>Updated terminlogy</th>
+  <th>Old terminology</th>
+  <th>Updated terminology</th>
 </tr>
 <tr>
 <td>Chaos Experiment</td>

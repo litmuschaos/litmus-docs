@@ -14,7 +14,7 @@ sidebar_label: GitOps
 GitOps feature in Litmus enables you to configure a single source of truth for your chaos experiments and faults, any changes made either to the artifacts stored in the configured git repository or the portal will be synced. This allows you to create and execute chaos experiments directly from git enabling a vast scope of automation in CI/CD pipelines.
 
 :::note
-With the latest release of LitmusChaos
+With the latest release of LitmusChaos 3.0.0:
 
 <li>The term <b>Chaos Experiment</b> has been changed to <b>Chaos Fault.</b> </li>
 <li>The term <b>Chaos Scenario/Workflow</b> has been changed to <b>Chaos Experiment.</b></li>
