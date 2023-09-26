@@ -1,151 +1,156 @@
 ---
 id: schedule-experiment
-title: Schedule a Chaos Scenario
-sidebar_label: Schedule Chaos Scenario
+title: Schedule a Chaos Experiment
+sidebar_label: Schedule Chaos Experiment
 ---
 
 ---
 
 ## Before you begin
 
-You must connect an Chaos Delegate before scheduling a chaos scenario . There might be a default `Self Chaos Delegate` automatically created or you can [connect an external Chaos Delegate ](../litmusctl/installation.md).
+You must connect an Chaos Infrastructure before scheduling a chaos experiment. You can [connect an external Chaos Infrastructure](../litmusctl/installation.md).
 
 ---
 
 Click on the **Schedule a chaos scenario ** button on the home page or **Schedule chaos scenario ** button in Litmus Chaos Scenarios page to get started.
 
 <figure>
-<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/home-schedule-button.png').default} alt="Home Page" />
-<i>Home Page</i>
+<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/new-experiment-overview-home.png').default} alt="Home Page" />
 </figure>
 
-It will take you to the **Schedule a new Litmus chaos scenario ** page where you can choose or design your own chaos scenario by doing the following steps:
+It will take you to the **Chaos Studio** page where you can choose or design your own chaos scenario by doing the following steps:
 
-## 1. Choose targetchaos delegate
+## 1. Provide the identifiers for the experiment to be created
 
-This is the first step in chaos scenario creation. In this step, you can select a target chaos delegate where the chaos scenario will be scheduled. These chaos delegate consist of the CRDs and the required resources to run a chaos scenario .
-While installing the Litmus Portal, a default chaos delegate named **Self Chaos Delegate ** is created.
+In the Experiment Overview, enter the experiment Name and optional Description and Tags.
 
 <figure>
-<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/select-agent.png').default} alt="Selecting an Chaos Delegate " />
-<i>Selecting a Chaos Delegate </i>
+<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/new-experiment-identifiers.png').default} alt="Add Identifiers" />
 </figure>
 
-After Selecting the chaos delegate , you can continue by clicking on **Next** button.
+## 2. Choose target chaos infrastructure
 
-> Note: You may have to wait for the chaos delegate to be up and ready, after which you can move forward by again clicking on “Next” . Newly created users by the admin won't have any chaos delegate connected and thus won't be able to schedule a chaos scenario . As non-admin users, you will get a message ‘No Cluster Registered With Your Project ID, Please Wait…’ if you try to create a chaos scenario .
-
-## 2. Choose a chaos scenario
+In **Select a Chaos Infrastructure**, select the infrastructure where the target resources reside, and then click **Apply**.
 
 <figure>
-<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/choose-workflow.png').default} alt="Choosing a Chaos Scenario " />
-<i>Choosing a Chaos Scenario </i>
+<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/new-experiment-infra-select.png').default} alt="Selecting an Chaos Infrastructure " />
 </figure>
 
-In this step, you can create a chaos scenario from different methods, these include:
+After Selecting the chaos Infrastructure , you can continue by clicking on **Next** button. This takes you to the Experiment Builder tab, where you can choose how to start building your experiment.
 
-- **Create a new chaos scenario from one of the pre-defined chaos scenario s** : With this option, you can select a pre-defined chaos scenarios which are available in the connected ChaosHub.
-
-- **Create a new chaos scenario by using cloned template chaos scenario ** : With this option, you can create a new chaos scenario from an existing one [saved as a template](save-as-template.md). Choose on of the saved templates and tweak it according to your requirements.
-
-- **Create a new chaos scenario using experiments from MyHub** : With this option, you can create customized chaos scenarios from the one of your connected ChaosHubs. With this option you can add multiple experiments from that ChaosHub either serially or in parallel to construct your chaos scenario graphically.
-
-- **Import chaos scenario using YAML** : With this option, you can import a [hand-crafted/constructed chaos scenario ](construct-experiment.md) manifest and tune it according to the use-case. You can also import a basic Argo chaos scenario using this functionality.
-  :::note
-  For an uploaded chaos scenario , the tune chaos scenario functionality will not be available. The uploaded chaos scenario is completely user-dependent or user-specific.
-
-## 3. Chaos Scenario Settings
-
-In this section, you can change the name of the chaos scenario and also provide a description to the chaos scenario . This section also consists information regarding the namespace where the chaos scenario will be scheduled.
+## 3. Choose you want to build your chaos experiment
 
 <figure>
-<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/workflow-setting.png').default} alt="Change name and description" />
-<i>Change name and description</i>
+<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/new-experiment-choose-method.png').default} alt="Choosing a method " />
 </figure>
 
-## 4. Tune the chaos scenario
+Select how you want to build the experiment. The options, explained later, are:
 
-This section consists of all the information related to the chaos scenario .
-Some new and advanced features that are present in this section are :
+- Blank Canvas - Lets you build the experiment from scratch, adding the specific faults you want.
 
-1. **Chaos Scenario Visualization** : This feature allows you to visualize the chaos scenario even before scheduling it.
-   This gives a brief information related to the structure of chaos scenario <i>i.e</i> if the experiments are present in serial or parallel way.
-2. **Chaos Scenario Table** : This table contains the list of experiments present in the chaos scenario . It also consists of some valuable information related to the target applications.
-3. **Add Experiment** : If you have selected `Create a new chaos scenario using experiments from MyHub` in Choose a Chaos Scenario step, you can see a `Add a new experiment` button, this will allow you to add more experiments to the chaos scenario .
-4. **Edit Chaos Scenario ** : With this option, you can view and make changes in the chaos scenario manifest with a YAML editor.
-5. **Revert Chaos** : For custom chaos scenarios, you can now enable or disable the revert step from the portal.
-   With revert step enabled, a new functionality called `podGC` is also added which deletes the chaos scenario pods after the completion of chaos scenario as part of the clean-up process.
+- Templates from Chaos Hubs - Lets you preview and select and experiment from pre-curated experiment templates available in Chaos Hubs.
+
+- Upload YAML - Lets you upload an experiment manifest YAML file.
+
+These options are explained below.
+
+**If you select Blank Canvas:**
+
+The Experiment Builder tab is displayed.
 
 <figure>
-<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/edit-predefined-workflow.png').default} alt="Choosing a Chaos Scenario " />
-<i>Tuning a Predefined Chaos Scenario (Podtato Head)</i>
+<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/new-experiment-blank-canvas.png').default} alt="Add to blank canvas" />
 </figure>
 
+a. Select **Add**, then select each fault you want to add to the experiment individually.
+
 <figure>
-<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/edit-sequence.png').default} alt="Editing Experiment Sequence" />
-<i>Editing Experiment Sequence</i>
+<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/litmus-chaos-hub.png').default} alt="litmus-chaos-hub" />
 </figure>
 
+For each fault you select, you'll tune the fault's properties next.
+
 <figure>
-<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/add-experiments.png').default} alt="Adding Experiments to Chaos Scenario (Available after choosing a Hub in previous step)" />
-<i>Adding Experiments to Chaos Scenario (Available after choosing a Hub in previous step)</i>
+<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/tune-fault.png').default} alt="tune-fault" />
 </figure>
 
-Some of the other features that are included with Litmus Portal 2.0 are :
+b. To tune each fault:
 
-1. **Target Selection** : On the chaos scenario table, you can select an experiment to edit the engine configuration directly from the portal. You can change the `annotationCheck` and `jobCleanUpPolicy` according to the use-case.
-   You can also target the application by selecting the namespace and the respective label of that application. We have added a functionality to fetch the live data from the selected chaos delegate like the available namespaces and resources that you can target.
+- **Specify the target application (only for pod-level Kubernetes faults):** This lets the application's corresponding pods be targeted.
 
-2. **Defining the steady state for the application** : With this step, you can add probes to your experiments. Probes are some additional checks that you can provide in your experiments. To know more about probes, you can visit [here](../concepts/probes.md).
+- **Tune fault parameters:** Every fault has a set of common parameters, such as the chaos duration, ramp time, etc., and a set of unique parameters that may be customised as needed.
+
+- **Add chaos probes:** On the Probes tab, you can add chaos probes to automate the chaos hypothesis checks for a fault during the experiment execution. Probes are declarative checks that aid in the validation of certain criteria that are deemed necessary to declare an experiment as passed.
+
+- **Tune fault weightage:** Set the weight for the fault, which sets the importance of the fault relative to the other faults in the experiments. This is used to calculate the resilience score of the experiment.
+
+c. To add a fault that runs in parallel to another fault, point your mouse below an existing fault, and then select Add.
 
 <figure>
-<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/target-selection.png').default} alt="Target Selection" />
-<br />
-<i>Target Selection</i>
+<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/add-parallel-faults.png').default} alt="add-parallel-faults" />
 </figure>
 
-## 5. Assign weights to experiments
+In Experiment Builder, faults that are stacked vertically run in parallel, and faults or groups of parallel faults run in sequence from left to right.
 
-In this step, you can assign weights to the experiments present in the chaos scenario . These weights will be then used for the calculation of the resilience score after the chaos scenario completion. By default, 10 points are assigned to each experiment. This can be altered as per your use-case.
+**If you select Templates from Chaos Hubs:**
+
+a. Select an experiment template from a chaos hub.
+
+Select Experiment Type to see available chaos hubs to select templates from.
+Select a template to see a preview of the faults included.
 
 <figure>
-<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/adjust-weights.png').default} alt="Adjust Experiment Weights" />
-<i>Adjust Experiment Weights</i>
+<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/select-template-from-chaos-hub.png').default} alt="select-template-from-chaos-hub" />
 </figure>
 
-#### **The Importance of Weights in experiments**
+You can edit the template to add more faults or update the existing faults.
 
-Giving a weightage to your experiment is a way of signifying/attaching the importance/priority of that experiment in your chaos scenario . The higher the weight, the more importance it holds.
+**If you select Upload YAML:**
 
-The weight priority is generally divided into three sections:
+a. Upload an experiment manifest YAML file to create the experiment.
 
-- **0-3:** Low Priority
-- **4-6:** Medium Priority
-- **7-10:** High Priority
+You can edit the experiment to update the existing faults or add more of them.
 
-## 6. Schedule
-
-In this step, you can schedule the chaos scenario in 2 ways:
-
-1. **Schedule now** : With this option, the chaos scenario will start as soon as you schedule it.
-2. **Recurring Schedule** : This option will allow you to schedule the chaos scenario in recurring ways. It converts a normal chaos scenario to `Cron` chaos scenario and a cron syntax is added in the chaos scenario manifest. The following methods are available to schedule a chaos scenario in recurring ways:
-   1. Every Hour
-   2. Every Day
-   3. Every Week
-   4. Every Month
+## 4. Save the experiment.
 
 <figure>
-<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/schedule.png').default} alt="Scheduling a Cron Chaos Scenario " />
-<i>Scheduling a Cron Chaos Scenario </i>
+<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/chaos-experiment-save.png').default} alt="chaos-experiment-save" />
 </figure>
 
-## 7. Verify and commit
+Now, you can choose to either run the experiment right away by selecting the Run button on the top, or create a recurring schedule to run the experiment by selecting the Schedule tab.
 
-This is the final step in chaos scenario creation process. In this step, you can validate all the changes related to the chaos scenario like the chaos scenario name, the experiment weights, chaos scenario description, chaos scenario manifest etc. Once you have verified all the changes, you can click the **Finish** button to start the schedule.
+## Advanced experiment setup options
+
+You can select Advanced Options on the Experiment Builder tab to configure the advanced options (described below) while creating an experiment for a Kubernetes chaos infrastructure:
 
 <figure>
-<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/verify-commit.png').default} alt="View Summary and Commit" />
-<i>View Summary and Commit</i>
+<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/advanced-options-experiment-creation.png').default} alt="advanced-options-experiment-creation" />
+</figure>
+
+## General options
+
+### Node Selector
+
+Specifies the node on which the experiment pods will be scheduled. Provide the node label as a key-value pair.
+
+- Can be used with node-level faults to avoid the scheduling of the experiment pod on the target node(s).
+
+- Can be used to limit the scheduling of the experiment pods on nodes that have an unsupported OS.
+
+<figure>
+<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/node-selectors.png').default} alt="node-selectors" />
+</figure>
+
+### Toleration
+
+Specifies the tolerations that must be satisfied by a tainted node to be able to schedule the experiment pods. For more information on taints and tolerations, go to the [Kubernetes documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/).
+
+- Can be used with node-level faults to avoid the scheduling of the experiment pod on the target node(s).
+
+- Can be used to limit the scheduling of the experiment pods on nodes that have an unsupported OS.
+
+<figure>
+<img src={require('../assets/user-guides/injecting-fault/schedule-workflow/tolerations.png').default} alt="tolerations" />
 </figure>
 
 ## Learn more
