@@ -8,25 +8,25 @@ sidebar_label: Create User
 
 This feature enables the admin to create a new user by assigning a unique username and password for the user. In addition to this, the admin can also provide the name and email address of the new user which is optional.
 
-## 1. Create a new user
+## 1. Navigate to User Management
 
-Click the `Create new user` button as observed below:
+Go to the `User Management` tab of the account settings page:
 
-<img src={require('../assets/user-guides/user-management/create-user/step-1.png').default} width="1000" height="500" />
+<img src={require('../assets/user-guides/user-management/create-user/step-1.png').default} />
 
-## 2. Add the details of the new user
+## 2. Create a new user
 
-Add all the details of the user to be created and hit the `Create` button.
+Click on the `New User` button to bring up the `Create New User` modal and enter the details of the new user to be created.
 
-<img src={require('../assets/user-guides/user-management/create-user/step-2.png').default} width="1000" height="500" />
+<img src={require('../assets/user-guides/user-management/create-user/step-2.png').default} />
 
 ## 3. Confirmation of creation
 
-The user is created and you will receive a confirmation modal.
+After you have added the details of the new user to be created, click the `Confirm` button to create the new user.
 
-<img src={require('../assets/user-guides/user-management/create-user/step-3.png').default} width="1000" height="500" />
+<img src={require('../assets/user-guides/user-management/create-user/step-3.png').default} />
 
-You will now be able to view the new user in the table in the user management tab.
+You will now be able to view the new user in the table in the `User Management` tab.
 
 ## Learn more
 
