@@ -60,7 +60,7 @@ export const advancedLitmusData = [
     icon: 'img/AdvanceLitmus/multi-tenancy.svg',
     heading: 'Multi Tenancy',
     description: 'Litmus security features are one of the best thing and can not be overlooked.',
-    url: '/docs/concepts/user-management'
+    url: '/docs/concepts/teaming'
   }
 ]
 
