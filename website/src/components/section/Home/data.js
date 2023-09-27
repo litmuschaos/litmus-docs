@@ -41,7 +41,7 @@ export const advancedLitmusData = [
   {
     icon: 'img/AdvanceLitmus/integration.svg',
     heading: 'Integrations',
-    description: 'Integrate your litmus project with other Kubenetes applications.',
+    description: 'Integrate your litmus project with other Kubernetes applications.',
     url: '/docs/integrations/prometheus'
   },
   {
