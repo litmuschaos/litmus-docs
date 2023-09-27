@@ -2,7 +2,7 @@ import Link from '@docusaurus/Link'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import React from 'react'
 import '../../../css/home.css'
-import { ButtonFilled, ButtonOutlined } from '../../button'
+import { ButtonFilled } from '../../button'
 import { ResponsiveRow, Row } from '../../layout'
 import { Heading, Paragraph } from '../../texts'
 
@@ -19,12 +19,8 @@ const Header = () => {
           environments.
         </Paragraph>
         <Row>
-          <Link to="/tutorials">
-            <ButtonFilled>Start Learning</ButtonFilled>
-          </Link>
-          <span style={{ width: '1rem' }} />
           <Link to="/docs/getting-started/installation">
-            <ButtonOutlined>Get Started</ButtonOutlined>
+            <ButtonFilled>Get Started</ButtonFilled>
           </Link>
         </Row>
       </div>
