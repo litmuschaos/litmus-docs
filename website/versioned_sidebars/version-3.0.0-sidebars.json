@@ -23,12 +23,12 @@
     {
       "Concepts": [
         "concepts/overview",
-        "concepts/probes",
-        "concepts/chaoshub",
         "concepts/chaos-infrastructure",
+        "concepts/chaoshub",
         {
           "Chaos Experiments": ["concepts/chaos-workflow", "concepts/visualize-experiment"]
         },
+        "concepts/probes",
         "concepts/user-management",
         "concepts/projects",
         "concepts/teaming",
@@ -92,13 +92,7 @@
       ]
     },
     {
-      "Litmusctl": [
-        "litmusctl/installation",
-        {
-          "Connect Infrastructure": ["litmusctl/usage-non-interactive-mode", "litmusctl/usage-interactive-mode"]
-        },
-        "litmusctl/chaos-experiment-creation"
-      ]
+      "Litmusctl": ["litmusctl/installation", "litmusctl/litmusctl-usage"]
     },
     {
       "Integrations": ["integrations/prometheus", "integrations/grafana"]

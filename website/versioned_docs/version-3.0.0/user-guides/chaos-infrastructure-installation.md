@@ -13,8 +13,7 @@ sidebar_label: chaos-infrastructure-installation
 
 ## Connecting Chaos Delegate
 
-- Learn to [connect Chaos Delegate with non interactive mode using litmuctl](../litmusctl/usage-non-interactive-mode.md)
-- Learn to [connect Chaos Delegate with interactive mode using litmuctl](../litmusctl/usage-interactive-mode.md)
+- Learn to [connect Chaos Delegate with non interactive mode using litmuctl](../litmusctl/litmusctl-usage.md)
 
 ## Resource Requiremenets for Chaos Delegate plane components
 
