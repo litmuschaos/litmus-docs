@@ -1,112 +1,42 @@
 ---
 id: observe-experiment
-title: Observe Chaos Scenario
-sidebar_label: Observe Chaos Scenario
+title: Observe Chaos experiment
+sidebar_label: Observe Chaos experiment
 ---
 
 ---
 
-## Before you begin
+Visualization is an important aspect while doing chaos engineering. It allows the user to discover and inspect different changes that occur during a Chaos Experiment execution. <br/>
+With ChaosCenter, the real-time data and status of the chaos experiments can be observed. Valuable information like pod logs, chaos experiment status, and chaos results can also be viewed.
 
-You must schedule a chaos scenario. To know more about scheduling chaos scenarios click [here](schedule-experiment.md)
+## Prerequisites
 
----
+The following should be required before creating a Chaos Experiment:
 
-After scheduling a chaos scenario, you can track the status of the chaos scenario run from the `Runs` tab in the `Litmus Chaos Scenario`. The status that is currently displayed are:
+- ChaosCenter
+- [Chaos Experiments](chaos-workflow.md)
 
-- Failed
-- Running
-- Completed
+## Litmus Chaos Experiment
 
-<figure>
-<img src={require('../assets/user-guides/injecting-fault/observe-workflow/runs-table.png').default} alt="Chaos Scenario Runs Table showing a Running Chaos Scenario" />
-<i>Chaos Scenario Runs Table showing a Running Chaos Scenario</i>
-</figure>
+If the user chooses to 'Save' and 'Run' the experiment, they will be redirected directly to the experiment execution page where the experiment can be visualised else they will be taken Chaos Experiment Page.
 
----
+## Observe a Litmus Chaos Experiment
 
-you can analyze a chaos scenario using two methods:
+To observe a chaos experiment, user needs to select the highlighted experiment run box from the heatmap, it will redirect to experiment run execution page.<br/>
+<img src={require('../assets/workflow-observe-select.png').default} width="800" />
 
-## Visualize the chaos scenario run graph
+In the chaos experiment, a realtime graph of the chaos experiment is displayed. This graph contains valuable information regarding the status of individual steps of the chaos experiment.<br/><br/>
+<img src={require('../assets/workflow-observe-running.png').default} width="800" /><br/><br/>
+To view the details of each step, the user can click on the individual nodes and the right side pane will display the node details, results(once the execution is complete), and the logs related to it.
+<br/><br/>
+<img src={require('../assets/workflow-observe-log.png').default} width="800" />
+<img src={require('../assets/workflow-observe-completed.png').default} width="800" />
 
-After scheduling a chaos scenario, you can click on the **Show the chaos scenario** option or click on the chaos scenario name to see the real-time graph of the chaos scenario.
+## Summary
 
-<figure>
-<img src={require('../assets/user-guides/injecting-fault/observe-workflow/running-workflow.png').default} alt="Chaos Scenario Runs Graph of Podtato Head chaos scenario" />
-<i>Graph of Podtato Head chaos scenario</i>
-</figure>
+After scheduling a chaos experiment, a user can view the details of the running chaos experiment from the ChaosCenter. ChaosCenter provides a real-time graph that is used to visualize the chaos experiment and get the details of individual steps of the chaos experiment. Important details like the logs and target applications can be viewed from ChaosCenter. Once the chaos experiment execution is completed, the resiliency score is calculated and the ChaosResult for the ChaosEngine pods is available.
 
-The graph consists of useful information such as :
+## Learn More
 
-- Phase of individual nodes.
-- Total time taken for the nodes to execute.
-- Structure of the experiments (Serial or Parallel experiments).
-
-You can also visualize the non Chaos scenarios. The logs of individual nodes are also available here.
-
-<figure>
-<img src={require('../assets/argo-chaos-workflow.png').default} alt="Chaos Scenario run graph of a non chaos scenario" />
-<i>Graph of a non Chaos Scenario</i>
-</figure>
-
-## View logs of individual nodes
-
-you can click on the nodes to get the logs of that particular step. If the revert-chaos step is disabled, the complete logs are available which include the runner pod logs and the chaos logs.
-
-<figure>
-<img src={require('../assets/user-guides/injecting-fault/observe-workflow/running-workflow-with-logs.png').default} alt="Chaos Scenario Runs Podtato Head chaos scenario with Logs" />
-<i>Podtato Head chaos scenario with Logs</i>
-</figure>
-
-## View chaos results
-
-Once the experiment completes, the [Chaos Results](../glossary.md) are also available alongside the logs. The Chaos Results are directly fetched from the ChaosResult CRD.
-
-<figure>
-<img src={require('../assets/user-guides/injecting-fault/observe-workflow/completed-workflow-with-chaos-results.png').default} alt="Podtato Head chaos scenario with chaos logs and chaos result of pod-delete experiment" />
-<i>Podtato Head chaos scenario with chaos logs and chaos result of generic/pod-delete experiment</i>
-</figure>
-
-## Resilience Score Calculation
-
-A Resilience Score is the measure of how resilient your chaos scenario run is considering all the chaos experiments and their individual result points. This calculation takes into account the individual experiment weights (from a range of 1-10) which are relative to each other.
-
-Once a weight has been assigned to the experiment, we look for the [Probe Success Percentage](../concepts/probes#probe-status--deriving-inferences) for that experiment itself (Post Chaos) and calculate the total resilience result for that experiment as a multiplication of the weight given and the probe success percentage returned after the Chaos Run.
-
-```doc
-Total Resilience for one single experiment = (Weight Given to that experiment * Probe Success Percentage)
-```
-
-> If an experiment doesn't have a probe in it, the probe success percentage returned can either be 0 or 100 based on the experiment verdict. If the experiment passed then it returns 100 else 0.
-
-The Final Resilience Score is calculated by dividing the total test result by the sum of all the weights of all the experiments combined in a single chaos scenario.
-
-For example, if we consider two experiments in a chaos scenario, here is what the calculation would look like.
-
-> Considering Probe Success Percentage is 100
-
-| Experiment |         Weight          | Probe Success Percentage |                    Total Test Result |
-| :--------- | :---------------------: | -----------------------: | -----------------------------------: |
-| exp1       |            3            |                      100 |                     (3 \* 100) = 300 |
-| exp2       |            9            |                      100 |                     (9 \* 100) = 900 |
-|            | Weight Sum = 3 + 9 = 12 |                          | Total Test Result = 300 + 900 = 1200 |
-
-```
-Resilience Score = Total Test Result / Weight Sum
-                 = 1200 / 12
-                 = 100%
-```
-
-## Analytics from the runs tab
-
-Once the chaos scenario run execution completes, you can click the **Show the analytics** option in the `Runs` tab of `Litmus Chaos Scenarios` which opens up a [Chaos Scenario Dashboard](../user-guides/analyze-workflow.md) which can also be accessed from the Analytics section and is explained more [here](../user-guides/analyze-workflow.md). This analytics can be crucial to analyse the Cron Chaos Scenarios.
-
-## Resources
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OuB3dS05DHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-## Learn more
-
-- [Edit Schedule](edit-schedule.md)
-- [Download Chaos Scenario Manifest](download-experiment-manifest.md)
-- [Re-run a Chaos Scenario](re-run-experiment.md)
+- [Explore Probes](probes.md)
+- [What is a Chaos Experiment](chaos-workflow.md)

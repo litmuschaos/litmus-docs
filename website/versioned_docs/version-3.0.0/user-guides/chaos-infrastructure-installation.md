@@ -8,15 +8,15 @@ sidebar_label: chaos-infrastructure-installation
 
 ## Prerequisites
 
-- Before connecting a Chaos Delegate to the [ChaosCenter](../getting-started/resources.md#chaoscenter), learn about what is a [Chaos Delegate](../getting-started/resources.md#chaosagents) in Litmus.
+- Before connecting a Chaos Infrastructure to the [ChaosCenter](../getting-started/resources.md#chaoscenter), learn about what is a [Chaos Infrastructure](../getting-started/resources.md#chaosagents) in Litmus.
 - Make sure [litmusctl](../litmusctl/installation.md) is installed.
 
-## Connecting Chaos Delegate
+## Connecting Chaos Infrastructure
 
-- Learn to [connect Chaos Delegate with non interactive mode using litmuctl](../litmusctl/usage-non-interactive-mode.md)
-- Learn to [connect Chaos Delegate with interactive mode using litmuctl](../litmusctl/usage-interactive-mode.md)
+- Learn to [connect Chaos Infrastructure with non interactive mode using litmuctl](../litmusctl/usage-non-interactive-mode.md)
+- Learn to [connect Chaos Infrastructure with interactive mode using litmuctl](../litmusctl/usage-interactive-mode.md)
 
-## Resource Requiremenets for Chaos Delegate plane components
+## Resource Requiremenets for Chaos Infrastructure plane components
 
 The Resource requests provided here have been estimated using data gathered manually through different methods -
 
