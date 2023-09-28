@@ -4,6 +4,10 @@ title: Glossary
 sidebar_label: Glossary
 ---
 
+:::note
+Pleas note that Litmus 3.0 is not backward compatible and will require a fresh installation for users looking to migrate from previous versions
+:::
+
 ## Chaos Resources
 
 At the heart of the Litmus Platform are the chaos custom resources. This section consists of the specification (details of each field within the .spec & .status of the resources) as well as standard examples for tuning the supported parameters.
