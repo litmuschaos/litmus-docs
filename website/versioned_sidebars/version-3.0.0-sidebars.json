@@ -87,8 +87,7 @@
         },
         "user-guides/gitops-configuration",
         "user-guides/image-registry",
-        "user-guides/uninstall-litmus",
-        "user-guides/upgrade"
+        "user-guides/uninstall-litmus"
       ]
     },
     {
