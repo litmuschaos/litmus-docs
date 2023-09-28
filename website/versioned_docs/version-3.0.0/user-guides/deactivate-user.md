@@ -12,19 +12,19 @@ The Account of a created user can be deactivated if required. Once the user is d
 
 In the user management tab, locate the user account that you'd like to deactivate and click on the horizontal options icon.
 
-<img src={require('../assets/user-guides/user-management/deactivate-user/step-1.png').default} width="1000" height="500" />
+<img src={require('../assets/user-guides/user-management/deactivate-user/step-1.png').default} />
 
-## 2. Confirm the user is deactivated
+## 2. Confirm the deactivation
 
-Once deactivated, the indicator next to the user's username in the usermanagement table will turn gray.
+On clicking on the `Disable User` option, a confirmation prompt will pop up, click on the `Confirm` button in order to disable the user.
 
-<img src={require('../assets/user-guides/user-management/deactivate-user/step-2.png').default} width="1000" height="500" />
+<img src={require('../assets/user-guides/user-management/deactivate-user/step-2.png').default} />
 
 ## 3. Re-activate a user (Optional step)
 
 Similarly, the admin can re-activate the user from the same drop-down menu as shown:
 
-<img src={require('../assets/user-guides/user-management/deactivate-user/step-3.png').default} width="1000" height="500" />
+<img src={require('../assets/user-guides/user-management/deactivate-user/step-3.png').default} />
 
 ## Learn more
 
