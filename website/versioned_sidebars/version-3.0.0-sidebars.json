@@ -25,9 +25,7 @@
         "concepts/overview",
         "concepts/chaos-infrastructure",
         "concepts/chaoshub",
-        {
-          "Chaos Experiments": ["concepts/chaos-workflow", "concepts/visualize-experiment"]
-        },
+        "concepts/chaos-workflow",
         "concepts/probes",
         "concepts/user-management",
         "concepts/projects",
@@ -58,7 +56,6 @@
             "user-guides/schedule-experiment",
             "user-guides/observe-experiment",
             "user-guides/edit-schedule",
-            "user-guides/save-as-template",
             "user-guides/download-experiment-manifest",
             "user-guides/re-run-experiment",
             "user-guides/delete-experiment",

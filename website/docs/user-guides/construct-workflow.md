@@ -125,7 +125,7 @@ spec:
                     name: pod-delete
                     app.kubernetes.io/part-of: litmus
                     app.kubernetes.io/component: chaosexperiment
-                    app.kubernetes.io/version: 1.13.8
+                    app.kubernetes.io/version: 3.0.0
                 spec:
                   definition:
                     scope: Namespaced
@@ -162,7 +162,7 @@ spec:
                           - update
                           - delete
                           - deletecollection
-                    image: litmuschaos/go-runner:1.13.8
+                    image: litmuschaos/go-runner:3.0.0
                     imagePullPolicy: Always
                     args:
                       - -c
@@ -190,7 +190,7 @@ spec:
                       name: pod-delete
                       app.kubernetes.io/part-of: litmus
                       app.kubernetes.io/component: experiment-job
-                      app.kubernetes.io/version: 1.13.8
+                      app.kubernetes.io/version: 3.0.0
       container:
         args:
           - kubectl apply -f /tmp/pod-delete.yaml -n
