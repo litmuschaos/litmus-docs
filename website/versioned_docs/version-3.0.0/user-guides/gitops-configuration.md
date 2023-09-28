@@ -4,6 +4,13 @@ title: Configuring GitOps
 sidebar_label: Configuring GitOps
 ---
 
+:::note
+With the latest release of LitmusChaos 3.0.0:
+<li>The term <b>Chaos Experiment</b> has been changed to <b>Chaos Fault.</b> </li>
+<li>The term <b>Chaos Scenario/Workflow</b> has been changed to <b>Chaos Experiment.</b></li>
+:::
+
+
 ## Introduction
 
 GitOps enables you to configure a single source of truth for your chaos experiment and faults, any changes made either to the artifacts stored in the configured git repository or the portal will be synced.
@@ -41,10 +48,10 @@ It is also possible to account for the chaos experiments that are created and pu
 
 ## Steps to configure Event-Triggered Chaos Injection
 
-- Once the chaos experiment is pushed to your repository, you’ll notice every chaos experiment has a `workflow_id`. You can get this from the chaos experiment YAML file. You need to copy the id and annotate the target application so that if there’s any change in the application, gitops will sync the chaos experiment using this workflow_id and run it on your target application. You can use the following command:
+- Once the chaos experiment is pushed to your repository, you’ll notice every chaos experiment has a `experiment_id`. You can get this from the chaos experiment YAML file. You need to copy the id and annotate the target application so that if there’s any change in the application, gitops will sync the chaos experiment using this experiment_id and run it on your target application. You can use the following command:
 
 ```
-kubectl annotate deploy/target-application litmuschaos.io/workflow=${workflow_id}
+kubectl annotate deploy/target-application litmuschaos.io/workflow=${experiment_id}
 ```
 
 ```
