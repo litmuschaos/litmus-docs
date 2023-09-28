@@ -62,6 +62,14 @@
             "user-guides/construct-experiment"
           ]
         },
+        {
+          "Resilience Probes": [
+            "user-guides/create-resilience-probe",
+            "user-guides/delete-resilience-probe",
+            "user-guides/edit-resilience-probe",
+            "user-guides/view-resilience-probe"
+          ]
+        },
         "user-guides/account-settings",
         {
           "User Management": [
