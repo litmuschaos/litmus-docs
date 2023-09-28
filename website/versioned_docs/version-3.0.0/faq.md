@@ -55,14 +55,14 @@ The Resilience score is calculated on the basis of the weightage and the Probe S
 In the Chaoscenter when you go to the chaoshub section and you click on connect new hub button, you can see that there are two modes of authentication i.e public mode and private mode. In public mode, you only have to provide the git URL and branch name.
 
 In private mode, we have two types of authentication; Access token and SSH key.
-For the access token, go to the settings of GitLab and in the Access token section, add a token with read repository permission. After getting the token, go to the Chaoscenter and provide the GitLab URL and branch name along with the access token. After submitting, your own chaos hub is connected to the Chaoscenter.
-For the SSH key, click on the SSH and it will generate a public key. You have to use this public key and put it in your GitLab account. Just go to the settings of GitLab, you can see the SSH key section, go to the SSH key section and add your public key. After adding the public key. Get the ssh type URL of the git repository and put it in the Chaoscenter along with the branch. After submitting, your own chaoshub is connected to the Chaoscenter.
+For the access token, go to the settings of GitLab, and in the Access token section, add a token with read repository permission. After getting the token, go to the Chaoscenter and provide the GitLab URL and branch name along with the access token. After submitting, your own chaos hub is connected to the Chaoscenter.
+For the SSH key, click on the SSH and it will generate a public key. You shall use this public key and put it in your GitLab account. Just go to the settings of GitLab, and you can see the SSH key section, go to the SSH key section and add your public key. After adding the public key. Get the SSH type URL of the git repository and put it in the Chaoscenter along with the branch. After submitting, your own ChaosHub is connected to the Chaoscenter.
 
 ## Gitops
 
 ### How can users integrate Litmuschaos in their environment with Gitops?
 
-Gitops feature in Litmus enables users to sync chaos experiments from a configured git repo, any chaos experiment inserts/updates made to the repo will be monitored and picked up by Chaoscenter and will be executed on the target cluster. Chaoscenter gitops also includes an event-driven chaos injection feature where users can annotate an application to be watched for changes and if and when the change happens chaos experiments can be triggered automatically. This integrates with other gitops tools like flux/argo cd and enables users to automatically run chaos experiments whenever a new release happens or a particular change occurs in the application.
+Gitops feature in Litmus enables users to sync chaos experiments from a configured git repo, any chaos experiment inserts/updates made to the repo will be monitored and picked up by ChaosCenter and will be executed on the target cluster. ChaosCenter gitops also includes an event-driven chaos injection feature where users can annotate an application to be watched for changes and if and when the change happens chaos experiments can be triggered automatically. This integrates with other gitops tools like flux/argo cd and enables users to automatically run chaos experiments whenever a new release happens or a particular change occurs in the application.
 To configure a git repo the user must provide the Git URL of the repository and the Branch name and the authentication credentials which are of two types:
 
 - Access Token

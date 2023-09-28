@@ -6,7 +6,7 @@ sidebar_label: Resilience Probes
 
 ---
 
-In Litmus, Resilience Probes are pluggable checks that can be defined within the ChaosEngine for any Chaos Experiment. The fault pods execute these checks based on the mode they are defined in & factor their success as necessary conditions in determining the verdict of the fault (along with the standard `in-built` checks).
+Resilience Probes are pluggable checks that can be defined within the ChaosEngine for any Chaos Experiment. The fault pods execute these checks based on the mode they are defined in & factor their success as necessary conditions in determining the verdict of the fault (along with the standard `in-built` checks).
 
 ## Prerequisites
 
