@@ -14,7 +14,7 @@ With ChaosCenter, the real-time data and status of the chaos experiments can be 
 The following should be required before creating a Chaos Experiment:
 
 - ChaosCenter
-- [Chaos Experiments](chaos-workflow.md)
+- [Chaos Experiments](../concepts/chaos-workflow.md)
 
 ## Litmus Chaos Experiment
 
@@ -38,5 +38,5 @@ After scheduling a chaos experiment, a user can view the details of the running 
 
 ## Learn More
 
-- [Explore Probes](probes.md)
-- [What is a Chaos Experiment](chaos-workflow.md)
+- [Explore Probes](../concepts/probes.md)
+- [What is a Chaos Experiment](../concepts/chaos-workflow.md)
