@@ -17,7 +17,6 @@ module.exports = {
       'Getting Started': [
         'getting-started/resources',
         'getting-started/installation',
-        'getting-started/run-your-first-workflow'
       ]
     },
 
