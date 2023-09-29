@@ -22,7 +22,7 @@ Before deploying LitmusChaos, make sure the following items are there
 
 ## Installation
 
-Users looking to use Litmus for the first time have two options available to them today. One way is to use a hosted Litmus service like [Harness Chaos Engineering SaaS](https://cloud.chaosnative.com/). Alternatively, users looking for some more flexibility can install Litmus into their own Kubernetes cluster.
+Users looking to use Litmus for the first time have two options available to them today. One way is to use a hosted Litmus service like [Harness Chaos Engineering SaaS](https://app.harness.io/auth/#/signin). Alternatively, users looking for some more flexibility can install Litmus into their own Kubernetes cluster.
 
 Users choosing the self-hosted option can refer to our Install and Configure docs for installing alternate versions and more detailed instructions.
 
@@ -38,9 +38,9 @@ import TabItem from '@theme/TabItem';
     Refer to the below details for Self-Hosted Litmus installation.
   </TabItem>
   <TabItem value="hosted" label="Hosted (Beta)">
-    <a href="https://harness.io/">Harness</a> offers a free service for community members which makes getting started with Litmus easy. Create an account to get started. Once logged in, create a new hosted control plane and connect to it via the up CLI. Litmus can be used as a hosted cloud service using <a href="https://cloud.chaosnative.com">Harness Chaos Engineering SaaS</a>. Harness Chaos Engineering SaaS executes your Chaos Experiments in the cloud by managing all your Chaos Control Plane components, while the Chaos Execution Plane components exist on your Kubernetes cluster as part of an external chaos infrastructure.
+    <a href="https://harness.io/">Harness</a> offers a free service for community members which makes getting started with Litmus easy. Create an account to get started. Once logged in, create a new hosted control plane and connect to it via the up CLI. Litmus can be used as a hosted cloud service using <a href="https://app.harness.io/auth/#/signin">Harness Chaos Engineering SaaS</a>. Harness Chaos Engineering SaaS executes your Chaos Experiments in the cloud by managing all your Chaos Control Plane components, while the Chaos Execution Plane components exist on your Kubernetes cluster as part of an external chaos infrastructure.
     <br/><br/>
-    To get started with Harness Chaos Engineering SaaS, visit <a href="https://cloud.chaosnative.com">Harness Chaos Engineering SaaS</a> and register for free. You can skip the below installation steps.
+    To get started with Harness Chaos Engineering SaaS, visit <a href="https://developer.harness.io/docs/chaos-engineering/get-started/learn-more-free-plan">Harness Chaos Engineering SaaS</a> and register for free. You can skip the below installation steps.
   </TabItem>
 </Tabs>
 
