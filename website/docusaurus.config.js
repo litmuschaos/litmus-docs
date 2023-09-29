@@ -84,7 +84,7 @@ module.exports = {
             },
             {
               label: 'V2-Docs',
-              to: 'https://docs.litmuschaos.io/docs/getting-started/installation'
+              to: 'https://v2-docs.litmuschaos.io/'
             },
             {
               label: 'V1-Docs',
