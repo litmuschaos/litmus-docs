@@ -6,7 +6,7 @@ sidebar_label: Uses of Litmus
 
 ---
 
-Chaos experiments can be done anywhere in the DevOps cycle. The extent of chaos tests varies from CI pipelines to production. In development pipelines, you might use chaos tests specific to applications being developed. As you move towards operations or production, you will expect a lot of failure scenarios for which you want to be resilient against, hence the number of chaos tests grows significantly.
+Chaos tests can be done anywhere in the DevOps cycle. The extent of chaos tests varies from CI pipelines to production. In development pipelines, you might use chaos tests specific to applications being developed. As you move towards operations or production, you will expect a lot of failure scenarios for which you want to be resilient against, hence the number of chaos tests grows significantly.
 
 <img src={require("../assets/introduction/uses-of-litmus/chaos-test-devops.png").default} alt="Chaos Testing in DevOps Cycle" />
 
@@ -22,7 +22,7 @@ We keep hearing from SREs that they typically see a lot of resistance for introd
 
 <img src={require("../assets/introduction/uses-of-litmus/overall-resilience.png").default} alt="Overall Resilience" />
 
-Chaos Engineering is a culture-oriented practice. With time, management buying and the SRE confidence will increase, and they move the chaos tests into production. This process will increase resilience metrics, as well.
+Chaos Engineering is a practice. As seen above, with time, management buying and the SRE confidence will increase, and they move the chaos tests into production. This process will increase resilience metrics, as well.
 
 ## Learn more
 

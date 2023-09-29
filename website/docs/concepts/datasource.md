@@ -13,6 +13,7 @@ application OR infrastructure.
 
 The following should be required before knowing about managing data sources in chaos center:
 
+- [Running Chaos Scenarios](../getting-started/run-your-first-workflow.md)
 - [Prometheus TSDB](https://prometheus.io/)
 
 ## Data flow architecture

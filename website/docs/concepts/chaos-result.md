@@ -345,4 +345,5 @@ ChaosResult resource holds the results of a ChaosExperiment. It comprises of som
 
 ## Learn More
 
+- [Run a Chaos Scenario](../getting-started/run-your-first-workflow.md)
 - [Observe a chaos scenario](visualize-workflow.md)
