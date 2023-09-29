@@ -22,7 +22,7 @@ Before deploying LitmusChaos, make sure the following items are there
 
 ## Installation
 
-Users looking to use Litmus for the first time have two options available to them today. One way is to use a hosted Litmus service like [Harness Chaos Engineering SaaS](https://cloud.chaosnative.com/). Alternatively, users looking for some more flexibility can install Litmus into their own Kubernetes cluster.
+Users looking to use Litmus for the first time have two options available to them today. One way is to use a hosted Litmus service like [Harness Chaos Engineering SaaS](https://app.harness.io/auth/#/signin). Alternatively, users looking for some more flexibility can install Litmus into their own Kubernetes cluster.
 
 Users choosing the self-hosted option can refer to our Install and Configure docs for installing alternate versions and more detailed instructions.
 
@@ -38,9 +38,9 @@ import TabItem from '@theme/TabItem';
     Refer to the below details for Self-Hosted Litmus installation.
   </TabItem>
   <TabItem value="hosted" label="Hosted (Beta)">
-    <a href="https://harness.io/">Harness</a> offers a free service for community members which makes getting started with Litmus easy. Create an account to get started. Once logged in, create a new hosted control plane and connect to it via the up CLI. Litmus can be used as a hosted cloud service using <a href="https://cloud.chaosnative.com">Harness Chaos Engineering SaaS</a>. Harness Chaos Engineering SaaS executes your Chaos Scenarios in the cloud by managing all your Chaos Control Plane components, while the Chaos Execution Plane components exist on your Kubernetes cluster as part of an external chaos delegate.
+    <a href="https://harness.io/">Harness</a> offers a free service for community members which makes getting started with Litmus easy. Create an account to get started. Once logged in, create a new hosted control plane and connect to it via the up CLI. Litmus can be used as a hosted cloud service using <a href="https://app.harness.io/auth/#/signin">Harness Chaos Engineering SaaS</a>. Harness Chaos Engineering SaaS executes your Chaos Experiments in the cloud by managing all your Chaos Control Plane components, while the Chaos Execution Plane components exist on your Kubernetes cluster as part of an external chaos infrastructure.
     <br/><br/>
-    To get started with Harness Chaos Engineering SaaS, visit <a href="https://cloud.chaosnative.com">Harness Chaos Engineering SaaS</a> and register for free. You can skip the below installation steps.
+    To get started with Harness Chaos Engineering SaaS, visit <a href="https://developer.harness.io/docs/chaos-engineering/get-started/learn-more-free-plan">Harness Chaos Engineering SaaS</a> and register for free. You can skip the below installation steps.
   </TabItem>
 </Tabs>
 
@@ -94,13 +94,7 @@ Visit https://docs.litmuschaos.io to find more info.
 
 ### **Install Litmus using kubectl**
 
-#### **Install Litmus ChaosCenter**
-
-Applying the manifest file will install all the required service account configuration and ChaosCenter.
-
-```bash
-kubectl apply -f https://litmuschaos.github.io/litmus/3.0.0-beta8/litmus-3.0.0-beta8.yaml
-```
+In this method the users need to install mongo first via helm and then apply the installation manifest. Follow the instructions [here](https://github.com/litmuschaos/litmus/tree/master/chaoscenter#installation-steps-for-litmus-300-beta9).
 
 ---
 
@@ -117,11 +111,15 @@ kubectl apply -f https://litmuschaos.github.io/litmus/3.0.0-beta8/litmus-3.0.0-b
   <span style={{color: 'green'}}><b>Expected Output</b></span>
 
   ```bash
-  NAME                                       READY   STATUS              RESTARTS   AGE
-  litmusportal-server-6fd57cc89-6w5pn        1/1     Running              0          57s
-  litmusportal-auth-server-7b596fff9-5s6g5   1/1     Running              0          57s
-  mongo-0                                    1/1     Running              0          57s
-  litmusportal-frontend-55974fcf59-cxxrf     1/1     Running              0          58s
+  NAME                                       READY   STATUS    RESTARTS   AGE
+  litmusportal-server-6fd57cc89-6w5pn        1/1     Running     0          57s
+  litmusportal-auth-server-7b596fff9-5s6g5   1/1     Running     0          57s
+  litmusportal-frontend-55974fcf59-cxxrf     1/1     Running     0          58s
+  my-release-mongodb-0                       1/1     Running     0          63s
+  my-release-mongodb-1                       1/1     Running     0          63s
+  my-release-mongodb-2                       1/1     Running     0          62s
+  my-release-mongodb-arbiter-0               1/1     Running     0          64s
+
   ```
 
 - Check the services running in the namespace where you installed Litmus:
@@ -133,12 +131,14 @@ kubectl apply -f https://litmuschaos.github.io/litmus/3.0.0-beta8/litmus-3.0.0-b
   <span style={{color: 'green'}}><b>Expected Output</b></span>
 
   ```bash
-  NAME                               TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)                         AGE
-  litmusportal-frontend-service      NodePort    10.43.79.17    <none>        9091:31846/TCP                  102s
-  litmusportal-server-service        NodePort    10.43.30.54    <none>        9002:31245/TCP,8000:32714/TCP   101s
-  litmusportal-auth-server-service   NodePort    10.43.81.108   <none>        9003:32618/TCP,3030:31899/TCP   101s
-  mongo-service                      ClusterIP   10.43.227.10   <none>        27017/TCP                       101s
-  mongo-headless-service             ClusterIP   None           <none>        27017/TCP                       101s
+  NAME                                  TYPE           CLUSTER-IP     EXTERNAL-IP      PORT(S)                         AGE
+  chaos-exporter                        ClusterIP      10.68.45.7     <none>           8080/TCP                        23h
+  litmusportal-auth-server-service      NodePort       10.68.34.91    <none>           9003:32368/TCP,3030:31051/TCP   23h
+  litmusportal-frontend-service         NodePort       10.68.43.68    <none>           9091:30070/TCP                  23h
+  litmusportal-server-service           NodePort       10.68.33.242   <none>           9002:32455/TCP,8000:30722/TCP   23h
+  my-release-mongodb-arbiter-headless   ClusterIP      None           <none>           27017/TCP                       23h
+  my-release-mongodb-headless           ClusterIP      None           <none>           27017/TCP                       23h
+  workflow-controller-metrics           ClusterIP      10.68.33.65    <none>           9090/TCP                        23h
   ```
 
 ---
@@ -162,17 +162,17 @@ mongo-service                      ClusterIP   10.43.227.10   <none>        2701
 mongo-headless-service             ClusterIP   None           <none>        27017/TCP                       101s
 ```
 
-> **Note**: In this case, the PORT for `litmusportal-frontend-service` is `30385`. Yours will be different.
+> **Note**: In this case, the PORT for `litmusportal-frontend-service` is `31846`. Yours will be different.
 
 Once you have the PORT copied in your clipboard, simply use your IP and PORT in this manner `<NODEIP>:<PORT>` to access the Litmus ChaosCenter.
 
 For example:
 
 ```yaml
-http://172.17.0.3:30385/
+http://172.17.0.3:31846/
 ```
 
-> Where `172.17.0.3` is my NodeIP and `30385` is the frontend service PORT. If using a LoadBalancer, the only change would be to provide a `<LoadBalancerIP>:<PORT>`. [Learn more about how to access ChaosCenter with LoadBalancer](../user-guides/setup-without-ingress.md#with-loadbalancer)
+> Where `172.17.0.3` is my NodeIP and `31846` is the frontend service PORT. If using a LoadBalancer, the only change would be to provide a `<LoadBalancerIP>:<PORT>`. [Learn more about how to access ChaosCenter with LoadBalancer](../user-guides/setup-without-ingress.md#with-loadbalancer)
 
 You should be able to see the Login Page of Litmus ChaosCenter. The **default credentials** are
 
@@ -187,34 +187,9 @@ By default you are assigned with a default project with Owner permissions.
 
 <img src={require('../assets/landing-page.png').default} width="800" />
 
-## **Verify Successful Registration of the Self Chaos Delegate**
-
-Once the project is created, the cluster is automatically registered as a chaos target via installation of [Chaos Delegate](resources.md#chaosagents). This is represented as [Self Chaos Delegate](resources.md#types-of-chaosagents) in [ChaosCenter](resources.md#chaoscenter).
-
-```bash
-kubectl get pods -n litmus
-```
-
-```bash
-NAME                                     READY   STATUS    RESTARTS   AGE
-chaos-exporter-547b59d887-4dm58          1/1     Running   0          5m27s
-chaos-operator-ce-84ddc8f5d7-l8c6d       1/1     Running   0          5m27s
-event-tracker-5bc478cbd7-xlflb           1/1     Running   0          5m28s
-litmusportal-frontend-97c8bf86b-mx89w    1/1     Running   0          15m
-litmusportal-server-6fd57cc89-6w5pn      1/1     Running   0          15m
-litmusportal-auth-server-7b596fff9-5s6g5 1/1     Running   0          15m
-mongo-0                                  1/1     Running   0          15m
-subscriber-958948965-qbx29               1/1     Running   0          5m30s
-workflow-controller-78fc7b6c6-w82m7      1/1     Running   0          5m32s
-```
-
-## Resources
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rOrKegj5ePI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ## Learn more
 
 - [Install ChaosCenter in Namespace Scope](../user-guides/chaoscenter-namespace-scope-installation.md)
-- [Connect External Chaos Delegates to ChaosCenter](../user-guides/chaos-infrastructure-installation.md)
+- [Connect External Chaos Infrastructures to ChaosCenter](../user-guides/chaos-infrastructure-installation.md)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)
