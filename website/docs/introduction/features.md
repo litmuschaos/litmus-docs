@@ -72,7 +72,6 @@ Litmus 3.0 culminates as well as enhances the features rolled-out through Litmus
 
 ## Learn more
 
-- [Run your first chaos scenario in 5 minutes](../getting-started/run-your-first-workflow.md)
 - [Install Litmus](../getting-started/installation.md)
 - [Visualize Chaos Experiments](../concepts/visualize-workflow.md)
 - Chaos Schedule
