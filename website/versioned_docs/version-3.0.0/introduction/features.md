@@ -10,61 +10,69 @@ The goal of the LitmusChaos project is to create a complete solution to implemen
 
 Over time, with the monthly cadence releases and community engagement, we have added a lot of features and made LitmusChaos much easier for the end-users. With the launch of Litmus 2.0, a new way of chaos engineering can be performed by the users, a few high-level features are mentioned [below](features.md#advantages-of-litmus-20), however a detailed list can be found on the [release page](https://github.com/litmuschaos/litmus/releases).
 
-## Advantages of Litmus 2.0
+LitmusChaos 3.0 brings a significant overhaul to its user experience, adopting a more streamlined UI for a simplified and user-friendly experience. It introduces Environments enabling users to efficiently organize their chaos infrastructures. The new Chaos Studio simplifies the process of fine-tuning chaos experiments, enhancing user capabilities. Additionally, it includes support for Resilience Probes for simplifying the management of Litmus probes. Finally, it extends compatibility to Mongo Replicas, which can be easily installed via Helm with Bitnami Mongo.
 
-A high-level feature overview of Litmus 2.0 are as follows
+## Advantages of Litmus 3.0
 
-- The Addition of [Chaos Scenario](../concepts/chaos-workflow.md) creation, Chaos experiments become building blocks of a Chaos Scenario, to allow users to create a larger chaos scenario using sequential or parallel experiment executions.
-- Addition of [ChaosCenter](../getting-started/resources.md#chaoscenter) where you can take advantage of all these features and a lot more
-  - Chaos Scenario Creation
-    <span style={{color: '#696F8C'}}>
-    <ul>
-    <li>From Templates, Custom Chaos Scenarios from Scratch (using ChaosHubs), From pre-created YAMLs</li>
-    <li>Chaos Experiments Sequence Control (Parallel as well as Sequential steps creation)</li>
-    <li>Creation of either Singular or Cron Chaos Scenarios as Schedules</li>
-    <li>Attaching priority to Chaos Experiments based on your use cases</li>
-    </ul>
-    </span>
-  - Users & Teams
-    <span style={{color: '#696F8C'}}>
-    <ul>
-    <li>Creation of <a href="../concepts/user-management">Users</a> with Role Based Access Control</li>
-    <li>Creating a <a href="../concepts/teaming" >Team</a> of multiple Users</li>
-    <li>Authenticating Users</li>
-    </ul>
-    </span>
-  - Chaos Scenario Management
-    <span style={{color: '#696F8C'}}>
-    <ul>
-    <li>Rolling out automated changes using <a href="../concepts/gitops" >GitOps</a></li>
-    <li>Allowing image addition from custom image server (both public and private)</li>
-    <li>Measure and Analyse the Resilience Score of each chaos scenario</li>
-    </ul>
-    </span>
+Here's a summary of the major highlights of LitmusChaos 3.0:
+- **Redefined User Experience**
+  - Complete transformation of the user interface (UI) for a sleek and intuitive experience.
+  - Leveraging the Harness UIcore library to provide an even smoother user journey.
 
-Litmus itself is composed of microservices. And we made sure that by adding the above features for 2.0, seamlessly integrates the additional microservices in conjunction with the existing one. Litmus 2.0 is completely backwards compatible. No features are deprecated.
+- **Introduction to Environments**
+  - Empowers users to efficiently manage their Chaos Infrastructures.
+  - Helps categorize and compartmentalize chaos experiments for better organization and collaboration.
 
-The migration path is about constructing new artifacts such as Chaos Scenarios that include the current chaos experiments in use by the users.
+- **Chaos Studio**
+  - Simplifies the adjustment of chaos parameters and configurations.
+  - Eliminates complex setup procedures, making chaos engineering more accessible to all users.
+  - Streamlines the process of fine-tuning chaos experiments.
 
-## Feature Comparison between 1.x and 2.0
+- **Resilience Probes**
+  - Resilience probes now support a plug-and-play architecture.
+  - Users can create probes once and utilize them repeatedly across various experiments.
+  - Comprehensive support for steady-state validation enhances system resilience.
+  - Helps users assess the robustness of their applications more effectively.
 
-Below is a high level comparison between Litmus 1.x and Litmus 2.0 providing a holistic view of the feature additions you get in Litmus 2.0.
+- **MongoDB High Availability Support**
+  - Users can now install MongoDB Replicas via Helm using Bitnami Mongo.
+  - Seamless integration of chaos engineering into MongoDB infrastructure.
+  - Uncover weaknesses and improve the overall reliability of MongoDB setups.
 
-| Litmus 1.x           | Litmus 2.0                            |
-| -------------------- | ------------------------------------- |
-| Experiments          | Chaos Scenarios                       |
-| Per user             | Teams (Multi Tenant)                  |
-| Per cluster          | Per organisation (Cross Cloud)        |
-| Only Public ChaosHub | Public and Private ChaosHubs          |
-| CLI only             | CLI and GUI                           |
-|                      | GitOps                                |
-|                      | Scalability                           |
-|                      | Integrated and Interleaved monitoring |
+- **Terminology Changes**
+  - A refinement of terminology for improved clarity and consistency.
+  - **Chaos Agents/Delegates** are now referred to as **Chaos Infrastructures**.
+  - **Chaos Scenarios/Workflows** have been simplified to **Chaos Experiments**.
+  - **Chaos Experiments** are now called **Chaos Faults**.
+
+- **API Refactoring and Enhanced Code Architecture**
+  - Under-the-hood refactors and improvements in code architecture.
+  - Addition of backend unit tests to enhance code reliability.
+  - These technical enhancements make it easier for developers to contribute to the LitmusChaos ecosystem.
+  - Improved code quality and maintainability for the project.
+
+Litmus itself is composed of microservices. And we made sure that by adding the above features for 3.0, seamlessly integrates the additional microservices in conjunction with the existing one. Litmus 3.0 is completely backwards compatible. No features are deprecated.
+
+The migration path is about constructing new artifacts such as Chaos Experiments that include the current chaos experiments in use by the users.
+
+## Feature revision across Litmus 1.x, 2.x and 3.0
+
+Litmus 3.0 culminates as well as enhances the features rolled-out through Litmus 1.x and 2.x. Below is a bird's eye view of all the enhancements made through the three major releases:
+
+| Litmus 1.x           | Litmus 2.x                            | Litmus 3.0                 |
+| -------------------- | ------------------------------------- | -------------------------- |
+| Experiments          | Chaos Experiments                     | Revamped and simplified UX |
+| Per user             | Teams (Multi Tenant)                  | Environments               |
+| Per cluster          | Per organisation (Cross Cloud)        | Chaos Studio               |
+| Only Public ChaosHub | Public and Private ChaosHubs          | Resilience probes          |
+| CLI only             | CLI and GUI                           | Mongo DB Replicas          |
+|                      | GitOps                                | Refactored APIs            |
+|                      | Scalability                           |                            |
+|                      | Integrated and Interleaved monitoring |                            |
 
 ## Learn more
-
-- [Run your first chaos scenario in 5 minutes](../getting-started/run-your-first-experiment.md)
+- [Run your first chaos experiment](../getting-started/run-your-first-experiment.md)
 - [Install Litmus](../getting-started/installation.md)
-- [Visualize Chaos Scenarios](../concepts/visualize-experiment.md)
+- [Visualize Chaos Experiments](../concepts/visualize-experiment.md)
 - Chaos Schedule
 - [View the different User Guides](../user-guides/overview.md)
