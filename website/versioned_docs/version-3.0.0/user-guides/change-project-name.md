@@ -14,23 +14,23 @@ The concept of `Projects` is discussed [here](../concepts/projects.md) and will 
 
 ## Steps
 
-### 1. Go to `My Project`
+### 1. Go to `Account setting`
 
-Go to the `Team` section of settings and scroll to the `My project` section:
+Go to the `Overview` section of settings and scroll to the `Your Projects` section:
 
 <img src={require('../assets/user-guides/managing-projects/change-project-name/step-1.png').default} width="1000" height="500" />
 
 ### 2. Enter edit mode
 
-Click on either the text (demonstrated in this example as `admin’s project`) or on the edit icon next to it to enter the edit mode:
+Click options icon to open the options menu and click on the edit option (demonstrated in this example as `admin-project`) to enter the edit mode:
 
-<img src={require('../assets/user-guides/managing-projects/change-project-name/step-2.png').default} width="1000" height="500" />
+<img src={require('../assets/user-guides/managing-projects/change-project-name/step-2.png').default} />
 
 ### 3. Replace name
 
-Once in the editing mode, type out the name you want to replace the current name with, and click away anywhere in the screen. You will notice that the name of the project has been changed in the `My Project` section as well as the header of the portal.
+Once in the editing mode, type out the name you want to replace the current name with, and click on the `Confirm` button.
 
-<img src={require('../assets/user-guides/managing-projects/change-project-name/step-3.png').default} width="1000" height="500" />
+<img src={require('../assets/user-guides/managing-projects/change-project-name/step-3.png').default} />
 
 ## Learn more
 

@@ -1,11 +1,7 @@
 {
   "docs": [
     {
-      "Introduction": [
-        "introduction/what-is-litmus",
-        "introduction/usage",
-        "introduction/core-principles"
-      ]
+      "Introduction": ["introduction/what-is-litmus", "introduction/usage", "introduction/core-principles"]
     },
     {
       "Getting Started": [
@@ -21,42 +17,16 @@
         "architecture/architecture-summary",
         "architecture/chaos-control-plane",
         "architecture/chaos-execution-plane",
-        "architecture/chaos-experiment-flow",
-        {
-          "Chaos Observability Flow": [
-            "architecture/chaos-observability-flow-overview",
-            "architecture/chaos-observability-flow-visualization",
-            "architecture/chaos-observability-flow-logging",
-            "architecture/chaos-observability-flow-monitoring",
-            "architecture/chaos-observability-flow-summarisation",
-            "architecture/chaos-observability-flow-analytics"
-          ]
-        }
+        "architecture/chaos-experiment-flow"
       ]
     },
     {
       "Concepts": [
         "concepts/overview",
-        "concepts/chaos-experiment",
-        "concepts/probes",
-        "concepts/chaos-engine",
-        "concepts/chaos-result",
+        "concepts/chaos-infrastructure",
         "concepts/chaoshub",
-        "concepts/environments",
-        {
-          "Chaos Experiments": [
-            "concepts/chaos-experiment",
-            "concepts/visualize-experiment"
-          ]
-        },
-        {
-          "Observability": [
-            "concepts/workflow-statistics",
-            "concepts/app-infra-monitoring",
-            "concepts/datasource",
-            "concepts/open-observability"
-          ]
-        },
+        "concepts/chaos-workflow",
+        "concepts/probes",
         "concepts/user-management",
         "concepts/projects",
         "concepts/teaming",
@@ -86,11 +56,18 @@
             "user-guides/schedule-experiment",
             "user-guides/observe-experiment",
             "user-guides/edit-schedule",
-            "user-guides/save-as-template",
             "user-guides/download-experiment-manifest",
             "user-guides/re-run-experiment",
             "user-guides/delete-experiment",
             "user-guides/construct-experiment"
+          ]
+        },
+        {
+          "Resilience Probes": [
+            "user-guides/create-resilience-probe",
+            "user-guides/delete-resilience-probe",
+            "user-guides/edit-resilience-probe",
+            "user-guides/view-resilience-probe"
           ]
         },
         "user-guides/account-settings",
@@ -103,10 +80,7 @@
           ]
         },
         {
-          "Managing Projects": [
-            "user-guides/change-project-name",
-            "user-guides/leave-project"
-          ]
+          "Managing Projects": ["user-guides/change-project-name", "user-guides/leave-project"]
         },
         {
           "Teaming": [
@@ -118,29 +92,17 @@
         },
         "user-guides/gitops-configuration",
         "user-guides/image-registry",
-        "user-guides/uninstall-litmus",
-        "user-guides/upgrade"
+        "user-guides/uninstall-litmus"
       ]
     },
     {
-      "Litmusctl": [
-        "litmusctl/installation",
-        {
-          "Connect Infrastructure": [
-            "litmusctl/usage-non-interactive-mode",
-            "litmusctl/usage-interactive-mode"
-          ]
-        },
-        "litmusctl/chaos-experiment-creation"
-      ]
+      "Litmusctl": ["litmusctl/installation", "litmusctl/litmusctl-usage"]
     },
     {
-      "Integrations": [
-        "integrations/prometheus",
-        "integrations/grafana"
-      ]
+      "Integrations": ["integrations/prometheus", "integrations/grafana"]
     },
     "troubleshooting",
+    "glossary",
     "faq"
   ]
 }

@@ -15,7 +15,7 @@ A basic chaos scenario consists of these steps:
 
 ## Before we begin
 
-To construct a Chaos Scenario without ChaosCenter, make sure you are aware of [Chaos Scenario](../concepts/chaos-workflow.md), [ChaosEngine CR](../concepts/chaos-engine.md) and the different steps present in it.
+To construct a Chaos Scenario without ChaosCenter, make sure you are aware of [Chaos Scenario](../concepts/chaos-workflow.md), [ChaosEngine CR](../glossary.md) and the different steps present in it.
 
 ## Steps to Construct a Chaos Scenario
 
@@ -125,7 +125,7 @@ spec:
                     name: pod-delete
                     app.kubernetes.io/part-of: litmus
                     app.kubernetes.io/component: chaosexperiment
-                    app.kubernetes.io/version: 1.13.8
+                    app.kubernetes.io/version: 3.0.0
                 spec:
                   definition:
                     scope: Namespaced
@@ -162,7 +162,7 @@ spec:
                           - update
                           - delete
                           - deletecollection
-                    image: litmuschaos/go-runner:1.13.8
+                    image: litmuschaos/go-runner:3.0.0
                     imagePullPolicy: Always
                     args:
                       - -c
@@ -190,7 +190,7 @@ spec:
                       name: pod-delete
                       app.kubernetes.io/part-of: litmus
                       app.kubernetes.io/component: experiment-job
-                      app.kubernetes.io/version: 1.13.8
+                      app.kubernetes.io/version: 3.0.0
       container:
         args:
           - kubectl apply -f /tmp/pod-delete.yaml -n
@@ -272,4 +272,3 @@ spec:
 ## Learn More
 
 - [What are the different Probes](../concepts/probes.md)
-- [What is ChaosResult](../concepts/chaos-result.md)

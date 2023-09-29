@@ -6,31 +6,47 @@ sidebar_label: Account Settings
 
 ---
 
-Under the `My Account` tab, you can change your personal details such as the email, full name, and password.
+Under the account settings, you can change your personal details such as the email, name, and password.
 
 > Note: The username can’t be changed as it is unique.
 
+To navigate to the accounts page, click on the user avatar on the bottom left of the nav-bar:
+
+<figure>
+<img src={require('../assets/user-guides/my-account/step-1.png').default} alt="avatar nav" />
+</figure>
+
 ## Edit Personal Details
 
-Enter your name and your email address in the following text fields and click on the `Save Changes` button.
+Click the edit icon to open the edit modal:
 
-<img src={require('../assets/user-guides/my-account/step-1.png').default} width="1000" height="500" />
+<figure>
+<img src={require('../assets/user-guides/my-account/step-2.png').default} alt="edit icon" />
+</figure>
 
-Once done successfully, you’ll be getting a modal indicating a successful completion of the operation.
+Enter your name and your email address in the following text fields and click on the `Confirm` button to save the new details.
 
-<img src={require('../assets/user-guides/my-account/step-2.png').default} width="1000" height="500" />
+<figure>
+<img src={require('../assets/user-guides/my-account/step-3.png').default} alt="edit information" />
+</figure>
 
 ## Change Password
 
-On the same page, you can change your password by providing your current as well as your new password and then click on the `Change Password` button.
+On the same page, you can change your password by clicking on the `Change Password` button.
 
-<img src={require('../assets/user-guides/my-account/step-3.png').default} width="1000" height="500" />
+<figure>
+<img src={require('../assets/user-guides/my-account/step-4.png').default} alt="edit information" />
+</figure>
+
+To update your password enter your current password as well as the new password you wish to set and click **Confirm**
+
+<figure>
+<img src={require('../assets/user-guides/my-account/step-5.png').default} alt="edit information" />
+</figure>
 
 > Note: If you have forgotten your password, please contact your admin to reset your password
 
-On successful completion, you’ll be getting a modal indicating that the password has been changed.
-
-<img src={require('../assets/user-guides/my-account/step-4.png').default} width="1000" height="500" />
+On successful completion, you will be logged out and asked to re-login with you new password.
 
 ## Learn more
 
