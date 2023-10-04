@@ -12,10 +12,9 @@ LitmusChaos facilitates real-time monitoring for events and metrics using it’s
 
 The following should be required before integrating Prometheus in litmus 2.0:
 
-- [Running Chaos Scenarios](../getting-started/run-your-first-workflow.md)
+- [Running Chaos Scenarios](../getting-started/run-your-first-experiment.md)
 - [Prometheus TSDB](https://prometheus.io/)
 - [Probes](../concepts/probes.md)
-- [Data source](../concepts/datasource.md)
 
 ## Prometheus deployment with scrape job
 
@@ -200,7 +199,6 @@ Know more on promProbe [here](../concepts/probes.md)
 
 ## Learn More
 
-- [Application and infrastructure monitoring](../concepts/app-infra-monitoring.md)
 - [Observability Setup](../user-guides/observability-set-up.md)
 - [Configure Data Source](../user-guides/configure-datasource.md)
 - [Grafana Integration](grafana.md)

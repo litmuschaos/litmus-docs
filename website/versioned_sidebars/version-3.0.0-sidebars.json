@@ -80,7 +80,10 @@
           ]
         },
         {
-          "Managing Projects": ["user-guides/change-project-name", "user-guides/leave-project"]
+          "Managing Projects": [
+            "user-guides/change-project-name",
+            "user-guides/leave-project"
+          ]
         },
         {
           "Teaming": [
@@ -96,10 +99,16 @@
       ]
     },
     {
-      "Litmusctl": ["litmusctl/installation", "litmusctl/litmusctl-usage"]
+      "Litmusctl": [
+        "litmusctl/installation",
+        "litmusctl/litmusctl-usage"
+      ]
     },
     {
-      "Integrations": ["integrations/prometheus", "integrations/grafana"]
+      "Integrations": [
+        "integrations/prometheus",
+        "integrations/grafana"
+      ]
     },
     "troubleshooting",
     "glossary",

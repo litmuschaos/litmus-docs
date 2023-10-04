@@ -8,10 +8,6 @@ sidebar_label: Setup Data source
 
 This guide provides sample scrape job to be used for Prometheus deployment’s scrape-configmap and service monitors to be used with Prometheus operator for the different architectural topologies for integrating Prometheus (connecting a data source link) with Chaos center.
 
-### Before you begin
-
-To setup a data source for a chaos center project, you must know about [open observability](../concepts/open-observability.md) and [data source considerations](../concepts/datasource.md) in Litmus 2.0
-
 ### Topologies
 
 Listed below are three among many topologies in which a data source can be setup for collecting chaos delegate cluster's metrics along with chaos metrics for chaos center.

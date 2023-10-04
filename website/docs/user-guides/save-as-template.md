@@ -10,7 +10,7 @@ You can save a schedule as a template for later usage in subsequent schedules. T
 
 ## Before you begin
 
-You can learn how to schedule your first chaos scenario [here](schedule-workflow.md).
+You can learn how to schedule your first chaos scenario [here](schedule-experiment.md).
 
 ## 1. Go to the chaos scenarios sections
 
@@ -38,6 +38,6 @@ You can now see your template under the `Create a new chaos scenario by cloning 
 
 ## Learn more
 
-- [Schedule a chaos scenario](schedule-workflow.md)
-- [Re-run a chaos scenario](re-run-workflow.md)
-- [Delete a chaos scenario](delete-workflow.md)
+- [Schedule a chaos scenario](schedule-experiment.md)
+- [Re-run a chaos scenario](re-run-experiment.md)
+- [Delete a chaos scenario](delete-experiment.md)
