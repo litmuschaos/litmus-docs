@@ -1,14 +1,7 @@
 {
   "docs": [
     {
-      "Introduction": [
-        "introduction/what-is-litmus",
-        "introduction/features",
-        "introduction/usage",
-        "introduction/core-principles",
-        "introduction/community",
-        "introduction/other-links"
-      ]
+      "Introduction": ["introduction/what-is-litmus", "introduction/features", "introduction/usage", "introduction/core-principles", "introduction/community", "introduction/other-links"]
     },
     {
       "Getting Started": [
