@@ -33,17 +33,6 @@ A high-level feature overview of Litmus 2.0 are as follows
     <li>Authenticating Users</li>
     </ul>
     </span>
-  - Monitoring & Observability
-    <span style={{color: '#696F8C'}}>
-    <ul>
-    <li><a href="../concepts/datasource">Connect a Data Source</a> (from any Chaos Delegate) and monitor Chaos Scenarios</li>
-    <li>Visualize chaos scenario run statistics and aggregated schedules</li>
-    <li>Compare two or more Chaos Scenarios</li>
-    <li>Upload shared/downloadable dashboards available in the community</li>
-    <li>Edit queries, Tune dashboards to create a custom one from scratch</li>
-    <li>Monitor effect of chaos in real time with interleaved events and metrics from Prometheus Datasource</li>
-    </ul>
-    </span>
   - Chaos Scenario Management
     <span style={{color: '#696F8C'}}>
     <ul>
@@ -74,9 +63,8 @@ Below is a high level comparison between Litmus 1.x and Litmus 2.0 providing a h
 
 ## Learn more
 
-- [Run your first chaos scenario in 5 minutes](../getting-started/run-your-first-workflow.md)
+- [Run your first chaos scenario in 5 minutes](../getting-started/run-your-first-experiment.md)
 - [Install Litmus](../getting-started/installation.md)
-- [Visualize Chaos Scenarios](../concepts/visualize-workflow.md)
+- [Visualize Chaos Scenarios](../concepts/visualize-experiment.md)
 - Chaos Schedule
-- [Monitoring](../concepts/app-infra-monitoring.md)
 - [View the different User Guides](../user-guides/overview.md)

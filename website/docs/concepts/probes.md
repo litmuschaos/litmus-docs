@@ -1,16 +1,16 @@
 ---
 id: probes
-title: Probes
-sidebar_label: Probes
+title: Resilience Probes
+sidebar_label: Resilience Probes
 ---
 
 ---
 
-In Litmus, Probes are pluggable checks that can be defined within the ChaosEngine for any Chaos Experiment. The experiment pods execute these checks based on the mode they are defined in & factor their success as necessary conditions in determining the verdict of the experiment (along with the standard `in-built` checks).
+Resilience Probes are pluggable checks that can be defined within the ChaosEngine for any Chaos Experiment. The fault pods execute these checks based on the mode they are defined in & factor their success as necessary conditions in determining the verdict of the fault (along with the standard `in-built` checks).
 
 ## Prerequisites
 
-To understand the concepts of Probes better make sure you are aware of the [ChaosEngine](chaos-engine.md) Custom Resources and promql queries (for Prometheus Probes)
+To understand the concepts of Probes better make sure you are aware of the [ChaosEngine](glossary.md) Custom Resources and promql queries (for Prometheus Probes)
 
 ## Probes
 
@@ -38,10 +38,10 @@ Some common attributes shared between the Probes:
 - **interval**: The period between subsequent retries
 - **probePollingInterval**: The time interval for which continuous probe should be sleep after each iteration
 - **initialDelaySeconds**: Represents the initial waiting time interval for the probes.
-- **stopOnFailure**: It can be set to true/false to stop or continue the experiment execution after probe fails
+- **stopOnFailure**: It can be set to true/false to stop or continue the fault execution after probe fails
 
 :::note
-If probe needs any additional RBAC permissions other than the experiment's serviceAccount `(<experiment-name>-sa)` permissions, then the additional permissions should be provided inside the corresponding Role/ClusterRole bind with the serviceAccount `(<experiment-name>-sa)`.
+If probe needs any additional RBAC permissions other than the fault's serviceAccount `(<fault-name>-sa)` permissions, then the additional permissions should be provided inside the corresponding Role/ClusterRole bind with the serviceAccount `(<fault-name>-sa)`.
 :::
 
 ---
@@ -50,11 +50,11 @@ If probe needs any additional RBAC permissions other than the experiment's servi
 
 ### httpProbe
 
-The `httpProbe` allows developers to specify a URL which the experiment uses to gauge health/service availability (or other custom conditions) as part of the entry/exit criteria. The received status code is mapped against an expected status. It supports http `Get` and `Post` methods.
+The `httpProbe` allows developers to specify a URL which the fault uses to gauge health/service availability (or other custom conditions) as part of the entry/exit criteria. The received status code is mapped against an expected status. It supports http `Get` and `Post` methods.
 
 In HTTP `Get` method it sends a http `GET` request to the provided url and matches the response code based on the given criteria(`==`, `!=`, `oneOf`).
 
-In HTTP `Post` method it sends a http `POST` request to the provided url. The http body can be provided in the `body` field. In the case of a complex POST request in which the body spans multiple lines, the `bodyPath` attribute can be used to provide the path to a file consisting of the same. This file can be made available to the experiment pod via a ConfigMap resource, with the ConfigMap name being defined in the [ChaosEngine](chaos-engine.md) OR the ChaosExperiment CR.
+In HTTP `Post` method it sends a http `POST` request to the provided url. The http body can be provided in the `body` field. In the case of a complex POST request in which the body spans multiple lines, the `bodyPath` attribute can be used to provide the path to a file consisting of the same. This file can be made available to the fault pod via a ConfigMap resource, with the ConfigMap name being defined in the [ChaosEngine](glossary.md) OR the ChaosExperiment CR.
 It can be defined at `.spec.experiments[].spec.probe` inside ChaosEngine.
 
 > `body` and `bodyPath` are mutually exclusive
@@ -87,7 +87,7 @@ The `httpProbe` is better used in the Continuous mode of operation as a parallel
 
 The `cmdProbe` allows developers to run shell commands and match the resulting output as part of the entry/exit criteria. The intent behind this probe was to allow users to implement a non-standard & imperative way for expressing their hypothesis. For example, the cmdProbe enables you to check for specific data within a database, parse the value out of a JSON blob being dumped into a certain path or check for the existence of a particular string in the service logs.
 
-In order to enable this behaviour, the probe supports an inline mode in which the command is run from within the experiment image as well as a source mode, where the command execution is carried out from within a new pod whose image can be specified. While inline is preferred for simple shell commands, source mode can be used when application-specific binaries are required. The cmdProbe can be defined at `.spec.experiments[].spec.probe` the path inside the ChaosEngine.
+In order to enable this behaviour, the probe supports an inline mode in which the command is run from within the fault image as well as a source mode, where the command execution is carried out from within a new pod whose image can be specified. While inline is preferred for simple shell commands, source mode can be used when application-specific binaries are required. The cmdProbe can be defined at `.spec.experiments[].spec.probe` the path inside the ChaosEngine.
 
 ```yaml
 probe:
@@ -99,7 +99,7 @@ probe:
         type: 'string' # supports: string, int, float
         criteria: 'contains' #supports >=,<=,>,<,==,!= for int and contains,equal,notEqual,matches,notMatches for string values
         value: '<value-for-criteria-match>'
-      source:  # omit this tag to "inline" the probe
+      source: # omit this tag to "inline" the probe
         image: '<repo>/<tag>'
         hostNetwork: false
     mode: 'Edge'
@@ -114,7 +114,7 @@ probe:
 
 ### k8sProbe
 
-With the proliferation of custom resources & operators, especially in the case of stateful applications, the steady-state is manifested as status parameters/flags within Kubernetes resources. k8sProbe addresses verification of the desired resource state by allowing users to define the Kubernetes GVR (group-version-resource) with appropriate filters (field selectors/label selectors). The experiment makes use of the Kubernetes Dynamic Client to achieve this.The `k8sProbe` can be defined at `.spec.experiments[].spec.probe` the path inside ChaosEngine.
+With the proliferation of custom resources & operators, especially in the case of stateful applications, the steady-state is manifested as status parameters/flags within Kubernetes resources. k8sProbe addresses verification of the desired resource state by allowing users to define the Kubernetes GVR (group-version-resource) with appropriate filters (field selectors/label selectors). The fault makes use of the Kubernetes Dynamic Client to achieve this.The `k8sProbe` can be defined at `.spec.experiments[].spec.probe` the path inside ChaosEngine.
 
 It supports following CRUD operations which can be defined at probe.k8sProbe/inputs.operation.
 
@@ -144,9 +144,9 @@ probe:
 
 ### **promProbe**
 
-The `promProbe` allows users to run Prometheus queries and match the resulting output against specific conditions. The intent behind this probe is to allow users to define metrics-based SLOs in a declarative way and determine the experiment verdict based on its success. The probe runs the query on a Prometheus server defined by the `endpoint`, and checks whether the output satisfies the specified `criteria`.
+The `promProbe` allows users to run Prometheus queries and match the resulting output against specific conditions. The intent behind this probe is to allow users to define metrics-based SLOs in a declarative way and determine the fault verdict based on its success. The probe runs the query on a Prometheus server defined by the `endpoint`, and checks whether the output satisfies the specified `criteria`.
 
-The promql query can be provided in the `query` field. In the case of complex queries that span multiple lines, the `queryPath` attribute can be used to provide the link to a file consisting of the query. This file can be made available in the experiment pod via a ConfigMap resource, with the ConfigMap being passed in the ChaosEngine OR the ChaosExperiment CR.
+The promql query can be provided in the `query` field. In the case of complex queries that span multiple lines, the `queryPath` attribute can be used to provide the link to a file consisting of the query. This file can be made available in the fault pod via a ConfigMap resource, with the ConfigMap being passed in the ChaosEngine OR the ChaosExperiment CR.
 
 > **NOTE:** `query` and `queryPath` are mutually exclusive.
 
@@ -173,9 +173,9 @@ probe:
 
 ## Probe Status & Deriving Inferences
 
-The litmus chaos experiments run the probes defined in the ChaosEngine and update their stage-wise success in the ChaosResult custom resource, with details including the overall `probeSuccessPercentage` (a ratio of successful checks v/s total probes) and failure step, where applicable. The success of a probe is dependent on whether the expected status/results are met and also on whether it is successful in all the experiment phases defined by the probe’s execution mode. For example, probes that are executed in “Edge” mode, need the checks to be successful both during the pre-chaos & post-chaos phases to be declared as successful.
+The litmus chaos faults run the probes defined in the ChaosEngine and update their stage-wise success in the ChaosResult custom resource, with details including the overall `probeSuccessPercentage` (a ratio of successful checks v/s total probes) and failure step, where applicable. The success of a probe is dependent on whether the expected status/results are met and also on whether it is successful in all the fault phases defined by the probe’s execution mode. For example, probes that are executed in “Edge” mode, need the checks to be successful both during the pre-chaos & post-chaos phases to be declared as successful.
 
-The pass criteria for an experiment is the logical conjunction of all probes defined in the ChaosEngine and an inbuilt entry/exit criteria. Failure of either indicates a failed hypothesis and is deemed experiment failure.
+The pass criteria for a fault is the logical conjunction of all probes defined in the ChaosEngine and an inbuilt entry/exit criteria. Failure of either indicates a failed hypothesis and is deemed fault failure.
 
 Provided below is a ChaosResult snippet containing the probe status for a mixed-probe ChaosEngine.
 
@@ -230,7 +230,7 @@ Events:
 
 ## Probe Chaining
 
-Probe chaining enables reuse of probe a result represented by the template function `{{ .<probeName>.probeArtifact.Register}})` in subsequent "downstream" probes defined in the ChaosEngine. Note that the order of execution of probes in the experiment depends purely on the order in which they are defined in the ChaosEngine.
+Probe chaining enables reuse of probe a result represented by the template function `{{ .<probeName>.probeArtifact.Register}})` in subsequent "downstream" probes defined in the ChaosEngine. Note that the order of execution of probes in the fault depends purely on the order in which they are defined in the ChaosEngine.
 
 Probe chaining is currently supported only for `cmdProbes`.
 
@@ -622,7 +622,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>.httpProbe/inputs.url</code> contains the URL which the experiment uses to gauge health/service availability (or other custom conditions) as part of the entry/exit criteria.</td>
+  <td>The <code>.httpProbe/inputs.url</code> contains the URL which the fault uses to gauge health/service availability (or other custom conditions) as part of the entry/exit criteria.</td>
 </tr>
 </table>
 
@@ -783,7 +783,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>.httpProbe/inputs.method.post.bodyPath</code> This field is used in case of complex POST request in which the body spans multiple lines, the bodyPath attribute can be used to provide the path to a file consisting of the same. This file can be made available to the experiment pod via a ConfigMap resource, with the ConfigMap name being defined in the ChaosEngine OR the ChaosExperiment CR.</td>
+  <td>The <code>.httpProbe/inputs.method.post.bodyPath</code> This field is used in case of complex POST request in which the body spans multiple lines, the bodyPath attribute can be used to provide the path to a file consisting of the same. This file can be made available to the fault pod via a ConfigMap resource, with the ConfigMap name being defined in the ChaosEngine OR the ChaosExperiment CR.</td>
 </tr>
 </table>
 
@@ -900,7 +900,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>.promProbe/inputs.queryPath</code> This field is used in case of complex queries that spans multiple lines, the queryPath attribute can be used to provide the path to a file consisting of the same. This file can be made available to the experiment pod via a ConfigMap resource, with the ConfigMap name being defined in the ChaosEngine OR the ChaosExperiment CR.</td>
+  <td>The <code>.promProbe/inputs.queryPath</code> This field is used in case of complex queries that spans multiple lines, the queryPath attribute can be used to provide the path to a file consisting of the same. This file can be made available to the fault pod via a ConfigMap resource, with the ConfigMap name being defined in the ChaosEngine OR the ChaosExperiment CR.</td>
 </tr>
 </table>
 
@@ -1028,7 +1028,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Description</th>
-  <td> Flags to hold the stop or continue the experiment on probe failure</td>
+  <td> Flags to hold the stop or continue the fault on probe failure</td>
 </tr>
 <tr>
   <th>Type</th>
@@ -1040,7 +1040,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>.runProperties.stopOnFailure</code> can be set to true/false to stop or continue the experiment execution after probe fails</td>
+  <td>The <code>.runProperties.stopOnFailure</code> can be set to true/false to stop or continue the fault execution after probe fails</td>
 </tr>
 </table>
 
@@ -1115,19 +1115,21 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 </table>
 
-## Resources
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bocVdb7mjO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ## Summary
 
-Probes are pluggable checks that can be defined within the ChaosEngine for any Chaos Experiment. There are four kinds of probes `httpProbe` (allows developers to specify a URL which the experiment uses to gauge health/service availability as part of the entry/exit criteria), `cmdProbe` (allows developers to run shell commands and match the resulting output as part of the entry/exit criteria), `k8sProbe` (addresses verification of the desired resource state by allowing users to define the Kubernetes GVR with appropriate filters) and `promProbe` (allows users to run Prometheus queries and match the resulting output against specific conditions).
+Probes are pluggable checks that can be defined within the ChaosEngine for any Chaos Experiment. There are four kinds of probes `httpProbe` (allows developers to specify a URL which the fault uses to gauge health/service availability as part of the entry/exit criteria), `cmdProbe` (allows developers to run shell commands and match the resulting output as part of the entry/exit criteria), `k8sProbe` (addresses verification of the desired resource state by allowing users to define the Kubernetes GVR with appropriate filters) and `promProbe` (allows users to run Prometheus queries and match the resulting output against specific conditions).
 
-The different modes these probes can be used in are `SoT`, `EoT`, `Edge`, `Continuous` and `OnChaos`. The litmus chaos experiments run the probes defined in the ChaosEngine and update their stage-wise success in the ChaosResult custom resource with `probeSuccessPercentage`. A `probeSuccessPercentage` is the ratio of successful checks v/s total probes.
+The different modes these probes can be used in are `SoT`, `EoT`, `Edge`, `Continuous` and `OnChaos`. The litmus chaos faults run the probes defined in the ChaosEngine and update their stage-wise success in the ChaosResult custom resource with `probeSuccessPercentage`. A `probeSuccessPercentage` is the ratio of successful checks v/s total probes.
 
-Probes can be Chained, Probe chaining enables reuse of probe, the order of execution of probes in the experiment depends purely on the order in which they are defined in the ChaosEngine.
+Probes can be Chained, Probe chaining enables reuse of probe, the order of execution of probes in the fault depends purely on the order in which they are defined in the ChaosEngine.
+
+:::note
+With the latest release of LitmusChaos 3.0.0:
+
+<li>The term <b>Chaos Experiment</b> has been changed to <b>Chaos Fault.</b> </li>
+<li>The term <b>Chaos Scenario/Workflow</b> has been changed to <b>Chaos Experiment.</b></li>
+:::
 
 ## Learn more
 
-- [Explore the ChaosResult Custom Resource](chaos-result.md)
-- [Explore the ChaosEngine Custom Resource](chaos-engine.md)
+- [Explore the Custom Resources](glossary.md)

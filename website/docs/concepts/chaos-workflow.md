@@ -1,33 +1,38 @@
 ---
 id: chaos-workflow
-title: Chaos Scenario
-sidebar_label: Chaos Scenario
+title: Chaos Experiment
+sidebar_label: Chaos Experiment
 ---
 
 ---
 
-**Chaos Scenario** is a set of different operations coupled together to achieve desired chaos impact on a Kubernetes Cluster. <br/>
+**Chaos Experiment** is a set of different operations coupled together to achieve desired chaos impact on a Kubernetes Cluster. <br/>
 It is useful in automating a series of pre-conditioning steps or action which is necessary to be performed before triggering the chaos injection.<br/>
-A Chaos Scenario can also be used to perform different operations parallelly to achieve a desired chaos injection scenario.
+A Chaos Experiment can also be used to perform different operations parallelly to achieve a desired chaos impact.
+
+:::note
+With the latest release of LitmusChaos 3.0.0:
+
+<li>The term <b>Chaos Experiment</b> has been changed to <b>Chaos Fault.</b> </li>
+<li>The term <b>Chaos Scenario/Workflow</b> has been changed to <b>Chaos Experiment.</b></li>
+:::
 
 ## Prerequisites
 
-The following should be required before creating a Chaos Scenario:
+The following should be required before creating a Chaos Experiment:
 
 - [ChaosCenter](../getting-started/resources.md#chaoscenter)
-- [Chaos Delegate](../getting-started/resources.md#chaosagents)
-- [Chaos Experiment CR](chaos-experiment.md)
-- [ChaosEngine CR](chaos-engine.md)
+- [Chaos Infrastructure](../getting-started/resources.md#chaosagents)
 - [Probes](probes.md)
 
-## How do we define and execute a Chaos Scenario ?
+## How do we define and execute a Chaos Experiment ?
 
-LitmusChaos leverages the popular chaos scenario and GitOps tool **Argo** to achieve this goal. Argo enables the creation of different chaos scenarios together in from of chaos scenarios which are extremly simple and efficient to use.<br/>
-With the help of **ChaosCenter**, chaos scenarios with different type of experiments can be created. In a Chaos Scenario, the experiments can be added in a parallel way and the user can tune the chaos scenario by adding additional steps to simulate a desired fault that might occur in production stage.
+LitmusChaos leverages the popular GitOps tool **Argo** to achieve this goal. Argo enables the creation of different chaos experiments together in form of chaos experiments which are extremely simple and efficient to use.<br/>
+With the help of **ChaosCenter**, chaos experiments with different types of faults can be created. In a Chaos Experiment, the faults can be set to execute in parallel to each other and the user can tune the chaos experiment by adding additional steps to simulate a desired fault that might occur in the production stage.
 
-### Life Cycle of a Chaos Scenario
+### Life Cycle of a Chaos Experiment
 
-Here is a sample pod-delete chaos scenario from ChaosCenter.
+Here is a sample pod-delete chaos experiment from ChaosCenter.
 
 ```yaml
 apiVersion: argoproj.io/v1alpha1
@@ -204,10 +209,10 @@ spec:
     strategy: OnWorkflowCompletion
 ```
 
-The structure of a chaos scenario is similar to that of a Kubernetes Object. It consists of the mandatory fields like `apiVersion`, `kind`, `metadata`, `spec`.
+The structure of a chaos experiment is similar to that of a Kubernetes Object. It consists of mandatory fields like `apiVersion`, `kind`, `metadata`, `spec`.
 
-The **spec** in a Chaos Scenario is where the different steps are mentioned and the overall life cycle of the chaos scenario is described.
-We can see different `templates` are present in the spec of a chaos scenario.
+The **spec** in a Chaos Experiment is where the different steps are mentioned and the overall life cycle of the chaos experiment is described.
+We can see different `templates` are present in the spec of a chaos experiment.
 
 ```
 templates:
@@ -222,20 +227,20 @@ templates:
 ```
 
 Here in this template, we can see different steps are present.
-These include installing the chaos experiments, executing the chaos engine of the experiment and at the end we have the revert chaos step which deletes/removes the resources that were created as part of the chaos scenario.
+These include installing the chaos faults, executing the chaos engine of the faults, and at the end we have the revert chaos step which deletes/removes the resources that were created as part of the chaos experiment.
 
-Some additional checks can be added with the experiments in the form of probes. These probes are defined in the ChaosEngines of the experiment and are updated when the experiment execution takes place.
-The overall chaos scenario result can be viewed with the ChaosResult CRD which contains the `verdict` and the `probeSuccessPercentage` (a ratio of successful checks v/s total probes).
+Some additional checks can be added with the faults in the form of probes. These probes are defined in the ChaosEngines of the faults and are updated when the fault execution takes place.
+The overall chaos experiment result can be viewed with the ChaosResult CRD which contains the `verdict` and the `probeSuccessPercentage` (a ratio of successful checks v/s total probes).
 
 ## What is a run?
 
-A chaos scenario run can be defined as single/one-time execution of the chaos scenario. There can be multiple runs of a single chaos scenario. If the chaos scenario consists of a cron syntax, it will run periodically according to the cron provided in the chaos scenario.
+A chaos experiment run can be defined as a single/one-time execution of the chaos experiment. There can be multiple runs of a single chaos experiment. If the chaos experiment consists of a cron syntax, it will run periodically according to the cron provided in the chaos experiment.
 
-## What is Resiliency Score?
+## What is Resilience Score?
 
-**Resiliency score** is the measure of how resilient is the chaos scenario when different chaos scenarios are performed on the Kubernetes System.
+**Resiliency score** is an overall measure of the resiliency of a system for a given chaos experiment, which is obtained upon executing the constituent experiment faults on that system.
 
-While creating a chaos scenario, certain weights are assigned to all the experiments present in the chaos scenario. These weights signify the priority/importance of the experiment. The higher the weight, the more significant is the experiment.
+While creating a chaos experiment, certain weights are assigned to all the faults present in the chaos experiment. These weights signify the priority/importance of the fault. The higher the weight, the more significant the fault is.
 
 In ChaosCenter, the weight priority is generally divided into three sections:
 
@@ -243,19 +248,19 @@ In ChaosCenter, the weight priority is generally divided into three sections:
 - 4-6: Medium Priority
 - 7-10: High Priority
 
-Once a weight has been assigned to the experiment, we look for the Probe Success Percentage for that experiment itself (Post Chaos) and calculate the total resilience result for that experiment as a multiplication of the weight given and the probe success percentage returned after the Chaos Run.
+Once a weight has been assigned to the fault, we look for the Probe Success Percentage for that fault itself (Post Chaos) and calculate the total resilience result for that fault as a multiplication of the weight given and the probe success percentage returned after the Chaos Run.
 
 ```
-Total Resilience for one single experiment = (Weight Given to that experiment * Probe Success Percentage)
-Overall Resilience Score = Total Test Result / Sum of the assigned weights of the experiments
+Total Resilience for one single fault = (Weight Given to that fault * Probe Success Percentage)
+Overall Resilience Score = Total Test Result / Sum of the assigned weights of the faults
 ```
 
-## What is a Cron Chaos Scenario?
+## What is a Cron Chaos Experiment?
 
-Cron Chaos Scenario is a type of chaos scenario that runs on a pre-defined schedule. It consists of a mandatory field `spec.schedule`. A cron syntax is provided in this field at which the chaos scenario execution takes
+Cron Chaos Experiment is a type of chaos experiment that runs on a pre-defined schedule. It consists of a mandatory field `spec.schedule`. A cron syntax is provided in this field at which the chaos experiment execution takes
 place.
 
-Here's a sample Cron Chaos Scenario for Podtato-Head application:
+Here's a sample Cron Chaos Experiment for Podtato-Head application:
 
 ```yaml
 apiVersion: argoproj.io/v1alpha1
@@ -391,17 +396,17 @@ spec:
   timezone: Asia/Calcutta
 ```
 
-In the above chaos scenario, we can see the cron syntax at `spec.schedule` is
+In the above chaos experiment, we can see the cron syntax at `spec.schedule` is
 
 ```
 spec:
   schedule: 10 0-23 * * *
 ```
 
-This means the chaos scenario will be executed at the 10th minute of every hour.
+This means the chaos experiment will be executed at the 10th minute of every hour.
 
-A chaos scenario can be changed into Cron Chaos Scenario from the ChaosCenter.
-While scheduling a chaos scenario, in the `Schedule` step, there are few options as part of Recurring Schedules. These include:
+A chaos experiment can be changed into Cron Chaos Experiment from the ChaosCenter.
+While scheduling a chaos experiment, in the `Schedule` step, there are few options as part of Recurring Schedules. These include:
 
 - Every hour
 - Every Day
@@ -410,17 +415,10 @@ While scheduling a chaos scenario, in the `Schedule` step, there are few options
 
 ## Summary
 
-Chaos Scenario is combination of different steps combined together to perfrom a specific chaos use-case on a Kubernetes system. These steps can include install experiment steps, ChaosEngine CR for target selection, revert-chaos steps etc. Chaos Scenarios can be scheduled for a later time with the help of Cron Chaos Scenarios.
-These chaos scenarios consist of a cron syntax that is used for scheduling a chaos scenario. Once the chaos scenario execution is completed, the resiliency of the targeted application is calculated. Several weights are assigned to different experiments in the chaos scenario. These weights are used along with the ProbeSuccessPercentage to find out the resiliency score.
-
-## Resources
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OuB3dS05DHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nqkq7pFI9mM?start=2779" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+A chaos experiment is a combination of different steps combined together to perform a specific chaos use-case on a Kubernetes system. These steps can include installing fault steps, ChaosEngine CR for target selection, revert-chaos steps, etc. Chaos Experiments can be scheduled for a later time with the help of Cron Chaos Experiments.
+These chaos experiments consist of a cron syntax that is used for scheduling a chaos experiment. Once the chaos experiment execution is completed, the resiliency of the targeted application is calculated. Several weights are assigned to different faults in the chaos experiment. These weights are used along with the ProbeSuccessPercentage to find out the resiliency score.
 
 ## Learn More
 
 - [Explore Probes](probes.md)
-- [Visualize a Chaos Scenario](visualize-workflow.md)
-- [Examine the ChaosResult](chaos-result.md)
+- [Visualize a Chaos Experiment](visualize-experiment.md)
