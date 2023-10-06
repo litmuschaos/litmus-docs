@@ -107,7 +107,8 @@
     {
       "Integrations": [
         "integrations/prometheus",
-        "integrations/grafana"
+        "integrations/grafana",
+        "integrations/backstage"
       ]
     },
     "troubleshooting",
