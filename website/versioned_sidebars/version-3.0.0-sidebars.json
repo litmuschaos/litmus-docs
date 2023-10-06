@@ -1,7 +1,14 @@
 {
   "docs": [
     {
-      "Introduction": ["introduction/what-is-litmus", "introduction/features", "introduction/usage", "introduction/core-principles", "introduction/community", "introduction/other-links"]
+      "Introduction": [
+        "introduction/what-is-litmus",
+        "introduction/features",
+        "introduction/usage",
+        "introduction/core-principles",
+        "introduction/community",
+        "introduction/other-links"
+      ]
     },
     {
       "Getting Started": [
@@ -17,7 +24,7 @@
         "architecture/architecture-summary",
         "architecture/chaos-control-plane",
         "architecture/chaos-execution-plane",
-        "architecture/chaos-experiment-flow"
+        "architecture/chaos-fault-flow"
       ]
     },
     {

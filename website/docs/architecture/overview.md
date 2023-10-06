@@ -20,10 +20,6 @@ Consists of micro-services responsible for the functioning of the ChaosCenter, t
 
 Contains the components required for the orchestration of chaos injection in the target resources.
 
-### [Chaos Experiment Flow](chaos-experiment-flow.md)
+### [Chaos Fault Flow](chaos-experiment-flow.md)
 
 Flow of information during the execution of Litmus chaos experiments, grouped into the categories such as pod-level, node-level, application-level, and public-cloud.
-
-### [Chaos Observability Flow](chaos-observability-flow-overview.md)
-
-Information flow for monitoring and observability during and post chaos using built-in Litmus analytics dashboard as well as external observability tools.

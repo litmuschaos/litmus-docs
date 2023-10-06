@@ -17,7 +17,7 @@ module.exports = {
         "architecture/architecture-summary",
         "architecture/chaos-control-plane",
         "architecture/chaos-execution-plane",
-        "architecture/chaos-experiment-flow"
+        "architecture/chaos-fault-flow"
       ]
     },
     {
