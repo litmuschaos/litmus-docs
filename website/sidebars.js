@@ -7,8 +7,6 @@ module.exports = {
       "Getting Started": [
         "getting-started/resources",
         "getting-started/installation",
-        "getting-started/run-your-first-experiment",
-        "getting-started/create-your-first-custom-chaos-experiment"
       ]
     },
     {
