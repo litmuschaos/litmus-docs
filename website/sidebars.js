@@ -57,6 +57,12 @@ module.exports = {
           ]
         },
         {
+          "Chaos Infrastructure": [
+            "user-guides/create-infrastructure",
+            "user-guides/delete-infrastructure",
+          ]
+        },
+        {
           "Injecting Fault": [
             "user-guides/schedule-experiment",
             "user-guides/observe-experiment",

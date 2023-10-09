@@ -64,6 +64,12 @@
           ]
         },
         {
+          "Chaos Infrastructure": [
+            "user-guides/create-infrastructure",
+            "user-guides/delete-infrastructure"
+          ]
+        },
+        {
           "Injecting Fault": [
             "user-guides/schedule-experiment",
             "user-guides/observe-experiment",
@@ -118,7 +124,9 @@
     },
     {
       "Integrations": [
-        "integrations/prometheus", "integrations/grafana", "integrations/backstage"
+        "integrations/prometheus",
+        "integrations/grafana",
+        "integrations/backstage"
       ]
     },
     "troubleshooting",
