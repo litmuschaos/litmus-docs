@@ -57,6 +57,13 @@
           ]
         },
         {
+          "Environments": [
+            "user-guides/create-environment",
+            "user-guides/edit-environment",
+            "user-guides/delete-environment"
+          ]
+        },
+        {
           "Injecting Fault": [
             "user-guides/schedule-experiment",
             "user-guides/observe-experiment",
@@ -111,9 +118,7 @@
     },
     {
       "Integrations": [
-        "integrations/prometheus",
-        "integrations/grafana",
-        "integrations/backstage"
+        "integrations/prometheus", "integrations/grafana", "integrations/backstage"
       ]
     },
     "troubleshooting",
