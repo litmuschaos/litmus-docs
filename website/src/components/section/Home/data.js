@@ -6,12 +6,6 @@ export const exploreLitmusData = [
     url: '/docs/'
   },
   {
-    icon: 'img/tutorials.svg',
-    heading: 'Tutorials',
-    description: 'Get hands on learning to use Litmus with Katkoda and Codelabs',
-    url: '/tutorials'
-  },
-  {
     icon: 'img/chaos-hub.svg',
     heading: 'ChaosHub',
     description: 'GA shop for thousands of pre defined workflows and experiements to be used.',
@@ -19,8 +13,8 @@ export const exploreLitmusData = [
   },
   {
     icon: 'img/advantages.svg',
-    heading: 'Litmus 2.0 Advantages',
-    description: 'The new Litmus is better and easier to use than Litmus 1.0 . Know here about Litmus 2.0',
+    heading: 'Litmus 3.0 Advantages',
+    description: 'The new Litmus is better and easier to use than Litmus 2.0 . Know here about Litmus 3.0',
     url: 'docs/introduction/features/'
   }
 ]
@@ -39,12 +33,6 @@ export const advancedLitmusData = [
     url: '/docs/architecture/overview/'
   },
   {
-    icon: 'img/AdvanceLitmus/observability.svg',
-    heading: 'Observability',
-    description: 'The next big thing in Chaos Engineering and know how we can utilise this with Litmus.',
-    url: '/docs/concepts/workflow-statistics'
-  },
-  {
     icon: 'img/AdvanceLitmus/dev-resource.svg',
     heading: 'Developer Resources',
     description: 'Resources for Chaos Engineering, blogs and community updates.',
@@ -53,7 +41,7 @@ export const advancedLitmusData = [
   {
     icon: 'img/AdvanceLitmus/integration.svg',
     heading: 'Integrations',
-    description: 'Integrate your litmus project with other Kubenetes applications.',
+    description: 'Integrate your litmus project with other Kubernetes applications.',
     url: '/docs/integrations/prometheus'
   },
   {
@@ -72,7 +60,7 @@ export const advancedLitmusData = [
     icon: 'img/AdvanceLitmus/multi-tenancy.svg',
     heading: 'Multi Tenancy',
     description: 'Litmus security features are one of the best thing and can not be overlooked.',
-    url: '/docs/concepts/user-management'
+    url: '/docs/concepts/teaming'
   }
 ]
 

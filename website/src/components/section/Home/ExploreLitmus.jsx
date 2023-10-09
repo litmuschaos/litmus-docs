@@ -14,7 +14,7 @@ const ExploreLitmus = ({ type }) => {
           <div className="grid">
             {exploreLitmusData.map(exploreData => (
               <div className="exploreLitmusDiv">
-                <img src={useBaseUrl(exploreData.icon)} alt={exploreData.icon} />
+                <img src={useBaseUrl(exploreData.icon)} alt={exploreData.icon} width={32} />
                 <br />
                 <Link className="subHeading" to={exploreData.url}>
                   {exploreData.heading}

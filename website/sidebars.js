@@ -1,180 +1,119 @@
 module.exports = {
-  docs: [
-    // Introduction
+  "docs": [
     {
-      Introduction: [
-        'introduction/what-is-litmus',
-        'introduction/features',
-        'introduction/usage',
-        'introduction/core-principles',
-        'introduction/community',
-        'introduction/other-links'
+      "Introduction": ["introduction/what-is-litmus", "introduction/features", "introduction/usage", "introduction/core-principles", "introduction/community", "introduction/other-links"]
+    },
+    {
+      "Getting Started": [
+        "getting-started/resources",
+        "getting-started/installation",
       ]
     },
-
-    // Getting Started
     {
-      'Getting Started': [
-        'getting-started/resources',
-        'getting-started/installation',
-        'getting-started/run-your-first-workflow'
+      "Architecture": [
+        "architecture/overview",
+        "architecture/architecture-summary",
+        "architecture/chaos-control-plane",
+        "architecture/chaos-execution-plane",
+        "architecture/chaos-fault-flow"
       ]
     },
-
-    // Architecture
     {
-      Architecture: [
-        'architecture/overview',
-        'architecture/architecture-summary',
-        'architecture/chaos-control-plane',
-        'architecture/chaos-execution-plane',
-        'architecture/chaos-experiment-flow',
-        {
-          'Chaos Observability Flow': [
-            'architecture/chaos-observability-flow-overview',
-            'architecture/chaos-observability-flow-visualization',
-            'architecture/chaos-observability-flow-logging',
-            'architecture/chaos-observability-flow-monitoring',
-            'architecture/chaos-observability-flow-summarisation',
-            'architecture/chaos-observability-flow-analytics'
-          ]
-        }
+      "Concepts": [
+        "concepts/overview",
+        "concepts/chaos-infrastructure",
+        "concepts/chaoshub",
+        "concepts/chaos-workflow",
+        "concepts/probes",
+        "concepts/user-management",
+        "concepts/projects",
+        "concepts/teaming",
+        "concepts/gitops",
+        "concepts/oauth-dex-concept"
       ]
     },
-
-    // Concepts
     {
-      Concepts: [
-        'concepts/overview',
-        'concepts/chaos-experiment',
-        'concepts/probes',
-        'concepts/chaos-engine',
-        'concepts/chaos-result',
-        'concepts/chaoshub',
+      "User Guides": [
+        "user-guides/overview",
         {
-          'Chaos Scenario': ['concepts/chaos-workflow', 'concepts/visualize-workflow']
-        },
-        {
-          Observability: [
-            'concepts/workflow-statistics',
-            'concepts/app-infra-monitoring',
-            'concepts/datasource',
-            'concepts/open-observability'
-          ]
-        },
-        'concepts/user-management',
-        'concepts/projects',
-        'concepts/teaming',
-        'concepts/gitops',
-        'concepts/oauth-dex-concept'
-      ]
-    },
-
-    // User Guides
-    {
-      'User Guides': [
-        'user-guides/overview',
-        {
-          'Advanced Installation': [
+          "Advanced Installation": [
             {
-              ChaosCenter: [
-                'user-guides/chaoscenter-oauth-dex-installation',
-                'user-guides/chaoscenter-cluster-scope-installation',
-                'user-guides/chaoscenter-namespace-scope-installation',
-                'user-guides/setup-without-ingress',
-                'user-guides/setup-with-ingress'
+              "ChaosCenter": [
+                "user-guides/chaoscenter-oauth-dex-installation",
+                "user-guides/chaoscenter-cluster-scope-installation",
+                "user-guides/chaoscenter-namespace-scope-installation",
+                "user-guides/setup-without-ingress",
+                "user-guides/setup-with-ingress"
               ]
             },
-            'user-guides/chaosagents-installation'
-          ]
-        },
-        // To be added later
-        // {
-        //   'Running Litmus': ['user-guides/air-gapped']
-        // },
-        {
-          'Injecting Fault': [
-            'user-guides/schedule-workflow',
-            'user-guides/observe-workflow',
-            'user-guides/edit-schedule',
-            // 'user-guides/event-triggered-chaos',
-            'user-guides/save-as-template',
-            'user-guides/download-workflow-manifest',
-            'user-guides/re-run-workflow',
-            'user-guides/delete-workflow',
-            'user-guides/construct-workflow'
+            "user-guides/chaos-infrastructure-installation"
           ]
         },
         {
-          'Observing Chaos': [
-            'user-guides/observability-set-up',
-            'user-guides/analyze-workflow',
-            'user-guides/comparative-analysis',
-            'user-guides/setup-datasource',
-            'user-guides/configure-datasource',
-            'user-guides/manage-app-dashboard',
-            'user-guides/editing-queries-app-dashboard',
-            'user-guides/view-chaos-impact',
-            'user-guides/share-app-dashboard'
-          ]
-        },
-        // 'user-guides/event-triggered-chaos',
-        // To be added later
-        // {
-        //   'Litmus in CI/CD pipeline': [
-        //     'user-guides/github-actions',
-        //     'user-guides/gitlab-templates',
-        //     'user-guides/keptn',
-        //     'user-guides/spinnaker'
-        //   ]
-        // },
-        'user-guides/account-settings',
-        {
-          'User Management': [
-            'user-guides/create-user',
-            'user-guides/view-user',
-            'user-guides/reset-password',
-            'user-guides/deactivate-user'
+          "Environments": [
+            "user-guides/create-environment",
+            "user-guides/edit-environment",
+            "user-guides/delete-environment",
           ]
         },
         {
-          'Managing Projects': ['user-guides/change-project-name', 'user-guides/leave-project']
-        },
-        {
-          Teaming: [
-            'user-guides/invite-team-member',
-            'user-guides/edit-invite',
-            'user-guides/accept-invite',
-            'user-guides/remove-team-member'
+          "Chaos Infrastructure": [
+            "user-guides/create-infrastructure",
+            "user-guides/delete-infrastructure",
           ]
         },
-        'user-guides/gitops-configuration',
-        'user-guides/image-registry',
-        'user-guides/uninstall-litmus',
-        'user-guides/upgrade'
+        {
+          "Injecting Fault": [
+            "user-guides/schedule-experiment",
+            "user-guides/observe-experiment",
+            "user-guides/edit-schedule",
+            "user-guides/download-experiment-manifest",
+            "user-guides/re-run-experiment",
+            "user-guides/delete-experiment",
+            "user-guides/construct-experiment"
+          ]
+        },
+        {
+          "Resilience Probes": [
+            "user-guides/create-resilience-probe",
+            "user-guides/delete-resilience-probe",
+            "user-guides/edit-resilience-probe",
+            "user-guides/view-resilience-probe"
+          ]
+        },
+        "user-guides/account-settings",
+        {
+          "User Management": [
+            "user-guides/create-user",
+            "user-guides/view-user",
+            "user-guides/reset-password",
+            "user-guides/deactivate-user"
+          ]
+        },
+        {
+          "Managing Projects": ["user-guides/change-project-name", "user-guides/leave-project"]
+        },
+        {
+          "Teaming": [
+            "user-guides/invite-team-member",
+            "user-guides/edit-invite",
+            "user-guides/accept-invite",
+            "user-guides/remove-team-member"
+          ]
+        },
+        "user-guides/gitops-configuration",
+        "user-guides/image-registry",
+        "user-guides/uninstall-litmus"
       ]
     },
-
-    // Litmusctl
     {
-      Litmusctl: [
-        'litmusctl/installation',
-        {
-          'Connect Agent': ['litmusctl/usage-non-interactive-mode', 'litmusctl/usage-interactive-mode']
-        },
-        'litmusctl/chaos-workflow-creation'
-      ]
+      "Litmusctl": ["litmusctl/installation", "litmusctl/litmusctl-usage"]
     },
-
-    // Integrations
     {
-      Integrations: ['integrations/prometheus', 'integrations/grafana']
+      "Integrations": ["integrations/prometheus", "integrations/grafana", "integrations/backstage"]
     },
-
-    // Troubleshooting
-    'troubleshooting',
-
-    // FAQ
-    'faq'
+    "troubleshooting",
+    "glossary",
+    "faq"
   ]
 }

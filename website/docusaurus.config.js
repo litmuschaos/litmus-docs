@@ -83,15 +83,14 @@ module.exports = {
               to: 'docs/next/introduction/what-is-litmus'
             },
             {
+              label: 'V2-Docs',
+              to: 'https://v2-docs.litmuschaos.io/'
+            },
+            {
               label: 'V1-Docs',
               to: 'https://v1-docs.litmuschaos.io/docs/getstarted/'
             }
           ]
-        },
-        {
-          label: 'Tutorials',
-          to: '/tutorials',
-          position: 'right'
         },
         {
           label: 'APIs',
@@ -154,23 +153,23 @@ module.exports = {
   },
   presets: [
     [
-      '@docusaurus/preset-classic',(
-        {
-          docs: {
-            sidebarPath: require.resolve('./sidebars.js'),
-            editUrl: 'https://github.com/litmuschaos/litmus-docs/edit/master/website',
-            showLastUpdateTime: true
-          },
-          theme: {
-            customCss: require.resolve('./src/css/global.css')
-          },
-          gtag: {
-            trackingID: "G-GG5GRPM03R",
-          },
-          googleAnalytics: {
-            trackingID: 'UA-155028077-2'
-          },
-      })
+      '@docusaurus/preset-classic',
+      {
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/litmuschaos/litmus-docs/edit/master/website',
+          showLastUpdateTime: false
+        },
+        theme: {
+          customCss: require.resolve('./src/css/global.css')
+        },
+        gtag: {
+          trackingID: 'G-GG5GRPM03R'
+        },
+        googleAnalytics: {
+          trackingID: 'UA-155028077-2'
+        }
+      }
     ]
   ]
 }
