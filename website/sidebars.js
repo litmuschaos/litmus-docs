@@ -7,8 +7,6 @@ module.exports = {
       "Getting Started": [
         "getting-started/resources",
         "getting-started/installation",
-        "getting-started/run-your-first-experiment",
-        "getting-started/create-your-first-custom-chaos-experiment"
       ]
     },
     {
@@ -17,7 +15,7 @@ module.exports = {
         "architecture/architecture-summary",
         "architecture/chaos-control-plane",
         "architecture/chaos-execution-plane",
-        "architecture/chaos-experiment-flow"
+        "architecture/chaos-fault-flow"
       ]
     },
     {
