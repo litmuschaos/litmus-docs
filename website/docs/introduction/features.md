@@ -71,7 +71,6 @@ Litmus 3.0 culminates as well as enhances the features rolled-out through Litmus
 |                      | Integrated and Interleaved monitoring |                            |
 
 ## Learn more
-- [Run your first chaos experiment](../getting-started/run-your-first-experiment.md)
 - [Install Litmus](../getting-started/installation.md)
 - [Visualize Chaos Experiments](../concepts/visualize-experiment.md)
 - Chaos Schedule
