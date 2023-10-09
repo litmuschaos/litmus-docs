@@ -50,6 +50,13 @@ module.exports = {
           ]
         },
         {
+          "Environments": [
+            "user-guides/create-environment",
+            "user-guides/edit-environment",
+            "user-guides/delete-environment",
+          ]
+        },
+        {
           "Injecting Fault": [
             "user-guides/schedule-experiment",
             "user-guides/observe-experiment",
@@ -97,7 +104,7 @@ module.exports = {
       "Litmusctl": ["litmusctl/installation", "litmusctl/litmusctl-usage"]
     },
     {
-      "Integrations": ["integrations/prometheus", "integrations/grafana"]
+      "Integrations": ["integrations/prometheus", "integrations/grafana", "integrations/backstage"]
     },
     "troubleshooting",
     "glossary",
