@@ -9,7 +9,7 @@ sidebar_label: Create a Resilience Probe
 You can learn about the concept of resilience probes [here](../concepts/probes.md) and chaos experiments [here](../concepts/chaos-workflow.md). 
 
 Here are some characterstics of resilience probes.
-- **Unique Identifier**: Each Resilience Probe is identified by a unique name, serving as its identifier.Probe names cannot be reused.
+- **Unique Identifier**: Each Resilience Probe is identified by a unique name, serving as its identifier. Probe names cannot be reused for a given fault.
 - **Deletion Behavior**: Deleting a Resilience Probe will disable it from further use but does not delete it from the system. This ensures that the probe's history and configuration remain intact for reference and analysis.
 
 For this user guide, we will use a HTTP probe.
