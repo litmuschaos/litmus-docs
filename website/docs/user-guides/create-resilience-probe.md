@@ -57,7 +57,39 @@ When creating an experiment, it's imperative to include the Resilience Probe as 
 
 ### Annotations for Experiment Configuration
 
-When creating experiments, it's essential to include a `probeRef` in annotations to associate Resilience Probes with the experiment. This step allows for seamless integration of probes into the chaos engineering workflow, whether constructing experiments manually or uploading YAML configurations. Follow these instructions to include `probeRef` effectively for chaos injection:
+When creating experiments, it's crucial to include a probeRef in annotations to link Resilience Probes with the experiment. This step enables seamless integration of probes into the chaos engineering workflow, whether creating experiments manually or uploading YAML configurations.
+
+Example YAML manifest:
+``` yaml
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+  name: example-chaos-engine
+  namespace: litmus
+spec:
+  appinfo: 
+    appns: 'litmus'
+    applabel: 'app=nginx'
+  chaosServiceAccount: litmus-admin
+  monitoring: false
+  jobCleanUpPolicy: retain
+  experiments:
+    - name: pod-delete
+      spec:
+        components:
+          env:
+            - name: TOTAL_CHAOS_DURATION
+              value: "30"
+            - name: CHAOS_INTERVAL
+              value: "10"
+            - name: FORCE
+              value: "true"
+        annotationCheck: 'true'
+        components:
+          - name: runner
+            value: "go"
+```
+> **Note:** Add essential annotations, like annotationCheck: 'true', in the experiment's spec section to connect the Resilience Probe with the experiment and activate validation of the experiment configuration.Feel free to customize the YAML manifest according to your specific experiment requirements and configuration.
 
 1. **Identify Probe to Associate**: Determine the Resilience Probe that you want to associate with the experiment.
 
