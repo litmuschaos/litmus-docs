@@ -27,7 +27,7 @@ Installation of Litmus can be done using either of the below methods
 - [Helm3](#install-litmus-using-helm) chart
 - [Kubectl](#install-litmus-using-kubectl) yaml spec file
 
-### **Install Litmus using Helm **
+### Install Litmus using Helm 
 
 The helm chart will install all the required service account configuration and ChaosCenter.
 
@@ -97,9 +97,9 @@ Visit https://docs.litmuschaos.io/ to find more info.
 
 > **Note:** Litmus uses Kubernetes CRDs to define chaos intent. Helm3 handles CRDs better than Helm2. Before you start running a chaos experiment, verify if Litmus is installed correctly.
 
-### **Install Litmus using kubectl **
+### Install Litmus using kubectl 
 
-#### **Set the namespace on which you want to install Litmus ChaosCenter**
+#### Set the namespace on which you want to install Litmus ChaosCenter
 
 > Create a namespace `kubectl create ns <Your Namespace>`
 
@@ -114,7 +114,7 @@ NAME                        STATUS   AGE
 litmus                      Active   2s
 ```
 
-#### **Install the required Litmus CRDs**
+#### Install the required Litmus CRDs
 
 The cluster-admin or an equivalent user with the right permissions are required to install the CRDs upfront.
 
@@ -136,7 +136,7 @@ customresourcedefinition.apiextensions.k8s.io/chaosresults.litmuschaos.io create
 customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.litmuschaos.io created
 ```
 
-#### **Install Litmus ChaosCenter**
+#### Install Litmus ChaosCenter
 
 Applying the manifest file will install all the required service account configuration and ChaosCenter.
 
@@ -178,11 +178,11 @@ service/mongo-service created
 service/mongo-headless-service created
 ```
 
-## **Verify your installation**
+## Verify your installation
 
 ---
 
-#### **Verify if the frontend, server, and database pods are running**
+#### Verify if the frontend, server, and database pods are running
 
 - Check the pods in the namespace where you installed Litmus:
 
@@ -227,7 +227,7 @@ kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-s
 
 ---
 
-#### **Verify Successful Registration of the Self Chaos Delegate post [Account Configuration](setup-without-ingress)**
+#### Verify Successful Registration of the Self Chaos Delegate post [Account Configuration](setup-without-ingress)
 
 Once the project is created, the cluster is automatically registered as a chaos target via installation of [Chaos Delegate](../getting-started/resources.md#chaosagents). This is represented as [Self Chaos Delegate](../getting-started/resources.md#types-of-chaosagents) in [ChaosCenter](../getting-started/resources.md#chaosagents).
 
