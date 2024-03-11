@@ -22,7 +22,7 @@ Before deploying LitmusChaos, make sure the following items are there
 
 ## Installation
 
-Users looking to use Litmus for the first time have two options available to them today. One way is to use a hosted Litmus service like [Harness Chaos Engineering SaaS](https://app.harness.io/auth/#/signin). Alternatively, users looking for some more flexibility can install Litmus into their own Kubernetes cluster.
+Users looking to use LitmusChaos for the first time have two options available to them today. One way is to use a hosted LitmusChaos service like the [Harness Chaos Engineering SaaS](https://app.harness.io/auth/#/signup?module=chaos&utm_source=litmusdocs_io&utm_medium=cta&utm_campaign=ce&utm_content=hero) built on LitmusChaos. Alternatively, users looking for some more flexibility can install LitmusChaos into their own Kubernetes cluster through a Helm chart or KubeCtl.
 
 Users choosing the self-hosted option can refer to our Install and Configure docs for installing alternate versions and more detailed instructions.
 
@@ -31,19 +31,12 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
   <TabItem value="self-hosted" label="Self-Hosted" default>
-    Installation of Self-Hosted Litmus can be done using either of the below methods:
+    Installation of Self-Hosted LitmusChaos can be done using either of the below methods:
     <li><a href="#install-litmus-using-helm">Helm3</a> chart</li>
     <li><a href="#install-litmus-using-kubectl">Kubectl</a> yaml spec file</li>
     <br/>
     Refer to the below details for Self-Hosted Litmus installation.
-  </TabItem>
-  <TabItem value="hosted" label="Hosted (Beta)">
-    <a href="https://harness.io/">Harness</a> offers a free service for community members which makes getting started with Litmus easy. Create an account to get started. Once logged in, create a new hosted control plane and connect to it via the up CLI. Litmus can be used as a hosted cloud service using <a href="https://app.harness.io/auth/#/signin">Harness Chaos Engineering SaaS</a>. Harness Chaos Engineering SaaS executes your Chaos Experiments in the cloud by managing all your Chaos Control Plane components, while the Chaos Execution Plane components exist on your Kubernetes cluster as part of an external chaos infrastructure.
-    <br/><br/>
-    To get started with Harness Chaos Engineering SaaS, visit <a href="https://developer.harness.io/docs/chaos-engineering/get-started/learn-more-free-plan">Harness Chaos Engineering SaaS</a> and register for free. You can skip the below installation steps.
-  </TabItem>
-</Tabs>
-
+    
 ### Install Litmus using Helm
 
 The helm chart will install all the required service account configuration and ChaosCenter.
@@ -196,6 +189,15 @@ Password: litmus
 By default you are assigned with a default project with Owner permissions.
 
 <img src={require('../assets/landing-page.png').default} width="800" />
+
+  </TabItem>
+  <TabItem value="hosted" label="Hosted (SaaS)">
+    <a href="https://harness.io/">Harness</a> offers a free service for community members which makes getting started with LitmusChaos easy. Create an account to get started. Once logged in, create a new hosted control plane and connect to it via the up CLI. Litmus can be used as a hosted cloud service using <a href="https://app.harness.io/auth/#/signup?module=chaos&utm_source=litmusdocs_io&utm_medium=cta&utm_campaign=ce&utm_content=hero">Harness Chaos Engineering SaaS</a>. Harness Chaos Engineering SaaS executes your Chaos Experiments in the cloud by managing all your Chaos Control Plane components, while the Chaos Execution Plane components exist on your Kubernetes cluster as part of an external chaos infrastructure.
+    <br/><br/>
+    To get started with Harness Chaos Engineering SaaS, visit <a href="https://app.harness.io/auth/#/signup?module=chaos&utm_source=litmusdocs_io&utm_medium=cta&utm_campaign=ce&utm_content=hero">Harness Chaos Engineering SaaS</a> and register for free. You can skip the below installation steps.
+  </TabItem>
+</Tabs>
+
 
 ## Learn more
 
