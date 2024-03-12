@@ -127,6 +127,18 @@ You can select Advanced Options on the Experiment Builder tab to configure the a
 <img src={require('../assets/user-guides/injecting-fault/schedule-workflow/advanced-options-experiment-creation.png').default} alt="advanced-options-experiment-creation" />
 </figure>
 
+### Experiment Creation
+
+When creating an experiment, it's imperative to include the Resilience Probe as part of the setup. This step is now mandatory to ensure accurate chaos injection and monitoring during the experiment. Follow these steps to add the probe to the experiment configuration:
+
+1. **Identify Chaos Injection Points**: Determine the points within your system where chaos will be injected.
+
+2. **Select Resilience Probe**: Choose the appropriate Resilience Probe that aligns with your experimentation goals and the type of chaos you want to inject as discussed above.
+
+3. **Integrate Probe into Experiment YAML**: Add the Resilience Probe configuration to your experiment YAML file. Ensure that the probe is properly configured and referenced within the experiment setup.
+
+4. **Validate Experiment Configuration**: Before initiating the experiment, validate the experiment configuration to ensure that the Resilience Probe is correctly included and configured.
+
 ## General options
 
 ### Node Selector
