@@ -51,7 +51,7 @@ It is also possible to account for the chaos experiments that are created and pu
 - Once the chaos experiment is pushed to your repository, you’ll notice every chaos experiment has a `experiment_id`. You can get this from the chaos experiment YAML file. You need to copy the id and annotate the target application so that if there’s any change in the application, gitops will sync the chaos experiment using this experiment_id and run it on your target application. You can use the following command:
 
 ```
-kubectl annotate deploy/target-application litmuschaos.io/workflow=${experiment_id}
+kubectl annotate deploy/target-application litmuschaos.io/experimentId=${experiment_id}
 ```
 
 ```
