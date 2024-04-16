@@ -25,8 +25,8 @@ These probes can be used in isolation or in several combinations to achieve the 
 
 The probes can be set up to run in different modes:
 
-- **SoT**: Executed at the Start of Test as a pre-chaos check
-- **EoT**: Executed at the End of Test as a post-chaos check
+- **SOT**: Executed at the Start of Test as a pre-chaos check
+- **EOT**: Executed at the End of Test as a post-chaos check
 - **Edge**: Executed both, before and after the chaos
 - **Continuous**: The probe is executed continuously, with a specified polling interval during the chaos injection.
 - **OnChaos**: The probe is executed continuously, with a specified polling interval strictly for chaos duration of chaos
@@ -37,7 +37,7 @@ Some common attributes shared between the Probes:
 - **retry**: The number of times a check is re-run upon failure in the first attempt before declaring the probe status as failed.
 - **interval**: The period between subsequent retries
 - **probePollingInterval**: The time interval for which continuous probe should be sleep after each iteration
-- **initialDelaySeconds**: Represents the initial waiting time interval for the probes.
+- **initialDelay**: Represents the initial waiting time interval for the probes.
 - **stopOnFailure**: It can be set to true/false to stop or continue the fault execution after probe fails
 
 :::note
@@ -73,10 +73,10 @@ probe:
           responseCode: '<response code>'
     mode: 'Continuous'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
-      probePollingInterval: 2
+      probePollingInterval: 2s
 ```
 
 The `httpProbe` is better used in the Continuous mode of operation as a parallel liveness indicator of a target or downstream application. It uses the `probePollingInterval` property to specify the polling interval for the access checks.
@@ -104,10 +104,10 @@ probe:
         hostNetwork: false
     mode: 'Edge'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
-      initialDelaySeconds: 5
+      initialDelay: 5s
 ```
 
 > `source.hostNetwork` can be set to `true` to allow access to the node network namespace for the pod executing the probe
@@ -137,8 +137,8 @@ probe:
       operation: 'present' # it can be present, absent, create, delete
     mode: 'EOT'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
 ```
 
@@ -162,8 +162,8 @@ probe:
         value: '<value-for-criteria-match>'
     mode: 'Edge'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
 ```
 
@@ -247,8 +247,8 @@ probe:
       source: 'inline'
     mode: 'SOT'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
   - name: 'probe2'
     type: 'cmdProbe'
@@ -262,8 +262,8 @@ probe:
       source: 'inline'
     mode: 'SOT'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
 ```
 
@@ -921,11 +921,11 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a <code>type: integer</code></td>
+  <td>n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>.runProperties.probeTimeout</code> represents the time limit for the probe to execute the specified check and return the expected data</td>
+  <td>The <code>.runProperties.probeTimeout</code> represents the time limit for the probe to execute the specified check and return the expected data. Examples: <code>5s</code>, <code>5m</code>, <code>1h</code></td>
 </tr>
 </table>
 
@@ -967,11 +967,11 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a <code>type: integer</code></td>
+  <td>n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>.runProperties.interval</code> contains the interval for which probes waits between subsequent retries</td>
+  <td>The <code>.runProperties.interval</code> contains the interval for which probes waits between subsequent retries. Examples: <code>5s</code>, <code>5m</code>, <code>1h</code></td>
 </tr>
 </table>
 
@@ -990,18 +990,18 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a <code>type: integer</code></td>
+  <td>n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>.runProperties.probePollingInterval</code> contains the time interval for which continuous probe should be sleep after each iteration</td>
+  <td>The <code>.runProperties.probePollingInterval</code> contains the time interval for which continuous probe should be sleep after each iteration. Examples: <code>5s</code>, <code>5m</code>, <code>1h</code></td>
 </tr>
 </table>
 
 <table>
 <tr>
   <th>Field</th>
-  <td><code>.runProperties.initialDelaySeconds</code></td>
+  <td><code>.runProperties.initialDelay</code></td>
 </tr>
 <tr>
   <th>Description</th>
@@ -1013,11 +1013,11 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a <code>type: integer</code></td>
+  <td>n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>.runProperties.initialDelaySeconds</code> represents the initial waiting time interval for the probes.</td>
+  <td>The <code>.runProperties.initialDelaySeconds</code> represents the initial waiting time interval for the probes. Examples: <code>5s</code>, <code>5m</code>, <code>1h</code></td>
 </tr>
 </table>
 
@@ -1119,7 +1119,7 @@ This section describes the different fields of the litmus probes and the possibl
 
 Probes are pluggable checks that can be defined within the ChaosEngine for any Chaos Experiment. There are four kinds of probes `httpProbe` (allows developers to specify a URL which the fault uses to gauge health/service availability as part of the entry/exit criteria), `cmdProbe` (allows developers to run shell commands and match the resulting output as part of the entry/exit criteria), `k8sProbe` (addresses verification of the desired resource state by allowing users to define the Kubernetes GVR with appropriate filters) and `promProbe` (allows users to run Prometheus queries and match the resulting output against specific conditions).
 
-The different modes these probes can be used in are `SoT`, `EoT`, `Edge`, `Continuous` and `OnChaos`. The litmus chaos faults run the probes defined in the ChaosEngine and update their stage-wise success in the ChaosResult custom resource with `probeSuccessPercentage`. A `probeSuccessPercentage` is the ratio of successful checks v/s total probes.
+The different modes these probes can be used in are `SOT`, `EOT`, `Edge`, `Continuous` and `OnChaos`. The litmus chaos faults run the probes defined in the ChaosEngine and update their stage-wise success in the ChaosResult custom resource with `probeSuccessPercentage`. A `probeSuccessPercentage` is the ratio of successful checks v/s total probes.
 
 Probes can be Chained, Probe chaining enables reuse of probe, the order of execution of probes in the fault depends purely on the order in which they are defined in the ChaosEngine.
 
