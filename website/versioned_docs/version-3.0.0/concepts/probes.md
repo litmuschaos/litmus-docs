@@ -37,7 +37,7 @@ Some common attributes shared between the Probes:
 - **retry**: The number of times a check is re-run upon failure in the first attempt before declaring the probe status as failed.
 - **interval**: The period between subsequent retries
 - **probePollingInterval**: The time interval for which continuous probe should be sleep after each iteration
-- **initialDelaySeconds**: Represents the initial waiting time interval for the probes.
+- **initialDelay**: Represents the initial waiting time interval for the probes.
 - **stopOnFailure**: It can be set to true/false to stop or continue the fault execution after probe fails
 
 :::note
@@ -73,10 +73,10 @@ probe:
           responseCode: '<response code>'
     mode: 'Continuous'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
-      probePollingInterval: 2
+      probePollingInterval: 2s
 ```
 
 The `httpProbe` is better used in the Continuous mode of operation as a parallel liveness indicator of a target or downstream application. It uses the `probePollingInterval` property to specify the polling interval for the access checks.
@@ -104,10 +104,10 @@ probe:
         hostNetwork: false
     mode: 'Edge'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
-      initialDelaySeconds: 5
+      initialDelay: 5s
 ```
 
 > `source.hostNetwork` can be set to `true` to allow access to the node network namespace for the pod executing the probe
@@ -137,8 +137,8 @@ probe:
       operation: 'present' # it can be present, absent, create, delete
     mode: 'EOT'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
 ```
 
@@ -162,8 +162,8 @@ probe:
         value: '<value-for-criteria-match>'
     mode: 'Edge'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
 ```
 
@@ -247,10 +247,10 @@ probe:
       source: 'inline'
     mode: 'SOT'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
-  - name: 'probe2'
+  - name: 'probe2's
     type: 'cmdProbe'
     cmdProbe/inputs:
       ## probe1's result being used as one of the args in probe2
@@ -262,8 +262,8 @@ probe:
       source: 'inline'
     mode: 'SOT'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
 ```
 
@@ -921,7 +921,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a <code>type: integer</code></td>
+  <td>n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -967,7 +967,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a <code>type: integer</code></td>
+  <td>n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -990,7 +990,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a <code>type: integer</code></td>
+  <td>n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -1001,7 +1001,7 @@ This section describes the different fields of the litmus probes and the possibl
 <table>
 <tr>
   <th>Field</th>
-  <td><code>.runProperties.initialDelaySeconds</code></td>
+  <td><code>.runProperties.initialDelay</code></td>
 </tr>
 <tr>
   <th>Description</th>
@@ -1013,11 +1013,11 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a <code>type: integer</code></td>
+  <td>n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>.runProperties.initialDelaySeconds</code> represents the initial waiting time interval for the probes.</td>
+  <td>The <code>.runProperties.initialDelay</code> represents the initial waiting time interval for the probes.</td>
 </tr>
 </table>
 
