@@ -33,7 +33,7 @@ cd litmus-docs
 
 The docs website server can be setup manually or through docker compose
 
-## Use embedmd command before commiting changes
+## Use embedmd command before committing changes
 
 The embedded code will be extracted from the file at `URL`, which can either be a relative path to a file in the local file system (using forward slashes as directory separator) or a URL starting with `http://` or `https://.`
 
@@ -45,7 +45,7 @@ _Installation:_
 go install github.com/campoy/embedmd@latest
 ```
 
-_Run embedmd (needs to be done before commiting the changes):_
+_Run embedmd (needs to be done before committing the changes):_
 
 - Follow the steps (from root directory) to run embedmd:
 
@@ -72,7 +72,7 @@ npm start
 
 ## Using Docker compose
 
-### Install docker compose
+### Install Docker compose
 
 ```bash
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
