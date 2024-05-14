@@ -56,7 +56,7 @@ In a fault's helper pod you may see the following error logs:
 {"mainLogs":"W1003 08:59:55.273647       1 client_config.go:552] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.\n2023/10/03 08:59:55 Error Creating Resource : ChaosEngine.litmuschaos.io 'pod-network-loss-h6srhrls' is invalid: [spec.experiments[0].spec.probe[0].runProperties.interval: Invalid value: 'string': spec.experiments[0].spec.probe[0].runProperties.interval in body must be of type integer: 'string', spec.experiments[0].spec.probe[0].runProperties.probeTimeout: Invalid value: 'string': spec.experiments[0].spec.probe[0].runProperties.probeTimeout in body must be of type integer: 'string']\n"}
 ```
 
-It's because your cluster using old CRD manifest files. So you need to delete all Litmus' CRDs and reinstall them. The definition for CRDs can be found in the Chaos Infrastructure YAML file or at this [link](https://github.com/litmuschaos/litmus/blob/master/mkdocs/docs/3.0.0/litmus-portal-crds-3.0.0.yml).
+This issue is caused due to old CRDs. To fix this, delete all Litmus CRD resources and reinstall them for the version that you're using. The definition for CRDs can be found in the Chaos Infrastructure YAML file or at this link: `https://github.com/litmuschaos/litmus/blob/master/mkdocs/docs/<chaoscenter-version>/litmus-portal-crds-<chaoscenter-version>.yml`
 
 ## Chaoshub
 
