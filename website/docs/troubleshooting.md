@@ -50,7 +50,7 @@ You can find these in tune faults part of the tune chaos experiment page.
 
 ### The probe only accepts values in `ns, us, ms, m, s, or h`. But Why do experiments fail with `must be of type integer`?
 
-In the logs of the Helper pod, you may face these error logs below.
+In a fault's helper pod you may see the following error logs:
 
 ```shell
 {"mainLogs":"W1003 08:59:55.273647       1 client_config.go:552] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.\n2023/10/03 08:59:55 Error Creating Resource : ChaosEngine.litmuschaos.io 'pod-network-loss-h6srhrls' is invalid: [spec.experiments[0].spec.probe[0].runProperties.interval: Invalid value: 'string': spec.experiments[0].spec.probe[0].runProperties.interval in body must be of type integer: 'string', spec.experiments[0].spec.probe[0].runProperties.probeTimeout: Invalid value: 'string': spec.experiments[0].spec.probe[0].runProperties.probeTimeout in body must be of type integer: 'string']\n"}
