@@ -48,10 +48,6 @@ The new probe will appear in the list as shown:
 
 <img src={require('../assets/user-guides/resilience-probes/create-probe/step-6.png').default} />
 
-### Experiment Creation
-
-When creating an experiment, it's imperative to include the Resilience Probe as part of the setup. This step is now mandatory to ensure accurate chaos injection and monitoring during the experiment.
-> **Note:** Starting from this version, at least one Resilience Probe must be added to each fault.
 
 
 
