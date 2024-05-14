@@ -6,7 +6,13 @@ sidebar_label: Create a Resilience Probe
 
 ## Before you begin
 
-You can learn about the concept of resilience probes [here](../concepts/probes.md) and chaos experiments [here](../concepts/chaos-workflow.md). For this user guide, we will use a HTTP probe.
+You can learn about the concept of resilience probes [here](../concepts/probes.md) and chaos experiments [here](../concepts/chaos-workflow.md). 
+
+Here are some characterstics of resilience probes.
+- **Unique Identifier**: Each Resilience Probe is identified by a unique name, serving as its identifier. Probe names cannot be reused for a given fault.
+- **Deletion Behavior**: Deleting a Resilience Probe will disable it from further use but does not delete it from the system. This ensures that the probe's history and configuration remain intact for reference and analysis.
+
+For this user guide, we will use a HTTP probe.
 
 ## 1. Go to the Resilience Probes section
 
@@ -41,3 +47,48 @@ Configure the details for the probe you are creating, once completed, click the 
 The new probe will appear in the list as shown:
 
 <img src={require('../assets/user-guides/resilience-probes/create-probe/step-6.png').default} />
+
+
+
+
+### Annotations for Experiment Configuration
+
+When creating experiments, it's crucial to include a probeRef in annotations to link Resilience Probes with the experiment. This step enables seamless integration of probes into the chaos engineering workflow, whether creating experiments manually or uploading YAML configurations.
+
+Example YAML manifest:
+``` yaml
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+  name: example-chaos-engine
+  namespace: litmus
+spec:
+  appinfo: 
+    appns: 'litmus'
+    applabel: 'app=nginx'
+  chaosServiceAccount: litmus-admin
+  monitoring: false
+  jobCleanUpPolicy: retain
+  experiments:
+    - name: pod-delete
+      spec:
+        components:
+          env:
+            - name: TOTAL_CHAOS_DURATION
+              value: "30"
+            - name: CHAOS_INTERVAL
+              value: "10"
+            - name: FORCE
+              value: "true"
+        annotationCheck: 'true'
+        components:
+          - name: runner
+            value: "go"
+```
+> **Note:** Add essential annotations, like annotationCheck: 'true', in the experiment's spec section to connect the Resilience Probe with the experiment and activate validation of the experiment configuration.Feel free to customize the YAML manifest according to your specific experiment requirements and configuration.
+
+1. **Identify Probe to Associate**: Determine the Resilience Probe that you want to associate with the experiment.
+
+2. **Add probeRef in Annotations**: In the experiment YAML configuration, include a `probeRef` field in annotations and specify the name of the Resilience Probe. Ensure that the `probeRef` is correctly formatted and matches the name of the chosen probe.
+
+3. **Validate Annotations**: Before initiating the experiment, validate the experiment YAML configuration to ensure that the `probeRef` is properly included and associated with the Resilience Probe.
