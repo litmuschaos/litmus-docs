@@ -50,11 +50,11 @@ If probe needs any additional RBAC permissions other than the fault's serviceAcc
 
 ### httpProbe
 
-The `httpProbe` allows developers to specify a URL which the fault uses to gauge health/service availability (or other custom conditions) as part of the entry/exit criteria. The received status code is mapped against an expected status. It supports http `Get` and `Post` methods.
+The `httpProbe` allows developers to specify a URL which the fault uses to gauge health/service availability (or other custom conditions) as part of the entry/exit criteria. The received status code is mapped against an expected status. It supports HTTP `Get` and `Post` methods.
 
-In HTTP `Get` method it sends a http `GET` request to the provided url and matches the response code based on the given criteria(`==`, `!=`, `oneOf`).
+In HTTP `Get` method, it sends an HTTP `GET` request to the provided URL and matches the response code based on the given criteria (`==`, `!=`, `oneOf`).
 
-In HTTP `Post` method it sends a http `POST` request to the provided url. The http body can be provided in the `body` field. In the case of a complex POST request in which the body spans multiple lines, the `bodyPath` attribute can be used to provide the path to a file consisting of the same. This file can be made available to the fault pod via a ConfigMap resource, with the ConfigMap name being defined in the [ChaosEngine](glossary.md) OR the ChaosExperiment CR.
+In HTTP `Post` method, it sends an HTTP `POST` request to the provided URL. The http body can be provided in the `body` field. In the case of a complex POST request in which the body spans multiple lines, the `bodyPath` attribute can be used to provide the path to a file consisting of the same. This file can be made available to the fault pod via a ConfigMap resource, with the ConfigMap name being defined in the [ChaosEngine](glossary.md) OR the ChaosExperiment CR.
 It can be defined at `.spec.experiments[].spec.probe` inside ChaosEngine.
 
 > `body` and `bodyPath` are mutually exclusive

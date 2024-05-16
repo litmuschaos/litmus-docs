@@ -1,20 +1,23 @@
 ---
 id: chaos-workflow
-title: Chaos Experiment
-sidebar_label: Chaos Experiment
+title: Chaos experiment
+sidebar_label: Chaos experiment
 ---
 
 ---
 
-**Chaos Experiment** is a set of different operations coupled together to achieve desired chaos impact on a Kubernetes Cluster. <br/>
-It is useful in automating a series of pre-conditioning steps or action which is necessary to be performed before triggering the chaos injection.<br/>
-A Chaos Experiment can also be used to perform different operations parallelly to achieve a desired chaos impact.
+Chaos experiments gives you the flexibility to create complex, real-life failure scenarios that are used to validate your target workloads. At the same time, chaos experiments are declarative and can be constructed using the ChaosCenter UI without any programmatic intervention.
+
+A chaos experiment is composed of chaos faults that are arranged in a specific order to create a failure scenario. The chaos faults target various aspects of an application, including the constituent microservices and underlying infrastructure. You can tune the parameters associated with these faults to impart the desired chaos behavior.
+
+- It is useful in automating a series of pre-conditioning steps or action which is necessary to be performed before triggering the chaos injection.
+
+- A Chaos Experiment can also be used to perform different operations parallelly to achieve a desired chaos impact.
 
 :::note
 With the latest release of LitmusChaos 3.0.0:
-
-<li>The term <b>Chaos Experiment</b> has been changed to <b>Chaos Fault.</b> </li>
-<li>The term <b>Chaos Scenario/Workflow</b> has been changed to <b>Chaos Experiment.</b></li>
+The term **Chaos Experiment** has been changed to **Chaos Fault**.
+The term **Chaos Scenario/Workflow** has been changed to **Chaos Experiment**.
 :::
 
 ## Prerequisites
@@ -25,12 +28,13 @@ The following should be required before creating a Chaos Experiment:
 - [Chaos Infrastructure](../getting-started/resources.md#chaosagents)
 - [Probes](probes.md)
 
-## How do we define and execute a Chaos Experiment ?
+## Defining and executing a chaos experiment
 
-LitmusChaos leverages the popular GitOps tool **Argo** to achieve this goal. Argo enables the creation of different chaos experiments together in form of chaos experiments which are extremely simple and efficient to use.<br/>
+LitmusChaos leverages the popular GitOps tool **Argo** to achieve this goal. Argo enables the creation of different chaos experiments together in form of chaos experiments which are extremely simple and efficient to use.
+
 With the help of **ChaosCenter**, chaos experiments with different types of faults can be created. In a Chaos Experiment, the faults can be set to execute in parallel to each other and the user can tune the chaos experiment by adding additional steps to simulate a desired fault that might occur in the production stage.
 
-### Life Cycle of a Chaos Experiment
+### Chaos experiment life cycle
 
 Here is a sample pod-delete chaos experiment from ChaosCenter.
 
@@ -232,11 +236,11 @@ These include installing the chaos faults, executing the chaos engine of the fau
 Some additional checks can be added with the faults in the form of probes. These probes are defined in the ChaosEngines of the faults and are updated when the fault execution takes place.
 The overall chaos experiment result can be viewed with the ChaosResult CRD which contains the `verdict` and the `probeSuccessPercentage` (a ratio of successful checks v/s total probes).
 
-## What is a run?
+## Chaos experiment run
 
 A chaos experiment run can be defined as a single/one-time execution of the chaos experiment. There can be multiple runs of a single chaos experiment. If the chaos experiment consists of a cron syntax, it will run periodically according to the cron provided in the chaos experiment.
 
-## What is Resilience Score?
+## Resilience Score
 
 **Resiliency score** is an overall measure of the resiliency of a system for a given chaos experiment, which is obtained upon executing the constituent experiment faults on that system.
 
@@ -255,7 +259,7 @@ Total Resilience for one single fault = (Weight Given to that fault * Probe Succ
 Overall Resilience Score = Total Test Result / Sum of the assigned weights of the faults
 ```
 
-## What is a Cron Chaos Experiment?
+## Cron chaos experiment
 
 Cron Chaos Experiment is a type of chaos experiment that runs on a pre-defined schedule. It consists of a mandatory field `spec.schedule`. A cron syntax is provided in this field at which the chaos experiment execution takes
 place.

@@ -10,7 +10,7 @@ The ChaosCenter comes with a project management system that can be used for work
 
 ## Prerequisites
 
-Before learning about the concept of `projects`, it is important to note that a `project` signifies a separation between Chaos infrastructures, Schedules, [Visualization](visualize-experiment.md), and Teams (discussed in the next section) configurations, and prior knowledge of these will prove fruitful in understanding the concept of `projects` in-depth.
+Before learning about the concept of projects, it is important to note that a project signifies a separation between Chaos infrastructures, Schedules, [Visualization](visualize-experiment.md), and Teams (discussed in the next section) configurations, and prior knowledge of these will prove fruitful in understanding the concept of projects in-depth.
 
 ## Projects
 

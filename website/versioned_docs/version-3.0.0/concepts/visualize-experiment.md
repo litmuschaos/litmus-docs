@@ -1,32 +1,31 @@
 ---
 id: visualize-experiment
-title: Visualize the Chaos Experiment Execution
-sidebar_label: Visualize Chaos Experiment
+title: Visualize chaos experiment
+sidebar_label: Visualize chaos experiment
 ---
 
 ---
 
-Visualization is an important aspect while doing chaos engineering. It allows the user to discover and inspect different changes that occur during a Chaos Experiment execution. <br/>
-With ChaosCenter, the real-time data and status of the chaos experiments can be observed. Valuable information like pod logs, chaos experiment status, and chaos results can also be viewed.
+Visualization is an important aspect while doing chaos engineering. It allows the user to discover and inspect different changes that occur during a Chaos Experiment execution. With ChaosCenter, the real-time data and status of the chaos experiments can be observed. Valuable information like pod logs, chaos experiment status, and chaos results can also be viewed.
 
 ## Prerequisites
 
-The following should be required before creating a Chaos Experiment:
+The following is required before visualizing a chaos experiment:
 
 - ChaosCenter
 - [Chaos Experiments](chaos-workflow.md)
 
-## Litmus Chaos Experiment
+## Create chaos experiment
 
-If the user chooses to 'Save' and 'Run' the experiment, they will be redirected directly to the experiment execution page where the experiment can be visualised else they will be taken Chaos Experiment Page.
+If the user chooses to **Save** and **Run** the experiment, they will be directed to the experiment execution page, where the experiment can be visualized. Otherwise, they will be taken to the chaos experiment page.
 
-## Visualize a Litmus Chaos Experiment
+## Visualize chaos experiment
 
-To observe a chaos experiment, user needs to select the highlighted experiment run box from the heatmap, it will redirect to experiment run execution page.<br/>
+To observe a chaos experiment, user needs to select the highlighted experiment run box from the heatmap, it will redirect to experiment run execution page.
 <img src={require('../assets/workflow-observe-select.png').default} width="800" />
 
-In the chaos experiment, a realtime graph of the chaos experiment is displayed. This graph contains valuable information regarding the status of individual steps of the chaos experiment.<br/><br/>
-<img src={require('../assets/workflow-observe-running.png').default} width="800" /><br/><br/>
+In the chaos experiment, a realtime graph of the chaos experiment is displayed. This graph contains valuable information regarding the status of individual steps of the chaos experiment.
+<img src={require('../assets/workflow-observe-running.png').default} width="800" />
 To view the details of each step, the user can click on the individual nodes and the right side pane will display the node details, results(once the execution is complete), and the logs related to it.
 <br/><br/>
 <img src={require('../assets/workflow-observe-log.png').default} width="800" />
