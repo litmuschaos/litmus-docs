@@ -8,7 +8,7 @@ sidebar_label: Upgrade
 
 ## Upgrade ChaosCenter
 
-To upgrade Litmus ChaosCenter from 3.0.0-beta7 to 3.0.0-beta8, you can follow these steps:
+To upgrade Litmus ChaosCenter from 3.6.0 to 3.7.0, you can follow these steps:
 
 > Note: This step is not required if using Helm, Helm upgrade should work.
 
@@ -16,7 +16,7 @@ To upgrade Litmus ChaosCenter from 3.0.0-beta7 to 3.0.0-beta8, you can follow th
    To upgrade ChaosCenter, you can re-apply the manifest using the kubectl.
 
    ```bash
-   kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/3.0.0-beta8/litmus-3.0.0-beta8.yaml
+   kubectl apply -f https://litmuschaos.github.io/litmus/3.7.0/litmus-cluster-scope-3.7.0.yaml
    ```
 
 ## Upgrade Mongodb DB Schema

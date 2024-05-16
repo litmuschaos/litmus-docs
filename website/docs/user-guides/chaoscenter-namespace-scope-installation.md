@@ -27,7 +27,7 @@ Installation of Litmus can be done using either of the below methods
 - [Helm3](#install-litmus-using-helm) chart
 - [Kubectl](#install-litmus-using-kubectl) yaml spec file
 
-### **Install Litmus using Helm **
+### **Install Litmus using Helm**
 
 The helm chart will install all the required service account configuration and ChaosCenter.
 
@@ -97,7 +97,7 @@ Visit https://docs.litmuschaos.io/ to find more info.
 
 > **Note:** Litmus uses Kubernetes CRDs to define chaos intent. Helm3 handles CRDs better than Helm2. Before you start running a chaos experiment, verify if Litmus is installed correctly.
 
-### **Install Litmus using kubectl **
+### **Install Litmus using kubectl**
 
 #### **Set the namespace on which you want to install Litmus ChaosCenter**
 
@@ -141,7 +141,7 @@ customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.
 Applying the manifest file will install all the required service account configuration and ChaosCenter.
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/3.0.0-beta6/litmus-namespaced-3.0.0-beta6.yaml -n <Your Namespace>
+kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/3.7.0/litmus-namespaced-3.7.0.yaml -n <Your Namespace>
 ```
 
 > You need to provide the Namespace in place of `Your Namespace`, that you have created eariler for the litmuschaos Installation
