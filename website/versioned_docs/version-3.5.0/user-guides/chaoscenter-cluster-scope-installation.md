@@ -80,10 +80,10 @@ Visit https://docs.litmuschaos.io to find more info.
 Applying the manifest file will install all the required service account configuration and ChaosCenter.
 
 ```bash
-kubectl apply -f https://litmuschaos.github.io/litmus/3.7.0/litmus-cluster-scope-3.7.0.yaml
+kubectl apply -f https://litmuschaos.github.io/litmus/3.5.0/litmus-cluster-scope-3.5.0.yaml
 ```
 
-> If you are installing Litmus in any other namespace apart from `litmus` namespace, make sure to change the same in the manifest too `https://litmuschaos.github.io/litmus/3.7.0/litmus-namespaced-3.7.0.yaml`.
+> If you are installing Litmus in any other namespace apart from `litmus` namespace, make sure to change the same in the manifest too `https://litmuschaos.github.io/litmus/3.5.0/litmus-namespaced-3.5.0.yaml`.
 
 ## **Verify your installation**
 
