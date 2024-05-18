@@ -11,7 +11,9 @@ You can learn about the concept of resilience probes [here](../concepts/probes.m
 Here are some characterstics of resilience probes.
 - **Unique Identifier**: Each Resilience Probe is identified by a unique name, serving as its identifier. Probe names cannot be reused for a given fault.
 - **Deletion Behavior**: Deleting a Resilience Probe will disable it from further use but does not delete it from the system. This ensures that the probe's history and configuration remain intact for reference and analysis.
-
+:::note
+Starting from v3.0, it is required to add at least one Resilience Probe per chaos fault. This allows for a stricter chaos hypothesis validation which is independent of only the chaos fault's successful execution.
+:::
 For this user guide, we will use a HTTP probe.
 
 ## 1. Go to the Resilience Probes section
