@@ -47,9 +47,9 @@ module.exports = {
   projectName: 'litmus',
   themeConfig: {
     algolia: {
-      apiKey: '7af78d639b7342f7da38c5c5c51993b0',
-      indexName: 'litmuschaos',
-      contextualSearch: true
+      appId: "D8YZTJNSE2",
+      apiKey: 'b388bb42bbdfcd9c02f0eb32c6ee9fa4',
+      indexName: 'litmuschaos'
     },
     navbar: {
       title: 'Litmus Docs',
