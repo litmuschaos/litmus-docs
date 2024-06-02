@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@alpha">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="generator" content="Docusaurus v2.0.0-alpha.70" />
@@ -82,42 +83,23 @@
             </div>
           </div>
           <div class="navbar__items navbar__items--right">
-            <a class="navbar__item navbar__link" href="/docs/introduction">2.0.0-Beta-8</a
-            ><a
-              href="https://github.com/litmuschaos/litmus"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="navbar__item navbar__link"
-              >GitHub</a
-            ><a
-              href="https://app.slack.com/client/T09NY5SBT/CNXNB0ZTN"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="navbar__item navbar__link"
-              >Slack</a
-            ><a
-              href="https://hub.litmuschaos.io/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="navbar__item navbar__link"
-              >Chaos Hub</a
-            >
+            <a class="navbar__item navbar__link" href="/docs/introduction">2.0.0-Beta-8</a>
+            <a href="https://github.com/litmuschaos/litmus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub</a>
+            <a href="https://app.slack.com/client/T09NY5SBT/CNXNB0ZTN" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Slack</a>
+            <a href="https://hub.litmuschaos.io/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Chaos Hub</a>
+            <div class="navbar__search">
+              <input type="search" id="search-input" placeholder="Search" />
+            </div>
           </div>
         </div>
         <div role="presentation" class="navbar-sidebar__backdrop"></div>
         <div class="navbar-sidebar">
           <div class="navbar-sidebar__brand">
-            <a class="navbar__brand" href="/"
-              ><img
-                src="/img/litmus-light-icon.svg"
-                alt="Litmus Logo"
-                class="themedImage_YANc themedImage--light_3CMI navbar__logo"
-              /><img
-                src="/img/litmus-icon.svg"
-                alt="Litmus Logo"
-                class="themedImage_YANc themedImage--dark_3ARp navbar__logo"
-              /><strong class="navbar__title">Litmus Docs</strong></a
-            >
+            <a class="navbar__brand" href="/">
+              <img src="/img/litmus-light-icon.svg" alt="Litmus Logo" class="themedImage_YANc themedImage--light_3CMI navbar__logo" />
+              <img src="/img/litmus-icon.svg" alt="Litmus Logo" class="themedImage_YANc themedImage--dark_3ARp navbar__logo" />
+              <strong class="navbar__title">Litmus Docs</strong>
+            </a>
           </div>
           <div class="navbar-sidebar__items">
             <div class="menu">
@@ -127,37 +109,13 @@
                   <a role="button" class="menu__link menu__link--sublist">Versions</a>
                   <ul class="menu__list">
                     <li class="menu__list-item"><a class="menu__link" href="/docs/">2.0.0-Beta-8</a></li>
-                    <li class="menu__list-item">
-                      <a class="menu__link" href="/docs/2.0.0-Beta-3/getstarted">2.0.0-Beta-3</a>
-                    </li>
-                    <li class="menu__list-item">
-                      <a class="menu__link" href="/docs/next/introduction">Master/Unreleased</a>
-                    </li>
+                    <li class="menu__list-item"><a class="menu__link" href="/docs/2.0.0-Beta-3/getstarted">2.0.0-Beta-3</a></li>
+                    <li class="menu__list-item"><a class="menu__link" href="/docs/next/introduction">Master/Unreleased</a></li>
                   </ul>
                 </li>
-                <li class="menu__list-item">
-                  <a
-                    href="https://github.com/litmuschaos/litmus"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="menu__link"
-                    >GitHub</a
-                  >
-                </li>
-                <li class="menu__list-item">
-                  <a
-                    href="https://app.slack.com/client/T09NY5SBT/CNXNB0ZTN"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="menu__link"
-                    >Slack</a
-                  >
-                </li>
-                <li class="menu__list-item">
-                  <a href="https://hub.litmuschaos.io/" target="_blank" rel="noopener noreferrer" class="menu__link"
-                    >Chaos Hub</a
-                  >
-                </li>
+                <li class="menu__list-item"><a href="https://github.com/litmuschaos/litmus" target="_blank" rel="noopener noreferrer" class="menu__link">GitHub</a></li>
+                <li class="menu__list-item"><a href="https://app.slack.com/client/T09NY5SBT/CNXNB0ZTN" target="_blank" rel="noopener noreferrer" class="menu__link">Slack</a></li>
+                <li class="menu__list-item"><a href="https://hub.litmuschaos.io/" target="_blank" rel="noopener noreferrer" class="menu__link">Chaos Hub</a></li>
               </ul>
             </div>
           </div>
@@ -305,11 +263,21 @@
         </div>
       </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
     <script src="/styles.6b5521d6.js"></script>
     <script src="/runtime~main.43b71260.js"></script>
     <script src="/main.8c703477.js"></script>
     <script src="/1.7f9f5893.js"></script>
     <script src="/2.be90c3a5.js"></script>
     <script src="/4eace853.4280ec8e.js"></script>
+    <script type="text/javascript">
+      docsearch({
+        appId: 'D8YZTJNSE2',
+        apiKey: 'b388bb42bbdfcd9c02f0eb32c6ee9fa4',
+        indexName: 'litmuschaos',
+        inputSelector: '#search-input',
+        debug: true 
+      });
+    </script>
   </body>
-</html>
+  </html>
