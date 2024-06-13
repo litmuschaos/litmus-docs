@@ -6,7 +6,7 @@ sidebar_label: Re-run chaos experiment
 
 ---
 
-You can re-run any **_non-recurring_** schedule should you wish to test your application against it at any point.
+You can re-run any **non-recurring** schedule should you wish to test your application against it at any point.
 
 ## Before you begin
 
@@ -14,11 +14,11 @@ You can learn how to schedule your first chaos experiment [here](schedule-experi
 
 ## 1. Go to the chaos experiments sections
 
-In the `Chaos experiment` page, and click on the play icon for the specific schedule you wish to re-run:
+In the **Chaos experiment** page, and click on the play icon for the specific schedule you wish to re-run:
 
 <img src={require('../assets/user-guides/injecting-fault/re-run-workflow/step-1.png').default} />
 
-## 2. Click on the `Run Experiment` option
+## 2. Select Run Experiment option
 
 Having re-run a particular experiment, you will redirected to the chaos studio for the particular execution and see that it has started to run as per the experiment configurations:
 
