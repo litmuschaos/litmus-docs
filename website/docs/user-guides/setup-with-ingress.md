@@ -1,38 +1,41 @@
 ---
 id: setup-with-ingress
-title: Install Litmus ChaosCenter with Ingress
-sidebar_label: Setup With Ingress
+title: Install ChaosCenter with Ingress
+sidebar_label: Setup with Ingress
 ---
 
 ---
 
 ## Prerequisites
 
-Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](../getting-started/resources.md#chaoscenter) is installed 
+Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](../getting-started/resources.md#chaoscenter) is installed:
 
-- [Install ChaosCenter with HTTP](../getting-started/installation.md))
+- [Install ChaosCenter with HTTP](../getting-started/installation.md)
 - [Install ChaosCenter with HTTPS](chaoscenter-advanced-installation.md)
 
 ## Install ChaosCenter with Ingress
 
-With Litmus-2.0.0, ChaosCenter can be installed with ingress.
-In the following doc, we will use the Nginx ingress controller for ingress setup.
+Since Litmus 2.0.0, ChaosCenter can be installed with ingress. We will use the Nginx ingress controller for ingress setup.
 
-1. By default, the service type is `NodePort`. For Ingress, we need to change the service type to `ClusterIP` in the following services.
+1. By default, the service type is `NodePort`. For Ingress, we need to change the service type to `ClusterIP` in the following services:
 
 - `litmusportal-frontend-service`
 - `litmusportal-server-service`
 
-2. Install Nginx Ingress Controller along with Kubernetes RBAC roles and bindings, please refer [here](https://kubernetes.github.io/ingress-nginx/deploy/#installation-guide)
+2. Install Nginx Ingress Controller along with Kubernetes RBAC roles and bindings, please refer [here](https://kubernetes.github.io/ingress-nginx/deploy/#installation-guide).
 
-> - Set the environment variable **INGRESS** as true in the litmusportal-server deployment.
+:::note
+Set the environment variable **INGRESS** as true in the litmusportal-server deployment.
+:::
 
 Example:
 ```bash
 kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" INGRESS="true"
 ```
 
-> - If you're changing ingress name from **litmus-ingress** to a different name, make sure to update the **INGRESS_NAME** environment variable in the litmusportal-server deployment
+:::note
+If you're changing ingress name from **litmus-ingress** to a different name, make sure to update the **INGRESS_NAME** environment variable in the litmusportal-server deployment.
+:::
 
 Example:
 ```bash
@@ -41,7 +44,7 @@ kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-s
 
 ### With HTTP
 
-Sample litmus ingress manifest With HTTP
+Sample LitmusChaos Ingress manifest with HTTP:
 
 ```yaml
 apiVersion: networking.k8s.io/v1

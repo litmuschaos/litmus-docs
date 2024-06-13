@@ -10,7 +10,7 @@ LitmusChaos facilitates real-time monitoring for events and metrics using it’s
 
 ## Before you begin
 
-The following should be required before integrating Prometheus in litmus 2.0:
+The following are required before integrating Prometheus in litmus 2.0:
 
 - [Prometheus TSDB](https://prometheus.io/)
 - [Probes](../concepts/probes.md)

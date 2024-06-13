@@ -1,7 +1,7 @@
 ---
 id: delete-experiment
-title: Delete a Chaos experiment
-sidebar_label: Delete Chaos experiment
+title: Delete a chaos experiment
+sidebar_label: Delete chaos experiment
 ---
 
 ---
@@ -18,17 +18,17 @@ You can learn about the concept of chaos experiments [here](../concepts/chaos-wo
 
 ## 1. Go to the chaos experiments sections
 
-In the `Chaos experiment` page, go to the specific experiment you wish to delete:
+In the **Chaos experiment** page, go to the specific experiment you wish to delete:
 
 <img src={require('../assets/user-guides/injecting-fault/delete-workflow/step-1.png').default} width="1000" height="500" />
 
-## 2. Click on the `Delete experiment` option
+## 2. Select Delete Experiment option
 
-After opening the options menu and clicking on the `Delete experiment` option, you'll see a prompt in order to confirm your action. Please ensure that you want to delete the selected chaos experiment and click the `Confirm` button:
+After opening the options menu and clicking on the **Delete Experiment** option, you'll see a prompt in order to confirm your action. Please ensure that you want to delete the selected chaos experiment and click the **Confirm** button:
 
 <img src={require('../assets/user-guides/injecting-fault/delete-workflow/step-2.png').default} width="1000" height="500" />
 
-## 3. The Chaos experiment has been deleted
+## 3. Verify that experiment has been deleted
 
 You will observe that the chaos experiment no longer appears in the list of schedules and has been removed.
 

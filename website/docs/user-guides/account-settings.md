@@ -1,22 +1,24 @@
 ---
 id: account-settings
-title: Account Settings
-sidebar_label: Account Settings
+title: Account settings
+sidebar_label: Account settings
 ---
 
 ---
 
 Under the account settings, you can change your personal details such as the email, name, and password.
 
-> Note: The username can’t be changed as it is unique.
+:::note
+The username can’t be changed as it is unique.
+:::
 
-To navigate to the accounts page, click on the user avatar on the bottom left of the nav-bar:
+To navigate to the accounts page, click on the user avatar on the bottom left of the navbar:
 
 <figure>
 <img src={require('../assets/user-guides/my-account/step-1.png').default} alt="avatar nav" />
 </figure>
 
-## Edit Personal Details
+## Edit personal details
 
 Click the edit icon to open the edit modal:
 
@@ -24,21 +26,21 @@ Click the edit icon to open the edit modal:
 <img src={require('../assets/user-guides/my-account/step-2.png').default} alt="edit icon" />
 </figure>
 
-Enter your name and your email address in the following text fields and click on the `Confirm` button to save the new details.
+Enter your name and email address in the following text fields and click on the **Confirm** button to save the new details.
 
 <figure>
 <img src={require('../assets/user-guides/my-account/step-3.png').default} alt="edit information" />
 </figure>
 
-## Change Password
+## Change password
 
-On the same page, you can change your password by clicking on the `Change Password` button.
+On the same page, you can change your password by clicking on the **Change Password** button.
 
 <figure>
 <img src={require('../assets/user-guides/my-account/step-4.png').default} alt="edit information" />
 </figure>
 
-To update your password enter your current password as well as the new password you wish to set and click **Confirm**
+To update your password enter your current password as well as the new password you wish to set and select **Confirm**.
 
 <figure>
 <img src={require('../assets/user-guides/my-account/step-5.png').default} alt="edit information" />

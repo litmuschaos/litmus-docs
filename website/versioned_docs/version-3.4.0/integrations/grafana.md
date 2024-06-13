@@ -10,7 +10,7 @@ Chaos Engineering is the discipline of experimenting on a system to build confid
 
 ## Before you begin
 
-The following should be required before integrating Grafana with litmus 2.0:
+The following are required before integrating Grafana with litmus 2.0:
 
 - [Prometheus TSDB](https://prometheus.io/)
 - [Prometheus Integration](prometheus.md)

@@ -19,7 +19,7 @@ With the latest release of LitmusChaos 3.0.0:
 
 ## Prerequisites
 
-The following should be required before creating a Chaos Experiment:
+The following are required before creating a Chaos Experiment:
 
 - [ChaosCenter](../getting-started/resources.md#chaoscenter)
 - [Chaos Infrastructure](../getting-started/resources.md#chaosagents)

@@ -12,19 +12,19 @@ sidebar_label: Create an Infrastructure
 
 ## 1. Go to the Infrastructure section
 
-Navigate to the `/environments` page (Environments on the left nav), and click on the environment you wish to install the chaos infrastructure in:
+Navigate to the `/environments` page (**Environments** sidebar option on the left nav), and click on the Environment you wish to install the chaos infrastructure in:
 
 <img src={require('../assets/user-guides/infrastructure/create-infrastructure/step-1.png').default} />
 
 ## 2. Enable Chaos
 
-Click on the `Enable Chaos` button:
+Click on the **Enable Chaos** button:
 
 <img src={require('../assets/user-guides/infrastructure/create-infrastructure/step-2.png').default} />
 
 ## 3. Add details of the Infrastructure
 
-Add the details of the infrastructure such as the name, description and tags, then click on the `Next` button:
+Add the details of the infrastructure such as the name, description and tags, then click on the **Next** button:
 
 <img src={require('../assets/user-guides/infrastructure/create-infrastructure/step-3.png').default} />
 
@@ -32,12 +32,13 @@ Add the details of the infrastructure such as the name, description and tags, th
 
 Choose one of the following modes:
 
-- **Cluster Wide:** This mode of infrastructure installation allows targeting resources across the entire cluster, in all the namespaces, as part of an experiment.
-- **Namespace Mode:** This mode of infrastructure installation allows targeting resources only in the namespace where the chaos infrastructure is deployed.
+- **Cluster Wide:** This mode of infrastructure installation allows targeting workloads across the cluster, in all the namespaces.
 
-By default the installation will take place in the `litmus` namespace and uses `litmus` service account, which can be configured under the K8s cluster details.
+- **Namespace Mode:** This mode of infrastructure installation allows targeting workloads only in the namespace where the chaos infrastructure is deployed.
 
-Optionally, you can also specify the node selectors and Kubernetes tolerations for chaos infrastructure deployment in the advanced section
+By default the installation will take place in the `litmus` namespace and uses `litmus` service account, which can be configured under the cluster details.
+
+Optionally, you can also specify the node selectors and Kubernetes tolerations for chaos infrastructure deployment in the advanced section.
 
 <img src={require('../assets/user-guides/infrastructure/create-infrastructure/step-4.png').default} />
 
@@ -46,7 +47,7 @@ Optionally, you can also specify the node selectors and Kubernetes tolerations f
 - For cluster-wide access:
 
 <ol type="a">
-  <li>Select Download, and then copy and run the kubectl command shown on your screen to install the chaos infrastructure.</li>
+  <li>Select Download, and then copy and run the <code>kubectl</code> command shown on your screen to install the chaos infrastructure.</li>
 </ol>
 
 <img src={require('../assets/user-guides/infrastructure/create-infrastructure/step-5.png').default} />
@@ -54,14 +55,14 @@ Optionally, you can also specify the node selectors and Kubernetes tolerations f
 - For namespace access:
 
 <ol type="a">
-  <li>Run the first kubectl command to create the target namespace.</li>
-  <li>Run the second kubectl command to apply the chaos CRDs.</li>
+  <li>Run the first <code>kubectl</code> command to create the target namespace.</li>
+  <li>Run the second <code>kubectl</code> command to apply the chaos CRDs.</li>
   <li>Select Download, and then copy and run the third command to install the chaos infrastructure.</li>
 </ol>
 
 <img src={require('../assets/user-guides/infrastructure/create-infrastructure/step-6.png').default} />
 
-Click `Done`
+Click **Done**
 
 **NOTE:** For HTTPS mode of installation of Chaoscenter, you will need to set `SKIP_SSL_VERIFY` as `true` in the infrastructure deployment yaml.
  
