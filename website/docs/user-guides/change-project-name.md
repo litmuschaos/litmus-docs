@@ -1,22 +1,22 @@
 ---
 id: change-project-name
-title: Changing Project Name
-sidebar_label: Change Project Name
+title: Changing project name
+sidebar_label: Change project name
 ---
 
 ---
 
-Owners have the ability to change the name of their project if they wish to do so.
+Owners have the ability to change the name of their project.
 
 ## Before you begin
 
-The concept of `Projects` is discussed [here](../concepts/projects.md) and will help you build a foundational understanding of what projects mean in the ChaosCenter.
+The concept of **Projects** is discussed [here](../concepts/projects.md) and will help you build a foundational understanding of what projects mean in the ChaosCenter.
 
 ## Steps
 
-### 1. Go to `Account setting`
+### 1. Go to **Account setting**
 
-Go to the `Overview` section of settings and scroll to the `Your Projects` section:
+Go to the **Overview** section of settings and scroll to the **Your Projects** section:
 
 <img src={require('../assets/user-guides/managing-projects/change-project-name/step-1.png').default} width="1000" height="500" />
 
@@ -28,7 +28,7 @@ Click options icon to open the options menu and click on the edit option (demons
 
 ### 3. Replace name
 
-Once in the editing mode, type out the name you want to replace the current name with, and click on the `Confirm` button.
+Once in the editing mode, type out the name you want to replace the current name with, and click on the **Confirm** button.
 
 <img src={require('../assets/user-guides/managing-projects/change-project-name/step-3.png').default} />
 

@@ -6,30 +6,32 @@ sidebar_label: Uninstall Litmus
 
 ---
 
-## Chaos Delegate
+## Chaos Infrastructure
 
-To disconnect the [Chaos Delegate](../getting-started/resources.md#chaosagents) connected to the [ChaosCenter](../getting-started/resources.md#chaoscenter), follow these steps -
+To disconnect the [Chaos Infrastructure](../getting-started/resources.md#chaosagents) connected to the [ChaosCenter](../getting-started/resources.md#chaoscenter), follow these steps -
 
-1. Remove the ChaosEngines of the respective Chaos Delegate
+1. Remove the ChaosEngines of the respective Chaos Infrastructure
 
-   ```bash
-   kubectl delete chaosengine <CHAOSENGINE_NAMEs> --all -<AGENT_NAMESPACE>
-   ```
+  ```bash
+  kubectl delete chaosengine <CHAOSENGINE_NAMEs> --all -<AGENT_NAMESPACE>
+  ```
 
-   > If ChaosEngines is unable to delete successfully then the Kubernetes finalizers need to be removed manually.
+  :::note
+  If ChaosEngines is unable to delete successfully then the Kubernetes finalizers need to be removed manually.
+  :::
 
-2. Login to the ChaosCenter and navigate to the Chaos Delegates Tab.
-3. Click on the `Disconnect icon` <img src={require("../assets/user-guides/uninstall-litmus/disconnect-icon.png").default} alt="Disconnect Icon" /> of the respective Chaos Delegate you want to disconnect.
-4. On the Modal that appears, confirm your selection by clicking `Yes` and the selected Chaos Delegate would be disconnected from the ChaosCenter.
+2. Login to the ChaosCenter and navigate to the Chaos Infrastructures Tab.
+3. Click on the `Disconnect icon` <img src={require("../assets/user-guides/uninstall-litmus/disconnect-icon.png").default} alt="Disconnect Icon" /> of the respective Chaos Infrastructure you want to disconnect.
+4. On the Modal that appears, confirm your selection by selecting **Yes** and the selected Chaos Infrastructure would be disconnected from the ChaosCenter.
    :::note
-   The above disconnect would remove the subscriber component from Chaos Delegate and thus removing the connectivity between the Chaos Delegate and the ChaosCenter.
+   The above disconnect would remove the subscriber component from Chaos Infrastructure and thus removing the connectivity between the Chaos Infrastructure and the ChaosCenter.
 
-   If the Chaos Delegate is not reachable it would remove only the entry from the database of the ChaosCenter
+   If the Chaos Infrastructure is not reachable it would remove only the entry from the database of the ChaosCenter
    :::
 
 ### Remove the CRs
 
-To remove the CRs Litmus uses, use the following command:
+To remove the CRs, use the following commands:
 
 - To remove individual CRs
 
@@ -51,7 +53,7 @@ kubectl delete eventtrackerpolicies -n <AGENT_NAMESPACE>
 
 ### Delete the Deployments
 
-To remove the respective deployments of the Chaos Delegates you need to manually delete them.
+To remove the respective deployments of the Chaos Infrastructure you need to manually delete them.
 
 ```bash
 kubectl delete deployment chaos-operator-ce event-tracker workflow-controller chaos-exporter -n <AGENT_NAMESPACE>
@@ -59,7 +61,7 @@ kubectl delete deployment chaos-operator-ce event-tracker workflow-controller ch
 
 ### Removing Service Account, Role Bindings and Roles
 
-#### For Cluster Scope
+#### For cluster scope
 
 ```bash
 kubectl delete sa argo argo-chaos litmus-admin litmus-cluster-scope event-tracker-sa -n -<AGENT_NAMESPACE>
@@ -67,7 +69,7 @@ kubectl delete clusterrolebindings argo-binding chaos-cluster-role-binding event
 kubectl delete clusterrole litmus-admin chaos-cluster-role subscriber-cluster-role event-tracker-cluster-role litmus-cluster-scope argo-aggregate-to-admin argo-aggregate-to-edit argo-aggregate-to-view argo-cluster-role
 ```
 
-#### For Namespace Scope
+#### For namespace scope
 
 ```bash
 kubectl delete sa rolebindings role --all -n <NAMESPACE>
@@ -75,13 +77,13 @@ kubectl delete sa rolebindings role --all -n <NAMESPACE>
 
 ---
 
-## Remove the Litmus CRDs
+## Remove the CRDs
 
 :::note
-If the Litmus CRDs are deleted in the Cluster Scope all the respective custom resources in the individual namespaces would stop working.
+If the Litmus CRDs are deleted in the cluster scope all the respective custom resources in the individual namespaces would stop working.
 :::
 
-To remove all the CRDs Litmus uses, use the following command:
+To remove all the CRDs uses, use the following command:
 
 ```bash
 kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/manifests/litmus-portal-crds.yml
@@ -91,7 +93,7 @@ kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/master/li
 
 ## ChaosCenter
 
-> To remove the Self Chaos Delegate Resources you need to follow the above Chaos Delegate Uninstall process
+To remove the Self Chaos Infrastructure Resources you need to follow the above Chaos Infrastructure Uninstall process.
 
 To uninstall the ChaosCenter from the system, follow these steps -
 
@@ -105,7 +107,9 @@ To uninstall the ChaosCenter from the system, follow these steps -
   kubectl delete -f https://litmuschaos.github.io/litmus/3.7.0/litmus-cluster-scope-3.7.0.yaml
   ```
 
-  > To delete any specific version of the ChaosCenter, replace the above command with the below command. `kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/<VERSION>/docs/<VERSION/litmus-<VERSION>.yaml`
+  :::note
+  To delete any specific version of the ChaosCenter, replace the above command with the below command. `kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/<VERSION>/docs/<VERSION/litmus-<VERSION>.yaml`
+  :::
 
 - **Litmus Master Manifest**
 
@@ -126,4 +130,6 @@ helm uninstall litmuschaos  --namespace litmus
 kubectl delete ns litmus
 ```
 
-> The namespace doesn't have to be `litmus` necessarily, instead it should be the same namespace where Litmus ChaosCenter is installed.
+:::note
+The namespace doesn't have to be `litmus` necessarily, instead it should be the namespace where ChaosCenter is installed.
+:::

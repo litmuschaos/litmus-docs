@@ -10,7 +10,7 @@ Visualization is an important aspect while doing chaos engineering. It allows th
 
 ## Prerequisites
 
-The following is required before visualizing a chaos experiment:
+The following are required before creating a Chaos Experiment:
 
 - ChaosCenter
 - [Chaos Experiments](chaos-workflow.md)

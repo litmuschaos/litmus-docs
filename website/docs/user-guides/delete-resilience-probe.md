@@ -10,13 +10,13 @@ Deleting a probe will delete all the associations with experiment runs from the 
 
 ## 1. Go to the probes sections
 
-In the `Resilience Probes` page, go to the specific probe you wish to delete:
+In the **Resilience Probes** page, go to the specific probe you wish to delete:
 
 <img src={require('../assets/user-guides/resilience-probes/delete-probe/step-1.png').default} />
 
-## 2. Click on the `Delete Probe` option
+## 2. Click on the Delete Probe option
 
-After opening the options menu and clicking on the `Delete Probe` option, you'll see a prompt in order to confirm your action. Please ensure that you want to delete the selected resilience probe and click the `Confirm` button:
+After opening the options menu and clicking on the **Delete Probe** option, you'll see a prompt in order to confirm your action. Please ensure that you want to delete the selected Resilience Probe and select the **Confirm** button:
 
 <img src={require('../assets/user-guides/resilience-probes/delete-probe/step-2.png').default} />
 

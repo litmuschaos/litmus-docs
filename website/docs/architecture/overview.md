@@ -14,7 +14,7 @@ A very high level overview of the entire Litmus architecture with the objective 
 
 ### [Control Plane](chaos-control-plane.md)
 
-Consists of micro-services responsible for the functioning of the ChaosCenter, the web based portal used for creating, scheduling, and monitoring chaos scenarios.
+Consists of micro-services responsible for the functioning of the ChaosCenter, the web based portal used for creating, scheduling, and monitoring chaos experiments.
 
 ### [Execution Plane](chaos-execution-plane.md)
 

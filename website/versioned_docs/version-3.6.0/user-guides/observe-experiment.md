@@ -11,7 +11,7 @@ With ChaosCenter, the real-time data and status of the chaos experiments can be 
 
 ## Prerequisites
 
-The following should be required before creating a Chaos Experiment:
+The following are required before creating a Chaos Experiment:
 
 - ChaosCenter
 - [Chaos Experiments](../concepts/chaos-workflow.md)
