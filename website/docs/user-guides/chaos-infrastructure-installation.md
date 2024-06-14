@@ -1,7 +1,7 @@
 ---
 id: chaos-infrastructure-installation
-title: chaos-infrastructure-installation
-sidebar_label: chaos-infrastructure-installation
+title: Chaos Infrastructure Installation
+sidebar_label: Chaos Infrastructure Installation
 ---
 
 ---
