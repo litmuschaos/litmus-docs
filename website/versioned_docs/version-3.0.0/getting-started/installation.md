@@ -1,6 +1,6 @@
 ---
 id: installation
-title: ChaosCenter Cluster Scope Installation
+title: ChaosCenter cluster scope installation
 sidebar_label: Installation
 ---
 

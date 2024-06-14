@@ -1,6 +1,6 @@
 ---
 id: teaming
-title: Collaborate with Teams
+title: Collaborate with teams
 sidebar_label: Teaming
 ---
 
@@ -8,7 +8,7 @@ sidebar_label: Teaming
 
 The ChaosCenter has a built in teaming feature to facilitate collaboration between users using project level role access, the core concepts of which are discussed below.
 
-## Project level roles (Owner, Editor, Viewer)
+## Project level roles
 
 Each user has a default project created on user creation by the admin for which they maintain a project level `Owner` access. Every `Owner` has the ability to invite other users into their project with different permission levels, namely `Editor`, and `Viewer`.
 

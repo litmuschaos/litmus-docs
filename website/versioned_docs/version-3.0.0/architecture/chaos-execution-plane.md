@@ -1,7 +1,7 @@
 ---
 id: chaos-execution-plane
-title: Chaos Execution Plane
-sidebar_label: Chaos Execution Plane
+title: Chaos execution plane
+sidebar_label: Chaos execution plane
 ---
 
 ---
@@ -65,8 +65,7 @@ It is worth noticing that:
 
 :::note
 With the latest release of LitmusChaos 3.0.0:
-
-<li>The term <b>Chaos Delegate/Agent</b> has been changed to <b>Chaos Infrastructure.</b> </li>
-<li>The term <b>Chaos Experiment</b> has been changed to <b>Chaos Fault.</b> </li>
-<li>The term <b>Chaos Experiment/Workflow</b> has been changed to <b>Chaos Experiment.</b></li>
+- The term **Chaos Delegate/Agent** has been changed to **Chaos Infrastructure**.
+- The term **Chaos Experiment** has been changed to **Chaos Fault**.
+- The term **Chaos Scenario/Workflow** has been changed to **Chaos Experiment**.
 :::

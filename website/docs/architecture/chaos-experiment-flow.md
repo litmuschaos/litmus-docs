@@ -1,7 +1,7 @@
 ---
 id: chaos-fault-flow
-title: Chaos Fault Flow
-sidebar_label: Chaos Fault Flow
+title: Chaos fault flow
+sidebar_label: Chaos fault flow
 ---
 
 ---
@@ -31,7 +31,7 @@ The fault execution is triggered upon the creation of a ChaosEngine resource. Th
 
 :::note
 With the latest release of LitmusChaos 3.0.0:
-
-<li>The term <b>Chaos Experiment</b> has been changed to <b>Chaos Fault.</b> </li>
-<li>The term <b>Chaos Experiment/Workflow</b> has been changed to <b>Chaos Experiment.</b></li>
+- The term **Chaos Delegate/Agent** has been changed to **Chaos Infrastructure**.
+- The term **Chaos Experiment** has been changed to **Chaos Fault**.
+- The term **Chaos Scenario/Workflow** has been changed to **Chaos Experiment**.
 :::

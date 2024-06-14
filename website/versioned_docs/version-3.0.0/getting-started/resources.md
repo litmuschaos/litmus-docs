@@ -7,51 +7,33 @@ sidebar_label: Resources
 ---
 
 ## ChaosCenter
+ChaosCenter is a unified pane that controls all the functions provided by Litmus. It can be used for managing the entire lifecycle of the chaos experiments, including all the components within.
 
-<span style={{color: '#5B44BA'}}><b>ChaosCenter</b></span> is a single source of truth to control all the functions provided by Litmus. From ChaosCenter, you get the freedom to manage every single part of Litmus and shape your chaos experiments exactly the way you want it.
-
-**ChaosCenter comes pre-packaged** as a part of LitmusChaos installation and can be easily accessed via [Ingress](../user-guides/setup-with-ingress.md), [NodePort](../user-guides/setup-without-ingress.md#with-nodeport) or [LoadBalancer](../user-guides/setup-without-ingress.md#with-loadbalancer). Since Litmus has Cross-Cloud support, you get seamless access to the ChaosCenter irrespectively of where you deploy it.
-
-> [Get a broader view of which Platforms are supported by Litmus](https://github.com/litmuschaos/litmus/tree/master/litmus-portal#platforms-support)
+ChaosCenter comes pre-packaged as a part of LitmusChaos installation and can be easily accessed via [Ingress](../user-guides/setup-with-ingress.md), [NodePort](../user-guides/setup-without-ingress.md#with-nodeport) or [LoadBalancer](../user-guides/setup-without-ingress.md#with-loadbalancer). Since Litmus has Cross-Cloud support, you get seamless access to the ChaosCenter irrespectively of where you deploy it.
 
 ChaosCenter gives you access to a plethora of features, the major ones include:
 
-- Chaos Experiment Creation
-  <span style={{color: '#696F8C'}}>
-    <ul>
-        <li>From Templates, Custom Chaos Experiments from Scratch (using ChaosHubs), From pre-created YAMLs</li>
-        <li>Chaos Experiments Sequence Control (Parallel as well as Sequential steps creation)</li>
-        <li>Creation of either Singular or Cron Chaos Experiments as Schedules</li>
-        <li>Attaching priority to Chaos Experiments based on your use cases</li>
-    </ul>
-    </span>
-- Users & Teams
-  <span style={{color: '#696F8C'}}>
-    <ul>
-        <li>Creation of Users with Role Based Access Control</li>
-        <li>Creating a Team of multiple Users</li>
-        <li>Authenticating Users</li>
-    </ul>
-    </span>
-- Chaos Experiment Management
-  <span style={{color: '#696F8C'}}>
-    <ul>
-        <li>Rolling out automated changes using GitOps</li>
-        <li>Allowing image addition from custom image server (both public and private)</li>
-        <li>Measure and Analyze the Resilience Score of each chaos scenario</li>
-    </ul>
-    </span>
+- **Chaos experiment creation**
+  - From templates, custom experiments from scratch (using ChaosHubs), from pre-created YAMLs
+  - Experiments sequence control (parallel as well as sequential steps creation)
+  - Creation of either singular or cron experiments as schedules
+  - Attaching priority to experiments based on your use cases
+- **Users and teams**
+  - Creation of users with Role Based Access Control
+  - Creating a team of multiple users
+  - Authenticating users
+- **Chaos experiment management**
+  - Rolling out automated changes using GitOps
+  - Allowing image addition from custom image server (both public and private)
+  - Measure and analyze the Resilience Score of each chaos scenario
 
 ## Chaos Infrastructures
-<span style={{color: '#5B44BA'}}><b>Chaos infrastructure</b></span> is a service that runs in your target environment and aids Litmus in accessing and injecting chaos to your target environment. There should always be at least one or more than one chaos infrastructure connected to the ChaosCenter.
+Chaos infrastructure is a service that runs in your target environment and aids Litmus in accessing and injecting chaos to your target environment. There should always be at least one or more than one chaos infrastructure connected to the ChaosCenter to execute an experiment.
 
 ## Types of Chaos Infrastructures
 
-In Litmus, chaos infrastructures can be classified into two types
+In Litmus, chaos infrastructures can be classified into two types:
 
-- <span style={{color: '#5B44BA'}}><b>Self Chaos Infrastructures</b></span>
-- <span style={{color: '#5B44BA'}}><b>External Chaos Infrastructures</b></span>
+- **Self Chaos Infrastructures:** A Chaos Infrastructure that is connected to the same cluster and namespace where the ChaosCenter is deployed. It can be used to target the workloads executing on that cluster only.
 
-As part of the Litmus installation, a Self Chaos Infrastructure would be registered as a default Chaos Infrastructure in the ChaosCenter. The same cluster where Litmus is installed is chosen as the Self Chaos Infrastructure by the installer. From the ChaosCenter you can now induce chaos into this Self Chaos Infrastructure and observe the results.
-
-Since the ChaosCenter is Cross Cloud, you can connect multiple External Chaos Infrastructure to the same ChaosCenter with the help of the command line utility [litmusctl](../litmusctl/installation.md). Once connected you can manage, monitor, observe and induce chaos from the ChaosCenter to the respective Chaos Infrastructures.
+- **External Chaos Infrastructures:** A Chaos Infrastructure that is connected to a remote Kubernetes cluster. ChaosCenter can be operated in a cross-cloud manner, which allows connecting multiple External Chaos Infrastructure to the same ChaosCenter with the help of the [litmusctl](../litmusctl/installation.md) CLI. Once connected you can manage, monitor, observe and induce chaos from the ChaosCenter to the respective External Chaos Infrastructures.
