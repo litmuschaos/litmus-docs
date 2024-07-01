@@ -112,6 +112,8 @@ probe:
 
 > `source.hostNetwork` can be set to `true` to allow access to the node network namespace for the pod executing the probe
 
+For insights into efficient chaos probe practices and our roadmap for the future, check out the [best practices](../best-practices.md#probes).
+
 ### k8sProbe
 
 With the proliferation of custom resources & operators, especially in the case of stateful applications, the steady-state is manifested as status parameters/flags within Kubernetes resources. k8sProbe addresses verification of the desired resource state by allowing users to define the Kubernetes GVR (group-version-resource) with appropriate filters (field selectors/label selectors). The fault makes use of the Kubernetes Dynamic Client to achieve this.The `k8sProbe` can be defined at `.spec.experiments[].spec.probe` the path inside ChaosEngine.
