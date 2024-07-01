@@ -10,11 +10,15 @@ sidebar_label: Best Practices
 
 #### Restrict execution scope
 
-- For the cases where a malicious higher level user (who doesn't have cluster access) tries to extract the SA token from the probe pod and leverages it for destructive action - The recommendation would be to have a reduced scope within the service account itself (i.e., create rbac w/o loopholes). The RBAC for the agent itself can be subject to scrutiny prior to deployment - it can be restricted to a namespace with verbs against restricted resources etc., The agent setup can be carried out via Helm too, with changes to templates undergoing review.
+- In the case where a malicious, privileged user (who doesn't have cluster access) tries to extract the SA token from the probe pod and leverages it for destructive action, the recommended way to prevent it would be to have a reduced scope within the service account itself i.e. create an RBAC without loopholes.
 
-  The intent of the command probe pod is allow the users to perform custom checks which allow them to either (a) validate the impact of chaos, either within or outside the cluster (b) manually trigger remediation or (c) perform tasks that complement the chaos itself (such as load etc.,). Having a restrictive scope for this feature would depend on what kind of tasks are allowed by the cluster/devops admins within the purview of (a), (b), (c) - rather than being imposed from within the product by default. If some of the validations involve performing kube-api calls, we would need to support that / binding the admin's decision.
+  The RBAC for the agent itself can be subject to scrutiny before deployment, it can be restricted to a namespace with verbs against restricted resources, etc. The agent setup can be performed using Helm too, with changes to templates undergoing review.
 
-- Only users with `Executor` roles can carry out executing probes. Project `Owners`, however, wield the authority to create, edit and also execute probes, shaping them to suit project needs and objectives. This division ensures efficient probe management, with Executors handling execution and Project Owners overseeing customization and design.
+  The intent of the command probe pod is to allow the users to perform custom checks which allow them to either (a) validate the impact of chaos, either within or outside the cluster (b) manually trigger remediation or (c) perform tasks that complement the chaos itself (such as load etc.,).
+
+  Having a restrictive scope for this feature would depend on what kind of tasks are allowed by the cluster/devops admins within the purview of (a), (b), (c) - rather than being imposed from within the product by default. If some of the validations involve performing kube-api calls, we would need to support that / binding the admin's decision.
+
+- Only users with **Executor** roles can carry out executing probes. Project **Owners**, however, wield the authority to create, edit, and execute probes, shaping them to suit project needs and objectives. This division ensures efficient probe management, with the Executors handling execution and the project Owners overseeing customization and design.
 
 #### Future Roadmap
 
