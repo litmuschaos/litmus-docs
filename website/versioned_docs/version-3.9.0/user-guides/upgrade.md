@@ -8,7 +8,7 @@ sidebar_label: Upgrade
 
 ## Upgrade ChaosCenter
 
-To upgrade Litmus ChaosCenter from 3.7.0 to 3.8.0, you can follow these steps:
+To upgrade Litmus ChaosCenter from 3.8.0 to 3.9.0, you can follow these steps:
 
 > Note: This step is not required if using Helm, Helm upgrade should work.
 
@@ -16,16 +16,8 @@ To upgrade Litmus ChaosCenter from 3.7.0 to 3.8.0, you can follow these steps:
    To upgrade ChaosCenter, you can re-apply the manifest using the kubectl.
 
    ```bash
-   kubectl apply -f https://litmuschaos.github.io/litmus/3.8.0/litmus-cluster-scope-3.8.0.yaml
+   kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/3.9.0/litmus-getting-started.yaml
    ```
-
-## Upgrade Mongodb DB Schema
-
-> Note: This step is not required if using Helm, Helm upgrade should work.
-
-To upgrade the DB schema, deploy the [upgrade-agent](https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/upgrade-agents/control-plane/upgrade-agent.yaml) in your k8s cluster where ChaosCenter is installed. This manifest will create a Job, which will upgrade the mongoDB schema.
-
-`kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/upgrade-agents/control-plane/upgrade-agent.yaml`
 
 ## Upgrade Chaos Delegate
 
