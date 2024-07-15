@@ -10,12 +10,12 @@ The ChaosCenter has a built in teaming feature to facilitate collaboration betwe
 
 ## Project level roles
 
-Each user has a default project created on user creation by the admin for which they maintain a project level `Owner` access. Every `Owner` has the ability to invite other users into their project with different permission levels, namely `Editor`, and `Viewer`.
+Each user has a default project created on user creation by the admin for which they maintain a project level `Owner` access. Every `Owner` has the ability to invite other users into their project with different permission levels, namely `Executor`, and `Viewer`.
 
 Teaming is based on the following principles and each user can have one of the 3 project roles:
 
-- **Owner:** One who created the project and owns it. Only the owner has permission to manage(invite or remove) the members in his/her project. The owner can schedule chaos experiments, update and delete chaos experiments.
-- **Editor:** Members invited with the editor role can do everything an owner can except for managing the project.
+- **Owner:** One who created the project and owns it. Only the owner has permission to manage(invite or remove) the members in his/her project. The owner can create resources such as infrastructures, probes, hubs, experiments, etc, schedule chaos experiments, update and delete chaos experiments.They have both create and execute perimissions.
+- **Executor:** Members invited with the executor role only have execute and view permissions which allow them to run/stop experiments, use probes etc, they don't have any create/delete permissions.
 - **Viewer:** Members having a viewer role can only view the analytics related to the chaos experiments and the chaos experiments themselves, but are not given permission to schedule chaos experiments in the project.
 
 ## Role privileges
@@ -26,7 +26,7 @@ Teaming is based on the following principles and each user can have one of the 3
 
 - Invite other users for the following roles:
   - Viewer
-  - Editor
+  - Executor
 - View the list of team members with other details including their role in the project, email-id, date-time of joining the project team.
 - Rename your project.
 - Remove a member from your project.
@@ -34,7 +34,7 @@ Teaming is based on the following principles and each user can have one of the 3
 - Edit the user role in case the invitation is pending.
 - Cancel the invitation.
 
-**_As a Viewer or Editor you can:_**
+**_As a Viewer or Executor you can:_**
 
 - Check and Accept/Decline the received invitations.
 - Switch and browse any project you are a member of.

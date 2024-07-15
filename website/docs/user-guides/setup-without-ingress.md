@@ -10,8 +10,8 @@ sidebar_label: Setup without Ingress
 
 Before setting up endpoint without Ingress make sure the [Litmus ChaosCenter](../getting-started/resources.md#chaoscenter) is installed in either one of these scopes
 
-- [Cluster Scope](chaoscenter-cluster-scope-installation.md)
-- [Namespace Scope](chaoscenter-namespace-scope-installation.md)
+- [Install ChaosCenter with HTTP](../getting-started/installation.md))
+- [Install ChaosCenter with HTTPS](chaoscenter-advanced-installation.md)
 
 ## **With NodePort**
 
@@ -77,5 +77,5 @@ By default you are assigned with a default project with Owner permissions.
 ## Learn more
 
 - [Setup Endpoints and Access ChaosCenter with Ingress](setup-with-ingress.md)
-- [Install ChaosCenter in Namespace Scope](chaoscenter-namespace-scope-installation.md)
-- [Install ChaosCenter in Cluster Scope](chaoscenter-cluster-scope-installation.md)
+- [Install ChaosCenter with HTTP](../getting-started/installation.md))
+- [Install ChaosCenter with HTTPS](chaoscenter-advanced-installation.md)
