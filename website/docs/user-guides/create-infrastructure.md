@@ -63,6 +63,8 @@ Optionally, you can also specify the node selectors and Kubernetes tolerations f
 
 Click `Done`
 
+**NOTE:** For HTTPS mode of installation of Chaoscenter, you will need to set `SKIP_SSL_VERIFY` as `true` in the infrastructure deployment yaml.
+ 
 The newly created infrastructure will appear in the list of infrastructures:
 
 <img src={require('../assets/user-guides/infrastructure/create-infrastructure/step-7.png').default} />

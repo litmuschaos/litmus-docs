@@ -56,7 +56,7 @@ curl https://raw.githubusercontent.com/litmuschaos/litmus/master/chaoscenter/dex
        redirectURIs:
          - '/auth/dex/callback'
          - 'http://localhost:8080/auth/dex/callback' # Included for local testing purposes
-         - 'https://<REPLACE_FRONTEND_URL>/auth/dex/calllback' #TODO: Replace with you frontend URL
+         - 'https://<REPLACE_FRONTEND_URL>/auth/dex/callback' #TODO: Replace with you frontend URL
        name: 'LitmusPortalAuthBackend'
        secret: ZXhhbXBsZS1hcHAtc2VjcmV0
    oauth2:
@@ -161,7 +161,8 @@ Go to http://litmusportal-frontend-service/auth/dex/login, you should be prompte
 
 ## Learn more
 
-- [Install ChaosCenter in Namespace Scope](../user-guides/chaoscenter-namespace-scope-installation.md)
+- [Install ChaosCenter with HTTP](../getting-started/installation.md))
+- [Install ChaosCenter with HTTPS](chaoscenter-advanced-installation.md))
 - [Connect External Chaos Delegates to ChaosCenter](../user-guides/chaos-infrastructure-installation.md)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)

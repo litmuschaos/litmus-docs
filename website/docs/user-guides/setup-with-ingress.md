@@ -8,10 +8,10 @@ sidebar_label: Setup With Ingress
 
 ## Prerequisites
 
-Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](../getting-started/resources.md#chaoscenter) is installed in either one of these scopes
+Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](../getting-started/resources.md#chaoscenter) is installed 
 
-- [Cluster Scope](chaoscenter-cluster-scope-installation.md)
-- [Namespace Scope](chaoscenter-namespace-scope-installation.md)
+- [Install ChaosCenter with HTTP](../getting-started/installation.md))
+- [Install ChaosCenter with HTTPS](chaoscenter-advanced-installation.md)
 
 ## Install ChaosCenter with Ingress
 
@@ -151,5 +151,5 @@ kubectl apply -f <litmus_ingress_manifest> -n <PORTAL_NAMESPACE>
 ## Learn more
 
 - [Setup Endpoints and Access ChaosCenter without Ingress](setup-without-ingress.md)
-- [Install ChaosCenter in Namespace Scope](chaoscenter-namespace-scope-installation.md)
-- [Install ChaosCenter in Cluster Scope](chaoscenter-cluster-scope-installation.md)
+- [Install ChaosCenter with HTTP](../getting-started/installation.md))
+- [Install ChaosCenter with HTTPS](chaoscenter-advanced-installation.md)
