@@ -252,7 +252,7 @@ By default you are assigned with a default project with Owner permissions.
 
 ## Learn more
 
-- [Install ChaosCenter in Namespace Scope](../user-guides/chaoscenter-namespace-scope-installation.md)
+- [Install ChaosCenter with HTTPS](../user-guides/chaoscenter-advanced-installation.md)
 - [Connect External Chaos Infrastructures to ChaosCenter](../user-guides/chaos-infrastructure-installation.md)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)
