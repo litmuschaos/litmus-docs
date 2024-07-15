@@ -56,7 +56,7 @@ curl https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/d
        redirectURIs:
          - '/auth/dex/callback'
          - 'http://localhost:8080/auth/dex/callback' # Included for local testing purposes
-         - 'https://<REPLACE_FRONTEND_URL>/auth/dex/calllback' #TODO: Replace with you frontend URL
+         - 'https://<REPLACE_FRONTEND_URL>/auth/dex/callback' #TODO: Replace with you frontend URL
        name: 'LitmusPortalAuthBackend'
        secret: ZXhhbXBsZS1hcHAtc2VjcmV0
    oauth2:

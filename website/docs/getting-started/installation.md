@@ -100,9 +100,72 @@ Visit https://docs.litmuschaos.io to find more info.
 
 > **Note:** Litmus uses Kubernetes CRDs to define chaos intent. Helm3 handles CRDs better than Helm2. Before you start running a chaos experiment, verify if Litmus is installed correctly.
 
-### **Install Litmus using kubectl**
+## **Install Litmus using kubectl**
 
 In this method the users need to install mongo first via helm and then apply the installation manifest. Follow the instructions [here](https://github.com/litmuschaos/litmus/tree/master/chaoscenter#installation-steps-for-litmus-300-beta9).
+
+### **Install mongo**
+
+ ```bash
+  helm repo add bitnami https://charts.bitnami.com/bitnami
+  ```
+
+Mongo Values
+
+```bash
+  auth:
+  enabled: true
+  rootPassword: "1234"
+  # -- existingSecret Existing secret with MongoDB(&reg;) credentials (keys: `mongodb-passwords`, `mongodb-root-password`, `mongodb-metrics-password`, ` mongodb-replica-set-key`)
+  existingSecret: ""
+architecture: replicaset
+replicaCount: 3
+persistence:
+  enabled: true
+volumePermissions:
+  enabled: true
+metrics:
+  enabled: false
+  prometheusRule:
+    enabled: false
+
+# bitnami/mongodb is not yet supported on ARM.
+# Using unofficial tools to build bitnami/mongodb (arm64 support)
+# more info: https://github.com/ZCube/bitnami-compat
+#image:
+#  registry: ghcr.io/zcube
+#  repository: bitnami-compat/mongodb
+#  tag: 6.0.5
+```
+
+```bash 
+helm install my-release bitnami/mongodb --values mongo-values.yml -n <NAMESPACE> --create-namespace
+```
+
+Litmus supports for HTTP and HTTPS mode of installation.
+
+### Basic installation (HTTP based and allows all origins)
+
+Applying the manifest file will install all the required service account configuration and ChaosCenter in namespaced scope.
+
+```bash
+ kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/chaoscenter/manifests/litmus-getting-started.yaml -n <NAMESPACE>
+```
+
+### Advanced installation (HTTPS based and CORS rules apply)
+
+1. Generate TLS certificates: You can provide your own certificates or can generate using [this](https://github.com/litmuschaos/litmus/blob/master/chaoscenter/mtls-helper.sh) bash script.
+
+2. Create secret
+    
+    ```bash
+    kubectl create secret generic tls-secret --from-file=ca.crt=ca.crt --from-file=tls.crt=tls.crt --from-file=tls.key=tls.key -n <NAMESPCACE>
+    ```
+3. Applying the manifest file will install all the required service account configuration and ChaosCenter in namespaced scope.
+
+```bash
+kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/chaoscenter/manifests/litmus-installation.yaml -n <NAMESPACE>
+```
 
 ---
 
@@ -181,6 +244,9 @@ http://172.17.0.3:31846/
 ```
 
 > Where `172.17.0.3` is my NodeIP and `31846` is the frontend service PORT. If using a LoadBalancer, the only change would be to provide a `<LoadBalancerIP>:<PORT>`. [Learn more about how to access ChaosCenter with LoadBalancer](../user-guides/setup-without-ingress.md#with-loadbalancer)
+
+
+**NOTE:** With advanced installation CORS rules are applied, once manifest is applied frontend loadbalancer IP needs to be added in the `ALLOWED_ORIGINS` environment in both auth and graphql server deployment.
 
 You should be able to see the Login Page of Litmus ChaosCenter. The **default credentials** are
 
