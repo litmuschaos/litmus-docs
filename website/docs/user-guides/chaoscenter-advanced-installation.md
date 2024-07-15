@@ -1,7 +1,7 @@
 ---
-id: installation
-title: ChaosCenter installation
-sidebar_label: Installation
+id: chaoscenter-advanced-installation
+title: ChaosCenter Advanced Installation
+sidebar_label: Setup with HTTPS
 ---
 
 ---
@@ -144,17 +144,20 @@ helm install my-release bitnami/mongodb --values mongo-values.yml -n <NAMESPACE>
 
 Litmus supports for HTTP and HTTPS mode of installation.
 
-### Basic installation (HTTP based and allows all origins)
-
-Applying the manifest file will install all the required service account configuration and ChaosCenter in namespaced scope.
-
-```bash
- kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/chaoscenter/manifests/litmus-getting-started.yaml -n <NAMESPACE>
-```
-
 ### Advanced installation (HTTPS based and CORS rules apply)
 
-For advanced installation visit [here](../user-guides/chaoscenter-advanced-installation.md)
+1. Generate TLS certificates: You can provide your own certificates or can generate using [this](https://github.com/litmuschaos/litmus/blob/master/chaoscenter/mtls-helper.sh) bash script.
+
+2. Create secret
+    
+    ```bash
+    kubectl create secret generic tls-secret --from-file=ca.crt=ca.crt --from-file=tls.crt=tls.crt --from-file=tls.key=tls.key -n <NAMESPCACE>
+    ```
+3. Applying the manifest file will install all the required service account configuration and ChaosCenter in namespaced scope.
+
+```bash
+kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/chaoscenter/manifests/litmus-installation.yaml -n <NAMESPACE>
+```
 
 ---
 
@@ -229,7 +232,7 @@ Once you have the PORT copied in your clipboard, simply use your IP and PORT in 
 For example:
 
 ```yaml
-http://172.17.0.3:31846/
+https://172.17.0.3:31846/
 ```
 
 > Where `172.17.0.3` is my NodeIP and `31846` is the frontend service PORT. If using a LoadBalancer, the only change would be to provide a `<LoadBalancerIP>:<PORT>`. [Learn more about how to access ChaosCenter with LoadBalancer](../user-guides/setup-without-ingress.md#with-loadbalancer)
@@ -252,7 +255,6 @@ By default you are assigned with a default project with Owner permissions.
 
 ## Learn more
 
-- [Install ChaosCenter with HTTPS](../user-guides/chaoscenter-advanced-installation.md)
-- [Connect External Chaos Infrastructures to ChaosCenter](../user-guides/chaos-infrastructure-installation.md)
-- [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
-- [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)
+- [Install ChaosCenter with HTTP](../getting-started/installation.md)
+- [Setup Endpoints and Access ChaosCenter without Ingress](setup-without-ingress.md)
+- [Setup Endpoints and Access ChaosCenter with Ingress](setup-with-ingress.md)

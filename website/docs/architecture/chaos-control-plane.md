@@ -32,7 +32,7 @@ Chaos control plane consists of micro-services responsible for the functioning o
 
 ## Standard Chaos Control Plane Flow
 
-1. The User logs in to the ChaosCenter using a valid login credential. A default project is created for the user on initial login. Every user is a part of a project and has a role assigned to them. To schedule a chaos experiment, the user needs to have an Editor or Owner role assigned in the project.
+1. The User logs in to the ChaosCenter using a valid login credential. A default project is created for the user on initial login. Every user is a part of a project and has a role assigned to them. To schedule a chaos experiment, the user needs to have an Owner role assigned in the project.
 2. The user uploads a Chaos Experiment manifest using the ChaosCenter, which is received by the Backend Server.
 3. Backend Server stores the manifest in the Database and also sends it to the Chaos Infrastructure.
 4. Chaos Infrastructure uses the Chaos Experiment manifest to inject chaos into the target resources. The steps of the Chaos Experiment execution can be visualized using the ChaosCenter.

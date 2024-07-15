@@ -18,7 +18,7 @@ In the team tab, click the `New member` button as shown below:
 
 ## 2. Select all the members to be invited
 
-From the list of all available members, choose the ones you want to collaborate on your chaos with and decide what project level access they should have to your project (Viewer/Editor) and hit the same button.
+From the list of all available members, choose the ones you want to collaborate on your chaos with and decide what project level access they should have to your project (Viewer/Executor) and hit the same button.
 
 <img src={require('../assets/user-guides/teaming/invite-team-member/step-2.png').default} />
 
