@@ -44,8 +44,7 @@ module.exports = {
             {
               ChaosCenter: [
                 'user-guides/chaoscenter-oauth-dex-installation',
-                'user-guides/chaoscenter-cluster-scope-installation',
-                'user-guides/chaoscenter-namespace-scope-installation',
+                'user-guides/chaoscenter-advanced-installation',
                 'user-guides/setup-without-ingress',
                 'user-guides/setup-with-ingress'
               ]
