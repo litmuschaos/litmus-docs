@@ -70,7 +70,7 @@ kubectl delete sa rolebindings role --all -n <NAMESPACE>
 To remove all the CRDs Litmus uses, use the following command:
 
 ```bash
-kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/master/chaoscenter/manifests/litmus-portal-crds.yml
+kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/3.9.1/litmus-portal-crds.yml
 ```
 
 ---
