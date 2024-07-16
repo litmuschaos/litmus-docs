@@ -42,6 +42,10 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
+:::note
+With 3.9.0 release, Cluster scope installation is deprecated. Now Namespaced mode is the only supported and standard installation mode.
+:::
+
 ### Install Litmus using Helm
 
 The helm chart will install all the required service account configuration and ChaosCenter.
@@ -106,9 +110,9 @@ In this method the users need to install mongo first via helm and then apply the
 
 ### **Install mongo**
 
- ```bash
-  helm repo add bitnami https://charts.bitnami.com/bitnami
-  ```
+```bash
+ helm repo add bitnami https://charts.bitnami.com/bitnami
+```
 
 Mongo Values
 
@@ -138,7 +142,7 @@ metrics:
 #  tag: 6.0.5
 ```
 
-```bash 
+```bash
 helm install my-release bitnami/mongodb --values mongo-values.yml -n <NAMESPACE> --create-namespace
 ```
 
@@ -149,10 +153,11 @@ Litmus supports for HTTP and HTTPS mode of installation.
 1. Generate TLS certificates: You can provide your own certificates or can generate using [this](https://github.com/litmuschaos/litmus/blob/master/chaoscenter/mtls-helper.sh) bash script.
 
 2. Create secret
-    
-    ```bash
-    kubectl create secret generic tls-secret --from-file=ca.crt=ca.crt --from-file=tls.crt=tls.crt --from-file=tls.key=tls.key -n <NAMESPCACE>
-    ```
+
+   ```bash
+   kubectl create secret generic tls-secret --from-file=ca.crt=ca.crt --from-file=tls.crt=tls.crt --from-file=tls.key=tls.key -n <NAMESPCACE>
+   ```
+
 3. Applying the manifest file will install all the required service account configuration and ChaosCenter in namespaced scope.
 
 ```bash
@@ -236,7 +241,6 @@ https://172.17.0.3:31846/
 ```
 
 > Where `172.17.0.3` is my NodeIP and `31846` is the frontend service PORT. If using a LoadBalancer, the only change would be to provide a `<LoadBalancerIP>:<PORT>`. [Learn more about how to access ChaosCenter with LoadBalancer](../user-guides/setup-without-ingress.md#with-loadbalancer)
-
 
 **NOTE:** With advanced installation CORS rules are applied, once manifest is applied frontend loadbalancer IP needs to be added in the `ALLOWED_ORIGINS` environment in both auth and graphql server deployment.
 
