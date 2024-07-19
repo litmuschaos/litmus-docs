@@ -22,7 +22,7 @@ Chaos Control Plane consists of micro-services responsible for the functioning o
 
   - **Web UI:** A React.js based frontend application micro-service with built-in system observability capabilities and an analytics dashboard. It also facilitates teams of users to collaborate over chaos experiments using role-based user accounts.
 
-  - **Litmusctl:** A command-line tool that allows management of Litmus Chaos Infrastructure Infrastructure components. It can be used to create chaos infrastructures, project, and manage multiple Litmus accounts.
+  - **Litmusctl:** A command-line tool that allows management of Litmus Chaos Infrastructure components. It can be used to create chaos infrastructures, project, and manage multiple Litmus accounts.
 
   - **Litmus API:** Refers to two different Litmus APIs, namely Litmus Authentication API and Litmus Portal API:
 

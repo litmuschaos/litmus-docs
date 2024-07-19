@@ -8,11 +8,11 @@ sidebar_label: Chaos Execution Plane
 
 <img src={require("../assets/chaos-execution-plane.png").default} alt="Chaos Execution Plane" />
 
-Chaos Execution Plane contains the components responsible for orchestrating the chaos injection in the target resources. They get installed in either an external target cluster if an external chaos infrastructure is being used or in the host cluster containing the control plane if a self chaos infrastructure is being used. It can be further segregated into Litmus Chaos Infrastructure Infrastructure components and Litmus Backend Execution Infrastructure components.
+Chaos Execution Plane contains the components responsible for orchestrating the chaos injection in the target resources. They get installed in either an external target cluster if an external chaos infrastructure is being used or in the host cluster containing the control plane if a self chaos infrastructure is being used. It can be further segregated into Litmus Chaos Infrastructure components and Litmus Backend Execution Infrastructure components.
 
 ## Litmus Execution Plane Components
 
-Litmus Chaos Infrastructure Infrastructure components help facilitate the chaos injection, manage chaos observability, and enable chaos automation for target resources. These components include:
+Litmus Chaos Infrastructure components help facilitate the chaos injection, manage chaos observability, and enable chaos automation for target resources. These components include:
 
 1. **Workflow Controller:** The Argo Workflow Controller responsible for the creation of Chaos Experiments using the Chaos Experiment CR.
 
