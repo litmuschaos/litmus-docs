@@ -16,7 +16,7 @@ In GKE you have to setup a firewall rule to allow TCP traffic on the node port. 
 
 If this firewall rule is set up, It may be accessible on nodeIp:port where nodeIp is the external IP address of your node.
 
-### While uninstalling Chaoscenter using helm, some components like subscriber, exporter, event, chaos scenatios, etc are not removed.
+### While uninstalling Chaoscenter using helm, some components like subscriber, exporter, event, chaos scenarios, etc are not removed.
 
 These are chaos infrastructure components, which are launched by the control plane server, so first disconnect the chaos infrastructure from the portal then uninstall the portal using helm.
 

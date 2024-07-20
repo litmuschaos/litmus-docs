@@ -5,7 +5,7 @@ sidebar_label: Glossary
 ---
 
 :::note
-Pleas note that Litmus 3.0 is not backward compatible and will require a fresh installation for users looking to migrate from previous versions
+Please note that Litmus 3.0 is not backward compatible and will require a fresh installation for users looking to migrate from previous versions
 :::
 
 ## Chaos Resources
