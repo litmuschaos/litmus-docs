@@ -74,7 +74,7 @@ Once GitOps is enabled, any new chaos experiments created will be stored in the 
 
 ### Does Litmusctl support actions that are currently performed from the portal dashboard?
 
-Yes, Chaos Infrastructure connection, creation and chaos experiment executiom are now being supported in Litmusctl. [documentation of litmusctl](https://github.com/litmuschaos/litmusctl/blob/master/Usage_0.23.0.md).
+Yes, Chaos Infrastructure connection, creation and chaos experiment execution are now being supported in Litmusctl. [documentation of litmusctl](https://github.com/litmuschaos/litmusctl/blob/master/Usage_0.23.0.md).
 
 ### How to solve `invalid token` issue in litmusctl?
 
