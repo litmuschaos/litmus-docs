@@ -15,7 +15,7 @@ The following should be required before integrating Grafana with litmus 2.0:
 - [Prometheus TSDB](https://prometheus.io/)
 - [Prometheus Integration](prometheus.md)
 
-## Grafana setup with provisioned data source amd dashboards using Prometheus deployment with scrape jobs
+## Grafana setup with provisioned data source and dashboards using Prometheus deployment with scrape jobs
 
 The following steps can be followed to set up Grafana with Prometheus for accessing the integrated and interleaved dashboards
 
