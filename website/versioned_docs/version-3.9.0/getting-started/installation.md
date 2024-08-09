@@ -117,7 +117,7 @@ In this method the users need to install mongo first via helm and then apply the
 Mongo Values
 
 ```bash
-  auth:
+auth:
   enabled: true
   rootPassword: "1234"
   # -- existingSecret Existing secret with MongoDB(&reg;) credentials (keys: `mongodb-passwords`, `mongodb-root-password`, `mongodb-metrics-password`, ` mongodb-replica-set-key`)
