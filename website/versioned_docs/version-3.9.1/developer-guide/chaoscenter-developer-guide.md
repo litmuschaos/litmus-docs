@@ -8,7 +8,7 @@ sidebar_label: ChaosCenter Developer Guide
 
 ## **Prerequisites**
 :::note
-This document is ietented to be implemented locally. Please do not use in dev or prod environmentss
+This document is intended to be implemented locally. Please do not use in dev or prod environments.
 :::
 
 - Kubernetes 1.17 or later
@@ -20,8 +20,8 @@ This document is ietented to be implemented locally. Please do not use in dev or
 
 ## **Control Plane**
 Backend components consist of three microservices
-1. GraphQL-Server
-2. Authentication-Server
+1. Backend server
+2. Authentication server
 3. MongoDB
 
 Frontend component
@@ -45,7 +45,12 @@ docker run -d --net mongo-cluster -p 27017:27017 --name m3 mongo:4.2 mongod --re
 
 Step-2: Add hosts 
 
-Windows
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs groupId="operating-systems">
+<TabItem value="win" label="Windows">
+
 ```bash
 # add hosts in hosts 
 notepad C:\Windows\System32\drivers\etc\hosts
@@ -54,7 +59,9 @@ notepad C:\Windows\System32\drivers\etc\hosts
 127.0.0.1       m1 m2 m3
 ```
 
-Linux/Mac
+</TabItem>
+<TabItem value="linux" label="macOS/Linux">
+
 ```bash
 # add hosts in hosts 
 sudo vim /etc/hosts
@@ -62,6 +69,9 @@ sudo vim /etc/hosts
 # add the below line
 127.0.0.1       m1 m2 m3
 ```
+
+</TabItem>
+</Tabs>
 
 
 Step-3: Configure the mongoDB replica set
@@ -99,15 +109,20 @@ export REST_PORT=3000
 export GRPC_PORT=3030
 ```
 
-Windows  
+<Tabs groupId="operating-systems">
+<TabItem value="win" label="Windows">
+
 Docker or Hyper-V is reserving that port range. You can use 3030 ports by running the command below
 
-```shell
+```bash
 netsh interface ipv4 show excludedportrange protocol=tcp
 net stop winnat
 netsh int ipv4 add excludedportrange protocol=tcp startport=3030 numberofports=1
 net start winnat
 ```
+
+</TabItem>
+</Tabs>
 
 Step-2: Run the go application
 
@@ -172,19 +187,26 @@ yarn
 ```
 
 Step-2: Generate the ssl certificate
+<Tabs groupId="operating-systems">
+<TabItem value="win" label="Windows">
 
-Linux/Mac
-```bash
-yarn generate-certificate
-```
-
-Windows  
 The command you run is in the script/generate-certificate.sh file, but it doesn't work in a Windows environment, so please run the script below instead
+
 ```bash
 mkdir -p certificates
 
 openssl req -x509 -newkey rsa:4096 -keyout certificates/localhost-key.pem -out certificates/localhost.pem -days 365 -nodes -subj '//C=US'
 ```
+
+</TabItem>
+<TabItem value="linux" label="macOS/Linux">
+
+```bash
+yarn generate-certificate
+```
+
+</TabItem>
+</Tabs>
 
 Step-3: Run the frontend project
 
@@ -211,7 +233,7 @@ Use [litmusctl](https://github.com/litmuschaos/litmusctl) on the same box/loca
 ### Using Chaoscenter
 Use Chaoscenter to connect an Infrastructure, download the manifest and apply it on k3d/minikube. Once the pods are up(except the subscriber), run the following command:
 
-```shell
+```bash
 cd subscriber
 
 INFRA_ID=<INFRA_ID> ACCESS_KEY=<ACCESS_KEY> INFRA_SCOPE=cluster SERVER_ADDR=http://localhost:8080/query INFRA_NAMESPACE=litmus IS_INFRA_CONFIRMED="false" COMPONENTS="DEPLOYMENTS: ["app=chaos-exporter", "name=chaos-operator", "app=workflow-controller"]"  START_TIME=1631089756 VERSION="ci" AGENT_POD="subscriber-78f6bd4db5-ck5d9" SKIP_
