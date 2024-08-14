@@ -8,7 +8,7 @@ sidebar_label: Upgrade
 
 ## Upgrade ChaosCenter
 
-To upgrade Litmus ChaosCenter from 3.8.0 to 3.9.0, you can follow these steps:
+To upgrade Litmus ChaosCenter from 3.9.0 to 3.10.0, you can follow these steps:
 
 > Note: This step is not required if using Helm, Helm upgrade should work.
 
@@ -16,7 +16,7 @@ To upgrade Litmus ChaosCenter from 3.8.0 to 3.9.0, you can follow these steps:
    To upgrade ChaosCenter, you can re-apply the manifest using the kubectl.
 
    ```bash
-   kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/3.9.0/litmus-getting-started.yaml
+   kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/3.10.0/litmus-getting-started.yaml
    ```
 
 ## Upgrade Chaos Delegate
