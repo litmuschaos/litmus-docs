@@ -20,7 +20,7 @@ This document is intended to be implemented locally. Please do not use in dev or
 
 ## **Control Plane**
 Backend components consist of three microservices
-1. Backend server
+1. GraphQL server
 2. Authentication server
 3. MongoDB
 
