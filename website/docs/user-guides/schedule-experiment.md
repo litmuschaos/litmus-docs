@@ -1,18 +1,18 @@
 ---
 id: schedule-experiment
-title: Schedule a Chaos Experiment
-sidebar_label: Schedule Chaos Experiment
+title: Schedule a chaos experiment
+sidebar_label: Schedule chaos experiment
 ---
 
 ---
 
 ## Before you begin
 
-You must connect an Chaos Infrastructure before scheduling a chaos experiment. You can [connect an external Chaos Infrastructure](../litmusctl/installation.md).
+You must connect a Chaos Infrastructure before scheduling a chaos experiment. You can [connect an external Chaos Infrastructure](../litmusctl/installation.md).
 
 ---
 
-Click on the **Schedule a chaos scenario ** button on the home page or **Schedule chaos scenario ** button in Litmus Chaos Scenarios page to get started.
+Click on the **Schedule a chaos scenario** button on the home page or **Schedule chaos scenario** button in Litmus Chaos Scenarios page to get started.
 
 <figure>
 <img src={require('../assets/user-guides/injecting-fault/schedule-workflow/new-experiment-overview-home.png').default} alt="Home Page" />

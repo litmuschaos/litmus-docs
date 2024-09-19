@@ -1,29 +1,29 @@
 ---
 id: construct-experiment
-title: Construct Chaos Scenario YAML without ChaosCenter
-sidebar_label: Construct Chaos Scenario YAML
+title: Construct chaos experiment YAML without ChaosCenter
+sidebar_label: Construct chaos experiment YAML
 ---
 
 ---
 
-**Chaos Scenario** is a set of different operations coupled together to achieve desired chaos imapact on a Kubernetes Cluster. <br/>
-A basic chaos scenario consists of these steps:
+**Chaos Experiment** is a set of different operations coupled together to achieve desired chaos impact on a Kubernetes Cluster.
 
-1. Install ChaosExperiment
-2. Install ChaosEngine
-3. Revert Chaos
+A basic chaos experiment consists of these steps:
+1. Install ChaosExperiment CR
+2. Install ChaosEngine CR
+3. Cleanup Chaos resources
 
 ## Before we begin
 
-To construct a Chaos Scenario without ChaosCenter, make sure you are aware of [Chaos Scenario](../concepts/chaos-workflow.md), [ChaosEngine CR](../glossary.md) and the different steps present in it.
+To construct a Chaos Experiment without ChaosCenter, make sure you are aware of [Chaos Experiment](../concepts/chaos-workflow.md), [ChaosEngine CR](../glossary.md) and the different steps present in it.
 
-## Steps to Construct a Chaos Scenario
+## Steps to construct a chaos experiment
 
-LitmusChaos leverages the popular chaos scenario and GitOps tool **Argo** to achieve this goal. Argo enables the orchestration of different chaos scenarios together in the form of chaos scenario which is extremly simple and efficient to use.<br/>
+LitmusChaos leverages the popular GitOps tool **Argo** to achieve this goal. Argo enables the orchestration of different chaos faults together in the form of a single chaos experiment which is extremely simple and efficient to setup and use.
 
-The structure of a chaos scenario is similar to that of a Kubernetes Object. It consists of the mandatory fields like `apiVersion`, `kind`, `metadata`, `spec`.
+The structure of a chaos experiment is similar to that of a Kubernetes Object. It consists of the mandatory fields like `apiVersion`, `kind`, `metadata`, `spec`.
 
-Few additional terms in an Argo chaos scenarios are:
+Few additional terms in an Argo chaos experiments are:
 
 1. **Template** : It consists of different steps with their specific operations.
 
@@ -39,7 +39,7 @@ Few additional terms in an Argo chaos scenarios are:
             template: revert-chaos
 ```
 
-2. **Steps** : It is a single step inside a chaos scenario which runs a container based on the input parameters.
+2. **Steps** : It is a single step inside a chaos experiment which runs a container based on the input parameters.
    These can also be sequenced parallely.
 
 ```yaml
@@ -54,7 +54,7 @@ steps:
       template: revert-chaos
 ```
 
-3. **Entrypoint** : The first step that executes in a chaos scenario is called its entrypoint.
+3. **Entrypoint** : The first step that executes in a chaos experiment is called its entrypoint.
 
 ```yaml
 entrypoint: custom-chaos
@@ -78,7 +78,7 @@ Here, the template with the name `custom-chaos` will be executed first.
                   message: |...
 ```
 
-Once the chaos scenario is constructed, it should look like this:
+Once the chaos experiment is constructed, it should look like this:
 
 ```yaml
 apiVersion: argoproj.io/v1alpha1

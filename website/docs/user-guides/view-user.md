@@ -6,11 +6,11 @@ sidebar_label: View users
 
 ---
 
-> In the `settings` page the `User Management` tab can be used to access the user management feature by the admin. We recommend learning about the concept of [user management](../concepts/user-management.md) before proceeding with the following user guides.
+In the **Settings** page, the **User Management** tab can be used to access the user management feature by the admin. We recommend learning about the concept of [user management](../concepts/user-management.md) before proceeding with the following user guides.
 
 ## View users
 
-The admin can access the `User Management` tab to check the list of all users present in the portal.
+The admin can access the **User Management** tab to check the list of all users present in the portal.
 
 <img src={require('../assets/user-guides/user-management/view-user/step-1.png').default} width="1000" height="500" />
 

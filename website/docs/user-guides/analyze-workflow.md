@@ -54,6 +54,6 @@ On clicking on a bar, more details about the chaos scenario run represented by t
 
 ## Learn more
 
-- [Compare Chaos Scenarios](comparative-analysis.md)
+- [Compare Chaos Experiments](comparative-analysis.md)
 - [Manage Application Dashboard](manage-app-dashboard.md)
 - [Configure Datasource](configure-datasource.md)

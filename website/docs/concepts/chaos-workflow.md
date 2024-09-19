@@ -22,7 +22,7 @@ The term **Chaos Scenario/Workflow** has been changed to **Chaos Experiment**.
 
 ## Prerequisites
 
-The following should be required before creating a Chaos Experiment:
+The following are required before creating a Chaos Experiment:
 
 - [ChaosCenter](../getting-started/resources.md#chaoscenter)
 - [Chaos Infrastructure](../getting-started/resources.md#chaosagents)
