@@ -107,6 +107,12 @@ module.exports = {
       ]
     },
     {
+<<<<<<< HEAD
+=======
+      'Developer Guide': ['developer-guide/chaoscenter-developer-guide'] 
+     },
+    {
+>>>>>>> ceb8a67f939a9cbf444a6a40a60b4a2b3050e727
       Litmusctl: ['litmusctl/installation', 'litmusctl/litmusctl-usage']
     },
     {
