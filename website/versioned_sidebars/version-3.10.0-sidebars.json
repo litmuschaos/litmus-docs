@@ -1,0 +1,136 @@
+{
+  "docs": [
+    {
+      "Introduction": [
+        "introduction/what-is-litmus",
+        "introduction/features",
+        "introduction/usage",
+        "introduction/core-principles",
+        "introduction/community",
+        "introduction/other-links"
+      ]
+    },
+    {
+      "Getting Started": [
+        "getting-started/resources",
+        "getting-started/installation"
+      ]
+    },
+    {
+      "Architecture": [
+        "architecture/overview",
+        "architecture/architecture-summary",
+        "architecture/chaos-control-plane",
+        "architecture/chaos-execution-plane",
+        "architecture/chaos-fault-flow"
+      ]
+    },
+    {
+      "Concepts": [
+        "concepts/overview",
+        "concepts/chaos-infrastructure",
+        "concepts/chaoshub",
+        "concepts/chaos-workflow",
+        "concepts/probes",
+        "concepts/user-management",
+        "concepts/projects",
+        "concepts/teaming",
+        "concepts/gitops",
+        "concepts/oauth-dex-concept"
+      ]
+    },
+    {
+      "User Guides": [
+        "user-guides/overview",
+        {
+          "Advanced Installation": [
+            {
+              "ChaosCenter": [
+                "user-guides/chaoscenter-oauth-dex-installation",
+                "user-guides/chaoscenter-advanced-installation",
+                "user-guides/setup-without-ingress",
+                "user-guides/setup-with-ingress"
+              ]
+            },
+            "user-guides/chaos-infrastructure-installation"
+          ]
+        },
+        {
+          "Environments": [
+            "user-guides/create-environment",
+            "user-guides/edit-environment",
+            "user-guides/delete-environment"
+          ]
+        },
+        {
+          "Chaos Infrastructure": [
+            "user-guides/create-infrastructure",
+            "user-guides/delete-infrastructure"
+          ]
+        },
+        {
+          "Injecting Fault": [
+            "user-guides/schedule-experiment",
+            "user-guides/observe-experiment",
+            "user-guides/edit-schedule",
+            "user-guides/download-experiment-manifest",
+            "user-guides/re-run-experiment",
+            "user-guides/delete-experiment",
+            "user-guides/construct-experiment"
+          ]
+        },
+        {
+          "Resilience Probes": [
+            "user-guides/create-resilience-probe",
+            "user-guides/delete-resilience-probe",
+            "user-guides/edit-resilience-probe",
+            "user-guides/view-resilience-probe"
+          ]
+        },
+        "user-guides/account-settings",
+        {
+          "User Management": [
+            "user-guides/create-user",
+            "user-guides/view-user",
+            "user-guides/reset-password",
+            "user-guides/deactivate-user"
+          ]
+        },
+        {
+          "Managing Projects": [
+            "user-guides/change-project-name",
+            "user-guides/leave-project"
+          ]
+        },
+        {
+          "Teaming": [
+            "user-guides/invite-team-member",
+            "user-guides/edit-invite",
+            "user-guides/accept-invite",
+            "user-guides/remove-team-member"
+          ]
+        },
+        "user-guides/gitops-configuration",
+        "user-guides/image-registry",
+        "user-guides/uninstall-litmus"
+      ]
+    },
+    {
+      "Litmusctl": [
+        "litmusctl/installation",
+        "litmusctl/litmusctl-usage"
+      ]
+    },
+    {
+      "Integrations": [
+        "integrations/prometheus",
+        "integrations/grafana",
+        "integrations/backstage"
+      ]
+    },
+    "troubleshooting",
+    "best-practices",
+    "glossary",
+    "faq"
+  ]
+}
