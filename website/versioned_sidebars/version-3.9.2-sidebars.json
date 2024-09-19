@@ -114,6 +114,10 @@
         "user-guides/image-registry",
         "user-guides/uninstall-litmus"
       ]
+    },{
+      "Developer Guide": [
+        "developer-guide/chaoscenter-developer-guide"
+      ]
     },
     {
       "Litmusctl": [
