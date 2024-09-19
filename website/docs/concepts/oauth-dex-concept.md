@@ -29,6 +29,10 @@ By default chaoscenter comes with then authentication server as part of the `lit
 By default litmus-portal comes with then authentication server as part of the **litmusportal-server** deployment and it allows local authentication that is based of mongo database. Client services such as **litmusctl** and **litmusportal-frontend** make use of this server.
 >>>>>>> ceb8a67f939a9cbf444a6a40a60b4a2b3050e727
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0701239a71547d4177ceb6272a35f7b239617acf
 In order to provide enhanced and seamless login features, we wanted to integrate OAuth and other authentication mechanisms such as OpenID connect. To have flexibility, chaoscenter makes use of an additional component, [Dex OIDC server](https://dexidp.io/).
 
 Dex is a highly extensible cloud-native OIDC provider that is able to take care of various authentication mechanisms. With Dex being deployed, the authentication-server can communicate with the dex-server which enables the integration of various OAuth providers. GitHub and Google auth has been tested at present.
