@@ -38,9 +38,9 @@ docker pull mongo:5
 
 docker network create mongo-cluster 
 
-docker run -d --net mongo-cluster -p 27015:27015 --name m1 mongo:4.2 mongod --replSet rs0 --port 27015 
-docker run -d --net mongo-cluster -p 27016:27016 --name m2 mongo:4.2 mongod --replSet rs0 --port 27016
-docker run -d --net mongo-cluster -p 27017:27017 --name m3 mongo:4.2 mongod --replSet rs0 --port 27017
+docker run -d --net mongo-cluster -p 27015:27015 --name m1 mongo:5 mongod --replSet rs0 --port 27015 
+docker run -d --net mongo-cluster -p 27016:27016 --name m2 mongo:5 mongod --replSet rs0 --port 27016
+docker run -d --net mongo-cluster -p 27017:27017 --name m3 mongo:5 mongod --replSet rs0 --port 27017
 ```
 
 Step-2: Add hosts 
