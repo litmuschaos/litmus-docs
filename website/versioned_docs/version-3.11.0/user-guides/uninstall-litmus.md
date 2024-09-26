@@ -12,13 +12,13 @@ To disconnect the [Chaos Infrastructure](../getting-started/resources.md#chaosag
 
 1. Remove the ChaosEngines of the respective Chaos Infrastructure
 
-  ```bash
-  kubectl delete chaosengine <CHAOSENGINE_NAMEs> --all -<INFRA_NAMESPACE>
-  ```
+```bash
+kubectl delete chaosengine <CHAOSENGINE_NAMEs> --all -<INFRA_NAMESPACE>
+```
 
-  :::note
-  If ChaosEngines is unable to delete successfully then the Kubernetes finalizers need to be removed manually.
-  :::
+:::note
+If ChaosEngines is unable to delete successfully then the Kubernetes finalizers need to be removed manually.
+:::
 
 2. Login to the ChaosCenter and navigate to the Chaos Infrastructures Page.
 3. Click on the three dot menu and select `Disable` of the respective Chaos Infrastructure you want to disconnect.
@@ -72,7 +72,7 @@ kubectl delete sa rolebindings role --all -n <NAMESPACE>
 To remove all the CRDs Litmus uses, use the following command:
 
 ```bash
-kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/master/chaoscenter/manifests/litmus-portal-crds.yml
+kubectl delete -f https://raw.githubusercontent.com/litmuschaos/litmus/3.11.0/chaoscenter/manifests/litmus-portal-crds.yml
 ```
 
 ---
