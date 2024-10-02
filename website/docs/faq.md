@@ -92,7 +92,7 @@ kubectl get configmap workflow-controller-configmap -n <namespace> -o yaml
 
 Look for the `instanceID` key in the configmap and use that value in your Workflow manifest.
 
-Without this label, the Workflow controller will not recognize or manage the Workflow.
+Without this label, the Workflow controller will not be able to reconcile the Workflow.
 
 ## Litmusctl
 
