@@ -72,7 +72,7 @@ Once GitOps is enabled, any new chaos experiments created will be stored in the 
 
 ### Why is my Argo Workflow not being picked up by the Workflow controller upon applying it manually?
 
-If your Argo Workflow is not being picked up by the Workflow controller after applying it, you may be missing the `workflows.argoproj.io/controller-instanceid` label in your Workflow YAML file. This label is required for the Workflow controller to manage the Workflow properly.
+If your Argo Workflow is not being picked up by the Workflow controller after applying it, you may be missing the `workflows.argoproj.io/controller-instanceid` label in your Workflow manifest. This label is required for the Workflow controller to reconcile the Workflow upon its creation.
 
 To fix this, ensure the following label is added under metadata.labels in your Workflow YAML:
 
