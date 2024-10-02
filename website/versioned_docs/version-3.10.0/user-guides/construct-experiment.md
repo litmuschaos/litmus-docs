@@ -80,7 +80,7 @@ Here, the template with the name `custom-chaos` will be executed first.
 
 ### Ensuring Your Workflow is Recognized by the Argo Workflow Controller
 
-When applying a Workflow manually without ChaosCenter, it's crucial to include the `workflows.argoproj.io/controller-instanceid` label in your YAML file. This label helps the controller identify and manage your Workflow correctly.
+When applying a Workflow manually without ChaosCenter, it's crucial to include the `workflows.argoproj.io/controller-instanceid` label in the manifest. This label helps Argo Workflow controller identify and reconcile the Workflow upon its creation.
 The instanceID value can be found in the `workflow-controller-configmap` under the instanceID key.
 
 Once the chaos scenario is constructed, it should look like this:
