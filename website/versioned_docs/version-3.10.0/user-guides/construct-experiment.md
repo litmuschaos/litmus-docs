@@ -65,18 +65,23 @@ Here, the template with the name `custom-chaos` will be executed first.
 4. **Artifacts** : Artifacts are defined as the files saved by the containers in each step.
 
 ```yaml
-- name: install-chaos-experiments
-      inputs:
-        artifacts:
-          - name: pod-delete
-            path: /tmp/pod-delete.yaml
-            raw:
-              data: >
-                apiVersion: litmuschaos.io/v1alpha1
+-  name: install-chaos-experiments
+   inputs:
+     artifacts:
+       - name: pod-delete
+         path: /tmp/pod-delete.yaml
+         raw:
+           data: >
+             apiVersion: litmuschaos.io/v1alpha1
 
-                description:
-                  message: |...
+             description:
+               message: |...
 ```
+
+### Ensuring Your Workflow is Recognized by the Argo Workflow Controller
+
+When applying a Workflow manually without ChaosCenter, it's crucial to include the `workflows.argoproj.io/controller-instanceid` label in your YAML file. This label helps the controller identify and manage your Workflow correctly.
+The instanceID value can be found in the `workflow-controller-configmap` under the instanceID key.
 
 Once the chaos scenario is constructed, it should look like this:
 
@@ -86,6 +91,8 @@ kind: Workflow
 metadata:
   name: pod-delete-experiment
   namespace: litmus
+  labels:
+     workflows.argoproj.io/controller-instanceid: 86a4f130-d99b-4e91-b34b-8f9eee22cb63
 spec:
   arguments:
     parameters:
