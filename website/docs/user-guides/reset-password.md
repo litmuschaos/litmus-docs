@@ -23,7 +23,7 @@ In the **Reset Password** modal type in the new password in the **New Password**
 
 ## 3. Update password after installation
 
-After installing Chaos Litmus and entering the default passwords, users will be redirected to the update password page, which is mandatory. In the update password modal, enter your Old Password, New Password, and Re-enter New Password. Once done, click the Confirm button.
+After installing LitmusChaos and authenticating using the default password in the UI, users will be mandatorily prompted to update the password. To update the password, enter the old (default) password, the new password, and re-enter the new password. Once done, select the **Confirm** button.
 
 <img src={require('../assets/user-guides/user-management/reset-password/step-3.PNG').default} />
 
