@@ -70,6 +70,30 @@ To configure a git repo the user must provide the Git URL of the repository and 
 
 Once GitOps is enabled, any new chaos experiments created will be stored in the configured repo in the path `litmus/<project-id>/<chaos-experiment-name>.yaml`.
 
+### Why is my Argo Workflow not being picked up by the Workflow controller upon applying it manually?
+
+If your Argo Workflow is not being picked up by the Workflow controller after applying it, you may be missing the `workflows.argoproj.io/controller-instanceid` label in your Workflow manifest. This label is required for the Workflow controller to reconcile the Workflow upon its creation.
+
+To fix this, ensure the following label is added under `metadata.labels` field in the Workflow manifest:
+
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  labels:
+    workflows.argoproj.io/controller-instanceid: <instanceID>
+```
+
+The `instanceID` value can be found in the `workflow-controller-configmap`. Here’s how to retrieve it:
+
+```shell
+kubectl get configmap workflow-controller-configmap -n <namespace> -o yaml
+```
+
+Look for the `instanceID` key in the configmap and use that value in your Workflow manifest.
+
+Without this label, the Workflow controller will not be able to reconcile the Workflow.
+
 ## Litmusctl
 
 ### Does Litmusctl support actions that are currently performed from the portal dashboard?
