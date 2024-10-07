@@ -20,6 +20,13 @@ In the **Reset Password** modal type in the new password in the **New Password**
 
 <img src={require('../assets/user-guides/user-management/reset-password/step-2.png').default} />
 
+
+## 3. Update password after installation
+
+After installing LitmusChaos and authenticating using the default password in the UI, users will be mandatorily prompted to update the password. To update the password, enter the old (default) password, the new password, and re-enter the new password. Once done, select the **Confirm** button.
+
+<img src={require('../assets/user-guides/user-management/reset-password/step-3.png').default} />
+
 ## Learn more
 
 - [View users](view-user.md)
