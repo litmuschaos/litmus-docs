@@ -133,6 +133,11 @@
         "integrations/backstage"
       ]
     },
+    {
+      "Tutorials": [
+        "tutorials/podtato-head"
+      ]
+    },
     "troubleshooting",
     "best-practices",
     "glossary",

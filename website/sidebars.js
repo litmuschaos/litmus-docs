@@ -115,6 +115,9 @@ module.exports = {
     {
       Integrations: ['integrations/prometheus', 'integrations/grafana', 'integrations/backstage']
     },
+    {
+      Tutorials: ['tutorials/podtato-head']
+    },
     'troubleshooting',
     'best-practices',
     'glossary',
