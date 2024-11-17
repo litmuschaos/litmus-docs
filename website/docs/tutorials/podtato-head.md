@@ -8,7 +8,7 @@ sidebar_label: Podtato-head
 
 ![podtato-head](../assets/tutorials/podtato-head/podtato-head.png)
 
-In this tutorial, we will inject a pod-delete fault into a sample microservices application called [podtato-head](https://github.com/cncf/podtato-head) and verify if the service continues to be available during the chaos duration.
+In this tutorial, you will inject a pod-delete fault into a sample microservices application called [podtato-head](https://github.com/cncf/podtato-head) and verify if the service continues to be available during the chaos duration.
 
 ## Prerequisites
 
@@ -52,15 +52,16 @@ kubectl apply -f local-litmus-chaos-enable.yml
 ![connected](../assets/tutorials/podtato-head/connected.png)
 
 ## Set up Resilience Probe
-1. Select probe type as HTTP Probe
+
+1. Select HTTP Probe as the probe type
 
 2. Configure properties & probe details
-- Name: `check-podtato-main-access-url`
-- Timeout: `1s`
-- Interval: `100ms`
+- Name: `check-podtato-main-access-probe`
+- Timeout: `10s`
+- Interval: `1s`
 - Attempt: `1`
 - URL: `http://podtato-main.{{workflow.parameters.adminModeNamespace}}.svc.cluster.local:9000`
-- Method: `Get`
+- Method: `GET`
 - Criteria: `==`
 - Response Code: `200`
 
@@ -81,13 +82,33 @@ kubectl create rolebinding argo-chaos-binding --clusterrole=admin --serviceaccou
 
 ![podtato-head-template](../assets/tutorials/podtato-head/podtato-head-template.png)
 
-4. Add probe to `pod-delete` fault
-- Probe Name: `check-podtato-main-access-url`
+4. Add the new probe to `pod-delete` fault
+- Probe Name: `check-podtato-main-access-probe`
 - Mode: `Continuous`
 
 ![add-probe](../assets/tutorials/podtato-head/add-probe.png)
 
-5. Save and run the chaos experiment
+5. Remove the old probe section below from `podtato-head.yml`
+
+```yaml
+probe:
+- name: "check-podtato-main-access-url"
+    type: "httpProbe"
+    httpProbe/inputs:
+    url: "http://podtato-main.{{workflow.parameters.adminModeNamespace}}.svc.cluster.local:9000"
+    insecureSkipVerify: false
+    method:
+        get:
+        criteria: "=="
+        responseCode: "200"
+    mode: "Continuous"
+    runProperties:
+    probeTimeout: 1s
+    interval: 100ms
+    attempt: 1
+```
+
+6. Save and run the chaos experiment
 
 ## Check Chaos Experiment Results
 
@@ -99,5 +120,5 @@ kubectl create rolebinding argo-chaos-binding --clusterrole=admin --serviceaccou
 
 ---
 
-Great job! You've successfully completed this tutorial.   
-Ready for more? Explore additional tutorials and continue your exciting journey with LitmusChaos! 🚀
+Congratulations! 🎉 You've successfully completed the tutorial.  
+Continue exploring more tutorials to enjoy your journey with LitmusChaos! 🚀  
