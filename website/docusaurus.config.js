@@ -79,17 +79,9 @@ module.exports = {
               to: `docs/${version}/introduction/what-is-litmus`
             })),
             {
-              label: 'Master/Unreleased',
+              label: 'master/unreleased',
               to: 'docs/next/introduction/what-is-litmus'
             },
-            {
-              label: 'V2-Docs',
-              to: 'https://v2-docs.litmuschaos.io/'
-            },
-            {
-              label: 'V1-Docs',
-              to: 'https://v1-docs.litmuschaos.io/docs/getstarted/'
-            }
           ]
         },
         {
