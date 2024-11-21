@@ -38,7 +38,7 @@ Make sure you have your Google and GitHub Client credentials ready, if you do no
 ### Configuring Dex OIDC provider
 
 ```bash
-curl https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/dex-server/dex-deployment.yaml --output dex-deployment.yaml
+curl https://raw.githubusercontent.com/litmuschaos/litmus/master/chaoscenter/dex-server/dex-deployment.yaml --output dex-deployment.yaml
 ```
 
 1. Open the file with your favorite text-editor
