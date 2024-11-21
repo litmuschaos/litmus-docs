@@ -8,25 +8,42 @@ sidebar_label: Podtato-head
 
 ![podtato-head](../assets/tutorials/podtato-head/podtato-head.png)
 
-In this tutorial, you will inject a pod-delete fault into a sample microservices application called [podtato-head](https://github.com/cncf/podtato-head) and verify if the service continues to be available during the chaos duration.
+In this tutorial, you will inject a pod-delete fault into the `podtato-head-hat` pod of the sample microservices application, [podtato-head](https://github.com/cncf/podtato-head), and check if the pod remains available during the chaos.
+
+## What is Podtato-head?
+
+[Podtato-head](https://github.com/cncf/podtato-head) is a sample application provided by the [CNCF](https://github.com/cncf) designed for practicing Kubernetes and cloud-native environments. This application is composed of several microservices, including frontend, hat, left/right-arm, and left/right-leg. It serves as an environment for experimenting with fault recovery capabilities and testing the system resilience.
 
 ## Prerequisites
 
 - Kubernetes 1.18 or later (minimum 2 vCPUs, 8GB RAM, 10GB disk space)
-
 - A Persistent volume of 20GB
+- [Kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
 
-- [Helm3](https://v3.helm.sh/) or [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
+## Install Podtato-head
+
+1. Install `podtato-head` in the `podtato-kubectl` namespace using the manifest file, which also creates the namespace
+
+```bash
+kubectl apply -f https://github.com/podtato-head/podtato-head-app/releases/download/v0.3.3/manifest.yaml 
+```
+
+2. Add a label to the `podtato-head-hat` deployment
+
+```bash
+kubectl label deployment podtato-head-hat app=podtato-head-hat -n podtato-kubectl
+```
 
 ## Install ChaosCenter
 
-1. Follow the [Getting-started](../getting-started/installation.md) to install ChaosCenter
+1. Follow the [Getting-started](../getting-started/installation.md) guide to install ChaosCenter
 
-2. Access to ChaosCenter Dashboard
+2. Access the ChaosCenter Dashboard
 
 ![chaoscenter-dashboard](../assets/tutorials/podtato-head/chaoscenter-dashboard.png)
 
 ## Set up Environment
+
 1. Add a new environment
 - Environment Name: `local`
 - Environment Type: `Production`
@@ -47,68 +64,53 @@ In this tutorial, you will inject a pod-delete fault into a sample microservices
 kubectl apply -f local-litmus-chaos-enable.yml
 ```
 
-3. Wait until the status shows `CONNECTED`.
+3. Wait until the status changes to `CONNECTED`.
 
 ![connected](../assets/tutorials/podtato-head/connected.png)
 
 ## Set up Resilience Probe
 
-1. Select HTTP Probe as the probe type
+1. Select **CMD Probe** as the probe type
 
-2. Configure properties & probe details
-- Name: `check-podtato-main-access-probe`
+2. Configure the probe properties and details
+- Name: `check-podtato-head-hat-pod`
 - Timeout: `10s`
 - Interval: `1s`
 - Attempt: `1`
-- URL: `http://podtato-main.{{workflow.parameters.adminModeNamespace}}.svc.cluster.local:9000`
-- Method: `GET`
-- Criteria: `==`
-- Response Code: `200`
+- Command: `kubectl get pods -n podtato-kubectl | grep podtato-head-hat | grep Running | wc -l`
+- Type: `Int`
+- Comparison Criteria: `>`
+- Value: `0`
 
 ![setup-probe](../assets/tutorials/podtato-head/setup-probe.png)
 
-## Run Chaos Experiment with Podtato-head
-1. For Kubernetes v1.24 or later, bind a ClusterRole to the `argo-chaos` service account 
+## Run Chaos Experiment
 
-```bash
-kubectl create rolebinding argo-chaos-binding --clusterrole=admin --serviceaccount=litmus:argo-chaos -n litmus
-```
-
-2. Configure a new chaos experiment
+1. Start a new chaos experiment
 - Name: `podtato-head`
 - Chaos Infrastructure: `local`
+- Builder Type: `Blank Canvas`
 
-3. Select **Podtato-head Chaos** template 
+![start-chaos-experiment](../assets/tutorials/podtato-head/start-chaos-experiment.png)
 
-![podtato-head-template](../assets/tutorials/podtato-head/podtato-head-template.png)
+2. Add the `pod-delete` chaos fault
 
-4. Add the new probe to `pod-delete` fault
-- Probe Name: `check-podtato-main-access-probe`
-- Mode: `Continuous`
+![add-pod-delete](../assets/tutorials/podtato-head/add-pod-delete.png)
+
+3. Select the target application for the `pod-delete` chaos fault
+- App Kind: `deployment`
+- App Namespace: `podtato-kubectl`
+- App Label: `app=podtato-head-hat`
+
+![select-target-application](../assets/tutorials/podtato-head/select-target-application.png)
+
+4. Add the probe to the `pod-delete` chaos fault
+- Probe Name: `check-podtato-head-hat-pod`
+- Mode: `EOT`
 
 ![add-probe](../assets/tutorials/podtato-head/add-probe.png)
 
-5. Remove the old probe section below from `podtato-head.yml`
-
-```yaml
-probe:
-- name: "check-podtato-main-access-url"
-    type: "httpProbe"
-    httpProbe/inputs:
-    url: "http://podtato-main.{{workflow.parameters.adminModeNamespace}}.svc.cluster.local:9000"
-    insecureSkipVerify: false
-    method:
-        get:
-        criteria: "=="
-        responseCode: "200"
-    mode: "Continuous"
-    runProperties:
-    probeTimeout: 1s
-    interval: 100ms
-    attempt: 1
-```
-
-6. Save and run the chaos experiment
+5. Save and run the chaos experiment
 
 ## Check Chaos Experiment Results
 
