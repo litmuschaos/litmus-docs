@@ -16,6 +16,10 @@ Probes are pluggable checks that can be defined within the ChaosEngine for any C
 
 ChaosHub allows you to orchestrate chaos experiments from the Public **[ChaosHub](http://hub.litmuschaos.io/)** or an alternate source for the Faults.
 
+### [ChaosCenter](chaos-center.md)
+
+Learn about the core concepts of ChaosCenter, including its architecture, components, and how it integrates with Chaos Infrastructure.
+
 ### [Chaos Experiment](chaos-workflow.md)
 
 Chaos Experiment is a set of different operations coupled together to achieve desired chaos impact on a Kubernetes Cluster.

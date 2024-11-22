@@ -8,7 +8,7 @@ sidebar_label: Uninstall Litmus
 
 ## Chaos Infrastructure
 
-To disconnect the [Chaos Infrastructure](../getting-started/resources.md#chaosagents) connected to the [ChaosCenter](../getting-started/resources.md#chaoscenter), follow these steps -
+To disconnect the [Chaos Infrastructure](../concepts/chaos-center.md#chaos-infrastructures) connected to the [ChaosCenter](../concepts/chaos-center.md#chaoscenter), follow these steps:
 
 1. Remove the ChaosEngines of the respective Chaos Infrastructure
 

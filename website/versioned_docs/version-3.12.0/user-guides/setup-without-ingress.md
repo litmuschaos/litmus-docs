@@ -8,9 +8,9 @@ sidebar_label: Setup without ingress
 
 ## Prerequisites
 
-Before setting up endpoint without Ingress, make sure [ChaosCenter](../getting-started/resources.md#chaoscenter) is installed in either one of these scopes:
+Before setting up endpoint without Ingress, make sure [ChaosCenter](../concepts/chaos-center.md#chaoscenter) is installed in either one of these scopes:
 
-- [Install ChaosCenter with HTTP](../getting-started/installation.md))
+- [Install ChaosCenter with HTTP](../getting-started/installation.md)
 - [Install ChaosCenter with HTTPS](chaoscenter-advanced-installation.md)
 
 ## NodePort service setup
@@ -81,5 +81,5 @@ By default you are assigned with a default project with Owner permissions.
 ## Learn more
 
 - [Setup Endpoints and Access ChaosCenter with Ingress](setup-with-ingress.md)
-- [Install ChaosCenter with HTTP](../getting-started/installation.md))
+- [Install ChaosCenter with HTTP](../getting-started/installation.md)
 - [Install ChaosCenter with HTTPS](chaoscenter-advanced-installation.md)

@@ -1,7 +1,7 @@
 ---
-id: resources
-title: Resources
-sidebar_label: Resources
+id: chaos-center
+title: ChaosCenter
+sidebar_label: ChaosCenter
 ---
 
 ---
