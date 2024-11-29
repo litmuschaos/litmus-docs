@@ -25,7 +25,7 @@ The term **Chaos Scenario/Workflow** has been changed to **Chaos Experiment**.
 The following are required before creating a Chaos Experiment:
 
 - [ChaosCenter](../concepts/chaos-center.md#chaoscenter)
-- [Chaos Infrastructure](../concepts/chaos-center.md#chaos-infrastructures)
+- [Chaos Infrastructure](../concepts/infrastructure.md#chaos-infrastructures)
 - [Probes](probes.md)
 
 ## Defining and executing a chaos experiment
