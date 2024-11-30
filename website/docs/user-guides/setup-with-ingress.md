@@ -8,7 +8,7 @@ sidebar_label: Setup with Ingress
 
 ## Prerequisites
 
-Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](../getting-started/resources.md#chaoscenter) is installed:
+Before setting up endpoint with Ingress make sure the [ChaosCenter](../concepts/chaos-center.md#chaoscenter) is installed:
 
 - [Install ChaosCenter with HTTP](../getting-started/installation.md)
 - [Install ChaosCenter with HTTPS](chaoscenter-advanced-installation.md)
