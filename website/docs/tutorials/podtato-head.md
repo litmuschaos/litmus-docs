@@ -112,7 +112,7 @@ kubectl apply -f local-litmus-chaos-enable.yml
 
 5. Save and run the chaos experiment
 
-## Check Chaos Experiment Results
+## Conclusion
 
 - Experiment Status: `COMPLETED`
 - Resilience Score: `100%`
