@@ -12,13 +12,18 @@ The User Guides section details Processes, User-flows and How-tos detailing all 
 
 Install ChaosCenter and Chaos Infrastructure in various environment configurations.
 
+### [Environments](create-environment.md)
+Create, Edit, and Delete Environments used for chaos experiments.
+
+### [Chaos Infrastructure](create-infrastructure.md)
+Set up and manage the infrastructure needed for running chaos experiments.
+
 ### [Injecting Fault](schedule-experiment.md)
 
 Constructing, Scheduling, Editing and Observing chaos experiments.
 
-### [Event Triggered Chaos using GitOps](gitops-configuration.md)
-
-GitOps in Litmus provides a way of using Event-Driven Chaos Injection, where target resources(stateful sets, deployments, etc.) can be configured to automatically trigger chaos experiment with any changes in the resource spec.
+### [Resilience Probes](create-resilience-probe.md)
+Define and manage probes that are used to check the resilience of applications during chaos experiments.
 
 ### [Account Settings](account-settings.md)
 
@@ -35,6 +40,10 @@ Probes are pluggable checks that can be defined within the ChaosEngine for any C
 ### [Teaming](invite-team-member.md)
 
 Adding members to a project, Editing user-invite and Removing team members from a project.
+
+### [Event Triggered Chaos using GitOps](gitops-configuration.md)
+
+GitOps in Litmus provides a way of using Event-Driven Chaos Injection, where target resources(stateful sets, deployments, etc.) can be configured to automatically trigger chaos experiment with any changes in the resource spec.
 
 ### [Using different Image Registries in a Chaos Experiment](image-registry.md)
 
