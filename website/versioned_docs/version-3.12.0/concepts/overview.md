@@ -20,7 +20,7 @@ ChaosHub allows you to orchestrate chaos experiments from the Public **[ChaosHub
 
 Chaos Experiment is a set of different operations coupled together to achieve desired chaos impact on a Kubernetes Cluster.
 
-### [Probes](probes.md)
+### [Resilience Probes](probes.md)
 
 Probes are pluggable checks that can be defined within the ChaosEngine for any Chaos Fault.
 

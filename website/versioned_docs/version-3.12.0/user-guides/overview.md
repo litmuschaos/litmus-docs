@@ -41,7 +41,7 @@ Probes are pluggable checks that can be defined within the ChaosEngine for any C
 
 Adding members to a project, Editing user-invite and Removing team members from a project.
 
-### [Event Triggered Chaos using GitOps](gitops-configuration.md)
+### [Configuring GitOps](gitops-configuration.md)
 
 GitOps in Litmus provides a way of using Event-Driven Chaos Injection, where target resources(stateful sets, deployments, etc.) can be configured to automatically trigger chaos experiment with any changes in the resource spec.
 
