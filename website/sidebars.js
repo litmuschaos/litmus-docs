@@ -11,7 +11,11 @@ module.exports = {
       ]
     },
     {
-      'Getting Started': ['getting-started/resources', 'getting-started/installation']
+      'Getting Started': [
+        'getting-started/resources', 
+        'getting-started/installation', 
+        'getting-started/hosted'
+      ]
     },
     {
       Architecture: [

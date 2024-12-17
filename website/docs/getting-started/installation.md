@@ -1,81 +1,62 @@
 ---
 id: installation
-title: ChaosCenter installation
-sidebar_label: Installation
+title: Installing ChaosCenter
+sidebar_label: Installing ChaosCenter
 ---
 
 ---
 
 ## Prerequisites
 
-- Kubernetes 1.17 or later
+- Litmus Chaos requires Kubernetes 1.17 or later.
 
-- A Persistent volume of 20GB
-
-:::note
-Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for test purposes as well. This PV is used as persistent storage to store the chaos config and chaos-metrics in the Portal. By default, litmus install would use the default storage class to allocate the PV. Provide this value
-:::
-
-- [Helm3](https://v3.helm.sh/) or [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
-
-## Installation
-
-Users looking to use Litmus for the first time have two options available to them today. One way is to use a hosted Litmus service like [Harness Chaos Engineering SaaS](https://app.harness.io/auth/#/signin). Alternatively, users looking for some more flexibility can install Litmus into their own Kubernetes cluster.
-
-Users choosing the self-hosted option can refer to our Install and Configure docs for installing alternate versions and more detailed instructions.
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs>
-  <TabItem value="self-hosted" label="Self-Hosted" default>
-    Installation of Self-Hosted Litmus can be done using either of the below methods:
-    <li><a href="#install-litmus-using-helm">Helm3</a> chart</li>
-    <li><a href="#install-litmus-using-kubectl">Kubectl</a> yaml spec file</li>
-    <br/>
-    Refer to the below details for Self-Hosted Litmus installation.
-  </TabItem>
-  <TabItem value="hosted" label="Hosted (Beta)">
-    <a href="https://harness.io/">Harness</a> offers a free service for community members which makes getting started with Litmus easy. Create an account to get started. Once logged in, create a new hosted control plane and connect to it via the up CLI. Litmus can be used as a hosted cloud service using <a href="https://app.harness.io/auth/#/signin">Harness Chaos Engineering SaaS</a>. Harness Chaos Engineering SaaS executes your Chaos Experiments in the cloud by managing all your Chaos Control Plane components, while the Chaos Execution Plane components exist on your Kubernetes cluster as part of an external chaos infrastructure.
-    <br/><br/>
-    To get started with Harness Chaos Engineering SaaS, visit <a href="https://developer.harness.io/docs/chaos-engineering/get-started/learn-more-free-plan">Harness Chaos Engineering SaaS</a> and register for free. You can skip the below installation steps.
-  </TabItem>
-</Tabs>
+- We recommend that you have a persistent volume (PV) of 20GB or more.
 
 :::note
-With 3.9.0 release, Cluster scope installation is deprecated. Now Namespaced mode is the only supported and standard installation mode.
+This PV is used to store the chaos config and chaos-metrics in the Portal. 20GB is the recommended minimum PV size, but you can start with 1GB for test purposes. By default, Litmus install uses the default storage class to allocate the PV. You must provide this value.
 :::
 
-### Install Litmus using Helm
+- All the install variants require [Helm](https://v3.helm.sh/).
 
-The helm chart will install all the required service account configuration and ChaosCenter.
+- Optionally, you can use [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl) to perform the installation.
 
-The following steps will help you install Litmus ChaosCenter via helm.
+## Installating ChaosCenter
 
-#### Step-1: Add the litmus helm repository
+Typically, you install Litmus into your own Kubernetes cluster. Alternatively, you can run ChaosCenter from a hosted Litmus service like [Harness Chaos Engineering SaaS](https://app.harness.io/auth/#/signin). See how [here](hosted).
 
-```bash
-helm repo add litmuschaos https://litmuschaos.github.io/litmus-helm/
-helm repo list
-```
+ This page describes how to install Litmus in a Kubernetes cluster. There are two installation methods:
 
-#### Step-2: Create the namespace on which you want to install Litmus ChaosCenter
+- To install self-hosted Litmus using Helm version 3, follow the instructions in the [next section](#installing-with-helm).
+- To use kubectl, skip to [Installing with kubectl](#installing-with-kubectl).
 
-- The ChaosCenter can be placed in any namespace, but for this scenario we are choose `litmus` as the namespace.
+:::note
+Cluster scope installation is deprecated and is no longer supported. Namespaced mode is the standard installation mode.
+:::
 
-```bash
-kubectl create ns litmus
-```
+### Installing with Helm
 
-#### Step-3: Install Litmus ChaosCenter
+The Helm chart installs ChaosCenter and all the required service account configuration.
 
-```bash
-helm install chaos litmuschaos/litmus --namespace=litmus --set portal.frontend.service.type=NodePort
-```
+Use the following steps to install Litmus ChaosCenter via Helm.
 
-> **Note:** If your Kubernetes cluster isn't local, you may want not to expose Litmus via `NodePort`. If so, remove `--set portal.frontend.service.type=NodePort` option. To connect to Litmus UI from your laptop, you can use `port-forward svc/chaos-litmus-frontend-service 9091:9091`. Then you can use your browser and open `127.0.0.1:9091`.
+1. Add the Litmus Helm repository.
 
-- If your Kubernetes cluster is local (such as minikube or kind) and only accessing Litmus locally, please replace the default endpoint with your custom CHAOS_CENTER_UI_ENDPOINT as shown below.
+   ```bash
+   helm repo add litmuschaos https://litmuschaos.github.io/litmus-helm/
+   helm repo list
+   ```
+
+2. Create the namespace on which you want to install Litmus ChaosCenter.
+
+   ChaosCenter can be placed in any namespace. These instructions use `litmus` as the namespace.
+
+   ```bash
+   kubectl create ns litmus
+   ```
+
+#### Local installation
+
+3. (Optional – local install only) If your Kubernetes cluster is local (in *kind* or *minikube*, for example) and only accessing Litmus locally, replace the default endpoint with your custom CHAOS_CENTER_UI_ENDPOINT and run the Helm chart, as in the following:
 
   ```bash
   helm install chaos litmuschaos/litmus --namespace=litmus \
@@ -83,19 +64,65 @@ helm install chaos litmuschaos/litmus --namespace=litmus --set portal.frontend.s
   --set portal.server.graphqlServer.genericEnv.CHAOS_CENTER_UI_ENDPOINT=http://chaos-litmus-frontend-service.litmus.svc.cluster.local:9091
   ```
 
-- Litmus helm chart depends on `bitnami/mongodb` [helm chart](https://github.com/bitnami/charts/tree/main/bitnami/mongodb), which uses a mongodb image not supported on ARM. If you want to install Litmus on an ARM-based server, please replace the default one with your custom mongodb arm image as shown below.
+Then skip to [Results](#results).
 
-  ```bash
-  helm install chaos litmuschaos/litmus --namespace=litmus \
-  --set portal.frontend.service.type=NodePort \
-  --set mongodb.image.registry=<put_registry> \
-  --set mongodb.image.repository=<put_image_repository> \
-  --set mongodb.image.tag=<put_image_tag>
-  ```
+#### Remote installation
 
-<span style={{color: 'green'}}><b>Expected Output</b></span>
+4. (Optional – ARM processors only) The Litmus Helm chart depends on the [`bitnami/mongodb` Helm chart](https://github.com/bitnami/charts/tree/main/bitnami/mongodb), which uses a MongoDB image not supported on ARM processors.
 
-```
+   To install Litmus on an ARM-based server, note your custom MongoDB ARM image registry and repository information. You will add the following options to the installation command in the next step:
+
+   ```bash
+   --set mongodb.image.registry=<put_registry> \
+   --set mongodb.image.repository=<put_image_repository> \
+   --set mongodb.image.tag=<put_image_tag>
+   ```
+
+5. Run the Helm chart.
+
+   If your Kubernetes cluster isn't local, you may not want to expose Litmus via `NodePort`.
+
+   Decide whether to set `NodePort`, then run one of the following commands:
+
+:::note
+If you are installing on an ARM-based server, append the options from the previous step to your chosen helm command, substituting your MongoDB information in the option parameters.
+:::
+
+   - To set the `NodePort` portal, run the Helm chart as follows to set the service:
+
+      ```bash
+      helm install chaos litmuschaos/litmus --namespace=litmus --set portal.frontend.service.type=NodePort
+      ```
+
+      or with a custom MongoDB image for ARM:
+      
+      ```bash
+      helm install chaos litmuschaos/litmus --namespace=litmus --set portal.frontend.service.type=NodePort
+         --set mongodb.image.registry=<put_registry> \
+         --set mongodb.image.repository=<put_image_repository> \
+         --set mongodb.image.tag=<put_image_tag>
+      ```
+
+   - To run Litmus remotely without `NodePort`, omit the `--set` option as follows:
+
+      ```bash
+      helm install chaos litmuschaos/litmus --namespace=litmus
+      ```
+
+      or with a custom MongoDB image for ARM:
+
+      ```bash
+      helm install chaos litmuschaos/litmus --namespace=litmus
+         --set mongodb.image.registry=<put_registry> \
+         --set mongodb.image.repository=<put_image_repository> \
+         --set mongodb.image.tag=<put_image_tag>
+      ```
+
+#### Results
+
+The installation output should look something like the following:
+
+```bash
 NAME: chaos
 LAST DEPLOYED: Tue Jun 15 19:20:09 2021
 NAMESPACE: litmus
@@ -107,157 +134,212 @@ Thank you for installing litmus 😀
 
 Your release is named chaos and its installed to namespace: litmus.
 
-Visit https://docs.litmuschaos.io to find more info.
+See https://docs.litmuschaos.io for more information.
 ```
 
-> **Note:** Litmus uses Kubernetes CRDs to define chaos intent. Helm3 handles CRDs better than Helm2. Before you start running a chaos experiment, verify if Litmus is installed correctly.
+:::note
+Litmus uses Kubernetes custom resource definitions (CRDs) to define chaos intent. Helm3 handles CRDs better than Helm2. We strongly recommend that you verify the installation before running a chaos experiment.
+:::
 
-## **Install Litmus using kubectl**
+Skip the following kubectl installation instructions and continue with [Verifying your installation](#verifying-your-installation).
 
-In this method the users need to install mongo first via helm and then apply the installation manifest. Follow the instructions [here](https://github.com/litmuschaos/litmus/tree/master/chaoscenter#installation-steps-for-litmus-300-beta9).
+### Installing with kubectl
 
-### **Install mongo**
+To install using kubctl, use Helm to install MongoDB first, then apply the installation manifest. The manifest can be found [here](https://github.com/litmuschaos/litmus/tree/master/chaoscenter#installation-steps-for-litmus-300-beta9).
 
-```bash
- helm repo add bitnami https://charts.bitnami.com/bitnami
-```
+1. Add the MongoDB manifest.
 
-Mongo Values
+   ```bash
+   helm repo add bitnami https://charts.bitnami.com/bitnami
+   ```
 
-```bash
-auth:
-  enabled: true
-  rootPassword: "1234"
-  # -- existingSecret Existing secret with MongoDB(&reg;) credentials (keys: `mongodb-passwords`, `mongodb-root-password`, `mongodb-metrics-password`, ` mongodb-replica-set-key`)
-  existingSecret: ""
-architecture: replicaset
-replicaCount: 3
-persistence:
-  enabled: true
-volumePermissions:
-  enabled: true
-metrics:
-  enabled: false
-  prometheusRule:
-    enabled: false
+   Mongo Values
 
-# bitnami/mongodb is not yet supported on ARM.
-# Using unofficial tools to build bitnami/mongodb (arm64 support)
-# more info: https://github.com/ZCube/bitnami-compat
-#image:
-#  registry: ghcr.io/zcube
-#  repository: bitnami-compat/mongodb
-#  tag: 6.0.5
-```
+   ```bash
+   auth:
+     enabled: true
+     rootPassword: "1234"
+     # -- existingSecret Existing secret with MongoDB(&reg;) credentials (keys: `mongodb-passwords`, `mongodb-root-password`, `mongodb-metrics-password`, ` mongodb-replica-set-key`)
+     existingSecret: ""
+   architecture: replicaset
+   replicaCount: 3
+   persistence:
+     enabled: true
+   volumePermissions:
+     enabled: true
+   metrics:
+     enabled: false
+     prometheusRule:
+       enabled: false
 
-```bash
-helm install my-release bitnami/mongodb --values mongo-values.yml -n <NAMESPACE> --create-namespace
-```
+   # bitnami/mongodb is not yet supported on ARM.
+   # Using unofficial tools to build bitnami/mongodb (arm64 support)
+   # more info: https://github.com/ZCube/bitnami-compat
+   #image:
+   #  registry: ghcr.io/zcube
+   #  repository: bitnami-compat/mongodb
+   #  tag: 6.0.5
+   ```
 
-Litmus supports for HTTP and HTTPS mode of installation.
+2. Run the Helm chart.
 
-### Basic installation (HTTP based and allows all origins)
+   ```bash
+   helm install my-release bitnami/mongodb --values mongo-values.yml -n <NAMESPACE> --create-namespace
+   ```
 
-Applying the manifest file will install all the required service account configuration and ChaosCenter in namespaced scope.
+   Litmus supports HTTP and HTTPS modes of installation.
 
-```bash
- kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/3.12.0/litmus-getting-started.yaml -n <NAMESPACE>
-```
+   Follow the instructions in the next step to choose a basic or advanced installation and complete the installation.
 
-### Advanced installation (HTTPS based and CORS rules apply)
+3. Use the [Basic](#basic_installation) (HTTP, all-origin) or [Advanced](#advanced_installation) (HTTP, resource sharing) installation instructions to finish the installation.
 
-For advanced installation visit [here](../user-guides/chaoscenter-advanced-installation.md)
+   <a name='basic_installation'></a>
+   - Basic installation
 
----
+     A basic installation is HTTP-based and allows all origins.
 
-## **Verify your installation**
+     Apply the manifest file as follows to install the required service account configuration and ChaosCenter in namespaced scope.
 
-#### **Verify if the frontend, server, and database pods are running**
+     ```bash
+     kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/3.12.0/litmus-getting-started.yaml -n <NAMESPACE>
+     ```
 
-- Check the pods in the namespace where you installed Litmus:
+     Skip to [Verifying your installation](#verifying-your-installation).
 
-  ```bash
-  kubectl get pods -n litmus
-  ```
+   <a name='advanced_installation'></a>
+   - Advanced installation
 
-  <span style={{color: 'green'}}><b>Expected Output</b></span>
+     An advanced installation is HTTPS-based and adheres to cross-origin resource sharing (CORS) rules. Follow these steps:
 
-  ```bash
-  NAME                                       READY   STATUS    RESTARTS   AGE
-  litmusportal-server-6fd57cc89-6w5pn        1/1     Running     0          57s
-  litmusportal-auth-server-7b596fff9-5s6g5   1/1     Running     0          57s
-  litmusportal-frontend-55974fcf59-cxxrf     1/1     Running     0          58s
-  my-release-mongodb-0                       1/1     Running     0          63s
-  my-release-mongodb-1                       1/1     Running     0          63s
-  my-release-mongodb-2                       1/1     Running     0          62s
-  my-release-mongodb-arbiter-0               1/1     Running     0          64s
+     1. Provide TLS certificates.
 
-  ```
+        Provide your own certificates or generate them using [this](https://github.com/litmuschaos/litmus/blob/master/chaoscenter/mtls-helper.sh) bash script.
 
-- Check the services running in the namespace where you installed Litmus:
+     2. Create a secret.
 
-  ```bash
-  kubectl get svc -n litmus
-  ```
+        ```bash
+        kubectl create secret generic tls-secret --from-file=ca.crt=ca.crt --from-file=tls.crt=tls.crt --from-file=tls.key=tls.key -n <NAMESPACE>
+        ```
 
-  <span style={{color: 'green'}}><b>Expected Output</b></span>
+     3. Apply the manifest file to install the required service account configuration and ChaosCenter in namespaced scope:
 
-  ```bash
-  NAME                                  TYPE           CLUSTER-IP     EXTERNAL-IP      PORT(S)                         AGE
-  chaos-exporter                        ClusterIP      10.68.45.7     <none>           8080/TCP                        23h
-  litmusportal-auth-server-service      NodePort       10.68.34.91    <none>           9003:32368/TCP,3030:31051/TCP   23h
-  litmusportal-frontend-service         NodePort       10.68.43.68    <none>           9091:30070/TCP                  23h
-  litmusportal-server-service           NodePort       10.68.33.242   <none>           9002:32455/TCP,8000:30722/TCP   23h
-  my-release-mongodb-arbiter-headless   ClusterIP      None           <none>           27017/TCP                       23h
-  my-release-mongodb-headless           ClusterIP      None           <none>           27017/TCP                       23h
-  workflow-controller-metrics           ClusterIP      10.68.33.65    <none>           9090/TCP                        23h
-  ```
+        ```bash
+        kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/3.12.0/chaoscenter/manifests/litmus-installation.yaml -n <NAMESPACE>
+        ```
 
----
+        Proceed to [Verifying your installation](#verifying-your-installation).
 
-## **Accessing the ChaosCenter**
+### Verifying your installation
 
-To setup and login to ChaosCenter expand the available services just created and copy the `PORT` of the `litmusportal-frontend-service` service
+Verify that the frontend, server, and database pods are running.
 
-```bash
-kubectl get svc -n litmus
-```
+1. Check the pods in the namespace where you installed Litmus.
 
-<span style={{color: 'green'}}><b>Expected Output</b></span>
+   ```bash
+   kubectl get pods -n litmus
+   ```
 
-```bash
-NAME                               TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)                         AGE
-litmusportal-frontend-service      NodePort    10.43.79.17    <none>        9091:31846/TCP                  102s
-litmusportal-server-service        NodePort    10.43.30.54    <none>        9002:31245/TCP,8000:32714/TCP   101s
-litmusportal-auth-server-service   NodePort    10.43.81.108   <none>        9003:32618/TCP,3030:31899/TCP   101s
-mongo-service                      ClusterIP   10.43.227.10   <none>        27017/TCP                       101s
-mongo-headless-service             ClusterIP   None           <none>        27017/TCP                       101s
-```
+   The pods output should look like the following.
 
-> **Note**: In this case, the PORT for `litmusportal-frontend-service` is `31846`. Yours will be different.
+   ```bash
+   NAME                                       READY   STATUS    RESTARTS   AGE
+   litmusportal-server-6fd57cc89-6w5pn        1/1     Running     0          57s
+   litmusportal-auth-server-7b596fff9-5s6g5   1/1     Running     0          57s
+   litmusportal-frontend-55974fcf59-cxxrf     1/1     Running     0          58s
+   my-release-mongodb-0                       1/1     Running     0          63s
+   my-release-mongodb-1                       1/1     Running     0          63s
+   my-release-mongodb-2                       1/1     Running     0          62s
+   my-release-mongodb-arbiter-0               1/1     Running     0          64s
+   ```
 
-Once you have the PORT copied in your clipboard, simply use your IP and PORT in this manner `<NODEIP>:<PORT>` to access the Litmus ChaosCenter.
+2. Check the services running in the namespace where you installed Litmus.
 
-For example:
+   ```bash
+   kubectl get svc -n litmus
+   ```
 
-```yaml
-http://172.17.0.3:31846/
-```
+   The services output should look like the following:
 
-> Where `172.17.0.3` is my NodeIP and `31846` is the frontend service PORT. If using a LoadBalancer, the only change would be to provide a `<LoadBalancerIP>:<PORT>`. [Learn more about how to access ChaosCenter with LoadBalancer](../user-guides/setup-without-ingress.md#with-loadbalancer)
+   ```bash
+   NAME                                  TYPE           CLUSTER-IP     EXTERNAL-IP      PORT(S)                         AGE
+   chaos-exporter                        ClusterIP      10.68.45.7     <none>           8080/TCP                        23h
+   litmusportal-auth-server-service      NodePort       10.68.34.91    <none>           9003:32368/TCP,3030:31051/TCP    23h
+   litmusportal-frontend-service         NodePort       10.68.43.68    <none>           9091:30070/TCP                  23h
+   litmusportal-server-service           NodePort       10.68.33.242   <none>           9002:32455/TCP,8000:30722/TCP   23h
+   my-release-mongodb-arbiter-headless   ClusterIP      None           <none>           27017/TCP                       23h
+   my-release-mongodb-headless           ClusterIP      None           <none>           27017/TCP                       23h
+   workflow-controller-metrics           ClusterIP      10.68.33.65    <none>           9090/TCP                        23h
+   ```
 
-**NOTE:** With advanced installation CORS rules are applied, once manifest is applied frontend loadbalancer IP needs to be added in the `ALLOWED_ORIGINS` environment in both auth and graphql server deployment.
+## Accessing ChaosCenter
 
-You should be able to see the Login Page of Litmus ChaosCenter. The **default credentials** are
+To set up and log in to ChaosCenter, expand the available services just created and copy the `PORT` of the `litmusportal-frontend-service` service as shown in the following steps.
 
-```yaml
-Username: admin
-Password: litmus
-```
+1. View the services.
+
+   ```bash
+   kubectl get svc -n litmus
+   ```
+
+   The services output should look like the following:
+
+   ```bash
+   NAME                               TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)                         AGE
+   litmusportal-frontend-service      NodePort    10.43.79.17    <none>        9091:31846/TCP                  102s
+   litmusportal-server-service        NodePort    10.43.30.54    <none>        9002:31245/TCP,8000:32714/TCP   101s
+   litmusportal-auth-server-service   NodePort    10.43.81.108   <none>        9003:32618/TCP,3030:31899/TCP   101s
+   mongo-service                      ClusterIP   10.43.227.10   <none>        27017/TCP                       101s
+   mongo-headless-service             ClusterIP   None           <none>        27017/TCP                       101s
+   ```
+
+2. Copy the PORT from the `litmusportal-frontend-service`.
+
+   :::note
+   In this example, the PORT for `litmusportal-frontend-service` is `31846`. Yours will be different.
+   :::
+
+3. (Optional) If you installed ChaosCenter on a remote cluster without `NodePort` forwarding, set port forwarding on your local node:
+
+   ``` bash
+   port-forward svc/chaos-litmus-frontend-service 31846:31846
+   ```
+
+4. Access the UI.
+
+   Enter your IP and PORT in this format to access the Litmus ChaosCenter: `<NODEIP>:<PORT>`.
+
+   For example:
+
+   ```yaml
+   http://172.17.0.3:31846/
+   ```
+
+   where `172.17.0.3` is the NodeIP and `31846` is the frontend service PORT.
+
+   If you use a load balancer, provide an IP for the load balancer instead: `<LoadBalancerIP>:<PORT>`. ([Learn how to access ChaosCenter with LoadBalancer](../user-guides/setup-without-ingress.md#with-loadbalancer)).
+
+   If you set port forwarding as shown in the previous step, use the local host IP:
+
+   ```yaml
+   http://127.0.0.1:31846
+   ```
+
+   :::note
+   When advanced installation CORS rules are applied, the frontend loadbalancer IP needs to be added in the `ALLOWED_ORIGINS` environment in both auth and graphql server deployment.
+   :::
+
+5. Log in.
+
+   You should see the Login Page of Litmus ChaosCenter. The **default credentials** are
+
+   ```yaml
+   Username: admin
+   Password: litmus
+   ```
 
 <img src={require('../assets/login.png').default} width="800" />
 
-By default you are assigned with a default project with Owner permissions.
+By default you are assigned a default project with Owner permissions.
 
 <img src={require('../assets/landing-page.png').default} width="800" />
 
