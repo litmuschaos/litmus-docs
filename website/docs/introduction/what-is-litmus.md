@@ -26,7 +26,7 @@ Thus it is important to verify your application resilience whenever a change has
 
 Chaos Experiments are fundamental units within the LitmusChaos architecture. Users can choose between readily available chaos experiments or create new ones to construct a required Chaos Scenario.
 
-## What is a Chaos Scenarios
+## What is a Chaos Scenario
 
 A chaos scenario is much more than a simple chaos experiment. It supports the user in defining the expected result, observing the result, analysing the overall system behaviour, and in the decision-making process if the system needs to be tuned for improving the resilience.
 
