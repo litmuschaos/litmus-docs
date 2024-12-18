@@ -18,11 +18,6 @@ const Header = () => {
           native SREs, QA teams and developers use Litmus to design, orchestrate and analyse chaos in their
           environments.
         </Paragraph>
-        <Row>
-          <Link to="/docs/getting-started/installation">
-            <ButtonFilled>Get Started</ButtonFilled>
-          </Link>
-        </Row>
       </div>
       <img className="headerImage" src={useBaseUrl('/img/header.png')} alt="Header Image" />
     </ResponsiveRow>

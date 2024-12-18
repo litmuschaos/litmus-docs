@@ -14,7 +14,7 @@ With the latest release of LitmusChaos 3.0.0 the term **Chaos Delegate/Agent** h
 
 An environment represents where you are installing your chaos infrastructure and acts as an additional level of abstraction for the same. You categorize each environment as prod or non-prod.
 
-### Access types
+## Access types
 
 Chaos infrastructure can be created in two modes:
 

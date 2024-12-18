@@ -61,4 +61,4 @@ Now, when scheduling a chaos experiment, the image registry changes will be visi
 ## Learn More
 
 - [What is a Chaos experiment](../concepts/chaos-workflow.md)
-- [What is ChaosCenter](../getting-started/resources.md#chaoscenter)
+- [What is ChaosCenter](../concepts/chaos-center.md#chaoscenter)

@@ -8,7 +8,7 @@ sidebar_label: Chaos Infrastructure Installation
 
 ## Prerequisites
 
-- Before connecting a Chaos Infrastructure to the [ChaosCenter](../getting-started/resources.md#chaoscenter), learn about what is a [Chaos Infrastructure](../getting-started/resources.md#chaosagents) in Litmus.
+- Before connecting a Chaos Infrastructure to the [ChaosCenter](../concepts/chaos-center.md#chaoscenter), learn about what is a [Chaos Infrastructure](../concepts/infrastructure.md#chaos-infrastructures) in Litmus.
 - Make sure [litmusctl](../litmusctl/installation.md) is installed.
 
 ## Connecting Chaos Infrastructure
