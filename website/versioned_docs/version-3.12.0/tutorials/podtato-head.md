@@ -1,7 +1,7 @@
 ---
 id: podtato-head
-title: Let's start with Podtato-head
-sidebar_label: Introduction
+title: Let's Start with Podtato-head
+sidebar_label: Let's Start with Podtato-head
 ---
 
 ---
