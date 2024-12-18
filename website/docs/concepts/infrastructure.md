@@ -1,7 +1,7 @@
 ---
 id: chaos-infrastructure
 title: Chaos infrastructure
-sidebar_label: Chaos infrastructure
+sidebar_label: Chaos Infrastructure
 ---
 
 Chaos infrastructure is a service that runs in your target environment and aids the Litmus control plane in accessing and injecting chaos at a cloud-native scale. All the chaos infrastructure services adhere to the principle of least privilege, where the services execute with the minimum number of required permissions. A chaos infrastructure can be created under a Chaos Environment.

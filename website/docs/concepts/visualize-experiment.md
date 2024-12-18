@@ -1,7 +1,7 @@
 ---
 id: visualize-experiment
 title: Visualize chaos experiment
-sidebar_label: Visualize chaos experiment
+sidebar_label: Visualize Chaos Experiment
 ---
 
 ---
