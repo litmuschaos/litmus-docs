@@ -44,7 +44,7 @@ GitOps feature in Litmus enables you to configure a single source of truth for y
 
 Authentication in ChaosCenter supports both local and OAuth-based authentication through the Authentication Server and Dex OIDC Server, offering enhanced flexibility and secure access management.
 
-### [Visualize chaos experiment](visualize-experiment.md)
+### [Visualize Chaos Experiment](visualize-experiment.md)
 
 ChaosCenter enables users to visualize the execution of chaos experiments in real-time, displaying key details like step statuses, logs, and results. This visualization helps in analyzing the impact and resiliency of the experiment, with graphs showing the experiment’s progress and individual node information.
 

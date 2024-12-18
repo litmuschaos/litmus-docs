@@ -1,7 +1,7 @@
 ---
 id: chaos-workflow
 title: Chaos experiment
-sidebar_label: Chaos experiment
+sidebar_label: Chaos Experiment
 ---
 
 ---
