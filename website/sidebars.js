@@ -6,8 +6,7 @@ module.exports = {
         'introduction/features',
         'introduction/usage',
         'introduction/core-principles',
-        'introduction/community',
-        'introduction/other-links'
+        'introduction/community'
       ]
     },
     {
