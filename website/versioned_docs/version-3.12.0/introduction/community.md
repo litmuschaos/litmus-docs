@@ -14,22 +14,31 @@ We invite Kubernetes SREs and Developers to join this community to learn and sha
 
 ### Join our Slack channel
 
-Join Our Community On Slack For detailed discussion, feedback, and regular updates on Chaos Engineering For Kubernetes. Join `#litmus` on `Kubernetes Slack` and connect with SREs and Chaos Engineering enthusiasts.
+Join our community on Slack For detailed discussion, feedback, and regular updates on Chaos Engineering For Kubernetes. 
 
-Join [here](https://slack.litmuschaos.io/).
+Join [here](https://slack.litmuschaos.io/) (`#litmus` on `Kubernetes Slack`) and connect with SREs and Chaos Engineering enthusiasts.
 
-### Attend our community meetings
+### Attend our meetings
 
-We meet online the third Wednesday of every month.
+Fill out the [LitmusChaos Meetings invite form](https://forms.gle/xYZyZ2gTWMqz7xSs7) to get a calendar invite to Litmus community or contributor meetings.
+
+#### Community meetings
+
+Community meetings are online the third Wednesday of every month at 5:30 p.m. GMT (6:30 p.m. CEST, 10 p.m. IST). Everyone in the community is invited to participate in the LitmusChaos community meetings.
 
 Notes from past meetings and links to the upcoming meeting are [here on HackMD](https://hackmd.io/a4Zu_sH4TZGeih-xCimi3Q).
 
-Topics we discuss:
+Among other things, we discuss community updates, share updates on new features and releases, and discussing user/adopter stories.
 
-- Updates to Litmus in the last one month
-- Contributor Experiences & Insights
-- SIG-Documentation Charter
-- and many more!
+#### Contributor meetings
+
+Contributor meetings are on the second and last Thursday of every month at 2:30 p.m. GMT (3:30 p.m. CEST, 7 p.m. IST).
+
+Contributor meetings are only for discussion of technical and non-technical contributions to LitmusChaos. Maintainers, present contributors, and aspiring contributors are invited to participate. We discuss issues, fixes, enhancements, and future contributions.
+
+Here is the [contributor meeting link](https://harness-io.zoom.us/j/95100368978?pwd=b2VrdCtaakE5U3dhOElFMUJOaXVOUT09).
+
+View the [release tracker](https://github.com/litmuschaos/litmus/milestones).
 
 ### Find Litmus on social media
 
@@ -67,6 +76,8 @@ Participation in the Litmus community is governed by our [code of conduct](https
 ### Contribute to Litmus open source
 
 See the Litmus [contribution document](https://github.com/litmuschaos/litmus/blob/master/CONTRIBUTING.md).
+
+Contributors meet twice a month. See [Contributor meetings](#contributor-meetings).
 
 - If you are a first-time contributor, please read [Steps to Contribute](https://github.com/litmuschaos/litmus/blob/master/CONTRIBUTING.md#steps-to-contribute-).
 - If you would like to suggest new tests to be added to Litmus, [create a new issue](https://github.com/litmuschaos/litmus/issues/new) describing your test. Specify the workload type and the operations that you would like to perform on the workload.
