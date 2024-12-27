@@ -8,7 +8,7 @@ sidebar_label: Resilience Probes
 
 Resilience Probes are pluggable checks that can be defined within the ChaosEngine for any Chaos Experiment. The fault pods execute these checks based on the mode they are defined in & factor their success as necessary conditions in determining the verdict of the fault (along with the standard `in-built` checks).
 
-## Prerequisites
+## Related concepts
 
 To understand the concepts of Probes better make sure you are aware of the [ChaosEngine](glossary.md) Custom Resources and promql queries (for Prometheus Probes)
 
