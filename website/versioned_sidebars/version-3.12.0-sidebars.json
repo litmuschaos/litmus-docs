@@ -12,8 +12,9 @@
     },
     {
       "Getting Started": [
-        "getting-started/resources",
-        "getting-started/installation"
+        "getting-started/resources", 
+        "getting-started/installation", 
+        "getting-started/hosted"
       ]
     },
     {
