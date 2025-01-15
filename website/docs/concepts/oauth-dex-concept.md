@@ -6,7 +6,7 @@ sidebar_label: Authentication in ChaosCenter
 
 ---
 
-## Prerequisites
+## Related concepts
 
 - [OAuth](https://oauth.net/specs/)
 
