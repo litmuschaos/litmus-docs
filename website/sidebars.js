@@ -32,7 +32,8 @@ module.exports = {
         'concepts/projects',
         'concepts/teaming',
         'concepts/gitops',
-        'concepts/oauth-dex-concept'
+        'concepts/oauth-dex-concept',
+        'concepts/visualize-experiment'
       ]
     },
     {
