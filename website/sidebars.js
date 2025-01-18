@@ -10,7 +10,7 @@ module.exports = {
       ]
     },
     {
-      'Getting Started': ['getting-started/resources', 'getting-started/installation']
+      "Getting Started": ["getting-started/installation"]
     },
     {
       Architecture: [
@@ -26,6 +26,7 @@ module.exports = {
         'concepts/overview',
         'concepts/chaos-infrastructure',
         'concepts/chaoshub',
+        'concepts/chaos-center',
         'concepts/chaos-workflow',
         'concepts/probes',
         'concepts/user-management',
