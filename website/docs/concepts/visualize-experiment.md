@@ -27,9 +27,6 @@ To observe a chaos experiment, user needs to select the highlighted experiment r
 In the chaos experiment, a realtime graph of the chaos experiment is displayed. This graph contains valuable information regarding the status of individual steps of the chaos experiment.
 <img src={require('../assets/workflow-observe-running.png').default} width="800" />
 To view the details of each step, the user can click on the individual nodes and the right side pane will display the node details, results(once the execution is complete), and the logs related to it.
-<br/><br/>
-<img src={require('../assets/workflow-observe-log.png').default} width="800" />
-<img src={require('../assets/workflow-observe-completed.png').default} width="800" />
 
 ## Summary
 
