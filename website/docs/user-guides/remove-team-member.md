@@ -16,8 +16,6 @@ In the **Active members** tab in the Members page, you will be able to see all t
 
 <img src={require('../assets/user-guides/teaming/remove-team-member/step-1.png').default} />
 
-### 2. Confirmation for removal
-
 On hitting the **Remove Member** option, you will be prompted to confirm the removal of the member, hit **Confirm** to confirm and remove the member from your project.
 
-<img src={require('../assets/user-guides/teaming/remove-team-member/step-2.png').default} />
+
