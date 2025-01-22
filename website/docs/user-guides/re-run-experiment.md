@@ -18,11 +18,6 @@ In the **Chaos experiment** page, and click on the play icon for the specific sc
 
 <img src={require('../assets/user-guides/injecting-fault/re-run-workflow/step-1.png').default} />
 
-## 2. Select Run Experiment option
-
-Having re-run a particular experiment, you will redirected to the chaos studio for the particular execution and see that it has started to run as per the experiment configurations:
-
-<img src={require('../assets/user-guides/injecting-fault/re-run-workflow/step-2.png').default} />
 
 ## Learn more
 
