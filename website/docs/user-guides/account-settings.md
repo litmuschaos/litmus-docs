@@ -32,24 +32,6 @@ Enter your name and email address in the following text fields and click on the 
 <img src={require('../assets/user-guides/my-account/step-3.png').default} alt="edit information" />
 </figure>
 
-## Change password
-
-On the same page, you can change your password by clicking on the **Change Password** button.
-
-<figure>
-<img src={require('../assets/user-guides/my-account/step-4.png').default} alt="edit information" />
-</figure>
-
-To update your password enter your current password as well as the new password you wish to set and select **Confirm**.
-
-<figure>
-<img src={require('../assets/user-guides/my-account/step-5.png').default} alt="edit information" />
-</figure>
-
-> Note: If you have forgotten your password, please contact your admin to reset your password
-
-On successful completion, you will be logged out and asked to re-login with you new password.
-
 ## Learn more
 
 - [Create a new user](create-user.md)
