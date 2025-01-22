@@ -247,8 +247,6 @@ Username: admin
 Password: litmus
 ```
 
-<img src={require('../assets/login.png').default} width="800" />
-
 
 ## **Steps to connect Chaos Infrastructure**
 ### Using Litmusctl
