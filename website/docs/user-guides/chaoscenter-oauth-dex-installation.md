@@ -38,7 +38,7 @@ Make sure you have your Google and GitHub client credentials ready. If you do no
 ### Configuring Dex OIDC provider
 
 ```bash
-curl https://raw.githubusercontent.com/litmuschaos/litmus/master/litmus-portal/dex-server/dex-deployment.yaml --output dex-deployment.yaml
+curl https://raw.githubusercontent.com/litmuschaos/litmus/master/chaoscenter/dex-server/dex-deployment.yaml --output dex-deployment.yaml
 ```
 
 1. Open the file with your favorite text-editor
@@ -140,8 +140,8 @@ Under `auth-server`, verify if the `DEX_ENABLED` variables are set.
     Ports:       3000/TCP, 3030/TCP
     Host Ports:  0/TCP, 0/TCP
     Environment Variables from:
-      litmus-portal-admin-config  ConfigMap  Optional: false
-      litmus-portal-admin-secret  Secret     Optional: false
+      chaoscenter-admin-config  ConfigMap  Optional: false
+      chaoscenter-admin-secret  Secret     Optional: false
     Environment:
       STRICT_PASSWORD_POLICY:  false
       ADMIN_USERNAME:          admin
