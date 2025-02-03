@@ -29,7 +29,7 @@ const resources = [
   },
   {
     label: 'FAQ',
-    href: 'https://docs.litmuschaos.io/docs/faq-general/'
+    href: 'https://docs.litmuschaos.io/docs/faq/'
   },
   {
     label: 'Issues',
