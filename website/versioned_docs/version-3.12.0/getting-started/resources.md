@@ -36,4 +36,4 @@ In Litmus, you can classify chaos infrastructure into two types:
 
 - **Self chaos infrastructure:** A chaos infrastructure that is connected to the same cluster and namespace where the ChaosCenter is deployed. You can use this to target the workloads executing on that cluster only.
 
-- **External chaos infrastructure:** A chaos infrastructure connected to a remote Kubernetes cluster. You can operate ChaosCenter in a cross-cloud manner, connecting multiple external chaos infrastructures to the same ChaosCenter with the help of the [litmusctl](../litmusctl/installation.md) CLI. Once connected you can manage, monitor, observe, and induce chaos from the ChaosCenter to the respective external chaos infrastructures.
+- **External chaos infrastructure:** A chaos infrastructure connected to a remote Kubernetes cluster. You can operate ChaosCenter in a cross-cloud manner, connecting multiple external chaos infrastructures to the same ChaosCenter with the help of the [litmusctl](../litmusctl/installation.md) CLI. Once connected you can manage, monitor, observe, and induce chaos from the ChaosCenter to the respective external chaos infrastructures. 
