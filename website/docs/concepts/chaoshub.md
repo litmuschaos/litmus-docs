@@ -32,21 +32,15 @@ By default, a public ChaosHub is provided when the ChaosCenter is installed for 
 
 <img src={require('../assets/concepts/chaoshub/chaoshub-default.png').default} width="800" />
 
-### 1. Connect a public Git repository
+### 1. Connect a public and private Git repository
 
-You can connect to a public Git repository by simply providing the following details:
+You can connect to a public or private Git repository by simply providing the following details:
 
 - Hub name
 - Git URL of the forked repository
 - Branch name
 
 <img src={require('../assets/concepts/chaoshub/chaoshub-add-public.png').default} width="800" />
-
-### 2. Connect a private Git repository
-
-To add a private ChaosHub, you need provide the hub name, Git URL of the forked repository and the branch name similar to that of public hub and the repository can be connected in two ways:
-
-<img src={require('../assets/concepts/chaoshub/chaoshub-add-private.png').default} width="800" />
 
 #### a. Access token
 
