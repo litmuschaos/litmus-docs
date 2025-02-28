@@ -6,8 +6,8 @@ sidebar_label: Overview
 
 ---
 
-The Tutorials section offers hands-on guides for Litmus users to experiment with various tools and environments. This section does not cover the detailed installation steps, which can be found in the [Getting-started](../getting-started/installation.md) section.
+This section offers hands-on guides for Litmus users to experiment with various tools and environments. It does not cover any detailed installation guides, however, you can find them in the [Getting Started](../getting-started/installation.md) section.
 
 ### [Let's Start with Podtato-head](podtato-head.md)
 
-This tutorial guides users on how to inject a pod-delete fault into one of the pods in the [podtato-head](https://github.com/cncf/podtato-head) microservice and verify its availability during the chaos.
+A guide on injecting a pod-delete fault into a pod in the [podtato-head](https://github.com/cncf/podtato-head) microservice and test its availability during the chaos.
