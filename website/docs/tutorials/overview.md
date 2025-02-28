@@ -10,4 +10,4 @@ This section offers hands-on guides for Litmus users to experiment with various 
 
 ### [Let's Start with Podtato-head](podtato-head.md)
 
-This tutorial guides users on how to inject a pod-delete fault into one of the pods in the [podtato-head](https://github.com/cncf/podtato-head) microservice and verify its availability during the chaos.
+This tutorial guides users on how to inject a pod-delete fault into one of the pods in the [podtato-head](https://github.com/cncf/podtato-head) microservice and verify its availability during the chaos.  
