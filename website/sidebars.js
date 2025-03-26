@@ -107,8 +107,8 @@ module.exports = {
       ]
     },
     {
-      'Developer Guide': ['developer-guide/chaoscenter-developer-guide'] 
-     },
+      'Developer Guide': ['developer-guide/chaoscenter-developer-guide']
+    },
     {
       Litmusctl: ['litmusctl/installation', 'litmusctl/litmusctl-usage']
     },
@@ -116,7 +116,7 @@ module.exports = {
       Integrations: ['integrations/prometheus', 'integrations/grafana', 'integrations/backstage']
     },
     {
-      Tutorials: ['tutorials/overview','tutorials/podtato-head']
+      Tutorials: ['tutorials/overview', 'tutorials/podtato-head']
     },
     'troubleshooting',
     'best-practices',
