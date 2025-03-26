@@ -20,13 +20,8 @@ Click on the **New User** button to bring up the **Create New User** modal and e
 
 <img src={require('../assets/user-guides/user-management/create-user/step-2.png').default} />
 
-## 3. Confirmation of creation
 
-After you have added the details of the new user to be created, click the **Confirm** button to create the new user.
-
-<img src={require('../assets/user-guides/user-management/create-user/step-3.png').default} />
-
-You will now be able to view the new user in the table in the **User Management** tab.
+After you have added the details of the new user to be created, click the **Confirm** button to create the new user. and You will now be able to view the new user in the table in the **User Management** tab.
 
 ## Learn more
 
