@@ -42,6 +42,7 @@
     {
       "User Guides": [
         "user-guides/overview",
+        "user-guides/connecting-git-repo",
         {
           "Advanced Installation": [
             {
@@ -102,6 +103,7 @@
             "user-guides/leave-project"
           ]
         },
+        "user-guides/removing-chaoshub",
         {
           "Teaming": [
             "user-guides/invite-team-member",
@@ -112,7 +114,9 @@
         },
         "user-guides/gitops-configuration",
         "user-guides/image-registry",
-        "user-guides/uninstall-litmus"
+        "user-guides/uninstall-litmus",
+        "user-guides/viewing-predefined-experiments",
+        "user-guides/viewing-chaos-faults"
       ]
     },
     {

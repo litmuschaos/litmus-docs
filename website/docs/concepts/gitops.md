@@ -6,7 +6,7 @@ sidebar_label: GitOps
 
 ---
 
-## Prerequisites
+## Related concepts
 
 - Chaos Infrastructure
 - [Chaos Experiment](chaos-workflow.md)

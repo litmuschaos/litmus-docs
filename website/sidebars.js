@@ -39,6 +39,7 @@ module.exports = {
     {
       'User Guides': [
         'user-guides/overview',
+        'user-guides/connecting-git-repo',
         {
           'Advanced Installation': [
             {
@@ -93,6 +94,7 @@ module.exports = {
         {
           'Managing Projects': ['user-guides/change-project-name', 'user-guides/leave-project']
         },
+        'user-guides/removing-chaoshub',
         {
           Teaming: [
             'user-guides/invite-team-member',
@@ -103,7 +105,9 @@ module.exports = {
         },
         'user-guides/gitops-configuration',
         'user-guides/image-registry',
-        'user-guides/uninstall-litmus'
+        'user-guides/uninstall-litmus',
+        'user-guides/viewing-predefined-experiments',
+        'user-guides/viewing-chaos-faults',
       ]
     },
     {

@@ -1,6 +1,6 @@
 ---
 id: teaming
-title: Collaborate with teams
+title: Team Collaboration
 sidebar_label: Teaming
 ---
 
