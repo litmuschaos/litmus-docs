@@ -71,12 +71,7 @@ You should be able to see the login page of ChaosCenter. The default credentials
 Username: admin
 Password: litmus
 ```
-
-<img src={require('../assets/login.png').default} width="800" />
-
 By default you are assigned with a default project with Owner permissions.
-
-<img src={require('../assets/landing-page.png').default} width="800" />
 
 ## Learn more
 
