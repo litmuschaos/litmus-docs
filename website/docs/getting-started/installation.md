@@ -46,6 +46,8 @@ import TabItem from '@theme/TabItem';
 With 3.9.0 release, Cluster scope installation is deprecated. Now Namespaced mode is the only supported and standard installation mode.
 :::
 
+Although Litmus will be deployed in a particular namespace, chaos infrastructure can be deployed in both cluster as well as namespace mode. <a href = "https://docs.litmuschaos.io/docs/concepts/chaos-infrastructure">Learn more here</a>.
+
 ### Install Litmus using Helm
 
 The helm chart will install all the required service account configuration and ChaosCenter.
