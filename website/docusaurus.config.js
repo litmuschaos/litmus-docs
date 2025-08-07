@@ -51,6 +51,14 @@ module.exports = {
       apiKey: 'b388bb42bbdfcd9c02f0eb32c6ee9fa4',
       indexName: 'litmuschaos'
     },
+    announcementBar: {
+      id: 'support_us',
+      content:
+        'Star our repository on <a target="_blank" rel="noopener noreferrer" href="https://github.com/litmuschaos/litmus">GitHub</a> to stay updated with new features and contribute to our project!',
+      backgroundColor: '#d8dbfa',
+      textColor: '#5b44ba',
+      isCloseable: true,
+    },
     navbar: {
       title: 'Litmus Docs',
       logo: {
@@ -59,10 +67,6 @@ module.exports = {
         src: 'img/litmus-light-icon.svg'
       },
       items: [
-        {
-          type: 'docsVersion',
-          position: 'right'
-        },
         {
           activeBasePath: 'Version',
           label: 'Versions',
@@ -83,6 +87,11 @@ module.exports = {
               to: 'docs/next/introduction/what-is-litmus'
             },
           ]
+        },
+        {
+          type: 'docsVersion',
+          position: 'left'
+
         },
         {
           label: 'APIs',
@@ -108,10 +117,16 @@ module.exports = {
           to: 'https://hub.litmuschaos.io/',
           label: 'ChaosHub',
           position: 'right'
-        }
+        } ,{
+          to: 'https://github.com/litmuschaos/litmus',
+          position: 'right',
+          label: 'Try Litmus',
+          className: 'try-button',
+          'aria-label': 'Try Litmus',
+        },
       ]
     },
-    colorMode: {
+    colorMode: {      
       // "light" | "dark"
       defaultMode: 'light',
 

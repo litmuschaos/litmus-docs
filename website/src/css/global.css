@@ -1,5 +1,117 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
+
+:root {
+  --ifm-menu-font-size: 15px;
+  --ifm-menu-color-background-active: #8890992E;
+  --ifm-link-menu-color-background-hover: #8890992E;
+  --ifm-menu-color-active: #1B1F24;
+}
+
+.table-of-contents {
+  max-width: 280px !important;
+}
+
+.navbar {
+  padding: 0px 24px;
+}
+
+/* Side bar Styles */
+
+.menu__list {
+  font-size: 16px;
+}
+
+.menu__link{
+  padding-left: 8px;
+}
+.category-as-header>.menu__list-item-collapsible:first-child a {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 20px;
+  margin-top: 20px;
+  color: #1B1F24;
+  padding-left: 15px;
+}
+
+[data-theme='dark'] .category-as-header>.menu__list-item-collapsible:first-child a {
+  color: white;
+}
+
+[data-theme='dark'] .category-as-header .menu__link--active {
+  color: white;
+}
+
+
+.navbar__link, .navbar__link:hover {
+  color: #1B1F24;
+}
+
+[data-theme='dark'] .navbar__link {
+  color: white;
+}
+
+.try-button {
+  color: white;
+  background-color: #5a44ba;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  margin: 0px 6px !important;
+  box-shadow: 0px 0px 1px 0px rgba(48, 50, 51, 0.05),
+              0px 1px 1px 0px rgba(48, 50, 51, 0.10);
+  border: 1px solid #5a44ba;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 13px !important;
+  transition: background-color 0.2s ease;
+}
+
+
+
+
+.try-button:hover {
+  background-color: #4a3a9a;
+  color: white;
+}
+
+@media screen and (max-width: 996px) {
+  .try-button {
+    display: none !important;
+  }
+}
+
+[data-theme='dark'] .try-button {
+  background-color: #5a44ba;
+  color: white;
+  border-color: #5a44ba;
+}
+
+[data-theme='dark'] .try-button:hover {
+  background-color: #6b52d3;
+  color: white;
+}
+
+
+.category-as-header .menu__link--active:not(.menu__link--sublist) {
+  background-color: var(--ifm-menu-color-background-active);
+}
+
+[data-theme='dark'] .category-as-header .menu__link--active:not(.menu__link--sublist) {
+  color: white
+}
+
+.category-as-header .menu__link:not(.menu__link--sublist) {
+  max-width: 94%;
+}
+
+.category-as-header>.menu__list-item-collapsible:first-child:hover {
+  background-color: transparent;
+}
+
 html {
   font-family: 'Work Sans', sans-serif;
 }

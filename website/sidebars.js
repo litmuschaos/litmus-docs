@@ -1,7 +1,12 @@
 module.exports = {
   docs: [
     {
-      Introduction: [
+      type: 'category',
+      label: 'Introduction',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
         'introduction/what-is-litmus',
         'introduction/features',
         'introduction/usage',
@@ -10,10 +15,50 @@ module.exports = {
       ]
     },
     {
-      'Getting Started': ['getting-started/resources', 'getting-started/installation']
+      type: 'category',
+      label: 'Getting Started',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        'getting-started/installation',
+        {
+          type: 'category',
+          label: 'Concepts',
+          items: [
+            'concepts/overview',
+            'concepts/chaos-infrastructure',
+            'concepts/chaoshub',
+            'concepts/chaos-workflow',
+            'concepts/probes',
+            'concepts/user-management',
+            'concepts/projects',
+            'concepts/teaming',
+            'concepts/gitops',
+            'concepts/oauth-dex-concept',
+            'concepts/visualize-experiment'
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Tutorial',
+          items: [
+            'tutorials/overview',
+            'tutorials/podtato-head'
+          ]
+        },
+        'developer-guide/chaoscenter-developer-guide',
+        'glossary',
+        'getting-started/resources'
+      ]
     },
     {
-      Architecture: [
+      type: 'category',
+      label: 'Architecture',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
         'architecture/overview',
         'architecture/architecture-summary',
         'architecture/chaos-control-plane',
@@ -22,22 +67,12 @@ module.exports = {
       ]
     },
     {
-      Concepts: [
-        'concepts/overview',
-        'concepts/chaos-infrastructure',
-        'concepts/chaoshub',
-        'concepts/chaos-workflow',
-        'concepts/probes',
-        'concepts/user-management',
-        'concepts/projects',
-        'concepts/teaming',
-        'concepts/gitops',
-        'concepts/oauth-dex-concept',
-        'concepts/visualize-experiment'
-      ]
-    },
-    {
-      'User Guides': [
+      type: 'category',
+      label: 'User Guides',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
         'user-guides/overview',
         {
           'Advanced Installation': [
@@ -107,20 +142,32 @@ module.exports = {
       ]
     },
     {
-      'Developer Guide': ['developer-guide/chaoscenter-developer-guide']
+      type: 'category',
+      label: 'Litmusctl',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: ['litmusctl/installation', 'litmusctl/litmusctl-usage']
     },
     {
-      Litmusctl: ['litmusctl/installation', 'litmusctl/litmusctl-usage']
+      type: 'category',
+      label: 'Integrations',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: ['integrations/prometheus', 'integrations/grafana', 'integrations/backstage']
     },
     {
-      Integrations: ['integrations/prometheus', 'integrations/grafana', 'integrations/backstage']
-    },
-    {
-      Tutorials: ['tutorials/overview', 'tutorials/podtato-head']
-    },
-    'troubleshooting',
-    'best-practices',
-    'glossary',
-    'faq'
+      type: 'category',
+      label: 'Reference',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        'troubleshooting',
+        'best-practices',
+        'faq'
+      ]
+    }
   ]
 }
