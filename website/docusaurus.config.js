@@ -29,7 +29,7 @@ const resources = [
   },
   {
     label: 'FAQ',
-    href: 'https://docs.litmuschaos.io/docs/faq-general/'
+    href: 'https://docs.litmuschaos.io/docs/faq/'
   },
   {
     label: 'Issues',
@@ -51,6 +51,14 @@ module.exports = {
       apiKey: 'b388bb42bbdfcd9c02f0eb32c6ee9fa4',
       indexName: 'litmuschaos'
     },
+    announcementBar: {
+      id: 'support_us',
+      content:
+        'Star our repository on <a target="_blank" rel="noopener noreferrer" href="https://github.com/litmuschaos/litmus">GitHub</a> to stay updated with new features and contribute to our project!',
+      backgroundColor: '#d8dbfa',
+      textColor: '#5b44ba',
+      isCloseable: true,
+    },
     navbar: {
       title: 'Litmus Docs',
       logo: {
@@ -59,10 +67,6 @@ module.exports = {
         src: 'img/litmus-light-icon.svg'
       },
       items: [
-        {
-          type: 'docsVersion',
-          position: 'right'
-        },
         {
           activeBasePath: 'Version',
           label: 'Versions',
@@ -85,6 +89,15 @@ module.exports = {
           ]
         },
         {
+          type: 'docsVersion',
+          position: 'left'
+
+        },
+        {
+          type: 'search',
+          position: 'right',
+        },
+        {
           label: 'APIs',
           to: 'https://litmuschaos.github.io/litmus/graphql/v3.11.0/api.html',
           position: 'right'
@@ -95,23 +108,33 @@ module.exports = {
           position: 'right'
         },
         {
-          to: 'https://github.com/litmuschaos/litmus',
-          label: 'GitHub',
-          position: 'right'
-        },
-        {
-          to: 'https://app.slack.com/client/T09NY5SBT/CNXNB0ZTN',
-          label: 'Slack',
-          position: 'right'
-        },
-        {
           to: 'https://hub.litmuschaos.io/',
           label: 'ChaosHub',
           position: 'right'
+        } ,
+        {
+          to: 'https://github.com/litmuschaos/litmus',
+          position: 'right',
+          label: 'Try Litmus',
+          className: 'try-button',
+          'aria-label': 'Try Litmus',
+        },
+        {
+          href: 'https://github.com/litmuschaos/litmus',
+          className: 'github-button',
+          position: 'right',
+          'aria-label': 'GitHub repository',
+        },
+        {
+          href: 'https://app.slack.com/client/T09NY5SBT/CNXNB0ZTN',
+          className: 'slack-button',
+          position: 'right',
+          'aria-label': 'Slack',
         }
+    
       ]
     },
-    colorMode: {
+    colorMode: {      
       // "light" | "dark"
       defaultMode: 'light',
 
