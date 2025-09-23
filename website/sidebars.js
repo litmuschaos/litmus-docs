@@ -81,10 +81,10 @@ module.exports = {
                 'user-guides/chaoscenter-oauth-dex-installation',
                 'user-guides/chaoscenter-advanced-installation',
                 'user-guides/setup-without-ingress',
-                'user-guides/setup-with-ingress'
+                'user-guides/setup-with-ingress',
+                'user-guides/setup-with-helm'
               ]
-            },
-            'user-guides/chaos-infrastructure-installation'
+            }
           ]
         },
         {
@@ -147,7 +147,19 @@ module.exports = {
       className: 'category-as-header',
       collapsed: false,
       collapsible: false,
-      items: ['litmusctl/installation', 'litmusctl/litmusctl-usage']
+      items: [
+        'litmusctl/installation',
+        {
+          type: 'category',
+          label: 'Litmusctl Usage',
+          items: [
+            'litmusctl/litmusctl-usage',
+            'litmusctl/connect-chaos-infrastructure',
+            'litmusctl/create-chaos-experiment',
+            'litmusctl/additional-commands'
+          ]
+        }
+      ]
     },
     {
       type: 'category',
