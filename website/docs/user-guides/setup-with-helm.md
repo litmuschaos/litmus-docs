@@ -27,7 +27,7 @@ chaoscenter:
       - name: DEX_ENABLED
         value: "true"
       - name: OIDC_ISSUER
-        value: "<https://accounts.google.com>"   # Example: Google, GitHub, GitLab issuer URL
+        value: "<https://accounts.google.com>"   # Example: Google, GitHub issuer URL
       - name: DEX_OAUTH_CALLBACK_URL
         value: "http://<chaoscenter-host>/auth/callback"
       - name: DEX_OAUTH_CLIENT_ID
