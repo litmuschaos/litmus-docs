@@ -6,7 +6,7 @@ sidebar_label: Overview
 
 ---
 
-The Concepts section contains Definitions, Design principles, Terminology and Working technical theory. This section will not have the actual usage instructions or guides those will be made available in the [User Guides](../user-guides/overview.md) section.
+The Concepts section contains Definitions, Design principles, Terminology and Working technical theory. This section will not have the actual usage instructions or guides; those will be made available in the [User Guides](../user-guides/overview.md) section.
 
 ### [Chaos Infrastructure](infrastructure.md)
 
