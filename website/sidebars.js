@@ -1,20 +1,64 @@
 module.exports = {
   docs: [
     {
-      Introduction: [
+      type: 'category',
+      label: 'Introduction',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
         'introduction/what-is-litmus',
         'introduction/features',
         'introduction/usage',
         'introduction/core-principles',
-        'introduction/community',
-        'introduction/other-links'
+        'introduction/community'
       ]
     },
     {
-      'Getting Started': ['getting-started/resources', 'getting-started/installation']
+      type: 'category',
+      label: 'Getting Started',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        'getting-started/installation',
+        {
+          type: 'category',
+          label: 'Concepts',
+          items: [
+            'concepts/overview',
+            'concepts/chaos-infrastructure',
+            'concepts/chaoshub',
+            'concepts/chaos-workflow',
+            'concepts/probes',
+            'concepts/user-management',
+            'concepts/projects',
+            'concepts/teaming',
+            'concepts/gitops',
+            'concepts/oauth-dex-concept',
+            'concepts/visualize-experiment'
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Tutorial',
+          items: [
+            'tutorials/overview',
+            'tutorials/podtato-head'
+          ]
+        },
+        'developer-guide/chaoscenter-developer-guide',
+        'glossary',
+        'getting-started/resources'
+      ]
     },
     {
-      Architecture: [
+      type: 'category',
+      label: 'Architecture',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
         'architecture/overview',
         'architecture/architecture-summary',
         'architecture/chaos-control-plane',
@@ -23,21 +67,12 @@ module.exports = {
       ]
     },
     {
-      Concepts: [
-        'concepts/overview',
-        'concepts/chaos-infrastructure',
-        'concepts/chaoshub',
-        'concepts/chaos-workflow',
-        'concepts/probes',
-        'concepts/user-management',
-        'concepts/projects',
-        'concepts/teaming',
-        'concepts/gitops',
-        'concepts/oauth-dex-concept'
-      ]
-    },
-    {
-      'User Guides': [
+      type: 'category',
+      label: 'User Guides',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
         'user-guides/overview',
         {
           'Advanced Installation': [
@@ -46,10 +81,10 @@ module.exports = {
                 'user-guides/chaoscenter-oauth-dex-installation',
                 'user-guides/chaoscenter-advanced-installation',
                 'user-guides/setup-without-ingress',
-                'user-guides/setup-with-ingress'
+                'user-guides/setup-with-ingress',
+                'user-guides/setup-with-helm'
               ]
-            },
-            'user-guides/chaos-infrastructure-installation'
+            }
           ]
         },
         {
@@ -107,17 +142,44 @@ module.exports = {
       ]
     },
     {
-      'Developer Guide': ['developer-guide/chaoscenter-developer-guide'] 
-     },
-    {
-      Litmusctl: ['litmusctl/installation', 'litmusctl/litmusctl-usage']
+      type: 'category',
+      label: 'Litmusctl',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        'litmusctl/installation',
+        {
+          type: 'category',
+          label: 'Litmusctl Usage',
+          items: [
+            'litmusctl/litmusctl-usage',
+            'litmusctl/connect-chaos-infrastructure',
+            'litmusctl/create-chaos-experiment',
+            'litmusctl/additional-commands'
+          ]
+        }
+      ]
     },
     {
-      Integrations: ['integrations/prometheus', 'integrations/grafana', 'integrations/backstage']
+      type: 'category',
+      label: 'Integrations',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: ['integrations/prometheus', 'integrations/grafana', 'integrations/backstage']
     },
-    'troubleshooting',
-    'best-practices',
-    'glossary',
-    'faq'
+    {
+      type: 'category',
+      label: 'Reference',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        'troubleshooting',
+        'best-practices',
+        'faq'
+      ]
+    }
   ]
 }
