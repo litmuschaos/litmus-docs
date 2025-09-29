@@ -1,16 +1,16 @@
 ---
 id: chaos-control-plane
-title: Chaos Control Plane
-sidebar_label: Chaos Control Plane
+title: Chaos control plane
+sidebar_label: Chaos control plane
 ---
 
 ---
 
 <img src={require("../assets/chaos-control-plane.png").default} alt="Chaos Control Plane" />
 
-Chaos Control Plane consists of micro-services responsible for the functioning of the ChaosCenter, the website-based portal that can be used for interacting with Litmus, apart from the CLI. Chaos Plane facilitates the creation and scheduling of chaos experiments, system observability during the event of chaos, and post-processing and analysis of fault results.
+Chaos control plane consists of micro-services responsible for the functioning of the ChaosCenter, the website-based portal that can be used for interacting with Litmus, apart from the CLI. Chaos Plane facilitates the creation and scheduling of chaos experiments, system observability during the event of chaos, and post-processing and analysis of fault results.
 
-## Chaos Control Plane Components
+## Chaos control plane components
 
 - **Authentication Server:** A Golang micro-service that is responsible for authorizing, authenticating the requests received from ChaosCenter and managing users along with their projects. It primarily serves the cause of user creation, user login, resetting the password, updating user information, creating project, managing project related operations.
 
@@ -22,7 +22,7 @@ Chaos Control Plane consists of micro-services responsible for the functioning o
 
   - **Web UI:** A React.js based frontend application micro-service with built-in system observability capabilities and an analytics dashboard. It also facilitates teams of users to collaborate over chaos experiments using role-based user accounts.
 
-  - **Litmusctl:** A command-line tool that allows management of Litmus Chaos Infrastructure Infrastructure components. It can be used to create chaos infrastructures, project, and manage multiple Litmus accounts.
+  - **Litmusctl:** A command-line tool that allows management of Litmus Chaos Infrastructure components. It can be used to create chaos infrastructures, project, and manage multiple Litmus accounts.
 
   - **Litmus API:** Refers to two different Litmus APIs, namely Litmus Authentication API and Litmus Portal API:
 

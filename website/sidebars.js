@@ -1,119 +1,185 @@
 module.exports = {
-  "docs": [
+  docs: [
     {
-      "Introduction": ["introduction/what-is-litmus", "introduction/features", "introduction/usage", "introduction/core-principles", "introduction/community", "introduction/other-links"]
-    },
-    {
-      "Getting Started": [
-        "getting-started/resources",
-        "getting-started/installation",
+      type: 'category',
+      label: 'Introduction',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        'introduction/what-is-litmus',
+        'introduction/features',
+        'introduction/usage',
+        'introduction/core-principles',
+        'introduction/community'
       ]
     },
     {
-      "Architecture": [
-        "architecture/overview",
-        "architecture/architecture-summary",
-        "architecture/chaos-control-plane",
-        "architecture/chaos-execution-plane",
-        "architecture/chaos-fault-flow"
-      ]
-    },
-    {
-      "Concepts": [
-        "concepts/overview",
-        "concepts/chaos-infrastructure",
-        "concepts/chaoshub",
-        "concepts/chaos-workflow",
-        "concepts/probes",
-        "concepts/user-management",
-        "concepts/projects",
-        "concepts/teaming",
-        "concepts/gitops",
-        "concepts/oauth-dex-concept"
-      ]
-    },
-    {
-      "User Guides": [
-        "user-guides/overview",
+      type: 'category',
+      label: 'Getting Started',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        'getting-started/installation',
         {
-          "Advanced Installation": [
+          type: 'category',
+          label: 'Concepts',
+          items: [
+            'concepts/overview',
+            'concepts/chaos-infrastructure',
+            'concepts/chaoshub',
+            'concepts/chaos-workflow',
+            'concepts/probes',
+            'concepts/user-management',
+            'concepts/projects',
+            'concepts/teaming',
+            'concepts/gitops',
+            'concepts/oauth-dex-concept',
+            'concepts/visualize-experiment'
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Tutorial',
+          items: [
+            'tutorials/overview',
+            'tutorials/podtato-head'
+          ]
+        },
+        'developer-guide/chaoscenter-developer-guide',
+        'glossary',
+        'getting-started/resources'
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Architecture',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        'architecture/overview',
+        'architecture/architecture-summary',
+        'architecture/chaos-control-plane',
+        'architecture/chaos-execution-plane',
+        'architecture/chaos-fault-flow'
+      ]
+    },
+    {
+      type: 'category',
+      label: 'User Guides',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        'user-guides/overview',
+        {
+          'Advanced Installation': [
             {
-              "ChaosCenter": [
-                "user-guides/chaoscenter-oauth-dex-installation",
-                "user-guides/chaoscenter-cluster-scope-installation",
-                "user-guides/chaoscenter-namespace-scope-installation",
-                "user-guides/setup-without-ingress",
-                "user-guides/setup-with-ingress"
+              ChaosCenter: [
+                'user-guides/chaoscenter-oauth-dex-installation',
+                'user-guides/chaoscenter-advanced-installation',
+                'user-guides/setup-without-ingress',
+                'user-guides/setup-with-ingress',
+                'user-guides/setup-with-helm'
               ]
-            },
-            "user-guides/chaos-infrastructure-installation"
+            }
           ]
         },
         {
-          "Environments": [
-            "user-guides/create-environment",
-            "user-guides/edit-environment",
-            "user-guides/delete-environment",
+          Environments: [
+            'user-guides/create-environment',
+            'user-guides/edit-environment',
+            'user-guides/delete-environment'
           ]
         },
         {
-          "Chaos Infrastructure": [
-            "user-guides/create-infrastructure",
-            "user-guides/delete-infrastructure",
+          'Chaos Infrastructure': ['user-guides/create-infrastructure', 'user-guides/delete-infrastructure']
+        },
+        {
+          'Injecting Fault': [
+            'user-guides/schedule-experiment',
+            'user-guides/observe-experiment',
+            'user-guides/edit-schedule',
+            'user-guides/download-experiment-manifest',
+            'user-guides/re-run-experiment',
+            'user-guides/delete-experiment',
+            'user-guides/construct-experiment'
           ]
         },
         {
-          "Injecting Fault": [
-            "user-guides/schedule-experiment",
-            "user-guides/observe-experiment",
-            "user-guides/edit-schedule",
-            "user-guides/download-experiment-manifest",
-            "user-guides/re-run-experiment",
-            "user-guides/delete-experiment",
-            "user-guides/construct-experiment"
+          'Resilience Probes': [
+            'user-guides/create-resilience-probe',
+            'user-guides/delete-resilience-probe',
+            'user-guides/edit-resilience-probe',
+            'user-guides/view-resilience-probe'
+          ]
+        },
+        'user-guides/account-settings',
+        {
+          'User Management': [
+            'user-guides/create-user',
+            'user-guides/view-user',
+            'user-guides/reset-password',
+            'user-guides/deactivate-user'
           ]
         },
         {
-          "Resilience Probes": [
-            "user-guides/create-resilience-probe",
-            "user-guides/delete-resilience-probe",
-            "user-guides/edit-resilience-probe",
-            "user-guides/view-resilience-probe"
-          ]
-        },
-        "user-guides/account-settings",
-        {
-          "User Management": [
-            "user-guides/create-user",
-            "user-guides/view-user",
-            "user-guides/reset-password",
-            "user-guides/deactivate-user"
-          ]
+          'Managing Projects': ['user-guides/change-project-name', 'user-guides/leave-project']
         },
         {
-          "Managing Projects": ["user-guides/change-project-name", "user-guides/leave-project"]
-        },
-        {
-          "Teaming": [
-            "user-guides/invite-team-member",
-            "user-guides/edit-invite",
-            "user-guides/accept-invite",
-            "user-guides/remove-team-member"
+          Teaming: [
+            'user-guides/invite-team-member',
+            'user-guides/edit-invite',
+            'user-guides/accept-invite',
+            'user-guides/remove-team-member'
           ]
         },
-        "user-guides/gitops-configuration",
-        "user-guides/image-registry",
-        "user-guides/uninstall-litmus"
+        'user-guides/gitops-configuration',
+        'user-guides/image-registry',
+        'user-guides/uninstall-litmus'
       ]
     },
     {
-      "Litmusctl": ["litmusctl/installation", "litmusctl/litmusctl-usage"]
+      type: 'category',
+      label: 'Litmusctl',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        'litmusctl/installation',
+        {
+          type: 'category',
+          label: 'Litmusctl Usage',
+          items: [
+            'litmusctl/litmusctl-usage',
+            'litmusctl/connect-chaos-infrastructure',
+            'litmusctl/create-chaos-experiment',
+            'litmusctl/additional-commands'
+          ]
+        }
+      ]
     },
     {
-      "Integrations": ["integrations/prometheus", "integrations/grafana", "integrations/backstage"]
+      type: 'category',
+      label: 'Integrations',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: ['integrations/prometheus', 'integrations/grafana', 'integrations/backstage']
     },
-    "troubleshooting",
-    "glossary",
-    "faq"
+    {
+      type: 'category',
+      label: 'Reference',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        'troubleshooting',
+        'best-practices',
+        'faq'
+      ]
+    }
   ]
 }
