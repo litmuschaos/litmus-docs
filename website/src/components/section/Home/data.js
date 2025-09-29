@@ -8,7 +8,7 @@ export const exploreLitmusData = [
   {
     icon: 'img/chaos-hub.svg',
     heading: 'ChaosHub',
-    description: 'GA shop for thousands of pre defined workflows and experiements to be used.',
+    description: 'GA shop for thousands of pre defined workflows and experiments to be used.',
     url: '/chaoshub'
   },
   {
