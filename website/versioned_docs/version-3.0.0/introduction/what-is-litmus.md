@@ -20,7 +20,7 @@ Kubernetes is being run on a variety of infrastructure, ranging from virtual mac
 
 Your application resilience really depends more on the underlying stack than your application itself. It is possible that once your application is stabilized, the resilience of your service that runs on Kubernetes depends on other components and infrastructure more than 90% of the time.
 
-Thus it is important to verify your application resilience whenever a change has happened in the underlying stack. **Keep verifying** is the key. Robust testing before upgrades is not good enough, mainly because you cannot possibly consider all sorts of faults during upgrade testing. This introduces the concept of Chaos Engineering. The process of "**continuously verifying if your service is resilient against faults**" is called Chaos Engineering.
+Thus it is important to verify your application resilience whenever a change has happened in the underlying stack. **Keep verifying** is the key. Robust testing before upgrades is not good enough, mainly because you cannot possibly consider all sorts of faults during upgrade testing. This introduces the concept of Chaos Engineering. The process of **continuously verifying if your service is resilient against faults** is called Chaos Engineering.
 
 ## What is a Chaos Experiment
 
