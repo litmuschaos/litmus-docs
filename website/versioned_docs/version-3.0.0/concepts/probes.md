@@ -37,7 +37,7 @@ Some common attributes shared between the Probes:
 - **retry**: The number of times a check is re-run upon failure in the first attempt before declaring the probe status as failed.
 - **interval**: The period between subsequent retries
 - **probePollingInterval**: The time interval for which continuous probe should be sleep after each iteration
-- **initialDelaySeconds**: Represents the initial waiting time interval for the probes.
+- **initialDelay**: Represents the initial waiting time interval for the probes.
 - **stopOnFailure**: It can be set to true/false to stop or continue the fault execution after probe fails
 
 :::note
@@ -50,11 +50,11 @@ If probe needs any additional RBAC permissions other than the fault's serviceAcc
 
 ### httpProbe
 
-The `httpProbe` allows developers to specify a URL which the fault uses to gauge health/service availability (or other custom conditions) as part of the entry/exit criteria. The received status code is mapped against an expected status. It supports http `Get` and `Post` methods.
+The `httpProbe` allows developers to specify a URL which the fault uses to gauge health/service availability (or other custom conditions) as part of the entry/exit criteria. The received status code is mapped against an expected status. It supports HTTP `Get` and `Post` methods.
 
-In HTTP `Get` method it sends a http `GET` request to the provided url and matches the response code based on the given criteria(`==`, `!=`, `oneOf`).
+In HTTP `Get` method, it sends an HTTP `GET` request to the provided URL and matches the response code based on the given criteria (`==`, `!=`, `oneOf`).
 
-In HTTP `Post` method it sends a http `POST` request to the provided url. The http body can be provided in the `body` field. In the case of a complex POST request in which the body spans multiple lines, the `bodyPath` attribute can be used to provide the path to a file consisting of the same. This file can be made available to the fault pod via a ConfigMap resource, with the ConfigMap name being defined in the [ChaosEngine](glossary.md) OR the ChaosExperiment CR.
+In HTTP `Post` method, it sends an HTTP `POST` request to the provided URL. The http body can be provided in the `body` field. In the case of a complex POST request in which the body spans multiple lines, the `bodyPath` attribute can be used to provide the path to a file consisting of the same. This file can be made available to the fault pod via a ConfigMap resource, with the ConfigMap name being defined in the [ChaosEngine](glossary.md) OR the ChaosExperiment CR.
 It can be defined at `.spec.experiments[].spec.probe` inside ChaosEngine.
 
 > `body` and `bodyPath` are mutually exclusive
@@ -73,10 +73,10 @@ probe:
           responseCode: '<response code>'
     mode: 'Continuous'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
-      probePollingInterval: 2
+      probePollingInterval: 2s
 ```
 
 The `httpProbe` is better used in the Continuous mode of operation as a parallel liveness indicator of a target or downstream application. It uses the `probePollingInterval` property to specify the polling interval for the access checks.
@@ -104,10 +104,10 @@ probe:
         hostNetwork: false
     mode: 'Edge'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
-      initialDelaySeconds: 5
+      initialDelay: 5s
 ```
 
 > `source.hostNetwork` can be set to `true` to allow access to the node network namespace for the pod executing the probe
@@ -137,8 +137,8 @@ probe:
       operation: 'present' # it can be present, absent, create, delete
     mode: 'EOT'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
 ```
 
@@ -162,8 +162,8 @@ probe:
         value: '<value-for-criteria-match>'
     mode: 'Edge'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
 ```
 
@@ -247,10 +247,10 @@ probe:
       source: 'inline'
     mode: 'SOT'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
-  - name: 'probe2'
+  - name: 'probe2's
     type: 'cmdProbe'
     cmdProbe/inputs:
       ## probe1's result being used as one of the args in probe2
@@ -262,8 +262,8 @@ probe:
       source: 'inline'
     mode: 'SOT'
     runProperties:
-      probeTimeout: 5
-      interval: 5
+      probeTimeout: 5s
+      interval: 5s
       retry: 1
 ```
 
@@ -921,7 +921,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a <code>type: integer</code></td>
+  <td>n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -967,7 +967,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a <code>type: integer</code></td>
+  <td>n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -990,7 +990,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a <code>type: integer</code></td>
+  <td>n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
@@ -1001,7 +1001,7 @@ This section describes the different fields of the litmus probes and the possibl
 <table>
 <tr>
   <th>Field</th>
-  <td><code>.runProperties.initialDelaySeconds</code></td>
+  <td><code>.runProperties.initialDelay</code></td>
 </tr>
 <tr>
   <th>Description</th>
@@ -1013,11 +1013,11 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Range</th>
-  <td>n/a <code>type: integer</code></td>
+  <td>n/a <code>type: string</code></td>
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>.runProperties.initialDelaySeconds</code> represents the initial waiting time interval for the probes.</td>
+  <td>The <code>.runProperties.initialDelay</code> represents the initial waiting time interval for the probes.</td>
 </tr>
 </table>
 

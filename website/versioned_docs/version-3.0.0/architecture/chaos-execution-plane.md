@@ -1,18 +1,18 @@
 ---
 id: chaos-execution-plane
-title: Chaos Execution Plane
-sidebar_label: Chaos Execution Plane
+title: Chaos execution plane
+sidebar_label: Chaos execution plane
 ---
 
 ---
 
 <img src={require("../assets/chaos-execution-plane.png").default} alt="Chaos Execution Plane" />
 
-Chaos Execution Plane contains the components responsible for orchestrating the chaos injection in the target resources. They get installed in either an external target cluster if an external chaos infrastructure is being used or in the host cluster containing the control plane if a self chaos infrastructure is being used. It can be further segregated into Litmus Chaos Infrastructure Infrastructure components and Litmus Backend Execution Infrastructure components.
+Chaos Execution Plane contains the components responsible for orchestrating the chaos injection in the target resources. They get installed in either an external target cluster if an external chaos infrastructure is being used or in the host cluster containing the control plane if a self chaos infrastructure is being used. It can be further segregated into Litmus Chaos Infrastructure components and Litmus Backend Execution Infrastructure components.
 
 ## Litmus Execution Plane Components
 
-Litmus Chaos Infrastructure Infrastructure components help facilitate the chaos injection, manage chaos observability, and enable chaos automation for target resources. These components include:
+Litmus Chaos Infrastructure components help facilitate the chaos injection, manage chaos observability, and enable chaos automation for target resources. These components include:
 
 1. **Workflow Controller:** The Argo Workflow Controller responsible for the creation of Chaos Experiments using the Chaos Experiment CR.
 
@@ -65,8 +65,7 @@ It is worth noticing that:
 
 :::note
 With the latest release of LitmusChaos 3.0.0:
-
-<li>The term <b>Chaos Delegate/Agent</b> has been changed to <b>Chaos Infrastructure.</b> </li>
-<li>The term <b>Chaos Experiment</b> has been changed to <b>Chaos Fault.</b> </li>
-<li>The term <b>Chaos Experiment/Workflow</b> has been changed to <b>Chaos Experiment.</b></li>
+- The term **Chaos Delegate/Agent** has been changed to **Chaos Infrastructure**.
+- The term **Chaos Experiment** has been changed to **Chaos Fault**.
+- The term **Chaos Scenario/Workflow** has been changed to **Chaos Experiment**.
 :::
