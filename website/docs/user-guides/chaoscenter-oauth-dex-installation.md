@@ -140,8 +140,8 @@ Under `auth-server`, verify if the `DEX_ENABLED` variables are set.
     Ports:       3000/TCP, 3030/TCP
     Host Ports:  0/TCP, 0/TCP
     Environment Variables from:
-      litmus-portal-admin-config  ConfigMap  Optional: false
-      litmus-portal-admin-secret  Secret     Optional: false
+      chaoscenter-admin-config  ConfigMap  Optional: false
+      chaoscenter-admin-secret  Secret     Optional: false
     Environment:
       STRICT_PASSWORD_POLICY:  false
       ADMIN_USERNAME:          admin
