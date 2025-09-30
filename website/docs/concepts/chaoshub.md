@@ -6,11 +6,11 @@ sidebar_label: ChaosHub
 
 ---
 
-A ChaosHub is a collection of experiment templates and faults that you can use to create and launch chaos experiments. Both experiments and faults are stored as manifests in an appropriate directory structure. This way, new experiment templates and faults can be added directly to the repository as files. In addition, the experiment templates can be derived from the existing experiments to be saved in ChaosHub from the web UI.
+A ChaosHub is a collection of experiment templates and faults that you can use to create and launch chaos experiments. Both experiments and faults are stored as manifests in an appropriate directory structure that is maintained as a Git repository.
 
 - ChaosHub is accessed using a Git service provider such as GitHub, where ChaosHub exists as a repository. This allows native version control and management of the faults and experiment artifacts.
 
-- Chaos experiments can be created from the public [ChaosHub](http://hub.litmuschaos.io/) which is already connected to your ChaosCenter, or a custom ChaosHub which is a [fork](https://github.com/litmuschaos/chaos-charts) of the public ChaosHub where custom faults can be stored.
+- Chaos experiments can be created from the public [ChaosHub](http://hub.litmuschaos.io/) which is already connected to your ChaosCenter, or a custom ChaosHub which is a [fork](https://github.com/litmuschaos/chaos-charts) of the public ChaosHub.
 
 ## Prerequisites
 
@@ -42,13 +42,17 @@ You can connect to a public or private Git repository by simply providing the fo
 
 <img src={require('../assets/concepts/chaoshub/chaoshub-add-public.png').default} width="800" />
 
-#### a. Access token
+### 2. Enter your security key
+
+After connecting to a public or private Git repository, you need to provide authentication credentials to access the repository. Choose one of the following authentication methods:
+
+#### a. Access Token
 
 Personal Access Tokens are used as an alternative to the password for authentication to Git services.
 
-#### b. SSH key
+#### b. SSH Key
 
-Just like the Access Token , SSH keys are used for the authentication. These keys come in pairs, a public key that is shared with the Git Services and a private key that is stored with you.
+Just like the Access Token, SSH keys are used for the authentication. These keys come in pairs, a public key that is shared with the Git Services and a private key that is stored with you.
 SSH link of the repository should be provided if you select this method.
 
 <img src={require('../assets/concepts/chaoshub/chaoshub-after-add.png').default} width="800" />
@@ -90,7 +94,7 @@ To remove a ChaosHub from a project, you can select the **Disconnect Hub** optio
 
 ## Summary
 
-You can select one of the chaos faults and can examine the fault details.The fault page consists of all the important details like the description of the fault, a tutorial video, the maintainer of the fault, etc.
+You can select one of the chaos faults and can examine the fault details.The fault page consists of all the important details like the description of the fault, a tutorial video, the maintainer of the fault etc.
 You can also find the Experiment URL URL, RBAC URL, and the ChaosEngine yaml URL of the fault.
 These yaml URLs are required for the creation of Custom Chaos Experiments.
 
