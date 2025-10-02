@@ -16,11 +16,11 @@ We invite Kubernetes SREs and Developers to join this community to learn and sha
 
 Join our community on Slack For detailed discussion, feedback, and regular updates on Chaos Engineering For Kubernetes. 
 
-Join [here](https://slack.litmuschaos.io/) (`#litmus` on `Kubernetes Slack`) and connect with SREs and Chaos Engineering enthusiasts.
+Join [here](https://slack.litmuschaos.io/) (`#litmus` and `#litmus-dev` on `Kubernetes Slack`) and connect with SREs and Chaos Engineering enthusiasts.
 
 ### Attend our meetings
 
-Fill out the [LitmusChaos Meetings invite form](https://forms.gle/xYZyZ2gTWMqz7xSs7) to get a calendar invite to Litmus community or contributor meetings.
+Fill out the [LitmusChaos Meetings invite form](https://forms.gle/12c2edizCpQcHTtEA) to get a calendar invite to Litmus community or contributor meetings.
 
 #### Community meetings
 
@@ -60,6 +60,7 @@ Check out blogs on Litmus written solely by the maintainers, contributors, and c
 
 - [Dev.to](https://dev.to/t/litmuschaos/latest)
 - [Medium](https://medium.com/litmus-chaos)
+- [Litmus blog](https://litmuschaos.io/blog)
 
 ### Dive into chaos experiments
 
