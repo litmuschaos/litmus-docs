@@ -15,7 +15,7 @@ sidebar_label: Chaos Infrastructure Installation
 
 - Learn to [connect Chaos Infrastructure with non interactive mode using litmuctl](../litmusctl/litmusctl-usage.md)
 
-## Resource Requiremenets for Chaos Infrastructure plane components
+## Resource Requirements for Chaos Infrastructure plane components
 
 The Resource requests provided here have been estimated using data gathered manually through different methods -
 
