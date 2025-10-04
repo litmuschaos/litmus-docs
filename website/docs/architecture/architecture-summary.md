@@ -21,8 +21,12 @@ The Litmus architecture can be segregated into two parts:
 - Once the chaos experiment is executed, Execution plane sends the chaos result to the control plane for their post-processing using either the built-in monitoring dashboard of Litmus or using external observability tools such as Prometheus DB and Grafana dashboard. Litmus also achieves automated chaos experiment runs to execute chaos as part of the CI/CD pipeline based on a set of defined conditions using GitOps.
 
 :::note
+
 With the latest release of LitmusChaos 3.0.0:
 - The term **Chaos Delegate/Agent** has been changed to **Chaos Infrastructure**.
 - The term **Chaos Experiment** has been changed to **Chaos Fault**.
 - The term **Chaos Scenario/Workflow** has been changed to **Chaos Experiment**.
+
+Refer to the [Glossary](https://docs.litmuschaos.io/docs/next/glossary) for more info.
+
 :::
