@@ -30,4 +30,10 @@ Chaos Experiments are fundamental units within the LitmusChaos architecture. Use
 
 A chaos scenario is much more than a simple chaos experiment. It supports the user in defining the expected result, observing the result, analysing the overall system behaviour, and in the decision-making process if the system needs to be tuned for improving the resilience.
 
+## Learn More
+* [Install Litmus](https://docs.litmuschaos.io/docs/getting-started/installation)
+* [Usecases of Litmus](https://docs.litmuschaos.io/docs/introduction/usage) 
+* [Core Principles](https://docs.litmuschaos.io/docs/introduction/core-principles)
+* [Join our Community](https://docs.litmuschaos.io/docs/introduction/community)
+
 
