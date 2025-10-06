@@ -1,7 +1,13 @@
 <div align="center">
-  <img alt="LitmusChaos" src="https://litmuschaos.io/logos/dark-logo.svg" width="200">
+
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://litmuschaos.io/logos/light-logo.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://litmuschaos.io/logos/dark-logo.svg">
+    <img alt="LitmusChaos" src="https://litmuschaos.io/logos/dark-logo.svg" width="200">
+  </picture>
 
   <h1 style="margin-top: 20px; margin-bottom: 10px;">Documentation for the Litmus project</h1>
+
 </div>
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Flitmuschaos%2Flitmus-docs.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Flitmuschaos%2Flitmus-docs?ref=badge_shield)
