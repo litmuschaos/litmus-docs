@@ -8,7 +8,7 @@ sidebar_label: GitOps
 
 ## Prerequisites
 
-- Chaos Infrastructure
+- [Chaos Infrastructure](infrastructure.md)
 - [Chaos Experiment](chaos-workflow.md)
 
 The GitOps feature in Litmus enables you to configure a single source of truth for your chaos experiments and faults, any changes made either to the artifacts stored in the configured git repository or the portal will be synced. This allows you to create and execute chaos experiments directly from git enabling a vast scope of automation in CI/CD pipelines.
