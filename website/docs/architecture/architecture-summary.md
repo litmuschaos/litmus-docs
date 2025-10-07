@@ -26,6 +26,6 @@ With the latest release of LitmusChaos 3.0.0:
 - The term **Chaos Experiment** has been changed to **Chaos Fault**.
 - The term **Chaos Scenario/Workflow** has been changed to **Chaos Experiment**.
 
-Refer to the [Glossary](https://docs.litmuschaos.io/docs/next/glossary) documentation for more info.
+Refer to the [Glossary](../glossary.md) documentation for more info.
 
 :::
