@@ -209,7 +209,7 @@ text {
   background: #858cdd;
 }
 
-.alert--secondary {
+[data-theme='dark'] .alert--secondary {
   background: #5b44ba;
   border-left-color: #d8dbfa;
 }
