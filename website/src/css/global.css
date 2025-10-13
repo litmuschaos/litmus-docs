@@ -209,6 +209,10 @@ text {
   background: #858cdd;
 }
 
+.alert--secondary {
+  background: #d8dbfa;
+  border-left-color: #5b44ba;
+}
 [data-theme='dark'] .alert--secondary {
   background: #5b44ba;
   border-left-color: #d8dbfa;
