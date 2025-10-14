@@ -65,9 +65,7 @@ _Check the difference:_
 - Executing `embedmd -d docs-name.md` will display the difference between the contents of docs-name.md and the output of embedmd docs-name.md.
 
 ## Manual Setup
-
 ### Pre-Requisites
-
 - Node.js 16.14 or above. It can be installed from [here](https://nodejs.org/en/download/).
 
 ### Start the server
