@@ -33,3 +33,9 @@ Once we have the APIs, Operator, and plugin framework, we have all the ingredien
 ## GitOps for Chaos Management
 
 Use GitOps as an operational framework that takes DevOps best practices used for application development such as version control, collaboration, compliance, and CI/CD, and applies them to infrastructure automation. With the demands made on today’s infrastructure, it has become increasingly crucial to implement infrastructure automation. Modern infrastructure needs to be elastic so that it can effectively manage cloud resources that are needed for continuous deployments.
+
+## Learn more
+
+- [Features of Litmus](features.md)
+- [Be a part of the Community](community.md)
+- [Get Started with Litmus](../getting-started/installation.md)
