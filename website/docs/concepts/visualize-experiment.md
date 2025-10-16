@@ -12,7 +12,7 @@ Visualization is an important aspect while doing chaos engineering. It allows th
 
 The following is required before visualizing a chaos experiment:
 
-- ChaosCenter
+- [Resilience Probes](probes.md)
 - [Chaos Experiments](chaos-workflow.md)
 
 ## Create chaos experiment
