@@ -6,7 +6,6 @@ sidebar_label: ChaosCenter Developer Guide
 
 ---
 
-## **Overview**
 ChaosCenter is the control plane for LitmusChaos, providing a web-based interface and APIs to manage chaos experiments on Kubernetes clusters. It consists of a backend (GraphQL server, Authentication server, MongoDB) and a frontend (React) component. This guide walks you through setting up ChaosCenter locally, running the required services, and connecting your Kubernetes infrastructure to execute and monitor chaos experiments.
 
 The document assumes a local development environment and is not recommended for production or shared clusters. By the end of this guide, you will have a fully functional ChaosCenter instance capable of managing chaos workflows and integrating with Litmusctl or ChaosCenter-managed infrastructures.
