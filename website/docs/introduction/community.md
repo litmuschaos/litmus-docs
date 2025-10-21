@@ -68,15 +68,13 @@ Find publicly available Chaos Experiments at [ChaosHub](http://hub.litmuschaos.i
 
 Read about [chaos experiments](https://litmuschaos.github.io/litmus/).
 
-## Contribute
+## Contribute to Litmus
 
 We invite contributions in all forms. Join us in writing blogs on [Dev.to](https://dev.to/t/litmuschaos/latest) about experiments, features, and your experience. Use the `#litmuschaos` tag for your post to be featured.
 
 Participation in the Litmus community is governed by our [code of conduct](https://github.com/litmuschaos/litmus/blob/master/CODE_OF_CONDUCT.md).
 
-### Contribute to Litmus open source
-
-See the Litmus [contribution document](https://github.com/litmuschaos/litmus/blob/master/CONTRIBUTING.md).
+Checkout the [contribution guide](../../../CONTRIBUTING.md).
 
 Contributors meet twice a month. See [Contributor meetings](#contributor-meetings).
 
