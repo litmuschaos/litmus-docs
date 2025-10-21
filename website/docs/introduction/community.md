@@ -74,7 +74,7 @@ We invite contributions in all forms. Join us in writing blogs on [Dev.to](https
 
 Participation in the Litmus community is governed by our [code of conduct](https://github.com/litmuschaos/litmus/blob/master/CODE_OF_CONDUCT.md).
 
-Checkout the [contribution guide](../../../CONTRIBUTING.md).
+Checkout the [contribution guide](https://github.com/litmuschaos/litmus/blob/master/CONTRIBUTING.md).
 
 Contributors meet twice a month. See [Contributor meetings](#contributor-meetings).
 
