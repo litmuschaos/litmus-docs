@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
-
 :root {
   --ifm-menu-font-size: 15px;
-  --ifm-menu-color-background-active: #8890992E;
-  --ifm-link-menu-color-background-hover: #8890992E;
+  --ifm-menu-color-background-active: #8890992e;
+  --ifm-link-menu-color-background-hover: #8890992e;
   --ifm-litmus-light: #7b84ea;
   --ifm-litmus-dark: #5b44ba;
 }
@@ -23,20 +22,20 @@
   font-size: 16px;
 }
 
-.category-as-header .menu__link{
+.category-as-header .menu__link {
   padding-left: 8px;
 }
-.category-as-header>.menu__list-item-collapsible:first-child a {
+.category-as-header > .menu__list-item-collapsible:first-child a {
   font-size: 18px;
   font-style: normal;
   font-weight: 600 !important;
   line-height: 20px;
   margin-top: 20px;
-  color: #1B1F24;
+  color: #1b1f24;
   padding-left: 15px;
 }
 
-[data-theme='dark'] .category-as-header>.menu__list-item-collapsible:first-child a {
+[data-theme='dark'] .category-as-header > .menu__list-item-collapsible:first-child a {
   color: white;
 }
 
@@ -48,9 +47,9 @@
   color: var(--ifm-litmus-light);
 }
 
-
-.navbar__link, .navbar__link:hover {
-  color: #1B1F24;
+.navbar__link,
+.navbar__link:hover {
+  color: #1b1f24;
 }
 
 [data-theme='dark'] .navbar__link {
@@ -65,8 +64,7 @@
   font-weight: 600;
   border-radius: 6px;
   margin: 0px 6px !important;
-  box-shadow: 0px 0px 1px 0px rgba(48, 50, 51, 0.05),
-              0px 1px 1px 0px rgba(48, 50, 51, 0.10);
+  box-shadow: 0px 0px 1px 0px rgba(48, 50, 51, 0.05), 0px 1px 1px 0px rgba(48, 50, 51, 0.1);
   border: 1px solid var(--ifm-litmus-dark);
   display: flex;
   justify-content: center;
@@ -74,7 +72,6 @@
   padding: 5px 13px !important;
   transition: background-color 0.2s ease;
 }
-
 
 .try-button:hover {
   background-color: var(--ifm-litmus-dark);
@@ -86,7 +83,6 @@
     display: none !important;
   }
 }
-
 
 .category-as-header .menu__link--active:not(.menu__link--sublist) {
   background-color: var(--ifm-menu-color-background-active);
@@ -100,7 +96,7 @@
   max-width: 94%;
 }
 
-.category-as-header>.menu__list-item-collapsible:first-child:hover {
+.category-as-header > .menu__list-item-collapsible:first-child:hover {
   background-color: transparent;
 }
 
@@ -111,8 +107,7 @@
   display: flex;
   background-color: var(--ifm-navbar-link-color);
   mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E");
-  transition: background-color var(--ifm-transition-fast)
-    var(--ifm-transition-timing-default);
+  transition: background-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
 }
 
 .slack-button::before {
@@ -124,12 +119,11 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  transition: background-color var(--ifm-transition-fast)
-    var(--ifm-transition-timing-default);
+  transition: background-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
 }
 
 .DocSearch-Button {
-  border: 1px solid #CCD1D5 !important;
+  border: 1px solid #ccd1d5 !important;
   border-radius: 6px !important;
   background: transparent !important;
   height: 32px !important;
@@ -140,7 +134,7 @@
   border: none !important;
   box-shadow: none !important;
   background: transparent !important;
-  color: #6A727C !important;
+  color: #6a727c !important;
   font: inherit !important;
   padding: 0 !important;
 }
@@ -148,20 +142,19 @@
 .DocSearch-Search-Icon {
   height: 16px;
   width: 16px;
-  color: #6A727C !important
+  color: #6a727c !important;
 }
 
 .DocSearch-Button-Placeholder {
   font-size: 12px;
-  color: #6A727C
+  color: #6a727c;
 }
 
 .navbarSearchContainer_Bca1 {
-  border-right: 1px solid #E4E7EB !important;
+  border-right: 1px solid #e4e7eb !important;
   padding: 4px 16px !important;
   margin-right: 8px;
 }
-
 
 html {
   font-family: 'Work Sans', sans-serif;
@@ -219,4 +212,8 @@ text {
 .alert--secondary {
   background: #d8dbfa;
   border-left-color: #5b44ba;
+}
+[data-theme='dark'] .alert--secondary {
+  background: #5b44ba;
+  border-left-color: #d8dbfa;
 }

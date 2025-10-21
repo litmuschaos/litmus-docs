@@ -73,7 +73,7 @@ kubectl create ns litmus
 helm install chaos litmuschaos/litmus --namespace=litmus --set portal.frontend.service.type=NodePort
 ```
 
-> **Note:** If your Kubernetes cluster isn't local, you may want not to expose Litmus via `NodePort`. If so, remove `--set portal.frontend.service.type=NodePort` option. To connect to Litmus UI from your laptop, you can use `port-forward svc/chaos-litmus-frontend-service 9091:9091`. Then you can use your browser and open `127.0.0.1:9091`.
+> **Note:** If your Kubernetes cluster isn't local, you may want not to expose Litmus via `NodePort`. If so, remove `--set portal.frontend.service.type=NodePort` option. To connect to Litmus UI from your laptop, you can use `kubectl port-forward svc/chaos-litmus-frontend-service 9091:9091`. Then you can use your browser and open `127.0.0.1:9091`.
 
 - If your Kubernetes cluster is local (such as minikube or kind) and only accessing Litmus locally, please replace the default endpoint with your custom CHAOS_CENTER_UI_ENDPOINT as shown below.
 

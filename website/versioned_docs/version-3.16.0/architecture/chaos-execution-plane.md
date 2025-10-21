@@ -18,7 +18,7 @@ Litmus Chaos Infrastructure components help facilitate the chaos injection, mana
 
 2. **Subscriber:** Serves as the link between the Chaos Execution Plane and the Control Plane. It has a few distinct responsibilities such as performing health check of all the components in Chaos Execution Plane, creation of a Chaos Experiment CR from a Chaos Experiment template, watching for Chaos Experiment events during its execution, and sending the chaos experiment result to the Control Plane.
 
-3. **Event Tracker:** An optional component that is capable of triggering automated chaos experiment runs based on a set of defined conditions for any given resources in the cluster. It is a controller that manages EventTrackerPolicy CR, which is basically the set of defined conditions that is validated by Event Tracker. If the current state of the tracked resources match with the state defined in the EventTrackerPolicy CR, the chaos experiment run run gets triggered. This feature can only be used if GitOps is enabled.
+3. **Event Tracker:** An optional component that is capable of triggering automated chaos experiment runs based on a set of defined conditions for any given resources in the cluster. It is a controller that manages EventTrackerPolicy CR, which is basically the set of defined conditions that is validated by Event Tracker. If the current state of the tracked resources match with the state defined in the EventTrackerPolicy CR, the chaos experiment run gets triggered. This feature can only be used if GitOps is enabled.
 
 4. **Chaos Exporter:** An optional component that facilitates external observability in Litmus by exporting the chaos metrics generated during the chaos injection as time-series data to the Prometheus DB for its processing and analysis.
 

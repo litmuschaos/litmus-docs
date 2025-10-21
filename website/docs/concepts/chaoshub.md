@@ -42,6 +42,8 @@ You can connect to a public or private Git repository by simply providing the fo
 
 <img src={require('../assets/concepts/chaoshub/chaoshub-add-public.png').default} width="800" />
 
+### 2. Enter your security key
+
 #### a. Access token
 
 Personal Access Tokens are used as an alternative to the password for authentication to Git services.
