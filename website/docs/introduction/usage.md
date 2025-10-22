@@ -29,4 +29,3 @@ Chaos Engineering is a culture-oriented practice. With time, management buying a
 - [Understand the Core Principles of Litmus](core-principles.md)
 - [Be a part of the Community](community.md)
 - [Get Started with Litmus](../getting-started/installation.md)
-- [Check out more resources about Litmus](other-links.md)
