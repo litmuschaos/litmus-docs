@@ -114,11 +114,11 @@ Visit https://docs.litmuschaos.io to find more info.
 
 > **Note:** Litmus uses Kubernetes CRDs to define chaos intent. Helm3 handles CRDs better than Helm2. Before you start running a chaos experiment, verify if Litmus is installed correctly.
 
-## **Install Litmus using kubectl**
+## Install Litmus using kubectl
 
 In this method the users need to install mongo first via helm and then apply the installation manifest. Follow the instructions [here](https://github.com/litmuschaos/litmus/tree/master/chaoscenter#installation-steps-for-litmus-300-beta9).
 
-### **Install mongo**
+### Install mongo
 
 ```bash
  helm repo add bitnami https://charts.bitnami.com/bitnami
@@ -170,11 +170,9 @@ Applying the manifest file will install all the required service account configu
 
 For advanced installation visit [here](../user-guides/chaoscenter-advanced-installation.md)
 
----
+## Verify your installation
 
-## **Verify your installation**
-
-#### **Verify if the frontend, server, and database pods are running**
+#### Verify if the frontend, server, and database pods are running
 
 - Check the pods in the namespace where you installed Litmus:
 
@@ -215,9 +213,7 @@ For advanced installation visit [here](../user-guides/chaoscenter-advanced-insta
   workflow-controller-metrics           ClusterIP      10.68.33.65    <none>           9090/TCP                        23h
   ```
 
----
-
-## **Accessing the ChaosCenter**
+## Accessing the ChaosCenter
 
 To setup and login to ChaosCenter expand the available services just created and copy the `PORT` of the `litmusportal-frontend-service` service
 
