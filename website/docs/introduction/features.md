@@ -73,5 +73,5 @@ Litmus 3.0 culminates as well as enhances the features rolled-out through Litmus
 ## Learn more
 - [Install Litmus](../getting-started/installation.md)
 - [Visualize Chaos Experiments](../concepts/visualize-experiment.md)
-- Chaos Schedule
+- [Chaos Schedule](../user-guides/schedule-experiment.md)
 - [View the different User Guides](../user-guides/overview.md)
