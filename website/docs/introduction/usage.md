@@ -1,7 +1,7 @@
 ---
 id: usage
-title: Uses of Litmus
-sidebar_label: Uses of Litmus
+title: Litmus Use Cases
+sidebar_label: Litmus Use Cases
 ---
 
 ---
