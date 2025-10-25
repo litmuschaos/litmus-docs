@@ -347,18 +347,8 @@ litmusctl run chaos-experiment
 
 ---
 
-## Tips and Best Practices
-
-1. **Use Descriptive Names:** Give meaningful names to your infrastructure and experiments for easier management
-2. **Leverage Non-Interactive Mode:** Use non-interactive mode in CI/CD pipelines and automation scripts
-3. **Version Compatibility:** Always check compatibility between litmusctl version and ChaosCenter version
-4. **Multiple Accounts:** Use `config get-accounts` and `config use-account` to manage multiple ChaosCenter environments
-5. **Namespace Mode vs Cluster Mode:** Choose installation mode based on your RBAC requirements and blast radius preferences
-
----
-
 ## Additional Resources
 
-- For detailed usage examples, refer to the [litmusctl usage documentation](https://github.com/litmuschaos/litmusctl/blob/master/Usage_0.23.0.md)
-- For installation instructions, see the [litmusctl installation guide](https://docs.litmuschaos.io/docs/litmusctl/installation)
-- For prerequisites and requirements, check the [litmusctl README](https://github.com/litmuschaos/litmusctl/blob/master/README.md)
+- For detailed usage examples, refer to the [litmusctl usage documentation](/docs/next/litmusctl/litmusctl-usage)
+- For installation instructions, see the [litmusctl installation guide](/docs/next/litmusctl/installation)
+- [Contribute to litmusctl](https://github.com/litmuschaos/litmusctl)
