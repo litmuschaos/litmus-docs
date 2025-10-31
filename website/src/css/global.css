@@ -128,6 +128,7 @@
   background: transparent !important;
   height: 32px !important;
   width: 250px !important;
+  max-width: 100%;
 }
 
 .DocSearch-Button-Key {
@@ -154,6 +155,43 @@
   border-right: 1px solid #e4e7eb !important;
   padding: 4px 16px !important;
   margin-right: 8px;
+}
+
+@media screen and (max-width: 996px) {
+  .navbarSearchContainer_Bca1 {
+    padding: 4px 8px !important;
+    margin-right: 4px;
+    border-right: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .DocSearch-Button {
+    width: 180px !important;
+  }
+  
+  .navbar {
+    padding: 0px 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .DocSearch-Button {
+    width: 120px !important;
+  }
+  
+  .DocSearch-Button-Placeholder {
+    font-size: 11px;
+  }
+  
+  .navbar {
+    padding: 0px 8px;
+  }
+  
+  .navbarSearchContainer_Bca1 {
+    padding: 4px !important;
+    margin-right: 2px;
+  }
 }
 
 html {
