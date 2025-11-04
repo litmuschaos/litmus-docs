@@ -177,7 +177,7 @@
 
 @media screen and (max-width: 480px) {
   .DocSearch-Button {
-    width: 120px !important;
+    width: 150px !important;
   }
   
   .DocSearch-Button-Placeholder {
