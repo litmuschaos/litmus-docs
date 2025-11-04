@@ -1,3 +1,9 @@
+---
+id: litmusctl-syntax
+title: Litmusctl Syntax
+sidebar_label: Litmusctl Syntax
+---
+
 # Litmusctl Syntax
 
 ## Overview
