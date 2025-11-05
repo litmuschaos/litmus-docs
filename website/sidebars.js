@@ -149,13 +149,7 @@ module.exports = {
       collapsible: false,
       items: [
         'litmusctl/installation',
-        {
-          type: 'category',
-          label: 'Litmusctl Syntax',
-          items: [
-            'litmusctl/litmusctl-syntax',
-          ],
-        },
+        'litmusctl/litmusctl-syntax',
         {
           type: 'category',
           label: 'Litmusctl Usage',
