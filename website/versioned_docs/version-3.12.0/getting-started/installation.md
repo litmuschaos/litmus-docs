@@ -107,7 +107,7 @@ Litmus uses Kubernetes CRDs to define the chaos intent. Helm3 handles CRDs bette
 
 ### Install Litmus using kubectl
 
-You need to install Mongo via helm and apply the installation manifest. Go to [installation instructions for Litmus Beta](https://github.com/litmuschaos/litmus/tree/master/chaoscenter#installation-steps-for-litmus-300-beta9).
+You need to install Mongo via helm and apply the installation manifest. Go to [installation instructions for Litmus Beta](https://github.com/litmuschaos/litmus/tree/main/chaoscenter#installation-steps-for-litmus-300-beta9).
 
 #### Install Mongo
 
@@ -154,7 +154,7 @@ Litmus supports HTTP and HTTPS mode of installation.
 Applying the manifest file installs all the required service account configuration and ChaosCenter in the namespaced scope.
 
 ```bash
- kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/3.9.1/litmus-getting-started.yaml -n <NAMESPACE>
+ kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/main/mkdocs/docs/3.9.1/litmus-getting-started.yaml -n <NAMESPACE>
 ```
 
 ### Advanced installation (HTTPS-based and CORS rules apply)

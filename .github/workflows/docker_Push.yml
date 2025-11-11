@@ -3,7 +3,7 @@ name: CD-Build
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - "website/**"
 
@@ -42,7 +42,7 @@ jobs:
       - name: Checking out CD repository
         uses: actions/checkout@v2
         with:
-          ref: "master"
+          ref: "main"
           repository: litmuschaos/litmus-cd
           token: ${{ secrets.CD_PUSH_TOKEN }}
 
@@ -57,5 +57,5 @@ jobs:
           git config user.email litmusbot@github.com
           git add .
           git commit -m "Manifest updated for litmus-docs"
-          git push origin master
+          git push origin main
 

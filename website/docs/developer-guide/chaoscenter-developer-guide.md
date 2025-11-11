@@ -131,7 +131,7 @@ export VERSION=ci
 export HUB_BRANCH_NAME=v2.0.x
 export INFRA_DEPLOYMENTS="[\"app=chaos-exporter\", \"name=chaos-operator\", \"app=event-tracker\",\"app=workflow-controller\"]"                                                                         
 export INFRA_COMPATIBLE_VERSIONS='["0.2.0", "0.1.0","ci"]'
-export DEFAULT_HUB_BRANCH_NAME=master
+export DEFAULT_HUB_BRANCH_NAME=main
 export ENABLE_INTERNAL_TLS=false
 export REST_PORT=3000
 export GRPC_PORT=3030
@@ -191,7 +191,7 @@ export VERSION=ci
 export HUB_BRANCH_NAME=v2.0.x
 export INFRA_DEPLOYMENTS="[\"app=chaos-exporter\", \"name=chaos-operator\", \"app=event-tracker\",\"app=workflow-controller\"]"
 export INFRA_COMPATIBLE_VERSIONS='["0.2.0", "0.1.0","ci"]'
-export DEFAULT_HUB_BRANCH_NAME=master
+export DEFAULT_HUB_BRANCH_NAME=main
 ```
 
 Step-2: Run the go application

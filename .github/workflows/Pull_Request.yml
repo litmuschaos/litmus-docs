@@ -44,7 +44,7 @@ jobs:
             tput setaf 3; echo "Please follow the instructions to run embedmd:"
             tput setaf 3; echo "cd website/docs"
             tput setaf 3; echo "embedmd -w \$(find **/*.md)"
-            tput setaf 6; echo "For more info visit https://github.com/litmuschaos/litmus-docs/blob/master/CONTRIBUTING.md"
+            tput setaf 6; echo "For more info visit https://github.com/litmuschaos/litmus-docs/blob/main/CONTRIBUTING.md"
             exit 1
           else
             tput setaf 2; echo "Nothing to embed"

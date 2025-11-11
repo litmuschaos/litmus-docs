@@ -72,16 +72,16 @@ Read about [chaos experiments](https://litmuschaos.github.io/litmus/).
 
 We invite contributions in all forms. Join us in writing blogs on [Dev.to](https://dev.to/t/litmuschaos/latest) about experiments, features, and your experience. Use the `#litmuschaos` tag for your post to be featured.
 
-Participation in the Litmus community is governed by our [code of conduct](https://github.com/litmuschaos/litmus/blob/master/CODE_OF_CONDUCT.md).
+Participation in the Litmus community is governed by our [code of conduct](https://github.com/litmuschaos/litmus/blob/main/CODE_OF_CONDUCT.md).
 
-Checkout the [contribution guide](https://github.com/litmuschaos/litmus/blob/master/CONTRIBUTING.md).
+Checkout the [contribution guide](https://github.com/litmuschaos/litmus/blob/main/CONTRIBUTING.md).
 
 Contributors meet twice a month. See [Contributor meetings](#contributor-meetings).
 
-- If you are a first-time contributor, please read [Steps to Contribute](https://github.com/litmuschaos/litmus/blob/master/CONTRIBUTING.md#steps-to-contribute-).
+- If you are a first-time contributor, please read [Steps to Contribute](https://github.com/litmuschaos/litmus/blob/main/CONTRIBUTING.md#steps-to-contribute-).
 - If you would like to suggest new tests to be added to Litmus, [create a new issue](https://github.com/litmuschaos/litmus/issues/new) describing your test. Specify the workload type and the operations that you would like to perform on the workload.
-- If you would like to work on something more involved, connect with the [Litmus Maintainers](https://github.com/litmuschaos/litmus/blob/master/MAINTAINERS.md).
-- If you would like to make code contributions, all your commits should be signed with Developer Certificate of Origin. See [Sign your work](https://github.com/litmuschaos/litmus/blob/master/CONTRIBUTING.md#sign-your-work).
+- If you would like to work on something more involved, connect with the [Litmus Maintainers](https://github.com/litmuschaos/litmus/blob/main/MAINTAINERS.md).
+- If you would like to make code contributions, all your commits should be signed with Developer Certificate of Origin. See [Sign your work](https://github.com/litmuschaos/litmus/blob/main/CONTRIBUTING.md#sign-your-work).
 
 Other Litmus open source links:
 
