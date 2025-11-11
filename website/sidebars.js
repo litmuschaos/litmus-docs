@@ -163,6 +163,7 @@ module.exports = {
       collapsible: false,
       items: [
         'litmusctl/installation',
+        'litmusctl/litmusctl-syntax',
         {
           type: 'category',
           label: 'Litmusctl Usage',
