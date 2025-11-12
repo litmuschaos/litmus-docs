@@ -8,7 +8,7 @@ export const exploreLitmusData = [
   {
     icon: 'img/chaos-hub.svg',
     heading: 'ChaosHub',
-    description: 'GA shop for thousands of pre defined workflows and experiements to be used.',
+    description: 'GA shop for thousands of pre defined workflows and experiments to be used.',
     url: '/chaoshub'
   },
   {
@@ -29,7 +29,7 @@ export const advancedLitmusData = [
   {
     icon: 'img/AdvanceLitmus/design.svg',
     heading: 'Design & Architecture',
-    description: 'Know in depth details of the LitmusChaos architecture used for testing resiliency of system.',
+    description: 'Know in depth details of the LitmusChaos architecture used for testing resiliency of the system.',
     url: '/docs/architecture/overview/'
   },
   {
@@ -53,13 +53,13 @@ export const advancedLitmusData = [
   {
     icon: 'img/AdvanceLitmus/git-ops.svg',
     heading: 'GitOps',
-    description: 'Enabling GitOps is what makes Litmus stand out from rest. Know how.',
+    description: 'Enabling GitOps is what makes Litmus stand out from the rest. Know how.',
     url: '/docs/concepts/gitops'
   },
   {
     icon: 'img/AdvanceLitmus/multi-tenancy.svg',
     heading: 'Multi Tenancy',
-    description: 'Litmus security features are one of the best thing and can not be overlooked.',
+    description: 'Litmus security features are one of the best things and can not be overlooked.',
     url: '/docs/concepts/teaming'
   }
 ]

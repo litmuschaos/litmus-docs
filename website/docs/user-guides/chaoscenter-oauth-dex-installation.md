@@ -140,8 +140,8 @@ Under `auth-server`, verify if the `DEX_ENABLED` variables are set.
     Ports:       3000/TCP, 3030/TCP
     Host Ports:  0/TCP, 0/TCP
     Environment Variables from:
-      litmus-portal-admin-config  ConfigMap  Optional: false
-      litmus-portal-admin-secret  Secret     Optional: false
+      chaoscenter-admin-config  ConfigMap  Optional: false
+      chaoscenter-admin-secret  Secret     Optional: false
     Environment:
       STRICT_PASSWORD_POLICY:  false
       ADMIN_USERNAME:          admin
@@ -163,8 +163,8 @@ Go to http://litmusportal-frontend-service/auth/dex/login, you should be prompte
 
 ## Learn more
 
-- [Install ChaosCenter with HTTP](../getting-started/installation.md))
-- [Install ChaosCenter with HTTPS](chaoscenter-advanced-installation.md))
+- [Install ChaosCenter with HTTP](../getting-started/installation.md)
+- [Install ChaosCenter with HTTPS](chaoscenter-advanced-installation.md)
 - [Connect External Chaos Delegates to ChaosCenter](../user-guides/chaos-infrastructure-installation.md)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)

@@ -154,5 +154,5 @@ kubectl apply -f <litmus_ingress_manifest> -n <PORTAL_NAMESPACE>
 ## Learn more
 
 - [Setup Endpoints and Access ChaosCenter without Ingress](setup-without-ingress.md)
-- [Install ChaosCenter with HTTP](../getting-started/installation.md))
+- [Install ChaosCenter with HTTP](../getting-started/installation.md)
 - [Install ChaosCenter with HTTPS](chaoscenter-advanced-installation.md)

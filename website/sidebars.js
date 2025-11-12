@@ -54,6 +54,20 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'Litmus MCP Server',
+      className: 'category-as-header',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        'mcp-server/overview',
+        'mcp-server/installation',
+        'mcp-server/available-tools',
+        'mcp-server/examples',
+        'mcp-server/troubleshooting'
+      ]
+    },
+    {
+      type: 'category',
       label: 'Architecture',
       className: 'category-as-header',
       collapsed: false,
@@ -149,6 +163,7 @@ module.exports = {
       collapsible: false,
       items: [
         'litmusctl/installation',
+        'litmusctl/litmusctl-syntax',
         {
           type: 'category',
           label: 'Litmusctl Usage',

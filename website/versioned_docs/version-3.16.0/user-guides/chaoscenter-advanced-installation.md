@@ -73,7 +73,7 @@ kubectl create ns litmus
 helm install chaos litmuschaos/litmus --namespace=litmus --set portal.frontend.service.type=NodePort
 ```
 
-> **Note:** If your Kubernetes cluster isn't local, you may want not to expose Litmus via `NodePort`. If so, remove `--set portal.frontend.service.type=NodePort` option. To connect to Litmus UI from your laptop, you can use `port-forward svc/chaos-litmus-frontend-service 9091:9091`. Then you can use your browser and open `127.0.0.1:9091`.
+> **Note:** If your Kubernetes cluster isn't local, you may want not to expose Litmus via `NodePort`. If so, remove `--set portal.frontend.service.type=NodePort` option. To connect to Litmus UI from your laptop, you can use `kubectl port-forward svc/chaos-litmus-frontend-service 9091:9091`. Then you can use your browser and open `127.0.0.1:9091`.
 
 - Litmus helm chart depends on `bitnami/mongodb` [helm chart](https://github.com/bitnami/charts/tree/main/bitnami/mongodb), which uses a mongodb image not supported on ARM. If you want to install Litmus on an ARM-based server, please replace the default one with your custom mongodb arm image as shown below.
 

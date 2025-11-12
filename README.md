@@ -6,7 +6,7 @@
     <img alt="LitmusChaos" src="https://litmuschaos.io/logos/dark-logo.svg" width="200">
   </picture>
 
-  <h1 style="margin-top: 20px; margin-bottom: 10px;">Documentation for the Litmus project</h1>
+  <h1 style="margin-top: 20px; margin-bottom: 10px; border-bottom: none;">Documentation for the Litmus project</h1>
 
 </div>
 
