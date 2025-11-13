@@ -112,6 +112,14 @@ module.exports = {
           'Chaos Infrastructure': ['user-guides/create-infrastructure', 'user-guides/delete-infrastructure']
         },
         {
+          'Resilience Probes': [
+            'user-guides/create-resilience-probe',
+            'user-guides/delete-resilience-probe',
+            'user-guides/edit-resilience-probe',
+            'user-guides/view-resilience-probe'
+          ]
+        },
+        {
           'Injecting Fault': [
             'user-guides/schedule-experiment',
             'user-guides/observe-experiment',
@@ -120,14 +128,6 @@ module.exports = {
             'user-guides/re-run-experiment',
             'user-guides/delete-experiment',
             'user-guides/construct-experiment'
-          ]
-        },
-        {
-          'Resilience Probes': [
-            'user-guides/create-resilience-probe',
-            'user-guides/delete-resilience-probe',
-            'user-guides/edit-resilience-probe',
-            'user-guides/view-resilience-probe'
           ]
         },
         'user-guides/account-settings',
