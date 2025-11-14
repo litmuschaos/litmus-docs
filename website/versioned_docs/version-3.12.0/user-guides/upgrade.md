@@ -16,7 +16,7 @@ To upgrade Litmus ChaosCenter from 3.8.0 to 3.9.0, you can follow these steps:
    To upgrade ChaosCenter, you can re-apply the manifest using the kubectl.
 
    ```bash
-   kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/3.12.0/litmus-getting-started.yaml
+   kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/main/mkdocs/docs/3.12.0/litmus-getting-started.yaml
    ```
 
 ## Upgrade Chaos Delegate
@@ -33,4 +33,4 @@ Alternatively you can run the following command using litmusctl in the cluster c
 litmusctl upgrade agent --cluster-id="<CLUSTER_ID>" --project-id="<PROJECT_ID>"
 ```
 
-> Note: v0.7.0 of [litmusctl](https://github.com/litmuschaos/litmusctl/blob/master/README.md) is required.
+> Note: v0.7.0 of [litmusctl](https://github.com/litmuschaos/litmusctl/blob/main/README.md) is required.

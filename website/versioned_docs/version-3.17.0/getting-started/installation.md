@@ -116,7 +116,7 @@ Visit https://docs.litmuschaos.io to find more info.
 
 ## **Install Litmus using kubectl**
 
-In this method the users need to install mongo first via helm and then apply the installation manifest. Follow the instructions [here](https://github.com/litmuschaos/litmus/tree/master/chaoscenter#installation-steps-for-litmus-300-beta9).
+In this method the users need to install mongo first via helm and then apply the installation manifest. Follow the instructions [here](https://github.com/litmuschaos/litmus/tree/main/chaoscenter#installation-steps-for-litmus-300-beta9).
 
 ### **Install mongo**
 
@@ -163,7 +163,7 @@ Litmus supports for HTTP and HTTPS mode of installation.
 Applying the manifest file will install all the required service account configuration and ChaosCenter in namespaced scope.
 
 ```bash
- kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/3.17.0/litmus-getting-started.yaml -n <NAMESPACE>
+ kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/main/mkdocs/docs/3.17.0/litmus-getting-started.yaml -n <NAMESPACE>
 ```
 
 ### Advanced installation (HTTPS based and CORS rules apply)
