@@ -71,7 +71,7 @@ spec:
           - name: pod-delete
             path: /tmp/pod-delete.yaml
             raw:
-              data: >
+              data: |
                 apiVersion: litmuschaos.io/v1alpha1
 
                 description:
@@ -327,7 +327,7 @@ spec:
             - name: pod-delete
               path: /tmp/chaosengine.yaml
               raw:
-                data: >
+                data: |
                   apiVersion: litmuschaos.io/v1alpha1
 
                   kind: ChaosEngine
