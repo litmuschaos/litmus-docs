@@ -16,20 +16,20 @@ To understand the concepts of Probes better make sure you are aware of the [Chao
 
 Litmus currently supports four types of Probes:
 
-- **httpProbe**: To query health/downstream URIs
-- **cmdProbe**: To execute any user-desired health-check function implemented as a shell command
-- **k8sProbe**: To perform CRUD operations against native & custom Kubernetes resources
-- **promProbe**: To execute promql queries and match prometheus metrics for specific criteria
+- **httpProbe**: To query health/downstream URIs.
+- **cmdProbe**: To execute any user-desired health-check function implemented as a shell command.
+- **k8sProbe**: To perform CRUD operations against native & custom Kubernetes resources.
+- **promProbe**: To execute promql queries and match prometheus metrics for specific criteria.
 
 These probes can be used in isolation or in several combinations to achieve the desired checks. While the **httpProbe** and **k8sProbe** are **fully declarative** in the way they are conceived, the **cmdProbe** expects the user to provide a shell command to implement checks that are highly specific to the application use case. **promProbe** expects the user to provide a promql query along with Prometheus service endpoints to check for specific criteria.
 
 The probes can be set up to run in different modes:
 
-- **SoT**: Executed at the Start of Test as a pre-chaos check
-- **EoT**: Executed at the End of Test as a post-chaos check
-- **Edge**: Executed both, before and after the chaos
+- **SoT**: Executed at the Start of Test as a pre-chaos check.
+- **EoT**: Executed at the End of Test as a post-chaos check.
+- **Edge**: Executed both, before and after the chaos.
 - **Continuous**: The probe is executed continuously, with a specified polling interval during the chaos injection.
-- **OnChaos**: The probe is executed continuously, with a specified polling interval strictly for chaos duration of chaos
+- **OnChaos**: The probe is executed continuously, with a specified polling interval strictly for chaos duration of chaos.
 
 Some common attributes shared between the Probes:
 
@@ -110,7 +110,7 @@ probe:
       initialDelay: 5s
 ```
 
-> `source.hostNetwork` can be set to `true` to allow access to the node network namespace for the pod executing the probe
+> `source.hostNetwork` can be set to `true` to allow access to the node network namespace for the pod executing the probe.
 
 For insights into efficient chaos probe practices and our roadmap for the future, check out the [best practices](../best-practices.md#probes).
 
