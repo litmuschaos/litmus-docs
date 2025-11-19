@@ -83,7 +83,7 @@ module.exports = {
               to: `docs/${version}/introduction/what-is-litmus`
             })),
             {
-              label: 'master/unreleased',
+              label: 'main/unreleased',
               to: 'docs/next/introduction/what-is-litmus'
             },
           ]
@@ -172,7 +172,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/litmuschaos/litmus-docs/edit/master/website',
+          editUrl: 'https://github.com/litmuschaos/litmus-docs/edit/main/website',
           showLastUpdateTime: false
         },
         theme: {

@@ -40,9 +40,9 @@ _Scrape jobs:_
     - targets: ['kube-state-metrics.monitoring.svc.cluster.local:8080']
 ```
 
-- [Node exporter](https://github.com/litmuschaos/litmus/blob/master/monitoring/utils/prometheus/prometheus-scrape-configuration/02-prometheus-configMap.yaml)
-- [Black box exporter](https://github.com/litmuschaos/litmus/blob/master/monitoring/utils/prometheus/prometheus-scrape-configuration/02-prometheus-configMap.yaml)
-- [cAdvisor](https://github.com/litmuschaos/litmus/blob/master/monitoring/utils/prometheus/prometheus-scrape-configuration/02-prometheus-configMap.yaml)
+- [Node exporter](https://github.com/litmuschaos/litmus/blob/main/monitoring/utils/prometheus/prometheus-scrape-configuration/02-prometheus-configMap.yaml)
+- [Black box exporter](https://github.com/litmuschaos/litmus/blob/main/monitoring/utils/prometheus/prometheus-scrape-configuration/02-prometheus-configMap.yaml)
+- [cAdvisor](https://github.com/litmuschaos/litmus/blob/main/monitoring/utils/prometheus/prometheus-scrape-configuration/02-prometheus-configMap.yaml)
 
 [Detailed setup guide for Prometheus deployment with scrape configuration](../integrations/prometheus)
 
@@ -111,8 +111,8 @@ spec:
       app.kubernetes.io/name: kube-state-metrics
 ```
 
-- [Node exporter](https://github.com/litmuschaos/litmus/blob/master/monitoring/utils/metrics-exporters-with-service-monitors/node-exporter/service-monitor.yaml)
-- [Black box exporter](https://github.com/litmuschaos/litmus/blob/master/monitoring/utils/metrics-exporters-with-service-monitors/prometheus-blackbox-exporter-metrics/service-monitor.yaml)
+- [Node exporter](https://github.com/litmuschaos/litmus/blob/main/monitoring/utils/metrics-exporters-with-service-monitors/node-exporter/service-monitor.yaml)
+- [Black box exporter](https://github.com/litmuschaos/litmus/blob/main/monitoring/utils/metrics-exporters-with-service-monitors/prometheus-blackbox-exporter-metrics/service-monitor.yaml)
 
 [Detailed setup guide for Prometheus operator with service monitors](../integrations/prometheus)
 
@@ -249,9 +249,9 @@ _Scrape jobs:_
     - targets: ['<AGENT_2_KUBE_STATE_METRICS_EXPORTER_SERVICE_PUBLIC_HOSTNAME/IP:8080>']
 ```
 
-- [Node exporter](https://github.com/litmuschaos/litmus/blob/master/monitoring/utils/prometheus/prometheus-scrape-configuration/02-prometheus-configMap.yaml)
-- [Black box exporter](https://github.com/litmuschaos/litmus/blob/master/monitoring/utils/prometheus/prometheus-scrape-configuration/02-prometheus-configMap.yaml)
-- [cAdvisor](https://github.com/litmuschaos/litmus/blob/master/monitoring/utils/prometheus/prometheus-scrape-configuration/02-prometheus-configMap.yaml)
+- [Node exporter](https://github.com/litmuschaos/litmus/blob/main/monitoring/utils/prometheus/prometheus-scrape-configuration/02-prometheus-configMap.yaml)
+- [Black box exporter](https://github.com/litmuschaos/litmus/blob/main/monitoring/utils/prometheus/prometheus-scrape-configuration/02-prometheus-configMap.yaml)
+- [cAdvisor](https://github.com/litmuschaos/litmus/blob/main/monitoring/utils/prometheus/prometheus-scrape-configuration/02-prometheus-configMap.yaml)
 
 [Detailed setup guide for Prometheus deployment with scrape configuration](../integrations/prometheus)
 
@@ -451,8 +451,8 @@ spec:
       port: tcp
 ```
 
-- [Node exporter](https://github.com/litmuschaos/litmus/blob/master/monitoring/utils/metrics-exporters-with-service-monitors/node-exporter/service-monitor.yaml)
-- [Black box exporter](https://github.com/litmuschaos/litmus/blob/master/monitoring/utils/metrics-exporters-with-service-monitors/prometheus-blackbox-exporter-metrics/service-monitor.yaml)
+- [Node exporter](https://github.com/litmuschaos/litmus/blob/main/monitoring/utils/metrics-exporters-with-service-monitors/node-exporter/service-monitor.yaml)
+- [Black box exporter](https://github.com/litmuschaos/litmus/blob/main/monitoring/utils/metrics-exporters-with-service-monitors/prometheus-blackbox-exporter-metrics/service-monitor.yaml)
 
 [Detailed setup guide for Prometheus operator with service monitors](../integrations/prometheus.md)
 

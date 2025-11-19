@@ -30,5 +30,5 @@ This command generates static content into the `build` directory and can be serv
 npm run docusaurus docs:version <VERSION>
 ```
 
-This command will tag a new version from master docs.
+This command will tag a new version from main docs.
 It will copy the docs/ folder contents into a new versioned_docs/version-`<version>`/ folder, create a versioned sidebars file based from your current sidebar configuration (if it exists) - saved as versioned_sidebars/version-`<version>`-sidebars.json and append the new version number to versions.json.
