@@ -33,9 +33,6 @@ Dex supports multiple OAuth2/OIDC connectors. The following connectors are compa
 - **GitHub** (documented below)
 - **Google** (documented below)
 - **Microsoft Azure AD** (example provided below)
-- **OIDC-compliant providers** (GitLab, Okta, Keycloak, etc.)
-- **LDAP/Active Directory**
-- **SAML 2.0 providers**
 
 For a complete list of supported connectors, refer to the [official Dex connector documentation](https://dexidp.io/docs/connectors/).
 
