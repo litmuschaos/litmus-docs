@@ -16,7 +16,7 @@ sidebar_label: Backstage
 - See representative information about Litmus (number of Chaos Hubs, GitOps status, etc.).
 - Provide a direct link to Litmus.
 
-![EntityLitmusCard](https://raw.githubusercontent.com/litmuschaos/backstage-plugin/master/docs/EntityLitmusCard.png)
+![EntityLitmusCard](https://raw.githubusercontent.com/litmuschaos/backstage-plugin/main/docs/EntityLitmusCard.png)
 
 ### EntityLitmusContent
 
@@ -29,7 +29,7 @@ sidebar_label: Backstage
   - If you hover over 'RECENT EXPERIMENT RUNS', you can view detailed information about the experiments including resiliency score and status.
   - We can directly launch chaos experiments by clicking the play button.
 
-![EntityLitmusContent](https://raw.githubusercontent.com/litmuschaos/backstage-plugin/master/docs/EntityLitmusContent.png)
+![EntityLitmusContent](https://raw.githubusercontent.com/litmuschaos/backstage-plugin/main/docs/EntityLitmusContent.png)
 
 ## Before you begin
 
@@ -47,9 +47,9 @@ sidebar_label: Backstage
 
    1. Click "SETTINGS" in the sidebar.
    2. Click "+ New Token" Button in the 'API Tokens' section.
-      ![settings_tab](https://raw.githubusercontent.com/litmuschaos/backstage-plugin/master/docs/settings_tab.png)
+      ![settings_tab](https://raw.githubusercontent.com/litmuschaos/backstage-plugin/main/docs/settings_tab.png)
    3. Enter your information and click "Confirm".
-      ![create_dialog](https://raw.githubusercontent.com/litmuschaos/backstage-plugin/master/docs/create_dialog.png)
+      ![create_dialog](https://raw.githubusercontent.com/litmuschaos/backstage-plugin/main/docs/create_dialog.png)
    4. Get the token in the "VALUE" column.
 
 3. In the `app-config.yaml` file root directory, add litmus proxy and info like below

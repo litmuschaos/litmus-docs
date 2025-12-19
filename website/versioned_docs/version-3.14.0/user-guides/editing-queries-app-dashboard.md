@@ -14,7 +14,7 @@ In order to edit the queries, you must first have a [data source](configure-data
 
 ## Dashboard Structure
 
-For visualization of the metrics, you need to tune the queries as per your use case. To learn about the dashboard schema [click here](https://raw.githubusercontent.com/litmuschaos/litmus/master/monitoring/portal-dashboards/schema.json). The hierarchical structure of the dashboard is defined as follows:
+For visualization of the metrics, you need to tune the queries as per your use case. To learn about the dashboard schema [click here](https://raw.githubusercontent.com/litmuschaos/litmus/main/monitoring/portal-dashboards/schema.json). The hierarchical structure of the dashboard is defined as follows:
 
 ```
 Dashboard (root)

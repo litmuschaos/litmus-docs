@@ -21,10 +21,10 @@ Litmus documentation currently runs using [Docusaurus](https://docusaurus.io/) s
 - Find an issue to work on or create a new issue. The issues are maintained at [litmuschaos/litmus](https://github.com/litmuschaos/litmus/issues). For new contributors, you can pick up from a list of [good first issues](https://github.com/litmuschaos/litmus/issues?q=is%3Aissue+is%3Aopen+label%3Aarea%2Flitmus-docs+label%3A%22good+first+issue%22+)
 - Claim your issue by commenting your intent to work on it to avoid duplication of efforts.
 - Fork the repository on GitHub.
-- Create a branch from where you want to base your work (usually master).
+- Create a branch from where you want to base your work (usually main).
 - Make your changes, test locally, see preview by starting server and seeing in Preview Mode.
 - Execute embedmd command before commiting your changes, so that it can embed source code into documentation, refer [README](/README.md) for steps.
-- Commit your changes by making sure the commit messages convey the need and notes about the commit. Also make sure to [sign your commit](https://github.com/litmuschaos/litmus-docs/blob/master/CONTRIBUTING.md#sign-your-work) while making a new commit.
+- Commit your changes by making sure the commit messages convey the need and notes about the commit. Also make sure to [sign your commit](https://github.com/litmuschaos/litmus-docs/blob/main/CONTRIBUTING.md#sign-your-work) while making a new commit.
 - Push your changes to the branch in your fork of the repository.
 - Submit a pull request to the original repository.
 
@@ -41,7 +41,7 @@ embedmd -w $(find **/*.md)
 
 ## Pull Request Checklist
 
-- Rebase to the current master branch before submitting your pull request.
+- Rebase to the current main branch before submitting your pull request.
 
 - Commits should be kept small if possible. Each commit should follow the checklist below:
 
