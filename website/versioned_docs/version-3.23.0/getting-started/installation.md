@@ -18,6 +18,8 @@ Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for te
 
 - [Helm3](https://v3.helm.sh/) or [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
 
+- **Hardware Requirement:** Ensure your CPU supports **AVX instructions**. MongoDB (used by Litmus) requires AVX; older processors (e.g., some Celeron/Pentium models) may cause the MongoDB pod to crash loop.
+
 ## Installation
 
 Users looking to use Litmus for the first time have two options available to them today. One way is to use a hosted Litmus service like [Harness Chaos Engineering SaaS](https://app.harness.io/auth/#/signin). Alternatively, users looking for some more flexibility can install Litmus into their own Kubernetes cluster.
