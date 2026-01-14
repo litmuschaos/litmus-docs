@@ -57,7 +57,7 @@ kubectl create ns litmus
 The cluster-admin or an equivalent user with the right permissions are required to install the CRDs upfront.
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/chaoscenter/manifests/litmus-portal-crds.yml
+kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/main/chaoscenter/manifests/litmus-portal-crds.yml
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -127,7 +127,7 @@ litmus                      Active   2s
 The cluster-admin or an equivalent user with the right permissions are required to install the CRDs upfront.
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/chaoscenter/manifests/litmus-portal-crds.yml
+kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/main/chaoscenter/manifests/litmus-portal-crds.yml
 ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
@@ -149,7 +149,7 @@ customresourcedefinition.apiextensions.k8s.io/eventtrackerpolicies.eventtracker.
 Applying the manifest file will install all the required service account configuration and ChaosCenter.
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/3.8.0/litmus-namespaced-3.8.0.yaml -n <Your Namespace>
+kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/main/mkdocs/docs/3.8.0/litmus-namespaced-3.8.0.yaml -n <Your Namespace>
 ```
 
 :::note

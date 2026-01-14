@@ -68,16 +68,16 @@ We invite contributions in all forms. Join us in writing blogs on DEV.to about e
 
 ## How to Contribute
 
-- If you are a first-time contributor, please see [Steps to Contribute](https://github.com/litmuschaos/litmus/blob/master/CONTRIBUTING.md#steps-to-contribute-).
+- If you are a first-time contributor, please see [Steps to Contribute](https://github.com/litmuschaos/litmus/blob/main/CONTRIBUTING.md#steps-to-contribute-).
 - If you would like to suggest new tests to be added to litmus, please go ahead and [create a new issue](https://github.com/litmuschaos/litmus/issues/new) describing your test. All you need to do is specify the workload type and the operations that you would like to perform on the workload.
 - If you would like to work on something more involved, please connect with the Litmus Contributors.
-- If you would like to make code contributions, all your commits should be signed with Developer Certificate of Origin. See [Sign your work](https://github.com/litmuschaos/litmus/blob/master/CONTRIBUTING.md#sign-your-work).
+- If you would like to make code contributions, all your commits should be signed with Developer Certificate of Origin. See [Sign your work](https://github.com/litmuschaos/litmus/blob/main/CONTRIBUTING.md#sign-your-work).
 
 ### Contribute your chaos experiments
 
 We are devoted to being an open source driven community and appeal to our community members to contribute chaos experiments, file issues, raise pull requests, and provide feedback to help enhance the user experience and bring in new enhancements to develop LitmusChaos.
 
-Check out the [CONTRIBUTING.md](https://github.com/litmuschaos/litmus/blob/master/CONTRIBUTING.md) page on [Litmus repository](https://github.com/litmuschaos/litmus) for instructions on how to contribute. Feel free to discuss about your contributions on [our slack channel](https://slack.litmuschaos.io/).
+Check out the [CONTRIBUTING.md](https://github.com/litmuschaos/litmus/blob/main/CONTRIBUTING.md) page on [Litmus repository](https://github.com/litmuschaos/litmus) for instructions on how to contribute. Feel free to discuss about your contributions on [our slack channel](https://slack.litmuschaos.io/).
 
 ## Learn more
 

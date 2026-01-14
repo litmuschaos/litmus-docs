@@ -98,7 +98,7 @@ Without this label, the Workflow controller will not be able to reconcile the Wo
 
 ### Does Litmusctl support actions that are currently performed from the portal dashboard?
 
-Yes, Chaos Infrastructure connection, creation and chaos experiment execution are now being supported in Litmusctl. [documentation of litmusctl](https://github.com/litmuschaos/litmusctl/blob/master/Usage_0.23.0.md).
+Yes, Chaos Infrastructure connection, creation and chaos experiment execution are now being supported in Litmusctl. [documentation of litmusctl](https://github.com/litmuschaos/litmusctl/blob/main/Usage_0.23.0.md).
 
 ### How to solve `invalid token` issue in litmusctl?
 

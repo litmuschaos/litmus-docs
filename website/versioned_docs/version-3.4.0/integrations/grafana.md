@@ -6,7 +6,7 @@ sidebar_label: Grafana
 
 ---
 
-Chaos Engineering is the discipline of experimenting on a system to build confidence in the system’s capability to withstand turbulent conditions in production. Monitoring a system's resilience and its performance under chaos are one of the fundamental principles of chaos engineering. Litmus has sample chaos interleaved dashboards available on Grafana’s community dashboards as well as provisioned dashboards along with provisioned data sources. Some sample chaos interleaved dashboards can be found [here](https://github.com/litmuschaos/litmus/tree/master/monitoring/grafana-dashboards)
+Chaos Engineering is the discipline of experimenting on a system to build confidence in the system’s capability to withstand turbulent conditions in production. Monitoring a system's resilience and its performance under chaos are one of the fundamental principles of chaos engineering. Litmus has sample chaos interleaved dashboards available on Grafana’s community dashboards as well as provisioned dashboards along with provisioned data sources. Some sample chaos interleaved dashboards can be found [here](https://github.com/litmuschaos/litmus/tree/main/monitoring/grafana-dashboards)
 
 ## Before you begin
 
@@ -73,51 +73,51 @@ Default username/password credentials: `admin/admin`
 
 #### Chaos Result selector dropdown:
 
-![image](https://github.com/litmuschaos/litmus/blob/master/monitoring/screenshots/sock-shop/chaos-result-selector.png?raw=true)
+![image](https://github.com/litmuschaos/litmus/blob/main/monitoring/screenshots/sock-shop/chaos-result-selector.png?raw=true)
 
 #### Chaos Engine Context (Target application's NAMESPACE_LABEL) selector dropdown:
 
-![image](https://github.com/litmuschaos/litmus/blob/master/monitoring/screenshots/sock-shop/chaos-engine-context-selector.png?raw=true)
+![image](https://github.com/litmuschaos/litmus/blob/main/monitoring/screenshots/sock-shop/chaos-engine-context-selector.png?raw=true)
 
 #### Chaos Engines with Experiments as Chaos Results:
 
-![image](https://github.com/litmuschaos/litmus/blob/master/monitoring/screenshots/sock-shop/chaos-experiments.png?raw=true)
+![image](https://github.com/litmuschaos/litmus/blob/main/monitoring/screenshots/sock-shop/chaos-experiments.png?raw=true)
 
 #### Chaos event annotations:
 
-![image](https://github.com/litmuschaos/litmus/blob/master/monitoring/screenshots/sock-shop/chaos-event-annotation.png?raw=true)
+![image](https://github.com/litmuschaos/litmus/blob/main/monitoring/screenshots/sock-shop/chaos-event-annotation.png?raw=true)
 
 #### Chaos Result verdict annotations:
 
-![image](https://github.com/litmuschaos/litmus/blob/master/monitoring/screenshots/sock-shop/chaos-result-verdict-annotation.png?raw=true)
+![image](https://github.com/litmuschaos/litmus/blob/main/monitoring/screenshots/sock-shop/chaos-result-verdict-annotation.png?raw=true)
 
 #### Interleaved Chaos events:
 
-![image](https://github.com/litmuschaos/litmus/blob/master/monitoring/screenshots/sock-shop/interleaved-events.png?raw=true)
+![image](https://github.com/litmuschaos/litmus/blob/main/monitoring/screenshots/sock-shop/interleaved-events.png?raw=true)
 
 #### Interleaved Chaos Result verdicts:
 
-![image](https://github.com/litmuschaos/litmus/blob/master/monitoring/screenshots/sock-shop/interleaved-results.png?raw=true)
+![image](https://github.com/litmuschaos/litmus/blob/main/monitoring/screenshots/sock-shop/interleaved-results.png?raw=true)
 
 #### Chaos Result verdict failure alerts:
 
-![image](https://github.com/litmuschaos/litmus/blob/master/monitoring/screenshots/sock-shop/verdict-failure-alert.png?raw=true)
+![image](https://github.com/litmuschaos/litmus/blob/main/monitoring/screenshots/sock-shop/verdict-failure-alert.png?raw=true)
 
 #### Chaos Result probe failure alerts:
 
-![image](https://github.com/litmuschaos/litmus/blob/master/monitoring/screenshots/sock-shop/probe-failure-alert.png?raw=true)
+![image](https://github.com/litmuschaos/litmus/blob/main/monitoring/screenshots/sock-shop/probe-failure-alert.png?raw=true)
 
 #### Systems healthy / in steady state OR no alerts to be issued:
 
-![image](https://github.com/litmuschaos/litmus/blob/master/monitoring/screenshots/sock-shop/no-alerts-issued.png?raw=true)
+![image](https://github.com/litmuschaos/litmus/blob/main/monitoring/screenshots/sock-shop/no-alerts-issued.png?raw=true)
 
 #### Systems un-healthy / failed to regain steady state after chaos / meet SLO OR alerts are issued:
 
-![image](https://github.com/litmuschaos/litmus/blob/master/monitoring/screenshots/sock-shop/alerts-active.png?raw=true)
+![image](https://github.com/litmuschaos/litmus/blob/main/monitoring/screenshots/sock-shop/alerts-active.png?raw=true)
 
 #### Alerts issued:
 
-![image](https://github.com/litmuschaos/litmus/blob/master/monitoring/screenshots/sock-shop/alerts-sent.png?raw=true)
+![image](https://github.com/litmuschaos/litmus/blob/main/monitoring/screenshots/sock-shop/alerts-sent.png?raw=true)
 
 ## Chaos interleaving over infra and application metrics
 

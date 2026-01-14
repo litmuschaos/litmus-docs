@@ -153,4 +153,4 @@ To verify the connection, open your ChaosCenter and go to the Targets section. Y
 
 ---
 
-For additional details or examples, you can also refer to this [guide](https://github.com/litmuschaos/litmusctl/blob/master/Usage_0.23.0.md#steps-to-connect-a-chaos-infrastucture).
+For additional details or examples, you can also refer to this [guide](https://github.com/litmuschaos/litmusctl/blob/main/Usage_0.23.0.md#steps-to-connect-a-chaos-infrastucture).

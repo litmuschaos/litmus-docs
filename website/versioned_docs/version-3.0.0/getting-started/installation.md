@@ -104,7 +104,7 @@ Visit https://docs.litmuschaos.io to find more info.
 
 ### **Install Litmus using kubectl**
 
-In this method the users need to install mongo first via helm and then apply the installation manifest. Follow the instructions [here](https://github.com/litmuschaos/litmus/tree/master/chaoscenter#installation-steps-for-litmus-300-beta9).
+In this method the users need to install mongo first via helm and then apply the installation manifest. Follow the instructions [here](https://github.com/litmuschaos/litmus/tree/main/chaoscenter#installation-steps-for-litmus-300-beta9).
 
 ---
 
