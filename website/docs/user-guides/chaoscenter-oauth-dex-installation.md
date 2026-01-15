@@ -26,6 +26,18 @@ Before deploying LitmusChaos, make sure the following items are there:
   - Google Oauth credentials
   - GitHub Oauth credentials
 
+## Supported Dex Connectors
+
+Dex supports multiple OAuth2/OIDC connectors. The following connectors are compatible with Litmus ChaosCenter:
+
+- **GitHub** (documented below)
+- **Google** (documented below)
+- **Microsoft Azure AD** (example provided below)
+
+For a complete list of supported connectors, refer to the [official Dex connector documentation](https://dexidp.io/docs/connectors/).
+
+> **Note:** Not all connectors support refresh tokens. For connectors that require offline access (like kubectl), ensure the connector supports refresh tokens.
+
 ## Deploy Dex OIDC provider
 
 In order to enable OAuth2 and to be able to login via Google and GitHub, litmus uses [Dex OIDC](https://dexidp.io/).
