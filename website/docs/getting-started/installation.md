@@ -85,14 +85,17 @@ helm install chaos litmuschaos/litmus --namespace=litmus --set portal.frontend.s
   --set portal.server.graphqlServer.genericEnv.CHAOS_CENTER_UI_ENDPOINT=http://chaos-litmus-frontend-service.litmus.svc.cluster.local:9091
   ```
 
-- Litmus helm chart depends on `bitnami/mongodb` [helm chart](https://github.com/bitnami/charts/tree/main/bitnami/mongodb), which uses a mongodb image not supported on ARM. If you want to install Litmus on an ARM-based server, please replace the default one with your custom mongodb arm image as shown below.
+- Litmus helm chart depends on `bitnami/mongodb` [helm chart](https://github.com/bitnami/charts/tree/main/bitnami/mongodb), which uses a mongodb image not supported on ARM. If you want to install Litmus on an ARM-based server, please replace the default one with your custom mongodb arm image as shown below. 
 
-  ```bash
-  helm install chaos litmuschaos/litmus --namespace=litmus \
-  --set portal.frontend.service.type=NodePort \
-  --set mongodb.image.registry=<put_registry> \
-  --set mongodb.image.repository=<put_image_repository> \
-  --set mongodb.image.tag=<put_image_tag>
+  ```bash  
+helm install chaos litmuschaos/litmus --namespace=litmus \
+--set portal.frontend.service.type=NodePort \
+--set portal.server.graphqlServer.genericEnv.CHAOS_CENTER_UI_ENDPOINT=http://chaos-litmus-frontend-service.litmus.svc.cluster.local:9091 \
+--set mongodb.image.registry=docker.io \
+--set mongodb.image.repository=bitnami/mongodb \
+--set mongodb.image.tag=latest \
+--set mongodb.auth.enabled=true \
+--set mongodb.auth.rootPassword=<root password>
   ```
 
 <span style={{color: 'green'}}><b>Expected Output</b></span>
