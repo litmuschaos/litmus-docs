@@ -6,7 +6,7 @@ sidebar_label: Manage Application Dashboard
 
 ---
 
-Observing chaos injections and deriving insights from the chaos events is the core part of Chaos Observability. Whenever a chaos scenario run is performed its impact may be observed across different services and applications. Application dashboards provide a systematic visualization of all such events along with the performance of the individual service/application. To learn more about the dashboard schema architecture [click here](https://raw.githubusercontent.com/litmuschaos/litmus/master/monitoring/portal-dashboards/schema.json)
+Observing chaos injections and deriving insights from the chaos events is the core part of Chaos Observability. Whenever a chaos scenario run is performed its impact may be observed across different services and applications. Application dashboards provide a systematic visualization of all such events along with the performance of the individual service/application. To learn more about the dashboard schema architecture [click here](https://raw.githubusercontent.com/litmuschaos/litmus/main/monitoring/portal-dashboards/schema.json)
 
 ## Before you begin
 
