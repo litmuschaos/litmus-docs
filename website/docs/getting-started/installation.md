@@ -30,9 +30,10 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="self-hosted" label="Self-Hosted" default>
     Installation of Self-Hosted Litmus can be done using either of the below methods:
-    <li><a href="#install-litmus-using-helm">Helm3</a> chart</li>
-    <li><a href="#install-litmus-using-kubectl">Kubectl</a> yaml spec file</li>
-    <br/>
+    <ul>
+      <li><a href="#install-litmus-using-helm">Helm3</a> chart</li>
+      <li><a href="#install-litmus-using-kubectl">Kubectl</a> yaml spec file</li>
+    </ul>
     Refer to the below details for Self-Hosted Litmus installation.
   </TabItem>
   <TabItem value="hosted" label="Hosted (Beta)">
@@ -159,19 +160,44 @@ metrics:
 helm install my-release bitnami/mongodb --values mongo-values.yml -n <NAMESPACE> --create-namespace
 ```
 
-Litmus supports for HTTP and HTTPS mode of installation.
+Litmus supports both HTTP and HTTPS modes of installation.
+
+<Tabs>
+  <TabItem value="basic" label="Basic (HTTP)" default>
 
 ### Basic installation (HTTP based and allows all origins)
 
 Applying the manifest file will install all the required service account configuration and ChaosCenter in namespaced scope.
 
 ```bash
- kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/master/mkdocs/docs/3.20.0/litmus-getting-started.yaml -n <NAMESPACE>
+ kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/3.20.0/mkdocs/docs/3.20.0/litmus-getting-started.yaml -n <NAMESPACE>
 ```
+
+  </TabItem>
+  <TabItem value="advanced" label="Advanced (HTTPS)">
 
 ### Advanced installation (HTTPS based and CORS rules apply)
 
-For advanced installation visit [here](../user-guides/chaoscenter-advanced-installation.md)
+**Step 1: Generate TLS certificates**
+
+You can provide your own certificates or can generate using [this](https://github.com/litmuschaos/litmus/blob/master/chaoscenter/mtls-helper.sh) bash script.
+
+**Step 2: Create secret**
+
+```bash
+kubectl create secret generic tls-secret --from-file=ca.crt=ca.crt --from-file=tls.crt=tls.crt --from-file=tls.key=tls.key -n <NAMESPACE>
+```
+
+**Step 3: Apply the installation manifest**
+
+Applying the manifest file will install all the required service account configuration and ChaosCenter in namespaced scope.
+
+```bash
+kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/3.20.0/chaoscenter/manifests/litmus-installation.yaml -n <NAMESPACE>
+```
+
+  </TabItem>
+</Tabs>
 
 ## Verify your installation
 
@@ -247,7 +273,9 @@ http://172.17.0.3:31846/
 
 > Where `172.17.0.3` is my NodeIP and `31846` is the frontend service PORT. If using a LoadBalancer, the only change would be to provide a `<LoadBalancerIP>:<PORT>`. [Learn more about how to access ChaosCenter with LoadBalancer](../user-guides/setup-without-ingress.md#with-loadbalancer)
 
-**NOTE:** With advanced installation CORS rules are applied, once manifest is applied frontend loadbalancer IP needs to be added in the `ALLOWED_ORIGINS` environment in both auth and graphql server deployment.
+:::note
+- **With advanced (HTTPS) installation:** CORS rules are applied. Once manifest is applied, frontend loadbalancer IP needs to be added in the `ALLOWED_ORIGINS` environment in both auth and graphql server deployment.
+:::
 
 You should be able to see the Login Page of Litmus ChaosCenter. The **default credentials** are
 
@@ -262,7 +290,8 @@ By default you are assigned with a default project with Owner permissions.
 
 ## Learn more
 
-- [Install ChaosCenter with HTTPS](../user-guides/chaoscenter-advanced-installation.md)
+- [Setup OAuth2 login with Dex](../user-guides/chaoscenter-oauth-dex-installation.md)
 - [Connect External Chaos Infrastructures to ChaosCenter](../user-guides/chaos-infrastructure-installation.md)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)
+- [Setup with Helm and OAuth](../user-guides/setup-with-helm.md)

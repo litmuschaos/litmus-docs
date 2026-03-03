@@ -166,6 +166,19 @@ module.exports = {
     },
     hideableSidebar: true
   },
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: '/docs/user-guides/chaoscenter-advanced-installation',
+            to: '/docs/getting-started/installation',
+          },
+        ],
+      },
+    ],
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',

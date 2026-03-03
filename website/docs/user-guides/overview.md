@@ -8,7 +8,7 @@ sidebar_label: Overview
 
 The User Guides section details Processes, User-flows and How-tos detailing all sorts of experiments in various environments. Technical details and inner workings of the various components are explained in the [Concepts](../concepts/overview.md) section.
 
-### [Advanced Installation](chaoscenter-advanced-installation.md)
+### [Installation](../getting-started/installation.md)
 
 Install ChaosCenter and Chaos Infrastructure in various environment configurations.
 

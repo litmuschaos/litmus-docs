@@ -8,23 +8,11 @@ sidebar_label: OAuth2 support using Dex
 
 ## Prerequisites
 
-Before deploying LitmusChaos, make sure the following items are there:
+- [ChaosCenter installed and running](../getting-started/installation.md) (includes Kubernetes 1.17+, kubectl, and persistent storage)
 
-- Kubernetes 1.17 or later
-
-- A Persistent volume of 20GB
-
-  :::note
-  Although it is recommended to have a Persistent Volume(PV) of 20GB, you can start with 1GB for test purposes as well. This PV is used as persistent storage to store the chaos config and chaos-metrics in ChaosCenter. By default, Litmus would use the default storage class to allocate the PV.
-  :::
-
-- [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
-
-- [Deployed ChaosCenter](../getting-started/installation.md)
-
-- Atleast one of the following
-  - Google Oauth credentials
-  - GitHub Oauth credentials
+- At least one of the following:
+  - Google OAuth credentials
+  - GitHub OAuth credentials
 
 ## Supported Dex Connectors
 
@@ -175,8 +163,7 @@ Go to http://litmusportal-frontend-service/auth/dex/login, you should be prompte
 
 ## Learn more
 
-- [Install ChaosCenter with HTTP](../getting-started/installation.md)
-- [Install ChaosCenter with HTTPS](chaoscenter-advanced-installation.md)
+- [Install ChaosCenter](../getting-started/installation.md)
 - [Connect External Chaos Delegates to ChaosCenter](../user-guides/chaos-infrastructure-installation.md)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)
