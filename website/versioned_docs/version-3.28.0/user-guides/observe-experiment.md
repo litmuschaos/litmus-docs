@@ -24,15 +24,16 @@ If the user chooses to **Save** and **Run** the experiment, they will be redirec
 ## Observe an experiment
 
 To observe a chaos experiment, user needs to select the highlighted experiment run box from the heatmap, it will redirect to experiment run execution page.<br/>
-<img src={require('../assets/workflow-observe-select.png').default} width="800" />
+![observe-select](../assets/workflow-observe-select.png)
 
 In the chaos experiment, a realtime graph of the chaos experiment is displayed. This graph contains valuable information regarding the status of individual steps of the chaos experiment.<br/><br/>
-<img src={require('../assets/workflow-observe-running.png').default} width="800" /><br/><br/>
+![observe-running](../assets/workflow-observe-running.png)
 
 To view the details of each step, the user can click on the individual nodes and the right side pane will display the node details, results(once the execution is complete), and the logs related to it.
 <br/><br/>
-<img src={require('../assets/workflow-observe-log.png').default} width="800" />
-<img src={require('../assets/workflow-observe-completed.png').default} width="800" />
+![observe-log](../assets/workflow-observe-log.png)
+
+![observe-completed](../assets/workflow-observe-completed.png)
 
 ## Summary
 
