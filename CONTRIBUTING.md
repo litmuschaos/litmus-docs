@@ -23,14 +23,14 @@ Litmus documentation currently runs using [Docusaurus](https://docusaurus.io/) s
 - Fork the repository on GitHub.
 - Create a branch from where you want to base your work (usually master).
 - Make your changes, test locally, see preview by starting server and seeing in Preview Mode.
-- Execute embedmd command before commiting your changes, so that it can embed source code into documentation, refer [README](/README.md) for steps.
+- Execute embedmd command before committing your changes, so that it can embed source code into documentation, refer [README](/README.md) for steps.
 - Commit your changes by making sure the commit messages convey the need and notes about the commit. Also make sure to [sign your commit](https://github.com/litmuschaos/litmus-docs/blob/master/CONTRIBUTING.md#sign-your-work) while making a new commit.
 - Push your changes to the branch in your fork of the repository.
 - Submit a pull request to the original repository.
 
 A sample PR flow is outlined [here](https://guides.github.com/introduction/flow/). More detailed one is [here](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
 
-## Use embedmd command before commiting changes
+## Use embedmd command before committing changes
 
 - Once you're done with the changes don't forget to run `embedmd` which will extract the embedded code from different files. For this you need do:
 
