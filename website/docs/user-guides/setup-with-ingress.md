@@ -14,10 +14,18 @@ Before setting up endpoint with Ingress make sure the [Litmus ChaosCenter](../ge
 
 Since Litmus 2.0.0, ChaosCenter can be installed with ingress. We will use the Nginx ingress controller for ingress setup.
 
+:::important
+Service names in Litmus can vary depending on the Helm release name used during installation. By default, they might be prefixed with the release name (e.g., `chaos-litmusportal-frontend-service`). Before proceeding, verify your service names using:
+
+```bash
+kubectl get svc -n litmus
+```
+:::
+
 1. By default, the service type is `NodePort`. For Ingress, we need to change the service type to `ClusterIP` in the following services:
 
-- `litmusportal-frontend-service`
-- `litmusportal-server-service`
+- `<RELEASE-NAME>-litmusportal-frontend-service`
+- `<RELEASE-NAME>-litmusportal-server-service`
 
 2. Install Nginx Ingress Controller along with Kubernetes RBAC roles and bindings, please refer [here](https://kubernetes.github.io/ingress-nginx/deploy/#installation-guide).
 
@@ -27,7 +35,7 @@ Set the environment variable **INGRESS** as true in the litmusportal-server depl
 
 Example:
 ```bash
-kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" INGRESS="true"
+kubectl set env deployment/<SERVER-DEPLOYMENT-NAME> -n litmus --containers="graphql-server" INGRESS="true"
 ```
 
 :::note
@@ -36,7 +44,7 @@ If you're changing ingress name from **litmus-ingress** to a different name, mak
 
 Example:
 ```bash
-kubectl set env deployment/litmusportal-server -n litmus --containers="graphql-server" INGRESS_NAME="litmus-ingress"
+kubectl set env deployment/<SERVER-DEPLOYMENT-NAME> -n litmus --containers="graphql-server" INGRESS_NAME="litmus-ingress"
 ```
 
 ### With HTTP
@@ -58,14 +66,14 @@ spec:
         paths:
           - backend:
               service:
-                name: litmusportal-frontend-service
+                name: <FRONTEND-SERVICE-NAME>
                 port:
                   number: 9091
             path: /(.*)
             pathType: ImplementationSpecific
           - backend:
               service:
-                name: litmusportal-server-service
+                name: <SERVER-SERVICE-NAME>
                 port:
                   number: 9002
             path: /backend/(.*)
@@ -126,14 +134,14 @@ spec:
         paths:
           - backend:
               service:
-                name: litmusportal-frontend-service
+                name: <FRONTEND-SERVICE-NAME>
                 port:
                   number: 9091
             path: /(.*)
             pathType: ImplementationSpecific
           - backend:
               service:
-                name: litmusportal-server-service
+                name: <SERVER-SERVICE-NAME>
                 port:
                   number: 9002
             path: /backend/(.*)

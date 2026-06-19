@@ -108,7 +108,11 @@ module.exports = {
           ]
         },
         {
-          'Chaos Infrastructure': ['user-guides/create-infrastructure', 'user-guides/delete-infrastructure']
+          'Chaos Infrastructure': [
+            'user-guides/create-infrastructure',
+            'user-guides/delete-infrastructure',
+            'user-guides/machine-agent'
+          ]
         },
         {
           'Resilience Probes': [
