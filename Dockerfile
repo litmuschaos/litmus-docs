@@ -4,9 +4,9 @@ WORKDIR /app/website
 
 EXPOSE 3000 35729
 COPY . /app/
-RUN npm install
-RUN npm run build
-CMD ["npm", "start"]
+RUN yarn install --frozen-lockfile
+RUN yarn build
+CMD ["yarn", "start"]
 
 FROM nginx:1.13-alpine
 COPY --from=build-env /app/website/build/ /usr/share/nginx/html
