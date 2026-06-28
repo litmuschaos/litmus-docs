@@ -23,8 +23,7 @@ In a standard full installation, LitmusChaos has two planes:
 
 | Plane | Components |
 |---|---|
-| **Chaos Control Plane** | ChaosCenter UI, GraphQL server, auth server, MongoDB |
-| **Chaos Execution Plane** | CRDs, Chaos Operator, Argo Workflow Controller, Subscriber |
+| **Chaos Execution Plane** | CRDs, Chaos Operator, Argo Workflow Controller (Subscriber when connected to ChaosCenter) |
 
 In headless mode, **only the Chaos Execution Plane is deployed**. Experiments are applied and monitored directly via `kubectl` or `litmusctl`, bypassing the control plane entirely.
 
