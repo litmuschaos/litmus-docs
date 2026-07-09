@@ -151,7 +151,8 @@ module.exports = {
         },
         'user-guides/gitops-configuration',
         'user-guides/image-registry',
-        'user-guides/uninstall-litmus'
+        'user-guides/uninstall-litmus',
+        'user-guides/headless-installation'
       ]
     },
     {
