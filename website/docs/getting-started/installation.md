@@ -234,9 +234,9 @@ kubectl apply -f https://raw.githubusercontent.com/litmuschaos/litmus/3.20.0/cha
   ```bash
   NAME                                  TYPE           CLUSTER-IP     EXTERNAL-IP      PORT(S)                         AGE
   chaos-exporter                        ClusterIP      10.68.45.7     <none>           8080/TCP                        23h
-  litmusportal-auth-server-service      NodePort       10.68.34.91    <none>           9003:32368/TCP,3030:31051/TCP   23h
-  litmusportal-frontend-service         NodePort       10.68.43.68    <none>           9091:30070/TCP                  23h
-  litmusportal-server-service           NodePort       10.68.33.242   <none>           9002:32455/TCP,8000:30722/TCP   23h
+  chaos-litmusportal-auth-server-service NodePort       10.68.34.91    <none>           9003:32368/TCP,3030:31051/TCP   23h
+  chaos-litmusportal-frontend-service    NodePort       10.68.43.68    <none>           9091:30070/TCP                  23h
+  chaos-litmusportal-server-service      NodePort       10.68.33.242   <none>           9002:32455/TCP,8000:30722/TCP   23h
   my-release-mongodb-arbiter-headless   ClusterIP      None           <none>           27017/TCP                       23h
   my-release-mongodb-headless           ClusterIP      None           <none>           27017/TCP                       23h
   workflow-controller-metrics           ClusterIP      10.68.33.65    <none>           9090/TCP                        23h
@@ -254,14 +254,14 @@ kubectl get svc -n litmus
 
 ```bash
 NAME                               TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)                         AGE
-litmusportal-frontend-service      NodePort    10.43.79.17    <none>        9091:31846/TCP                  102s
-litmusportal-server-service        NodePort    10.43.30.54    <none>        9002:31245/TCP,8000:32714/TCP   101s
-litmusportal-auth-server-service   NodePort    10.43.81.108   <none>        9003:32618/TCP,3030:31899/TCP   101s
+chaos-litmusportal-frontend-service NodePort    10.43.79.17    <none>        9091:31846/TCP                  102s
+chaos-litmusportal-server-service   NodePort    10.43.30.54    <none>        9002:31245/TCP,8000:32714/TCP   101s
+chaos-litmusportal-auth-server-service NodePort    10.43.81.108   <none>        9003:32618/TCP,3030:31899/TCP   101s
 mongo-service                      ClusterIP   10.43.227.10   <none>        27017/TCP                       101s
 mongo-headless-service             ClusterIP   None           <none>        27017/TCP                       101s
 ```
 
-> **Note**: In this case, the PORT for `litmusportal-frontend-service` is `31846`. Yours will be different.
+> **Note**: In this case, the PORT for `chaos-litmusportal-frontend-service` is `31846`. Yours will be different.
 
 Once you have the PORT copied in your clipboard, simply use your IP and PORT in this manner `<NODEIP>:<PORT>` to access the Litmus ChaosCenter.
 

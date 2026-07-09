@@ -170,6 +170,13 @@ mv litmusctl /usr/local/bin/litmusctl
 litmusctl <command> <subcommand> <subcommand> [options and parameters]
 ```
 
+:::info
+**Note for macOS users:** If you encounter a system dialog stating that "we could not verify that the binary is free from malware" when trying to run litmusctl, you can fix this by removing the quarantine attribute from the binary using the following command:
+```shell
+sudo xattr -d com.apple.quarantine /usr/local/bin/litmusctl
+```
+:::
+
 ### Windows
 
 - Extract the binary from the zip using WinZip or any other extraction tool.
