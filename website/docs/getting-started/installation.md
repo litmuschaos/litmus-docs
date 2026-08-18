@@ -1,4 +1,4 @@
----
+﻿---
 id: installation
 title: ChaosCenter installation
 sidebar_label: Installation
@@ -19,6 +19,10 @@ Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for te
 - [Helm3](https://v3.helm.sh/) or [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
 
 ## Installation
+
+:::tip
+Need chaos execution **without** the ChaosCenter UI (CI/CD or GitOps only)? See [Install Litmus without ChaosCenter](../user-guides/install-without-chaoscenter.md).
+:::
 
 Users looking to use Litmus for the first time have two options available to them today. One way is to use a hosted Litmus service like [Harness Chaos Engineering SaaS](https://app.harness.io/auth/#/signin). Alternatively, users looking for some more flexibility can install Litmus into their own Kubernetes cluster.
 
@@ -109,7 +113,7 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 NOTES:
-Thank you for installing litmus 😀
+Thank you for installing litmus ðŸ˜€
 
 Your release is named chaos and its installed to namespace: litmus.
 
@@ -295,3 +299,4 @@ By default you are assigned with a default project with Owner permissions.
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)
 - [Setup with Helm and OAuth](../user-guides/setup-with-helm.md)
+

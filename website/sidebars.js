@@ -97,7 +97,8 @@ module.exports = {
                 'user-guides/setup-with-ingress',
                 'user-guides/setup-with-helm'
               ]
-            }
+            },
+            'user-guides/install-without-chaoscenter'
           ]
         },
         {
