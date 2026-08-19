@@ -1,8 +1,9 @@
 [build]
   base = "website"
-  command = "npm install --legacy-peer-deps && npm run build"
+  command = "yarn install --frozen-lockfile && yarn build"
   publish = "build"
 
 [build.environment]
-  NODE_VERSION = "18"
-  NPM_FLAGS = "--legacy-peer-deps"
+  NODE_VERSION = "16"
+  YARN_VERSION = "1.22.19"
+  NODE_OPTIONS = "--max-old-space-size=4096"
