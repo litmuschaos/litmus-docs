@@ -1,0 +1,8 @@
+[build]
+  base = "website"
+  command = "npm install --legacy-peer-deps && npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_FLAGS = "--legacy-peer-deps"
