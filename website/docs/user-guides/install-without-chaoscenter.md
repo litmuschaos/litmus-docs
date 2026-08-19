@@ -1,4 +1,4 @@
-﻿---
+---
 id: install-without-chaoscenter
 title: Install Litmus without ChaosCenter
 sidebar_label: Install without ChaosCenter
@@ -153,5 +153,5 @@ model; use it when you still operate a center elsewhere.
 
 - [ChaosCenter installation](../getting-started/installation.md)
 - [Construct experiment YAML without ChaosCenter](./construct-experiment.md)
-- [Chaos infrastructure concepts](../concepts/chaos-infrastructure.md)
+- [Chaos infrastructure concepts](../concepts/infrastructure.md)
 - [litmus-helm charts](https://github.com/litmuschaos/litmus-helm)

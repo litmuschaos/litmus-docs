@@ -1,4 +1,4 @@
-﻿---
+---
 id: installation
 title: ChaosCenter installation
 sidebar_label: Installation
