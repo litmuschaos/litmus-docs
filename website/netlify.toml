@@ -1,9 +1,7 @@
 [build]
-  base = "website"
   command = "yarn install --frozen-lockfile && yarn build"
   publish = "build"
 
 [build.environment]
-  NODE_VERSION = "16"
-  YARN_VERSION = "1.22.19"
+  NODE_VERSION = "18"
   NODE_OPTIONS = "--max-old-space-size=4096"
