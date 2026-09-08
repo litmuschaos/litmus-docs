@@ -151,6 +151,7 @@ module.exports = {
         },
         'user-guides/gitops-configuration',
         'user-guides/image-registry',
+        'user-guides/prometheus-metrics-observability',
         'user-guides/uninstall-litmus'
       ]
     },
