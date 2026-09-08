@@ -160,7 +160,7 @@ probe:
       endpoint: '<prometheus-endpoint>'
       query: '<promql-query>'
       comparator:
-        criteria: '==' #supports >=,<=,>,<,==,!= comparision
+        criteria: '==' #supports >=,<=,>,<,==,!= comparison
         value: '<value-for-criteria-match>'
     mode: 'Edge'
     runProperties:
@@ -1055,7 +1055,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Description</th>
-  <td>Flag to hold type of the data used for comparision</td>
+  <td>Flag to hold type of the data used for comparison</td>
 </tr>
 <tr>
   <th>Type</th>
@@ -1067,7 +1067,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>type</code> contains type of data, which should be compare as part of comparision operation</td>
+  <td>The <code>type</code> contains type of data, which should be compared as part of comparison operation</td>
 </tr>
 </table>
 
@@ -1078,7 +1078,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Description</th>
-  <td>Flag to hold criteria for the comparision</td>
+  <td>Flag to hold criteria for the comparison</td>
 </tr>
 <tr>
   <th>Type</th>
@@ -1090,7 +1090,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>criteria</code> contains criteria of the comparision, which should be fulfill as part of comparision operation.</td>
+  <td>The <code>criteria</code> contains criteria of the comparison, which should be fulfilled as part of comparison operation.</td>
 </tr>
 </table>
 
@@ -1101,7 +1101,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Description</th>
-  <td>Flag to hold value for the comparision</td>
+  <td>Flag to hold value for the comparison</td>
 </tr>
 <tr>
   <th>Type</th>
@@ -1113,7 +1113,7 @@ This section describes the different fields of the litmus probes and the possibl
 </tr>
 <tr>
   <th>Notes</th>
-  <td>The <code>value</code> contains value of the comparision, which should follow the given criteria as part of comparision operation.</td>
+  <td>The <code>value</code> contains value of the comparison, which should follow the given criteria as part of comparison operation.</td>
 </tr>
 </table>
 
