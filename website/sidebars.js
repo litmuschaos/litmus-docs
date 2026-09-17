@@ -102,7 +102,8 @@ module.exports = {
               'Chaos Infrastructure': [
                 'user-guides/litmus-agent-helm-installation'
               ]
-            }
+            },
+            'user-guides/install-without-chaoscenter'
           ]
         },
         {
