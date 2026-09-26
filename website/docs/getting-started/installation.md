@@ -113,7 +113,7 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 NOTES:
-Thank you for installing litmus ðŸ˜€
+Thank you for installing litmus 😀
 
 Your release is named chaos and its installed to namespace: litmus.
 
