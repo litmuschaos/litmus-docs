@@ -13,7 +13,8 @@ sidebar_label: Chaos Infrastructure Installation
 
 ## Connecting Chaos Infrastructure
 
-- Learn to [connect Chaos Infrastructure with non interactive mode using litmuctl](../litmusctl/litmusctl-usage.md)
+- Learn to [connect Chaos Infrastructure with non interactive mode using litmusctl](../litmusctl/litmusctl-usage.md)
+- Install and connect [Chaos Infrastructure using Helm](litmus-agent-helm-installation.md)
 
 ## Resource Requiremenets for Chaos Infrastructure plane components
 
