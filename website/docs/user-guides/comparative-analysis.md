@@ -36,7 +36,7 @@ Total Chaos Scenario Statistics helps you to see how many of their scheduled hav
 
 ## Comparing Multiple Scenarios
 
-List of chaos scenarios provided on the page helps you to keep track of their scheduled chaos scenarios along with associated details like chaos scenario name, chaos delegate, starting time,etc & allows to compare the chaos scenarios by selecting them from the table.
+List of chaos scenarios provided on the page helps you to keep track of their scheduled chaos scenarios along with associated details like chaos scenario name, chaos delegate, starting time,etc & allows comparing the chaos scenarios by selecting them from the table.
 
 <img src={require('../assets/user-guides/observability/workflow-dashboard/workflows-comparison-table-1.png').default} />
 
