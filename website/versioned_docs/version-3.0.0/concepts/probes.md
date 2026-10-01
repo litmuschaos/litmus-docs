@@ -250,7 +250,7 @@ probe:
       probeTimeout: 5s
       interval: 5s
       retry: 1
-  - name: 'probe2's
+  - name: 'probe2'
     type: 'cmdProbe'
     cmdProbe/inputs:
       ## probe1's result being used as one of the args in probe2

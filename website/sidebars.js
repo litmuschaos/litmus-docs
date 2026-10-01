@@ -93,12 +93,17 @@ module.exports = {
             {
               ChaosCenter: [
                 'user-guides/chaoscenter-oauth-dex-installation',
-                'user-guides/chaoscenter-advanced-installation',
                 'user-guides/setup-without-ingress',
                 'user-guides/setup-with-ingress',
                 'user-guides/setup-with-helm'
               ]
-            }
+            },
+            {
+              'Chaos Infrastructure': [
+                'user-guides/litmus-agent-helm-installation'
+              ]
+            },
+            'user-guides/install-without-chaoscenter'
           ]
         },
         {
