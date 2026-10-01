@@ -36,5 +36,15 @@
   },
   "devDependencies": {
     "prettier": "^2.3.2"
+  },
+  "resolutions": {
+    "websocket-driver": "0.7.5",
+    "shell-quote": "1.11.0",
+    "joi": "17.13.8",
+    "body-parser": "1.20.8",
+    "axios": "0.34.0",
+    "qs": "6.16.0",
+    "on-headers": "1.1.0",
+    "brace-expansion": "1.1.21"
   }
 }
