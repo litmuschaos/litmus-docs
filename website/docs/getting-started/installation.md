@@ -20,6 +20,10 @@ Recommend to have a Persistent volume(PV) of 20GB, You can start with 1GB for te
 
 ## Installation
 
+:::tip
+Need chaos execution **without** the ChaosCenter UI (CI/CD or GitOps only)? See [Install Litmus without ChaosCenter](../user-guides/install-without-chaoscenter.md).
+:::
+
 Users looking to use Litmus for the first time have two options available to them today. One way is to use a hosted Litmus service like [Harness Chaos Engineering SaaS](https://app.harness.io/auth/#/signin). Alternatively, users looking for some more flexibility can install Litmus into their own Kubernetes cluster.
 
 Users choosing the self-hosted option can refer to our Install and Configure docs for installing alternate versions and more detailed instructions.
@@ -292,6 +296,8 @@ By default you are assigned with a default project with Owner permissions.
 
 - [Setup OAuth2 login with Dex](../user-guides/chaoscenter-oauth-dex-installation.md)
 - [Connect External Chaos Infrastructures to ChaosCenter](../user-guides/chaos-infrastructure-installation.md)
+- [Install Litmus Agent with Helm](../user-guides/litmus-agent-helm-installation.md)
 - [Setup Endpoints and Access ChaosCenter without Ingress](../user-guides/setup-without-ingress.md)
 - [Setup Endpoints and Access ChaosCenter with Ingress](../user-guides/setup-with-ingress.md)
 - [Setup with Helm and OAuth](../user-guides/setup-with-helm.md)
+

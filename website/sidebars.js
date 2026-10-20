@@ -97,7 +97,13 @@ module.exports = {
                 'user-guides/setup-with-ingress',
                 'user-guides/setup-with-helm'
               ]
-            }
+            },
+            {
+              'Chaos Infrastructure': [
+                'user-guides/litmus-agent-helm-installation'
+              ]
+            },
+            'user-guides/install-without-chaoscenter'
           ]
         },
         {
