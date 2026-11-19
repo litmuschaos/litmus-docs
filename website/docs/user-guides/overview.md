@@ -49,6 +49,10 @@ GitOps in Litmus provides a way of using Event-Driven Chaos Injection, where tar
 
 Using different Image Registries like Docker, Red Hat Quay, Google Container Registry in a Chaos Experiment.
 
+### [Prometheus Metrics Observability](prometheus-metrics-observability.md)
+
+Leverage Prometheus metrics exposed by the LitmusChaos control plane for better observability into API performance, experiment runs, and infrastructure agent health.
+
 ### [Uninstalling Litmus](uninstall-litmus.md)
 
 Disconnecting Chaos Infrastructure and uninstalling ChaosCenter.
