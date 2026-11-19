@@ -152,8 +152,12 @@ kubectl create ns monitoring
 ```bash
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
-helm install prom prometheus-community/kube-prometheus-stack --namespace monitoring
+helm install prometheus-stack prometheus-community/kube-prometheus-stack --namespace monitoring
 ```
+
+:::note
+The Helm release name (`prometheus-stack` here) must match the `release` label on the PodMonitor created in the next step. By default, kube-prometheus-stack only selects PodMonitors labelled `release: <helm release name>`, so a mismatch means the chaos-exporter target is never discovered. If you install with a different release name, update the `release` label accordingly.
+:::
 
 - Create the pod monitor as specified
 
